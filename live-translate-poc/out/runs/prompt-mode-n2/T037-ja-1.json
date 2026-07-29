@@ -1,0 +1,37 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "部屋番号は702です。友達が倒れました。",
+  "inputTranscript": "我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。",
+  "outputTranscript": "部屋番号は702、友達が気を失っています。",
+  "inputDurationMs": 5811,
+  "latency": {
+    "ttfa_from_end_ms": 915,
+    "ttfa_from_start_ms": 6915,
+    "completion_lag_ms": 2197
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:28:38.942Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文非常準確且自然。「昏倒」翻譯為「気を失っています」（失去意識）十分貼切，房間號碼也正確無誤，整體語意忠實度與流暢度皆為滿分。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T009",
+  "category": "transport",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問這個位子有人坐嗎?",
+  "reference": "すみません、この席には誰か座っていますか?",
+  "inputTranscript": "请 问 这 个 位 置 有 人 坐 吗 ?",
+  "outputTranscript": "あの、この席は空いていますか?",
+  "inputDurationMs": 2491,
+  "latency": {
+    "ttfa_from_end_ms": 914,
+    "ttfa_from_start_ms": 3514,
+    "completion_lag_ms": 1420
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:27:08.432Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文將「有人坐嗎」轉譯為「是空著的嗎（空いていますか）」，在該情境下語意完全等價，且表達方式非常自然道地。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

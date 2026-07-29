@@ -1,0 +1,37 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T016",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "我對蝦子過敏,餐點裡請不要放任何海鮮。",
+  "reference": "エビアレルギーがあるので、料理には海鮮を一切入れないでください。",
+  "inputTranscript": "我 对 虾 子 过 敏 , 餐 点 里 请 不 要 放 任 何 海 鲜 。",
+  "outputTranscript": "海老アレルギーなので、食事には海鮮を一切入れないでください。",
+  "inputDurationMs": 4491,
+  "latency": {
+    "ttfa_from_end_ms": 983,
+    "ttfa_from_start_ms": 5582,
+    "completion_lag_ms": 1994
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:27:52.882Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完美傳達了原文的意思，與參考譯文幾乎一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

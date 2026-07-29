@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T009",
+  "category": "transport",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "請問這個位子有人坐嗎?",
+  "reference": "すみません、この席には誰か座っていますか?",
+  "inputTranscript": "请 问 这 个 位 置 有 人 坐 吗 ?",
+  "outputTranscript": "すみません、この席空いていますか?",
+  "inputDurationMs": 2491,
+  "latency": {
+    "ttfa_from_end_ms": 928,
+    "ttfa_from_start_ms": 3528,
+    "completion_lag_ms": 1416
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:27:15.576Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文「この席空いていますか？」(請問這個位子空著嗎？)與原文「這個位子有人坐嗎？」在情境上完全等價，表達非常自然且符合日語習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

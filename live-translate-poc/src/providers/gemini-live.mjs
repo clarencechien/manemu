@@ -24,24 +24,30 @@ async function messageToJson(data) {
   return JSON.parse(Buffer.from(data).toString("utf8"));
 }
 
-export function openSession({ targetLang }) {
+// model/systemInstruction 可覆寫:比較「translate 專用模式」vs「一般 Live + 口譯 prompt」。
+// 帶 systemInstruction 時不送 translationConfig(一般 Live 模型不支援該欄位)。
+export function openSession({ targetLang, model, systemInstruction }) {
   return new Promise((resolve, reject) => {
     const ws = new WebSocket(`${LIVE_WS_URL}?key=${API_KEY}`);
     const session = makeSession(ws);
+    session.modelName = model ?? TRANSLATE_MODEL;
     let settled = false;
     ws.addEventListener("open", () => {
       ws.send(JSON.stringify({
         // 注意:inputAudioTranscription/outputAudioTranscription 在 setup 層,
         // 不在 generationConfig 內(實測 2026-07-29;放錯會被 1007 拒絕)。
         setup: {
-          model: TRANSLATE_MODEL,
+          model: model ?? TRANSLATE_MODEL,
           generationConfig: {
             responseModalities: ["AUDIO"],
-            translationConfig: {
-              targetLanguageCode: targetLang,
-              echoTargetLanguage: false,
-            },
+            ...(systemInstruction ? {} : {
+              translationConfig: {
+                targetLanguageCode: targetLang,
+                echoTargetLanguage: false,
+              },
+            }),
           },
+          ...(systemInstruction ? { systemInstruction: { parts: [{ text: systemInstruction }] } } : {}),
           inputAudioTranscription: {},
           outputAudioTranscription: {},
         },

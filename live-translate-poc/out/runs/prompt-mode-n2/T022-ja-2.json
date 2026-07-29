@@ -1,0 +1,37 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T022",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "太貴了,算我三千塊可以嗎?",
+  "reference": "高すぎます。3000円にしてもらえませんか?",
+  "inputTranscript": "太 贵 了 , 算 我 3000 块 可 以 了 。",
+  "outputTranscript": "高すぎます。 3000円にしてもらえますか?",
+  "inputDurationMs": 2771,
+  "latency": {
+    "ttfa_from_end_ms": 960,
+    "ttfa_from_start_ms": 3860,
+    "completion_lag_ms": 1559
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:28:08.087Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，僅在語氣上有些微差異（してもらえますか 與 してもらえませんか），兩者皆符合日語口語表達習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}
