@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:50:37.749Z"
+  "ts": "2026-07-29T10:50:37.749Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完美傳達了原文的意思。「我剛剛」翻譯為「たった今」非常貼切，「手機」翻譯為「携帯電話」也完全正確，整體日文表達流暢無瑕疵。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實。『たった今』與原文『剛剛』對應自然，『携帯電話』與參考的『携帯』等同。句子語法與用詞在日語中皆流暢自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

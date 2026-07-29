@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:53:29.093Z"
+  "ts": "2026-07-29T10:53:29.093Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思，與參考譯文幾乎一致，無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句語意（表示菜看起來好吃，但說話者已經吃飽），日語表達自然。與參考譯文相比僅少了強調詞「とても」及結尾語氣從「〜なんです」變為較中性「〜です」，但不影響原意與可接受性，故評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

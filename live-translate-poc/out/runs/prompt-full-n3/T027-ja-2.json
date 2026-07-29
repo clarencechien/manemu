@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:56:56.820Z"
+  "ts": "2026-07-29T10:56:56.820Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「免税はできますか？」與「合計で5000円以上買いました」完全忠實於原文，且符合日語口語表達習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實呈現原意，兩句與參考譯文僅在助詞與用詞上略有差異（免税はできますか? vs 免税できますか?；合計で vs 全部で），但語意與自然度皆良好，無錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "Thank you for your help — I really appreciate everything today.",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "Thank you for your help, I really appreciate it today.",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 2650,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 946,
+    "ttft_from_end_ms": 946,
+    "completion_lag_ms": 2332,
+    "ttfa_from_start_ms": 4146
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.843,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:05:30.763Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. The phrase '麻煩你了' is appropriately and politely translated as 'I really appreciate it', which fits the context perfectly."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達了感謝與當天的感激，但未完全捕捉「今天真的麻煩你了」中帶有的歉意與對方付出造成不便的含意（machine 用法偏中性：「appreciate it」語意較模糊）。句子語法通順，但「I really appreciate it today」略顯不自然，可改為“I really appreciate everything you did today”或“I really appreciate your help today”。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:01:58.900Z"
+  "ts": "2026-07-29T11:01:58.900Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思。日文表達「私はペニシリンを注射できません」稍微有些生硬（在日語中「注射する」通常是醫護人員的動作，不過此處意思仍可被理解），但語意依然清晰，後半句「アレルギーがあります」非常自然。整體而言，忠實度極高，流暢度良好。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達原意（無法打青黴素，因為會過敏）。表達自然且可理解；但「注射できません」較字面、口語感不如參考譯文的「打てません／あるんです」，故 fluency 稍降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

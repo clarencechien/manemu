@@ -29,5 +29,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:45:21.398Z"
+  "ts": "2026-07-29T10:45:21.398Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「あの、駅はどこにありますか？」與「どう行ったら早いですか？」皆符合日語口語表達習慣，語意與原文完全一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意：詢問車站位置及如何較快到達。用語上沒有重大錯誤，但自然度略低（「あの」比「すみません」口氣不同；「どう行ったら早いですか?」比參考譯較不自然，且少了「一番/比較」的強調），因此給予中上評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

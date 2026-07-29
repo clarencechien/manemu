@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "30分ほど遅れます。席を取っておいていただけますか?",
+  "inputTranscript": "我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?",
+  "outputTranscript": "30分ほど遅れて到着しますが、席は確保していただけますか?",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 4840,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 995,
+    "ttft_from_end_ms": 995,
+    "completion_lag_ms": 1972,
+    "ttfa_from_start_ms": 5395
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.125,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:04:56.523Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思，敬語使用也十分得體。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（將晚30分鐘到，請保留座位），語句在日語中自然且禮貌。用語與參考譯文略有差異（到着します vs 遅れます），但不影響意義或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

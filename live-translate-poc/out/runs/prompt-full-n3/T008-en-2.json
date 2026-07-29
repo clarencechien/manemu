@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:48:47.500Z"
+  "ts": "2026-07-29T10:48:47.500Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is exceptionally accurate and natural. It even captures the nuance of '應該' (probably) better than the reference translation."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整保留原意（「會到大阪」「應該不會停京都吧」），語氣與推測性助詞表達正確；用詞與語法自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

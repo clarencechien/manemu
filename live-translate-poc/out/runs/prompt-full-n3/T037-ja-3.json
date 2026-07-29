@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:01:40.412Z"
+  "ts": "2026-07-29T11:01:40.412Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「七〇二」正確翻譯為「702」，「昏倒了」翻譯為「気絶しました」亦十分貼切，語意完全忠實，語句流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文資訊（房間號702與朋友昏倒），用詞自然。雖然機譯加了「私の」，但不影響語意與自然度；「気絶しました」與參考譯的「倒れました」皆可接受，故給予最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

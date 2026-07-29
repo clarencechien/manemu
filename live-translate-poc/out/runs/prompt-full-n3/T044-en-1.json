@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "We'll be about thirty minutes late — can you hold our table?",
+  "inputTranscript": "我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?",
+  "outputTranscript": "We will be 30 minutes late, can you hold our seats?",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 2860,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1008,
+    "ttft_from_end_ms": 1008,
+    "completion_lag_ms": 1666,
+    "ttfa_from_start_ms": 5409
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.848,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:05:06.567Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural, perfectly conveying the meaning of the source text without any errors."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（會晚三十分鐘，詢問能否保留座位/位子），數字與語意皆正確。用語自然，唯「seats」與參考的「table」不同，但在語境中均可接受，未影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

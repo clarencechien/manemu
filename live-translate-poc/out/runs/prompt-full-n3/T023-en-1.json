@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:55:19.151Z"
+  "ts": "2026-07-29T10:55:19.151Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is exceptionally accurate and natural. It correctly translates '含稅還是不含稅' as 'tax-inclusive or tax-exclusive', which is highly professional and precise."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且語意忠實，將「含稅/不含稅」正確譯為 tax-inclusive / tax-exclusive，語句自然流暢，等價於參考譯文。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

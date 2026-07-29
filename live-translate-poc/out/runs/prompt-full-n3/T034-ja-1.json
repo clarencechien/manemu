@@ -29,5 +29,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:00:10.189Z"
+  "ts": "2026-07-29T11:00:10.189Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文緊急求助的語意，日語表達十分流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達請求救援與呼救護車的語意，資訊正確無遺漏，因此語意忠實度高。唯原句以感嘆、緊急口吻（「救命!」）呈現，機器譯文改為較禮貌的「助けてください」，略微降低了緊迫感；故給予adequacy 4。語句日文自然、通順，故fluency為5。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:55:10.279Z"
+  "ts": "2026-07-29T10:55:10.279Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。開頭加上「あの」符合口語口譯的情境，完美傳達了原文「請問這個價格是含稅還是不含稅？」的所有語意。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與原文語意完全相符，表達自然、符合日常日語用法，與參考譯文僅在用詞（この価格→この値段）上微有不同但意義相同，無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

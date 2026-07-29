@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:45:48.099Z"
+  "ts": "2026-07-29T10:45:48.099Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文非常準確且自然，與參考譯文幾乎完全一致，僅在「Shibuya Sky」的書寫方式上使用了英文大寫，這也是完全正確且常見的表達方式。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思，日語表達自然。機譯使用英文字母的景點名稱（SHIBUYA SKY）而非日文渋谷スカイ，但不影響理解，因此不視為錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

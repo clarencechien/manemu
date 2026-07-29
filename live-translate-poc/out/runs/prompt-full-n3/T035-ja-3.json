@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:00:41.064Z"
+  "ts": "2026-07-29T11:00:41.064Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，僅在「なくして」的漢字使用上有所不同（失くして），語意與流暢度皆為滿分。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文與參考譯文意義完全一致，語法與用詞自然（「失くしてしまいました」與「なくしてしまいました」均為可接受的寫法）。無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

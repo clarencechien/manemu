@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:02:12.998Z"
+  "ts": "2026-07-29T11:02:12.998Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text ('我不能打青黴素,我會過敏') as 'I can't take penicillin; I'm allergic', which is grammatically correct and idiomatic."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原文意義（不能使用青黴素，會過敏）。語句自然流暢，語法正確，與參考譯文差異僅在措辭（take vs have）和標點，均為等效表達。沒有錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

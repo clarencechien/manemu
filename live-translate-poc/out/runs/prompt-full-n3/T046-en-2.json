@@ -1,0 +1,61 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T046",
+  "category": "smalltalk",
+  "traps": [],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "你的中文說得真好,是在哪裡學的?",
+  "reference": "Your Chinese is really good — where did you learn it?",
+  "inputTranscript": "你 的 中 文 说 得 真 好 , 是 在 哪 里 学 的 ?",
+  "outputTranscript": "Your Chinese is really good, where did you learn it?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 2880,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1035,
+    "ttft_from_end_ms": 1034,
+    "completion_lag_ms": 1554,
+    "ttfa_from_start_ms": 4634
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:06:04.449Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural, capturing the exact meaning of the source text and matching the reference translation almost perfectly."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，與參考譯文幾乎相同。句子自然流暢，僅在標點（破折號）上有微小差異，無影響。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

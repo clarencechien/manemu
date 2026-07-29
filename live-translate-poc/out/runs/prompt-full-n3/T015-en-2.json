@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:51:45.582Z"
+  "ts": "2026-07-29T10:51:45.582Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly conveys all information from the source text, including the total number of people, the number of children, and the request for child seats."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文正確表達了人數與有兩個小孩需要座椅，但將「兒童椅」譯為“child seats”，可能產生歧義（可被理解為汽車安全座椅），而參考譯文意指餐廳用的 high chairs。此語義偏差降低忠實度；句子語法自然流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

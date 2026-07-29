@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T049",
+  "category": "smalltalk",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "我是從台灣來的,第一次來大阪玩。",
+  "reference": "台湾から来ました。大阪に遊びに来るのは初めてです。",
+  "inputTranscript": "我 是 从 台 湾 来 的 , 第 一 次 来 大 阪 玩 。",
+  "outputTranscript": "台湾から来ました、大阪観光は最初めてです。",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 3771,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1053,
+    "ttft_from_end_ms": 985,
+    "completion_lag_ms": 2885,
+    "ttfa_from_start_ms": 5053
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.826,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:07:05.374Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "語意非常完整且忠實（Adequacy 5）。但在流暢度方面，「初めて」被誤寫為不存在的詞彙「最初めて」（混淆了『最初』與『初めて』），此為明顯的語法/拼寫錯誤，故流暢度給予 3 分。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致正確：表達來自台灣且是第一次到大阪觀光的意思都有保留，因此語意忠實度可評為4。但目標語自然度不足，句尾的“最初めてです”為不自然/錯誤表現（應為“初めてです”或使用“最初に〜する”結構），整句語法與流暢度受影響，故流暢度評為2。無否定顛倒、數字錯誤、人物名錯誤、遺漏或杜撰內容。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

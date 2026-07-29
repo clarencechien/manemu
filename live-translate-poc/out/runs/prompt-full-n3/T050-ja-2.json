@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "では、よろしくお願いします。また後で連絡します。",
+  "inputTranscript": "那 就 麻 烦 你 了 , 之 后 再 联 络 。",
+  "outputTranscript": "では、よろしくお願いします。また連絡しますね。",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3360,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 971,
+    "ttft_from_end_ms": 970,
+    "completion_lag_ms": 1800,
+    "ttfa_from_start_ms": 3970
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.952,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:07:31.481Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分貼切。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達原意（請求幫忙與之後再聯絡），語氣自然（日語中加入「ね」為口語化，不影響意義），譯句流暢自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

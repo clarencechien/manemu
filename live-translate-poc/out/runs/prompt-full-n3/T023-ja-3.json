@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:55:17.859Z"
+  "ts": "2026-07-29T10:55:17.859Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。機器譯文中的「すみません」完美對應了原文的「請問」，「価格」與「値段」皆為「價格」的合適日文表達，整句文法與語氣皆十分道地。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確且完整地傳達原句含稅/不含稅的詢問意涵，語句自然流暢。敬稱「すみません」也適當，與參考譯文差異僅在用詞（価格 vs 値段），均可接受。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

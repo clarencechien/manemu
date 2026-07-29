@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "では、よろしくお願いします。また後で連絡します。",
+  "inputTranscript": "那 就 麻 烦 你 了 , 之 后 再 联 络 。",
+  "outputTranscript": "それでは、お手数ですがよろしくお願いします。また連絡します。",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 4371,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1028,
+    "ttft_from_end_ms": 993,
+    "completion_lag_ms": 2027,
+    "ttfa_from_start_ms": 4027
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.286,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:07:32.135Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「那就麻煩你了」翻譯為「それでは、お手数ですがよろしくお願いします」，語氣十分得體客氣；「之後再聯絡」翻譯為「また連絡します」亦完全符合原意，無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思，且日文自然流暢。加入「お手数ですが」為適切禮貌語，與原句的「麻煩你」相符；「また連絡します」與參考譯文的「また後で連絡します」差異不影響語意。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:51:00.904Z"
+  "ts": "2026-07-29T10:51:00.904Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "「這個不要辣」（辛くしないでください）被誤譯為「これは遠慮します」（我不要這個/心領了），改變了原意（從要求不加辣變成拒絕該食物），屬於漏譯/誤譯。後半句「我不太能吃辣」翻譯得非常自然流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "機器譯文第二句大致傳達了「不太能吃辣」的意思，但第一句將原本的請求（『不要辣／請不要加辣』）翻譯為「これは遠慮します。」（我就不吃/我拒絕），把要求對方不要加辣的語氣變成了自己拒絕該品項，改變了語意。因此忠實度較低。日語表達自然流暢，但第二句以『…て』結尾略顯未完句，但仍可接受。故給予 adequacy 2、fluency 4；標記為有新增/不當內容（hallucination）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

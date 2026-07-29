@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:47:58.525Z"
+  "ts": "2026-07-29T10:47:58.525Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致（僅「子供」與「子ども」的寫法差異，意思完全相同），無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：與原文意思一致，表示要兩張到京都的車票，一張大人人票、一張兒童票。日語表達自然流暢。唯一差別是「子供」與參考譯文的「子ども」為正字/表記上的差異，不影響理解或正確性，因此評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:54:59.844Z"
+  "ts": "2026-07-29T10:54:59.844Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文基本傳達原句意思（表示太貴、要求降到三千），句子通順自然。但機譯加入了“dollars”（美元/元）這一貨幣單位，原文只說「三千塊」沒有指明幣別，屬於不必要的增添或臆測，故扣分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -33,5 +33,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:03:53.993Z"
+  "ts": "2026-07-29T11:03:53.993Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「メールで予約を確認できますか?」完美對應「我可以用 email 確認預約嗎?」，「私の便は BR198です。」也準確翻譯了「我的班機是 BR198。」，無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文は原文の意味を正確に伝えており、不自然な表現もない。『確認できますか?』は『確認してもいいですか?』とほぼ同義で許容範囲。フライト番号も正しく保持されているため、忠実度と自然度ともに高い。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

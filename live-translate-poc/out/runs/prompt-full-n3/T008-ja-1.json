@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:48:29.345Z"
+  "ts": "2026-07-29T10:48:29.345Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文非常準確且自然。「大阪までは行きますが」與「京都には止まらないと思いますが？」很好地傳達了原文「會到大阪」與「應該不會停京都吧？」的語氣與語意，無任何錯誤旗標。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（會到大阪但應該不會在京都停），因此語意忠實度高。表達上略有不自然，句尾使用「と思いますが?」在日語口語中不太恰當（與參考譯文的確認語氣「〜ですよね?」或「〜でしょうか?」比較自然），故流暢度略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

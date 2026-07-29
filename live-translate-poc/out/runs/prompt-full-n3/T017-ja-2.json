@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:52:29.997Z"
+  "ts": "2026-07-29T10:52:29.997Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "原文的「這杯」被譯為「このコーヒー」（這杯咖啡），加入了原文未提及的特定飲料種類（咖啡），屬於輕微的幻覺（hallucination）。其餘部分翻譯得非常準確且自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實。『這杯不要加冰』を『このコーヒーは氷なしで』と自然に訳しており、『大杯的改成中杯』『總共三杯』も正確に表現されている。語調も自然で不自然な表現や意味の漏れ・誤りはない。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

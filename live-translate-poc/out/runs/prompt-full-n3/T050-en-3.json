@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "Thanks in advance — I'll be in touch later.",
+  "inputTranscript": "那 就 麻 烦 你 了 , 之 后 再 联 络 。",
+  "outputTranscript": "Then I'll leave it to you. Let's get in touch later.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3120,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1004,
+    "ttft_from_end_ms": 1004,
+    "completion_lag_ms": 1882,
+    "ttfa_from_start_ms": 4004
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.188,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:07:47.375Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文非常準確且自然地翻譯了原文的意思。「Then I'll leave it to you」對應「那就麻煩你了」，「Let's get in touch later」對應「之後再聯絡」，語意完整且流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句含意──“麻煩你了/Thanks in advance”以“I'll leave it to you”表達可接受；“之後再聯絡”以“Let's get in touch later”表達自然且語意相符。語句流暢，自然度高，無明顯錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

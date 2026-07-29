@@ -1,0 +1,227 @@
+{
+  "runId": "prompt-full-n3",
+  "generatedAt": "2026-07-29T11:26:43.915Z",
+  "model": "models/gemini-3.1-flash-live-preview",
+  "judgeModel": "models/gemini-3.5-flash",
+  "runtime": "cc-web-node(非 Cloudflare;延遲為機房乾淨網路的樂觀下界)",
+  "caveats": [
+    "評審使用同家 Gemini 文字模型(無 OpenAI 金鑰),存在自評偏誤風險",
+    "gold 參考譯文由 LLM 產生,未經人工校對",
+    "TTS 合成音源乾淨、無噪音,品質與延遲皆為樂觀值",
+    "CC web 沙箱地理位置不可控,網路段延遲僅供參考,端到端以 M4 真機為準"
+  ],
+  "totals": {
+    "results": 300,
+    "errors": 0
+  },
+  "byDir": {
+    "en": {
+      "quality": {
+        "n": 150,
+        "judged": 150,
+        "adequacy_mean": 4.913333333333333,
+        "fluency_mean": 4.96,
+        "number_ok_rate": 0.9866666666666667,
+        "negation_ok_rate": 0.96,
+        "coverage_mean": 1.0000733333333334,
+        "cer_mean": 0.07132,
+        "flags": {
+          "number_wrong": 0,
+          "negation_flipped": 0,
+          "honorific_off": 0,
+          "name_mangled": 0.04,
+          "omission": 0.02,
+          "hallucination": 0
+        }
+      },
+      "latency": {
+        "ttfa_from_end_ms": {
+          "p50": 958,
+          "p90": 1035,
+          "p95": 1077,
+          "mean": 973.4333333333333
+        },
+        "ttft_from_end_ms": {
+          "p50": 949,
+          "p90": 1034,
+          "p95": 1054,
+          "mean": 963.6533333333333
+        },
+        "completion_lag_ms": {
+          "p50": 1824,
+          "p90": 2436,
+          "p95": 2520,
+          "mean": 1855.7466666666667
+        },
+        "ttfa_from_start_ms": {
+          "p50": 4929,
+          "p90": 6914,
+          "p95": 7508,
+          "mean": 5035.3
+        }
+      },
+      "byCategory": {
+        "directions": {
+          "n": 18,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 964,
+          "ttfa_from_end_p90": 1019,
+          "completion_lag_p90": 3003
+        },
+        "transport": {
+          "n": 21,
+          "adequacy_mean": 4.761904761904762,
+          "ttfa_from_end_p50": 936,
+          "ttfa_from_end_p90": 973,
+          "completion_lag_p90": 2168
+        },
+        "dining": {
+          "n": 21,
+          "adequacy_mean": 4.857142857142857,
+          "ttfa_from_end_p50": 968,
+          "ttfa_from_end_p90": 997,
+          "completion_lag_p90": 2504
+        },
+        "shopping": {
+          "n": 21,
+          "adequacy_mean": 4.9523809523809526,
+          "ttfa_from_end_p50": 947,
+          "ttfa_from_end_p90": 988,
+          "completion_lag_p90": 2507
+        },
+        "hotel": {
+          "n": 18,
+          "adequacy_mean": 4.833333333333333,
+          "ttfa_from_end_p50": 956,
+          "ttfa_from_end_p90": 1032,
+          "completion_lag_p90": 2237
+        },
+        "emergency": {
+          "n": 15,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 974,
+          "ttfa_from_end_p90": 1061,
+          "completion_lag_p90": 2022
+        },
+        "appointment": {
+          "n": 18,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 946,
+          "ttfa_from_end_p90": 1208,
+          "completion_lag_p90": 2612
+        },
+        "smalltalk": {
+          "n": 18,
+          "adequacy_mean": 4.944444444444445,
+          "ttfa_from_end_p50": 1004,
+          "ttfa_from_end_p90": 1171,
+          "completion_lag_p90": 2000
+        }
+      }
+    },
+    "ja": {
+      "quality": {
+        "n": 150,
+        "judged": 150,
+        "adequacy_mean": 4.9,
+        "fluency_mean": 4.94,
+        "number_ok_rate": 0.9933333333333333,
+        "negation_ok_rate": 0.98,
+        "coverage_mean": 1.001266666666667,
+        "cer_mean": 0.07132,
+        "flags": {
+          "number_wrong": 0,
+          "negation_flipped": 0,
+          "honorific_off": 0,
+          "name_mangled": 0.02,
+          "omission": 0.02666666666666667,
+          "hallucination": 0.006666666666666667
+        }
+      },
+      "latency": {
+        "ttfa_from_end_ms": {
+          "p50": 964,
+          "p90": 1053,
+          "p95": 1087,
+          "mean": 979.0066666666667
+        },
+        "ttft_from_end_ms": {
+          "p50": 951,
+          "p90": 1018,
+          "p95": 1058,
+          "mean": 965.3266666666667
+        },
+        "completion_lag_ms": {
+          "p50": 1991,
+          "p90": 2885,
+          "p95": 3100,
+          "mean": 2103.3133333333335
+        },
+        "ttfa_from_start_ms": {
+          "p50": 4938,
+          "p90": 6916,
+          "p95": 7267,
+          "mean": 5040.946666666667
+        }
+      },
+      "byCategory": {
+        "directions": {
+          "n": 18,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 969,
+          "ttfa_from_end_p90": 1105,
+          "completion_lag_p90": 2567
+        },
+        "transport": {
+          "n": 21,
+          "adequacy_mean": 4.761904761904762,
+          "ttfa_from_end_p50": 947,
+          "ttfa_from_end_p90": 1009,
+          "completion_lag_p90": 2520
+        },
+        "dining": {
+          "n": 21,
+          "adequacy_mean": 4.619047619047619,
+          "ttfa_from_end_p50": 968,
+          "ttfa_from_end_p90": 1034,
+          "completion_lag_p90": 3100
+        },
+        "shopping": {
+          "n": 21,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 972,
+          "ttfa_from_end_p90": 1010,
+          "completion_lag_p90": 2531
+        },
+        "hotel": {
+          "n": 18,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 947,
+          "ttfa_from_end_p90": 983,
+          "completion_lag_p90": 3481
+        },
+        "emergency": {
+          "n": 15,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 949,
+          "ttfa_from_end_p90": 1062,
+          "completion_lag_p90": 2437
+        },
+        "appointment": {
+          "n": 18,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 964,
+          "ttfa_from_end_p90": 1036,
+          "completion_lag_p90": 3044
+        },
+        "smalltalk": {
+          "n": 18,
+          "adequacy_mean": 4.888888888888889,
+          "ttfa_from_end_p50": 994,
+          "ttfa_from_end_p90": 1179,
+          "completion_lag_p90": 2885
+        }
+      }
+    }
+  }
+}

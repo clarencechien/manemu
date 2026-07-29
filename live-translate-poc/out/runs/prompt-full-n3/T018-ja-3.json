@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:53:11.237Z"
+  "ts": "2026-07-29T10:53:11.237Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完美傳達了原文的所有訊息，日語表達十分道地。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原意：要一碗豚骨拉麵且麵要硬一點。用詞與參考譯文等價（「1つ」與「一つ」為書寫差異；雖未明示「ください」，但以「お願いします」表達禮貌，語氣自然）。無遺漏或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

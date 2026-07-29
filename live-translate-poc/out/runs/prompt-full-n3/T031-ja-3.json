@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:58:58.551Z"
+  "ts": "2026-07-29T10:58:58.551Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「冷房」精確對應「冷氣」，後半句「どなたかに見ていただくことはできますか」也以非常得體、禮貌的日語表達了「可以請人來看一下嗎」，語意完全忠實，語感極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致正確且自然。唯一小缺失是原文問句帶有「來看一下（来て）」的請求，參考譯文明確使用「見に来ていただけますか」，而機器譯文用的是「見ていただくことはできますか?」，未明確標示「來（来て）」的動作，語義上有輕微省略。另「冷房」與「エアコン」用詞差異屬可接受變體，不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

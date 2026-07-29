@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:48:38.616Z"
+  "ts": "2026-07-29T10:48:38.616Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「のではないでしょうか」很好地傳達了原文「應該不會...吧」的推測與詢問語氣，語意完全契合。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句意思：表示列車會到大阪，但應該不會在京都停，並以詢問語氣結尾。語法與用詞自然（ただし語氣較參考譯文更正式），沒有遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

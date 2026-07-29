@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:01:29.503Z"
+  "ts": "2026-07-29T11:01:29.503Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文非常準確且自然。「昏倒」翻譯為「気を失いました」（失去意識/昏厥），語意十分貼切，完全符合原文意思，且日語表達流暢無瑕疵。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文兩句資訊：房號702與朋友昏倒。將「昏倒」譯為「気を失いました」(失去意識)與參考譯「倒れました」略有措辭差異，但語意等效且自然，數字表達正確，整體流暢自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

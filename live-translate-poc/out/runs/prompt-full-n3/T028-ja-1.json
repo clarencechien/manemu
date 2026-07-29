@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:57:24.667Z"
+  "ts": "2026-07-29T10:57:24.667Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。將「名字是陳大文」翻譯為「陳大文と申します」符合日語在飯店辦理入住時的禮貌表達，語意完整且流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達了原文內容（已訂房、姓名、從今天起住兩晚）。日語表達自然且禮貌（と申します），與參考譯文僅在姓名表現形式上不同，但意義一致，無資訊遺失或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

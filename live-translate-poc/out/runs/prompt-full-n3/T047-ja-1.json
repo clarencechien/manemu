@@ -1,0 +1,64 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T047",
+  "category": "smalltalk",
+  "traps": [
+    "sentence-final",
+    "proper-noun"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "日本的夏天很熱,不過我覺得台北更熱。",
+  "reference": "日本の夏は暑いですね。でも、台北のほうがもっと暑いと思います。",
+  "inputTranscript": "日 本 的 夏 天 很 热 , 不 过 我 觉 得 台 北 更 热 。",
+  "outputTranscript": "日本の夏は暑いですが、台北のほうがもっと暑いと思います。",
+  "inputDurationMs": 4011,
+  "outputAudioMs": 4630,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 975,
+    "ttft_from_end_ms": 973,
+    "completion_lag_ms": 1918,
+    "ttfa_from_start_ms": 5175
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.929,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:06:13.873Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完美傳達了原文的所有語意。「日本の夏は暑いですが」對應「日本的夏天很熱，不過」，「台北のほうがもっと暑いと思います」對應「我覺得台北更熱」，文法與用詞皆無可挑剔。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。日語表現自然，雖與參考譯文在語氣詞（ですね/でも vs ですが）上略有不同，但不影響意思和流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

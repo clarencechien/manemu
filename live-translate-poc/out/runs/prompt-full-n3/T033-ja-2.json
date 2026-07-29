@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:59:44.570Z"
+  "ts": "2026-07-29T10:59:44.570Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體，與參考譯文幾乎一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "整體語意大部分傳達到：第一句「可以幫我叫一台計程車嗎?」譯為「タクシーを1台呼んでいただけますか?」正確且禮貌。問題在第二句，原句意為「明天早上6:30要到機場（需要到達/抵達機場）」；機器譯文為「明日の朝6時半に空港へ行きたいので。」語義上接近，但句尾使用「ので」導致句子未完、聽起來不自然，且「行きたい」比起原句的「要到（需要到達）」語氣較弱，可能改為「空港に着きたいです／空港に到着する必要があります／空港へ行かなければなりません」或參考譯文の「空港に行きたいんです。」會更自然。故語意忠實度較高但非完美（4），自然度因句尾不完整與語氣略差為中等（3）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:53:20.725Z"
+  "ts": "2026-07-29T10:53:20.725Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思。雖然將麵條硬度譯為 'a bit hard' 稍微不如 'firm' 或 'al dente' 道地，但在日常口語中完全可被理解且文法正確，整體非常流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（要求一份豚骨拉麵，麵條要較硬），但英語表達上“a bit hard”較直譯且略不自然，會更常說“on the firm side”或“a bit firmer”。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

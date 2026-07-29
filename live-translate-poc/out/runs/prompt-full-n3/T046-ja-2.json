@@ -1,0 +1,61 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T046",
+  "category": "smalltalk",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "你的中文說得真好,是在哪裡學的?",
+  "reference": "中国語がとてもお上手ですね。どこで習ったんですか?",
+  "inputTranscript": "你 的 中 文 说 得 真 好 , 是 在 哪 里 学 的 ?",
+  "outputTranscript": "中国語が本当に上手ですね。どこで勉強しましたか?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 3290,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 996,
+    "ttft_from_end_ms": 996,
+    "completion_lag_ms": 2148,
+    "ttfa_from_start_ms": 4596
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.957,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:05:48.404Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思，日語表達也十分流暢得體。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意（稱讚對方中文好並詢問在哪裡學的），語句在日語中自然通順。與參考譯文的差異僅為措辭（勉強しましたか vs 習ったんですか、本当に vs とてもお上手），不影響意義或禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

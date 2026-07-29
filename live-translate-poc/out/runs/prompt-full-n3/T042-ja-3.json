@@ -33,5 +33,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:04:05.927Z"
+  "ts": "2026-07-29T11:04:05.927Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息，日文表達十分流暢且符合語境。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文兩個訊息（是否可以用 email 確認預約，以及班機號 BR198），日語表達自然且無語病。僅有語氣差異（「確認できますか?」vs「確認してもいいですか?」）但不影響語意，因此評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

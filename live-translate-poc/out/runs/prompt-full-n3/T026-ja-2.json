@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:56:31.500Z"
+  "ts": "2026-07-29T10:56:31.500Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「我考慮了一下」譯為「ちょっと考えたのですが」，「這個還是先不買好了」譯為「これはまだ買わないことにします」，完美傳達了原文「先不買」的意思，語意忠實度與流暢度皆極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原意（經過考慮後決定先不買），與參考譯文語氣相近。日文表達自然，雖然用法與參考譯文略有不同（「まだ買わないことにします」vs「やめておきます」），但不影響語意或流暢度，故給予最高評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "Thank you for your help — I really appreciate everything today.",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "Thank you for your help. I really put you out today.",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 2520,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 925,
+    "ttft_from_end_ms": 925,
+    "completion_lag_ms": 1399,
+    "ttfa_from_start_ms": 4125
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.784,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:05:38.500Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is accurate and conveys the original meaning well. 'Thank you for your help' is a perfect translation of the first clause. 'I really put you out today' correctly translates '今天真的麻煩你了' (meaning 'I really inconvenienced you today'), though the phrasing 'put you out' is slightly less common in this exact declarative structure than 'I'm sorry to have put you out' or 'I really appreciate your help'."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達原意：表達感謝並帶有對造成麻煩的歉意。用句 \"I really put you out today\" 稍顯口語且不如參考譯文的 \"I really appreciate everything today\" 自然和禮貌，但語意上仍接近原句的感謝+麻煩之意，因此給予較高的忠實度和流暢度評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

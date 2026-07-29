@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:51:26.650Z"
+  "ts": "2026-07-29T10:51:26.650Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "「兒童椅」（餐廳用餐椅）被誤譯為「チャイルドシート」（汽車安全座椅），日文應使用「子ども用の椅子」或「ベビーチェア」。其餘部分翻譯正確且流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文正確傳達了人數（全部で5人、子供2人）及需要兒童相關設施的意思，但將「兒童椅」翻為「チャイルドシート」(通常指汽車用兒童シート) 與參考譯文的「子ども用の椅子／子ども用の椅子をお願いします」在用詞與語氣上不一致，可能改變接收方準備的物品（例如餐廳或場地的兒童椅 vs. 車用安全座椅）。此外，原句有請求語氣（需要兒童椅），參考譯文用「お願いします」較禮貌，機器譯文表述為陳述「必要です」，缺少禮貌請求的語氣。故語意忠實度中等（3），日語流暢度良好（4）。標記為 hallucination=true 表示詞義偏差/不當替換。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

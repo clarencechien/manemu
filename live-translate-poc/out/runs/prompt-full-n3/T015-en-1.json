@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:51:36.018Z"
+  "ts": "2026-07-29T10:51:36.018Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural, conveying all the information from the source text perfectly. 'Child seats' is a very reasonable translation for '兒童椅'."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達了人數（五人）與有兩個小孩且需要兒童座椅的意圖，語意大致忠實且句子自然流暢。唯一小幅差異在於“兒童椅”可指餐用高腳椅（high chairs）或汽車安全座椅（child/car seats）；機器譯為“child seats”可能引起具體類型的歧義，因此未給滿分的 adequacy。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

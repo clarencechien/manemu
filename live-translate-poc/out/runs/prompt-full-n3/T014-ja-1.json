@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:51:00.318Z"
+  "ts": "2026-07-29T10:51:00.318Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "前半句「這個不要辣」（請不要做成辣的）被誤譯為「これは遠慮します」（這個我就心領了/我不要這個），導致語意與原文不符（從要求不加辣變成拒絕該食物）。後半句翻譯得非常流暢且準確。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "機器譯文語句自然，但把「這個不要辣（請不要把這道菜做辣）」改成了「これは遠慮します（我要拒絕/我不吃這個）」—意圖從請對方不要加辣變成了拒絕整道菜，改動了原意。第二句「私は辛いものがあまり食べられないんです」與參考譯文語意相符。故語意忠實中等（3），流暢度高（5）；標記為有增補/捏造（hallucination）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

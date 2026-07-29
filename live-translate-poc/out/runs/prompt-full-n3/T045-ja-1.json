@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "手伝っていただいてありがとうございます。今日は本当にお世話になりました。",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "助けていただきありがとうございます。今日は本当にお手数をおかけしました。",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 5030,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 945,
+    "ttft_from_end_ms": 944,
+    "completion_lag_ms": 2222,
+    "ttfa_from_start_ms": 4146
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:05:23.375Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的謝意與客氣。使用「助けていただき」與「お手数をおかけしました」符合日文的禮貌表達，與參考譯文一樣好。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文含意：感謝對方的幫忙並表示今日麻煩對方。日文表達自然且敬語使用得當（「助けていただきありがとうございます」「お手数をおかけしました」），與參考譯文差異僅在用詞（手伝う/助ける、お世話になりました/お手数をおかけしました），不影響語意與禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

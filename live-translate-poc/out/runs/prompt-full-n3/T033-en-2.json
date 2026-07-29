@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:00:03.135Z"
+  "ts": "2026-07-29T11:00:03.135Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is exceptionally accurate and natural. It perfectly conveys the meaning of the source text with correct grammar and phrasing."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（請幫叫計程車、明天早上六點半要到機場），沒有遺漏或新增資訊。用語上微差異：'call me a taxi' 比較口語或略不自然（參考譯文的 'call a taxi for me' 更標準），因此流暢度評為4，但仍可理解且語法正確。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

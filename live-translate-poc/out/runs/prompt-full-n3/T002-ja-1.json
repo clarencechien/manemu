@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:45:38.818Z"
+  "ts": "2026-07-29T10:45:38.818Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。將『Shibuya Sky』譯為英文『SHIBUYA SKY』，以及將『這棟樓』譯為『この建物』皆完全符合原意，日語表達十分流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（詢問 Shibuya Sky 的入口是否在這棟樓），故語意忠實度給 5。日語句子整體通順，但將「渋谷スカイ」以拉丁大寫 SHIBUYA SKY 表記，以及使用「この建物」而非較口語的「このビル」，使表現略顯不自然或不如參考譯文地道，因此流暢度給 4。沒有數字錯誤、否定翻轉、省略或捏造資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

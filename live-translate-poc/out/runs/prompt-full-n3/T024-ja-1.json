@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:55:35.302Z"
+  "ts": "2026-07-29T10:55:35.302Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「打八折」正確地翻譯為「2割引き」（即八折/減價二成），「兩件」翻譯為「2つ」在口語中也非常自然，語意完全忠實，無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句條件與購買數量，2割引き（八折）和會買兩件的意思都正確，因此語意忠實度高（5）。流暢度略降為4，因為機譯用「2つ」作為數量詞屬通用用法，但原句指的是衣物（參考譯用「2着」），用具體的服裝量詞會更自然；此外開頭用「これ、もし」比起參考譯的「これが…なら」稍微口語，但仍可接受。其餘標記（數字錯誤、否定顛倒、敬語、姓名錯誤、遺漏、幻造）皆不適用。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:46:44.755Z"
+  "ts": "2026-07-29T10:46:44.755Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。前半句將「幾分鐘」譯為「どのくらい」（大約多久）在日文情境中十分自然，後半句的「15分以上かかるようなら、タクシーに乗りたいのですが」語氣委婉且完全符合原意。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且與原意一致。日文自然，禮貌表現（〜たいのですが）也合適，僅有細微措辭差異但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

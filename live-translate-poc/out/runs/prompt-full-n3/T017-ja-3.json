@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:52:40.729Z"
+  "ts": "2026-07-29T10:52:40.729Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。將「大杯」與「中杯」在地化翻譯為「Lサイズ」與「Mサイズ」，非常符合日文點餐情境，語意完整，文法流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地表達原句意思：請不要加冰、把大杯改成中杯、總共三杯。日語表達自然且敬語適當，與參考譯文差異僅在用詞（例：氷を入れないでください vs 氷なしでお願いします），不影響理解，因此給予最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

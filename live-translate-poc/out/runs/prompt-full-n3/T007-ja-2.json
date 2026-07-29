@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:48:00.435Z"
+  "ts": "2026-07-29T10:48:00.435Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，僅在「京都まで」與「京都までの」有微小語法差異，但完全不影響語意與流暢度。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（要兩張到京都的車票：大人一張、小孩一張），資訊沒有遺漏或錯誤。表達上微小自然度問題：日語通常說「京都までの切符を〜」較自然，以及「子ども」的標記較常見，但這些為細微格式／用字差異，故流暢度評為4，忠實度評為5。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

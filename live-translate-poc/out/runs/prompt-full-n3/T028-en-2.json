@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:57:47.226Z"
+  "ts": "2026-07-29T10:57:47.226Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The name '陳大文' (Chen Ta-wen) was incorrectly translated as 'condition Chen' (name_mangled). The rest of the translation is accurate and fluent."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文傳達出有訂房、今起住兩晚，但把姓名『陳大文 / Chen Ta-wen』錯譯為“condition Chen”（把人名誤聽/誤譯並插入多餘詞），導致語意不忠且人名被扭曲。句子語法大致正確，但因人名錯誤與不自然片語，流暢度受損。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

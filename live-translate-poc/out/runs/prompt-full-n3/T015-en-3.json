@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:51:46.087Z"
+  "ts": "2026-07-29T10:51:46.087Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. It correctly translates the number of people and the requirement for children's seats. Translating '兩個小孩，需要兒童椅' as 'need two booster seats for the kids' is a very natural and contextually appropriate rendering."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文正確傳達了人數（五人）與需要兩個兒童椅的意思，但將「兒童椅」翻成 'booster seats'（常指汽車增高座椅）而非參考譯文所示的 'high chairs'（餐椅/嬰兒座椅），造成語義不準確。語句流暢自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

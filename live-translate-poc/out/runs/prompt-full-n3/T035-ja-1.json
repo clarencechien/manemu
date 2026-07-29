@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:00:32.345Z"
+  "ts": "2026-07-29T11:00:32.345Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. 'パスポートがなくなりました' (My passport is gone) is a very common and natural way to express '我的護照不見了' in Japanese, and '警察署はどこですか？' is a correct translation for the second part. There are no grammatical or semantic errors."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文は原文の意味（パスポートをなくしたことと警察署の場所を尋ねる）を正確に伝えている。参考訳の「〜してしまいました」は話者の残念／後悔のニュアンスを強めるが、意味の核は変わらないため忠実度は高い。日本語表現も自然で違和感がないため流暢度は高い。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

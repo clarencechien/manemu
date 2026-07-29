@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "手伝っていただいてありがとうございます。今日は本当にお世話になりました。",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "手伝ってくださりありがとうございます。今日は本当にご不便をおかけしました。",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 4960,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 925,
+    "ttft_from_end_ms": 925,
+    "completion_lag_ms": 2035,
+    "ttfa_from_start_ms": 4125
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.029,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:05:31.921Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "「麻煩你了」在此處表示感謝對方為自己費心、添麻煩，日文常譯為「お世話になりました」或「お手数をおかけしました」。「ご不便をおかけしました」意為「給您帶來不便」，通常用於商家對顧客因服務中斷等造成不便時的道歉，在此語境下不夠貼切，但文法與語氣依然流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文整體語意接近且日語表達通順。第一句（手伝ってくださりありがとうございます）恰當。第二句用『ご不便をおかけしました』字面是「給對方帶來不便」，語義上與原句『麻煩你了/お世話になりました』略有出入—原句是對對方的感謝與客套，參考譯文用『お世話になりました』更符合禮貌表達。此差異為小幅語意偏差，故給予 adequacy 4，fluency 4。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

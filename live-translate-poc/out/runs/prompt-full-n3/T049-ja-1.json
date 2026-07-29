@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T049",
+  "category": "smalltalk",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我是從台灣來的,第一次來大阪玩。",
+  "reference": "台湾から来ました。大阪に遊びに来るのは初めてです。",
+  "inputTranscript": "我 是 从 台 湾 来 的 , 第 一 次 来 大 阪 玩 。",
+  "outputTranscript": "台湾から来ました。大阪観光は初めてです。",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 3890,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 989,
+    "ttft_from_end_ms": 989,
+    "completion_lag_ms": 1873,
+    "ttfa_from_start_ms": 4988
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.783,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:07:04.436Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「大阪観光は初めてです」完美地對應了「第一次來大阪玩」，語意忠實，日語表達也十分道地。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。機譯『大阪観光は初めてです』與參考譯文措辭不同但意義相同，自然流暢。沒有遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:54:45.056Z"
+  "ts": "2026-07-29T10:54:45.056Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文非常準確且自然地翻譯了原文的意思。「太貴了」翻譯為「高すぎますよ」，「算我三千塊可以嗎？」翻譯為「3000円にしてもらってもいいですか」，語氣禮貌且符合日語表達習慣，與參考譯文幾乎一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文含意且語氣自然。僅在語氣上使用「よ」和選擇「もいいですか」而非更委婉的「もらえませんか」，但不影響忠實度或流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

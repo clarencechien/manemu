@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:49:36.630Z"
+  "ts": "2026-07-29T10:49:36.630Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation incorrectly translated the Japanese place name '新宿' (Shinjuku) as 'Hsinchu' (新竹, a city in Taiwan), which is a major name mangling error. The rest of the sentence is translated accurately."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "Meaning largely preserved as a question about the last service at 11:45, but key content is mistranslated: 新宿 (Shinjuku) became Hsinchu, and 車 is rendered as 'tram' instead of 'train'. These errors change important referents, so adequacy is low. Sentence is otherwise grammatical, so fluency is relatively high."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

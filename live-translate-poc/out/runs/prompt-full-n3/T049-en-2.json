@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T049",
+  "category": "smalltalk",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "我是從台灣來的,第一次來大阪玩。",
+  "reference": "I'm from Taiwan — it's my first time visiting Osaka.",
+  "inputTranscript": "我 是 从 台 湾 来 的 , 第 一 次 来 大 阪 玩 。",
+  "outputTranscript": "I'm from Taiwan, and this is my first time visiting Osaka.",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 3460,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 954,
+    "ttft_from_end_ms": 952,
+    "completion_lag_ms": 1804,
+    "ttfa_from_start_ms": 4954
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.154,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:07:23.393Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text with excellent fluency."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整忠實地傳達原文資訊（來自台灣，第一次來大阪），語句流暢自然。與參考譯文僅在標點/語氣上有微小差異（使用 and vs. em dash/it’s），但不影響意義或自然度。沒有錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

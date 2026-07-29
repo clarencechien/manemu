@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:56:37.698Z"
+  "ts": "2026-07-29T10:56:37.698Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地傳達了原文的意思。「考慮了一下」翻譯為「少し考えましたが」，「還是先不買好了」翻譯為「まだ買わないでおこうと思います」，語氣與語意皆十分貼切。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原文含意（決定先不買）。日語表達自然，語氣與參考譯文相當，無誤譯或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

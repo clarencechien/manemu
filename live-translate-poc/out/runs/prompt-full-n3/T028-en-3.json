@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:57:46.719Z"
+  "ts": "2026-07-29T10:57:46.719Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文將「陳大文」翻譯為「David Chen」，屬於人名錯誤（name_mangled）。此外，「今天住兩個晚上」翻譯為「staying for two nights tonight」在英文語意上有些微不自然（通常會說 starting tonight 或 from today），但整體語意仍算清晰。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文將原名「陳大文」錯譯為「David Chen」，改變了名字（重要資訊），屬於錯譯/捏造；且原句意為「從今天起住兩晚」，機譯寫成「staying for two nights tonight」表達不自然且可能引起歧義。其他資訊（兩晚）保留，語法可理解但不夠自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

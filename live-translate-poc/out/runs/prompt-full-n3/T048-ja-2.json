@@ -1,0 +1,63 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T048",
+  "category": "smalltalk",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "不用了,謝謝,我只是看看而已。",
+  "reference": "いえ、結構です。ありがとうございます。ちょっと見ているだけなので。",
+  "inputTranscript": "不 用 了 , 谢 谢 , 我 只 是 看 看 而 已 。",
+  "outputTranscript": "いいえ、結構です。ただ見ているだけですので。",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3200,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1044,
+    "ttft_from_end_ms": 973,
+    "completion_lag_ms": 1673,
+    "ttfa_from_start_ms": 4045
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.655,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:06:40.583Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文漏譯了「謝謝」（ありがとうございます），其餘部分翻譯得非常自然且準確。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達原句意思（拒絕與表示只是看看），但缺少明確的「謝謝」(感謝語)；此外結尾の「ので」顯得未完成，略影響自然度。故語意忠實略降一級，語言自然度亦略有瑕疵。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

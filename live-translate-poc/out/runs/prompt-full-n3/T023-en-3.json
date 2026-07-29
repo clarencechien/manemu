@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:55:28.016Z"
+  "ts": "2026-07-29T10:55:28.016Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate, natural, and grammatically correct. It perfectly conveys the meaning of the source text, using appropriate terminology ('inclusive of tax' and 'exclusive of tax')."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地表達原句含稅／不含稅的對立選項，語氣禮貌自然。用詞（inclusive/exclusive of tax）在英語中合適且準確，與參考譯文等效。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
