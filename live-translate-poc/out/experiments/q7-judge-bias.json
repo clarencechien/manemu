@@ -1,0 +1,203 @@
+{
+ "byJudge": {
+  "openai/gpt-5.6-terra": {
+   "n": 400,
+   "flags": {
+    "name_mangled": 25,
+    "omission": 20,
+    "hallucination": 25,
+    "honorific_off": 5
+   },
+   "mean_bias": 0.08,
+   "mean_abs_dev": 0.125
+  },
+  "mistralai/mistral-large-2512": {
+   "n": 400,
+   "flags": {
+    "name_mangled": 34,
+    "omission": 22,
+    "hallucination": 23,
+    "honorific_off": 32,
+    "number_wrong": 5,
+    "negation_flipped": 1
+   },
+   "mean_bias": 0.007,
+   "mean_abs_dev": 0.207
+  },
+  "anthropic/claude-sonnet-5": {
+   "n": 400,
+   "flags": {
+    "omission": 34,
+    "name_mangled": 24,
+    "hallucination": 41,
+    "negation_flipped": 6,
+    "honorific_off": 12,
+    "number_wrong": 1
+   },
+   "mean_bias": -0.1,
+   "mean_abs_dev": 0.155
+  },
+  "deepseek/deepseek-v3.2": {
+   "n": 400,
+   "flags": {
+    "omission": 44,
+    "name_mangled": 49,
+    "number_wrong": 32,
+    "negation_flipped": 20,
+    "honorific_off": 28,
+    "hallucination": 38
+   },
+   "mean_bias": 0.035,
+   "mean_abs_dev": 0.155
+  },
+  "qwen/qwen3.7-plus": {
+   "n": 400,
+   "flags": {
+    "omission": 21,
+    "name_mangled": 29,
+    "hallucination": 24,
+    "honorific_off": 19,
+    "number_wrong": 13
+   },
+   "mean_bias": -0.168,
+   "mean_abs_dev": 0.177
+  }
+ },
+ "highDisagreement": [
+  {
+   "runId": "full-n3",
+   "tag": "T014-en-1",
+   "range": [
+    2,
+    5
+   ],
+   "scores": {
+    "gpt-5.6-terra": 4,
+    "deepseek-v3.2": 5,
+    "claude-sonnet-5": 2,
+    "mistral-large-2512": 4,
+    "qwen3.7-plus": 2
+   }
+  },
+  {
+   "runId": "full-n3",
+   "tag": "T015-ja-1",
+   "range": [
+    2,
+    5
+   ],
+   "scores": {
+    "gpt-5.6-terra": 4,
+    "mistral-large-2512": 5,
+    "claude-sonnet-5": 3,
+    "deepseek-v3.2": 5,
+    "qwen3.7-plus": 2
+   }
+  },
+  {
+   "runId": "full-n3",
+   "tag": "T040-ja-1",
+   "range": [
+    2,
+    5
+   ],
+   "scores": {
+    "gpt-5.6-terra": 2,
+    "mistral-large-2512": 5,
+    "deepseek-v3.2": 4,
+    "claude-sonnet-5": 2,
+    "qwen3.7-plus": 2
+   }
+  },
+  {
+   "runId": "full-n3",
+   "tag": "T043-ja-2",
+   "range": [
+    1,
+    4
+   ],
+   "scores": {
+    "gpt-5.6-terra": 2,
+    "mistral-large-2512": 4,
+    "claude-sonnet-5": 1,
+    "deepseek-v3.2": 3,
+    "qwen3.7-plus": 2
+   }
+  },
+  {
+   "runId": "full-n3",
+   "tag": "T048-ja-1",
+   "range": [
+    2,
+    5
+   ],
+   "scores": {
+    "gpt-5.6-terra": 5,
+    "mistral-large-2512": 3,
+    "deepseek-v3.2": 5,
+    "claude-sonnet-5": 4,
+    "qwen3.7-plus": 2
+   }
+  },
+  {
+   "runId": "full-n3",
+   "tag": "T048-ja-2",
+   "range": [
+    2,
+    5
+   ],
+   "scores": {
+    "gpt-5.6-terra": 5,
+    "deepseek-v3.2": 5,
+    "mistral-large-2512": 3,
+    "claude-sonnet-5": 5,
+    "qwen3.7-plus": 2
+   }
+  },
+  {
+   "runId": "full-n3",
+   "tag": "T048-ja-3",
+   "range": [
+    2,
+    5
+   ],
+   "scores": {
+    "gpt-5.6-terra": 5,
+    "deepseek-v3.2": 5,
+    "mistral-large-2512": 3,
+    "claude-sonnet-5": 5,
+    "qwen3.7-plus": 2
+   }
+  },
+  {
+   "runId": "gpt-n1",
+   "tag": "T011-ja-1",
+   "range": [
+    2,
+    5
+   ],
+   "scores": {
+    "gpt-5.6-terra": 5,
+    "claude-sonnet-5": 4,
+    "mistral-large-2512": 4,
+    "deepseek-v3.2": 5,
+    "qwen3.7-plus": 2
+   }
+  },
+  {
+   "runId": "gpt-n1",
+   "tag": "T015-ja-1",
+   "range": [
+    2,
+    5
+   ],
+   "scores": {
+    "gpt-5.6-terra": 3,
+    "mistral-large-2512": 5,
+    "deepseek-v3.2": 5,
+    "claude-sonnet-5": 3,
+    "qwen3.7-plus": 2
+   }
+  }
+ ]
+}

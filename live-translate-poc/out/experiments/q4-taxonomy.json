@@ -1,0 +1,84 @@
+{
+ "items": {
+  "full-n3|T002-ja-2": {
+   "runId": "full-n3",
+   "tag": "T002-ja-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "Shibuya 被誤轉寫為「徐博雅」,導致專有名詞辨識錯誤"
+  },
+  "full-n3|T002-en-3": {
+   "runId": "full-n3",
+   "tag": "T002-en-3",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "「Shibuya」被誤轉錄為「徐博雅」,導致專有名詞辨識錯誤"
+  },
+  "full-n3|T010-en-2": {
+   "runId": "full-n3",
+   "tag": "T010-en-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "「新宿」被誤轉錄為「新竹」,地名錯誤導致後續翻譯錯誤"
+  },
+  "full-n3|T002-ja-1": {
+   "runId": "full-n3",
+   "tag": "T002-ja-1",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "「Shibuya」被誤轉寫為「徐博雅」，導致專有名詞辨識錯誤"
+  },
+  "full-n3|T002-en-1": {
+   "runId": "full-n3",
+   "tag": "T002-en-1",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "Shibuya 被誤轉寫為「徐博雅」,專有名詞辨識錯誤,且譯文further將「這棟樓嗎」的疑問句意誤譯為詢問位置"
+  },
+  "full-n3|T010-en-1": {
+   "runId": "full-n3",
+   "tag": "T010-en-1",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "「新宿」被誤轉寫為「新竹」,地名錯誤導致後續翻譯延續此錯誤"
+  },
+  "full-n3|T002-ja-3": {
+   "runId": "full-n3",
+   "tag": "T002-ja-3",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "STT將「Shibuya」誤轉寫為「徐博雅」,導致專有名詞辨識錯誤"
+  },
+  "full-n3|T002-en-2": {
+   "runId": "full-n3",
+   "tag": "T002-en-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "STT將「Shibuya」誤轉寫為「徐博雅」,專有名詞辨識錯誤導致後續翻譯也錯誤"
+  },
+  "full-n3|T010-en-3": {
+   "runId": "full-n3",
+   "tag": "T010-en-3",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「新宿」被誤聽寫為「新竹」,屬同音/近音詞混淆導致地名錯誤"
+  },
+  "full-n3|T010-ja-2": {
+   "runId": "full-n3",
+   "tag": "T010-ja-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「新宿」被誤轉寫為「新竹」,兩地發音相近導致STT錯誤"
+  }
+ }
+}

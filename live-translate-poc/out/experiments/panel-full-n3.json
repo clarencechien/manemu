@@ -7,6 +7,3008 @@
   "deepseek/deepseek-v3.2",
   "mistralai/mistral-large-2512"
  ],
+ "consensus": {
+  "T001-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    4
+   ],
+   "fluency_median": 5,
+   "omission_votes": 3
+  },
+  "T001-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T001-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 3,
+   "adequacy_range": [
+    3,
+    4
+   ],
+   "fluency_median": 4,
+   "omission_votes": 2
+  },
+  "T001-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T001-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T001-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T002-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    2
+   ],
+   "fluency_median": 4,
+   "omission_votes": 3
+  },
+  "T002-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    2
+   ],
+   "fluency_median": 4,
+   "omission_votes": 3
+  },
+  "T002-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    1,
+    2
+   ],
+   "fluency_median": 3,
+   "omission_votes": 4
+  },
+  "T002-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    3
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T002-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    1,
+    3
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T002-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    3
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T003-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T003-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T003-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T003-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T003-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T003-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T004-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T004-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T004-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T004-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T004-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T004-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T005-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T005-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T005-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T005-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T005-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T005-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T006-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T006-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T006-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T006-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T006-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T006-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T008-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T008-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T008-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T008-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T008-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T008-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T009-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T009-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T009-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T009-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T009-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T009-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T010-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    3
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T010-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    2
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T010-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    1,
+    2
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T010-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    2
+   ],
+   "fluency_median": 4,
+   "omission_votes": 5
+  },
+  "T010-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    3
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T010-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    3
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T012-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T012-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T012-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T012-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 2
+  },
+  "T012-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 2
+  },
+  "T012-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 2
+  },
+  "T013-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T013-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T013-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T013-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T013-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T013-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T014-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T014-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    1,
+    3
+   ],
+   "fluency_median": 4,
+   "omission_votes": 3
+  },
+  "T014-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    1,
+    3
+   ],
+   "fluency_median": 4,
+   "omission_votes": 5
+  },
+  "T014-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 1,
+   "adequacy_range": [
+    1,
+    2
+   ],
+   "fluency_median": 4,
+   "omission_votes": 5
+  },
+  "T014-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 1,
+   "adequacy_range": [
+    1,
+    2
+   ],
+   "fluency_median": 3,
+   "omission_votes": 5
+  },
+  "T014-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    1,
+    2
+   ],
+   "fluency_median": 3,
+   "omission_votes": 5
+  },
+  "T015-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T015-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T015-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T015-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T015-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T015-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T016-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 1,
+   "adequacy_range": [
+    1,
+    2
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T016-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 1,
+   "adequacy_range": [
+    1,
+    2
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T016-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 1,
+   "adequacy_range": [
+    1,
+    2
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T016-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T016-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T016-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T017-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T017-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T017-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T017-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T017-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T017-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T018-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T018-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T018-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T018-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T018-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T018-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T019-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T019-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T019-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    4
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T019-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T019-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T019-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T020-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T020-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T020-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T020-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T020-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T020-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T021-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T021-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T021-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T021-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T021-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T021-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T022-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T022-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T022-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 3,
+   "adequacy_range": [
+    2,
+    4
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T022-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 3,
+   "adequacy_range": [
+    2,
+    4
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T022-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 3,
+   "adequacy_range": [
+    2,
+    4
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T022-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 3,
+   "adequacy_range": [
+    2,
+    4
+   ],
+   "fluency_median": 4,
+   "omission_votes": 1
+  },
+  "T023-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T023-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T023-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T023-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T023-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T023-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T024-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T024-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T024-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T024-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T024-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T024-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T026-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T026-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T026-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T026-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 2
+  },
+  "T026-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 2
+  },
+  "T026-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T027-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T027-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T027-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T027-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T027-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T027-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T028-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 3
+  },
+  "T028-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T028-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 3
+  },
+  "T028-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T028-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T028-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T029-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T029-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T029-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T029-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T029-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T029-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T030-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T030-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T030-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T030-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T030-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T030-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T031-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T031-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T031-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T031-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T031-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T031-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T032-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T032-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T032-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T032-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T032-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T032-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T033-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T033-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T033-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 3,
+   "adequacy_range": [
+    3,
+    4
+   ],
+   "fluency_median": 5,
+   "omission_votes": 5
+  },
+  "T033-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T033-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T033-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T036-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T036-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T036-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T036-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T036-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T036-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T037-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T037-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T037-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T037-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T037-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T037-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    1,
+    2
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T038-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T038-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T038-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T038-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T038-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T038-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T039-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T039-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T039-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T039-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T039-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T039-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T040-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T040-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T040-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T040-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 4
+  },
+  "T040-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T040-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T041-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T041-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T041-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T041-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T041-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T041-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T042-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T042-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    4
+   ],
+   "fluency_median": 3,
+   "omission_votes": 1
+  },
+  "T042-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T042-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    4
+   ],
+   "fluency_median": 3,
+   "omission_votes": 1
+  },
+  "T042-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T042-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T043-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T043-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T043-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T043-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T043-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    1,
+    4
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T043-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T044-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T044-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T044-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T044-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T044-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T044-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T045-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T045-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 2
+  },
+  "T045-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T045-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T045-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T045-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 3,
+   "adequacy_range": [
+    2,
+    3
+   ],
+   "fluency_median": 5,
+   "omission_votes": 5
+  },
+  "T046-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T046-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T046-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T046-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T046-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 1,
+   "adequacy_range": [
+    1,
+    1
+   ],
+   "fluency_median": 1,
+   "omission_votes": 5
+  },
+  "T046-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T048-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T048-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T048-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T048-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T048-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 3,
+   "omission_votes": 1
+  },
+  "T048-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 3,
+   "omission_votes": 1
+  },
+  "T049-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T049-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    4
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T049-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T049-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T049-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T049-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T050-en-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T050-en-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T050-en-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T050-ja-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T050-ja-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T050-ja-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  }
+ },
  "items": {
   "T001-en-1": {
    "openai/gpt-5.6-terra": {
@@ -18354,6 +21356,19 @@
      "hallucination": false
     },
     "reason": "譯文完整傳達了原文的讚美與詢問語意，日語表達自然流暢，敬語使用得體。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語使用得體。"
    }
   },
   "T046-ja-2": {
@@ -18676,6 +21691,19 @@
      "hallucination": false
     },
     "reason": "译文准确传达了原文的对比含义，语法自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語句自然流暢，無任何錯誤或遺漏。"
    }
   },
   "T047-ja-1": {
@@ -18730,6 +21758,19 @@
      "hallucination": false
     },
     "reason": "译文准确传达了原文的对比含义，且日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，日語表達自然流暢，敬語與語氣皆恰當。"
    }
   },
   "T047-ja-2": {
@@ -18771,6 +21812,1305 @@
      "hallucination": false
     },
     "reason": "譯文忠實傳達原文語意，自然流暢且無誤"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的对比含义，且日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，無任何錯誤或遺漏。"
+   }
+  },
+  "T047-ja-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達日本夏天很熱且台北更熱的比較語意，日語自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢且無誤。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且自然流暢"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的对比含义，且日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語與語氣皆恰當。"
+   }
+  },
+  "T048-en-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全忠實且自然對應原文"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達婉拒、致謝及只是瀏覽的意思，英文自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": -1,
+    "flags": {
+     "number_wrong": -1,
+     "negation_flipped": -1,
+     "honorific_off": -1,
+     "name_mangled": -1,
+     "omission": -1,
+     "hallucination": -1
+    },
+    "reason": "語意完全忠實，表達自然地道。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，語氣自然流暢，無遺漏或錯誤。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實地傳達原文語意，語氣自然道地，與參考譯文一致，無任何錯誤或遺漏。"
+   }
+  },
+  "T048-en-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達婉拒、致謝及只是看看而已的意思，英文自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確地傳達了原文的語意與禮貌語氣，且表達自然地道。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全準確且自然對應原文語意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全忠於原文語意，且表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實地傳達原文語意，語氣自然道地，與參考譯文一致。"
+   }
+  },
+  "T048-en-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達婉拒與只是瀏覽的意思，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全忠實且自然對應原文"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確地傳達了原文的語意與禮貌語氣，且英文表達自然地道。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全忠於原文語意，且表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且自然地傳達原文語意，與參考譯文一致。"
+   }
+  },
+  "T048-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達「不用了、謝謝、只是看看」之意，日語自然但語氣較口語。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "「結構です」的使用不自然且語意不完全對應，出現無中生有的「結構です、ありがとう」組合"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的拒绝、感谢和只是看看的意图，且日语表达自然流畅。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本忠實但省略否定詞「いえ」且用語稍不夠禮貌"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「結構です」語意不通，應為「結構です（不用了）」之誤譯，且敬語使用不自然，整體語意忠實度與自然度皆不佳。"
+   }
+  },
+  "T048-ja-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達婉拒、致謝與只是看看而已的意思，日語自然但語氣略偏口語。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": -1,
+    "flags": {
+     "number_wrong": -1,
+     "negation_flipped": -1,
+     "honorific_off": -1,
+     "name_mangled": -1,
+     "omission": -1,
+     "hallucination": -1
+    },
+    "reason": "譯文語意完全忠實，且日語表達自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "「結構です」的語氣過於直接，缺乏禮貌敬語；「結構」被誤譯為「結構です」而非否定拒絕的意思，屬於誤解原文語意。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意忠實但敬語程度略低於原文情境"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "「結構です」為誤譯，原文「不用了」應譯為「いいえ」或「大丈夫です」，且「結構です」語意不通，疑似幻譯。"
+   }
+  },
+  "T048-ja-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達「不用了、謝謝、只是看看」之意，日語自然但「結構です」略偏直接。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": -1,
+    "flags": {
+     "number_wrong": -1,
+     "negation_flipped": -1,
+     "honorific_off": -1,
+     "name_mangled": -1,
+     "omission": -1,
+     "hallucination": -1
+    },
+    "reason": "語意完全忠實，但日語表達不自然且有明顯錯誤。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "「結構です」的使用不自然且語意不完全對應原文，多出了「結構」的錯誤用法，但整體語意尚可理解。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且用語自然道地。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "「結構です」為誤譯，原文「不用了」應譯為「いいえ」或「大丈夫です」，且「結構です」語意不通，疑似幻譯。"
+   }
+  },
+  "T049-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達來自台灣及首次到大阪旅遊的意思，英文自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實且流暢地傳達原文語意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢且無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意，表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文所有語意，語句自然流暢，符合英語母語者的表達習慣。"
+   }
+  },
+  "T049-en-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整自然，但將「大阪」誤譯為不存在的「Daiban」。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "大阪被誤譯為Daiban,地名錯誤"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "地名「大阪」錯譯為「Daiban」，但語意整體正確，流暢度高。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本正確，但將大阪(Daiban)誤譯為Daiban，應為Osaka。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "專有名詞「大阪」應譯為Osaka,卻誤譯為Daiban,屬音譯錯誤,影響語意忠實度。"
+   }
+  },
+  "T049-en-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達來自台灣及首次到大阪遊玩的意思，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,語意與原文一致。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意，表達自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，無遺漏或錯誤。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語句自然流暢，無任何錯誤或遺漏。"
+   }
+  },
+  "T049-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達來自台灣及首次到大阪遊玩的意思，日語自然通順。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，僅「玩」的部分略有簡化但不影響整體理解，日語表達自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "漏譯「玩」的語意,僅譯出「來」而非「來玩/遊玩」,但整體忠實且流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的所有信息，且日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，僅省略「玩」之語境但不影響整體理解。"
+   }
+  },
+  "T049-ja-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達來自台灣及首次到大阪遊玩的意思，日語自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，僅「玩」的部分略有簡化但不影響整體理解，日語表達自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的所有信息，且日语表达自然流畅。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確表達來意,但省略「玩」的休閒意涵,略有語意流失。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "語意忠實且日語自然流暢，但遺漏了原文「玩」的語意，未譯出「遊びに」。"
+   }
+  },
+  "T049-ja-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達來自台灣及首次到大阪遊玩的意思，日語自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，僅「玩」的部分略有簡化但不影響整體理解，日語表達自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意，日語表達自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "譯文省略了「玩」(遊びに)的語意,略有語意簡化但整體忠實通順。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，僅省略「玩」的語境但不影響整體理解。"
+   }
+  },
+  "T050-en-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然,與原文意思相符。"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確表達請對方協助及之後再聯絡，英文自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文的委婉請託與後續聯絡意圖，語氣自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的委託與後續聯絡之意，且用詞自然地道。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且自然地傳達原文語意，無任何錯誤或遺漏。"
+   }
+  },
+  "T050-en-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達請託與之後聯絡之意，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文的委婉請託與後續聯繫意圖，語氣自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的委託與後續聯絡之意，且英文表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然得體，符合英語慣用表達。"
+   }
+  },
+  "T050-en-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達「麻煩你了」與「之後再聯絡」，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然,與原文意思一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然流暢，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的委托与后续联系之意，且英文表达自然地道。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語氣自然得體，符合英語慣用表達。"
+   }
+  },
+  "T050-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達拜託對方及之後再聯絡的意思，日語自然得體。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然,僅措辭略簡潔。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「之後再聯絡」的「之後」未完全譯出，但語意大致正確，日語表達自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的请求和后续联系之意，日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然得體，敬語使用恰當。"
+   }
+  },
+  "T050-ja-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達請託與日後再聯絡之意，日語自然得體。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本忠實但略去「之後」的明確表達,略顯簡化"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「之後再聯絡」的「之後」未完全譯出，但語意基本忠實；日文自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的请求和后续联系之意，且日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整且自然，但「お願いします」語氣略顯生硬，不如「よろしくお願いします」貼切。"
+   }
+  },
+  "T050-ja-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達請託與日後再聯絡之意，日語自然得體。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意基本忠實,但省略「之後」的時間感稍弱"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的委托和后续联系之意，日语表达自然流畅。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「之後再聯絡」的「之後」未完全譯出，但語意基本正確，語氣自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然得體，敬語使用恰當。"
    }
   }
  }

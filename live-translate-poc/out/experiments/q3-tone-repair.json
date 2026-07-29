@@ -329,6 +329,102 @@
     "meaning_preserved": true,
     "changed": false
    }
+  },
+  "full-n3|T004-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "ここから歩いて何分くらいですか？ 15分以上かかるなら、タクシーに乗りたいです。",
+   "after": "ここから歩いて何分くらいですか？ 15分以上かかるなら、タクシーに乗りたいですか。",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": false,
+    "changed": true
+   }
+  },
+  "full-n3|T004-en-3": {
+   "group": "control",
+   "dir": "en",
+   "before": "It takes about how many minutes to walk from here? If it's more than 15 minutes, I'll take a taxi.",
+   "after": "It takes about how many minutes to walk from here? If it's more than 15 minutes, I'll take a taxi.",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T004-en-2": {
+   "group": "control",
+   "dir": "en",
+   "before": "It takes about how many minutes to walk from here? If it's more than 15 minutes, I'll take a taxi.",
+   "after": "It takes about how many minutes to walk from here? If it's more than 15 minutes, I'll take a taxi.",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T004-ja-2": {
+   "group": "control",
+   "dir": "ja",
+   "before": "ここから歩いて何分くらいですか？ 15分以上かかるなら、タクシーに乗りたいです。",
+   "after": "ここから歩いて何分くらいですか？ 15分以上かかるなら、タクシーに乗りたいです。",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T005-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, are Senso-ji Temple and Skytree in the same direction?",
+   "after": "Excuse me, are Senso-ji Temple and Skytree in the same direction?",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T004-ja-3": {
+   "group": "control",
+   "dir": "ja",
+   "before": "ここから歩いて何分くらいかかりますか? 15分以上かかるならタクシーに乗ります。",
+   "after": "ここから歩いて何分くらいかかりますか? 15分以上かかるならタクシーに乗ります。",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T005-en-2": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, are Senso-ji Temple and Skytree in the same direction?",
+   "after": "Excuse me, are Senso-ji Temple and Skytree in the same direction?",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T004-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "It takes about how many minutes to walk from here? If it's more than 15 minutes, I'll take a taxi.",
+   "after": "It takes about how many minutes to walk from here? If it's more than 15 minutes, I'll take a taxi.",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
   }
+ },
+ "stats": {
+  "repairer": "openai/gpt-5.4-nano",
+  "judge": "anthropic/claude-sonnet-5",
+  "lost_n": 19,
+  "fixed_rate": 0.579,
+  "control_n": 19,
+  "control_needless_change_rate": 0.053
  }
 }
