@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:25:57.015Z"
+  "ts": "2026-07-29T07:25:57.015Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文漏譯了「總共」(in total)，但整體語意依然非常清晰且表達自然，故給予4分忠實度與5分流暢度。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

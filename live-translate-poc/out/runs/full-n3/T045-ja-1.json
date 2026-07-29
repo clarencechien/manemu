@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:31:46.335Z"
+  "ts": "2026-07-29T07:31:46.335Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完整且表達非常自然。唯一的問題是語氣過於口語/非正式（使用了「ありがとう」和「助かったよ」），相較於原文較為客氣的語氣，敬語表現不足（honorific_off）。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:27:58.127Z"
+  "ts": "2026-07-29T07:27:58.127Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機器譯文漏譯了關鍵訊息「到機場」（airport），且將「六點半要到（機場）」的意思轉變為「六點半需要一台計程車」（I need one at 6:30），造成語意偏差與遺漏，故標記 omission。英文句型本身流暢度良好。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

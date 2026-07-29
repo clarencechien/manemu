@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:27:27.679Z"
+  "ts": "2026-07-29T07:27:27.679Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思。在流暢度與語氣方面，「いいです」（敬體）與「ありがとう」（常體）混用，語氣稍微不一致，且「ありがとう」相較於原文的「謝謝」顯得過於隨意（建議使用「ありがとうございます」），因此標記敬語錯誤，但整體仍非常自然且易懂。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

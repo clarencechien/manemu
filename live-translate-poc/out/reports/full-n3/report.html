@@ -1,0 +1,2472 @@
+<!doctype html><meta charset="utf-8">
+<title>live-translate harness full-n3</title>
+<style>
+body{font-family:system-ui,"Noto Sans TC",sans-serif;margin:24px auto;max-width:1100px;padding:0 16px;line-height:1.5}
+table{border-collapse:collapse;margin:8px 0;width:100%}
+td,th{border:1px solid #ccc;padding:4px 8px;font-size:13px;text-align:left;vertical-align:top}
+th{background:#f4f4f4}small{color:#666}.zh{min-width:180px}
+.caveat{background:#fff8e1;border:1px solid #e6c200;padding:8px 12px;border-radius:6px}
+</style>
+<h1>即時口語翻譯 harness 報告</h1>
+<p>runId=<code>full-n3</code> · model=<code>models/gemini-3.5-live-translate-preview</code> · judge=<code>models/gemini-3.1-pro-preview + models/gemini-3.5-flash</code> · runtime=cc-web-node(非 Cloudflare;延遲為機房乾淨網路的樂觀下界) · 2026-07-29T08:09:18.703Z</p>
+<div class="caveat"><b>解讀前先看的假設/限制:</b><ul><li>評審使用同家 Gemini 文字模型(無 OpenAI 金鑰),存在自評偏誤風險</li><li>gold 參考譯文由 LLM 產生,未經人工校對</li><li>TTS 合成音源乾淨、無噪音,品質與延遲皆為樂觀值</li><li>CC web 沙箱地理位置不可控,網路段延遲僅供參考,端到端以 M4 真機為準</li></ul>
+結果筆數 300,失敗 0。門檻參考(§4.4):ttfa_from_end p90 ≤1500ms 順、≤3000ms 可接受、>5000ms 視為不可用。</div>
+
+<h2>方向:zh → en</h2>
+<h3>延遲(ms,基準=講完那一刻;§4.2)</h3>
+<table><tr><th>指標</th><th>p50</th><th>p90</th><th>p95</th><th>mean</th></tr>
+<tr><td>ttfa_from_end(死氣時間)</td><td>-839</td><td>339</td><td>486</td><td>-893</td></tr>
+<tr><td>ttft_from_end(首字)</td><td>-883</td><td>247</td><td>333</td><td>-978</td></tr>
+<tr><td>completion_lag(譯音收完)</td><td>2572</td><td>2994</td><td>3164</td><td>2569</td></tr>
+<tr><td>ttfa_from_start(對照官方)</td><td>3153</td><td>3365</td><td>3462</td><td>3169</td></tr>
+</table>
+<h3>品質</h3>
+<table>
+<tr><th>n</th><th>adequacy</th><th>fluency</th><th>數字OK率</th><th>否定OK率</th><th>覆蓋率</th><th>CER</th></tr>
+<tr><td>150</td><td>4.62</td><td>4.86</td>
+<td>96.0%</td><td>98.0%</td>
+<td>0.97</td><td>0.092</td></tr>
+</table>
+<p>評審旗標比例:number_wrong 0.7% · negation_flipped 0.0% · honorific_off 0.0% · name_mangled 4.7% · omission 10.7% · hallucination 0.7%</p>
+<h3>各類別</h3>
+<table><tr><th>類別</th><th>n</th><th>adequacy</th><th>ttfa_end p50</th><th>ttfa_end p90</th><th>completion p90</th></tr>
+<tr><td>directions</td><td>18</td><td>4.28</td><td>-178</td><td>696</td><td>3267</td></tr>
+<tr><td>transport</td><td>21</td><td>4.52</td><td>-826</td><td>560</td><td>2959</td></tr>
+<tr><td>dining</td><td>21</td><td>4.00</td><td>-1114</td><td>273</td><td>2853</td></tr>
+<tr><td>shopping</td><td>21</td><td>4.71</td><td>-810</td><td>218</td><td>2753</td></tr>
+<tr><td>hotel</td><td>18</td><td>4.72</td><td>-1009</td><td>-464</td><td>2985</td></tr>
+<tr><td>emergency</td><td>15</td><td>5.00</td><td>-498</td><td>376</td><td>2974</td></tr>
+<tr><td>appointment</td><td>18</td><td>4.94</td><td>-1344</td><td>-248</td><td>3260</td></tr>
+<tr><td>smalltalk</td><td>18</td><td>4.94</td><td>-83</td><td>251</td><td>2955</td></tr>
+</table>
+
+<h2>方向:zh → ja</h2>
+<h3>延遲(ms,基準=講完那一刻;§4.2)</h3>
+<table><tr><th>指標</th><th>p50</th><th>p90</th><th>p95</th><th>mean</th></tr>
+<tr><td>ttfa_from_end(死氣時間)</td><td>-794</td><td>401</td><td>532</td><td>-813</td></tr>
+<tr><td>ttft_from_end(首字)</td><td>-909</td><td>273</td><td>401</td><td>-897</td></tr>
+<tr><td>completion_lag(譯音收完)</td><td>2726</td><td>3368</td><td>3750</td><td>2816</td></tr>
+<tr><td>ttfa_from_start(對照官方)</td><td>3126</td><td>3400</td><td>3529</td><td>3249</td></tr>
+</table>
+<h3>品質</h3>
+<table>
+<tr><th>n</th><th>adequacy</th><th>fluency</th><th>數字OK率</th><th>否定OK率</th><th>覆蓋率</th><th>CER</th></tr>
+<tr><td>150</td><td>4.59</td><td>4.87</td>
+<td>98.0%</td><td>98.7%</td>
+<td>0.87</td><td>0.094</td></tr>
+</table>
+<p>評審旗標比例:number_wrong 0.0% · negation_flipped 0.0% · honorific_off 6.7% · name_mangled 4.0% · omission 7.3% · hallucination 3.3%</p>
+<h3>各類別</h3>
+<table><tr><th>類別</th><th>n</th><th>adequacy</th><th>ttfa_end p50</th><th>ttfa_end p90</th><th>completion p90</th></tr>
+<tr><td>directions</td><td>18</td><td>4.67</td><td>-199</td><td>584</td><td>3329</td></tr>
+<tr><td>transport</td><td>21</td><td>4.38</td><td>-518</td><td>548</td><td>3084</td></tr>
+<tr><td>dining</td><td>21</td><td>4.38</td><td>-1138</td><td>225</td><td>3316</td></tr>
+<tr><td>shopping</td><td>21</td><td>4.57</td><td>-876</td><td>226</td><td>3450</td></tr>
+<tr><td>hotel</td><td>18</td><td>5.00</td><td>-1024</td><td>-552</td><td>3041</td></tr>
+<tr><td>emergency</td><td>15</td><td>4.67</td><td>-506</td><td>490</td><td>3542</td></tr>
+<tr><td>appointment</td><td>18</td><td>4.56</td><td>-1296</td><td>-94</td><td>3237</td></tr>
+<tr><td>smalltalk</td><td>18</td><td>4.61</td><td>-82</td><td>274</td><td>4272</td></tr>
+</table>
+<h2>逐句明細</h2>
+<table><tr><th>句</th><th>原文 / STT</th><th>譯文 / 參考</th><th>ttfa_end / completion (ms)</th><th>規則</th><th>評審 a/f</th></tr>
+<tr>
+<td>T001<br><small>en#1</small></td>
+<td class="zh">請問車站在哪裡?怎麼走比較快?<br><small>STT: 请问车站怎么走比较快?</small></td>
+<td>Excuse me, where is the fastest way to get to the station?<br><small>ref: Excuse me, where is the station? What's the fastest way to get there?</small></td>
+<td>126 / 2853</td>
+<td> cer=0.23</td>
+<td>3/3<br><small>The translation merges two distinct questions into one and uses the unnatural phrasing 'where is the fastest way' instead of 'what is the fastest way'. It also omits the direct question asking for the station's location.</small></td>
+</tr>
+<tr>
+<td>T001<br><small>en#2</small></td>
+<td class="zh">請問車站在哪裡?怎麼走比較快?<br><small>STT: 请问车站在哪里?怎么走比较快?</small></td>
+<td>Excuse me, where is the station? What's the fastest way to get there?<br><small>ref: Excuse me, where is the station? What's the fastest way to get there?</small></td>
+<td>553 / 3577</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly matches the reference translation, accurately conveying the original meaning in natural and fluent English.</small></td>
+</tr>
+<tr>
+<td>T001<br><small>en#3</small></td>
+<td class="zh">請問車站在哪裡?怎麼走比較快?<br><small>STT: 请问车站怎么走比较快?</small></td>
+<td>Excuse me, where is the fastest way to the station?<br><small>ref: Excuse me, where is the station? What's the fastest way to get there?</small></td>
+<td>-178 / 2822</td>
+<td> cer=0.23</td>
+<td>3/3<br><small>The translation merges two distinct questions into one, omitting the direct question about the station's location. This also results in the awkward phrasing 'where is the fastest way', which affects fluency.</small></td>
+</tr>
+<tr>
+<td>T001<br><small>ja#1</small></td>
+<td class="zh">請問車站在哪裡?怎麼走比較快?<br><small>STT: 请问车站哪里,怎么走比较快?</small></td>
+<td>すみません、駅はどこですか？どう行けば早いですか？<br><small>ref: すみません、駅はどこですか?どう行くのが一番早いですか?</small></td>
+<td>-199 / 3302</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的語意，文法正確，無任何明顯錯誤。</small></td>
+</tr>
+<tr>
+<td>T001<br><small>ja#2</small></td>
+<td class="zh">請問車站在哪裡?怎麼走比較快?<br><small>STT: 请问车站哪里,怎么走比较快?</small></td>
+<td>すみません、駅はどこですか？どう行けば早いですか？<br><small>ref: すみません、駅はどこですか?どう行くのが一番早いですか?</small></td>
+<td>-234 / 3285</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，語法正確，沒有遺漏或錯誤。</small></td>
+</tr>
+<tr>
+<td>T001<br><small>ja#3</small></td>
+<td class="zh">請問車站在哪裡?怎麼走比較快?<br><small>STT: 请问车站哪里,怎么走比较快?</small></td>
+<td>すみません、駅はどこですか？どう行けば早いですか？<br><small>ref: すみません、駅はどこですか?どう行くのが一番早いですか?</small></td>
+<td>-83 / 3160</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的語意，文法正確，無任何明顯錯誤。</small></td>
+</tr>
+<tr>
+<td>T002<br><small>en#1</small></td>
+<td class="zh">請問 Shibuya Sky 的入口是在這棟樓嗎?<br><small>STT: 请问徐博雅Sky的入口是在这栋楼吗?</small></td>
+<td>Excuse me, where is the entrance to Xu Boya Sky?<br><small>ref: Excuse me, is the entrance to Shibuya Sky in this building?</small></td>
+<td>-680 / 2299</td>
+<td> cer=0.38</td>
+<td>2/5<br><small>The translation changes the yes/no question about whether the entrance is in this building to a wh-question asking where the entrance is, completely omitting 'in this building'. It also mangles the name 'Shibuya' into 'Xu Boya'. However, the resulting sentence is grammatically fluent.</small></td>
+</tr>
+<tr>
+<td>T002<br><small>en#2</small></td>
+<td class="zh">請問 Shibuya Sky 的入口是在這棟樓嗎?<br><small>STT: 请问徐博雅Sky的入口是在这栋楼吗?</small></td>
+<td>Excuse me, where is the entrance to Xu Boya Sky?<br><small>ref: Excuse me, is the entrance to Shibuya Sky in this building?</small></td>
+<td>-976 / 2410</td>
+<td> cer=0.38</td>
+<td>2/5<br><small>The translation changes the yes/no question about whether the entrance is in this building to a 'where' question, omitting 'in this building'. It also mangles the name 'Shibuya' into 'Xu Boya'. The resulting sentence is fluent but inaccurate.</small></td>
+</tr>
+<tr>
+<td>T002<br><small>en#3</small></td>
+<td class="zh">請問 Shibuya Sky 的入口是在這棟樓嗎?<br><small>STT: 请问徐博雅Sky的入口是在这栋楼吗?</small></td>
+<td>Excuse me, where is the entrance for Xu Boya Sky?<br><small>ref: Excuse me, is the entrance to Shibuya Sky in this building?</small></td>
+<td>-975 / 2427</td>
+<td> cer=0.38</td>
+<td>2/5<br><small>The translation changes the yes/no question about whether the entrance is in this building to a wh-question asking where the entrance is, omitting 'in this building'. It also mangles the name 'Shibuya' into 'Xu Boya'. However, the resulting sentence is grammatically fluent.</small></td>
+</tr>
+<tr>
+<td>T002<br><small>ja#1</small></td>
+<td class="zh">請問 Shibuya Sky 的入口是在這棟樓嗎?<br><small>STT: 请问徐博雅Sky的入口是在这栋楼吗?</small></td>
+<td>すみません、徐博雅Skyの入り口はこの建物ですか？<br><small>ref: すみません、渋谷スカイの入口はこのビルですか?</small></td>
+<td>-962 / 2955</td>
+<td> cer=0.38</td>
+<td>3/4<br><small>機器譯文將地名「Shibuya」錯誤音譯為「徐博雅」，導致專有名詞錯誤（name_mangled），嚴重影響語意傳達。其餘部分的文法與句意皆自然且正確。</small></td>
+</tr>
+<tr>
+<td>T002<br><small>ja#2</small></td>
+<td class="zh">請問 Shibuya Sky 的入口是在這棟樓嗎?<br><small>STT: 请问徐博雅Sky的入口是在这栋楼吗?</small></td>
+<td>すみません、徐博雅Skyの入り口はこの建物ですか？<br><small>ref: すみません、渋谷スカイの入口はこのビルですか?</small></td>
+<td>-944 / 2973</td>
+<td> cer=0.38</td>
+<td>3/4<br><small>機器譯文將地名「Shibuya」錯誤音譯為「徐博雅」，導致專有名詞錯誤（name_mangled），嚴重影響語意傳達。其餘部分的文法與句意皆自然且正確。</small></td>
+</tr>
+<tr>
+<td>T002<br><small>ja#3</small></td>
+<td class="zh">請問 Shibuya Sky 的入口是在這棟樓嗎?<br><small>STT: 请问徐博雅Sky的入口是在这栋楼吗?</small></td>
+<td>すみません、徐博雅Skyの入り口はこの建物ですか？<br><small>ref: すみません、渋谷スカイの入口はこのビルですか?</small></td>
+<td>62 / 3368</td>
+<td> cer=0.38</td>
+<td>3/4<br><small>機器譯文將地名「Shibuya」錯誤音譯為「徐博雅」，導致專有名詞錯誤（name_mangled），嚴重影響語意傳達。其餘部分的文法與句意皆自然且正確。</small></td>
+</tr>
+<tr>
+<td>T003<br><small>en#1</small></td>
+<td class="zh">我不是要去機場,我是要去火車站。<br><small>STT: 我不是要去机场,我是要去火车站。</small></td>
+<td>I'm not going to the airport, I'm going to the train station.<br><small>ref: I'm not going to the airport, I'm going to the train station.</small></td>
+<td>-16 / 2646</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly matches the source text and the reference translation, conveying the exact meaning with natural fluency.</small></td>
+</tr>
+<tr>
+<td>T003<br><small>en#2</small></td>
+<td class="zh">我不是要去機場,我是要去火車站。<br><small>STT: 我不是要去机场,我是要去火车站。</small></td>
+<td>I'm not going to the airport, I'm going to the train station.<br><small>ref: I'm not going to the airport, I'm going to the train station.</small></td>
+<td>75 / 3168</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is perfectly accurate and natural, matching the reference exactly.</small></td>
+</tr>
+<tr>
+<td>T003<br><small>en#3</small></td>
+<td class="zh">我不是要去機場,我是要去火車站。<br><small>STT: 我不是要去机场,我是要去火车站。</small></td>
+<td>I'm not going to the airport, I'm going to the train station.<br><small>ref: I'm not going to the airport, I'm going to the train station.</small></td>
+<td>232 / 2974</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is perfectly accurate and natural, matching the reference exactly.</small></td>
+</tr>
+<tr>
+<td>T003<br><small>ja#1</small></td>
+<td class="zh">我不是要去機場,我是要去火車站。<br><small>STT: 我不是要去机场,我是要去火车站。</small></td>
+<td>空港に行くんじゃなくて、駅に行くんだ。<br><small>ref: 空港に行きたいのではなくて、電車の駅に行きたいんです。</small></td>
+<td>323 / 3287</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，語法自然流暢。雖然使用了常體（んだ）而非參考譯文的敬體（んです），但在沒有特定語境要求的情況下，仍屬優秀的翻譯。</small></td>
+</tr>
+<tr>
+<td>T003<br><small>ja#2</small></td>
+<td class="zh">我不是要去機場,我是要去火車站。<br><small>STT: 我不是要去机场,我是要去火车站。</small></td>
+<td>空港に行くんじゃなくて、駅に行くんです。<br><small>ref: 空港に行きたいのではなくて、電車の駅に行きたいんです。</small></td>
+<td>229 / 2504</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，語意完整且符合日語表達習慣。</small></td>
+</tr>
+<tr>
+<td>T003<br><small>ja#3</small></td>
+<td class="zh">我不是要去機場,我是要去火車站。<br><small>STT: 我不是要去机场,我是要去火车站。</small></td>
+<td>空港に行くんじゃない、駅に行きたい。<br><small>ref: 空港に行きたいのではなくて、電車の駅に行きたいんです。</small></td>
+<td>195 / 2044</td>
+<td> cer=0.00</td>
+<td>5/4<br><small>譯文準確傳達了原文的意思，但使用了常體與較口語的表達（じゃない），相較於參考譯文的敬體顯得不夠正式，因此標記 honorific_off。整體而言依然流暢自然。</small></td>
+</tr>
+<tr>
+<td>T004<br><small>en#1</small></td>
+<td class="zh">從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。<br><small>STT: 从这里走过去大概要几分钟?超过15分钟的话,我想打车。</small></td>
+<td>It takes about how many minutes to walk from here? If it's more than 15 minutes, I'll take a taxi.<br><small>ref: About how many minutes does it take to walk from here? If it's more than fifteen minutes, I'd like to take a taxi.</small></td>
+<td>-2820 / 2966</td>
+<td> cer=0.19</td>
+<td>5/4<br><small>The translation accurately conveys the meaning of the source text. The first sentence has a slightly unnatural word order for a question ('It takes about how many minutes...' instead of 'About how many minutes does it take...'), but it is still perfectly understandable, especially in spoken English.</small></td>
+</tr>
+<tr>
+<td>T004<br><small>en#2</small></td>
+<td class="zh">從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。<br><small>STT: 从这里走过去大概要几分钟?超过15分钟的话,我想打车。</small></td>
+<td>It takes about how many minutes to walk from here? If it's more than 15 minutes, I'll take a taxi.<br><small>ref: About how many minutes does it take to walk from here? If it's more than fifteen minutes, I'd like to take a taxi.</small></td>
+<td>-2794 / 2755</td>
+<td> cer=0.19</td>
+<td>5/4<br><small>The translation accurately conveys the meaning of the original text. The first sentence is slightly unnatural in its question structure ('It takes about how many minutes...' instead of 'How many minutes does it take...'), but it is still perfectly understandable.</small></td>
+</tr>
+<tr>
+<td>T004<br><small>en#3</small></td>
+<td class="zh">從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。<br><small>STT: 从这里走过去大概要几分钟?超过15分钟的话,我想打车。</small></td>
+<td>It takes about how many minutes to walk from here? If it's more than 15 minutes, I'll take a taxi.<br><small>ref: About how many minutes does it take to walk from here? If it's more than fifteen minutes, I'd like to take a taxi.</small></td>
+<td>-2974 / 2661</td>
+<td> cer=0.19</td>
+<td>5/4<br><small>The translation accurately conveys the meaning of the original text. The first sentence is slightly awkward in its question structure ('It takes about how many minutes...' instead of 'How many minutes does it take...'), but it is perfectly understandable in a spoken context. No major errors.</small></td>
+</tr>
+<tr>
+<td>T004<br><small>ja#1</small></td>
+<td class="zh">從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。<br><small>STT: 从这里走过去大概要几分钟?超过15分钟的话,我想打车。</small></td>
+<td>ここから歩いて何分くらいですか？ 15分以上かかるなら、タクシーに乗りたいです。<br><small>ref: ここから歩いて何分ぐらいかかりますか?15分以上かかるならタクシーに乗りたいです。</small></td>
+<td>-2781 / 2332</td>
+<td> cer=0.19</td>
+<td>5/5<br><small>機器譯文準確傳達了原文的意思，且日語表達自然流暢，與參考譯文幾乎一致。</small></td>
+</tr>
+<tr>
+<td>T004<br><small>ja#2</small></td>
+<td class="zh">從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。<br><small>STT: 从这里走过去大概要几分钟?超过15分钟的话,我想打车。</small></td>
+<td>ここから歩いて何分くらいですか？ 15分以上かかるなら、タクシーに乗りたいです。<br><small>ref: ここから歩いて何分ぐらいかかりますか?15分以上かかるならタクシーに乗りたいです。</small></td>
+<td>-2941 / 2204</td>
+<td> cer=0.19</td>
+<td>5/5<br><small>機器譯文準確傳達了原文的意思，且日語表達自然流暢，與參考譯文幾乎一致。</small></td>
+</tr>
+<tr>
+<td>T004<br><small>ja#3</small></td>
+<td class="zh">從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。<br><small>STT: 从这里走过去大概要几分钟?超过15分钟的话,我想打车。</small></td>
+<td>ここから歩いて何分くらいかかりますか? 15分以上かかるならタクシーに乗ります。<br><small>ref: ここから歩いて何分ぐらいかかりますか?15分以上かかるならタクシーに乗りたいです。</small></td>
+<td>-2640 / 3072</td>
+<td> cer=0.19</td>
+<td>5/5<br><small>譯文自然流暢，語意傳達清晰。雖然將「我想搭計程車」譯為「タクシーに乗ります」（我會搭計程車）而非「乗りたいです」，但在語境中意思相近，不影響理解。</small></td>
+</tr>
+<tr>
+<td>T005<br><small>en#1</small></td>
+<td class="zh">請問淺草寺跟晴空塔是同一個方向嗎?<br><small>STT: 请问前草寺跟晴空塔是同一个方向吗?</small></td>
+<td>Excuse me, are Senso-ji Temple and Skytree in the same direction?<br><small>ref: Excuse me, are Sensoji Temple and the Skytree in the same direction?</small></td>
+<td>-1244 / 3085</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>The machine translation accurately and naturally translates the original sentence, perfectly conveying the meaning with correct grammar and terminology.</small></td>
+</tr>
+<tr>
+<td>T005<br><small>en#2</small></td>
+<td class="zh">請問淺草寺跟晴空塔是同一個方向嗎?<br><small>STT: 请问前草寺跟晴空塔是同一个方向吗?</small></td>
+<td>Excuse me, are Senso-ji Temple and Skytree in the same direction?<br><small>ref: Excuse me, are Sensoji Temple and the Skytree in the same direction?</small></td>
+<td>-1009 / 3267</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>The machine translation accurately and naturally translates the original sentence, perfectly conveying the meaning with correct grammar and terminology.</small></td>
+</tr>
+<tr>
+<td>T005<br><small>en#3</small></td>
+<td class="zh">請問淺草寺跟晴空塔是同一個方向嗎?<br><small>STT: 请问前草寺跟晴空塔是同一个方向吗?</small></td>
+<td>Excuse me, are Senso-ji Temple and Skytree in the same direction?<br><small>ref: Excuse me, are Sensoji Temple and the Skytree in the same direction?</small></td>
+<td>-1015 / 3110</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>The machine translation accurately and naturally translates the original sentence, perfectly conveying the meaning with correct grammar and terminology.</small></td>
+</tr>
+<tr>
+<td>T005<br><small>ja#1</small></td>
+<td class="zh">請問淺草寺跟晴空塔是同一個方向嗎?<br><small>STT: 请问前草寺跟晴空塔是同一个方向吗?</small></td>
+<td>あの、浅草寺とスカイツリーは同じ方向ですか？<br><small>ref: すみません、浅草寺とスカイツリーは同じ方向ですか?</small></td>
+<td>-971 / 2985</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。「請問」譯為「あの」在口語中十分自然。</small></td>
+</tr>
+<tr>
+<td>T005<br><small>ja#2</small></td>
+<td class="zh">請問淺草寺跟晴空塔是同一個方向嗎?<br><small>STT: 请问前草寺跟晴空塔是同一个方向吗?</small></td>
+<td>あの、浅草寺とスカイツリーは同じ方向ですか?<br><small>ref: すみません、浅草寺とスカイツリーは同じ方向ですか?</small></td>
+<td>-1013 / 2525</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日語表達自然。「請問」譯為「あの」在口語中十分常見且自然，無明顯錯誤。</small></td>
+</tr>
+<tr>
+<td>T005<br><small>ja#3</small></td>
+<td class="zh">請問淺草寺跟晴空塔是同一個方向嗎?<br><small>STT: 请问前草寺跟晴空塔是同一个方向吗?</small></td>
+<td>あの、浅草寺とスカイツリーは同じ方向ですか？<br><small>ref: すみません、浅草寺とスカイツリーは同じ方向ですか?</small></td>
+<td>-1101 / 2894</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日語表達自然流暢。「請問」譯為「あの」在口語中十分自然。</small></td>
+</tr>
+<tr>
+<td>T006<br><small>en#1</small></td>
+<td class="zh">這附近有沒有廁所?我趕時間。<br><small>STT: 这附近有没有厕所?我赶时间。</small></td>
+<td>Is there a restroom nearby? I'm in a hurry.<br><small>ref: Is there a restroom near here? I'm in a hurry.</small></td>
+<td>696 / 2766</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation perfectly conveys the meaning of the original text and is completely natural in English.</small></td>
+</tr>
+<tr>
+<td>T006<br><small>en#2</small></td>
+<td class="zh">這附近有沒有廁所?我趕時間。<br><small>STT: 这附近有没有厕所?我赶时间。</small></td>
+<td>Is there a restroom nearby? I'm in a hurry.<br><small>ref: Is there a restroom near here? I'm in a hurry.</small></td>
+<td>439 / 2925</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly conveys the meaning of the original text and is completely natural in English.</small></td>
+</tr>
+<tr>
+<td>T006<br><small>en#3</small></td>
+<td class="zh">這附近有沒有廁所?我趕時間。<br><small>STT: 这附近有没有厕所?我赶时间。</small></td>
+<td>Is there a restroom nearby? I'm in a hurry.<br><small>ref: Is there a restroom near here? I'm in a hurry.</small></td>
+<td>698 / 2914</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation perfectly conveys the meaning of the original text and is completely natural in English.</small></td>
+</tr>
+<tr>
+<td>T006<br><small>ja#1</small></td>
+<td class="zh">這附近有沒有廁所?我趕時間。<br><small>STT: 这附近有没有厕所?我赶时间。</small></td>
+<td>この近くにトイレはありますか?急いでるんです。<br><small>ref: この近くにトイレはありますか?急いでいるんです。</small></td>
+<td>584 / 3329</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且使用了口語中常見的縮略形式「急いでるんです」，非常自然流暢。</small></td>
+</tr>
+<tr>
+<td>T006<br><small>ja#2</small></td>
+<td class="zh">這附近有沒有廁所?我趕時間。<br><small>STT: 这附近有没有厕所?我赶时间。</small></td>
+<td>この近くにトイレはありますか?急いでるんです。<br><small>ref: この近くにトイレはありますか?急いでいるんです。</small></td>
+<td>346 / 2703</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且使用了口語中常見的縮略形式「急いでるんです」，非常自然流暢。</small></td>
+</tr>
+<tr>
+<td>T006<br><small>ja#3</small></td>
+<td class="zh">這附近有沒有廁所?我趕時間。<br><small>STT: 这附近有没有厕所?我赶时间。</small></td>
+<td>この近くにトイレはありますか?急いでいるんです。<br><small>ref: この近くにトイレはありますか?急いでいるんです。</small></td>
+<td>808 / 3260</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文與參考譯文完全一致，準確傳達了原文的意思，且日語表達自然流暢。</small></td>
+</tr>
+<tr>
+<td>T007<br><small>en#1</small></td>
+<td class="zh">我要兩張到京都的車票,大人一張、小孩一張。<br><small>STT: 我要两张到京都的车票,大人一张,小孩一张。</small></td>
+<td>I'd like two tickets to Kyoto, one adult and one child.<br><small>ref: I'd like two tickets to Kyoto, one adult and one child.</small></td>
+<td>-1810 / 2761</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is identical to the reference translation, perfectly conveying the original meaning in natural English.</small></td>
+</tr>
+<tr>
+<td>T007<br><small>en#2</small></td>
+<td class="zh">我要兩張到京都的車票,大人一張、小孩一張。<br><small>STT: 我要两张到京都的车票,大人一张,小孩一张。</small></td>
+<td>I'd like two tickets to Kyoto, one adult and one child.<br><small>ref: I'd like two tickets to Kyoto, one adult and one child.</small></td>
+<td>-1745 / 2265</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is identical to the reference translation, perfectly conveying the original meaning in natural English.</small></td>
+</tr>
+<tr>
+<td>T007<br><small>en#3</small></td>
+<td class="zh">我要兩張到京都的車票,大人一張、小孩一張。<br><small>STT: 我要两张到京都的车票,大人一张,小孩一张。</small></td>
+<td>I'd like two tickets to Kyoto, one adult, one child.<br><small>ref: I'd like two tickets to Kyoto, one adult and one child.</small></td>
+<td>-1916 / 1668</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and natural, perfectly conveying the meaning of the original text.</small></td>
+</tr>
+<tr>
+<td>T007<br><small>ja#1</small></td>
+<td class="zh">我要兩張到京都的車票,大人一張、小孩一張。<br><small>STT: 我要两张到京都的车票,大人一张,小孩一张。</small></td>
+<td>京都行きのチケットを2枚ください。大人1枚、子供1枚。<br><small>ref: 京都までの切符を2枚ください。大人1枚、子ども1枚です。</small></td>
+<td>-1906 / 2929</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文完美地傳達了原文的所有訊息，包含目的地、票數以及票種（大人與小孩），且日文表達自然流暢。</small></td>
+</tr>
+<tr>
+<td>T007<br><small>ja#2</small></td>
+<td class="zh">我要兩張到京都的車票,大人一張、小孩一張。<br><small>STT: 我要两张到京都的车票,大人一张,小孩一张。</small></td>
+<td>京都行きのチケットを2枚ください。大人1枚、子供1枚。<br><small>ref: 京都までの切符を2枚ください。大人1枚、子ども1枚です。</small></td>
+<td>-2052 / 2547</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的所有訊息。「京都行きのチケット」與參考譯文的「京都までの切符」意思相同且同樣自然，數量與票種（大人、小孩）皆正確無誤。</small></td>
+</tr>
+<tr>
+<td>T007<br><small>ja#3</small></td>
+<td class="zh">我要兩張到京都的車票,大人一張、小孩一張。<br><small>STT: 我要两张到京都的车票,大人一张,小孩一张。</small></td>
+<td>京都行きのチケットを2枚ください。大人1枚、子供1枚です。<br><small>ref: 京都までの切符を2枚ください。大人1枚、子ども1枚です。</small></td>
+<td>-1967 / 2855</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的語意。「京都行きのチケット」與參考譯文的「京都までの切符」意思相同且同樣自然。</small></td>
+</tr>
+<tr>
+<td>T008<br><small>en#1</small></td>
+<td class="zh">這班車會到大阪,但是應該不會停京都吧?<br><small>STT: 这班车会到大阪,但是应该不会停京都吧。</small></td>
+<td>This bus goes to Osaka, but it probably won't stop in Kyoto.<br><small>ref: This train goes to Osaka, but it doesn't stop at Kyoto, right?</small></td>
+<td>-826 / 3061</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is perfectly fluent. Translating '這班車' as 'This bus' is acceptable without further context.</small></td>
+</tr>
+<tr>
+<td>T008<br><small>en#2</small></td>
+<td class="zh">這班車會到大阪,但是應該不會停京都吧?<br><small>STT: 这班车会到大阪,但是应该不会停京都吧。</small></td>
+<td>This bus goes to Osaka, but it probably won't stop in Kyoto.<br><small>ref: This train goes to Osaka, but it doesn't stop at Kyoto, right?</small></td>
+<td>-852 / 2501</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is perfectly fluent. Translating '這班車' as 'This bus' is acceptable without further context. The nuance of '應該不會...吧' is well captured by 'probably won't'.</small></td>
+</tr>
+<tr>
+<td>T008<br><small>en#3</small></td>
+<td class="zh">這班車會到大阪,但是應該不會停京都吧?<br><small>STT: 这班车会到大阪,但是应该不会停京都吧。</small></td>
+<td>This bus goes to Osaka, but it probably won't stop in Kyoto.<br><small>ref: This train goes to Osaka, but it doesn't stop at Kyoto, right?</small></td>
+<td>-538 / 2959</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is perfectly fluent. Translating '這班車' as 'this bus' is acceptable in this context.</small></td>
+</tr>
+<tr>
+<td>T008<br><small>ja#1</small></td>
+<td class="zh">這班車會到大阪,但是應該不會停京都吧?<br><small>STT: 这班车会到大阪,但是应该不会停京都吧。</small></td>
+<td>このバスは大阪に行きますが、京都には止まらないでしょう。<br><small>ref: この電車は大阪に行きますが、京都には止まらないですよね?</small></td>
+<td>-789 / 2760</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。「這班車」譯為「このバス」在沒有上下文的情況下是可以接受的。</small></td>
+</tr>
+<tr>
+<td>T008<br><small>ja#2</small></td>
+<td class="zh">這班車會到大阪,但是應該不會停京都吧?<br><small>STT: 这班车会到大阪,但是应该不会停京都吧。</small></td>
+<td>このバスは大阪に行きますが、京都には止まらないでしょう。<br><small>ref: この電車は大阪に行きますが、京都には止まらないですよね?</small></td>
+<td>-177 / 3129</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文自然流暢，準確傳達了原文的意思。「這班車」譯為「このバス」在無上下文時可接受。「應該不會停京都吧」譯為「京都には止まらないでしょう」語意準確。</small></td>
+</tr>
+<tr>
+<td>T008<br><small>ja#3</small></td>
+<td class="zh">這班車會到大阪,但是應該不會停京都吧?<br><small>STT: 这班车会到大阪,但是应该不会停京都吧。</small></td>
+<td>このバスは大阪に行きますが、京都には止まらないでしょう。<br><small>ref: この電車は大阪に行きますが、京都には止まらないですよね?</small></td>
+<td>-723 / 3084</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。「這班車」譯為「このバス」在沒有上下文的情況下是可以接受的。</small></td>
+</tr>
+<tr>
+<td>T009<br><small>en#1</small></td>
+<td class="zh">請問這個位子有人坐嗎?<br><small>STT: 请问这个位置有人坐吗?</small></td>
+<td>Excuse me, is this seat taken?<br><small>ref: Excuse me, is this seat taken?</small></td>
+<td>1034 / 2628</td>
+<td> cer=0.10</td>
+<td>5/5<br><small>The machine translation is identical to the reference translation and perfectly conveys the original meaning in natural English.</small></td>
+</tr>
+<tr>
+<td>T009<br><small>en#2</small></td>
+<td class="zh">請問這個位子有人坐嗎?<br><small>STT: 请问这个位置有人坐吗?</small></td>
+<td>Excuse me, is this seat taken?<br><small>ref: Excuse me, is this seat taken?</small></td>
+<td>560 / 2925</td>
+<td> cer=0.10</td>
+<td>5/5<br><small>The machine translation is identical to the reference translation and perfectly conveys the meaning of the original text in natural English.</small></td>
+</tr>
+<tr>
+<td>T009<br><small>en#3</small></td>
+<td class="zh">請問這個位子有人坐嗎?<br><small>STT: 请问这个位置有人坐吗?</small></td>
+<td>Excuse me, is this seat taken?<br><small>ref: Excuse me, is this seat taken?</small></td>
+<td>739 / 2490</td>
+<td> cer=0.10</td>
+<td>5/5<br><small>The machine translation is identical to the reference translation and perfectly conveys the original meaning in natural English.</small></td>
+</tr>
+<tr>
+<td>T009<br><small>ja#1</small></td>
+<td class="zh">請問這個位子有人坐嗎?<br><small>STT: 请问这个位置有人坐吗?</small></td>
+<td>すみません、ここは空いてますか？<br><small>ref: すみません、この席には誰か座っていますか?</small></td>
+<td>791 / 2808</td>
+<td> cer=0.10</td>
+<td>5/5<br><small>機器譯文雖然沒有直譯「有人坐嗎」，但使用了日文中非常自然且語意完全相符的表達方式「ここは空いてますか？」（這裡空著嗎？），完美傳達了原文的意圖，且日文表達非常流暢自然。</small></td>
+</tr>
+<tr>
+<td>T009<br><small>ja#2</small></td>
+<td class="zh">請問這個位子有人坐嗎?<br><small>STT: 请问这个位置有人坐</small></td>
+<td>すみません、ここは空いてますか？<br><small>ref: すみません、この席には誰か座っていますか?</small></td>
+<td>532 / 2375</td>
+<td> cer=0.20</td>
+<td>5/5<br><small>機器譯文雖然沒有直譯「有人坐嗎」，但使用了日文中非常自然且語意完全相符的表達方式「ここは空いてますか？」（這裡空著嗎？），完美傳達了原文的意圖，且日文表達非常流暢自然。</small></td>
+</tr>
+<tr>
+<td>T009<br><small>ja#3</small></td>
+<td class="zh">請問這個位子有人坐嗎?<br><small>STT: 请问这个位置有人坐吗?</small></td>
+<td>すみません、ここ空いてますか？<br><small>ref: すみません、この席には誰か座っていますか?</small></td>
+<td>548 / 2381</td>
+<td> cer=0.10</td>
+<td>5/5<br><small>機器譯文準確傳達了原文的語意，且使用了日文中非常自然、道地的表達方式來詢問座位是否空著。</small></td>
+</tr>
+<tr>
+<td>T010<br><small>en#1</small></td>
+<td class="zh">最後一班回新宿的電車是十一點四十五分嗎?<br><small>STT: 最后一班回新竹的电车是11点45分。</small></td>
+<td>The last train back to Hsinchu is at 11:45 PM.<br><small>ref: Is the last train back to Shinjuku at eleven forty-five?</small></td>
+<td>-1397 / 2574</td>
+<td> cer=0.37</td>
+<td>2/5<br><small>The translation incorrectly translates the location '新宿' (Shinjuku) as 'Hsinchu' and changes the sentence from a question to a statement, significantly altering the original meaning.</small></td>
+</tr>
+<tr>
+<td>T010<br><small>en#2</small></td>
+<td class="zh">最後一班回新宿的電車是十一點四十五分嗎?<br><small>STT: 最后一班回新竹的电车是11点45分。</small></td>
+<td>The last train back to Hsinchu is at 11:45 PM.<br><small>ref: Is the last train back to Shinjuku at eleven forty-five?</small></td>
+<td>-1625 / 2243</td>
+<td> cer=0.37</td>
+<td>3/5<br><small>譯文將「新宿」(Shinjuku) 錯誤翻譯為「Hsinchu」(新竹)，且將原本的疑問句改成了肯定句，影響了語意傳達。不過英文句子本身的文法與流暢度是自然的。</small></td>
+</tr>
+<tr>
+<td>T010<br><small>en#3</small></td>
+<td class="zh">最後一班回新宿的電車是十一點四十五分嗎?<br><small>STT: 最后一班回新竹的电车是11点45分吗?</small></td>
+<td>The last train back to Hsinchu is at 11:45 PM?<br><small>ref: Is the last train back to Shinjuku at eleven forty-five?</small></td>
+<td>-1434 / 2848</td>
+<td> cer=0.32</td>
+<td>3/5<br><small>The translation is fluent and captures most of the meaning, but incorrectly translates the place name '新宿' (Shinjuku) as 'Hsinchu'.</small></td>
+</tr>
+<tr>
+<td>T010<br><small>ja#1</small></td>
+<td class="zh">最後一班回新宿的電車是十一點四十五分嗎?<br><small>STT: 最后一班回新竹的电车是11点45分吗?</small></td>
+<td>新竹行きの電車は11時45分ですか？<br><small>ref: 新宿行きの最終電車は11時45分ですか?</small></td>
+<td>-1704 / 1934</td>
+<td> cer=0.32</td>
+<td>2/5<br><small>譯文漏翻了「最後一班」(最終)，並且將地名「新宿」錯誤翻譯為「新竹」，嚴重影響語意傳達。不過日文句子本身的文法與表達是自然流暢的。</small></td>
+</tr>
+<tr>
+<td>T010<br><small>ja#2</small></td>
+<td class="zh">最後一班回新宿的電車是十一點四十五分嗎?<br><small>STT: 最后一班回新竹的电车是11点45分吗?</small></td>
+<td>新竹行きの最終電車は11時45分ですか？<br><small>ref: 新宿行きの最終電車は11時45分ですか?</small></td>
+<td>-1420 / 2583</td>
+<td> cer=0.32</td>
+<td>3/5<br><small>譯文將「新宿」錯誤翻譯為「新竹」，導致目的地資訊錯誤，但整體句型與文法自然流暢。</small></td>
+</tr>
+<tr>
+<td>T010<br><small>ja#3</small></td>
+<td class="zh">最後一班回新宿的電車是十一點四十五分嗎?<br><small>STT: 最后一班回新竹的电车是11点45分吗?</small></td>
+<td>新竹行きの最終電車は11時45分ですか？<br><small>ref: 新宿行きの最終電車は11時45分ですか?</small></td>
+<td>-1545 / 2523</td>
+<td> cer=0.32</td>
+<td>3/5<br><small>譯文將「新宿」錯誤翻譯為「新竹」，導致目的地完全不同，影響語意傳達。其餘部分翻譯正確且流暢。</small></td>
+</tr>
+<tr>
+<td>T011<br><small>en#1</small></td>
+<td class="zh">我想幫 IC 卡儲值一千日圓。<br><small>STT: 我想帮IC卡充值1000日元。</small></td>
+<td>I want to top up my IC card with 1000 yen.<br><small>ref: I'd like to top up my IC card with one thousand yen.</small></td>
+<td>-269 / 2994</td>
+<td> cer=0.50</td>
+<td>5/5<br><small>The translation accurately and naturally conveys the meaning of the original text, matching the reference translation perfectly.</small></td>
+</tr>
+<tr>
+<td>T011<br><small>en#2</small></td>
+<td class="zh">我想幫 IC 卡儲值一千日圓。<br><small>STT: 我想帮IC卡充值1000日元,</small></td>
+<td>I want to top up my IC card with 1000 yen,<br><small>ref: I'd like to top up my IC card with one thousand yen.</small></td>
+<td>-326 / 2452</td>
+<td> cer=0.50</td>
+<td>5/5<br><small>The machine translation accurately and naturally conveys the meaning of the original text. The use of '1000 yen' is perfectly acceptable and equivalent to the reference.</small></td>
+</tr>
+<tr>
+<td>T011<br><small>en#3</small></td>
+<td class="zh">我想幫 IC 卡儲值一千日圓。<br><small>STT: 我想帮IC卡充值1000日元。</small></td>
+<td>I want to top up my IC card with 1000 yen.<br><small>ref: I'd like to top up my IC card with one thousand yen.</small></td>
+<td>-409 / 2870</td>
+<td> cer=0.50</td>
+<td>5/5<br><small>The translation accurately and naturally conveys the meaning of the original text, matching the reference translation perfectly.</small></td>
+</tr>
+<tr>
+<td>T011<br><small>ja#1</small></td>
+<td class="zh">我想幫 IC 卡儲值一千日圓。<br><small>STT: 我想帮IC卡充值1000日元。</small></td>
+<td>ICカードに1000円チャージしたいです。<br><small>ref: ICカードに1000円チャージしたいんですが。</small></td>
+<td>-518 / 2077</td>
+<td> cer=0.50</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，語意完整且日文表達流暢。</small></td>
+</tr>
+<tr>
+<td>T011<br><small>ja#2</small></td>
+<td class="zh">我想幫 IC 卡儲值一千日圓。<br><small>STT: 我想帮IC卡充值1000日元。</small></td>
+<td>ICカードに1000円チャージしたいです。<br><small>ref: ICカードに1000円チャージしたいんですが。</small></td>
+<td>-125 / 1878</td>
+<td> cer=0.50</td>
+<td>5/5<br><small>機器譯文準確傳達了原文的意思，且日語表達自然流暢。雖然參考譯文使用了「〜んですが」來增加委婉語氣，但機器譯文的「〜たいです」也是完全正確且自然的表達。</small></td>
+</tr>
+<tr>
+<td>T011<br><small>ja#3</small></td>
+<td class="zh">我想幫 IC 卡儲值一千日圓。<br><small>STT: 我想帮IC卡充值1000日元。</small></td>
+<td>ICカードにチャージしたいんですが、1000円。<br><small>ref: ICカードに1000円チャージしたいんですが。</small></td>
+<td>-503 / 2576</td>
+<td> cer=0.50</td>
+<td>5/5<br><small>譯文完整傳達了原文的語意，雖然將「1000円」放在句尾形成倒置，但在口語日文中非常自然，語意忠實且流暢。</small></td>
+</tr>
+<tr>
+<td>T012<br><small>en#1</small></td>
+<td class="zh">不好意思,可以幫我看一下這班車是不是往橫濱的嗎?<br><small>STT: 不好意思,可以帮我看一下这班车是不是往横滨的吗?</small></td>
+<td>Excuse me, could you help me check if this bus is going to Yokohama?<br><small>ref: Excuse me, could you help me check whether this train is bound for Yokohama?</small></td>
+<td>-963 / 2757</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and natural. Translating '這班車' as 'this bus' is acceptable since '車' can refer to either a bus or a train depending on the context.</small></td>
+</tr>
+<tr>
+<td>T012<br><small>en#2</small></td>
+<td class="zh">不好意思,可以幫我看一下這班車是不是往橫濱的嗎?<br><small>STT: 不好意思,可以帮我看一下这班车是不是往横滨的吗?</small></td>
+<td>Excuse me, could you help me check if this bus is going to Yokohama?<br><small>ref: Excuse me, could you help me check whether this train is bound for Yokohama?</small></td>
+<td>-1055 / 2495</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and natural. '這班車' can be translated as 'this bus' or 'this train' depending on the context, so the machine translation is perfectly acceptable.</small></td>
+</tr>
+<tr>
+<td>T012<br><small>en#3</small></td>
+<td class="zh">不好意思,可以幫我看一下這班車是不是往橫濱的嗎?<br><small>STT: 不好意思,可以帮我看一下这班车是不是往横滨的吗?</small></td>
+<td>Excuse me, could you help me check if this bus is going to Yokohama?<br><small>ref: Excuse me, could you help me check whether this train is bound for Yokohama?</small></td>
+<td>-1059 / 2276</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and natural. '這班車' can be translated as 'this bus' or 'this train' depending on the context, so the machine translation is perfectly acceptable.</small></td>
+</tr>
+<tr>
+<td>T012<br><small>ja#1</small></td>
+<td class="zh">不好意思,可以幫我看一下這班車是不是往橫濱的嗎?<br><small>STT: 不好意思,可以帮我看一下这班车是不是往横滨的吗?</small></td>
+<td>すみません、このバスは横浜行きですか？<br><small>ref: すみません、この電車が横浜行きかどうか、ちょっと見ていただけますか?</small></td>
+<td>-981 / 2046</td>
+<td> cer=0.00</td>
+<td>3/5<br><small>譯文遺漏了「幫我看一下」的語意，直接翻譯為「這班公車是往橫濱的嗎？」，雖然核心詢問目的有傳達，但略有省略。日文表達非常自然。</small></td>
+</tr>
+<tr>
+<td>T012<br><small>ja#2</small></td>
+<td class="zh">不好意思,可以幫我看一下這班車是不是往橫濱的嗎?<br><small>STT: 不好意思,可以帮我看一下这班车是不是往横滨的吗?</small></td>
+<td>すみません、このバスは横浜行きですか？<br><small>ref: すみません、この電車が横浜行きかどうか、ちょっと見ていただけますか?</small></td>
+<td>2783 / 6191</td>
+<td> cer=0.00</td>
+<td>3/5<br><small>譯文遺漏了「幫我看一下」的語意，直接翻譯為「這班公車是往橫濱的嗎？」，雖然核心詢問目的有傳達，但略有省略。日文表達非常自然。</small></td>
+</tr>
+<tr>
+<td>T012<br><small>ja#3</small></td>
+<td class="zh">不好意思,可以幫我看一下這班車是不是往橫濱的嗎?<br><small>STT: 不好意思,可以帮我看一下这班车是不是往横滨的吗?</small></td>
+<td>すみません、このバスは横浜行きですか？<br><small>ref: すみません、この電車が横浜行きかどうか、ちょっと見ていただけますか?</small></td>
+<td>-1209 / 2141</td>
+<td> cer=0.00</td>
+<td>3/5<br><small>譯文遺漏了「幫我看一下」的語意，直接翻譯為「這班公車是往橫濱的嗎？」，雖然核心詢問目的有傳達，但略有省略。日文表達非常自然。</small></td>
+</tr>
+<tr>
+<td>T013<br><small>en#1</small></td>
+<td class="zh">我剛剛在月台上把手機弄丟了。<br><small>STT: 我刚刚在月台上把手机弄丢了。</small></td>
+<td>I just dropped my phone on the platform.<br><small>ref: I just lost my phone on the platform.</small></td>
+<td>200 / 2074</td>
+<td> cer=0.15</td>
+<td>4/5<br><small>The translation is fluent, but '弄丟了' translates more accurately to 'lost' rather than 'dropped', which slightly alters the meaning.</small></td>
+</tr>
+<tr>
+<td>T013<br><small>en#2</small></td>
+<td class="zh">我剛剛在月台上把手機弄丟了。<br><small>STT: 我刚刚在月台上把手机弄丢了。</small></td>
+<td>I just dropped my phone on the platform.<br><small>ref: I just lost my phone on the platform.</small></td>
+<td>401 / 2452</td>
+<td> cer=0.15</td>
+<td>4/5<br><small>The translation is perfectly fluent, but '弄丟了' translates more accurately to 'lost' rather than 'dropped'. The meaning is slightly altered but still understandable in context.</small></td>
+</tr>
+<tr>
+<td>T013<br><small>en#3</small></td>
+<td class="zh">我剛剛在月台上把手機弄丟了。<br><small>STT: 我刚刚在月台上把手机弄丢了。</small></td>
+<td>I just dropped my phone on the platform.<br><small>ref: I just lost my phone on the platform.</small></td>
+<td>420 / 1919</td>
+<td> cer=0.15</td>
+<td>4/5<br><small>The translation is fluent, but '弄丟了' translates more accurately to 'lost' rather than 'dropped', which slightly alters the meaning.</small></td>
+</tr>
+<tr>
+<td>T013<br><small>ja#1</small></td>
+<td class="zh">我剛剛在月台上把手機弄丟了。<br><small>STT: 我刚刚在月台上把手机弄丢了。</small></td>
+<td>さっきホームでスマホをなくしちゃった。<br><small>ref: さっきホームで携帯をなくしてしまいました。</small></td>
+<td>490 / 2529</td>
+<td> cer=0.15</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且使用了自然的日語口語表達方式，語意忠實且流暢。</small></td>
+</tr>
+<tr>
+<td>T013<br><small>ja#2</small></td>
+<td class="zh">我剛剛在月台上把手機弄丟了。<br><small>STT: 我刚刚在月台上把手机弄丢了。</small></td>
+<td>さっきホームでスマホをなくしちゃった。<br><small>ref: さっきホームで携帯をなくしてしまいました。</small></td>
+<td>401 / 2454</td>
+<td> cer=0.15</td>
+<td>5/5<br><small>譯文完全傳達了原文的語意，且日文表達自然流暢。雖然使用了較口語的「なくしちゃった」而非參考譯文的敬語，但在沒有特定上下文的情況下是非常道地的表達方式。</small></td>
+</tr>
+<tr>
+<td>T013<br><small>ja#3</small></td>
+<td class="zh">我剛剛在月台上把手機弄丟了。<br><small>STT: 我刚刚在月台上把手机弄丢了。</small></td>
+<td>さっきホームで携帯をなくしちゃった。<br><small>ref: さっきホームで携帯をなくしてしまいました。</small></td>
+<td>412 / 2434</td>
+<td> cer=0.15</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且使用了自然的日語口語表達。雖然使用了常體（なくしちゃった）而非參考譯文的敬體，但在沒有特定語境要求的情況下是完全可以接受且流暢的。</small></td>
+</tr>
+<tr>
+<td>T014<br><small>en#1</small></td>
+<td class="zh">這個不要辣,我不太能吃辣。<br><small>STT: 这个不要啦,我不太能吃辣。</small></td>
+<td>I don't want this, I can't really eat spicy food.<br><small>ref: No spicy for this one, please — I can't really handle spicy food.</small></td>
+<td>-338 / 2781</td>
+<td> cer=0.09</td>
+<td>2/4<br><small>The machine translation incorrectly translates '這個不要辣' (no spice for this one) as 'I don't want this', which completely changes the speaker's intent. The second half is translated correctly. The English is fluent but contains a comma splice.</small></td>
+</tr>
+<tr>
+<td>T014<br><small>en#2</small></td>
+<td class="zh">這個不要辣,我不太能吃辣。<br><small>STT: 这个不要了,我不太能吃了。</small></td>
+<td>I don't want this anymore, I can't really eat it.<br><small>ref: No spicy for this one, please — I can't really handle spicy food.</small></td>
+<td>-143 / 2554</td>
+<td> cer=0.18</td>
+<td>1/5<br><small>The translation completely omits the key concept of 'spicy' (辣), changing the meaning from requesting non-spicy food to rejecting the food entirely.</small></td>
+</tr>
+<tr>
+<td>T014<br><small>en#3</small></td>
+<td class="zh">這個不要辣,我不太能吃辣。<br><small>STT: 这个不要啦,我不太能吃了。</small></td>
+<td>I don't want this, I can't really eat it.<br><small>ref: No spicy for this one, please — I can't really handle spicy food.</small></td>
+<td>-334 / 2070</td>
+<td> cer=0.18</td>
+<td>2/5<br><small>譯文完全漏譯了「辣」這個關鍵字，導致句意從「不要加辣」變成「不要這個東西」，嚴重改變了原文的意思。不過譯文本身的英文文法是自然流暢的。</small></td>
+</tr>
+<tr>
+<td>T014<br><small>ja#1</small></td>
+<td class="zh">這個不要辣,我不太能吃辣。<br><small>STT: 这个不要了,我不太能吃了。</small></td>
+<td>これはもういいです。もう食べられません。<br><small>ref: これは辛くしないでください。辛いものがあまり食べられないんです。</small></td>
+<td>-85 / 2405</td>
+<td> cer=0.18</td>
+<td>1/5<br><small>譯文完全沒有翻譯出「辣」的意思，將「這個不要辣」誤譯為「這個不需要了（これはもういいです）」，將「不太能吃辣」誤譯為「已經吃不下了（もう食べられません）」，完全改變了原文的語意。譯文本身文法正確且流暢。</small></td>
+</tr>
+<tr>
+<td>T014<br><small>ja#2</small></td>
+<td class="zh">這個不要辣,我不太能吃辣。<br><small>STT: 这个不要了,我不太能吃了。</small></td>
+<td>これはもういいです。もう食べられないです。<br><small>ref: これは辛くしないでください。辛いものがあまり食べられないんです。</small></td>
+<td>-436 / 2705</td>
+<td> cer=0.18</td>
+<td>1/5<br><small>譯文完全遺漏了「辣」的意思，將「不要辣」誤譯為「這個不要了」，將「不能吃辣」誤譯為「吃不下了」，語意完全錯誤。但日文句子本身文法通順。</small></td>
+</tr>
+<tr>
+<td>T014<br><small>ja#3</small></td>
+<td class="zh">這個不要辣,我不太能吃辣。<br><small>STT: 这个不要了,我不太能吃了。</small></td>
+<td>これはもういいです。あまり食べられません。<br><small>ref: これは辛くしないでください。辛いものがあまり食べられないんです。</small></td>
+<td>-135 / 2774</td>
+<td> cer=0.18</td>
+<td>1/5<br><small>譯文完全遺漏了「辣」的意思，將「不要辣」誤譯為「もういいです」（不需要了），並將「不能吃辣」誤譯為「あまり食べられません」（吃不下太多），導致語意完全改變。目標語本身尚算流暢。</small></td>
+</tr>
+<tr>
+<td>T015<br><small>en#1</small></td>
+<td class="zh">我們總共五個人,有兩個小孩,需要兒童椅。<br><small>STT: 我們總共五個人,有兩個小孩,需要兒童椅。</small></td>
+<td>There are five of us in total, including two children who need high chairs.<br><small>ref: There are five of us in total, including two children — we'll need high chairs.</small></td>
+<td>-1147 / 2853</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and fluent, perfectly conveying the original meaning without any errors.</small></td>
+</tr>
+<tr>
+<td>T015<br><small>en#2</small></td>
+<td class="zh">我們總共五個人,有兩個小孩,需要兒童椅。<br><small>STT: 我们总共五个人,有两个小孩,需要儿童椅。</small></td>
+<td>There are five of us in total, including two children who need high chairs.<br><small>ref: There are five of us in total, including two children — we'll need high chairs.</small></td>
+<td>-1106 / 2394</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and fluent, perfectly conveying the original meaning without any errors.</small></td>
+</tr>
+<tr>
+<td>T015<br><small>en#3</small></td>
+<td class="zh">我們總共五個人,有兩個小孩,需要兒童椅。<br><small>STT: 我们总共五个人,有两个小孩,需要儿童椅。</small></td>
+<td>There are five of us in total, including two children who need high chairs.<br><small>ref: There are five of us in total, including two children — we'll need high chairs.</small></td>
+<td>-1024 / 2988</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It correctly translates all elements of the source sentence, and 'high chairs' is an excellent translation for '兒童椅' in this context.</small></td>
+</tr>
+<tr>
+<td>T015<br><small>ja#1</small></td>
+<td class="zh">我們總共五個人,有兩個小孩,需要兒童椅。<br><small>STT: 我们总共五个人,有两个小孩,需要儿童椅。</small></td>
+<td>私たちは全部で5人で、子供が2人いて、チャイルドシートが必要です。<br><small>ref: 全部で5人です。子どもが2人いるので、子ども用の椅子をお願いします。</small></td>
+<td>-1130 / 2422</td>
+<td> cer=0.00</td>
+<td>4/4<br><small>譯文大致準確且流暢，但將「兒童椅」譯為「チャイルドシート」（通常指汽車安全座椅）在餐廳情境下略顯不自然，較適合的說法是「子ども用の椅子」或「ベビーチェア」。</small></td>
+</tr>
+<tr>
+<td>T015<br><small>ja#2</small></td>
+<td class="zh">我們總共五個人,有兩個小孩,需要兒童椅。<br><small>STT: 我们总共五个人,有两个小孩,需要儿童椅。</small></td>
+<td>私たちは全部で5人いて、子供が2人いるので、子供用椅子が必要です。<br><small>ref: 全部で5人です。子どもが2人いるので、子ども用の椅子をお願いします。</small></td>
+<td>-1238 / 3907</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的所有訊息，且日文表達自然流暢，沒有遺漏或錯誤。</small></td>
+</tr>
+<tr>
+<td>T015<br><small>ja#3</small></td>
+<td class="zh">我們總共五個人,有兩個小孩,需要兒童椅。<br><small>STT: 我们总共五个人,有两个小孩,需要儿童椅。</small></td>
+<td>私たちは全部で5人いて、子供が2人いるので、子供用の椅子が必要です。<br><small>ref: 全部で5人です。子どもが2人いるので、子ども用の椅子をお願いします。</small></td>
+<td>-1180 / 4071</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且流暢，完整傳達了原文的所有訊息，包含人數、小孩人數以及對兒童椅的需求，日語表達十分自然。</small></td>
+</tr>
+<tr>
+<td>T016<br><small>en#1</small></td>
+<td class="zh">我對蝦子過敏,餐點裡請不要放任何海鮮。<br><small>STT: 我对瞎子过敏,餐桌里请不要放任何海鲜。</small></td>
+<td>I'm allergic to blind people, so please don't put any seafood on the table.<br><small>ref: I'm allergic to shrimp — please don't put any seafood in my food.</small></td>
+<td>-1412 / 2845</td>
+<td> cer=0.12</td>
+<td>2/4<br><small>The translation contains a severe homophone error where '蝦子' (shrimp, xiāzi) was mistranslated as 'blind people' (瞎子, xiāzi), making the sentence nonsensical. Additionally, '餐點裡' (in the meal) was translated as 'on the table'.</small></td>
+</tr>
+<tr>
+<td>T016<br><small>en#2</small></td>
+<td class="zh">我對蝦子過敏,餐點裡請不要放任何海鮮。<br><small>STT: 我对瞎子过敏,餐桌里请不要放任何海鲜。</small></td>
+<td>I'm allergic to blind people, so please don't put any seafood on the table.<br><small>ref: I'm allergic to shrimp — please don't put any seafood in my food.</small></td>
+<td>-1475 / 3023</td>
+<td> cer=0.12</td>
+<td>2/5<br><small>機器譯文將「蝦子」誤譯為同音的「瞎子」(blind people)，造成嚴重的語意錯誤。此外，「餐點裡」被譯為 on the table，也不夠準確。雖然英文句法流暢，但核心語意傳達錯誤。</small></td>
+</tr>
+<tr>
+<td>T016<br><small>en#3</small></td>
+<td class="zh">我對蝦子過敏,餐點裡請不要放任何海鮮。<br><small>STT: 我对瞎子过敏,餐桌礼请不要放任何海鲜。</small></td>
+<td>I'm allergic to blind people, so please don't put any seafood on the table.<br><small>ref: I'm allergic to shrimp — please don't put any seafood in my food.</small></td>
+<td>-1473 / 2776</td>
+<td> cer=0.18</td>
+<td>2/5<br><small>機器譯文將「蝦子」誤譯為同音的「瞎子」(blind people)，造成嚴重的語意錯誤。此外，「餐點裡」被譯為 on the table，也不夠準確。雖然英文句法流暢，但核心語意傳達錯誤。</small></td>
+</tr>
+<tr>
+<td>T016<br><small>ja#1</small></td>
+<td class="zh">我對蝦子過敏,餐點裡請不要放任何海鮮。<br><small>STT: 我对虾子过敏,餐里请不要放任何海鲜。</small></td>
+<td>私はエビアレルギーなので、料理には海鮮を入れないでください。<br><small>ref: エビアレルギーがあるので、料理には海鮮を一切入れないでください。</small></td>
+<td>-1523 / 3227</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，語法自然流暢。雖然沒有特別強調「任何」（一切），但整體語意完整且符合日文表達習慣。</small></td>
+</tr>
+<tr>
+<td>T016<br><small>ja#2</small></td>
+<td class="zh">我對蝦子過敏,餐點裡請不要放任何海鮮。<br><small>STT: 我对虾子过敏,餐里请不要放任何海鲜。</small></td>
+<td>私はエビアレルギーなので、料理には海鮮を入れないでください。<br><small>ref: エビアレルギーがあるので、料理には海鮮を一切入れないでください。</small></td>
+<td>-1504 / 2996</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，日文表達自然流暢。雖然未完全對應「任何」(一切)這個強調詞，但整體語意完整且符合日常對話習慣。</small></td>
+</tr>
+<tr>
+<td>T016<br><small>ja#3</small></td>
+<td class="zh">我對蝦子過敏,餐點裡請不要放任何海鮮。<br><small>STT: 我对虾子过敏,餐点里请不要放任何海鲜。</small></td>
+<td>私はエビアレルギーなので、料理には海鮮を入れないでください。<br><small>ref: エビアレルギーがあるので、料理には海鮮を一切入れないでください。</small></td>
+<td>-1658 / 2751</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，日文表達自然流暢。雖然未完全對應「任何」(一切)這個強調詞，但整體語意完整且符合日常對話習慣。</small></td>
+</tr>
+<tr>
+<td>T017<br><small>en#1</small></td>
+<td class="zh">這杯不要加冰,然後大杯的改成中杯,總共三杯。<br><small>STT: 这杯不要加冰,然后大杯的改成中杯,总共三杯。</small></td>
+<td>Don't add ice to this one, and then change the large size to a medium, so a total of three cups.<br><small>ref: No ice in this one, and change the large to a medium — three drinks in total.</small></td>
+<td>-3542 / 2376</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and fluent, capturing all the details of the original request without any errors.</small></td>
+</tr>
+<tr>
+<td>T017<br><small>en#2</small></td>
+<td class="zh">這杯不要加冰,然後大杯的改成中杯,總共三杯。<br><small>STT: 这杯不要加冰,然后大杯的改成中杯,总共三杯。</small></td>
+<td>Don't add ice to this one, and then change the large size to a medium, so a total of three cups.<br><small>ref: No ice in this one, and change the large to a medium — three drinks in total.</small></td>
+<td>-3456 / 2437</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and fluent, capturing all the details of the original request without any errors.</small></td>
+</tr>
+<tr>
+<td>T017<br><small>en#3</small></td>
+<td class="zh">這杯不要加冰,然後大杯的改成中杯,總共三杯。<br><small>STT: 这杯不要加冰,然后大杯的改成中杯,总共三杯。</small></td>
+<td>Don't add ice to this one, and then change the large size to a medium, so that's three cups in total.<br><small>ref: No ice in this one, and change the large to a medium — three drinks in total.</small></td>
+<td>-3409 / 2224</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and fluent, capturing all the details of the original request without any errors.</small></td>
+</tr>
+<tr>
+<td>T017<br><small>ja#1</small></td>
+<td class="zh">這杯不要加冰,然後大杯的改成中杯,總共三杯。<br><small>STT: 这杯不要加冰,然后大杯的改成中杯,总共三杯。</small></td>
+<td>このグラスは氷なしで、それから大きいサイズを中サイズにして、全部で3杯。<br><small>ref: これは氷なしでお願いします。それから、大サイズは中サイズに変えてください。全部で3杯です。</small></td>
+<td>-3440 / 3061</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的所有訊息（去冰、大杯改中杯、總共三杯），日語表達自然流暢，符合口語習慣。</small></td>
+</tr>
+<tr>
+<td>T017<br><small>ja#2</small></td>
+<td class="zh">這杯不要加冰,然後大杯的改成中杯,總共三杯。<br><small>STT: 这杯不要加冰,然后大杯的改成中杯,总共三杯。</small></td>
+<td>このグラスは氷なしで、それから大きいサイズを中サイズにして、全部で3つ。<br><small>ref: これは氷なしでお願いします。それから、大サイズは中サイズに変えてください。全部で3杯です。</small></td>
+<td>-3539 / 2383</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文完整且準確地傳達了原文的所有訊息（不加冰、大杯改中杯、總共三杯）。日文表達自然，雖然較為口語，但完全符合日常點餐的情境。</small></td>
+</tr>
+<tr>
+<td>T017<br><small>ja#3</small></td>
+<td class="zh">這杯不要加冰,然後大杯的改成中杯,總共三杯。<br><small>STT: 这杯不要加冰,然后大杯的改成中杯,总共三杯。</small></td>
+<td>このグラスは氷なしで、それから大きいサイズを中サイズにして、全部で3杯。<br><small>ref: これは氷なしでお願いします。それから、大サイズは中サイズに変えてください。全部で3杯です。</small></td>
+<td>-3584 / 2589</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的所有訊息（去冰、大杯改中杯、總共三杯），日語表達自然流暢，符合口語習慣。</small></td>
+</tr>
+<tr>
+<td>T018<br><small>en#1</small></td>
+<td class="zh">我要一份 tonkotsu 拉麵,麵要硬一點。<br><small>STT: 我要一份豚骨拉面,面要硬一点。</small></td>
+<td>I'd like a tonkotsu ramen, and I'd like the noodles a bit firm.<br><small>ref: I'd like one tonkotsu ramen, with the noodles on the firm side.</small></td>
+<td>-1115 / 2523</td>
+<td> cer=0.42</td>
+<td>5/5<br><small>The translation is accurate and natural, perfectly capturing the request for tonkotsu ramen with firm noodles.</small></td>
+</tr>
+<tr>
+<td>T018<br><small>en#2</small></td>
+<td class="zh">我要一份 tonkotsu 拉麵,麵要硬一點。<br><small>STT: 我要一份豚骨拉面,面要硬一点。</small></td>
+<td>I'd like a tonkotsu ramen, and I'd like the noodles a bit firm.<br><small>ref: I'd like one tonkotsu ramen, with the noodles on the firm side.</small></td>
+<td>-1064 / 2852</td>
+<td> cer=0.42</td>
+<td>5/5<br><small>The translation is accurate and natural, perfectly capturing the request for tonkotsu ramen with firm noodles.</small></td>
+</tr>
+<tr>
+<td>T018<br><small>en#3</small></td>
+<td class="zh">我要一份 tonkotsu 拉麵,麵要硬一點。<br><small>STT: 我要一份豚骨拉面,面要硬一点。</small></td>
+<td>I'd like a tonkotsu ramen, and I'd like the noodles a bit firm.<br><small>ref: I'd like one tonkotsu ramen, with the noodles on the firm side.</small></td>
+<td>-1152 / 2764</td>
+<td> cer=0.42</td>
+<td>5/5<br><small>The translation is accurate and natural, perfectly capturing the request for tonkotsu ramen with firm noodles.</small></td>
+</tr>
+<tr>
+<td>T018<br><small>ja#1</small></td>
+<td class="zh">我要一份 tonkotsu 拉麵,麵要硬一點。<br><small>STT: 我要一份豚骨拉面,面要硬一点。</small></td>
+<td>豚骨ラーメンをください。麺は硬めで。<br><small>ref: 豚骨ラーメンを一つください。麺は硬めでお願いします。</small></td>
+<td>-1138 / 2026</td>
+<td> cer=0.42</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且使用了非常道地的日語點餐表達方式，語意忠實且流暢自然。雖然省略了「一份」的明確數字，但在日語語境中完全可以接受。</small></td>
+</tr>
+<tr>
+<td>T018<br><small>ja#2</small></td>
+<td class="zh">我要一份 tonkotsu 拉麵,麵要硬一點。<br><small>STT: 我要一份豚骨拉面,面要硬一点。</small></td>
+<td>豚骨ラーメンをください。麺は硬めで。<br><small>ref: 豚骨ラーメンを一つください。麺は硬めでお願いします。</small></td>
+<td>-1137 / 2233</td>
+<td> cer=0.42</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，並且使用了非常道地的日文點餐用語（麺は硬めで）。雖然沒有明確翻出「一份（一つ）」，但在日文語境中十分自然，不影響語意。</small></td>
+</tr>
+<tr>
+<td>T018<br><small>ja#3</small></td>
+<td class="zh">我要一份 tonkotsu 拉麵,麵要硬一點。<br><small>STT: 我要一份豚骨拉面,面要硬一点。</small></td>
+<td>豚骨ラーメンを一つ、麺は硬めで。<br><small>ref: 豚骨ラーメンを一つください。麺は硬めでお願いします。</small></td>
+<td>-1096 / 2073</td>
+<td> cer=0.42</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且使用了日語中點餐時非常自然道地的表達方式。雖然沒有像參考譯文那樣加上「ください」和「お願いします」，但在口語中完全可以接受。</small></td>
+</tr>
+<tr>
+<td>T019<br><small>en#1</small></td>
+<td class="zh">這道菜看起來很好吃,可是我已經吃飽了。<br><small>STT: 这道菜看起来很好吃,可是我已经吃饱了。</small></td>
+<td>This dish looks delicious, but I'm already full.<br><small>ref: This dish looks delicious, but I'm already full.</small></td>
+<td>-1191 / 2229</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is identical to the reference translation, perfectly conveying the original meaning in natural English.</small></td>
+</tr>
+<tr>
+<td>T019<br><small>en#2</small></td>
+<td class="zh">這道菜看起來很好吃,可是我已經吃飽了。<br><small>STT: 这道菜看起来很好吃,可是我已经吃饱了。</small></td>
+<td>This dish looks delicious, but I've already eaten.<br><small>ref: This dish looks delicious, but I'm already full.</small></td>
+<td>-923 / 1828</td>
+<td> cer=0.00</td>
+<td>4/5<br><small>The translation is highly fluent and conveys the core meaning well, though 'already eaten' is a slight semantic shift from 'already full' (吃飽了).</small></td>
+</tr>
+<tr>
+<td>T019<br><small>en#3</small></td>
+<td class="zh">這道菜看起來很好吃,可是我已經吃飽了。<br><small>STT: 这道菜看起来很好吃,可是我已经吃饱了。</small></td>
+<td>This dish looks delicious, but I've already eaten.<br><small>ref: This dish looks delicious, but I'm already full.</small></td>
+<td>-1114 / 1797</td>
+<td> cer=0.00</td>
+<td>4/5<br><small>The translation is fluent and conveys the main meaning, although 'already eaten' is a slight deviation from the exact meaning of 'already full' (吃飽了).</small></td>
+</tr>
+<tr>
+<td>T019<br><small>ja#1</small></td>
+<td class="zh">這道菜看起來很好吃,可是我已經吃飽了。<br><small>STT: 这道菜看起来很好吃,可是我已经吃饱了。</small></td>
+<td>この料理はとても美味しそうですが、もうお腹いっぱいです。<br><small>ref: この料理はとてもおいしそうですが、もうお腹がいっぱいなんです。</small></td>
+<td>-1022 / 2129</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，與參考譯文幾乎一致，僅在語氣上有些微差異（「お腹いっぱいです」與「お腹がいっぱいなんです」），兩者皆為非常自然的日文表達。</small></td>
+</tr>
+<tr>
+<td>T019<br><small>ja#2</small></td>
+<td class="zh">這道菜看起來很好吃,可是我已經吃飽了。<br><small>STT: 这道菜看起来很好吃,可是我已经吃饱了。</small></td>
+<td>この料理は美味しそうだけど、もうお腹いっぱい。<br><small>ref: この料理はとてもおいしそうですが、もうお腹がいっぱいなんです。</small></td>
+<td>-1139 / 2006</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，語句自然流暢，雖然使用了較為口語的表達方式，但整體語意完整。</small></td>
+</tr>
+<tr>
+<td>T019<br><small>ja#3</small></td>
+<td class="zh">這道菜看起來很好吃,可是我已經吃飽了。<br><small>STT: 这道菜看起来很好吃,可是我已经吃饱了。</small></td>
+<td>この料理は美味しそうだけど、もうお腹いっぱい。<br><small>ref: この料理はとてもおいしそうですが、もうお腹がいっぱいなんです。</small></td>
+<td>-1184 / 1966</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，語句自然流暢，雖然使用了較為口語的表達方式，但整體語意完整。</small></td>
+</tr>
+<tr>
+<td>T020<br><small>en#1</small></td>
+<td class="zh">請問可以幫我們分開結帳嗎?<br><small>STT: 請問可以幫我們分開結賬嗎?</small></td>
+<td>Excuse me, could you split the bill for us?<br><small>ref: Excuse me, could we get separate checks?</small></td>
+<td>273 / 2433</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is highly natural in English. 'Split the bill' is a perfectly valid and common alternative to 'separate checks'.</small></td>
+</tr>
+<tr>
+<td>T020<br><small>en#2</small></td>
+<td class="zh">請問可以幫我們分開結帳嗎?<br><small>STT: 請問可以幫我們分開結賬嗎?</small></td>
+<td>Excuse me, could you split the bill for us?<br><small>ref: Excuse me, could we get separate checks?</small></td>
+<td>405 / 2658</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>The translation is accurate and natural. 'Split the bill' is a perfectly valid and common equivalent to 'separate checks'.</small></td>
+</tr>
+<tr>
+<td>T020<br><small>en#3</small></td>
+<td class="zh">請問可以幫我們分開結帳嗎?<br><small>STT: 請問可以幫我們分開結賬嗎?</small></td>
+<td>Excuse me, could you split the bill for us?<br><small>ref: Excuse me, could we get separate checks?</small></td>
+<td>486 / 2509</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is highly natural in English. 'Split the bill' is a perfectly valid and common alternative to 'separate checks'.</small></td>
+</tr>
+<tr>
+<td>T020<br><small>ja#1</small></td>
+<td class="zh">請問可以幫我們分開結帳嗎?<br><small>STT: 請問可以幫我們分開結賬嗎?</small></td>
+<td>すみません、別々に会計できますか?<br><small>ref: すみません、お会計を別々にしていただけますか?</small></td>
+<td>427 / 3316</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>機器譯文準確傳達了原文的意思，日文表達自然且符合語境。雖然參考譯文使用了更禮貌的敬語，但機器譯文的禮貌程度在一般餐廳場景中也是完全可以接受的。</small></td>
+</tr>
+<tr>
+<td>T020<br><small>ja#2</small></td>
+<td class="zh">請問可以幫我們分開結帳嗎?<br><small>STT: 請問可以幫我們分開結賬嗎?</small></td>
+<td>すみません、別々に会計できますか？<br><small>ref: すみません、お会計を別々にしていただけますか?</small></td>
+<td>225 / 2885</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文「分開結帳」的意思，日語表達「別々に会計できますか」也非常道地且禮貌適當。</small></td>
+</tr>
+<tr>
+<td>T020<br><small>ja#3</small></td>
+<td class="zh">請問可以幫我們分開結帳嗎?<br><small>STT: 請問可以幫我們分開結賬嗎?</small></td>
+<td>すみません、別々に会計できますか？<br><small>ref: すみません、お会計を別々にしていただけますか?</small></td>
+<td>298 / 2938</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>譯文非常準確且自然地翻譯了原文的意思，日語表達「別々に会計できますか？」完全符合情境，無任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T021<br><small>en#1</small></td>
+<td class="zh">這個不要,我要旁邊那個藍色的,兩個多少錢?<br><small>STT: 这个不要,我要旁边那个蓝色的,两个多少钱?</small></td>
+<td>I don't want this one, I want the blue one next to it, how much are they?<br><small>ref: Not this one — I want the blue one next to it. How much for two?</small></td>
+<td>-1041 / 2354</td>
+<td>🔢 cer=0.00</td>
+<td>4/4<br><small>The translation is mostly accurate and fluent, but it misses the specific quantity 'two' (兩個) in the final question, translating it generally as 'they'. This is a minor omission and number error. The sentence structure contains comma splices, which is typical for spoken transcripts but slightly affects written fluency.</small></td>
+</tr>
+<tr>
+<td>T021<br><small>en#2</small></td>
+<td class="zh">這個不要,我要旁邊那個藍色的,兩個多少錢?<br><small>STT: 这个不要,我要旁边那个蓝色的,两个多少钱?</small></td>
+<td>I don't want this one, I want the blue one next to it, how much for both?<br><small>ref: Not this one — I want the blue one next to it. How much for two?</small></td>
+<td>-992 / 2390</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text, and 'how much for both' is a very natural translation for '兩個多少錢'.</small></td>
+</tr>
+<tr>
+<td>T021<br><small>en#3</small></td>
+<td class="zh">這個不要,我要旁邊那個藍色的,兩個多少錢?<br><small>STT: 这个不要,我要旁边那个蓝色的,两个多少钱?</small></td>
+<td>I don't want this one, I want the blue one next to it, how much are they?<br><small>ref: Not this one — I want the blue one next to it. How much for two?</small></td>
+<td>-965 / 2432</td>
+<td>🔢 cer=0.00</td>
+<td>4/5<br><small>譯文非常流暢且語意完整。唯一的小缺點是將「兩個多少錢」譯為 'how much are they'，稍微忽略了『兩個』(two) 的具體數量概念，但整體語意依然十分清晰且符合情境。</small></td>
+</tr>
+<tr>
+<td>T021<br><small>ja#1</small></td>
+<td class="zh">這個不要,我要旁邊那個藍色的,兩個多少錢?<br><small>STT: 这个不要,我要旁边那个蓝色的,两个多少钱?</small></td>
+<td>これは要らない、隣の青いのがいい、 2つでいくら？<br><small>ref: これはいりません。隣の青いのがほしいです。2つでいくらですか?</small></td>
+<td>-990 / 2179</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文完整且準確地傳達了原文的意思。雖然機器譯文使用的是常體（口語非敬語：要らない、いい、いくら？），而參考譯文使用的是敬體（いりません、ほしいです、いくらですか），但在口譯情境下，機器譯文的表達方式非常自然且符合口語習慣，語意完全正確。</small></td>
+</tr>
+<tr>
+<td>T021<br><small>ja#2</small></td>
+<td class="zh">這個不要,我要旁邊那個藍色的,兩個多少錢?<br><small>STT: 这个不要,我要旁边那个蓝色的,两个多少钱?</small></td>
+<td>これは要らない、隣の青いのが欲しい、2つでいくらですか？<br><small>ref: これはいりません。隣の青いのがほしいです。2つでいくらですか?</small></td>
+<td>-948 / 2932</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文完全準確地翻譯了原文的意思，語氣自然，與參考譯文幾乎一致，僅在句尾的敬語使用上有些微口語化的省略（要らない、欲しい），但整體非常流暢且符合口譯情境。</small></td>
+</tr>
+<tr>
+<td>T021<br><small>ja#3</small></td>
+<td class="zh">這個不要,我要旁邊那個藍色的,兩個多少錢?<br><small>STT: 这个不要,我要旁边那个蓝色的,两个多少钱?</small></td>
+<td>これは要らない、隣の青いのが欲しい、2つでいくらですか？<br><small>ref: これはいりません。隣の青いのがほしいです。2つでいくらですか?</small></td>
+<td>-1037 / 3114</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文完全準確地翻譯了原文的意思，語氣自然，與參考譯文幾乎一致，僅在句尾的敬語使用上有些微口語化的省略（要らない、欲しい），但整體非常流暢且符合口譯情境。</small></td>
+</tr>
+<tr>
+<td>T022<br><small>en#1</small></td>
+<td class="zh">太貴了,算我三千塊可以嗎?<br><small>STT: 太贵了,算我3000块可以了。</small></td>
+<td>It's too expensive, how about 3,000?<br><small>ref: That's too expensive — can you do three thousand?</small></td>
+<td>271 / 2664</td>
+<td> cer=0.46</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and uses natural phrasing for bargaining in English.</small></td>
+</tr>
+<tr>
+<td>T022<br><small>en#2</small></td>
+<td class="zh">太貴了,算我三千塊可以嗎?<br><small>STT: 太贵了,算我3000块可以了。</small></td>
+<td>It's too expensive, how about 3,000?<br><small>ref: That's too expensive — can you do three thousand?</small></td>
+<td>339 / 2590</td>
+<td> cer=0.46</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and uses natural phrasing for bargaining in English.</small></td>
+</tr>
+<tr>
+<td>T022<br><small>en#3</small></td>
+<td class="zh">太貴了,算我三千塊可以嗎?<br><small>STT: 太贵了,算我3000块可以了。</small></td>
+<td>It's too expensive, 3,000 is fine.<br><small>ref: That's too expensive — can you do three thousand?</small></td>
+<td>218 / 2572</td>
+<td> cer=0.46</td>
+<td>3/4<br><small>The translation changes the interrogative request ('can you do 3,000?') into a declarative statement ('3,000 is fine'), altering the speaker's intent in the negotiation. The English is mostly fluent but contains a comma splice.</small></td>
+</tr>
+<tr>
+<td>T022<br><small>ja#1</small></td>
+<td class="zh">太貴了,算我三千塊可以嗎?<br><small>STT: 太贵了,算我3000块可以了。</small></td>
+<td>高すぎるよ、 3000元でいいよ。<br><small>ref: 高すぎます。3000円にしてもらえませんか?</small></td>
+<td>226 / 2330</td>
+<td> cer=0.46</td>
+<td>2/4<br><small>譯文將「算我三千塊可以嗎？」(請求降價) 誤譯為「3000元でいいよ」(3000元就可以了)，語氣變成像是賣家同意降價或是買家勉強接受，失去了原本詢問、請求的語意。日文表達本身算流暢。</small></td>
+</tr>
+<tr>
+<td>T022<br><small>ja#2</small></td>
+<td class="zh">太貴了,算我三千塊可以嗎?<br><small>STT: 太贵了,算我3000块可以了。</small></td>
+<td>高すぎるよ、 3000元でいいよ。<br><small>ref: 高すぎます。3000円にしてもらえませんか?</small></td>
+<td>309 / 2308</td>
+<td> cer=0.46</td>
+<td>2/4<br><small>機器譯文將「算我三千塊可以嗎？」(請求折扣) 誤譯為「3000元でいいよ」(3000元就可以了/我出3000元就好)，遺漏了原文中「可以嗎？」的詢問與請求語氣，導致語意發生改變。日文表達本身算自然，但未能準確傳達原文的交際意圖。</small></td>
+</tr>
+<tr>
+<td>T022<br><small>ja#3</small></td>
+<td class="zh">太貴了,算我三千塊可以嗎?<br><small>STT: 太贵了,算我3000块可以了。</small></td>
+<td>高すぎるよ、 3000元でいいよ。<br><small>ref: 高すぎます。3000円にしてもらえませんか?</small></td>
+<td>427 / 2426</td>
+<td> cer=0.46</td>
+<td>2/4<br><small>譯文將「算我三千塊可以嗎？」(請求降價) 誤譯為「3000元でいいよ」(3000元就可以了)，語氣變成像是賣家同意降價或是買家勉強接受，失去了原本詢問、請求的語意。日文表達本身算流暢。</small></td>
+</tr>
+<tr>
+<td>T023<br><small>en#1</small></td>
+<td class="zh">請問這個價格是含稅還是不含稅?<br><small>STT: 请问这个价格是含税还是不含税?</small></td>
+<td>Excuse me, is this price including or excluding tax?<br><small>ref: Is this price with tax or without tax?</small></td>
+<td>-922 / 2974</td>
+<td>🚫 cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and natural, perfectly capturing the meaning of the original text.</small></td>
+</tr>
+<tr>
+<td>T023<br><small>en#2</small></td>
+<td class="zh">請問這個價格是含稅還是不含稅?<br><small>STT: 请问这个价格是含税还是不含税?</small></td>
+<td>Excuse me, is this price including or excluding tax?<br><small>ref: Is this price with tax or without tax?</small></td>
+<td>-810 / 2851</td>
+<td>🚫 cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and fluent, capturing the full meaning of the original text without any errors.</small></td>
+</tr>
+<tr>
+<td>T023<br><small>en#3</small></td>
+<td class="zh">請問這個價格是含稅還是不含稅?<br><small>STT: 请问这个价格是含税还是不含税?</small></td>
+<td>Excuse me, is this price including or excluding tax?<br><small>ref: Is this price with tax or without tax?</small></td>
+<td>-908 / 2753</td>
+<td>🚫 cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and natural, perfectly capturing the meaning of the original text.</small></td>
+</tr>
+<tr>
+<td>T023<br><small>ja#1</small></td>
+<td class="zh">請問這個價格是含稅還是不含稅?<br><small>STT: 请问这个价格是含税还是不含税?</small></td>
+<td>すみませんが、この価格は税込みですか、それとも税抜きですか？<br><small>ref: この値段は税込みですか、それとも税抜きですか?</small></td>
+<td>-897 / 3524</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，並且日語表達自然流暢。「請問」翻譯為「すみませんが」非常貼切，符合日語的語用習慣。</small></td>
+</tr>
+<tr>
+<td>T023<br><small>ja#2</small></td>
+<td class="zh">請問這個價格是含稅還是不含稅?<br><small>STT: 请问这个价格是含税还是不含税?</small></td>
+<td>すみませんが、この価格は税込みですか、それとも税別ですか？<br><small>ref: この値段は税込みですか、それとも税抜きですか?</small></td>
+<td>-718 / 3450</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。「税別」與參考譯文的「税抜き」皆為「不含稅」的常見正確說法。</small></td>
+</tr>
+<tr>
+<td>T023<br><small>ja#3</small></td>
+<td class="zh">請問這個價格是含稅還是不含稅?<br><small>STT: 请问这个价格是含税还是不含税?</small></td>
+<td>すみませんが、この価格は税込みですか、それとも税別ですか？<br><small>ref: この値段は税込みですか、それとも税抜きですか?</small></td>
+<td>-882 / 3723</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。「税別」與「税抜き」皆為「不含稅」的常見說法。</small></td>
+</tr>
+<tr>
+<td>T024<br><small>en#1</small></td>
+<td class="zh">這件如果打八折的話,我就買兩件。<br><small>STT: 这件如果打八折的话,我就买两件。</small></td>
+<td>If this one is 20% off, I'll buy two.<br><small>ref: If this is twenty percent off, I'll buy two.</small></td>
+<td>-526 / 2631</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation perfectly captures the meaning of the original text and is completely natural in English.</small></td>
+</tr>
+<tr>
+<td>T024<br><small>en#2</small></td>
+<td class="zh">這件如果打八折的話,我就買兩件。<br><small>STT: 这件如果打八折的话,我就买两件。</small></td>
+<td>If this one is 20% off, I'll buy two.<br><small>ref: If this is twenty percent off, I'll buy two.</small></td>
+<td>-535 / 2367</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation perfectly captures the meaning of the original text and is completely natural in English.</small></td>
+</tr>
+<tr>
+<td>T024<br><small>en#3</small></td>
+<td class="zh">這件如果打八折的話,我就買兩件。<br><small>STT: 这件如果打八折的话,我就买两件。</small></td>
+<td>If this one is 20% off, I'll buy two.<br><small>ref: If this is twenty percent off, I'll buy two.</small></td>
+<td>-494 / 2156</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation perfectly captures the meaning of the original sentence and is completely natural in English. '打八折' is correctly translated as '20% off'.</small></td>
+</tr>
+<tr>
+<td>T024<br><small>ja#1</small></td>
+<td class="zh">這件如果打八折的話,我就買兩件。<br><small>STT: 这件如果打八折的话,我就买两件。</small></td>
+<td>これ、もし2割引だったら2着買うわ。<br><small>ref: これが2割引きになるなら、2着買います。</small></td>
+<td>-457 / 2196</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的語意，『打八折』正確翻譯為『2割引』，『兩件』翻譯為『2着』。日文表達自然，使用了口語化的語氣，符合購物情境。</small></td>
+</tr>
+<tr>
+<td>T024<br><small>ja#2</small></td>
+<td class="zh">這件如果打八折的話,我就買兩件。<br><small>STT: 这件如果打八折的话,我就买两件。</small></td>
+<td>これ、もし2割引なら2着買うわ。<br><small>ref: これが2割引きになるなら、2着買います。</small></td>
+<td>-523 / 2335</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，將「打八折」正確翻譯為「2割引」，語句自然流暢。雖然使用了較為口語的結尾詞「わ」，但整體語意與流暢度極佳。</small></td>
+</tr>
+<tr>
+<td>T024<br><small>ja#3</small></td>
+<td class="zh">這件如果打八折的話,我就買兩件。<br><small>STT: 这件如果打八折的话,我就买两件。</small></td>
+<td>これ、もし2割引だったら2着買うわ。<br><small>ref: これが2割引きになるなら、2着買います。</small></td>
+<td>-585 / 2081</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文完全忠實於原文，數字與條件句皆正確轉換，日文表達自然流暢，雖使用了較口語的語尾助詞「わ」，但在日常對話情境中十分合適。</small></td>
+</tr>
+<tr>
+<td>T025<br><small>en#1</small></td>
+<td class="zh">有沒有 limited edition 的款式?我在 Instagram 上看到的。<br><small>STT: 有没有limited edition的款式?我在Instagram上看到的。</small></td>
+<td>Do you have any limited edition styles? I saw them on Instagram.<br><small>ref: Do you have the limited edition version? I saw it on Instagram.</small></td>
+<td>-1590 / 2328</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and natural, perfectly conveying the original meaning.</small></td>
+</tr>
+<tr>
+<td>T025<br><small>en#2</small></td>
+<td class="zh">有沒有 limited edition 的款式?我在 Instagram 上看到的。<br><small>STT: 有没有limited edition的款式?我在Instagram上看到的。</small></td>
+<td>Do you have any limited edition styles? I saw them on Instagram.<br><small>ref: Do you have the limited edition version? I saw it on Instagram.</small></td>
+<td>-1686 / 2463</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and natural, perfectly conveying the original meaning.</small></td>
+</tr>
+<tr>
+<td>T025<br><small>en#3</small></td>
+<td class="zh">有沒有 limited edition 的款式?我在 Instagram 上看到的。<br><small>STT: 有没有limited edition的款式?我在Instagram上看到的。</small></td>
+<td>Do you have any limited edition styles? I saw them on Instagram.<br><small>ref: Do you have the limited edition version? I saw it on Instagram.</small></td>
+<td>-1728 / 2175</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly captures the meaning of the original text and is highly fluent. 'Styles' is a good translation for '款式', and 'them' correctly refers back to the plural 'styles'.</small></td>
+</tr>
+<tr>
+<td>T025<br><small>ja#1</small></td>
+<td class="zh">有沒有 limited edition 的款式?我在 Instagram 上看到的。<br><small>STT: 有没有限定款的?我在Instagram上看到的。</small></td>
+<td>限定版はありますか？インスタグラムで見たんです。<br><small>ref: 限定版のモデルはありますか?インスタグラムで見たんですが。</small></td>
+<td>-1738 / 1927</td>
+<td> cer=0.46</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，日文表達自然流暢。雖然未明確翻譯出「款式」，但在語境中「限定版」已足夠清楚，不構成嚴重漏譯。</small></td>
+</tr>
+<tr>
+<td>T025<br><small>ja#2</small></td>
+<td class="zh">有沒有 limited edition 的款式?我在 Instagram 上看到的。<br><small>STT: 有没limited edition的款式,我在Instagram上看到的。</small></td>
+<td>限定版はありますか？インスタグラムで見ました。<br><small>ref: 限定版のモデルはありますか?インスタグラムで見たんですが。</small></td>
+<td>-1588 / 2536</td>
+<td> cer=0.03</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日語表達自然流暢。雖然未明確翻譯出「款式」，但在語境中「限定版」已足夠表達需求，不影響整體理解。</small></td>
+</tr>
+<tr>
+<td>T025<br><small>ja#3</small></td>
+<td class="zh">有沒有 limited edition 的款式?我在 Instagram 上看到的。<br><small>STT: 有没limited edition的款式,我在Instagram上看到的。</small></td>
+<td>限定版はありますか？インスタグラムで見たんです。<br><small>ref: 限定版のモデルはありますか?インスタグラムで見たんですが。</small></td>
+<td>-1639 / 2026</td>
+<td> cer=0.03</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。雖然沒有明確翻譯出「款式」，但在上下文中「限定版」已經足夠清楚，不影響整體語意。</small></td>
+</tr>
+<tr>
+<td>T026<br><small>en#1</small></td>
+<td class="zh">我考慮了一下,這個還是先不買好了。<br><small>STT: 我考虑了一下,这个还是先不买好了。</small></td>
+<td>I thought about it, and I'm not going to buy it yet.<br><small>ref: I've thought about it — I'll pass on this one for now.</small></td>
+<td>-224 / 2526</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is perfectly natural in English.</small></td>
+</tr>
+<tr>
+<td>T026<br><small>en#2</small></td>
+<td class="zh">我考慮了一下,這個還是先不買好了。<br><small>STT: 我考虑了一下,这个还是先不买好了。</small></td>
+<td>I thought about it, and I'm not going to buy it yet.<br><small>ref: I've thought about it — I'll pass on this one for now.</small></td>
+<td>-355 / 2276</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is perfectly natural in English.</small></td>
+</tr>
+<tr>
+<td>T026<br><small>en#3</small></td>
+<td class="zh">我考慮了一下,這個還是先不買好了。<br><small>STT: 我考虑了一下,这个还是先不买了。</small></td>
+<td>I thought about it, and I'm not going to buy it yet.<br><small>ref: I've thought about it — I'll pass on this one for now.</small></td>
+<td>-206 / 2543</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思。「I'm not going to buy it yet」很好地對應了「這個還是先不買好了」，語意忠實度與流暢度皆佳。</small></td>
+</tr>
+<tr>
+<td>T026<br><small>ja#1</small></td>
+<td class="zh">我考慮了一下,這個還是先不買好了。<br><small>STT: 我考虑了一下,这个还是先不买好了。</small></td>
+<td>ちょっと考えたんですが、これはやめておきます。<br><small>ref: ちょっと考えたんですが、これはやっぱり今回はやめておきます。</small></td>
+<td>-81 / 2668</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確傳達了原文的意思，且日文表達非常自然。雖然沒有像參考譯文那樣明確翻出「還是先（やっぱり今回は）」的語感，但「やめておきます」本身已帶有暫緩或作罷的意味，整體翻譯品質極佳。</small></td>
+</tr>
+<tr>
+<td>T026<br><small>ja#2</small></td>
+<td class="zh">我考慮了一下,這個還是先不買好了。<br><small>STT: 我考虑了一下,这个还是先不买好了。</small></td>
+<td>ちょっと考えたんですが、これはやめておきます。<br><small>ref: ちょっと考えたんですが、これはやっぱり今回はやめておきます。</small></td>
+<td>-353 / 2800</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常自然且完整傳達了原文的意思。「還是先不買」譯為「やめておきます」符合日語口語習慣，語意忠實度與流暢度皆極高。</small></td>
+</tr>
+<tr>
+<td>T026<br><small>ja#3</small></td>
+<td class="zh">我考慮了一下,這個還是先不買好了。<br><small>STT: 我考虑了一下,这个还是先不买好了。</small></td>
+<td>ちょっと考えたんですが、これはやめておきます。<br><small>ref: ちょっと考えたんですが、これはやっぱり今回はやめておきます。</small></td>
+<td>-209 / 2789</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「やめておきます」完美地傳達了「先不買好了」的意思，語氣也非常符合情境，無任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T027<br><small>en#1</small></td>
+<td class="zh">可以退稅嗎?我總共買了超過五千日圓。<br><small>STT: 可以退稅嗎?我總共買了超過5000日元。</small></td>
+<td>Can I get a tax refund? I bought over 5,000 yen worth.<br><small>ref: Can I get a tax refund? I bought more than five thousand yen in total.</small></td>
+<td>-1006 / 2411</td>
+<td> cer=0.31</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is natural in English.</small></td>
+</tr>
+<tr>
+<td>T027<br><small>en#2</small></td>
+<td class="zh">可以退稅嗎?我總共買了超過五千日圓。<br><small>STT: 可以退稅嗎?我總共買了超過5000日元。</small></td>
+<td>Can I get a tax refund? I bought more than 5,000 yen.<br><small>ref: Can I get a tax refund? I bought more than five thousand yen in total.</small></td>
+<td>-752 / 2283</td>
+<td> cer=0.31</td>
+<td>4/5<br><small>譯文漏譯了「總共」(in total)，但整體語意依然非常清晰且表達自然，故給予4分忠實度與5分流暢度。</small></td>
+</tr>
+<tr>
+<td>T027<br><small>en#3</small></td>
+<td class="zh">可以退稅嗎?我總共買了超過五千日圓。<br><small>STT: 可以退稅嗎?我總共買了超過5000日元。</small></td>
+<td>Can I get a tax refund? I bought more than 5,000 yen.<br><small>ref: Can I get a tax refund? I bought more than five thousand yen in total.</small></td>
+<td>-941 / 2225</td>
+<td> cer=0.31</td>
+<td>4/5<br><small>譯文漏譯了「總共」(in total)，但整體語意依然非常清晰且表達自然，故給予4分忠實度與5分流暢度。</small></td>
+</tr>
+<tr>
+<td>T027<br><small>ja#1</small></td>
+<td class="zh">可以退稅嗎?我總共買了超過五千日圓。<br><small>STT: 可以退稅嗎?我總共買了超過5000日元。</small></td>
+<td>免税はできますか?合計5000円以上買いました。<br><small>ref: 免税できますか?全部で5000円以上買いました。</small></td>
+<td>-876 / 2766</td>
+<td> cer=0.31</td>
+<td>5/5<br><small>譯文非常準確且自然。「免税はできますか？」與「合計5000円以上買いました」完全符合日文口語表達習慣，且精確傳達了原文的意思。</small></td>
+</tr>
+<tr>
+<td>T027<br><small>ja#2</small></td>
+<td class="zh">可以退稅嗎?我總共買了超過五千日圓。<br><small>STT: 可以退稅嗎?我總共買了超過5000日元。</small></td>
+<td>免税はできますか?合計5000円以上買いました。<br><small>ref: 免税できますか?全部で5000円以上買いました。</small></td>
+<td>-917 / 2509</td>
+<td> cer=0.31</td>
+<td>5/5<br><small>譯文非常準確且自然。「免税はできますか？」與「合計5000円以上買いました」完全符合原文意思，且日語表達十分道地。</small></td>
+</tr>
+<tr>
+<td>T027<br><small>ja#3</small></td>
+<td class="zh">可以退稅嗎?我總共買了超過五千日圓。<br><small>STT: 可以退稅嗎?我總共買了超過5000日元。</small></td>
+<td>免税はできますか?合計で5000円以上買いました。<br><small>ref: 免税できますか?全部で5000円以上買いました。</small></td>
+<td>-941 / 2704</td>
+<td> cer=0.31</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的語意。「免税はできますか」是詢問退稅的自然說法，「合計で5000円以上買いました」也精確對應了「我總共買了超過五千日圓」。</small></td>
+</tr>
+<tr>
+<td>T028<br><small>en#1</small></td>
+<td class="zh">我有訂房,名字是陳大文,今天住兩個晚上。<br><small>STT: 我有定房,名字是陳大文,今天住兩個晚上。</small></td>
+<td>I have a reservation, the name is Chen Dawen, staying for two nights.<br><small>ref: I have a reservation under the name Chen Ta-wen, staying two nights from today.</small></td>
+<td>-2217 / 2283</td>
+<td> cer=0.06</td>
+<td>4/4<br><small>The translation accurately conveys the reservation, the name, and the duration of the stay, and reads fairly naturally. However, it omits the word '今天' (today).</small></td>
+</tr>
+<tr>
+<td>T028<br><small>en#2</small></td>
+<td class="zh">我有訂房,名字是陳大文,今天住兩個晚上。<br><small>STT: 我有定房,名字是陳大文。今天住兩個晚上。</small></td>
+<td>I have a reservation, the name is Chen Dawen. I'm staying for two nights.<br><small>ref: I have a reservation under the name Chen Ta-wen, staying two nights from today.</small></td>
+<td>-2224 / 2275</td>
+<td> cer=0.06</td>
+<td>4/5<br><small>The translation is fluent and conveys the main meaning accurately, but it omits the word '今天' (today). The name is translated using Hanyu Pinyin, which is acceptable.</small></td>
+</tr>
+<tr>
+<td>T028<br><small>en#3</small></td>
+<td class="zh">我有訂房,名字是陳大文,今天住兩個晚上。<br><small>STT: 我有定房,名字是陳大文,今天住兩個晚上。</small></td>
+<td>I have a reservation, the name is Chen Dawen, staying for two nights.<br><small>ref: I have a reservation under the name Chen Ta-wen, staying two nights from today.</small></td>
+<td>-2200 / 2064</td>
+<td> cer=0.06</td>
+<td>4/4<br><small>The translation accurately conveys the reservation, name, and duration of stay, but omits the word 'today' (今天). The sentence structure is slightly informal but acceptable for spoken English. The name is translated using Pinyin instead of Wade-Giles, which is acceptable.</small></td>
+</tr>
+<tr>
+<td>T028<br><small>ja#1</small></td>
+<td class="zh">我有訂房,名字是陳大文,今天住兩個晚上。<br><small>STT: 我有定房,名字是陳大文,今天住兩個晚上。</small></td>
+<td>予約してあります、名前は陳大文です。今日から2泊します。<br><small>ref: 予約しています。名前はチン・ダイブンです。今日から2泊です。</small></td>
+<td>-2263 / 2364</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>譯文準確傳達了原文的所有訊息，包括訂房、姓名及住宿天數，且日文表達自然流暢。</small></td>
+</tr>
+<tr>
+<td>T028<br><small>ja#2</small></td>
+<td class="zh">我有訂房,名字是陳大文,今天住兩個晚上。<br><small>STT: 我有定房,名字是陳大文,今天住兩個晚上。</small></td>
+<td>予約してあります、名前は陳大文です。今日から2泊します。<br><small>ref: 予約しています。名前はチン・ダイブンです。今日から2泊です。</small></td>
+<td>-2327 / 2341</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>機器譯文準確傳達了原文的所有訊息，包括訂房、姓名及住宿天數，且日文表達自然流暢，無明顯錯誤。</small></td>
+</tr>
+<tr>
+<td>T028<br><small>ja#3</small></td>
+<td class="zh">我有訂房,名字是陳大文,今天住兩個晚上。<br><small>STT: 我有定房,名字是陳大文,今天住兩個晚上。</small></td>
+<td>予約してあります、名前は陳大文です。今日から2泊します。<br><small>ref: 予約しています。名前はチン・ダイブンです。今日から2泊です。</small></td>
+<td>-2350 / 2293</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>譯文準確傳達了原文的所有資訊，包括訂房、姓名及住宿天數，且日文表達自然流暢。</small></td>
+</tr>
+<tr>
+<td>T029<br><small>en#1</small></td>
+<td class="zh">我沒有訂房,請問今晚還有空房嗎?<br><small>STT: 我没有订房,请问今晚还有空房吗?</small></td>
+<td>I don't have a reservation, do you have any rooms available tonight?<br><small>ref: I don't have a reservation — do you have any rooms available tonight?</small></td>
+<td>-464 / 2703</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly captures the meaning of the original text and is highly fluent. It matches the reference translation almost exactly, differing only in punctuation.</small></td>
+</tr>
+<tr>
+<td>T029<br><small>en#2</small></td>
+<td class="zh">我沒有訂房,請問今晚還有空房嗎?<br><small>STT: 我没有订房,请问今晚还有空房吗?</small></td>
+<td>I don't have a reservation, do you have any rooms available tonight?<br><small>ref: I don't have a reservation — do you have any rooms available tonight?</small></td>
+<td>-607 / 2795</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly captures the meaning of the original text and is highly fluent. It matches the reference translation almost exactly, differing only in punctuation.</small></td>
+</tr>
+<tr>
+<td>T029<br><small>en#3</small></td>
+<td class="zh">我沒有訂房,請問今晚還有空房嗎?<br><small>STT: 我没有订房,请问今晚还有空房吗?</small></td>
+<td>I don't have a reservation, do you have any rooms available tonight?<br><small>ref: I don't have a reservation — do you have any rooms available tonight?</small></td>
+<td>-485 / 2683</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly captures the meaning of the original text and is highly fluent. It matches the reference translation almost exactly, differing only in punctuation.</small></td>
+</tr>
+<tr>
+<td>T029<br><small>ja#1</small></td>
+<td class="zh">我沒有訂房,請問今晚還有空房嗎?<br><small>STT: 我沒有訂房,請問今晚還有空房嗎?</small></td>
+<td>予約はしていないのですが、今夜空室はありますか？<br><small>ref: 予約していないんですが、今夜空いている部屋はありますか?</small></td>
+<td>-630 / 2786</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，語法正確，沒有遺漏或錯誤。</small></td>
+</tr>
+<tr>
+<td>T029<br><small>ja#2</small></td>
+<td class="zh">我沒有訂房,請問今晚還有空房嗎?<br><small>STT: 我沒有訂房,請問今晚還有空房嗎?</small></td>
+<td>予約はしていないんですが、今夜空室はありますか？<br><small>ref: 予約していないんですが、今夜空いている部屋はありますか?</small></td>
+<td>-532 / 2968</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，語法正確，沒有遺漏或錯誤。</small></td>
+</tr>
+<tr>
+<td>T029<br><small>ja#3</small></td>
+<td class="zh">我沒有訂房,請問今晚還有空房嗎?<br><small>STT: 我沒有訂房,請問今晚還有空房嗎?</small></td>
+<td>予約はしていないのですが、今夜空室はありますか？<br><small>ref: 予約していないんですが、今夜空いている部屋はありますか?</small></td>
+<td>-584 / 3061</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，語法正確，沒有遺漏或錯誤。</small></td>
+</tr>
+<tr>
+<td>T030<br><small>en#1</small></td>
+<td class="zh">請問退房時間是早上十點還是十一點?<br><small>STT: 请问退房时间是早上10点还是11点?</small></td>
+<td>Excuse me, what is the check-out time, 10 a.m. or 11 a.m.?<br><small>ref: Is checkout at ten or eleven in the morning?</small></td>
+<td>-1242 / 2909</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>The translation is accurate and fluent, perfectly conveying the original meaning.</small></td>
+</tr>
+<tr>
+<td>T030<br><small>en#2</small></td>
+<td class="zh">請問退房時間是早上十點還是十一點?<br><small>STT: 请问退房时间是早上10点还是11点?</small></td>
+<td>Excuse me, what is the check-out time, 10 a.m. or 11 a.m.?<br><small>ref: Is checkout at ten or eleven in the morning?</small></td>
+<td>-1136 / 2775</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>The translation is accurate, natural, and conveys the exact meaning of the original text without any errors.</small></td>
+</tr>
+<tr>
+<td>T030<br><small>en#3</small></td>
+<td class="zh">請問退房時間是早上十點還是十一點?<br><small>STT: 请问退房时间是早上10点还是11点?</small></td>
+<td>Excuse me, what is the check-out time, 10 a.m. or 11 a.m.?<br><small>ref: Is checkout at ten or eleven in the morning?</small></td>
+<td>-1204 / 2693</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>The translation accurately and naturally conveys the meaning of the original text without any errors.</small></td>
+</tr>
+<tr>
+<td>T030<br><small>ja#1</small></td>
+<td class="zh">請問退房時間是早上十點還是十一點?<br><small>STT: 请问退房时间是早上10点还是11点?</small></td>
+<td>チェックアウトの時間は午前10時ですか、それとも11時ですか？<br><small>ref: チェックアウトは朝10時ですか、それとも11時ですか?</small></td>
+<td>-1103 / 3041</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日語表達自然流暢。</small></td>
+</tr>
+<tr>
+<td>T030<br><small>ja#2</small></td>
+<td class="zh">請問退房時間是早上十點還是十一點?<br><small>STT: 请问退房时间是早上10点还是11点?</small></td>
+<td>チェックアウトの時間は午前10時ですか、それとも11時ですか？<br><small>ref: チェックアウトは朝10時ですか、それとも11時ですか?</small></td>
+<td>-1295 / 2878</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，「午前10時」對應「早上十點」非常合適，整體語句流暢。</small></td>
+</tr>
+<tr>
+<td>T030<br><small>ja#3</small></td>
+<td class="zh">請問退房時間是早上十點還是十一點?<br><small>STT: 请问退房时间是早上10点还是11点?</small></td>
+<td>チェックアウトの時間は午前10時ですか、それとも11時ですか？<br><small>ref: チェックアウトは朝10時ですか、それとも11時ですか?</small></td>
+<td>-1260 / 2885</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，「午前10時」對應「早上十點」非常合適，整體語句流暢。</small></td>
+</tr>
+<tr>
+<td>T031<br><small>en#1</small></td>
+<td class="zh">房間的冷氣好像壞了,可以請人來看一下嗎?<br><small>STT: 房间的冷气好像坏了,可以请人来看一下吗?</small></td>
+<td>The air conditioning in the room seems to be broken, can you send someone to take a look?<br><small>ref: The air conditioner in my room seems to be broken — could you send someone to take a look?</small></td>
+<td>-1009 / 2661</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the full meaning of the source text and is highly fluent and natural in English.</small></td>
+</tr>
+<tr>
+<td>T031<br><small>en#2</small></td>
+<td class="zh">房間的冷氣好像壞了,可以請人來看一下嗎?<br><small>STT: 房间的冷气好像坏了,可以请人来看一下吗?</small></td>
+<td>The air conditioning in the room seems to be broken, could you send someone to check it out?<br><small>ref: The air conditioner in my room seems to be broken — could you send someone to take a look?</small></td>
+<td>-897 / 2823</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and sounds natural in English. 'Air conditioning' and 'check it out' are perfectly acceptable alternatives to 'air conditioner' and 'take a look'.</small></td>
+</tr>
+<tr>
+<td>T031<br><small>en#3</small></td>
+<td class="zh">房間的冷氣好像壞了,可以請人來看一下嗎?<br><small>STT: 房间的冷气好像坏了,可以请人来看一下吗?</small></td>
+<td>The air conditioning in the room seems to be broken, could you send someone to take a look?<br><small>ref: The air conditioner in my room seems to be broken — could you send someone to take a look?</small></td>
+<td>-947 / 2985</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and natural, perfectly conveying the meaning of the original text.</small></td>
+</tr>
+<tr>
+<td>T031<br><small>ja#1</small></td>
+<td class="zh">房間的冷氣好像壞了,可以請人來看一下嗎?<br><small>STT: 房间的冷气好像坏了,可以请人来看一下吗?</small></td>
+<td>部屋のエアコンが壊れたみたいで、誰かに見てもらえますか？<br><small>ref: 部屋のエアコンが壊れているようなんですが、どなたかに見に来ていただけますか?</small></td>
+<td>-1024 / 2316</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。雖然參考譯文使用了更為禮貌的敬語，但機器譯文的禮貌程度在一般情況下也是可以接受的。</small></td>
+</tr>
+<tr>
+<td>T031<br><small>ja#2</small></td>
+<td class="zh">房間的冷氣好像壞了,可以請人來看一下嗎?<br><small>STT: 房间的冷气好像坏了,可以请人来看一下吗?</small></td>
+<td>部屋のエアコンが壊れたみたいで、誰かに見てもらえますか？<br><small>ref: 部屋のエアコンが壊れているようなんですが、どなたかに見に来ていただけますか?</small></td>
+<td>-967 / 2419</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。雖然參考譯文使用了更為禮貌的敬語，但機器譯文的禮貌程度在一般情況下也是可以接受的。</small></td>
+</tr>
+<tr>
+<td>T031<br><small>ja#3</small></td>
+<td class="zh">房間的冷氣好像壞了,可以請人來看一下嗎?<br><small>STT: 房间的冷气好像坏了,可以请人来看一下吗?</small></td>
+<td>部屋のエアコンが壊れたみたいで、誰かに見てもらえますか？<br><small>ref: 部屋のエアコンが壊れているようなんですが、どなたかに見に来ていただけますか?</small></td>
+<td>-942 / 2472</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。雖然參考譯文使用了更為禮貌的敬語，但機器譯文的禮貌程度在一般情況下也是可以接受的。</small></td>
+</tr>
+<tr>
+<td>T032<br><small>en#1</small></td>
+<td class="zh">我明天不需要打掃房間,謝謝。<br><small>STT: 我明天不需要打扫房间,谢谢。</small></td>
+<td>I don't need to clean the room tomorrow, thank you.<br><small>ref: I don't need my room cleaned tomorrow, thank you.</small></td>
+<td>-443 / 2147</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation accurately conveys the meaning of the original text and is grammatically correct. Although the reference translation uses a causative structure ('need my room cleaned'), the machine translation's active structure ('need to clean the room') is also a valid and accurate interpretation of the Chinese original.</small></td>
+</tr>
+<tr>
+<td>T032<br><small>en#2</small></td>
+<td class="zh">我明天不需要打掃房間,謝謝。<br><small>STT: 我明天不需要打扫房间,谢谢。</small></td>
+<td>I don't need to clean the room tomorrow, thank you.<br><small>ref: I don't need my room cleaned tomorrow, thank you.</small></td>
+<td>-595 / 2299</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is grammatically correct and natural. Although the reference translation uses a causative structure ('need my room cleaned'), the machine translation's active structure ('need to clean the room') is also a valid interpretation of the original Chinese sentence.</small></td>
+</tr>
+<tr>
+<td>T032<br><small>en#3</small></td>
+<td class="zh">我明天不需要打掃房間,謝謝。<br><small>STT: 我明天不需要打扫房间,谢谢。</small></td>
+<td>I don't need to clean the room tomorrow, thank you.<br><small>ref: I don't need my room cleaned tomorrow, thank you.</small></td>
+<td>-513 / 2152</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is grammatically correct and natural. Although the reference translation uses a causative structure ('need my room cleaned'), the machine translation's active structure ('need to clean the room') is also a valid interpretation of the original Chinese sentence.</small></td>
+</tr>
+<tr>
+<td>T032<br><small>ja#1</small></td>
+<td class="zh">我明天不需要打掃房間,謝謝。<br><small>STT: 我明天不需要打掃房間,謝謝。</small></td>
+<td>明日は部屋の掃除はいいです。ありがとう。<br><small>ref: 明日は部屋の掃除は結構です。ありがとうございます。</small></td>
+<td>-557 / 2364</td>
+<td>🚫 cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，但使用了較為隨便的「ありがとう」和「いいです」，相較於參考譯文的敬語顯得不夠禮貌，因此標記 honorific_off。整體語意忠實且流暢。</small></td>
+</tr>
+<tr>
+<td>T032<br><small>ja#2</small></td>
+<td class="zh">我明天不需要打掃房間,謝謝。<br><small>STT: 我明天不需要打掃房間,謝謝。</small></td>
+<td>明日は部屋の掃除は必要ないです、ありがとう。<br><small>ref: 明日は部屋の掃除は結構です。ありがとうございます。</small></td>
+<td>-552 / 2330</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，語意忠實度極高。日語表達自然流暢，雖然「ありがとう」相較於參考譯文的「ありがとうございます」較為口語，但整體文法與語氣皆符合原意。</small></td>
+</tr>
+<tr>
+<td>T032<br><small>ja#3</small></td>
+<td class="zh">我明天不需要打掃房間,謝謝。<br><small>STT: 我明天不需要打扫房间,谢谢。</small></td>
+<td>明日は部屋の掃除はいいです。ありがとう。<br><small>ref: 明日は部屋の掃除は結構です。ありがとうございます。</small></td>
+<td>-575 / 2576</td>
+<td>🚫 cer=0.00</td>
+<td>5/4<br><small>譯文完整且準確地傳達了原文的意思。在流暢度與語氣方面，「いいです」（敬體）與「ありがとう」（常體）混用，語氣稍微不一致，且「ありがとう」相較於原文的「謝謝」顯得過於隨意（建議使用「ありがとうございます」），因此標記敬語錯誤，但整體仍非常自然且易懂。</small></td>
+</tr>
+<tr>
+<td>T033<br><small>en#1</small></td>
+<td class="zh">可以幫我叫一台計程車嗎?明天早上六點半要到機場。<br><small>STT: 可以帮我叫一台计程车吗?明天早上6点半要到机场。</small></td>
+<td>Can you help me call a taxi? I need one at 6:30 tomorrow morning to go to the airport.<br><small>ref: Could you call a taxi for me? I need to be at the airport at six thirty tomorrow morning.</small></td>
+<td>-2016 / 2874</td>
+<td> cer=0.04</td>
+<td>5/5<br><small>The translation is highly accurate and natural. It perfectly conveys the request to call a taxi and the details about the time and destination.</small></td>
+</tr>
+<tr>
+<td>T033<br><small>en#2</small></td>
+<td class="zh">可以幫我叫一台計程車嗎?明天早上六點半要到機場。<br><small>STT: 可以帮我叫一台计程车吗?明天早上6点半要到机场。</small></td>
+<td>Can you help me call a taxi? I need one tomorrow morning at 6:30 to go to the airport.<br><small>ref: Could you call a taxi for me? I need to be at the airport at six thirty tomorrow morning.</small></td>
+<td>-2023 / 3622</td>
+<td> cer=0.04</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural, capturing the meaning of the source text perfectly with excellent fluency.</small></td>
+</tr>
+<tr>
+<td>T033<br><small>en#3</small></td>
+<td class="zh">可以幫我叫一台計程車嗎?明天早上六點半要到機場。<br><small>STT: 可以帮我叫一台计程车吗?明天早上6点半要到机场。</small></td>
+<td>Can you help me call a taxi? I need one at 6:30 tomorrow morning.<br><small>ref: Could you call a taxi for me? I need to be at the airport at six thirty tomorrow morning.</small></td>
+<td>-1750 / 2226</td>
+<td> cer=0.04</td>
+<td>3/5<br><small>機器譯文漏譯了關鍵訊息「到機場」（airport），且將「六點半要到（機場）」的意思轉變為「六點半需要一台計程車」（I need one at 6:30），造成語意偏差與遺漏，故標記 omission。英文句型本身流暢度良好。</small></td>
+</tr>
+<tr>
+<td>T033<br><small>ja#1</small></td>
+<td class="zh">可以幫我叫一台計程車嗎?明天早上六點半要到機場。<br><small>STT: 可以帮我叫一台计程车吗?明天早上6点半要到机场。</small></td>
+<td>タクシーを呼んでくれますか？明日の朝6時半に空港に行きたいんです。<br><small>ref: タクシーを1台呼んでいただけますか?明日の朝6時半に空港に行きたいんです。</small></td>
+<td>-1988 / 2655</td>
+<td> cer=0.04</td>
+<td>5/5<br><small>譯文非常準確且流暢地傳達了原文的所有訊息，語氣自然，與參考譯文幾乎一致。</small></td>
+</tr>
+<tr>
+<td>T033<br><small>ja#2</small></td>
+<td class="zh">可以幫我叫一台計程車嗎?明天早上六點半要到機場。<br><small>STT: 可以帮我叫一台计程车吗?明天早上6点半要到机场。</small></td>
+<td>タクシーを呼んでもらえますか？明日の朝6時半に空港に行きたいです。<br><small>ref: タクシーを1台呼んでいただけますか?明日の朝6時半に空港に行きたいんです。</small></td>
+<td>-1845 / 2821</td>
+<td> cer=0.04</td>
+<td>5/5<br><small>譯文非常準確且自然。雖然省略了「一台」的翻譯，但在日文中「タクシーを呼ぶ」本就預設為一台，符合日語表達習慣。語氣禮貌且意思完整傳達。</small></td>
+</tr>
+<tr>
+<td>T033<br><small>ja#3</small></td>
+<td class="zh">可以幫我叫一台計程車嗎?明天早上六點半要到機場。<br><small>STT: 可以帮我叫一台计程车吗?明天早上6点半要到机场。</small></td>
+<td>タクシーを呼んでいただけますか？明日の朝6時半に空港に行きたいんです。<br><small>ref: タクシーを1台呼んでいただけますか?明日の朝6時半に空港に行きたいんです。</small></td>
+<td>-2055 / 2378</td>
+<td> cer=0.04</td>
+<td>5/5<br><small>譯文非常準確且自然。雖然機器譯文省略了「一台」的翻譯（僅譯為「タクシーを呼んで」而非「タクシーを1台呼んで」），但在日語習慣中，不特意強調數量是非常自然且符合常理的表達方式，因此不視為缺失。整體語意與參考譯文幾乎完全一致。</small></td>
+</tr>
+<tr>
+<td>T034<br><small>en#1</small></td>
+<td class="zh">救命!請幫我叫救護車!<br><small>STT: 救命,请帮我叫救护车。</small></td>
+<td>Help, please call an ambulance.<br><small>ref: Help! Please call an ambulance!</small></td>
+<td>356 / 2545</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and fluent, conveying the exact meaning of the original text without any errors.</small></td>
+</tr>
+<tr>
+<td>T034<br><small>en#2</small></td>
+<td class="zh">救命!請幫我叫救護車!<br><small>STT: 救命,请帮我叫救护车。</small></td>
+<td>Help, please call an ambulance.<br><small>ref: Help! Please call an ambulance!</small></td>
+<td>508 / 2654</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate and fluent, conveying the exact meaning of the original text without any errors.</small></td>
+</tr>
+<tr>
+<td>T034<br><small>en#3</small></td>
+<td class="zh">救命!請幫我叫救護車!<br><small>STT: 救命,请帮我叫救护车。</small></td>
+<td>Help, please call an ambulance for me.<br><small>ref: Help! Please call an ambulance!</small></td>
+<td>376 / 2546</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is perfectly accurate and natural, conveying the exact meaning of the original text.</small></td>
+</tr>
+<tr>
+<td>T034<br><small>ja#1</small></td>
+<td class="zh">救命!請幫我叫救護車!<br><small>STT: 救命,请帮我叫救护车。</small></td>
+<td>助けて、救急車を呼んで。<br><small>ref: 助けて!救急車を呼んでください!</small></td>
+<td>359 / 2275</td>
+<td> cer=0.00</td>
+<td>4/5<br><small>譯文準確傳達了求救與叫救護車的訊息，但在日文中省略了對應「請」的敬語表達（如「ください」），語氣較為口語，不過在緊急情況下仍算自然。</small></td>
+</tr>
+<tr>
+<td>T034<br><small>ja#2</small></td>
+<td class="zh">救命!請幫我叫救護車!<br><small>STT: 救命,请帮我叫救护车。</small></td>
+<td>助けて、救急車を呼んで。<br><small>ref: 助けて!救急車を呼んでください!</small></td>
+<td>490 / 2490</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的急迫語意，日文表達自然流暢。雖然省略了對應「請」的敬語成分（ください），但在緊急情況下使用常體十分自然，不影響理解與溝通。</small></td>
+</tr>
+<tr>
+<td>T034<br><small>ja#3</small></td>
+<td class="zh">救命!請幫我叫救護車!<br><small>STT: 救命,请帮我叫救护车。</small></td>
+<td>助けて、救急車を呼んで。<br><small>ref: 助けて!救急車を呼んでください!</small></td>
+<td>428 / 2312</td>
+<td> cer=0.00</td>
+<td>4/5<br><small>譯文準確傳達了求救與叫救護車的訊息，但在日文中省略了對應「請」的敬語表達（如「ください」），語氣較為口語，不過在緊急情況下仍算自然。</small></td>
+</tr>
+<tr>
+<td>T035<br><small>en#1</small></td>
+<td class="zh">我的護照不見了,請問警察局在哪裡?<br><small>STT: 我的护照不见了,请问警察局在哪里?</small></td>
+<td>My passport is missing, could you tell me where the police station is?<br><small>ref: My passport is missing — where is the police station?</small></td>
+<td>-433 / 2814</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately and naturally conveys the meaning of the original text. The addition of 'could you tell me' is a polite and appropriate way to translate '請問'.</small></td>
+</tr>
+<tr>
+<td>T035<br><small>en#2</small></td>
+<td class="zh">我的護照不見了,請問警察局在哪裡?<br><small>STT: 我的护照不见了,请问警察局在哪里?</small></td>
+<td>My passport is missing, could you tell me where the police station is?<br><small>ref: My passport is missing — where is the police station?</small></td>
+<td>-700 / 2962</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately and naturally conveys the meaning of the original text. The addition of 'could you tell me' is a polite and appropriate translation for '請問'.</small></td>
+</tr>
+<tr>
+<td>T035<br><small>en#3</small></td>
+<td class="zh">我的護照不見了,請問警察局在哪裡?<br><small>STT: 我的护照不见了,请问警察局在哪里?</small></td>
+<td>My passport is missing, could you tell me where the police station is?<br><small>ref: My passport is missing — where is the police station?</small></td>
+<td>-498 / 3004</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately and naturally conveys the meaning of the original text. The addition of 'could you tell me' is a polite and appropriate way to translate '請問'.</small></td>
+</tr>
+<tr>
+<td>T035<br><small>ja#1</small></td>
+<td class="zh">我的護照不見了,請問警察局在哪裡?<br><small>STT: 我的护照不见了,请问警察局在哪里?</small></td>
+<td>パスポートがなくなってしまったんですが、警察署はどこですか?<br><small>ref: パスポートをなくしてしまいました。警察署はどこですか?</small></td>
+<td>-695 / 3201</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，語氣也很合適。</small></td>
+</tr>
+<tr>
+<td>T035<br><small>ja#2</small></td>
+<td class="zh">我的護照不見了,請問警察局在哪裡?<br><small>STT: 我的护照不见了,请问警察局在哪里?</small></td>
+<td>パスポートがなくなったんですが、警察署はどこですか?<br><small>ref: パスポートをなくしてしまいました。警察署はどこですか?</small></td>
+<td>-506 / 2996</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確傳達了原文的意思，且日語表達自然流暢，符合母語人士的說話習慣。</small></td>
+</tr>
+<tr>
+<td>T035<br><small>ja#3</small></td>
+<td class="zh">我的護照不見了,請問警察局在哪裡?<br><small>STT: 我的护照不见了,请问警察局在哪里?</small></td>
+<td>パスポートがなくなったんですが、警察署はどこですか?<br><small>ref: パスポートをなくしてしまいました。警察署はどこですか?</small></td>
+<td>-487 / 2763</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，語法正確，沒有遺漏或錯誤。</small></td>
+</tr>
+<tr>
+<td>T036<br><small>en#1</small></td>
+<td class="zh">我頭很暈,但是我沒有心臟病的病史。<br><small>STT: 我头很晕,但是我没有心脏病的病史。</small></td>
+<td>I'm very dizzy, but I don't have a history of heart disease.<br><small>ref: I feel very dizzy, but I don't have any history of heart disease.</small></td>
+<td>-704 / 2792</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>The machine translation accurately and naturally conveys the meaning of the original text, matching the reference translation closely.</small></td>
+</tr>
+<tr>
+<td>T036<br><small>en#2</small></td>
+<td class="zh">我頭很暈,但是我沒有心臟病的病史。<br><small>STT: 我头很晕,但是我没有心脏病的病史。</small></td>
+<td>I'm very dizzy, but I don't have a history of heart disease.<br><small>ref: I feel very dizzy, but I don't have any history of heart disease.</small></td>
+<td>-598 / 2901</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>The machine translation accurately and naturally conveys the meaning of the original text, matching the reference translation closely.</small></td>
+</tr>
+<tr>
+<td>T036<br><small>en#3</small></td>
+<td class="zh">我頭很暈,但是我沒有心臟病的病史。<br><small>STT: 我头很晕,但是我没有心脏病的病史。</small></td>
+<td>I'm very dizzy, but I don't have a history of heart disease.<br><small>ref: I feel very dizzy, but I don't have any history of heart disease.</small></td>
+<td>-664 / 2586</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>The machine translation accurately and naturally conveys the meaning of the original text, matching the reference translation closely.</small></td>
+</tr>
+<tr>
+<td>T036<br><small>ja#1</small></td>
+<td class="zh">我頭很暈,但是我沒有心臟病的病史。<br><small>STT: 我頭很暈,但是我沒有心髒病的病史。</small></td>
+<td>頭がすごくめまいがするけど、心臓病の既往歴はないわ。<br><small>ref: めまいがひどいです。でも、心臓病の既往歴はありません。</small></td>
+<td>-936 / 3475</td>
+<td> cer=0.07</td>
+<td>5/4<br><small>譯文準確傳達了原文的意思，但「頭がめまいがする」在日文中稍顯冗餘（通常直接說「めまいがする」即可）。此外，句尾使用了較為隨便且帶有女性語氣的「ないわ」，與參考譯文的敬語不符，在醫療場景中較不自然。</small></td>
+</tr>
+<tr>
+<td>T036<br><small>ja#2</small></td>
+<td class="zh">我頭很暈,但是我沒有心臟病的病史。<br><small>STT: 我頭很暈,但是我沒有心髒病的病史。</small></td>
+<td>頭がすごくめまいがするけど、心臓病の病歴はない。<br><small>ref: めまいがひどいです。でも、心臓病の既往歴はありません。</small></td>
+<td>-737 / 3011</td>
+<td> cer=0.07</td>
+<td>5/3<br><small>譯文完整傳達了原文的語意。但在日文表達上，「頭がめまいがする」稍顯不自然，通常直接說「すごくめまいがする」或「頭がくらくらする」即可。此外，譯文使用了常體（ない），而在醫療問診場景中通常應使用敬體（ありません），因此標記 honorific_off。</small></td>
+</tr>
+<tr>
+<td>T036<br><small>ja#3</small></td>
+<td class="zh">我頭很暈,但是我沒有心臟病的病史。<br><small>STT: 我頭很暈,但是我沒有心髒病的病史。</small></td>
+<td>頭がすごくめまいがするけど、心臓病の既往歴はないです。<br><small>ref: めまいがひどいです。でも、心臓病の既往歴はありません。</small></td>
+<td>-685 / 3542</td>
+<td> cer=0.07</td>
+<td>5/4<br><small>譯文完整傳達了原文的意思，但「頭がめまいがする」在日文中稍顯不自然，通常會說「めまいがする」或「頭がくらくらする」。整體而言語意忠實，流暢度尚可。</small></td>
+</tr>
+<tr>
+<td>T037<br><small>en#1</small></td>
+<td class="zh">我的房間號碼是七〇二,我朋友昏倒了。<br><small>STT: 我的房间号码是7 02,我朋友婚倒了。</small></td>
+<td>My room number is 7 02, my friend fainted.<br><small>ref: My room number is seven-oh-two — my friend has collapsed.</small></td>
+<td>-3077 / 1843</td>
+<td>🔢 cer=0.31</td>
+<td>5/4<br><small>The translation accurately conveys the meaning of the original text. The formatting of the room number as '7 02' is slightly unnatural but understandable in a speech transcript context. 'Fainted' is a correct and natural translation for '昏倒了'.</small></td>
+</tr>
+<tr>
+<td>T037<br><small>en#2</small></td>
+<td class="zh">我的房間號碼是七〇二,我朋友昏倒了。<br><small>STT: 我的房间号码是7 02,我朋友昏倒了。</small></td>
+<td>My room number is 7 02, my friend fainted.<br><small>ref: My room number is seven-oh-two — my friend has collapsed.</small></td>
+<td>-2987 / 1658</td>
+<td>🔢 cer=0.25</td>
+<td>5/4<br><small>The translation accurately conveys the meaning of the original text. The room number '702' is transcribed as '7 02', which is understandable but slightly unnatural in written form, though common in speech transcripts. 'Fainted' is a correct translation for '昏倒了'.</small></td>
+</tr>
+<tr>
+<td>T037<br><small>en#3</small></td>
+<td class="zh">我的房間號碼是七〇二,我朋友昏倒了。<br><small>STT: 我的房间号码是7 02,我朋友昏倒了。</small></td>
+<td>My room number is 7 02, my friend fainted.<br><small>ref: My room number is seven-oh-two — my friend has collapsed.</small></td>
+<td>-2935 / 1956</td>
+<td>🔢 cer=0.25</td>
+<td>5/4<br><small>The translation accurately conveys the meaning of the original text. The formatting of the room number as '7 02' is slightly unnatural but understandable in a speech transcript context. 'Fainted' is a correct and natural translation for '昏倒了'.</small></td>
+</tr>
+<tr>
+<td>T037<br><small>ja#1</small></td>
+<td class="zh">我的房間號碼是七〇二,我朋友昏倒了。<br><small>STT: 我的房间号码是7 02,我朋友婚倒了。</small></td>
+<td>私の部屋番号は7 02で、友達が倒れたんです。<br><small>ref: 部屋番号は702です。友達が倒れました。</small></td>
+<td>-3015 / 2625</td>
+<td>🔢 cer=0.31</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日語表達自然。雖然數字「7 02」中間有空格，但不影響理解，整體流暢度高。</small></td>
+</tr>
+<tr>
+<td>T037<br><small>ja#2</small></td>
+<td class="zh">我的房間號碼是七〇二,我朋友昏倒了。<br><small>STT: 我的房间号码是7 02,我朋友婚倒了。</small></td>
+<td>私の部屋番号は7 02で、友達が倒れたんです。<br><small>ref: 部屋番号は702です。友達が倒れました。</small></td>
+<td>-3040 / 2387</td>
+<td>🔢 cer=0.31</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，語句通順自然。數字「7 02」中間的空格為語音辨識的微小瑕疵，但不影響整體理解與流暢度。</small></td>
+</tr>
+<tr>
+<td>T037<br><small>ja#3</small></td>
+<td class="zh">我的房間號碼是七〇二,我朋友昏倒了。<br><small>STT: 我的房间号码是7 02,我朋友婚了。</small></td>
+<td>私の部屋番号は7 02で、友達が結婚したの。<br><small>ref: 部屋番号は702です。友達が倒れました。</small></td>
+<td>-2839 / 2413</td>
+<td>🔢 cer=0.38</td>
+<td>2/4<br><small>譯文將「昏倒」錯誤翻譯為「結婚」（結婚した），嚴重扭曲了原文的緊急情況，屬於嚴重的語意錯誤。前半部分房間號碼翻譯正確，整體句子通順。</small></td>
+</tr>
+<tr>
+<td>T038<br><small>en#1</small></td>
+<td class="zh">我不能打青黴素,我會過敏。<br><small>STT: 我不能打青梅素,我会过敏。</small></td>
+<td>I can't take penicillin, I'm allergic.<br><small>ref: I can't have penicillin — I'm allergic to it.</small></td>
+<td>221 / 2366</td>
+<td> cer=0.09</td>
+<td>5/5<br><small>The machine translation accurately conveys the meaning of the original text and is perfectly natural in English.</small></td>
+</tr>
+<tr>
+<td>T038<br><small>en#2</small></td>
+<td class="zh">我不能打青黴素,我會過敏。<br><small>STT: 我不能打青梅素,我会过敏。</small></td>
+<td>I can't take penicillin, I'm allergic.<br><small>ref: I can't have penicillin — I'm allergic to it.</small></td>
+<td>184 / 2581</td>
+<td> cer=0.09</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is natural in English.</small></td>
+</tr>
+<tr>
+<td>T038<br><small>en#3</small></td>
+<td class="zh">我不能打青黴素,我會過敏。<br><small>STT: 我不能打青霉素,我会过敏。</small></td>
+<td>I can't take penicillin, I'll have an allergic reaction.<br><small>ref: I can't have penicillin — I'm allergic to it.</small></td>
+<td>325 / 2974</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. 'I'll have an allergic reaction' is a perfectly valid and fluent translation of '我會過敏' in this context.</small></td>
+</tr>
+<tr>
+<td>T038<br><small>ja#1</small></td>
+<td class="zh">我不能打青黴素,我會過敏。<br><small>STT: 我不能打青霉素,我會過敏。</small></td>
+<td>ペニシリンは打てないんです、アレルギーで。<br><small>ref: ペニシリンは打てません。アレルギーがあるんです。</small></td>
+<td>8788 / 11210</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確且非常自然地傳達了原文的意思，口語倒裝句「アレルギーで」符合日語口語表達習慣。</small></td>
+</tr>
+<tr>
+<td>T038<br><small>ja#2</small></td>
+<td class="zh">我不能打青黴素,我會過敏。<br><small>STT: 我不能打青霉素,我會過敏。</small></td>
+<td>ペニシリンは打てないんです、アレルギーで。<br><small>ref: ペニシリンは打てません。アレルギーがあるんです。</small></td>
+<td>352 / 2852</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確且非常自然地傳達了原文的意思，口語倒裝句「アレルギーで」符合日語口語表達習慣。</small></td>
+</tr>
+<tr>
+<td>T038<br><small>ja#3</small></td>
+<td class="zh">我不能打青黴素,我會過敏。<br><small>STT: 我不能打青霉素,我會過敏。</small></td>
+<td>ペニシリンは打てないんです、アレルギーで。<br><small>ref: ペニシリンは打てません。アレルギーがあるんです。</small></td>
+<td>289 / 2683</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文完整且準確地傳達了原文的意思。日語口語中採用倒裝句型「～んです、～で」（因為過敏，所以不能打青黴素）非常自然流暢，完全符合口譯情境。</small></td>
+</tr>
+<tr>
+<td>T039<br><small>en#1</small></td>
+<td class="zh">我想預約明天下午三點,兩個大人。<br><small>STT: 我想預約明天下午3點,兩個大人。</small></td>
+<td>I'd like to make an appointment for tomorrow at 3 PM, for two adults.<br><small>ref: I'd like to make a reservation for tomorrow at three p.m., for two adults.</small></td>
+<td>-730 / 3164</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>The translation is highly accurate and natural. 'make an appointment' is a valid translation for '預約', and all other details (tomorrow at 3 PM, two adults) are perfectly translated.</small></td>
+</tr>
+<tr>
+<td>T039<br><small>en#2</small></td>
+<td class="zh">我想預約明天下午三點,兩個大人。<br><small>STT: 我想預約明天下午3點,兩個大人。</small></td>
+<td>I'd like to make an appointment for tomorrow at 3 PM, for two adults.<br><small>ref: I'd like to make a reservation for tomorrow at three p.m., for two adults.</small></td>
+<td>-650 / 3260</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>The translation is highly accurate and natural. 'make an appointment' is a valid translation for '預約', and all other details (tomorrow at 3 PM, two adults) are perfectly translated.</small></td>
+</tr>
+<tr>
+<td>T039<br><small>en#3</small></td>
+<td class="zh">我想預約明天下午三點,兩個大人。<br><small>STT: 我想預約明天下午3點,兩個大人。</small></td>
+<td>I'd like to make an appointment for tomorrow at 3 PM, for two adults.<br><small>ref: I'd like to make a reservation for tomorrow at three p.m., for two adults.</small></td>
+<td>-786 / 3375</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>The translation is highly accurate and natural. Although 'appointment' is used instead of 'reservation', it is still a very appropriate translation for '預約' and perfectly conveys the original meaning.</small></td>
+</tr>
+<tr>
+<td>T039<br><small>ja#1</small></td>
+<td class="zh">我想預約明天下午三點,兩個大人。<br><small>STT: 我想預約明天下午3點,兩個大人。</small></td>
+<td>明日の午後3時に予約したいです、大人2人。<br><small>ref: 明日の午後3時に、大人2人で予約したいです。</small></td>
+<td>-801 / 2598</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>譯文完全準確地傳達了原文的所有資訊（時間、人數、預約意圖），且日語表達非常自然流暢，符合口語習慣。</small></td>
+</tr>
+<tr>
+<td>T039<br><small>ja#2</small></td>
+<td class="zh">我想預約明天下午三點,兩個大人。<br><small>STT: 我想預約明天下午3點,兩個大人。</small></td>
+<td>明日の午後3時に予約したいです、大人2人。<br><small>ref: 明日の午後3時に、大人2人で予約したいです。</small></td>
+<td>-674 / 2474</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>譯文準確傳達了原文的所有訊息，包含時間（明天下午三點）與人數（兩個大人）。雖然「大人2人」放在句尾，但在口語中十分自然，語意完整且流暢。</small></td>
+</tr>
+<tr>
+<td>T039<br><small>ja#3</small></td>
+<td class="zh">我想預約明天下午三點,兩個大人。<br><small>STT: 我想預約明天下午3點,兩個大人。</small></td>
+<td>明日の午後3時に予約したいです、大人2人。<br><small>ref: 明日の午後3時に、大人2人で予約したいです。</small></td>
+<td>-776 / 2622</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>譯文準確傳達了原文的所有訊息，包含時間（明天下午三點）與人數（兩個大人）。雖然「大人2人」放在句尾，但在口語中十分自然，語意完整且流暢。</small></td>
+</tr>
+<tr>
+<td>T040<br><small>en#1</small></td>
+<td class="zh">不好意思,我想把預約從星期五改到星期六,不是取消。<br><small>STT: 不好意思,我想把預約從星期五改到星期六,不是取消。</small></td>
+<td>Excuse me, I'd like to change my appointment from Friday to Saturday, not cancel it.<br><small>ref: Excuse me, I'd like to change my reservation from Friday to Saturday — not cancel it.</small></td>
+<td>-3635 / 2263</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation accurately conveys the meaning of the original text and is perfectly fluent. 'Appointment' is a valid translation for '預約' in this context.</small></td>
+</tr>
+<tr>
+<td>T040<br><small>en#2</small></td>
+<td class="zh">不好意思,我想把預約從星期五改到星期六,不是取消。<br><small>STT: 不好意思,我想把預約從星期五改到星期六,不是取消。</small></td>
+<td>Excuse me, I'd like to reschedule my appointment from Friday to Saturday, not cancel it.<br><small>ref: Excuse me, I'd like to change my reservation from Friday to Saturday — not cancel it.</small></td>
+<td>-3660 / 2213</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate, natural, and conveys the exact meaning of the original text without any errors.</small></td>
+</tr>
+<tr>
+<td>T040<br><small>en#3</small></td>
+<td class="zh">不好意思,我想把預約從星期五改到星期六,不是取消。<br><small>STT: 不好意思,我想把預約從星期五改到星期六,不是取消。</small></td>
+<td>Excuse me, I'd like to reschedule my appointment from Friday to Saturday, not cancel it.<br><small>ref: Excuse me, I'd like to change my reservation from Friday to Saturday — not cancel it.</small></td>
+<td>-3649 / 2515</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is accurate, natural, and conveys the exact meaning of the original text without any errors.</small></td>
+</tr>
+<tr>
+<td>T040<br><small>ja#1</small></td>
+<td class="zh">不好意思,我想把預約從星期五改到星期六,不是取消。<br><small>STT: 不好意思,我想把預約從星期五改到星期六,不是取消。</small></td>
+<td>すみません、予約を金曜日に変更したいんです、キャンセルではなく。<br><small>ref: すみません、予約を金曜日から土曜日に変更したいんです。キャンセルではありません。</small></td>
+<td>-3715 / 2450</td>
+<td> cer=0.00</td>
+<td>2/4<br><small>譯文漏譯了「從星期五改到星期六」中的「星期六」，誤譯為「改到星期五」，導致關鍵資訊遺失。日文表達尚算自然。</small></td>
+</tr>
+<tr>
+<td>T040<br><small>ja#2</small></td>
+<td class="zh">不好意思,我想把預約從星期五改到星期六,不是取消。<br><small>STT: 不好意思,我想把預約從星期五改到星期六,不是取消。</small></td>
+<td>すみません、予約を金曜日から土曜日に変更したいんですが、キャンセルじゃなくて。<br><small>ref: すみません、予約を金曜日から土曜日に変更したいんです。キャンセルではありません。</small></td>
+<td>-3666 / 2726</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的所有訊息，且使用了自然的日語口語表達方式，語意忠實且流暢。</small></td>
+</tr>
+<tr>
+<td>T040<br><small>ja#3</small></td>
+<td class="zh">不好意思,我想把預約從星期五改到星期六,不是取消。<br><small>STT: 不好意思,我想把預約從星期五改到星期六,不是取消。</small></td>
+<td>すみません、予約を金曜日から土曜日に変更したいんですが、キャンセルじゃなくて。<br><small>ref: すみません、予約を金曜日から土曜日に変更したいんです。キャンセルではありません。</small></td>
+<td>-3498 / 2753</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的所有訊息，且使用了自然的日語口語表達方式，語意忠實且流暢。</small></td>
+</tr>
+<tr>
+<td>T041<br><small>en#1</small></td>
+<td class="zh">如果三點沒有位子的話,四點也可以。<br><small>STT: 如果三點沒有位置的話,四點也可以。</small></td>
+<td>If there are no seats at 3 o'clock, 4 o'clock is fine too.<br><small>ref: If there's nothing available at three, four o'clock works too.</small></td>
+<td>-209 / 2940</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>The translation accurately and fluently conveys the meaning of the original text. No errors were found.</small></td>
+</tr>
+<tr>
+<td>T041<br><small>en#2</small></td>
+<td class="zh">如果三點沒有位子的話,四點也可以。<br><small>STT: 如果三點沒有位置的話,四點也可以。</small></td>
+<td>If there are no seats at 3 o'clock, 4 o'clock is fine too.<br><small>ref: If there's nothing available at three, four o'clock works too.</small></td>
+<td>-248 / 2927</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>The translation accurately and fluently conveys the meaning of the original text. No errors were found.</small></td>
+</tr>
+<tr>
+<td>T041<br><small>en#3</small></td>
+<td class="zh">如果三點沒有位子的話,四點也可以。<br><small>STT: 如果三點沒有位置的話,四點也可以。</small></td>
+<td>If there are no seats at 3 o'clock, 4 o'clock is fine too.<br><small>ref: If there's nothing available at three, four o'clock works too.</small></td>
+<td>-266 / 3130</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>The translation accurately and fluently conveys the meaning of the original text. No errors were found.</small></td>
+</tr>
+<tr>
+<td>T041<br><small>ja#1</small></td>
+<td class="zh">如果三點沒有位子的話,四點也可以。<br><small>STT: 如果三點沒有位置的話,四點也可以。</small></td>
+<td>もし3時に空きがなければ、4時でも大丈夫です。<br><small>ref: 3時に席がなければ、4時でも大丈夫です。</small></td>
+<td>-206 / 2965</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>譯文完美傳達了原文的意思，且使用了非常自然的日文表達方式（「空きがなければ」在表達沒有位子或空檔時非常道地）。</small></td>
+</tr>
+<tr>
+<td>T041<br><small>ja#2</small></td>
+<td class="zh">如果三點沒有位子的話,四點也可以。<br><small>STT: 如果三點沒有位置的話,四點也可以。</small></td>
+<td>もし3時に空きがなければ、4時でも大丈夫です。<br><small>ref: 3時に席がなければ、4時でも大丈夫です。</small></td>
+<td>-94 / 3155</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，使用「空き」在預約語境下非常合適，整體流暢度極佳。</small></td>
+</tr>
+<tr>
+<td>T041<br><small>ja#3</small></td>
+<td class="zh">如果三點沒有位子的話,四點也可以。<br><small>STT: 如果三點沒有位置的話,四點也可以。</small></td>
+<td>もし3時に空きがなければ、4時でも大丈夫です。<br><small>ref: 3時に席がなければ、4時でも大丈夫です。</small></td>
+<td>137 / 3137</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，使用「空き」在預約語境下非常合適，整體流暢度極佳。</small></td>
+</tr>
+<tr>
+<td>T042<br><small>en#1</small></td>
+<td class="zh">我可以用 email 確認預約嗎?我的班機是 BR198。<br><small>STT: 我可以用email確認預約嗎?我的班機是BR 198,</small></td>
+<td>I can confirm the appointment by email, right? My flight is BR 198,<br><small>ref: Can I confirm the reservation by email? My flight is BR198.</small></td>
+<td>-3413 / 2002</td>
+<td> cer=0.00</td>
+<td>5/4<br><small>譯文準確傳達了原文的意思。「appointment」對應「預約」雖不如「reservation」精確（特別是在提及航班的語境下），但仍可理解。句型「I can ..., right?」在口語中很自然。句末的逗號為輕微的標點符號瑕疵。</small></td>
+</tr>
+<tr>
+<td>T042<br><small>en#2</small></td>
+<td class="zh">我可以用 email 確認預約嗎?我的班機是 BR198。<br><small>STT: 我可以用email確認預約嗎?我的班機是BR 198,</small></td>
+<td>I can confirm using email? My flight is BR 198,<br><small>ref: Can I confirm the reservation by email? My flight is BR198.</small></td>
+<td>-3236 / 1667</td>
+<td> cer=0.00</td>
+<td>4/3<br><small>The translation omits the word '預約' (reservation) and the question structure 'I can confirm using email?' is slightly unnatural and lacks an object.</small></td>
+</tr>
+<tr>
+<td>T042<br><small>en#3</small></td>
+<td class="zh">我可以用 email 確認預約嗎?我的班機是 BR198。<br><small>STT: 我可以用email確認預約嗎?我的班機是BR 198,</small></td>
+<td>I can confirm the appointment by email, right? My flight is BR198,<br><small>ref: Can I confirm the reservation by email? My flight is BR198.</small></td>
+<td>-3294 / 2352</td>
+<td> cer=0.00</td>
+<td>5/4<br><small>The translation accurately conveys the original meaning. The use of 'appointment' instead of 'reservation' is acceptable for '預約', though 'reservation' is more common in the context of flights. The phrasing 'I can ..., right?' is natural in spoken English. A minor deduction in fluency is due to the trailing comma.</small></td>
+</tr>
+<tr>
+<td>T042<br><small>ja#1</small></td>
+<td class="zh">我可以用 email 確認預約嗎?我的班機是 BR198。<br><small>STT: 我可以用email確認預約嗎?我的班機是BR 198,</small></td>
+<td>メールで予約確認できますか？私の便はBR 198で、<br><small>ref: メールで予約の確認をしてもいいですか?私のフライトはBR198です。</small></td>
+<td>-3440 / 1960</td>
+<td> cer=0.00</td>
+<td>4/4<br><small>譯文語意基本準確，日文表達也算自然，但句尾以「で、」作結，給人話未說完的感覺，與原文的句號略有出入。</small></td>
+</tr>
+<tr>
+<td>T042<br><small>ja#2</small></td>
+<td class="zh">我可以用 email 確認預約嗎?我的班機是 BR198。<br><small>STT: 我可以用email確認預約嗎?我的班機是BR 198,</small></td>
+<td>メールで予約を確認できますか？私の便はBR 198です。<br><small>ref: メールで予約の確認をしてもいいですか?私のフライトはBR198です。</small></td>
+<td>-3403 / 2557</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的語意。「便」與「フライト」皆為表達航班的自然用法，整體翻譯流暢且無遺漏。</small></td>
+</tr>
+<tr>
+<td>T042<br><small>ja#3</small></td>
+<td class="zh">我可以用 email 確認預約嗎?我的班機是 BR198。<br><small>STT: 我可以用email確認預約嗎?我的班機是BR 198,</small></td>
+<td>メールで予約を確認できますか？私の便はBR 198です、<br><small>ref: メールで予約の確認をしてもいいですか?私のフライトはBR198です。</small></td>
+<td>-3286 / 2137</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文完全忠實於原文，日文表達自然流暢，準確傳達了預約確認與班機號碼的資訊。僅句尾標點符號為逗號，但不影響整體語意與口語表達。</small></td>
+</tr>
+<tr>
+<td>T043<br><small>en#1</small></td>
+<td class="zh">請問最晚可以幾點取消,而不用付取消費?<br><small>STT: 请问最晚可以几点取消而不用付取消费?</small></td>
+<td>What's the latest I can cancel without paying a cancellation fee?<br><small>ref: What's the latest I can cancel without paying a cancellation fee?</small></td>
+<td>-1223 / 2527</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is identical to the reference translation, accurately conveying the meaning with natural fluency.</small></td>
+</tr>
+<tr>
+<td>T043<br><small>en#2</small></td>
+<td class="zh">請問最晚可以幾點取消,而不用付取消費?<br><small>STT: 请问最晚可以几点取消,而不用付取消费?</small></td>
+<td>What's the latest I can cancel without paying a cancellation fee?<br><small>ref: What's the latest I can cancel without paying a cancellation fee?</small></td>
+<td>-1353 / 2647</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is identical to the reference translation and perfectly conveys the original meaning in natural English.</small></td>
+</tr>
+<tr>
+<td>T043<br><small>en#3</small></td>
+<td class="zh">請問最晚可以幾點取消,而不用付取消費?<br><small>STT: 请问最晚可以几点取消而不用付取消费?</small></td>
+<td>What's the latest I can cancel without paying a cancellation fee?<br><small>ref: What's the latest I can cancel without paying a cancellation fee?</small></td>
+<td>-1344 / 2656</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is identical to the reference translation, accurately conveying the meaning with natural fluency.</small></td>
+</tr>
+<tr>
+<td>T043<br><small>ja#1</small></td>
+<td class="zh">請問最晚可以幾點取消,而不用付取消費?<br><small>STT: 请问最晚可以几点取消,而不用付取消费?</small></td>
+<td>すみません、キャンセルはいつまでならキャンセル料がかかりませんか？<br><small>ref: キャンセル料がかからないのは、何時までのキャンセルですか?</small></td>
+<td>-1285 / 2964</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，語法正確，沒有遺漏或錯誤。</small></td>
+</tr>
+<tr>
+<td>T043<br><small>ja#2</small></td>
+<td class="zh">請問最晚可以幾點取消,而不用付取消費?<br><small>STT: 请问最晚可以几点取票,而不用付取消费?</small></td>
+<td>すみません、何時までにチケットを受け取ればキャンセル料がかかりませんか?<br><small>ref: キャンセル料がかからないのは、何時までのキャンセルですか?</small></td>
+<td>-1418 / 3750</td>
+<td> cer=0.06</td>
+<td>1/5<br><small>機器譯文將「取消」誤譯為「領取票券」(チケットを受け取れば)，完全改變了原文的意思，屬於嚴重的誤譯與無中生有。譯文本身的日文語法流暢。</small></td>
+</tr>
+<tr>
+<td>T043<br><small>ja#3</small></td>
+<td class="zh">請問最晚可以幾點取消,而不用付取消費?<br><small>STT: 请问最晚可以几点取消,而不用付取消费?</small></td>
+<td>すみません、何時までにキャンセルすればキャンセル料がかかりませんか？<br><small>ref: キャンセル料がかからないのは、何時までのキャンセルですか?</small></td>
+<td>-1427 / 3237</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的意思，語法正確且語氣禮貌，與參考譯文的意思完全一致。</small></td>
+</tr>
+<tr>
+<td>T044<br><small>en#1</small></td>
+<td class="zh">我們會晚三十分鐘到,位子可以保留嗎?<br><small>STT: 我们会晚30分钟到,位置可以保留吗?</small></td>
+<td>We'll be 30 minutes late, but can you hold the table?<br><small>ref: We'll be about thirty minutes late — can you hold our table?</small></td>
+<td>-1374 / 1786</td>
+<td> cer=0.19</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is perfectly fluent in English. The addition of 'but' makes the transition natural.</small></td>
+</tr>
+<tr>
+<td>T044<br><small>en#2</small></td>
+<td class="zh">我們會晚三十分鐘到,位子可以保留嗎?<br><small>STT: 我们会晚30分钟到,位置可以保留吗?</small></td>
+<td>We'll be 30 minutes late, but can you hold the table?<br><small>ref: We'll be about thirty minutes late — can you hold our table?</small></td>
+<td>-1298 / 1866</td>
+<td> cer=0.19</td>
+<td>5/5<br><small>The translation is highly accurate and natural. It correctly conveys the meaning of arriving 30 minutes late and asking to hold the table, with natural phrasing.</small></td>
+</tr>
+<tr>
+<td>T044<br><small>en#3</small></td>
+<td class="zh">我們會晚三十分鐘到,位子可以保留嗎?<br><small>STT: 我们会晚30分钟到,位置可以保留吗?</small></td>
+<td>We'll be 30 minutes late, but can you hold the table?<br><small>ref: We'll be about thirty minutes late — can you hold our table?</small></td>
+<td>-1423 / 1723</td>
+<td> cer=0.19</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is perfectly fluent in English. The addition of 'but' makes the transition natural.</small></td>
+</tr>
+<tr>
+<td>T044<br><small>ja#1</small></td>
+<td class="zh">我們會晚三十分鐘到,位子可以保留嗎?<br><small>STT: 我们会晚30分钟到,位置可以保留吗?</small></td>
+<td>30分遅れて到着します。席は確保できますか?<br><small>ref: 30分ほど遅れます。席を取っておいていただけますか?</small></td>
+<td>-1270 / 2366</td>
+<td> cer=0.19</td>
+<td>5/5<br><small>機器譯文非常準確且自然地翻譯了原文的意思。'30分遅れて到着します'與'席は確保できますか'皆符合中文原文，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T044<br><small>ja#2</small></td>
+<td class="zh">我們會晚三十分鐘到,位子可以保留嗎?<br><small>STT: 我们会晚30分钟到,位置可以保留吗?</small></td>
+<td>30分遅れて到着します。席は確保できますか?<br><small>ref: 30分ほど遅れます。席を取っておいていただけますか?</small></td>
+<td>-1380 / 2264</td>
+<td> cer=0.19</td>
+<td>5/5<br><small>機器譯文非常準確且自然地翻譯了原文的意思。'30分遅れて到着します'與'席は確保できますか'皆符合中文原文，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T044<br><small>ja#3</small></td>
+<td class="zh">我們會晚三十分鐘到,位子可以保留嗎?<br><small>STT: 我们会晚30分钟到,位置可以保留吗?</small></td>
+<td>30分遅れて到着します。席は確保できますか?<br><small>ref: 30分ほど遅れます。席を取っておいていただけますか?</small></td>
+<td>-1296 / 2605</td>
+<td> cer=0.19</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的意思，日語表達也十分流暢得體。</small></td>
+</tr>
+<tr>
+<td>T045<br><small>en#1</small></td>
+<td class="zh">謝謝你的幫忙,今天真的麻煩你了。<br><small>STT: 谢谢你的帮忙,今天真的麻烦你了。</small></td>
+<td>Thank you for your help, I really appreciate it today.<br><small>ref: Thank you for your help — I really appreciate everything today.</small></td>
+<td>168 / 3169</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is highly accurate and natural. The phrase '麻煩你了' is appropriately and politely translated as 'I really appreciate it', which fits the context perfectly.</small></td>
+</tr>
+<tr>
+<td>T045<br><small>en#2</small></td>
+<td class="zh">謝謝你的幫忙,今天真的麻煩你了。<br><small>STT: 谢谢你的帮忙,今天真的麻烦你了。</small></td>
+<td>Thank you for your help, I really appreciate it.<br><small>ref: Thank you for your help — I really appreciate everything today.</small></td>
+<td>-83 / 2334</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is highly accurate and natural. 'I really appreciate it' is an excellent pragmatic translation for '今天真的麻煩你了'.</small></td>
+</tr>
+<tr>
+<td>T045<br><small>en#3</small></td>
+<td class="zh">謝謝你的幫忙,今天真的麻煩你了。<br><small>STT: 谢谢你的帮忙,今天真的麻烦你了。</small></td>
+<td>Thank you for your help, I really appreciate it today.<br><small>ref: Thank you for your help — I really appreciate everything today.</small></td>
+<td>66 / 2955</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the gratitude and the meaning of the source text. The phrase '麻煩你了' is appropriately translated into 'I really appreciate it', which is highly natural in spoken English. No errors were found.</small></td>
+</tr>
+<tr>
+<td>T045<br><small>ja#1</small></td>
+<td class="zh">謝謝你的幫忙,今天真的麻煩你了。<br><small>STT: 谢谢你的帮忙,今天真的麻烦你了。</small></td>
+<td>手伝ってくれてありがとう、今日は本当に助かったよ。<br><small>ref: 手伝っていただいてありがとうございます。今日は本当にお世話になりました。</small></td>
+<td>-3 / 2857</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文語意完整且表達非常自然。唯一的問題是語氣過於口語/非正式（使用了「ありがとう」和「助かったよ」），相較於原文較為客氣的語氣，敬語表現不足（honorific_off）。</small></td>
+</tr>
+<tr>
+<td>T045<br><small>ja#2</small></td>
+<td class="zh">謝謝你的幫忙,今天真的麻煩你了。<br><small>STT: 谢谢你的帮忙,今天真的麻烦你了。</small></td>
+<td>手伝ってくれてありがとう、今日は本当に助かったよ。<br><small>ref: 手伝っていただいてありがとうございます。今日は本当にお世話になりました。</small></td>
+<td>-91 / 2805</td>
+<td> cer=0.00</td>
+<td>4/5<br><small>譯文語意基本正確，且日文表達自然流暢。但譯文使用了常體（タメ口），而參考譯文使用的是敬體（丁寧語），在沒有上下文的情況下可能會有禮貌程度不符的問題。另外，「麻煩你了」譯為「助かったよ」（幫了大忙）在語境上是通順的，但與原文的字面意思稍有偏差。</small></td>
+</tr>
+<tr>
+<td>T045<br><small>ja#3</small></td>
+<td class="zh">謝謝你的幫忙,今天真的麻煩你了。<br><small>STT: 谢谢你的帮忙,今天真的麻烦你了。</small></td>
+<td>手伝ってくれて本当にありがとう。<br><small>ref: 手伝っていただいてありがとうございます。今日は本当にお世話になりました。</small></td>
+<td>-82 / 1821</td>
+<td>✂️ cer=0.00</td>
+<td>3/5<br><small>譯文漏譯了「今天真的麻煩你了」的部分，且使用了較為隨便的常體（手伝ってくれて本当にありがとう），未反映出原文的禮貌程度。日文表達自然。</small></td>
+</tr>
+<tr>
+<td>T046<br><small>en#1</small></td>
+<td class="zh">你的中文說得真好,是在哪裡學的?<br><small>STT: 你的中文说得真好,是在哪里学的?</small></td>
+<td>Your Chinese is really good, where did you learn it?<br><small>ref: Your Chinese is really good — where did you learn it?</small></td>
+<td>-373 / 2379</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly conveys the meaning of the original text and is completely natural in English.</small></td>
+</tr>
+<tr>
+<td>T046<br><small>en#2</small></td>
+<td class="zh">你的中文說得真好,是在哪裡學的?<br><small>STT: 你的中文说得真好,是在哪里学的?</small></td>
+<td>Your Chinese is really good, where did you learn it?<br><small>ref: Your Chinese is really good — where did you learn it?</small></td>
+<td>-585 / 2567</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly conveys the meaning of the original text and is completely natural in English.</small></td>
+</tr>
+<tr>
+<td>T046<br><small>en#3</small></td>
+<td class="zh">你的中文說得真好,是在哪裡學的?<br><small>STT: 你的中文说得真好,是在哪里学的?</small></td>
+<td>Your Chinese is really good, where did you learn it?<br><small>ref: Your Chinese is really good — where did you learn it?</small></td>
+<td>-433 / 2474</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly conveys the meaning of the original text and is completely natural in English.</small></td>
+</tr>
+<tr>
+<td>T046<br><small>ja#1</small></td>
+<td class="zh">你的中文說得真好,是在哪裡學的?<br><small>STT: 你的中文说得真好,是在哪里学的?</small></td>
+<td>中国語がとても上手ですね、どこで習ったんですか？<br><small>ref: 中国語がとてもお上手ですね。どこで習ったんですか?</small></td>
+<td>-461 / 3205</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢，符合目標語的語法與習慣。</small></td>
+</tr>
+<tr>
+<td>T046<br><small>ja#2</small></td>
+<td class="zh">你的中文說得真好,是在哪裡學的?<br><small>STT: 你的中文说得真好,</small></td>
+<td>中国語がとても<br><small>ref: 中国語がとてもお上手ですね。どこで習ったんですか?</small></td>
+<td>-515 / -355</td>
+<td>✂️ cer=0.43</td>
+<td>1/1<br><small>譯文嚴重漏譯，僅翻譯出「你的中文很」，完全遺漏了「好」以及「是在哪裡學的」等關鍵訊息，句子結構不完整。</small></td>
+</tr>
+<tr>
+<td>T046<br><small>ja#3</small></td>
+<td class="zh">你的中文說得真好,是在哪裡學的?<br><small>STT: 你的中文说得真好,是在哪里学的?</small></td>
+<td>中国語がとても上手ですね。どこで習ったんですか？<br><small>ref: 中国語がとてもお上手ですね。どこで習ったんですか?</small></td>
+<td>1022 / 4272</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is perfectly natural in Japanese.</small></td>
+</tr>
+<tr>
+<td>T047<br><small>en#1</small></td>
+<td class="zh">日本的夏天很熱,不過我覺得台北更熱。<br><small>STT: 日本的夏天很热,不过我觉得台北更热。</small></td>
+<td>Summers in Japan are very hot, but I think Taipei is hotter.<br><small>ref: Summer in Japan is hot, but I think Taipei is even hotter.</small></td>
+<td>-865 / 2635</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is grammatically correct and natural.</small></td>
+</tr>
+<tr>
+<td>T047<br><small>en#2</small></td>
+<td class="zh">日本的夏天很熱,不過我覺得台北更熱。<br><small>STT: 日本的夏天很热,不过我觉得台北更热。</small></td>
+<td>Summers in Japan are very hot, but I think Taipei is hotter.<br><small>ref: Summer in Japan is hot, but I think Taipei is even hotter.</small></td>
+<td>-878 / 2877</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is perfectly fluent in English.</small></td>
+</tr>
+<tr>
+<td>T047<br><small>en#3</small></td>
+<td class="zh">日本的夏天很熱,不過我覺得台北更熱。<br><small>STT: 日本的夏天很热,不过我觉得台北更热。</small></td>
+<td>Summers in Japan are very hot, but I think Taipei is hotter.<br><small>ref: Summer in Japan is hot, but I think Taipei is even hotter.</small></td>
+<td>-1021 / 2875</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation accurately conveys the meaning of the original text and is grammatically correct and natural.</small></td>
+</tr>
+<tr>
+<td>T047<br><small>ja#1</small></td>
+<td class="zh">日本的夏天很熱,不過我覺得台北更熱。<br><small>STT: 日本的夏天很热,不过我觉得台北更热。</small></td>
+<td>日本の夏はとても暑いですが、台北の方が暑いと思います。<br><small>ref: 日本の夏は暑いですね。でも、台北のほうがもっと暑いと思います。</small></td>
+<td>-1093 / 7554</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。</small></td>
+</tr>
+<tr>
+<td>T047<br><small>ja#2</small></td>
+<td class="zh">日本的夏天很熱,不過我覺得台北更熱。<br><small>STT: 日本的夏天很热,不过我觉得台北更热。</small></td>
+<td>日本の夏はとても暑いですが、台北の方がもっと暑いと思います。<br><small>ref: 日本の夏は暑いですね。でも、台北のほうがもっと暑いと思います。</small></td>
+<td>-717 / 3784</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文準確且自然地傳達了原文的語意，文法正確，沒有遺漏或錯誤。</small></td>
+</tr>
+<tr>
+<td>T047<br><small>ja#3</small></td>
+<td class="zh">日本的夏天很熱,不過我覺得台北更熱。<br><small>STT: 日本的夏天很热,不过我觉得台北更热。</small></td>
+<td>日本の夏はとても暑いですが、台北の方が暑いと思います。<br><small>ref: 日本の夏は暑いですね。でも、台北のほうがもっと暑いと思います。</small></td>
+<td>-1079 / 3319</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。</small></td>
+</tr>
+<tr>
+<td>T048<br><small>en#1</small></td>
+<td class="zh">不用了,謝謝,我只是看看而已。<br><small>STT: 不用了,谢谢,我只是看看而已。</small></td>
+<td>No thanks, I'm just looking.<br><small>ref: No thanks, I'm just looking.</small></td>
+<td>140 / 2139</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly matches the reference translation and accurately conveys the meaning of the original text in natural English.</small></td>
+</tr>
+<tr>
+<td>T048<br><small>en#2</small></td>
+<td class="zh">不用了,謝謝,我只是看看而已。<br><small>STT: 不用了,谢谢,我只是看看而已。</small></td>
+<td>No thanks, I'm just looking.<br><small>ref: No thanks, I'm just looking.</small></td>
+<td>251 / 1994</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly matches the reference translation and accurately conveys the meaning of the original text in natural English.</small></td>
+</tr>
+<tr>
+<td>T048<br><small>en#3</small></td>
+<td class="zh">不用了,謝謝,我只是看看而已。<br><small>STT: 不用了,謝謝,我只是看看而已。</small></td>
+<td>No thanks, I'm just looking.<br><small>ref: No thanks, I'm just looking.</small></td>
+<td>187 / 1798</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation perfectly matches the reference translation and accurately conveys the meaning of the original text in natural English.</small></td>
+</tr>
+<tr>
+<td>T048<br><small>ja#1</small></td>
+<td class="zh">不用了,謝謝,我只是看看而已。<br><small>STT: 不用了,謝謝,我只是看看而已。</small></td>
+<td>結構です、ありがとう。ただ見てるだけです。<br><small>ref: いえ、結構です。ありがとうございます。ちょっと見ているだけなので。</small></td>
+<td>45 / 2721</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，日語表達自然。雖然「結構です」和「ありがとう」的禮貌程度略有不一致，但在口語中是可以接受的。</small></td>
+</tr>
+<tr>
+<td>T048<br><small>ja#2</small></td>
+<td class="zh">不用了,謝謝,我只是看看而已。<br><small>STT: 不用了,謝謝,我只是看看而已。</small></td>
+<td>結構です、ありがとう。ただ見てるだけです。<br><small>ref: いえ、結構です。ありがとうございます。ちょっと見ているだけなので。</small></td>
+<td>61 / 2960</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日文表達自然流暢。雖然「ありがとう」較為口語，但在一般購物情境下是可以接受的。</small></td>
+</tr>
+<tr>
+<td>T048<br><small>ja#3</small></td>
+<td class="zh">不用了,謝謝,我只是看看而已。<br><small>STT: 不用了,謝謝,我只是看看而已。</small></td>
+<td>結構です、ありがとう。ただ見てるだけです。<br><small>ref: いえ、結構です。ありがとうございます。ちょっと見ているだけなので。</small></td>
+<td>134 / 2735</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，日語表達自然。雖然「結構です」和「ありがとう」的禮貌程度略有不一致，但在口語中是可以接受的。</small></td>
+</tr>
+<tr>
+<td>T049<br><small>en#1</small></td>
+<td class="zh">我是從台灣來的,第一次來大阪玩。<br><small>STT: 我是從台灣來的,第一次來大阪玩。</small></td>
+<td>I'm from Taiwan, and this is my first time in Osaka.<br><small>ref: I'm from Taiwan — it's my first time visiting Osaka.</small></td>
+<td>-986 / 2685</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation accurately conveys the source text's meaning and reads very naturally in English. No errors were found.</small></td>
+</tr>
+<tr>
+<td>T049<br><small>en#2</small></td>
+<td class="zh">我是從台灣來的,第一次來大阪玩。<br><small>STT: 我是從台灣來的,第一次來大板玩。</small></td>
+<td>I'm from Taiwan, and this is my first time visiting Daiban.<br><small>ref: I'm from Taiwan — it's my first time visiting Osaka.</small></td>
+<td>-839 / 2545</td>
+<td> cer=0.07</td>
+<td>4/4<br><small>The translation accurately conveys the meaning of the original text and is grammatically fluent. However, it incorrectly translates '大阪' (Osaka) into its Chinese pinyin 'Daiban', resulting in a name mangling error.</small></td>
+</tr>
+<tr>
+<td>T049<br><small>en#3</small></td>
+<td class="zh">我是從台灣來的,第一次來大阪玩。<br><small>STT: 我是從台灣來的,第一次來大阪玩。</small></td>
+<td>I'm from Taiwan, and this is my first time in Osaka.<br><small>ref: I'm from Taiwan — it's my first time visiting Osaka.</small></td>
+<td>-948 / 2458</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation accurately conveys the source text's meaning and reads very naturally in English. No errors were found.</small></td>
+</tr>
+<tr>
+<td>T049<br><small>ja#1</small></td>
+<td class="zh">我是從台灣來的,第一次來大阪玩。<br><small>STT: 我是從台灣來的,第一次來大阪玩。</small></td>
+<td>私は台湾から来ました。大阪に来るのは初めてです。<br><small>ref: 台湾から来ました。大阪に遊びに来るのは初めてです。</small></td>
+<td>-794 / 3482</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日語表達自然流暢。雖然省略了「玩」的直接對應詞，但在語境中「大阪に来るのは初めてです」已能充分表達來大阪旅遊的意思，不影響整體語意。</small></td>
+</tr>
+<tr>
+<td>T049<br><small>ja#2</small></td>
+<td class="zh">我是從台灣來的,第一次來大阪玩。<br><small>STT: 我是從台灣來的,第一次來大阪玩。</small></td>
+<td>私は台湾から来ました。大阪に来るのは初めてです。<br><small>ref: 台湾から来ました。大阪に遊びに来るのは初めてです。</small></td>
+<td>-939 / 3213</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日語表達自然流暢。雖然省略了「玩」的直接對應詞，但在語境中「大阪に来るのは初めてです」已能充分表達來大阪旅遊的意思，不影響整體語意。</small></td>
+</tr>
+<tr>
+<td>T049<br><small>ja#3</small></td>
+<td class="zh">我是從台灣來的,第一次來大阪玩。<br><small>STT: 我是從台灣來的,第一次來大阪玩。</small></td>
+<td>私は台湾から来ました。大阪に来るのは初めてです。<br><small>ref: 台湾から来ました。大阪に遊びに来るのは初めてです。</small></td>
+<td>-914 / 3014</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文準確傳達了原文的意思，且日語表達自然流暢。雖然省略了「玩」的直接對應詞，但在語境中「大阪に来るのは初めてです」已能充分表達來大阪旅遊的意思，不影響整體語意。</small></td>
+</tr>
+<tr>
+<td>T050<br><small>en#1</small></td>
+<td class="zh">那就麻煩你了,之後再聯絡。<br><small>STT: 那就麻烦你了,之后再联络。</small></td>
+<td>Then I'll leave it to you, and we'll be in touch.<br><small>ref: Thanks in advance — I'll be in touch later.</small></td>
+<td>276 / 2526</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. 'Then I'll leave it to you, and we'll be in touch' perfectly captures the meaning of the source text '那就麻煩你了,之後再聯絡'.</small></td>
+</tr>
+<tr>
+<td>T050<br><small>en#2</small></td>
+<td class="zh">那就麻煩你了,之後再聯絡。<br><small>STT: 那就麻烦你了,之后再联络。</small></td>
+<td>Then I'll leave it to you, and we'll be in touch.<br><small>ref: Thanks in advance — I'll be in touch later.</small></td>
+<td>121 / 2504</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. 'Then I'll leave it to you, and we'll be in touch' perfectly captures the meaning of the source text.</small></td>
+</tr>
+<tr>
+<td>T050<br><small>en#3</small></td>
+<td class="zh">那就麻煩你了,之後再聯絡。<br><small>STT: 那就麻烦你了,之后再联络。</small></td>
+<td>Then I'll leave it to you, we'll be in touch.<br><small>ref: Thanks in advance — I'll be in touch later.</small></td>
+<td>117 / 2514</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. 'Then I'll leave it to you, we'll be in touch' perfectly captures the meaning of the source text '那就麻煩你了,之後再聯絡'.</small></td>
+</tr>
+<tr>
+<td>T050<br><small>ja#1</small></td>
+<td class="zh">那就麻煩你了,之後再聯絡。<br><small>STT: 那就麻烦你了,之后再联络。</small></td>
+<td>じゃあ、お願いします。また連絡します。<br><small>ref: では、よろしくお願いします。また後で連絡します。</small></td>
+<td>153 / 2904</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文非常準確且自然，與參考譯文意思完全一致，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T050<br><small>ja#2</small></td>
+<td class="zh">那就麻煩你了,之後再聯絡。<br><small>STT: 那就麻烦你了,之后再联络。</small></td>
+<td>じゃあ、お願いします。また連絡します。<br><small>ref: では、よろしくお願いします。また後で連絡します。</small></td>
+<td>273 / 2774</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體，與參考譯文幾乎一致。</small></td>
+</tr>
+<tr>
+<td>T050<br><small>ja#3</small></td>
+<td class="zh">那就麻煩你了,之後再聯絡。<br><small>STT: 那就麻烦你了,之后再联络。</small></td>
+<td>じゃあ、お願いします。また連絡します。<br><small>ref: では、よろしくお願いします。また後で連絡します。</small></td>
+<td>274 / 2775</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體，與參考譯文幾乎一致。</small></td>
+</tr>
+</table>

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:27:47.177Z"
+  "ts": "2026-07-29T07:27:47.177Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。雖然機器譯文省略了「一台」的翻譯（僅譯為「タクシーを呼んで」而非「タクシーを1台呼んで」），但在日語習慣中，不特意強調數量是非常自然且符合常理的表達方式，因此不視為缺失。整體語意與參考譯文幾乎完全一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }
