@@ -1,0 +1,36 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T026",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我考慮了一下,這個還是先不買好了。",
+  "reference": "ちょっと考えたんですが、これはやっぱり今回はやめておきます。",
+  "inputTranscript": "我考虑了一下,这个还是先不买",
+  "outputTranscript": "私は考えてみて、これはまだ買わないでおきます。",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 5600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1715,
+    "ttft_from_end_ms": -2149,
+    "completion_lag_ms": 635,
+    "ttfa_from_start_ms": 1684
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.75,
+    "coverage_ok": true,
+    "cer": 0.133
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:04:52.087Z"
+}

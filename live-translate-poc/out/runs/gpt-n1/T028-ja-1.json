@@ -1,0 +1,36 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T028",
+  "category": "hotel",
+  "traps": [
+    "proper-noun",
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我有訂房,名字是陳大文,今天住兩個晚上。",
+  "reference": "予約しています。名前はチン・ダイブンです。今日から2泊です。",
+  "inputTranscript": "我有订房，名字是陈大文。，今天住两个",
+  "outputTranscript": "私はもう家を予約していて、名前は陳大文です。今日は二泊します。",
+  "inputDurationMs": 5251,
+  "outputAudioMs": 6800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -3264,
+    "ttft_from_end_ms": -3944,
+    "completion_lag_ms": 512,
+    "ttfa_from_start_ms": 2137
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.077,
+    "coverage_ok": true,
+    "cer": 0.118
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:05:11.114Z"
+}

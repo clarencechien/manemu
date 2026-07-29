@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T010",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "最後一班回新宿的電車是十一點四十五分嗎?",
+  "reference": "新宿行きの最終電車は11時45分ですか?",
+  "inputTranscript": "最后一班回新筑的电车是十一点四十五",
+  "outputTranscript": "最後の一回分のスターアライドの電車は、11時45分。",
+  "inputDurationMs": 4611,
+  "outputAudioMs": 6400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2613,
+    "ttft_from_end_ms": -3065,
+    "completion_lag_ms": 533,
+    "ttfa_from_start_ms": 2186
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.263,
+    "coverage_ok": true,
+    "cer": 0.158
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:02:46.925Z"
+}

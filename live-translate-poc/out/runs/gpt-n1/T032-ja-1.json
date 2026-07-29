@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T032",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我明天不需要打掃房間,謝謝。",
+  "reference": "明日は部屋の掃除は結構です。ありがとうございます。",
+  "inputTranscript": "我明天不需要打扫房间",
+  "outputTranscript": "明日は部屋を掃除しなくていい、ありがとう。",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 5600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -622,
+    "ttft_from_end_ms": -1045,
+    "completion_lag_ms": 654,
+    "ttfa_from_start_ms": 2978
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.826,
+    "coverage_ok": true,
+    "cer": 0.167
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:05:41.217Z"
+}

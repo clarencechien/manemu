@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T020",
+  "category": "dining",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問可以幫我們分開結帳嗎?",
+  "reference": "すみません、お会計を別々にしていただけますか?",
+  "inputTranscript": "请问可以帮我们分开结账",
+  "outputTranscript": "すみません、会計を別々にしてもらえますか?",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 6000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -670,
+    "ttft_from_end_ms": -1333,
+    "completion_lag_ms": 1085,
+    "ttfa_from_start_ms": 2231
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.905,
+    "coverage_ok": true,
+    "cer": 0.167
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:04:06.713Z"
+}

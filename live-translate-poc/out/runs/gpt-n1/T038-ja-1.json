@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T038",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我不能打青黴素,我會過敏。",
+  "reference": "ペニシリンは打てません。アレルギーがあるんです。",
+  "inputTranscript": "我不能打青霉素,我会",
+  "outputTranscript": "私は低用量ピルは飲めません、副作用が出るので。",
+  "inputDurationMs": 2611,
+  "outputAudioMs": 6000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1006,
+    "ttft_from_end_ms": -1658,
+    "completion_lag_ms": 836,
+    "ttfa_from_start_ms": 1794
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.955,
+    "coverage_ok": true,
+    "cer": 0.182
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:06:29.795Z"
+}

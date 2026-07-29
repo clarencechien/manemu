@@ -1,0 +1,36 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T011",
+  "category": "transport",
+  "traps": [
+    "code-switch",
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我想幫 IC 卡儲值一千日圓。",
+  "reference": "ICカードに1000円チャージしたいんですが。",
+  "inputTranscript": "我想帮埃西卡储值一千日",
+  "outputTranscript": "AICカードに1000円をチャージしたいです。",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 5200,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -934,
+    "ttft_from_end_ms": -1860,
+    "completion_lag_ms": 694,
+    "ttfa_from_start_ms": 2666
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:02:54.482Z"
+}

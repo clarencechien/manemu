@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T040",
+  "category": "appointment",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "不好意思,我想把預約從星期五改到星期六,不是取消。",
+  "reference": "Excuse me, I'd like to change my reservation from Friday to Saturday — not cancel it.",
+  "inputTranscript": "不好意思，我想把预约从星期五改到星期六，不是",
+  "outputTranscript": "Sorry, I'd like to change my appointment from Friday to Saturday, not cancel it.",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 8400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -4890,
+    "ttft_from_end_ms": -5546,
+    "completion_lag_ms": 561,
+    "ttfa_from_start_ms": 1709
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.955,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:06:49.852Z"
+}

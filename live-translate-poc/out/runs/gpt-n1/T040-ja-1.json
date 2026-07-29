@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T040",
+  "category": "appointment",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "不好意思,我想把預約從星期五改到星期六,不是取消。",
+  "reference": "すみません、予約を金曜日から土曜日に変更したいんです。キャンセルではありません。",
+  "inputTranscript": "不好意思，我想把预约从星期五改到星期六，不是",
+  "outputTranscript": "すみません、予約を月曜から木曜に変更したいです。キャンセルではなくて、",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 8400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -3587,
+    "ttft_from_end_ms": -4469,
+    "completion_lag_ms": 582,
+    "ttfa_from_start_ms": 3012
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.865,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:06:47.703Z"
+}

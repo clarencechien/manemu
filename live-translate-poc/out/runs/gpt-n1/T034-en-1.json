@@ -1,0 +1,33 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "Help! Please call an ambulance!",
+  "inputTranscript": "救命！请帮我叫",
+  "outputTranscript": "Saving a life—please help me call an ambulance.",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 4400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -386,
+    "ttft_from_end_ms": -1266,
+    "completion_lag_ms": 572,
+    "ttfa_from_start_ms": 2213
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.52,
+    "coverage_ok": true,
+    "cer": 0.333
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:05:59.921Z"
+}

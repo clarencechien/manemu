@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "部屋番号は702です。友達が倒れました。",
+  "inputTranscript": "我的房间号码是七零二。我朋友昏倒了。",
+  "outputTranscript": "部屋の番号は七〇二です友達が気を失いました",
+  "inputDurationMs": 5811,
+  "outputAudioMs": 8000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -3463,
+    "ttft_from_end_ms": -4326,
+    "completion_lag_ms": 621,
+    "ttfa_from_start_ms": 2537
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.167,
+    "coverage_ok": true,
+    "cer": 0.125
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:06:23.132Z"
+}

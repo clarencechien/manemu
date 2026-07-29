@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T013",
+  "category": "transport",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我剛剛在月台上把手機弄丟了。",
+  "reference": "さっきホームで携帯をなくしてしまいました。",
+  "inputTranscript": "我刚刚在月台上把手机弄",
+  "outputTranscript": "さっきステージでスマホを落としました。",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -812,
+    "ttft_from_end_ms": -1653,
+    "completion_lag_ms": 386,
+    "ttfa_from_start_ms": 2088
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.9,
+    "coverage_ok": true,
+    "cer": 0.308
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:03:09.218Z"
+}

@@ -1,0 +1,37 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T027",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "可以退稅嗎?我總共買了超過五千日圓。",
+  "reference": "免税できますか?全部で5000円以上買いました。",
+  "inputTranscript": "可以退税吗？我总共买了超过五千日元。",
+  "outputTranscript": "",
+  "inputDurationMs": 3771,
+  "outputAudioMs": 0,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": null,
+    "ttft_from_end_ms": null,
+    "completion_lag_ms": null,
+    "ttfa_from_start_ms": null
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "5000"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0,
+    "coverage_ok": false,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:05:02.501Z"
+}

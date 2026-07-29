@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T025",
+  "category": "shopping",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "有沒有 limited edition 的款式?我在 Instagram 上看到的。",
+  "reference": "Do you have the limited edition version? I saw it on Instagram.",
+  "inputTranscript": "Your mail limited edition的款式。我在Instagram上看到",
+  "outputTranscript": "I saw on Instagram.",
+  "inputDurationMs": 4531,
+  "outputAudioMs": 5600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -614,
+    "ttft_from_end_ms": -946,
+    "completion_lag_ms": 449,
+    "ttfa_from_start_ms": 4086
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.3,
+    "coverage_ok": false,
+    "cer": 0.257
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:04:46.740Z"
+}

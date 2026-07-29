@@ -1,0 +1,36 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T012",
+  "category": "transport",
+  "traps": [
+    "honorific",
+    "proper-noun"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "不好意思,可以幫我看一下這班車是不是往橫濱的嗎?",
+  "reference": "Excuse me, could you help me check whether this train is bound for Yokohama?",
+  "inputTranscript": "不好意思,可以帮我看一下这班车是不是往横滨",
+  "outputTranscript": "Sorry, could you take a look and see if this bus goes to Hengping?",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 5200,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1589,
+    "ttft_from_end_ms": -2534,
+    "completion_lag_ms": 470,
+    "ttfa_from_start_ms": 2712
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.836,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:03:03.073Z"
+}

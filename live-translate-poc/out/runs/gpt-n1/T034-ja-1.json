@@ -1,0 +1,33 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "助けて!救急車を呼んでください!",
+  "inputTranscript": "救命！请帮我叫救",
+  "outputTranscript": "助けて!救急車を呼んでください",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 4400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 72,
+    "ttft_from_end_ms": -616,
+    "completion_lag_ms": 710,
+    "ttfa_from_start_ms": 2671
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.222
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:05:56.575Z"
+}

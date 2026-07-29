@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T035",
+  "category": "emergency",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我的護照不見了,請問警察局在哪裡?",
+  "reference": "パスポートをなくしてしまいました。警察署はどこですか?",
+  "inputTranscript": "我的护照不见了。请问警察局",
+  "outputTranscript": "私のパスポートがなくなりました。すみません、警察署はどこですか?",
+  "inputDurationMs": 3571,
+  "outputAudioMs": 7600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1117,
+    "ttft_from_end_ms": -1763,
+    "completion_lag_ms": 1180,
+    "ttfa_from_start_ms": 2583
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.16,
+    "coverage_ok": true,
+    "cer": 0.2
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:06:04.644Z"
+}
