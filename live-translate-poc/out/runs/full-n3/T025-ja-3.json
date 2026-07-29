@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T025",
+  "category": "shopping",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "有沒有 limited edition 的款式?我在 Instagram 上看到的。",
+  "reference": "限定版のモデルはありますか?インスタグラムで見たんですが。",
+  "inputTranscript": "有没limited edition的款式,我在Instagram上看到的。",
+  "outputTranscript": "限定版はありますか？インスタグラムで見たんです。",
+  "inputDurationMs": 4531,
+  "outputAudioMs": 4250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1639,
+    "ttft_from_end_ms": -1664,
+    "completion_lag_ms": 2026,
+    "ttfa_from_start_ms": 3060
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.815,
+    "coverage_ok": true,
+    "cer": 0.029
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:25:09.497Z"
+}

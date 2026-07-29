@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T023",
+  "category": "shopping",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "請問這個價格是含稅還是不含稅?",
+  "reference": "この値段は税込みですか、それとも税抜きですか?",
+  "inputTranscript": "请问这个价格是含税还是不含税?",
+  "outputTranscript": "すみませんが、この価格は税込みですか、それとも税別ですか？",
+  "inputDurationMs": 3891,
+  "outputAudioMs": 4750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -718,
+    "ttft_from_end_ms": -744,
+    "completion_lag_ms": 3450,
+    "ttfa_from_start_ms": 3281
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.238,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:24:31.037Z"
+}

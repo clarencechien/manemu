@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T023",
+  "category": "shopping",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "請問這個價格是含稅還是不含稅?",
+  "reference": "Is this price with tax or without tax?",
+  "inputTranscript": "请问这个价格是含税还是不含税?",
+  "outputTranscript": "Excuse me, is this price including or excluding tax?",
+  "inputDurationMs": 3891,
+  "outputAudioMs": 4500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -922,
+    "ttft_from_end_ms": -950,
+    "completion_lag_ms": 2974,
+    "ttfa_from_start_ms": 3077
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": false,
+    "coverage_ratio": 1.4,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:24:35.100Z"
+}
