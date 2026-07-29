@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T003",
+  "category": "directions",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我不是要去機場,我是要去火車站。",
+  "reference": "空港に行きたいのではなくて、電車の駅に行きたいんです。",
+  "inputTranscript": "我 不 是 要 去 机 场 , 我 是 要 去 火 车 站 。",
+  "outputTranscript": "空港へ行くのではありません、駅へ行くのです。",
+  "inputDurationMs": 2931,
+  "outputAudioMs": 3410,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 923,
+    "ttft_from_end_ms": 922,
+    "completion_lag_ms": 1594,
+    "ttfa_from_start_ms": 4024
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.8,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:46:12.285Z"
+}

@@ -180,6 +180,14 @@ Tier 1 postpay 專案的實際 per-model 限制(dashboard 截圖與 API 實測�
 - **Q7 評審偏差**:qwen 最嚴(-0.17)、deepseek 最鬆(+0.04);deepseek 最愛插 flag(number_wrong 32 vs 其他 1–13)——多評審中位數有效中和了個性。
 - 花費:OpenRouter $7.35(P 波 ~$3.4 + Q 波 ~$4);OpenAI ~$3;Gemini API 走 Tier 1 配額。
 
+## 3.75 W 波補完(2026-07-29)
+
+- **W2 數字語意稽核**(強模型逐筆核對,含打折/時間陷阱):full-n3 **99.1%** 語意正確(僅 T017-ja)、gpt-n1 94.1%——金額風險遠低於預期,規則層的粗查(96–98%)反而低估了。購物議價類的「可用」判定成立。
+- **W3 問句丟失歸因**:同語料**文字直翻**問句保留 96–100%(五模型)→ 語音模式的 91%/83% 是 **speech pipeline artifact**,非翻譯固有難題。
+- **W4 敬語專項**(ja 150 筆,GPT 稽核):失敬方向**全部是「太隨便」**(0 筆太生硬);shopping 67%、smalltalk 78% 最弱,hotel/appointment 100%。修法=語域鎖定(R1.5 的 prompt 已含)或 UI 語氣設定。
+- **W1 corpus v2**:`data/corpus-v2.json` 30 句(交叉審通過率 60%,generator 池未滿;夠 R1 真人錄音用,R3 再補)。
+- **W5**:`docs/m4-scripts.md` 8 個多輪情境劇本(check-in 糾紛/議價/藥局/報案…),含逐輪埋雷與檢核點。
+
 ## 3.8 W6|「另一條路」實測:一般 Live + 口譯 prompt(重大發現)
 
 同 10 句殺手句(zh→ja,n=20 vs full-n3 同句子集 n=30):
