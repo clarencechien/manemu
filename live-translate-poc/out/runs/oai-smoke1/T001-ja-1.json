@@ -1,0 +1,33 @@
+{
+  "runId": "oai-smoke1",
+  "phraseId": "T001",
+  "category": "directions",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問車站在哪裡?怎麼走比較快?",
+  "reference": "すみません、駅はどこですか?どう行くのが一番早いですか?",
+  "inputTranscript": "",
+  "outputTranscript": "駅はどこですか?どう行けば早いですか?",
+  "inputDurationMs": 3211,
+  "outputAudioMs": 5600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1198,
+    "ttft_from_end_ms": -1615,
+    "completion_lag_ms": 752,
+    "ttfa_from_start_ms": 2201
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.68,
+    "coverage_ok": true,
+    "cer": 1
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T08:59:17.799Z"
+}

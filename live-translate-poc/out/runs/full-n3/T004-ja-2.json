@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文準確傳達了原文的意思，且日語表達自然流暢，與參考譯文幾乎一致。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實： '從這裡走過去大概要幾分鐘?' 對應 'ここから歩いて何分くらいですか?'； '超過十五分鐘的話我想搭計程車.' 對應 '15分以上かかるなら、タクシーに乗りたいです.'。用詞與語序自然，與參考譯文相符，無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

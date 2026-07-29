@@ -46,5 +46,19 @@
     },
     "reason": "譯文自然流暢，語意傳達清晰。雖然將「我想搭計程車」譯為「タクシーに乗ります」（我會搭計程車）而非「乗りたいです」，但在語境中意思相近，不影響理解。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且自然。兩句都正確表達原意，但原句「我想搭計程車」帶有願望／意向（想、想要），機譯為「タクシーに乗ります。」表現為較確定的陳述（會搭／我會搭），語氣上略有差異，故將 adequacy 評為 4；語句流暢自然，fluency 評為 5。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

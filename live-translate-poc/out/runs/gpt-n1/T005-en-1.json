@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T005",
+  "category": "directions",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "請問淺草寺跟晴空塔是同一個方向嗎?",
+  "reference": "Excuse me, are Sensoji Temple and the Skytree in the same direction?",
+  "inputTranscript": "请问前草寺跟晴空塔是同一个方向",
+  "outputTranscript": "Please, Mr. Qian, the minister of finance, and the Cloud-Break Pagoda, are they in the same direction?",
+  "inputDurationMs": 4331,
+  "outputAudioMs": 7200,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2645,
+    "ttft_from_end_ms": -3525,
+    "completion_lag_ms": 966,
+    "ttfa_from_start_ms": 1855
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.436,
+    "coverage_ok": true,
+    "cer": 0.125
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:02:09.126Z"
+}

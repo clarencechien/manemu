@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation accurately and naturally translates the original sentence, perfectly conveying the meaning with correct grammar and terminology."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問淺草寺與晴空塔是否在同一方向），語意忠實度高，故 adequacy=5。英文表達自然易懂，僅在專有名詞呈現上與參考譯文有細微差異（Senso-ji vs Sensoji、缺少定冠詞 the Skytree），但不影響理解，因此 fluency=5。無重大錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

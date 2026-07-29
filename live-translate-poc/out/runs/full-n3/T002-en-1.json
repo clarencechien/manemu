@@ -46,5 +46,19 @@
     },
     "reason": "The translation changes the yes/no question about whether the entrance is in this building to a wh-question asking where the entrance is, completely omitting 'in this building'. It also mangles the name 'Shibuya' into 'Xu Boya'. However, the resulting sentence is grammatically fluent."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯將專有名詞『Shibuya』誤譯為『Xu Boya』（name_mangled），且原句為「…是在這棟樓嗎？」的是非問句，機譯改成開放式的 'where is...'，沒有表明『在這棟樓』的指稱，導致語意不完全忠實。句子語法通順但專有名詞與指稱缺失影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

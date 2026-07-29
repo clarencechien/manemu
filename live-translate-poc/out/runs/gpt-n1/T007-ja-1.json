@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T007",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我要兩張到京都的車票,大人一張、小孩一張。",
+  "reference": "京都までの切符を2枚ください。大人1枚、子ども1枚です。",
+  "inputTranscript": "我要两张到京都的车票。大人一张，小孩",
+  "outputTranscript": "ダンジョン行きの切符を二枚ください。大人一枚、子ども一枚。",
+  "inputDurationMs": 5051,
+  "outputAudioMs": 8400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2563,
+    "ttft_from_end_ms": -3023,
+    "completion_lag_ms": 888,
+    "ttfa_from_start_ms": 2637
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.04,
+    "coverage_ok": true,
+    "cer": 0.111
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:02:24.579Z"
+}

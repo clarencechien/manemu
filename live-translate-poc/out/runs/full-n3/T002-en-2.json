@@ -46,5 +46,19 @@
     },
     "reason": "The translation changes the yes/no question about whether the entrance is in this building to a 'where' question, omitting 'in this building'. It also mangles the name 'Shibuya' into 'Xu Boya'. The resulting sentence is fluent but inaccurate."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文語法通順，但有兩處語意偏差：1) 專有名詞「Shibuya」被誤譯/音譯為“Xu Boya”，屬於 name_mangled；2) 原句是詢問「入口是否在這棟樓？」（定位於「這棟樓」），機器譯文改成一般的「where is...」，省略了“in this building” 的位置限定，屬於 omission。整體保留了詢問入口位置的意圖但遺失重要地點細節，因而給予中等忠實度(3)；語言自然度高(5)。 建議正確譯法：\"Excuse me, is the entrance to Shibuya Sky in this building?\"。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T003",
+  "category": "directions",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我不是要去機場,我是要去火車站。",
+  "reference": "I'm not going to the airport, I'm going to the train station.",
+  "inputTranscript": "我不是要去机场，我是要去火",
+  "outputTranscript": "Hi, I'm not going to the airport, I'm going to the train station.",
+  "inputDurationMs": 2931,
+  "outputAudioMs": 4400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1699,
+    "ttft_from_end_ms": -2337,
+    "completion_lag_ms": 647,
+    "ttfa_from_start_ms": 1401
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.043,
+    "coverage_ok": true,
+    "cer": 0.143
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:01:51.049Z"
+}

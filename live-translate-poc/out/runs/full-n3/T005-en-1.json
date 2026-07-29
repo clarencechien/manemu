@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation accurately and naturally translates the original sentence, perfectly conveying the meaning with correct grammar and terminology."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完全忠實，原句詢問兩景點是否朝同一方向，機譯保留了問句與禮貌用語，故 adequacy=5。流暢度略有小瑕疵（例如參考譯文用 the Skytree，且 Sensoji 通常寫作不帶連字號），但整體自然可理解，故 fluency=4。無數字錯誤、否定顛倒、敬語處理錯誤、地名錯譯、省略或捏造資訊，皆標記為 false。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

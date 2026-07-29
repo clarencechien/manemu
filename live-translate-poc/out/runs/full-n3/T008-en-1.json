@@ -46,5 +46,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text and is perfectly fluent. Translating '這班車' as 'This bus' is acceptable without further context."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "整體語意大致忠實且英文自然。機譯把「這班車」譯為“bus”（公車），而參考譯文為“train”（列車），此為事實性錯誤；此外原句帶有確認疑問語氣（吧？），機譯表述較偏陳述句，喪失了明顯的疑問語感。其餘部分（如「應該不會」→“probably won't”）表達合理，介系詞差異（in/at Kyoto）亦可接受。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

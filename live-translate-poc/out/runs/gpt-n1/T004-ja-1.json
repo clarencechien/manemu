@@ -1,0 +1,36 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T004",
+  "category": "directions",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。",
+  "reference": "ここから歩いて何分ぐらいかかりますか?15分以上かかるならタクシーに乗りたいです。",
+  "inputTranscript": "从这里走过去大概要几分钟？超过十五分钟的话我想搭计程",
+  "outputTranscript": "ここから出て、だいたい何分か、十五分を超えるなら、タクシーに乗ろうと思います。",
+  "inputDurationMs": 5971,
+  "outputAudioMs": 8800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -3926,
+    "ttft_from_end_ms": -4557,
+    "completion_lag_ms": 884,
+    "ttfa_from_start_ms": 2175
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.897,
+    "coverage_ok": true,
+    "cer": 0.038
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:02:00.033Z"
+}

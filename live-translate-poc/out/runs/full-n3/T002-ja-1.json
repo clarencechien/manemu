@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文將地名「Shibuya」錯誤音譯為「徐博雅」，導致專有名詞錯誤（name_mangled），嚴重影響語意傳達。其餘部分的文法與句意皆自然且正確。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語法上通順，但將「Shibuya」誤譯/誤轉寫為「徐博雅」，導致指稱目標被錯置（應為地名「渋谷」而非人名式漢字）。此外用語「建物」は自然だが參考譯文的「ビル」の方更口語。主要錯誤為名稱錯誤，造成語意不忠實。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -29,9 +29,13 @@ export function openSession({ targetLang }) {
     const session = makeSession(ws, targetLang);
     let settled = false;
     ws.addEventListener("open", () => {
+      // input transcription 預設關閉,必須指定 model 才會有 input_transcript 事件(實測)
       ws.send(JSON.stringify({
         type: "session.update",
-        session: { audio: { output: { language: targetLang } } },
+        session: { audio: {
+          output: { language: targetLang },
+          input: { transcription: { model: "gpt-realtime-whisper" } },
+        } },
       }));
       // realtime API 在 open 後即可送音訊;不像 Gemini 有 setupComplete 門檻
       if (!settled) { settled = true; resolve(session); }

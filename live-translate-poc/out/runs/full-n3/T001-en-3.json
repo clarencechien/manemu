@@ -43,5 +43,19 @@
     },
     "reason": "The translation merges two distinct questions into one, omitting the direct question about the station's location. This also results in the awkward phrasing 'where is the fastest way', which affects fluency."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機譯將原句的兩個問題合併並錯誤表達為「Where is the fastest way to the station?」，導致未單獨詢問「車站在哪裡？」（遺漏原意）。句子語法上可理解但不自然，語意不夠忠實且失去原句的兩個問句結構，故給予較低的adequacy評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

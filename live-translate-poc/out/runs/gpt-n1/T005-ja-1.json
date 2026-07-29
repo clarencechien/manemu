@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T005",
+  "category": "directions",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問淺草寺跟晴空塔是同一個方向嗎?",
+  "reference": "すみません、浅草寺とスカイツリーは同じ方向ですか?",
+  "inputTranscript": "请问前草寺跟晴空塔是同一个方向",
+  "outputTranscript": "前草寺と秦空塔は同じ方向ですか?",
+  "inputDurationMs": 4331,
+  "outputAudioMs": 7600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 166,
+    "ttft_from_end_ms": -717,
+    "completion_lag_ms": 1047,
+    "ttfa_from_start_ms": 4665
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.652,
+    "coverage_ok": true,
+    "cer": 0.125
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:02:08.663Z"
+}
