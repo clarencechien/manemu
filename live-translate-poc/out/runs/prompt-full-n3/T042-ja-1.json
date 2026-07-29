@@ -1,0 +1,37 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T042",
+  "category": "appointment",
+  "traps": [
+    "code-switch",
+    "number",
+    "proper-noun"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我可以用 email 確認預約嗎?我的班機是 BR198。",
+  "reference": "メールで予約の確認をしてもいいですか?私のフライトはBR198です。",
+  "inputTranscript": "我 可 以 用 email 确 认 预 约 吗 ? 我 的 班 机 是 BR198 。",
+  "outputTranscript": "メールで予約を確認できますか?私の便は BR198です。",
+  "inputDurationMs": 6171,
+  "outputAudioMs": 6281,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 967,
+    "ttft_from_end_ms": 944,
+    "completion_lag_ms": 2646,
+    "ttfa_from_start_ms": 7267
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.781,
+    "coverage_ok": true,
+    "cer": 0.042
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:03:53.993Z"
+}

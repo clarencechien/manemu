@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T040",
+  "category": "appointment",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "不好意思,我想把預約從星期五改到星期六,不是取消。",
+  "reference": "Excuse me, I'd like to change my reservation from Friday to Saturday — not cancel it.",
+  "inputTranscript": "不 好 意 思 , 我 想 把 预 约 从 星 期 五 改 到 星 期 六 , 不 是 取 消 。",
+  "outputTranscript": "Excuse me, I'd like to change my reservation from Friday to Saturday, not cancel it.",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 5330,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 923,
+    "ttft_from_end_ms": 923,
+    "completion_lag_ms": 2354,
+    "ttfa_from_start_ms": 7522
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:03:17.367Z"
+}
