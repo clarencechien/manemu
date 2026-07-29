@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T016",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "我對蝦子過敏,餐點裡請不要放任何海鮮。",
+  "reference": "エビアレルギーがあるので、料理には海鮮を一切入れないでください。",
+  "inputTranscript": "我对虾子过敏,餐里请不要放任何海鲜。",
+  "outputTranscript": "私はエビアレルギーなので、料理には海鮮を入れないでください。",
+  "inputDurationMs": 4491,
+  "outputAudioMs": 5250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1504,
+    "ttft_from_end_ms": -1694,
+    "completion_lag_ms": 2996,
+    "ttfa_from_start_ms": 3096
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.933,
+    "coverage_ok": true,
+    "cer": 0.059
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:22:13.538Z"
+}

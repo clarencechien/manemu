@@ -1,0 +1,49 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T013",
+  "category": "transport",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我剛剛在月台上把手機弄丟了。",
+  "reference": "さっきホームで携帯をなくしてしまいました。",
+  "inputTranscript": "我刚刚在月台上把手机弄丢了。",
+  "outputTranscript": "さっきホームでスマホをなくしちゃった。",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 2750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 490,
+    "ttft_from_end_ms": 329,
+    "completion_lag_ms": 2529,
+    "ttfa_from_start_ms": 3389
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.9,
+    "coverage_ok": true,
+    "cer": 0.154
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:21:10.314Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思，且使用了自然的日語口語表達方式，語意忠實且流暢。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

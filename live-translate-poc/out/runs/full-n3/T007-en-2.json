@@ -1,0 +1,49 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T007",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "我要兩張到京都的車票,大人一張、小孩一張。",
+  "reference": "I'd like two tickets to Kyoto, one adult and one child.",
+  "inputTranscript": "我要两张到京都的车票,大人一张,小孩一张。",
+  "outputTranscript": "I'd like two tickets to Kyoto, one adult and one child.",
+  "inputDurationMs": 5051,
+  "outputAudioMs": 4750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1745,
+    "ttft_from_end_ms": -1745,
+    "completion_lag_ms": 2265,
+    "ttfa_from_start_ms": 3455
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:19:24.059Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is identical to the reference translation, perfectly conveying the original meaning in natural English."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

@@ -1,0 +1,50 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T012",
+  "category": "transport",
+  "traps": [
+    "honorific",
+    "proper-noun"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "不好意思,可以幫我看一下這班車是不是往橫濱的嗎?",
+  "reference": "Excuse me, could you help me check whether this train is bound for Yokohama?",
+  "inputTranscript": "不好意思,可以帮我看一下这班车是不是往横滨的吗?",
+  "outputTranscript": "Excuse me, could you help me check if this bus is going to Yokohama?",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1059,
+    "ttft_from_end_ms": -1153,
+    "completion_lag_ms": 2276,
+    "ttfa_from_start_ms": 3242
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.869,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:21:05.348Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is accurate and natural. '這班車' can be translated as 'this bus' or 'this train' depending on the context, so the machine translation is perfectly acceptable."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

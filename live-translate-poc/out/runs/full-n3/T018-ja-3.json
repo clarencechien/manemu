@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T018",
+  "category": "dining",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我要一份 tonkotsu 拉麵,麵要硬一點。",
+  "reference": "豚骨ラーメンを一つください。麺は硬めでお願いします。",
+  "inputTranscript": "我要一份豚骨拉面,面要硬一点。",
+  "outputTranscript": "豚骨ラーメンを一つ、麺は硬めで。",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 3750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1096,
+    "ttft_from_end_ms": -1118,
+    "completion_lag_ms": 2073,
+    "ttfa_from_start_ms": 3004
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.583,
+    "coverage_ok": true,
+    "cer": 0.421
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:22:59.628Z"
+}

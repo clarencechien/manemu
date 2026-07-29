@@ -1,0 +1,50 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T008",
+  "category": "transport",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "這班車會到大阪,但是應該不會停京都吧?",
+  "reference": "この電車は大阪に行きますが、京都には止まらないですよね?",
+  "inputTranscript": "这班车会到大阪,但是应该不会停京都吧。",
+  "outputTranscript": "このバスは大阪に行きますが、京都には止まらないでしょう。",
+  "inputDurationMs": 3851,
+  "outputAudioMs": 4250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -177,
+    "ttft_from_end_ms": -575,
+    "completion_lag_ms": 3129,
+    "ttfa_from_start_ms": 3822
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:19:34.599Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文自然流暢，準確傳達了原文的意思。「這班車」譯為「このバス」在無上下文時可接受。「應該不會停京都吧」譯為「京都には止まらないでしょう」語意準確。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

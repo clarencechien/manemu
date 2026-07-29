@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T019",
+  "category": "dining",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "這道菜看起來很好吃,可是我已經吃飽了。",
+  "reference": "This dish looks delicious, but I'm already full.",
+  "inputTranscript": "这道菜看起来很好吃,可是我已经吃饱了。",
+  "outputTranscript": "This dish looks delicious, but I've already eaten.",
+  "inputDurationMs": 4051,
+  "outputAudioMs": 3500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -923,
+    "ttft_from_end_ms": -1116,
+    "completion_lag_ms": 1828,
+    "ttfa_from_start_ms": 3276
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.053,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:23:26.619Z"
+}

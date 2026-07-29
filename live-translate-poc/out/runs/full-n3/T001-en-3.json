@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:17:16.692Z"
+  "ts": "2026-07-29T07:17:16.692Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The translation merges two distinct questions into one, omitting the direct question about the station's location. This also results in the awkward phrasing 'where is the fastest way', which affects fluency."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

@@ -1,0 +1,49 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T007",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我要兩張到京都的車票,大人一張、小孩一張。",
+  "reference": "京都までの切符を2枚ください。大人1枚、子ども1枚です。",
+  "inputTranscript": "我要两张到京都的车票,大人一张,小孩一张。",
+  "outputTranscript": "京都行きのチケットを2枚ください。大人1枚、子供1枚です。",
+  "inputDurationMs": 5051,
+  "outputAudioMs": 5500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1967,
+    "ttft_from_end_ms": -2056,
+    "completion_lag_ms": 2855,
+    "ttfa_from_start_ms": 3232
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.04,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:19:15.670Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文準確且自然地傳達了原文的語意。「京都行きのチケット」與參考譯文的「京都までの切符」意思相同且同樣自然。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

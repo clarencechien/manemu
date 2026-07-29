@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T011",
+  "category": "transport",
+  "traps": [
+    "code-switch",
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "我想幫 IC 卡儲值一千日圓。",
+  "reference": "I'd like to top up my IC card with one thousand yen.",
+  "inputTranscript": "我想帮IC卡充值1000日元。",
+  "outputTranscript": "I want to top up my IC card with 1000 yen.",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -409,
+    "ttft_from_end_ms": -554,
+    "completion_lag_ms": 2870,
+    "ttfa_from_start_ms": 3191
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.795,
+    "coverage_ok": true,
+    "cer": 0.5
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:20:45.612Z"
+}

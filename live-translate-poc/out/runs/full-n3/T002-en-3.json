@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:17:38.445Z"
+  "ts": "2026-07-29T07:17:38.445Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The translation changes the yes/no question about whether the entrance is in this building to a wh-question asking where the entrance is, omitting 'in this building'. It also mangles the name 'Shibuya' into 'Xu Boya'. However, the resulting sentence is grammatically fluent."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }
