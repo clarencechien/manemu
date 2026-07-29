@@ -7,8 +7,9 @@ import { fileURLToPath } from "node:url";
 import { orChat, pmap } from "./or.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const REPAIRER = "openai/gpt-5.4-nano";   // UI 上會用便宜快的
+const REPAIRER = process.env.REPAIRER || "openai/gpt-5.4-nano"; // UI 上會用便宜快的;env 可換強模型對照
 const JUDGE = "anthropic/claude-sonnet-5";
+const SUFFIX = process.env.REPAIRER ? "-" + process.env.REPAIRER.split("/")[1] : "";
 
 // 「行程 glossary」:使用者出發前輸入/由行程自動生成的清單
 const GLOSSARY = {
@@ -31,7 +32,7 @@ for (const runId of ["full-n3", "gpt-n1"]) {
 }
 console.log(`items: ${items.length} (pn=${items.filter((i) => i.group === "pn").length}, control=${items.filter((i) => i.group === "control").length})`);
 
-const outFile = path.join(root, "out/experiments/q2-glossary-repair.json");
+const outFile = path.join(root, `out/experiments/q2-glossary-repair${SUFFIX}.json`);
 const state = fs.existsSync(outFile) ? JSON.parse(fs.readFileSync(outFile, "utf8")) : { repairs: {} };
 
 const jobs = items.filter((it) => !state.repairs[it.key]?.verdict);

@@ -1199,6 +1199,638 @@
   "full-n3|T042-1|anthropic/claude-sonnet-5": {
    "suspect": false,
    "word": ""
+  },
+  "full-n3|T043-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T043-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "取消"
+  },
+  "full-n3|T043-3|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T043-3|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T043-3|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T044-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "晚30分钟"
+  },
+  "full-n3|T044-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T042-3|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T044-2|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T044-2|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "晚30分钟"
+  },
+  "full-n3|T044-3|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "晚30分钟到"
+  },
+  "full-n3|T044-3|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T045-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T045-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T045-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T045-2|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T044-2|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T045-3|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T045-2|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T045-3|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T046-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T044-3|anthropic/claude-sonnet-5": {
+   "suspect": true,
+   "word": "位置"
+  },
+  "full-n3|T046-2|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T046-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T046-2|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T045-2|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T046-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T045-3|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T046-2|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T046-3|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T047-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T044-1|anthropic/claude-sonnet-5": {
+   "suspect": true,
+   "word": "位置"
+  },
+  "full-n3|T046-3|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T047-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T047-2|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T047-2|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T047-3|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T047-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T048-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T046-3|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T047-2|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T047-3|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T048-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T047-3|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T048-2|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T048-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T048-3|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T048-2|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T049-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T049-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T049-2|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T049-2|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T048-3|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T048-2|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T049-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T048-3|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T050-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T049-3|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T049-3|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T049-2|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T050-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T049-3|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T050-2|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T050-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T050-2|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T050-3|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T050-2|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T001-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "full-n3|T050-3|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T001-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T002-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "徐布亚斯盖"
+  },
+  "full-n3|T050-3|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T002-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "徐布亚斯盖"
+  },
+  "gpt-n1|T001-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T003-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T003-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T004-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "计程"
+  },
+  "gpt-n1|T006-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "赶"
+  },
+  "gpt-n1|T003-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T006-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "赶"
+  },
+  "gpt-n1|T004-1|anthropic/claude-sonnet-5": {
+   "suspect": true,
+   "word": "搭计程"
+  },
+  "gpt-n1|T006-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T008-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T004-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "计程"
+  },
+  "gpt-n1|T008-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T009-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T009-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T002-1|anthropic/claude-sonnet-5": {
+   "suspect": true,
+   "word": "徐布亚斯盖"
+  },
+  "gpt-n1|T010-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T008-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T009-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T010-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "新筑"
+  },
+  "gpt-n1|T011-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "埃西卡"
+  },
+  "gpt-n1|T013-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "月台"
+  },
+  "gpt-n1|T011-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "埃西卡"
+  },
+  "gpt-n1|T013-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "弄"
+  },
+  "gpt-n1|T014-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T014-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "能"
+  },
+  "gpt-n1|T014-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T018-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "豚骨滋拉面"
+  },
+  "gpt-n1|T018-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "滋拉"
+  },
+  "gpt-n1|T019-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T013-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T011-1|anthropic/claude-sonnet-5": {
+   "suspect": true,
+   "word": "埃西卡"
+  },
+  "gpt-n1|T019-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T020-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T019-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T020-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T010-1|anthropic/claude-sonnet-5": {
+   "suspect": true,
+   "word": "新筑"
+  },
+  "gpt-n1|T018-1|anthropic/claude-sonnet-5": {
+   "suspect": true,
+   "word": "滋"
+  },
+  "gpt-n1|T021-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "两个多少钱"
+  },
+  "gpt-n1|T021-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T025-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "Instagram"
+  },
+  "gpt-n1|T029-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T029-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T025-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "Your mail limited edition"
+  },
+  "gpt-n1|T032-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T029-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T032-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T034-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "救"
+  },
+  "gpt-n1|T032-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T020-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T034-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "救"
+  },
+  "gpt-n1|T034-1|anthropic/claude-sonnet-5": {
+   "suspect": true,
+   "word": "叫救"
+  },
+  "gpt-n1|T035-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T021-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T036-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "头"
+  },
+  "gpt-n1|T035-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T038-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "青霉素"
+  },
+  "gpt-n1|T036-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "心脏病"
+  },
+  "gpt-n1|T038-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "青霉素"
+  },
+  "gpt-n1|T035-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "警察局"
+  },
+  "gpt-n1|T041-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "四點"
+  },
+  "gpt-n1|T041-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T036-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T042-1|openai/gpt-5.4-nano": {
+   "suspect": true,
+   "word": "BR 一"
+  },
+  "gpt-n1|T042-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "班机是 BR 一"
+  },
+  "gpt-n1|T038-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T043-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T043-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T041-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T044-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T044-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T043-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T044-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T045-1|anthropic/claude-haiku-4.5": {
+   "suspect": true,
+   "word": "麻"
+  },
+  "gpt-n1|T042-1|anthropic/claude-sonnet-5": {
+   "suspect": true,
+   "word": "BR 一"
+  },
+  "gpt-n1|T045-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T048-1|anthropic/claude-haiku-4.5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T048-1|openai/gpt-5.4-nano": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T048-1|anthropic/claude-sonnet-5": {
+   "suspect": false,
+   "word": ""
+  },
+  "gpt-n1|T045-1|anthropic/claude-sonnet-5": {
+   "suspect": true,
+   "word": "麻"
   }
- }
+ },
+ "stats": {
+  "anthropic/claude-sonnet-5": {
+   "n": 148,
+   "detection_rate": 0.288,
+   "mishear_n": 52,
+   "false_alarm_rate": 0.01,
+   "clean_n": 96
+  },
+  "anthropic/claude-haiku-4.5": {
+   "n": 152,
+   "detection_rate": 0.446,
+   "mishear_n": 56,
+   "false_alarm_rate": 0.073,
+   "clean_n": 96
+  },
+  "openai/gpt-5.4-nano": {
+   "n": 152,
+   "detection_rate": 0.429,
+   "mishear_n": 56,
+   "false_alarm_rate": 0.229,
+   "clean_n": 96
+  }
+ },
+ "labeling": "mishear: cer>=0.15, clean: cer<=0.05, ja-direction only"
 }

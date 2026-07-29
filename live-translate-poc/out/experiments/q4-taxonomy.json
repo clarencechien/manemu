@@ -239,6 +239,89 @@
    "stage": "translation",
    "type": "proper_noun",
    "evidence": "横滨被誤譯為Hengping,應為Yokohama"
+  },
+  "gpt-n1|T011-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T011-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "both",
+   "type": "homophone",
+   "evidence": "「IC」被誤轉寫為「埃希」,且譯文出現「Even with a knife」這種與原意無關的幻覺翻譯,顯示STT誤聽同音字加上翻譯階段的錯誤延伸"
+  },
+  "gpt-n1|T010-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T010-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "STT將「新宿」誤聽為「新柱」,導致譯文誤譯為Circular line"
+  },
+  "gpt-n1|T025-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T025-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「有沒有」被誤轉錄為「Your mail」,導致核心問句遺失"
+  },
+  "gpt-n1|T014-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T014-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "原話「這個不要辣」被誤聽為「这个不要啦」，「辣」與「啦」同音造成語意錯誤，導致譯文變成「Forget this」而非「不要放辣」"
+  },
+  "gpt-n1|T027-ja-1": {
+   "runId": "gpt-n1",
+   "tag": "T027-ja-1",
+   "model": "gpt-realtime-translate",
+   "stage": "translation",
+   "type": "omission",
+   "evidence": "STT逐字稿內容完整且正確，但譯文完全空白，翻譯階段未輸出任何結果，屬於翻譯遺漏"
+  },
+  "gpt-n1|T048-ja-1": {
+   "runId": "gpt-n1",
+   "tag": "T048-ja-1",
+   "model": "gpt-realtime-translate",
+   "stage": "translation",
+   "type": "omission",
+   "evidence": "STT逐字稿與原話一致,但譯文完全空白,未輸出任何日文翻譯內容"
+  },
+  "gpt-n1|T043-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T043-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "translation",
+   "type": "hallucination",
+   "evidence": "譯文開頭出現與原話無關的「Thursday」,原話中並無星期四相關內容,屬翻譯階段憑空生成"
+  }
+ },
+ "table": {
+  "full-n3": {
+   "stt": {
+    "proper_noun": 8,
+    "homophone": 14,
+    "truncation": 1
+   },
+   "translation": {
+    "omission": 1
+   }
+  },
+  "gpt-n1": {
+   "stt": {
+    "proper_noun": 2,
+    "homophone": 5
+   },
+   "translation": {
+    "other": 1,
+    "proper_noun": 1,
+    "omission": 2,
+    "hallucination": 1
+   },
+   "both": {
+    "homophone": 1
+   }
   }
  }
 }
