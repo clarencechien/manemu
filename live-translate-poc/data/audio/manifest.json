@@ -1,0 +1,14 @@
+{
+  "T001": {
+    "file": "data/audio/T001.wav",
+    "durationMs": 3211,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore"
+  },
+  "T014": {
+    "file": "data/audio/T014.wav",
+    "durationMs": 3251,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore"
+  }
+}

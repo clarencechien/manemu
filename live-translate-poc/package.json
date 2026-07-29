@@ -1,0 +1,14 @@
+{
+  "name": "live-translate-harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "可攜 Node harness:gemini-3.5-live-translate-preview 品質+延遲評測(CC web 可直接跑,之後可包成 Cloudflare Worker)",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "synth": "NODE_USE_ENV_PROXY=1 node src/synth.mjs",
+    "run": "NODE_USE_ENV_PROXY=1 node src/run.mjs",
+    "judge": "NODE_USE_ENV_PROXY=1 node src/judge.mjs",
+    "report": "node src/report.mjs"
+  }
+}
