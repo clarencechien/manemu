@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation completely missed the destination 'Shinjuku' (新宿) and instead hallucinated 'on the Circular line'. There is also a spacing typo in the English output ('lineis' instead of 'line is')."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "Machine translation changes key content: 'train'→'tram' (incorrect vehicle), omits destination 'back to Shinjuku' (omission), and inserts 'Circular line' which is not in source (hallucination). Time and question tag preserved. Fluency reduced by a typo ('lineis') and slight unnaturalness, but overall understandable."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

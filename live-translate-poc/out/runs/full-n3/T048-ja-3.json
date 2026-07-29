@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，日語表達自然。雖然「結構です」和「ありがとう」的禮貌程度略有不一致，但在口語中是可以接受的。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯未正確翻出「不用了/不需要」應為「結構です（いえ、結構です）」但寫成「構造です」（意味は“structure”になり不自然で誤訳）。其他部分「ありがとう。ただ見てるだけです。」語意大致可理解，但使用了非敬體の「ありがとう」而非參考譯文的「ありがとうございます」，且「見てる」為口語縮約（可接受）。因此語意忠實度偏低（主要意思的拒絕被誤寫），流暢度一般（句子可讀但第一詞錯誤且敬語不足）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. 'Is this seat occupied?' is a perfectly correct and common way to translate the source sentence, carrying the exact same meaning as the reference translation."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Translation accurately and fully conveys the original meaning; wording is natural and appropriate in English (\"occupied\" vs \"taken\" is equivalent here). No errors detected."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

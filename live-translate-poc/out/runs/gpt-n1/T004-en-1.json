@@ -46,5 +46,19 @@
     },
     "reason": "The translation is highly accurate and natural, conveying the exact meaning of the source text. 'I think I'll take a taxi' is a very natural way to express '我想搭計程車' in this context."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整、語意忠實。唯一差異為 \"I think I'll take a taxi\" vs 參考的 \"I'd like to take a taxi\"，但兩者在語意與語用上均可接受，表達了超過十五分鐘時想搭計程車的意圖。文法與自然度良好。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

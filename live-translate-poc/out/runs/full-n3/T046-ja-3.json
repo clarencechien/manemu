@@ -43,5 +43,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text and is perfectly natural in Japanese."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完全對應原文、自然流暢。唯獨較參考譯文少了敬語前綴「お」（お上手），屬於禮貌程度差異，故標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

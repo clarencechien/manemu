@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation incorrectly translates '這個不要辣' (no spicy for this one) as 'Forget this' (which means rejecting the item entirely). This is a significant omission/distortion of the user's request, although the second part of the sentence is translated perfectly."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文後半句“I can't really handle spicy food.”準確表達了原句我不太能吃辣；但前半句將“這個不要辣”(請不要辣/這份不要加辣)譯成“Forget this.”，改變了說話者意圖並加入了原文未有的指示，造成資訊遺失與誤導，因此語意忠實度下降。語句英文表達自然，故流暢度較高。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

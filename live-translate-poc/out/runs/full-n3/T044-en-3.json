@@ -45,5 +45,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text and is perfectly fluent in English. The addition of 'but' makes the transition natural."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（會晚30分鐘，詢問能否保留位子），因此語意忠實度高。用法略有不自然（英語中通常說 “hold our table” 或 “save our table” 而非僅說 “hold the table”），故流暢度略降一級。其餘無明顯錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

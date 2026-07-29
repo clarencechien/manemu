@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文「分開結帳」的意思，日語表達「会計を別々にしてもらえますか」也非常道地且禮貌度適當。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句請求把帳分開結帳的語意，表達自然通順。僅在敬語層次上略低於參考譯文（もらえますか vs いただけますか），但不影響可接受性。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

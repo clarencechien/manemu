@@ -43,5 +43,19 @@
     },
     "reason": "「請問」被誤譯為「たとえば」（例如），與原文意思不符。後半句「這個位子有人坐嗎？」翻譯為「この席、空いてますか？」（這個位子空著嗎？），意思基本相符且表達自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文能表達原意（詢問座位是否有人），但開頭加入「たとえば」（例如）是不自然且多餘的，改變語氣並可能造成誤解。另缺少原句的禮貌開場（例如「すみません」），所以在禮貌性上稍遜。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

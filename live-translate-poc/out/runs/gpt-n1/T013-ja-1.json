@@ -45,5 +45,19 @@
     },
     "reason": "「月台」（鐵路月台，日文應為「ホーム」）被誤譯為「ステージ」（舞台/表演台），導致地點語意出現偏差。「弄丟」譯為「落としました」（掉落/弄丟）尚可接受。日文句型本身非常流暢自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文語法自然，但語意不忠實。將「月台」翻成「ステージ」（舞台）為錯誤地名詞替換；且原文為「把手機弄丟了/なくしてしまいました」（遺失），機譯用「落としました」（落下して失くした/落とした）在語義上有差別，表達為掉落而非遺失，造成資訊失真。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

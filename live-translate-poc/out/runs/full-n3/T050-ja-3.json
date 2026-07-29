@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體，與參考譯文幾乎一致。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句語意：『那就麻煩你了』以「お願いします」表達請對方幫忙或拜託之意，雖然參考譯文用的是更完整的「よろしくお願いします」，但機譯的「お願いします」也可接受；『之後再聯絡』對應『また連絡します』，語意無失真。句子在日語中自然流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

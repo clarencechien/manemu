@@ -45,5 +45,19 @@
     },
     "reason": "譯文語意基本正確，且日文表達自然流暢。但譯文使用了常體（タメ口），而參考譯文使用的是敬體（丁寧語），在沒有上下文的情況下可能會有禮貌程度不符的問題。另外，「麻煩你了」譯為「助かったよ」（幫了大忙）在語境上是通順的，但與原文的字面意思稍有偏差。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意大體忠實：表達了感謝與今天受幫助的事實，但語氣由原文的敬體（手伝っていただいてありがとうございます、今日は本当にお世話になりました）降為較口語、非敬体（手伝ってくれてありがとう、今日は本当に助かったよ）。因此在禮貌與語域上有偏差，故給予4分。語句自然流暢，故fluency為5。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

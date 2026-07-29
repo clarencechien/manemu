@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. 'I really appreciate it' is an excellent pragmatic translation for '今天真的麻煩你了'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文抓到主要感謝意圖且語句自然，但遺漏「今天」與原句中的客套/抱歉語氣（「麻煩你了」的請求/歉意意味），造成語意不完整，因此給中等忠實度評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

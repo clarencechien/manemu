@@ -43,5 +43,19 @@
     },
     "reason": "譯文嚴重漏譯，僅翻譯出「你的中文很」，完全遺漏了「好」以及「是在哪裡學的」等關鍵訊息，句子結構不完整。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 1,
+    "fluency": 1,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機器譯文僅有片語「中国語がとても」，屬於未完成的片段，未傳達原句完整語意（讚美程度、敬語與詢問學習地點皆缺失）。因此語意忠實度與流暢度均極低，且為遺漏（omission=true）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

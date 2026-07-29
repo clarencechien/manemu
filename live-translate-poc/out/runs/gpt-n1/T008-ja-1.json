@@ -46,5 +46,19 @@
     },
     "reason": "譯文完整傳達了原文的意思。語音轉寫中「大阪」錯寫為「大坂」，且「行きますでも、」在日語接續上較不自然，應使用「行きますが、」或拆分為兩句「行きます。でも、」，但整體不影響理解。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致忠實：表達「列車到大阪但應該不會停京都」的資訊與語氣（よね、たぶん）都有保留。因此給予較高的 adequacy。語言自然度較低：句子將「行きます」と「でも」直接相連（行きますでも）不符合日語連接習慣，應改為「行きますが、」或在句中加標點，導致流暢性下降。另外使用「大坂」為異體字，但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

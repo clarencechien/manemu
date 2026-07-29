@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意。『このあたりに』與『この近くに』同義且自然，『急いでいます。』也恰當，僅在語氣上比參考譯文少了『んです』的說明語氣，但不影響忠實度與自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

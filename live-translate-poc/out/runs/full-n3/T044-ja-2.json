@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文非常準確且自然地翻譯了原文的意思。'30分遅れて到着します'與'席は確保できますか'皆符合中文原文，語氣也十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實傳達了原意（會晚30分鐘到、詢問能否保留位子），因此語意忠實度高。日語句子語法正確、自然，但用詞與參考譯文相比較口語直接（到着します／遅れます、確保できますか／取っておいていただけますか），禮貌程度較低，故流暢度略降一級並標記為 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

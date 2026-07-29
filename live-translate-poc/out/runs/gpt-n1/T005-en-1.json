@@ -45,5 +45,19 @@
     },
     "reason": "「淺草寺」被嚴重誤譯並幻覺為「Mr. Qian, the minister of finance」，「晴空塔」也被誤譯為「Cloud-Break Pagoda」。雖然英文句法通順，但關鍵地名完全錯誤，導致無法正確傳達語意。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 1,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文嚴重錯譯地名與主語：將「淺草寺」錯譯為人名與職稱（“Mr. Qian, the minister of finance”），將「晴空塔」奇怪地譯為“Cloud-Break Pagoda”。原句詢問兩地方向是否相同，機譯未保留原意並加入虛構資訊，語意不忠實。句子語法可理解但不自然或不合語境，因此流暢度低。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

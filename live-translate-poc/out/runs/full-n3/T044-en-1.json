@@ -45,5 +45,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text and is perfectly fluent in English. The addition of 'but' makes the transition natural."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（晚三十分鐘並請對方保留位子）。用詞自然，雖以 but 連接句子而非破折號或 our，但並未造成誤解或不自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

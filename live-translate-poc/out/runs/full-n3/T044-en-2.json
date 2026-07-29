@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. It correctly conveys the meaning of arriving 30 minutes late and asking to hold the table, with natural phrasing."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（會晚30分鐘，詢問是否能保留位子），因此語意忠實度高。語句可理解且自然，但“hold the table”略顯不及地道，通常會說“hold our table”或“hold the table for us”；連接詞用“but”也稍微改變語氣（參考譯文用破折號更自然）。因此流暢度評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

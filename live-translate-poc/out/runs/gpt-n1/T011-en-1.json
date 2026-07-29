@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation contains a severe hallucination (\"Even with a knife\") and alters the structure of the sentence into an incomplete conditional clause (\"if you top up...\"), which fails to convey the original intent (\"I want to...\")."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 1,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "機譯加入了與原文無關的片語“Even with a knife,”並且把原句的一人稱要求轉成條件式“if you...”，表達不完整且語意被干擾。雖然包含“top up an IC card with 1,000 yen”的片段，但整句不自然且有錯誤資訊（hallucination）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

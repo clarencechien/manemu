@@ -46,5 +46,19 @@
     },
     "reason": "譯文意思表達尚算完整，但用詞較為生硬。將「這杯」直譯為「このコップ」（杯子本身而非飲料），以及將「大杯/中杯」直譯為「大杯/中杯」（日語通常用「大サイズ/中サイズ」或「Lサイズ/Mサイズ」），顯得不夠自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（不要加冰、把大杯改成中杯、總共三杯），因此語意忠實度高。日語表達略顯不自然（例：'大杯を中杯に' 少了動詞，'全部三杯です' 比較常用的是 '全部で3杯です'），故流暢度稍降。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

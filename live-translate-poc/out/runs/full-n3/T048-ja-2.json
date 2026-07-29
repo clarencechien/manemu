@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，且日文表達自然流暢。雖然「ありがとう」較為口語，但在一般購物情境下是可以接受的。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（拒絕與只是看看），因此語意忠實度高（5）。但自然度略遜：使用「ありがとう」非敬體，且原參考譯更禮貌（ありがとうございます、ちょっと見ているだけなので），機器譯文在敬語程度與語氣上稍有不足，因此流暢度評為4。沒有遺漏或錯置否定，也無捏造資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文漏譯了「今天真的麻煩你了」的部分，且使用了較為隨便的常體（手伝ってくれて本当にありがとう），未反映出原文的禮貌程度。日文表達自然。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機器譯文傳達了感謝之意，但省略了「今天」的時間資訊，且使用較口語的表達（くれてありがとう），未呈現原文的敬語/麻煩您（お世話になりました、いただいてありがとうございます）的禮貌層次。句子在日語中通順自然，因此流暢度高。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

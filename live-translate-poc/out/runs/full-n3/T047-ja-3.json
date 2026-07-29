@@ -46,5 +46,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，且日文表達自然流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文含意：日本的夏天很熱，且表達台北更熱。日文句子自然流暢。雖然參考譯文使用了「もっと」，機譯以「暑いと思います」已足夠表達比較，並不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

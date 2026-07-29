@@ -46,5 +46,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text and is grammatically correct and natural."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately and completely conveys the original meaning; wording is natural and fluent. Minor difference in emphasis ('very hot' vs 'hot' and omission of 'even') does not affect adequacy."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

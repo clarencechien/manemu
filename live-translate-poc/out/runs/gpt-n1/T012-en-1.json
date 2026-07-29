@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation incorrectly translates the destination '橫濱' (Yokohama) as 'Hengping' (name_mangled), which is a critical error for navigation. Additionally, '這班車' is translated as 'this bus' instead of 'this train', though '車' can be ambiguous without context. The fluency of the English sentence is otherwise natural and grammatically correct."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "Machine translation preserves the general speech act (asking if the vehicle goes to a destination) and is fluent, but mistranslates key content: '這班車' was rendered as 'bus' rather than 'train' and '橫濱' (Yokohama) is incorrectly rendered as 'Hengping' (name mangling). These semantic errors significantly reduce adequacy."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

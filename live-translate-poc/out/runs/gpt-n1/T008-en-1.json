@@ -46,5 +46,19 @@
     },
     "reason": "The translation of '大阪' (Osaka) was transliterated as 'Daban' (name_mangled). There is also a minor hallucination/transcription error at the beginning ('Right nowthis' instead of 'This'). Otherwise, the core meaning is well conveyed."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文在語意上有多處錯誤：將『這班車』翻成 bus（原參考為 train），將『大阪』誤譯或拼成 Daban（人名/地名錯誤），並多加了不必要的詞 'Right now'（不在原句）。否定、疑問語氣大致保留（『應該不會...吧?』→ 'probably won't...right?'），但載具與地名錯誤造成資訊不正確，故 adequacy 評為 2。語句可理解但有拼寫/空格錯誤（'Right nowthis'）與不自然的專名，流暢度評為 2。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

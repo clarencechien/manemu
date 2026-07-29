@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文將「IC卡」誤譯為「AICカード」（多了A），屬於專有名詞/名稱錯誤（name_mangled），其餘語意與文法皆正確且流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致正確，表達想為 IC 卡儲值 1000 日圓的意圖與參考譯文一致；但將『ICカード』誤辨為『AICカード』，為名詞辨識錯誤（name mangling），因此未給滿分。日語句子結構自然，敬體也適當。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
