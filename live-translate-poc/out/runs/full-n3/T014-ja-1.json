@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:21:27.842Z"
+  "ts": "2026-07-29T07:21:27.842Z",
+  "judge": {
+    "adequacy": 1,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "譯文完全沒有翻譯出「辣」的意思，將「這個不要辣」誤譯為「這個不需要了（これはもういいです）」，將「不太能吃辣」誤譯為「已經吃不下了（もう食べられません）」，完全改變了原文的語意。譯文本身文法正確且流暢。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

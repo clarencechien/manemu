@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:21:32.381Z"
+  "ts": "2026-07-29T07:21:32.381Z",
+  "judge": {
+    "adequacy": 1,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "譯文完全遺漏了「辣」的意思，將「不要辣」誤譯為「這個不要了」，將「不能吃辣」誤譯為「吃不下了」，語意完全錯誤。但日文句子本身文法通順。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

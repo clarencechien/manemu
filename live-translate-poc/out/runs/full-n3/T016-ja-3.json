@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:22:15.479Z"
+  "ts": "2026-07-29T07:22:15.479Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思，日文表達自然流暢。雖然未完全對應「任何」(一切)這個強調詞，但整體語意完整且符合日常對話習慣。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }
