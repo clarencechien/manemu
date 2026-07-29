@@ -4,7 +4,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { openSession } from "./providers/gemini-live.mjs";
+import { openSession as openGemini } from "./providers/gemini-live.mjs";
+import { openSession as openOpenAI } from "./providers/openai-realtime.mjs";
 import { runRules } from "./rules.mjs";
 import { wavDecode, wavEncode, durationMs } from "./pcm.mjs";
 import { OUTPUT_SAMPLE_RATE, INPUT_SAMPLE_RATE, TRANSLATE_MODEL } from "./config.mjs";
@@ -23,6 +24,8 @@ const only = args.includes("--only") ? new Set(opt("only").split(",")) : null;
 const limit = Number(opt("limit", "0"));
 const concurrency = Number(opt("concurrency", "3"));
 const netInjectMs = Number(opt("net-inject", "0"));
+const provider = opt("provider", "gemini"); // gemini | openai
+const openSession = provider === "openai" ? openOpenAI : openGemini;
 const saveAudio = args.includes("--save-audio");
 const runId = opt("run-id", new Date().toISOString().replace(/[:.]/g, "-").slice(0, 17) + Math.random().toString(36).slice(2, 6));
 
@@ -79,7 +82,7 @@ async function runOne({ phrase, dir, rep }) {
           ? Math.round(t.firstVoicedAudio - t.firstFrameSent) : null,
       },
       rules: runRules(phrase, dir, session.inputTranscript, session.outputTranscript),
-      netInject_ms: netInjectMs, model: TRANSLATE_MODEL,
+      netInject_ms: netInjectMs, model: session.modelName ?? TRANSLATE_MODEL,
       runtime: "cc-web-node", ts: new Date().toISOString(),
     };
     fs.writeFileSync(path.join(runDir, `${phrase.id}-${dir}-${rep}.json`), JSON.stringify(result, null, 2));
