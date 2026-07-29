@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T004",
+  "category": "directions",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。",
+  "reference": "ここから歩いて何分ぐらいかかりますか?15分以上かかるならタクシーに乗りたいです。",
+  "inputTranscript": "从这里走过去大概要几分钟?超过15分钟的话,我想打车。",
+  "outputTranscript": "ここから歩いて何分くらいですか？ 15分以上かかるなら、タクシーに乗りたいです。",
+  "inputDurationMs": 5971,
+  "outputAudioMs": 5750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2781,
+    "ttft_from_end_ms": -2860,
+    "completion_lag_ms": 2332,
+    "ttfa_from_start_ms": 3319
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.923,
+    "coverage_ok": true,
+    "cer": 0.192
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:18:07.196Z"
+}

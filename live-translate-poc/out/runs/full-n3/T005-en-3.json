@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T005",
+  "category": "directions",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "請問淺草寺跟晴空塔是同一個方向嗎?",
+  "reference": "Excuse me, are Sensoji Temple and the Skytree in the same direction?",
+  "inputTranscript": "请问前草寺跟晴空塔是同一个方向吗?",
+  "outputTranscript": "Excuse me, are Senso-ji Temple and Skytree in the same direction?",
+  "inputDurationMs": 4331,
+  "outputAudioMs": 5000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1015,
+    "ttft_from_end_ms": -1313,
+    "completion_lag_ms": 3110,
+    "ttfa_from_start_ms": 3485
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.945,
+    "coverage_ok": true,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:18:44.445Z"
+}

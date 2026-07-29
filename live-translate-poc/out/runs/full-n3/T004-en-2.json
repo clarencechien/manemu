@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T004",
+  "category": "directions",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。",
+  "reference": "About how many minutes does it take to walk from here? If it's more than fifteen minutes, I'd like to take a taxi.",
+  "inputTranscript": "从这里走过去大概要几分钟?超过15分钟的话,我想打车。",
+  "outputTranscript": "It takes about how many minutes to walk from here? If it's more than 15 minutes, I'll take a taxi.",
+  "inputDurationMs": 5971,
+  "outputAudioMs": 6250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2794,
+    "ttft_from_end_ms": -2934,
+    "completion_lag_ms": 2755,
+    "ttfa_from_start_ms": 3306
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.851,
+    "coverage_ok": true,
+    "cer": 0.192
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:18:20.155Z"
+}

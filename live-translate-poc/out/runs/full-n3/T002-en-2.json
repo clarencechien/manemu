@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T002",
+  "category": "directions",
+  "traps": [
+    "code-switch",
+    "proper-noun"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "請問 Shibuya Sky 的入口是在這棟樓嗎?",
+  "reference": "Excuse me, is the entrance to Shibuya Sky in this building?",
+  "inputTranscript": "请问徐博雅Sky的入口是在这栋楼吗?",
+  "outputTranscript": "Excuse me, where is the entrance to Xu Boya Sky?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -976,
+    "ttft_from_end_ms": -1003,
+    "completion_lag_ms": 2410,
+    "ttfa_from_start_ms": 3023
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.787,
+    "coverage_ok": true,
+    "cer": 0.381
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:17:36.737Z"
+}
