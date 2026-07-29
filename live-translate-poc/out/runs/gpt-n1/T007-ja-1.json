@@ -45,5 +45,19 @@
     },
     "reason": "「京都」被誤譯為「ダンジョン」（地下城/Dungeon），屬於嚴重的專有名詞翻譯錯誤（Name mangling / Hallucination）。其餘關於張數、大人與小孩的翻譯皆正確且語句流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "目的地被嚴重誤譯（京都→ダンジョン），但張數與乘客類別正確，句子在日語上通順自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

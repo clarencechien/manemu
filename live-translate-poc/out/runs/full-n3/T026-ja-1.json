@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文準確傳達了原文的意思，且日文表達非常自然。雖然沒有像參考譯文那樣明確翻出「還是先（やっぱり今回は）」的語感，但「やめておきます」本身已帶有暫緩或作罷的意味，整體翻譯品質極佳。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致正確且自然，但缺少原文中『還是/果然（やっぱり）』與『這次/先（今回は／今回はやめておきます）』的細微語氣與時態限定，造成語意上略微縮減，因此給予4分的忠實度。流暢度良好，日語表達自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文多出了「Good morning, everyone.」的幻覺，且將「月台 (platform)」誤譯為「stage (舞台)」，影響語意忠實度。但英文句子本身文法正確且流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文大致傳達出「剛剛把手機弄丟」的意思，但加入了原文沒有的開場語“Good morning, everyone.”，並且將「月台」誤譯為“stage”（舞台），與參考的“platform”不符。語句英文流暢但有額外新增內容與地點錯誤，故給予中等忠實度與較高自然度評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

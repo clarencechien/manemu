@@ -48,5 +48,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text, and 'how much for both' is a very natural translation for '兩個多少錢'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately and completely conveys the source meaning; phrasing is natural and idiomatic (\"both\" vs \"two\" is equivalent here). No errors detected."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

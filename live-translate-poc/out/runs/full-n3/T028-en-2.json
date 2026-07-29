@@ -46,5 +46,19 @@
     },
     "reason": "The translation is fluent and conveys the main meaning accurately, but it omits the word '今天' (today). The name is translated using Hanyu Pinyin, which is acceptable."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately conveys all source information (reservation, name, two-night stay). Phraseing is natural and fluent in English. The only minor difference is romanization of the given name (Dawen vs. Ta-wen), which does not affect meaning."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文將「算我三千塊可以嗎？」(請求降價) 誤譯為「3000元でいいよ」(3000元就可以了)，語氣變成像是賣家同意降價或是買家勉強接受，失去了原本詢問、請求的語意。日文表達本身算流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文傳達了價格過高並提出3000的數字，但將貨幣寫為「元」而非日語中常用的「円」，且語氣從請求（能否降到3000）變成了陳述/允許（『3000元でいいよ』＝『3000でいいよ』，語氣偏向『可以』或『我接受』），失去禮貌請求的意味，故語意忠實與禮貌層面受損。語句結構基本自然，但用詞與語氣不夠恰當，因此fluency中等。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

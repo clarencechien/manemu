@@ -46,5 +46,19 @@
     },
     "reason": "專有名詞 'Shibuya Sky' 被錯誤音譯為 'Xu Bu Ya's' 且漏掉了 'Sky'，屬於嚴重的專有名詞翻譯錯誤 (name_mangled, omission)。此外，'請問' 被直譯為 'Please ask'，且整句語序不夠自然，影響流暢度。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 1,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文錯誤將「請問」直譯為 “Please ask”（應為 “Excuse me”/“May I ask”），且將專有名詞 “Shibuya” 錯誤拼為 “Xu Bu Ya”，導致語意不準確。句子結構與英語慣用問句也不自然，整體可理解但嚴重不流暢與不忠實。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

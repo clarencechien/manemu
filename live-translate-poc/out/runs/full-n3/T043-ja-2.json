@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文將「取消」誤譯為「領取票券」(チケットを受け取れば)，完全改變了原文的意思，屬於嚴重的誤譯與無中生有。譯文本身的日文語法流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "機譯在語意上加入了未出現的資訊（「チケットを受け取れば／receive the ticket」），把原句的「取消」誤譯為「領取票/受取」，導致句意錯誤。句子日語表達流暢自然，但語意不忠實，應使用「何時までにキャンセルすれば／何時までのキャンセルですか」等表現。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

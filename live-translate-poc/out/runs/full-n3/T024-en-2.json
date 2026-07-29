@@ -46,5 +46,19 @@
     },
     "reason": "The translation perfectly captures the meaning of the original text and is completely natural in English."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整忠實地傳達了原文含意（若打八折就買兩件），語句自然流暢。使用“20%”與“twenty percent”表述差異不影響意義。沒有明顯錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

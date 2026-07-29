@@ -1,6 +1,14 @@
-// OpenRouter 小客戶端:chat + 盡力 JSON。key 只從 env 讀。
-export const OR_KEY = process.env.openrouter_key || process.env.OPENROUTER_API_KEY;
-if (!OR_KEY) { console.error("缺 openrouter_key"); process.exit(1); }
+// OpenRouter 小客戶端:chat + 盡力 JSON。key 從 env 或 ~/.openrouter_key 讀
+// (CC web 的 env 變數在容器啟動時注入,session 中途加的進不來 → 檔案後備)。
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+function readKeyFile() {
+  try { return fs.readFileSync(path.join(os.homedir(), ".openrouter_key"), "utf8").trim(); }
+  catch { return null; }
+}
+export const OR_KEY = process.env.openrouter_key || process.env.OPENROUTER_API_KEY || readKeyFile();
+if (!OR_KEY) { console.error("缺 openrouter_key(env 或 ~/.openrouter_key)"); process.exit(1); }
 
 export async function orChat(model, prompt, { json = false, timeoutMs = 90000, maxTokens = 2000 } = {}) {
   const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {

@@ -45,5 +45,19 @@
     },
     "reason": "The translation is accurate and fluent, capturing the full meaning of the original text without any errors."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately conveys the meaning of the source. Minor stylistic/grammatical phrasing (‘is this price including or excluding tax?’) is slightly less natural than alternatives but is fully understandable."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

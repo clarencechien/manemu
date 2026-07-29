@@ -46,5 +46,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text and is perfectly fluent in English."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大意忠實：表達日本夏天很熱且台北更熱。唯獨細節上與參考譯文相比缺少強調詞“even”，以及原句用單數“夏天”而譯成複數“Summers”，造成輕微語氣/數量差異，但不影響主要語意。語句自然流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

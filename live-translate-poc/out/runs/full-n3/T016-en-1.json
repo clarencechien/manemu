@@ -45,5 +45,19 @@
     },
     "reason": "The translation contains a severe homophone error where '蝦子' (shrimp, xiāzi) was mistranslated as 'blind people' (瞎子, xiāzi), making the sentence nonsensical. Additionally, '餐點裡' (in the meal) was translated as 'on the table'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 1,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "Severe mistranslation: 原文 says allergic to '蝦子' (shrimp), but machine rendered 'blind people' — changes meaning completely and is potentially harmful. Sentence is otherwise grammatical and natural, though 'on the table' is less appropriate than 'in my food'."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

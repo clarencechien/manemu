@@ -45,5 +45,19 @@
     },
     "reason": "譯文漏譯了「總共」(in total)，但整體語意依然非常清晰且表達自然，故給予4分忠實度與5分流暢度。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達主要意思：詢問是否可退稅並表示購買金額超過5,000日圓。缺少參考譯文中的 'in total' 細節，但不影響整體理解。英文措辭 'I bought more than 5,000 yen' 稍微不夠地道（通常說 'I spent' 或 'I bought more than 5,000 yen worth of goods'），因此流暢度略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

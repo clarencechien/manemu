@@ -47,5 +47,19 @@
     },
     "reason": "譯文為空，完全遺漏。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 1,
+    "fluency": 1,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機器譯文為空，未翻譯原文內容，導致語意完全缺失。依規則當譯文為空或幾乎沒翻時，adequacy評為1並標記omission=true；fluency給予最低分1。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. Although 'appointment' is used instead of 'reservation', it is still a very appropriate translation for '預約' and perfectly conveys the original meaning."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達了時間、明天、下午三點、兩位成人。唯一小幅不精確為將「預約」譯為“appointment”而非較常用於訂位的“reservation”，在某些情境（如餐廳訂位）語氣或用詞稍有差異，但語意基本忠實。另外標點與大小寫無影響流暢性。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

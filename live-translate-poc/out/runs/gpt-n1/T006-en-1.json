@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation incorrectly turns a question ('Is there a restroom nearby?') into an assertion ('This place nearby has a bathroom'). Additionally, there is a spacing error ('nearbyhas') which impacts fluency."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文將原本的問句改為陳述句（原為詢問『這附近有沒有廁所？』，譯文變成『This place nearby has a bathroom』），造成語意功能錯誤；此外有空格錯誤（nearbyhas）及語序稍不自然。後半句『I'm in a rush』與原意相符。綜合評分：忠實度偏低(2)，通順度中等(3)。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

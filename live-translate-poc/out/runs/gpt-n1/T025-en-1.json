@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation completely omitted the first sentence ('有沒有 limited edition 的款式?') and the second sentence is grammatically incomplete because it lacks the object 'it' ('I saw on Instagram')."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 1,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "Machine output only contains 'I saw on Instagram,' omitting the primary question about a limited edition version. Therefore adequacy is very low (1). The utterance itself is grammatically natural, so fluency is acceptable (4). The main error is omission of content."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

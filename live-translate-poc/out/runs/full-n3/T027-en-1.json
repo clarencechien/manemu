@@ -45,5 +45,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text and is natural in English."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation accurately conveys the meaning of the source: asking about a tax refund and stating the purchase exceeded 5,000 yen. It omits the explicit phrase \"in total\" from the reference but the sense is preserved, so adequacy is slightly below perfect. The wording is natural and understandable, though slightly informal (\"5,000 yen worth\"), so fluency is scored 4."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

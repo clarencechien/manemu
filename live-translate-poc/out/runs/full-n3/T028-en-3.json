@@ -46,5 +46,19 @@
     },
     "reason": "The translation accurately conveys the reservation, name, and duration of stay, but omits the word 'today' (今天). The sentence structure is slightly informal but acceptable for spoken English. The name is translated using Pinyin instead of Wade-Giles, which is acceptable."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達有訂房、姓名與住兩晚的資訊，語句自然流暢（因此fluency=4）。唯獨細節：原文含「今天住兩個晚上」的「今天(from today)」未明確表達，且姓名拼法/音節處理（Chen Dawen vs reference Chen Ta-wen）與參考譯文有所差異，視為姓名處理不完全準確，因此給adequacy=4並標記name_mangled=true。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

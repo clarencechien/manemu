@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. It perfectly conveys the request to call a taxi and the details about the time and destination."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文流暢，但時間關係的語義有偏差。原句「明天早上六點半要到機場」較可能表示「需要在明早6:30到達機場」（arrive/be at the airport at 6:30），機器譯文則表為「在6:30需要一輛計程車去機場」（need a taxi at 6:30 to go to the airport），將「到達時間」和「叫車時間/出發時間」的重點轉換，致意義部分不符，故給中等偏低的adequacy。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

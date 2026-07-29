@@ -45,5 +45,19 @@
     },
     "reason": "The translation is accurate and natural, perfectly capturing the request for tonkotsu ramen with firm noodles."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完整、忠實原文（'一份' 用 'a' 表達適當），唯句型重複（兩次 I'd like）使語氣略顯不夠精練，故流暢度略降一分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

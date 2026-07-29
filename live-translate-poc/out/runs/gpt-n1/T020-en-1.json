@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and grammatically correct. It perfectly conveys the meaning of the source text, although it is slightly more formal than the reference translation."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意且用語自然。'split the bill' 與參考譯文的 'separate checks' 在餐飲情境下都能接受，語氣禮貌恰當。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation incorrectly changes the speaker's question ('Can I get a tax refund?') and statement of fact ('I bought more than 5,000 yen in total') into a conditional statement ('You can get a tax refund, if you buy...'). It also omits the concept of 'in total' (總共)."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Translation conveys the general rule about tax refunds and the 5,000-yen threshold, but changes the speaker’s question into a generic statement and loses the first-person information that the speaker already bought more than ¥5,000. Also drops 'in total'. English phrasing is otherwise natural."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

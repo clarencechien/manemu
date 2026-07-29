@@ -45,5 +45,19 @@
     },
     "reason": "The translation changes the interrogative request ('can you do 3,000?') into a declarative statement ('3,000 is fine'), altering the speaker's intent in the negotiation. The English is mostly fluent but contains a comma splice."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文保留了主要資訊（表示價格 3,000），語句也自然，但把原句的請求/詢問（\"算我三千塊可以嗎?\" = 能否接受三千）變成陳述（\"3,000 is fine.\"），改變了語氣與說話意圖，可能導致誤解（從詢問變為確認接受）。因此語意忠實略有扣分；語言流暢度良好。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

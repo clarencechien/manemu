@@ -45,5 +45,19 @@
     },
     "reason": "The translation is accurate and natural, perfectly conveying the meaning of the original text."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，語意與參考譯文一致；語句自然流暢，僅在 'air conditioning' vs 'air conditioner' 上有細微詞彙差異，但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

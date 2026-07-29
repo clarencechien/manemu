@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文將「算我三千塊可以嗎？」(請求折扣) 誤譯為「3000元でいいよ」(3000元就可以了/我出3000元就好)，遺漏了原文中「可以嗎？」的詢問與請求語氣，導致語意發生改變。日文表達本身算自然，但未能準確傳達原文的交際意圖。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "保留了「太貴」與3000的數字，但把請求句（『可以嗎?／〜してもらえませんか?』）處理成陳述式或口語同意（『でいいよ』），改變了說話意圖；且使用「元」(元)而非日語常用的「円」，貨幣單位錯誤。語句口語、略不禮貌，流暢度中等。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

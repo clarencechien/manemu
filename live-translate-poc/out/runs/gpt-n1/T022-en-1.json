@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，語氣在討價還價的語境中也非常自然流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達原意：表示太貴並要求價錢降到3000元。表達上比參考譯文更直接、帶有命令語氣（\"make it 3,000 yuan for me\"），可能稍微改變語氣但語意忠實度高。語句通順但略不如參考譯文自然，因此給予4分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

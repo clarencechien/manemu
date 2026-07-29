@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文將「蝦子」誤譯為同音的「瞎子」(blind people)，造成嚴重的語意錯誤。此外，「餐點裡」被譯為 on the table，也不夠準確。雖然英文句法流暢，但核心語意傳達錯誤。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 1,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "機譯把「蝦子 (shrimp)」錯譯為「blind people」，造成核心資訊嚴重錯誤（過敏對象完全錯置），導致語意不忠實，故給予最低adequacy。句子語法自然、可理解，因此fluency分數偏高。標記number_wrong與hallucination。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

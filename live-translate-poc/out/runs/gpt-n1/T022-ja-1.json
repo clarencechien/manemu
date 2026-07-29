@@ -45,5 +45,19 @@
     },
     "reason": "原文の「算我三千塊可以嗎？」（3000元にしてもらえますか？）という提案・交渉の疑問文に対し、訳文は「3000元でいいです」（3000元で良いです）という断定・承諾の表現になっており、ニュアンスが少し異なりますが、意味は大体伝わります。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文表達出「太貴了」並提出3000的價格，基本語意被傳達，但使用了「元」而非日語的「円」，且句尾以平板陳述（『3000元でいいです』）而非詢問或請求的禮貌表現（參考譯文為『3000円にしてもらえませんか?』），因此語意忠實度與自然度受影響。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

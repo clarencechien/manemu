@@ -46,5 +46,19 @@
     },
     "reason": "「走過去」被誤譯為「出て」（出去），漏譯了「走路」的語意。此外，前半句「だいたい何分か」結構破碎，不夠完整，但後半句「十五分を超えるなら、タクシーに乗ろうと思います」語意表達正確且流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯大致傳達了原句的核心意思（詢問所需時間與若超過15分鐘則想搭計程車），但有幾處問題降低分數：1) 原文問的是「從這裡走過去/步行需要幾分鐘？」機譯用「ここから出て」而非「ここから歩いて/歩いて行く」，未明確表達步行方式，語意略失準；2) 疑問句未完整（缺少動詞或疑問助詞，如「かかりますか？」），句子不自然；3) 整體日語語序與表達有些不流暢（例如「だいたい何分か、」應為「だいたい何分ぐらいかかりますか？」）。因此給予adequacy=3（部分資訊缺失/不精確）與fluency=2（語法與表達不自然）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

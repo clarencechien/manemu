@@ -45,5 +45,19 @@
     },
     "reason": "譯文大致準確且流暢，但將「兒童椅」譯為「チャイルドシート」（通常指汽車安全座椅）在餐廳情境下略顯不自然，較適合的說法是「子ども用の椅子」或「ベビーチェア」。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文傳達了原句的主要資訊（總共5人、2名小孩、需要兒童椅）且語句通順。但用語上有瑕疵：『チャイルドシート』在日語通常指自動車用のチャイルドシート（チャイルドシート／カーシート）で、飲食店や施設で使う『子ども用の椅子／子ども椅子』とは異なるため、場面によっては誤訳と受け取られる可能性がある。若是餐廳等情境，應用『子ども用の椅子（子ども用の椅子をお願いします）』等更自然、精確。語法上則無重大問題。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

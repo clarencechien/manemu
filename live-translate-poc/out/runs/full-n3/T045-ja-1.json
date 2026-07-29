@@ -45,5 +45,19 @@
     },
     "reason": "譯文語意完整且表達非常自然。唯一的問題是語氣過於口語/非正式（使用了「ありがとう」和「助かったよ」），相較於原文較為客氣的語氣，敬語表現不足（honorific_off）。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（感謝與今天麻煩到對方），語句也自然通順。但原文語氣偏禮貌，機器譯文使用較口語、非敬體的表現（くれてありがとう、助かったよ），失去敬語層次，因此標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

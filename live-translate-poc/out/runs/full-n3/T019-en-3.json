@@ -45,5 +45,19 @@
     },
     "reason": "The translation is fluent and conveys the main meaning, although 'already eaten' is a slight deviation from the exact meaning of 'already full' (吃飽了)."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯句子語法流暢且自然，但語意與原文不完全一致。原文表示「已經吃飽」（已飽、不能再吃），機譯為“I've already eaten”強調已經吃過（吃過和飽可能相關但非同義），失去“已經飽”的狀態資訊，因而降低adequacy分數。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

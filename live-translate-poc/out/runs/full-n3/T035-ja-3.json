@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文準確且自然地傳達了原文的意思，語法正確，沒有遺漏或錯誤。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原文訊息（護照不見，詢問警察局在哪裡），語句在日語中自然、口語化（「なくなったんですが、〜どこですか?」），僅與參考譯文在語氣/表現上有細微差異，但不影響忠實度或流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

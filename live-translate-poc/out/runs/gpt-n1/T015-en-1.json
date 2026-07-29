@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and fluent. Although it uses the past tense ('there were', 'needed') instead of the present/future tense, the core meaning is perfectly preserved and the phrasing is natural."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達了原句的主要資訊（五人、兩個小孩、需要兒童椅），但有兩處問題降低忠實度：1) 時態錯誤—原句為現況或未來需求（are/will need），機譯使用過去式（were/needed），可能改變語氣或時態意義；2) 術語選擇不精確—‘child seats’ 易被理解為汽車安全座椅，而原文與參考譯文意指餐桌用的高腳兒童椅（high chairs）。語句流暢且文法正確，但上述語義不精確使得adequacy下降。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

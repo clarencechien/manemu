@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文出現嚴重的幻覺與漏譯。「回新宿」被嚴重幻覺為「スターアライド」，導致地名「新宿」漏譯；「最後一班」被誤譯為「最後の一回分」。整句語意嚴重偏差，且缺乏問句語氣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "譯文只保留了時間「11時45分」，但遺漏或錯譯多項關鍵資訊：未表明目的地「新宿」（omission）、句子未呈疑問句（語氣缺失），並且將「最後一班/最終」錯譯為不自然的「最後の一回分」（number_wrong/fluency問題）。此外插入了不存在的詞語「スターアライド」，屬於憑空增補（hallucination/name_mangled）。整體語意忠實度低且日語表達不自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

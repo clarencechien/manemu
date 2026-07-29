@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation accurately and naturally conveys the meaning of the original text, matching the reference translation closely."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實且完整地傳達原文意思（感到頭暈，但無心臟病病史）。語句在目標語中自然流暢，僅次於參考譯文在語氣上略有不同（'I'm very dizzy' vs 'I feel very dizzy'），但不影響準確性或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

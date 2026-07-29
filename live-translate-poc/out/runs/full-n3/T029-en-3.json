@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation perfectly captures the meaning of the original text and is highly fluent. It matches the reference translation almost exactly, differing only in punctuation."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地傳達原文意思，包含否定與詢問今夜是否有空房，語法自然流暢。與參考譯文差異僅在標點（破折號 vs 逗號），不影響語意或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

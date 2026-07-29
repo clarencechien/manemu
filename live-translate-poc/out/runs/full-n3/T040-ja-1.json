@@ -45,5 +45,19 @@
     },
     "reason": "譯文漏譯了「從星期五改到星期六」中的「星期六」，誤譯為「改到星期五」，導致關鍵資訊遺失。日文表達尚算自然。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文把更改改成「予約を金曜日に変更したい」──原文是要把預約從星期五改到星期六（from Friday to Saturday），機譯誤寫成改到星期五，造成日期方向錯誤，屬於內容遺漏/錯誤。否定（不是取消）意圖有表達但結尾句不自然（句尾未完整），語句略顯口語且不夠流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

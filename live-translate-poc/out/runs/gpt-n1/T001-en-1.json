@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation is excellent. It accurately conveys the meaning of the source text in a natural and polite manner, matching the reference translation's intent perfectly."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately conveys both questions (location of the station and asking for the quickest route). Wording is natural and idiomatic in English. The polite 'Excuse me' from the reference is omitted but not necessary for meaning, so adequacy remains high."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

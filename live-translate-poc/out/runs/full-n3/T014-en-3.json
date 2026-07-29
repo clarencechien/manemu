@@ -45,5 +45,19 @@
     },
     "reason": "譯文完全漏譯了「辣」這個關鍵字，導致句意從「不要加辣」變成「不要這個東西」，嚴重改變了原文的意思。不過譯文本身的英文文法是自然流暢的。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "譯文語法通順，但語意不忠實。原句意為「這個不要辣（請不要放辣）」，而機器譯文為“I don't want this, I can't really eat it.”，遺漏了“不要辣/不加辣”的要點（omission），並加入了原句未明示的拒絕整個物品的含意“I don't want this”（hallucination），雖然第二句大致表達「我不太能吃辣」的原因，但整體造成誤解，因此給予較低的adequacy分數；fluency給中高分因為語句自然流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

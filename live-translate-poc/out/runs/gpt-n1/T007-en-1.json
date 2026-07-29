@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural, fully conveying the meaning of the source text without any errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（兩張到京都的車票，一張大人票一張小孩票），無遺漏，語法自然流暢，表達符合英文習慣。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文「分開結帳」的意思，日語表達「別々に会計できますか」也非常道地且禮貌適當。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文意義正確，表達清楚自然。僅較參考譯文少了更敬體的表現（如「お会計」或「いただけますか」），但並不影響語意或可接受性。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

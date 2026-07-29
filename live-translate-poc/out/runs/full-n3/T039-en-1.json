@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. 'make an appointment' is a valid translation for '預約', and all other details (tomorrow at 3 PM, two adults) are perfectly translated."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。將「預約」譯為 appointment 而非 reservation 僅為用詞差異，意義相同；句子流暢自然，無錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

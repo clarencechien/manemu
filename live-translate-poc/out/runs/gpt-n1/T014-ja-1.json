@@ -45,5 +45,19 @@
     },
     "reason": "「這個不要辣」被誤譯為「これはいらないな」（我不要這個），漏譯了「辣」的要求，這會導致語意出現偏差（變成拒絕整個食物，而非要求不加辣）。後半句「我不太能吃辣」翻譯正確。日文語法流暢度良好。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "第二句「私はあまり辛いものは食べられない」正確表達原意，語意忠實。第一句將「這個不要辣／請不要辣」誤譯為「これはいらないな」（「這個我不需要/不要這個」），改變了請求的對象與意圖，屬於錯譯或加入了原文未有的信息，故降低忠實度。整句日文語法自然、口語感強，但第一句用法不當，故 fluency 評為4，adequacy 評為3。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

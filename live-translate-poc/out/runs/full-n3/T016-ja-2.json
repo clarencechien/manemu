@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，日文表達自然流暢。雖然未完全對應「任何」(一切)這個強調詞，但整體語意完整且符合日常對話習慣。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（我對蝦子過敏，請餐點不要放海鮮），語氣與表達在日語中自然流暢。與參考譯文相比，參考譯文用了「一切」強調完全不放，機器譯文雖未明顯強調，但語意相同，因此評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

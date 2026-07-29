@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation perfectly conveys the meaning of the original text and is completely natural in English."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation correctly and fully conveys the original meaning with natural, idiomatic English. Punctuation difference (comma vs em dash) does not affect adequacy or fluency."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

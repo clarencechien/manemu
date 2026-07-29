@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文漏譯了關鍵訊息「到機場」（airport），且將「六點半要到（機場）」的意思轉變為「六點半需要一台計程車」（I need one at 6:30），造成語意偏差與遺漏，故標記 omission。英文句型本身流暢度良好。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機器譯文語句自然流暢，但語意有部分遺失。原文是「明天早上六點半要到機場」(指到達機場的時間)，機譯為“I need one at 6:30”暗示需要計程車在六點半到來，未明確表達是要在六點半到達機場，可能改變出發時間或接送時間的意圖，屬於資訊遺漏/歧義。因此給予中等的adequacy評分，fluency為高。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

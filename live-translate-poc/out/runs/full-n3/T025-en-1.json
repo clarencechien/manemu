@@ -45,5 +45,19 @@
     },
     "reason": "The translation is accurate and natural, perfectly conveying the original meaning."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文意義（詢問是否有 limited edition 款式，並說在 Instagram 上看到），語法自然流暢。單複數處理（styles/the version, them/it）不影響整體語意，故未標記錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

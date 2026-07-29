@@ -47,5 +47,19 @@
     },
     "reason": "The translation accurately conveys the original meaning. The use of 'appointment' instead of 'reservation' is acceptable for '預約', though 'reservation' is more common in the context of flights. The phrasing 'I can ..., right?' is natural in spoken English. A minor deduction in fluency is due to the trailing comma."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation conveys the original meaning (asking whether confirmation can be done by email and providing flight number) but slightly shifts phrasing from a direct question 'Can I confirm...' to 'I can confirm... right?', which is close but less natural as a polite request. Minor punctuation issue (trailing comma). Overall understandable and natural."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

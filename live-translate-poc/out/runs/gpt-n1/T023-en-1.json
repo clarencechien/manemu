@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and captures the full meaning of the source text. The phrasing 'tax included or excluding tax' is slightly asymmetrical but completely understandable and natural in a spoken context."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問價格是否含稅或未稅），因此語意忠實度高。用語略顯不自然與重複（“tax included or excluding tax” 結構不夠流暢），故流暢度中等。無遺漏或錯誤資訊，也無增添虛構內容。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

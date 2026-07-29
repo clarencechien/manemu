@@ -45,5 +45,19 @@
     },
     "reason": "The translation is fluent, but '弄丟了' translates more accurately to 'lost' rather than 'dropped', which slightly alters the meaning."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation is fluent but changes meaning: '把手機弄丟了' means 'lost my phone', while 'dropped my phone' implies physically dropping it. Error affects adequacy but not fluency."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

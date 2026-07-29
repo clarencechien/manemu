@@ -46,5 +46,19 @@
     },
     "reason": "地名「Shibuya（渋谷）」被錯誤翻譯為「徐不娓」，導致專有名詞嚴重毀損（name_mangled）。其餘句型結構與文法皆正確且自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大意能看出是在問某個景點的入口是否在這棟樓，但關鍵地名「渋谷(Shibuya)」被錯誤譯為「徐不娓」，導致語意不正確或難以辨認。句子其餘部分（「のスカイの入口」「このビルの中ですか」）語法可理解但有些不自然，且開頭以「失礼、」較不自然，應為「すみません、」。因此給予較低的忠實度與自然度評分；標記為 name_mangled。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

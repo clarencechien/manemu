@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的所有訊息，包含時間（明天下午三點）與人數（兩個大人）。雖然「大人2人」放在句尾，但在口語中十分自然，語意完整且流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：正確表達了時間（明日の午後3時）、人數（大人2人）與預約意圖（予約したいです）。日語自然流暢，僅有標點處理與參考譯文語序略有不同，但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

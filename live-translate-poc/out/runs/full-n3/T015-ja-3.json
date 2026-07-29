@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且流暢，完整傳達了原文的所有訊息，包含人數、小孩人數以及對兒童椅的需求，日語表達十分自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句資訊：總共五人、兩個小孩、需要兒童椅。語法自然、流暢。唯一細微差異是原句語氣偏請求（參考譯文用「お願いします」），機器譯文以陳述句「必要です」表達，故語意忠實略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

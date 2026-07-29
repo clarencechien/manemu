@@ -45,5 +45,19 @@
     },
     "reason": "「機場」（空港）被誤譯為「競技場」，導致前半句語意不符；後半句「火車站」譯為「駅」且句型表達正確。譯文文法流暢自然，但因關鍵詞譯錯影響忠實度。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "機譯將「機場」(空港)誤譯為「競技場」(競技場)，導致語意錯誤；句子否定與對比結構保留，且日語表達自然口語化，因此流暢度高但語意不忠實。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

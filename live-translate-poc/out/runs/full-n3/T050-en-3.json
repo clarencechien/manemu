@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. 'Then I'll leave it to you, we'll be in touch' perfectly captures the meaning of the source text '那就麻煩你了,之後再聯絡'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文傳達了原句主要意思（表示請對方代為處理並表示之後會再聯絡），但語氣與禮貌成分略有差異（原文帶有感謝/麻煩的語氣，reference 為“Thanks in advance”），機譯的“Then I'll leave it to you”接近但不完全同義。句子自然度良好，但以逗號連接兩個獨立子句在英文中稍顯口語或逗句問題，故評分為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

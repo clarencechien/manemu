@@ -45,5 +45,19 @@
     },
     "reason": "譯文完全傳達了原文的語意，且日文表達自然流暢。雖然使用了較口語的「なくしちゃった」而非參考譯文的敬語，但在沒有特定上下文的情況下是非常道地的表達方式。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（在月台上剛剛把手機弄丟了），用詞自然（スマホ vs 携帯 只是用語差異），句型流暢。敬體與口語差異存在，但不影響語意或可理解性。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。「免税はできますか？」與「合計5000円以上買いました」完全符合日文口語表達習慣，且精確傳達了原文的意思。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文意義完整且忠實，語句自然可接受。僅在助詞與詞序上與參考譯文有輕微差異（「免税はできますか?」vs「免税できますか?」、「合計」vs「全部で」），不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

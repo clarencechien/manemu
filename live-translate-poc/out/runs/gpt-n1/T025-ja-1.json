@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。「款式」譯為「デザイン」（設計/款式）十分貼切，「Instagram」譯為日語口語常用的「インスタ」也非常道地，語意完整傳達，無任何錯誤。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思，『限定版のデザイン』雖比參考譯的『モデル／款式』偏向設計面，但語義可接受；『インスタで見たんです』也自然。只有輕微風格/用詞差異，故給予較高但非滿分的忠實度評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
