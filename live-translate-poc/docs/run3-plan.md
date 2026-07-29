@@ -52,6 +52,30 @@ R2 部署鏈打通後,把 runner 包進 Queue consumer(provider 介面不動),Cr
 R2 上線後真手機 + 行動網路:量端到端體感延遲(對照 harness 的樂觀下界,預期 +0.5–1.5s)、
 iOS 相容性、回音場景。劇本可用 Q6 v2 語料的多句情境。
 
+## R1.5|prompt 模式全量驗證(W6 重大發現的後續,優先級升到 R1 同級)
+
+**問題**:W6 顯示一般 Live + 口譯 prompt 在殺手句上 adequacy 4.80、零災難(vs translate 模式 4.07、27% 災難),代價 +1.8s 首音(死氣 p50 1.0s 仍過門檻)。n=20 且只測 ja——全量 50×2×3 若重現,**M3 預設引擎換人**。
+
+**與 W 波衝突分析(結論:不衝突,可並行)**:
+
+| 資源 | W1–W5 | prompt 全量 run | 衝突? |
+| --- | --- | --- | --- |
+| API | OpenRouter(文字) | Gemini Live WS(3.1-flash-live) | ❌ 不同供應商不同配額 |
+| Gemini flash 評審配額 | 不用 | 用(300 筆) | ❌ 日限 10K,目前用 <1K |
+| 本機資源 | I/O bound | I/O bound | ❌ |
+| 程式檔 | 已載入記憶體 | 改 run.mjs 加參數 | ❌ 執行中程序不受影響 |
+
+唯一未知:**3.1-flash-live 的併發 session 上限與計價**(dashboard 沒有它的列)——先跑 concurrency 2 + 重試,開跑前查計價寫進報告。
+
+**步驟**:
+1. run.mjs 加 `--gemini-model` 與 `--interpreter-prompt` 參數(provider 已支援覆寫)。
+2. prompt 鎖語域(W6 出現過關西腔):ja 用「標準語、です・ます體」;en 用 neutral polite。
+3. `prompt-full-n3`:50×2×3 = 300 sessions,concurrency 2,約 30–40 分鐘。
+4. 評審:Gemini flash + gpt-5-mini 雙評 → OR 五廠面板(W 波結束後跑,或直接並行)。
+5. 對照:compare.mjs + tone-check 問句保留率 + 延遲分布(特別看長句的 ttfa 劣化——turn-based 對句長更敏感,W6 的 T004 到 7 秒)。
+
+**決策規則**:共識 adequacy ≥4.5 且災難率 ≤5% 且 ttfa_from_end p90 ≤2s → **M3 預設引擎 = prompt 模式**(translate 模式降為「快速模式」選項);未達標 → 維持 translate 模式 + 防禦矩陣。
+
 ## 本輪明確不做
 
 - OpenAI realtime 深入並測(結論已足:快但品質差 0.5,備援定位)
