@@ -1,0 +1,50 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T024",
+  "category": "shopping",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "這件如果打八折的話,我就買兩件。",
+  "reference": "これが2割引きになるなら、2着買います。",
+  "inputTranscript": "这件如果打八折的话,我就买两件。",
+  "outputTranscript": "これ、もし2割引なら2着買うわ。",
+  "inputDurationMs": 3491,
+  "outputAudioMs": 3500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -523,
+    "ttft_from_end_ms": -549,
+    "completion_lag_ms": 2335,
+    "ttfa_from_start_ms": 3077
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.778,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:24:50.144Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思，將「打八折」正確翻譯為「2割引」，語句自然流暢。雖然使用了較為口語的結尾詞「わ」，但整體語意與流暢度極佳。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

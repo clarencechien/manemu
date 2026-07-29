@@ -1,0 +1,49 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T030",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "請問退房時間是早上十點還是十一點?",
+  "reference": "Is checkout at ten or eleven in the morning?",
+  "inputTranscript": "请问退房时间是早上10点还是11点?",
+  "outputTranscript": "Excuse me, what is the check-out time, 10 a.m. or 11 a.m.?",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1136,
+    "ttft_from_end_ms": -1137,
+    "completion_lag_ms": 2775,
+    "ttfa_from_start_ms": 3164
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.114,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:26:57.627Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is accurate, natural, and conveys the exact meaning of the original text without any errors."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

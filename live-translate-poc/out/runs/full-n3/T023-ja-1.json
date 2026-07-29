@@ -1,0 +1,49 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T023",
+  "category": "shopping",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問這個價格是含稅還是不含稅?",
+  "reference": "この値段は税込みですか、それとも税抜きですか?",
+  "inputTranscript": "请问这个价格是含税还是不含税?",
+  "outputTranscript": "すみませんが、この価格は税込みですか、それとも税抜きですか？",
+  "inputDurationMs": 3891,
+  "outputAudioMs": 5000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -897,
+    "ttft_from_end_ms": -921,
+    "completion_lag_ms": 3524,
+    "ttfa_from_start_ms": 3103
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.286,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:24:25.227Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思，並且日語表達自然流暢。「請問」翻譯為「すみませんが」非常貼切，符合日語的語用習慣。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

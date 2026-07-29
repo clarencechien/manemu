@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T047",
+  "category": "smalltalk",
+  "traps": [
+    "sentence-final",
+    "proper-noun"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "日本的夏天很熱,不過我覺得台北更熱。",
+  "reference": "日本の夏は暑いですね。でも、台北のほうがもっと暑いと思います。",
+  "inputTranscript": "日本的夏天很热,不过我觉得台北更热。",
+  "outputTranscript": "日本の夏はとても暑いですが、台北の方がもっと暑いと思います。",
+  "inputDurationMs": 4011,
+  "outputAudioMs": 5500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -717,
+    "ttft_from_end_ms": -1158,
+    "completion_lag_ms": 3784,
+    "ttfa_from_start_ms": 3483
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:32:26.078Z"
+}

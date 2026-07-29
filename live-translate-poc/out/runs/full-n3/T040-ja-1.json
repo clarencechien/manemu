@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T040",
+  "category": "appointment",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "不好意思,我想把預約從星期五改到星期六,不是取消。",
+  "reference": "すみません、予約を金曜日から土曜日に変更したいんです。キャンセルではありません。",
+  "inputTranscript": "不好意思,我想把預約從星期五改到星期六,不是取消。",
+  "outputTranscript": "すみません、予約を金曜日に変更したいんです、キャンセルではなく。",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 6750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -3715,
+    "ttft_from_end_ms": -3741,
+    "completion_lag_ms": 2450,
+    "ttfa_from_start_ms": 2884
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.784,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:30:03.532Z"
+}

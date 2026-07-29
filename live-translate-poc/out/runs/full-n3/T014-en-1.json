@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:21:37.479Z"
+  "ts": "2026-07-29T07:21:37.479Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The machine translation incorrectly translates '這個不要辣' (no spice for this one) as 'I don't want this', which completely changes the speaker's intent. The second half is translated correctly. The English is fluent but contains a comma splice."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

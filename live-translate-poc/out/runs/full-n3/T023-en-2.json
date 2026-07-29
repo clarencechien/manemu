@@ -1,0 +1,49 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T023",
+  "category": "shopping",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "請問這個價格是含稅還是不含稅?",
+  "reference": "Is this price with tax or without tax?",
+  "inputTranscript": "请问这个价格是含税还是不含税?",
+  "outputTranscript": "Excuse me, is this price including or excluding tax?",
+  "inputDurationMs": 3891,
+  "outputAudioMs": 4250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -810,
+    "ttft_from_end_ms": -810,
+    "completion_lag_ms": 2851,
+    "ttfa_from_start_ms": 3189
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": false,
+    "coverage_ratio": 1.4,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:24:41.007Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is accurate and fluent, capturing the full meaning of the original text without any errors."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

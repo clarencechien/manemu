@@ -1,0 +1,49 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T022",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "太貴了,算我三千塊可以嗎?",
+  "reference": "That's too expensive — can you do three thousand?",
+  "inputTranscript": "太贵了,算我3000块可以了。",
+  "outputTranscript": "It's too expensive, 3,000 is fine.",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 3000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 218,
+    "ttft_from_end_ms": 181,
+    "completion_lag_ms": 2572,
+    "ttfa_from_start_ms": 3118
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.658,
+    "coverage_ok": true,
+    "cer": 0.455
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:24:21.940Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation changes the interrogative request ('can you do 3,000?') into a declarative statement ('3,000 is fine'), altering the speaker's intent in the negotiation. The English is mostly fluent but contains a comma splice."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

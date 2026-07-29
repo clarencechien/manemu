@@ -1,0 +1,33 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "Help! Please call an ambulance!",
+  "inputTranscript": "救命,请帮我叫救护车。",
+  "outputTranscript": "Help, please call an ambulance.",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 2500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 356,
+    "ttft_from_end_ms": 333,
+    "completion_lag_ms": 2545,
+    "ttfa_from_start_ms": 2956
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:28:07.011Z"
+}

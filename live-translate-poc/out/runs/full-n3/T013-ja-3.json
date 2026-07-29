@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:21:14.894Z"
+  "ts": "2026-07-29T07:21:14.894Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思，且使用了自然的日語口語表達。雖然使用了常體（なくしちゃった）而非參考譯文的敬體，但在沒有特定語境要求的情況下是完全可以接受且流暢的。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

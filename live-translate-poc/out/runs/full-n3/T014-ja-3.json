@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:21:34.029Z"
+  "ts": "2026-07-29T07:21:34.029Z",
+  "judge": {
+    "adequacy": 1,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "譯文完全遺漏了「辣」的意思，將「不要辣」誤譯為「もういいです」（不需要了），並將「不能吃辣」誤譯為「あまり食べられません」（吃不下太多），導致語意完全改變。目標語本身尚算流暢。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

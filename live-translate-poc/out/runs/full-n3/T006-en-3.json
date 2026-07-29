@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:19:04.356Z"
+  "ts": "2026-07-29T07:19:04.356Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation perfectly conveys the meaning of the original text and is completely natural in English."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

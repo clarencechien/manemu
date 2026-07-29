@@ -1,0 +1,52 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T021",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "這個不要,我要旁邊那個藍色的,兩個多少錢?",
+  "reference": "Not this one — I want the blue one next to it. How much for two?",
+  "inputTranscript": "这个不要,我要旁边那个蓝色的,两个多少钱?",
+  "outputTranscript": "I don't want this one, I want the blue one next to it, how much are they?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1041,
+    "ttft_from_end_ms": -1067,
+    "completion_lag_ms": 2354,
+    "ttfa_from_start_ms": 2959
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.152,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:23:57.799Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The translation is mostly accurate and fluent, but it misses the specific quantity 'two' (兩個) in the final question, translating it generally as 'they'. This is a minor omission and number error. The sentence structure contains comma splices, which is typical for spoken transcripts but slightly affects written fluency."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

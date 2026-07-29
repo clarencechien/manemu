@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:21:23.392Z"
+  "ts": "2026-07-29T07:21:23.392Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is perfectly fluent, but '弄丟了' translates more accurately to 'lost' rather than 'dropped'. The meaning is slightly altered but still understandable in context."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

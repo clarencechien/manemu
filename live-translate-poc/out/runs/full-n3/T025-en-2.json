@@ -1,0 +1,49 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T025",
+  "category": "shopping",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "有沒有 limited edition 的款式?我在 Instagram 上看到的。",
+  "reference": "Do you have the limited edition version? I saw it on Instagram.",
+  "inputTranscript": "有没有limited edition的款式?我在Instagram上看到的。",
+  "outputTranscript": "Do you have any limited edition styles? I saw them on Instagram.",
+  "inputDurationMs": 4531,
+  "outputAudioMs": 4750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1686,
+    "ttft_from_end_ms": -1710,
+    "completion_lag_ms": 2463,
+    "ttfa_from_start_ms": 3013
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.02,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:25:19.664Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is accurate and natural, perfectly conveying the original meaning."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

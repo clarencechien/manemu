@@ -1,0 +1,33 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T046",
+  "category": "smalltalk",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "你的中文說得真好,是在哪裡學的?",
+  "reference": "中国語がとてもお上手ですね。どこで習ったんですか?",
+  "inputTranscript": "你的中文说得真好,是在哪里学的?",
+  "outputTranscript": "中国語がとても上手ですね、どこで習ったんですか？",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 4250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -461,
+    "ttft_from_end_ms": -484,
+    "completion_lag_ms": 3205,
+    "ttfa_from_start_ms": 3139
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.957,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:32:05.554Z"
+}

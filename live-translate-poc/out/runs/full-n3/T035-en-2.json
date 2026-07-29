@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T035",
+  "category": "emergency",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "我的護照不見了,請問警察局在哪裡?",
+  "reference": "My passport is missing — where is the police station?",
+  "inputTranscript": "我的护照不见了,请问警察局在哪里?",
+  "outputTranscript": "My passport is missing, could you tell me where the police station is?",
+  "inputDurationMs": 3571,
+  "outputAudioMs": 4250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -700,
+    "ttft_from_end_ms": -726,
+    "completion_lag_ms": 2962,
+    "ttfa_from_start_ms": 2999
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.333,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:28:33.007Z"
+}

@@ -1,0 +1,37 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "部屋番号は702です。友達が倒れました。",
+  "inputTranscript": "我的房间号码是7 02,我朋友婚了。",
+  "outputTranscript": "私の部屋番号は7 02で、友達が結婚したの。",
+  "inputDurationMs": 5811,
+  "outputAudioMs": 6000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2839,
+    "ttft_from_end_ms": -3035,
+    "completion_lag_ms": 2413,
+    "ttfa_from_start_ms": 3160
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "702"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.056,
+    "coverage_ok": true,
+    "cer": 0.375
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:29:05.703Z"
+}

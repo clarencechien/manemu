@@ -1,0 +1,49 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T031",
+  "category": "hotel",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "房間的冷氣好像壞了,可以請人來看一下嗎?",
+  "reference": "The air conditioner in my room seems to be broken — could you send someone to take a look?",
+  "inputTranscript": "房间的冷气好像坏了,可以请人来看一下吗?",
+  "outputTranscript": "The air conditioning in the room seems to be broken, could you send someone to check it out?",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 4500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -897,
+    "ttft_from_end_ms": -1119,
+    "completion_lag_ms": 2823,
+    "ttfa_from_start_ms": 3203
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.043,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:27:17.175Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation accurately conveys the meaning of the original text and sounds natural in English. 'Air conditioning' and 'check it out' are perfectly acceptable alternatives to 'air conditioner' and 'take a look'."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

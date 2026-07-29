@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T036",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "我頭很暈,但是我沒有心臟病的病史。",
+  "reference": "I feel very dizzy, but I don't have any history of heart disease.",
+  "inputTranscript": "我头很晕,但是我没有心脏病的病史。",
+  "outputTranscript": "I'm very dizzy, but I don't have a history of heart disease.",
+  "inputDurationMs": 3731,
+  "outputAudioMs": 4250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -598,
+    "ttft_from_end_ms": -785,
+    "completion_lag_ms": 2901,
+    "ttfa_from_start_ms": 3301
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.9,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:28:52.796Z"
+}

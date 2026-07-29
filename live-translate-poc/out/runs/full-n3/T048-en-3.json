@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T048",
+  "category": "smalltalk",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "不用了,謝謝,我只是看看而已。",
+  "reference": "No thanks, I'm just looking.",
+  "inputTranscript": "不用了,謝謝,我只是看看而已。",
+  "outputTranscript": "No thanks, I'm just looking.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 2250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 187,
+    "ttft_from_end_ms": 152,
+    "completion_lag_ms": 1798,
+    "ttfa_from_start_ms": 3187
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:32:56.586Z"
+}

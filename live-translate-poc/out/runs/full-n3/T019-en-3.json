@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:23:27.950Z"
+  "ts": "2026-07-29T07:23:27.950Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is fluent and conveys the main meaning, although 'already eaten' is a slight deviation from the exact meaning of 'already full' (吃飽了)."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

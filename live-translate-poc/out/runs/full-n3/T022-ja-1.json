@@ -1,0 +1,49 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T022",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "太貴了,算我三千塊可以嗎?",
+  "reference": "高すぎます。3000円にしてもらえませんか?",
+  "inputTranscript": "太贵了,算我3000块可以了。",
+  "outputTranscript": "高すぎるよ、 3000元でいいよ。",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 2750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 226,
+    "ttft_from_end_ms": 143,
+    "completion_lag_ms": 2330,
+    "ttfa_from_start_ms": 3125
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.7,
+    "coverage_ok": true,
+    "cer": 0.455
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:24:06.106Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文將「算我三千塊可以嗎？」(請求降價) 誤譯為「3000元でいいよ」(3000元就可以了)，語氣變成像是賣家同意降價或是買家勉強接受，失去了原本詢問、請求的語意。日文表達本身算流暢。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

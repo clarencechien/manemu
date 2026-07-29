@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "30分ほど遅れます。席を取っておいていただけますか?",
+  "inputTranscript": "我们会晚30分钟到,位置可以保留吗?",
+  "outputTranscript": "30分遅れて到着します。席は確保できますか?",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 4250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1380,
+    "ttft_from_end_ms": -1381,
+    "completion_lag_ms": 2264,
+    "ttfa_from_start_ms": 3020
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.833,
+    "coverage_ok": true,
+    "cer": 0.188
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:31:29.708Z"
+}

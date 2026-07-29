@@ -1,0 +1,50 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T028",
+  "category": "hotel",
+  "traps": [
+    "proper-noun",
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我有訂房,名字是陳大文,今天住兩個晚上。",
+  "reference": "予約しています。名前はチン・ダイブンです。今日から2泊です。",
+  "inputTranscript": "我有定房,名字是陳大文,今天住兩個晚上。",
+  "outputTranscript": "予約してあります、名前は陳大文です。今日から2泊します。",
+  "inputDurationMs": 5251,
+  "outputAudioMs": 5250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2350,
+    "ttft_from_end_ms": -2378,
+    "completion_lag_ms": 2293,
+    "ttfa_from_start_ms": 3050
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.962,
+    "coverage_ok": true,
+    "cer": 0.059
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:26:07.788Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的所有資訊，包括訂房、姓名及住宿天數，且日文表達自然流暢。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
+}

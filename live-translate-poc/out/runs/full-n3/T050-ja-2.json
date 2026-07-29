@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "では、よろしくお願いします。また後で連絡します。",
+  "inputTranscript": "那就麻烦你了,之后再联络。",
+  "outputTranscript": "じゃあ、お願いします。また連絡します。",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 273,
+    "ttft_from_end_ms": 118,
+    "completion_lag_ms": 2774,
+    "ttfa_from_start_ms": 3272
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.762,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:33:22.388Z"
+}

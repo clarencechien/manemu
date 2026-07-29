@@ -1,0 +1,33 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T046",
+  "category": "smalltalk",
+  "traps": [],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "你的中文說得真好,是在哪裡學的?",
+  "reference": "Your Chinese is really good — where did you learn it?",
+  "inputTranscript": "你的中文说得真好,是在哪里学的?",
+  "outputTranscript": "Your Chinese is really good, where did you learn it?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 3500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -373,
+    "ttft_from_end_ms": -563,
+    "completion_lag_ms": 2379,
+    "ttfa_from_start_ms": 3227
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:32:11.992Z"
+}

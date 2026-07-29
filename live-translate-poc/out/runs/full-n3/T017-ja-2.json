@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:22:36.407Z"
+  "ts": "2026-07-29T07:22:36.407Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有訊息（不加冰、大杯改中杯、總共三杯）。日文表達自然，雖然較為口語，但完全符合日常點餐的情境。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }
