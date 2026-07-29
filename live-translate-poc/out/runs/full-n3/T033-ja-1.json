@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T033",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "可以幫我叫一台計程車嗎?明天早上六點半要到機場。",
+  "reference": "タクシーを1台呼んでいただけますか?明日の朝6時半に空港に行きたいんです。",
+  "inputTranscript": "可以帮我叫一台计程车吗?明天早上6点半要到机场。",
+  "outputTranscript": "タクシーを呼んでくれますか？明日の朝6時半に空港に行きたいんです。",
+  "inputDurationMs": 4851,
+  "outputAudioMs": 5250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1988,
+    "ttft_from_end_ms": -1989,
+    "completion_lag_ms": 2655,
+    "ttfa_from_start_ms": 3011
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.886,
+    "coverage_ok": true,
+    "cer": 0.045
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:27:39.612Z"
+}

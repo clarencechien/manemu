@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T032",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我明天不需要打掃房間,謝謝。",
+  "reference": "明日は部屋の掃除は結構です。ありがとうございます。",
+  "inputTranscript": "我明天不需要打扫房间,谢谢。",
+  "outputTranscript": "明日は部屋の掃除はいいです。ありがとう。",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 3750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -575,
+    "ttft_from_end_ms": -597,
+    "completion_lag_ms": 2576,
+    "ttfa_from_start_ms": 3024
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": false,
+    "coverage_ratio": 0.783,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:27:27.679Z"
+}

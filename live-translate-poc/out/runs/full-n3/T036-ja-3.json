@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T036",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我頭很暈,但是我沒有心臟病的病史。",
+  "reference": "めまいがひどいです。でも、心臓病の既往歴はありません。",
+  "inputTranscript": "我頭很暈,但是我沒有心髒病的病史。",
+  "outputTranscript": "頭がすごくめまいがするけど、心臓病の既往歴はないです。",
+  "inputDurationMs": 3731,
+  "outputAudioMs": 5000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -685,
+    "ttft_from_end_ms": -898,
+    "completion_lag_ms": 3542,
+    "ttfa_from_start_ms": 3214
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.042,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:28:44.560Z"
+}

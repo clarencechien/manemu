@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T035",
+  "category": "emergency",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我的護照不見了,請問警察局在哪裡?",
+  "reference": "パスポートをなくしてしまいました。警察署はどこですか?",
+  "inputTranscript": "我的护照不见了,请问警察局在哪里?",
+  "outputTranscript": "パスポートがなくなったんですが、警察署はどこですか?",
+  "inputDurationMs": 3571,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -487,
+    "ttft_from_end_ms": -664,
+    "completion_lag_ms": 2763,
+    "ttfa_from_start_ms": 3213
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.96,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:28:24.234Z"
+}
