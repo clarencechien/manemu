@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，僅少了一個語氣助詞「ちょっと」，但不影響語意表達。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實原意。與參考譯文相比僅缺少語氣詞「ちょっと」，但不影響語意或自然度，日語表達自然得體。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -46,5 +46,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的意思。在流暢度方面，句式結構稍微有些口語化的斷句（...行きますか、見ていただけますか？），雖然不如參考譯文的「...かどうか、見ていただけますか」那般連貫和優雅，但在日常口語中仍屬自然且完全可被理解，無任何重大錯誤。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問這班車是否開往橫濱並請對方幫看），但日語表達稍有不自然（語序與標點），應用詞可更貼近參考譯文，如「〜かどうか、ちょっと見ていただけますか」。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

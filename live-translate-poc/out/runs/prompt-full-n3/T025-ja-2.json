@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:56:02.976Z"
+  "ts": "2026-07-29T10:56:02.976Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「limited edition」翻譯為外來語「リミテッドエディション」完全符合日語習慣，後半句的翻譯也十分流暢，與參考譯文語意完全一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

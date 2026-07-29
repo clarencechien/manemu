@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:55:43.769Z"
+  "ts": "2026-07-29T10:55:43.769Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. '打八折' (20% off) is correctly translated as '20パーセント引き'. '兩件' is translated as '2枚', which is natural for many clothing items, although the reference uses '2着'. The overall meaning is perfectly preserved."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

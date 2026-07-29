@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。「我剛剛」翻譯為「たった今」，「手機」翻譯為「携帯電話」，皆符合日文習慣，語意完全忠實，無任何錯誤。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地傳達原文含意（剛剛在月台上把手機弄丟了），用日語表達自然。用語「携帯電話」較正式，但與參考譯文的「携帯」意思相同，句子流暢無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

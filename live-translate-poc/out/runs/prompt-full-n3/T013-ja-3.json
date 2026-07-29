@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。「把手機弄丟了」譯為「携帯を落としました」（把手機弄掉了/丟了）在日語中是非常道地且符合情境的表達方式，語意完全契合。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實地傳達了原句含意（「我剛剛在月台上把手機弄丟了」→「たった今、ホームで携帯を落としました」）。「落としました」為自然的日語表達，雖有微妙差別（落とす偏向於掉落而非強調遺失），但在語境中可視為等效且自然，語句流暢且符合目標語用法。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

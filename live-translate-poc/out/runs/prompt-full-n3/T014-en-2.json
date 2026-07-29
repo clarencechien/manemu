@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation incorrectly translates '這個不要辣' (No spicy for this one) as 'I don't want this one' (我不要這個), which changes the meaning from requesting a non-spicy preparation to rejecting the item entirely. This is a significant omission/mistranslation of the word '辣' (spicy) in the first clause, although the second clause is translated perfectly."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意涵：“這個不要辣”與“我不太能吃辣”皆正確表達。英文自然流暢，語氣與參考譯文相當（僅措辭不同），因此兩項皆評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -34,5 +34,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:54:18.361Z"
+  "ts": "2026-07-29T10:54:18.361Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「我要旁邊那個藍色的」翻譯為「隣の青いのをください」（請給我旁邊那個藍色的），在購物情境中比直譯「ほしい」（想要）更為自然得體，語意完全忠實。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }
