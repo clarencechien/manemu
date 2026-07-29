@@ -1,0 +1,1124 @@
+{
+ "repairs": {
+  "full-n3|T001-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, where is the fastest way to get to the station?",
+   "after": "Excuse me, where is the fastest way to get to the station?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T001-en-3": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, where is the fastest way to the station?",
+   "after": "Excuse me, where is the fastest way to the station?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T001-en-2": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, where is the station? What's the fastest way to get there?",
+   "after": "Excuse me, where is the station? What's the fastest way to get there?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T001-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、駅はどこですか？どう行けば早いですか？",
+   "after": "すみません、駅はどこですか？どう行けば早いですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T001-ja-3": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、駅はどこですか？どう行けば早いですか？",
+   "after": "すみません、駅はどこですか？どう行けば早いですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T001-ja-2": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、駅はどこですか？どう行けば早いですか？",
+   "after": "すみません、駅はどこですか？どう行けば早いですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, are Senso-ji Temple and Skytree in the same direction?",
+   "after": "Excuse me, are Sensoji Temple and Tokyo Skytree in the same direction?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-en-2": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, are Senso-ji Temple and Skytree in the same direction?",
+   "after": "Excuse me, are Sensoji Temple and Tokyo Skytree in the same direction?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T002-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "すみません、徐博雅Skyの入り口はこの建物ですか？",
+   "after": "すみません、渋谷スカイの入り口はこの建物ですか？",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T002-ja-2": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "すみません、徐博雅Skyの入り口はこの建物ですか？",
+   "after": "すみません、渋谷スカイの入り口はこの建物ですか？",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T002-ja-3": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "すみません、徐博雅Skyの入り口はこの建物ですか？",
+   "after": "すみません、渋谷スカイの入り口はこの建物ですか？",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-en-3": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, are Senso-ji Temple and Skytree in the same direction?",
+   "after": "Excuse me, are Sensoji Temple and Tokyo Skytree in the same direction?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-ja-2": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "あの、浅草寺とスカイツリーは同じ方向ですか?",
+   "after": "あの、浅草寺とスカイツリーは同じ方向ですか?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "あの、浅草寺とスカイツリーは同じ方向ですか？",
+   "after": "あの、浅草寺とスカイツリーは同じ方向ですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-ja-3": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "あの、浅草寺とスカイツリーは同じ方向ですか？",
+   "after": "あの、浅草寺とスカイツリーは同じ方向ですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "The last train back to Hsinchu is at 11:45 PM.",
+   "after": "The last train back to Taipei is at 11:45 PM.",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-en-2": {
+   "group": "pn",
+   "dir": "en",
+   "before": "The last train back to Hsinchu is at 11:45 PM.",
+   "after": "The last train back to Taipei is at 11:45 PM.",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "after": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "新竹行きの電車は11時45分ですか？",
+   "after": "新竹行きの電車は11時45分ですか？",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-en-2": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "after": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-en-3": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "after": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-ja-3": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "新竹行きの最終電車は11時45分ですか？",
+   "after": "新竹行きの最終電車は11時45分ですか？",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-en-3": {
+   "group": "pn",
+   "dir": "en",
+   "before": "The last train back to Hsinchu is at 11:45 PM?",
+   "after": "The last train back to Taipei is at 11:45 PM?",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-ja-2": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "新竹行きの最終電車は11時45分ですか？",
+   "after": "新竹行きの最終電車は11時45分ですか？",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "すみません、このバスは横浜行きですか？",
+   "after": "すみません、このバスは横浜行きですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-ja-3": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "すみません、このバスは横浜行きですか？",
+   "after": "すみません、このバスは横浜行きですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-ja-2": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "すみません、このバスは横浜行きですか？",
+   "after": "すみません、このバスは横浜行きですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "I don't want this, I can't really eat spicy food.",
+   "after": "I don't want this, I can't really eat spicy food.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "これはもういいです。もう食べられません。",
+   "after": "これはもういいです。もう食べられません。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-en-2": {
+   "group": "control",
+   "dir": "en",
+   "before": "I don't want this anymore, I can't really eat it.",
+   "after": "I don't want this anymore, I can't really eat it.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-en-3": {
+   "group": "control",
+   "dir": "en",
+   "before": "I don't want this, I can't really eat it.",
+   "after": "I don't want this, I can't really eat it.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-ja-2": {
+   "group": "control",
+   "dir": "ja",
+   "before": "これはもういいです。もう食べられないです。",
+   "after": "これはもういいです。もう食べられないです。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T020-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, could you split the bill for us?",
+   "after": "Excuse me, could you split the bill for us?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-ja-3": {
+   "group": "control",
+   "dir": "ja",
+   "before": "これはもういいです。あまり食べられません。",
+   "after": "これはもういいです。あまり食べられません。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T020-en-2": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, could you split the bill for us?",
+   "after": "Excuse me, could you split the bill for us?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T020-en-3": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, could you split the bill for us?",
+   "after": "Excuse me, could you split the bill for us?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T020-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、別々に会計できますか?",
+   "after": "すみません、別々に会計できますか?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T020-ja-2": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、別々に会計できますか？",
+   "after": "すみません、別々に会計できますか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T020-ja-3": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、別々に会計できますか？",
+   "after": "すみません、別々に会計できますか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T028-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "I have a reservation, the name is Chen Dawen, staying for two nights.",
+   "after": "I have a reservation, the name is Chen Dawen, staying for two nights.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T028-en-2": {
+   "group": "pn",
+   "dir": "en",
+   "before": "I have a reservation, the name is Chen Dawen. I'm staying for two nights.",
+   "after": "I have a reservation, the name is Chen Dawen. I'm staying for two nights.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T028-en-3": {
+   "group": "pn",
+   "dir": "en",
+   "before": "I have a reservation, the name is Chen Dawen, staying for two nights.",
+   "after": "I have a reservation, the name is Chen Dawen, staying for two nights.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T028-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "予約してあります、名前は陳大文です。今日から2泊します。",
+   "after": "予約してあります、名前は陳大文です。今日から2泊します。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T028-ja-2": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "予約してあります、名前は陳大文です。今日から2泊します。",
+   "after": "予約してあります、名前は陳大文です。今日から2泊します。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T030-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, what is the check-out time, 10 a.m. or 11 a.m.?",
+   "after": "Excuse me, what is the check-out time, 10 a.m. or 11 a.m.?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T028-ja-3": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "予約してあります、名前は陳大文です。今日から2泊します。",
+   "after": "予約してあります、名前は陳大文です。今日から2泊します。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T030-en-3": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, what is the check-out time, 10 a.m. or 11 a.m.?",
+   "after": "Excuse me, what is the check-out time, 10 a.m. or 11 a.m.?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T030-en-2": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, what is the check-out time, 10 a.m. or 11 a.m.?",
+   "after": "Excuse me, what is the check-out time, 10 a.m. or 11 a.m.?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T030-ja-2": {
+   "group": "control",
+   "dir": "ja",
+   "before": "チェックアウトの時間は午前10時ですか、それとも11時ですか？",
+   "after": "チェックアウトの時間は午前10時ですか、それとも11時ですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T030-ja-3": {
+   "group": "control",
+   "dir": "ja",
+   "before": "チェックアウトの時間は午前10時ですか、それとも11時ですか？",
+   "after": "チェックアウトの時間は午前10時ですか、それとも11時ですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T042-en-2": {
+   "group": "pn",
+   "dir": "en",
+   "before": "I can confirm using email? My flight is BR 198,",
+   "after": "I can confirm using email? My flight is BR198,",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T030-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "チェックアウトの時間は午前10時ですか、それとも11時ですか？",
+   "after": "チェックアウトの時間は午前10時ですか、それとも11時ですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T042-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "I can confirm the appointment by email, right? My flight is BR 198,",
+   "after": "I can confirm the appointment by email, right? My flight is BR198,",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T042-en-3": {
+   "group": "pn",
+   "dir": "en",
+   "before": "I can confirm the appointment by email, right? My flight is BR198,",
+   "after": "I can confirm the appointment by email, right? My flight is BR198,",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T042-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "メールで予約確認できますか？私の便はBR 198で、",
+   "after": "メールで予約確認できますか？私の便はBR198で、",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T042-ja-2": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "メールで予約を確認できますか？私の便はBR 198です。",
+   "after": "メールで予約を確認できますか？私の便はBR198です。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T042-ja-3": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "メールで予約を確認できますか？私の便はBR 198です、",
+   "after": "メールで予約を確認できますか？私の便はBR198です、",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T044-en-2": {
+   "group": "control",
+   "dir": "en",
+   "before": "We'll be 30 minutes late, but can you hold the table?",
+   "after": "We'll be 30 minutes late, but can you hold the table?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T044-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "We'll be 30 minutes late, but can you hold the table?",
+   "after": "We'll be 30 minutes late, but can you hold the table?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T044-en-3": {
+   "group": "control",
+   "dir": "en",
+   "before": "We'll be 30 minutes late, but can you hold the table?",
+   "after": "We'll be 30 minutes late, but can you hold the table?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T044-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "30分遅れて到着します。席は確保できますか?",
+   "after": "30分遅れて到着します。席は確保できますか?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T044-ja-2": {
+   "group": "control",
+   "dir": "ja",
+   "before": "30分遅れて到着します。席は確保できますか?",
+   "after": "30分遅れて到着します。席は確保できますか?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T044-ja-3": {
+   "group": "control",
+   "dir": "ja",
+   "before": "30分遅れて到着します。席は確保できますか?",
+   "after": "30分遅れて到着します。席は確保できますか?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T047-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Summers in Japan are very hot, but I think Taipei is hotter.",
+   "after": "Summers in Japan are very hot, but I think Taipei is hotter.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T047-en-3": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Summers in Japan are very hot, but I think Taipei is hotter.",
+   "after": "Summers in Japan are very hot, but I think Taipei is hotter.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T047-en-2": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Summers in Japan are very hot, but I think Taipei is hotter.",
+   "after": "Summers in Japan are very hot, but I think Taipei is hotter.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T047-ja-2": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "日本の夏はとても暑いですが、台北の方がもっと暑いと思います。",
+   "after": "日本の夏はとても暑いですが、台北の方がもっと暑いと思います。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T047-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "日本の夏はとても暑いですが、台北の方が暑いと思います。",
+   "after": "日本の夏はとても暑いですが、台北の方が暑いと思います。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T047-ja-3": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "日本の夏はとても暑いですが、台北の方が暑いと思います。",
+   "after": "日本の夏はとても暑いですが、台北の方が暑いと思います。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T049-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "I'm from Taiwan, and this is my first time in Osaka.",
+   "after": "I'm from Taiwan, and this is my first time in Osaka.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T049-en-2": {
+   "group": "pn",
+   "dir": "en",
+   "before": "I'm from Taiwan, and this is my first time visiting Daiban.",
+   "after": "I'm from Taiwan, and this is my first time visiting Osaka.",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T001-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "Can you tell me where the station is, and the quickest way?",
+   "after": "Can you tell me where the station is, and the quickest way?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T049-en-3": {
+   "group": "pn",
+   "dir": "en",
+   "before": "I'm from Taiwan, and this is my first time in Osaka.",
+   "after": "I'm from Taiwan, and this is my first time in Osaka.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T049-ja-2": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "私は台湾から来ました。大阪に来るのは初めてです。",
+   "after": "私は台湾から来ました。大阪に来るのは初めてです。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T049-ja-3": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "私は台湾から来ました。大阪に来るのは初めてです。",
+   "after": "私は台湾から来ました。大阪に来るのは初めてです。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T049-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "私は台湾から来ました。大阪に来るのは初めてです。",
+   "after": "私は台湾から来ました。大阪に来るのは初めてです。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T001-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "駅はどこですか、どう行けば早いですか。",
+   "after": "駅はどこですか、どう行けば早いですか。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T002-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Please ask, Xu Bu Ya's entrance is in this building?",
+   "after": "Please ask, Shibuya Sky's entrance is in this building?",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T002-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "失礼、徐不娓のスカイの入口はこのビルの中ですか?",
+   "after": "失礼、渋谷スカイの入口はこのビルの中ですか?",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T005-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Please, Mr. Qian, the minister of finance, and the Cloud-Break Pagoda, are they in the same direction?",
+   "after": "Please, Mr. Qian, the minister of finance, and the Cloud-Break Pagoda, are they in the same direction?",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T005-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "前草寺と秦空塔は同じ方向ですか?",
+   "after": "浅草寺とスカイツリーは同じ方向ですか?",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T010-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "最後の一回分のスターアライドの電車は、11時45分。",
+   "after": "最後の一回分のスターアライドの電車は、11時45分。",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T012-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Sorry, could you take a look and see if this bus goes to Hengping?",
+   "after": "Sorry, could you take a look and see if this bus goes to Hengping?",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T012-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "すみません、この電車が横浜方面行きか見ていただけますか?",
+   "after": "すみません、この電車が横浜方面行きか見ていただけますか?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T014-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "Forget this. I can't really handle spicy food.",
+   "after": "Forget this. I can't really handle spicy food.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T014-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "これはいらないな、私はあまり辛いものは食べられない。",
+   "after": "これはいらないな、私はあまり辛いものは食べられない。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T010-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "The last tram on the Circular lineis at 11:45, right?",
+   "after": "The last tram on the Circular line is at 11:45, right?",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T020-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "May I ask if you could split the bill for us?",
+   "after": "May I ask if you could split the bill for us?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T020-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、会計を別々にしてもらえますか?",
+   "after": "すみません、会計を別々にしてもらえますか?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T028-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "I have a plan, and my name is Chen Dawen. Today we'll stay for two nights.",
+   "after": "I have a plan, and my name is Chen Dawen. Today we'll stay for two nights.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T030-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "May I ask whether check-out time is at 10 a.m. or 11 a.m.?",
+   "after": "May I ask whether check-out time is at 10 a.m. or 11 a.m.?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T042-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "I can use email to confirm the appointment? My flight is BR198.",
+   "after": "I can use email to confirm the appointment? My flight is BR198.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T042-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "メールで予約を確認できますか私の便はBR198です",
+   "after": "メールで予約を確認できますか私の便はBR198です",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T030-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "チェックアウトの時間は、午前10時ですか、それとも11時ですか",
+   "after": "チェックアウトの時間は、午前10時ですか、それとも11時ですか",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T028-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "私はもう家を予約していて、名前は陳大文です。今日は二泊します。",
+   "after": "私はもう家を予約していて、名前は陳大文です。今日は二泊します。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T047-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "In Japan, summers are very hot, but I think Taipei is even hotter.",
+   "after": "In Japan, summers are very hot, but I think Taiwan is even hotter.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T044-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "私たちは三十分遅れて着くので席は確保できますか",
+   "after": "私たちは三十分遅れて着くので席は確保できますか",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T044-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "We'll be thirty minutes late, can you hold our seats?",
+   "after": "We'll be thirty minutes late, can you hold our seats?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T047-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "「リュックの夏は、すごく暑い。でも台北のほうがもっと暑いと思う。」",
+   "after": "「リュックの夏は、すごく暑い。でも台北のほうがもっと暑いと思う。」",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T049-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Hi, I'm Chen, from Taiwan. It's my first time visiting Osaka.",
+   "after": "Hi, I'm Chen, from Taiwan. It's my first time visiting Osaka.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "gpt-n1|T049-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "私は台湾出身で、大阪に来るのは初めてです。",
+   "after": "私は台湾出身で、大阪に来るのは初めてです。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  }
+ },
+ "stats": {
+  "repairer": "anthropic/claude-haiku-4.5",
+  "judge": "anthropic/claude-sonnet-5",
+  "pn_items": 61,
+  "broken_before": 18,
+  "repaired_rate": 0.389,
+  "damage_rate_all": 0,
+  "control_damage_rate": 0
+ }
+}

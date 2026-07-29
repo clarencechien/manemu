@@ -1,0 +1,638 @@
+{
+  "version": "v2-draft-2026-07-29",
+  "note": "or-plan2 Q6:3 模型生成+交叉審(無 major 票)。加重埋雷對準 full-n3/gpt-n1 實測弱點。未經真人校對;供真人錄音版與 M4 用。",
+  "phrases": [
+    {
+      "id": "V001",
+      "category": "directions",
+      "traps": [
+        "proper-noun-dense",
+        "question-final"
+      ],
+      "zh": "請問從新宿站走到歌舞伎町塔，再去西武新宿站，這樣走比較近對吧？",
+      "ref_ja": "すみません、新宿駅から歌舞伎町タワーまで歩いて、そのあと西武新宿駅へ行くなら、この道のほうが近いですよね？",
+      "ref_en": "Excuse me, if I walk from Shinjuku Station to Kabukicho Tower and then go to Seibu-Shinjuku Station, this is the shorter route, right?",
+      "expect": {
+        "numbers": [],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V002",
+      "category": "directions",
+      "traps": [
+        "proper-noun-dense",
+        "question-final"
+      ],
+      "zh": "請問從新宿搭山手線到澀谷，再換東橫線去自由之丘，這樣轉車對嗎？",
+      "ref_ja": "すみません、新宿から山手線で渋谷まで行って、東横線に乗り換えて自由が丘へ行くんですが、この乗り換えで合ってますか？",
+      "ref_en": "Excuse me, if I take the Yamanote Line from Shinjuku to Shibuya and then transfer to the Toyoko Line to Jiyugaoka, is that the right way to transfer?",
+      "expect": {
+        "numbers": [
+          "1"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V003",
+      "category": "transport",
+      "traps": [
+        "proper-noun-dense",
+        "number-unit-mix"
+      ],
+      "zh": "我要從東京站到成田機場第二航廈，下午三點二十前到得了嗎？兩個人、兩個二十八吋行李箱。",
+      "ref_ja": "東京駅から成田空港第2ターミナルまで行きたいのですが、午後3時20分までに着けますか？2人で、28インチのスーツケースが2個あります。",
+      "ref_en": "We need to get from Tokyo Station to Narita Airport Terminal 2. Can we arrive by 3:20 p.m.? There are two of us and we have two 28-inch suitcases.",
+      "expect": {
+        "numbers": [
+          "3:20",
+          "2",
+          "28"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V004",
+      "category": "transport",
+      "traps": [
+        "number-unit-mix",
+        "question-final"
+      ],
+      "zh": "我要買兩張大人票、一張兒童票，從上野到淺草，總共多少錢？",
+      "ref_ja": "大人2枚と子供1枚、上野から浅草までお願いします。全部でいくらですか？",
+      "ref_en": "I'd like two adult tickets and one child ticket from Ueno to Asakusa. How much is that in total?",
+      "expect": {
+        "numbers": [
+          "2",
+          "1"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V005",
+      "category": "transport",
+      "traps": [
+        "code-switch",
+        "question-final"
+      ],
+      "zh": "這班是往 Yokohama 的 local train 嗎？我在品川換到京急線就可以嗎？",
+      "ref_ja": "この電車は横浜方面の各駅停車ですか？品川で京急線に乗り換えればいいですか？",
+      "ref_en": "Is this a local train going toward Yokohama? Do I just transfer to the Keikyu Line at Shinagawa?",
+      "expect": {
+        "numbers": [],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V006",
+      "category": "appointment",
+      "traps": [
+        "number-unit-mix",
+        "question-final"
+      ],
+      "zh": "我想預約後天下午兩點半，兩位做指甲彩繪，大概要多久？",
+      "ref_ja": "明後日の午後2時半に、2名でネイルアートの予約をしたいんですが、どのくらいかかりますか？",
+      "ref_en": "I'd like to book a nail art appointment for two people the day after tomorrow at 2:30 PM. About how long will it take?",
+      "expect": {
+        "numbers": [
+          "2",
+          "2"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V007",
+      "category": "transport",
+      "traps": [
+        "number-unit-mix",
+        "multi-clause"
+      ],
+      "zh": "我要買兩張成人票、一張兒童票，搭到大阪難波，總共四千三日圓左右嗎？如果不能刷卡我有現金。",
+      "ref_ja": "大阪難波まで、大人2枚と子ども1枚の切符を買いたいです。合計で4,300円くらいですか？カードが使えなければ、現金があります。",
+      "ref_en": "I'd like two adult tickets and one child ticket to Osaka-Namba. Is it about 4,300 yen total? If cards aren't accepted, I have cash.",
+      "expect": {
+        "numbers": [
+          "2",
+          "1",
+          "4300"
+        ],
+        "negation": true,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V008",
+      "category": "smalltalk",
+      "traps": [
+        "proper-noun-dense",
+        "code-switch"
+      ],
+      "zh": "我昨天去了秋葉原的友都八相機，然後晚上到六本木Hills看夜景，超美的！",
+      "ref_ja": "昨日、秋葉原のヨドバシカメラに行って、夜は六本木ヒルズで夜景を見たんですけど、すごくきれいでした！",
+      "ref_en": "Yesterday I went to Yodobashi Camera in Akihabara, and then at night I went to Roppongi Hills to see the night view. It was absolutely gorgeous!",
+      "expect": {
+        "numbers": [
+          "1"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V009",
+      "category": "dining",
+      "traps": [
+        "proper-noun-dense",
+        "multi-clause"
+      ],
+      "zh": "我在築地場外市場吃完玉子燒，想去銀座的咖啡店，但如果要排超過二十分鐘就算了。",
+      "ref_ja": "築地場外市場で卵焼きを食べたあと、銀座のカフェに行きたいです。ただ、20分以上並ぶならやめておきます。",
+      "ref_en": "After eating tamagoyaki at Tsukiji Outer Market, I want to go to a cafe in Ginza, but I'll skip it if the wait is more than 20 minutes.",
+      "expect": {
+        "numbers": [
+          "20"
+        ],
+        "negation": true,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V010",
+      "category": "directions",
+      "traps": [
+        "proper-noun-dense",
+        "multi-clause"
+      ],
+      "zh": "從池袋搭西武線到川越，下車後走到冰川神社大概十分鐘，但是我不確定出口是哪一個。",
+      "ref_ja": "池袋から西武線で川越まで行って、降りてから氷川神社まで歩いて10分くらいらしいんですが、どの出口から出ればいいかわからなくて。",
+      "ref_en": "I'm taking the Seibu Line from Ikebukuro to Kawagoe, and it's about a ten-minute walk to Hikawa Shrine from the station, but I'm not sure which exit to take.",
+      "expect": {
+        "numbers": [
+          "10"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V011",
+      "category": "dining",
+      "traps": [
+        "code-switch",
+        "number-unit-mix"
+      ],
+      "zh": "可以給我一杯 iced latte、少冰，還有三份 fork 嗎？我們四個人要分著吃。",
+      "ref_ja": "アイスラテを1杯、氷少なめでお願いします。それと、フォークを3本いただけますか？4人で取り分けます。",
+      "ref_en": "Could I have one iced latte with less ice, and three forks? There are four of us sharing.",
+      "expect": {
+        "numbers": [
+          "1",
+          "3",
+          "4"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V012",
+      "category": "shopping",
+      "traps": [
+        "multi-clause",
+        "question-final"
+      ],
+      "zh": "這件外套如果退稅的話多少錢？我護照有帶，但是今天買明天可以來退嗎？",
+      "ref_ja": "このコート、免税するといくらになりますか？パスポートは持ってるんですが、今日買って明日税金の還付を受けられますか？",
+      "ref_en": "How much would this coat be with the tax refund? I have my passport with me, but if I buy it today, can I come back tomorrow to get the refund?",
+      "expect": {
+        "numbers": [
+          "1"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V013",
+      "category": "shopping",
+      "traps": [
+        "proper-noun-dense",
+        "question-final"
+      ],
+      "zh": "這個在唐吉訶德新宿東南口店有貨的話，澀谷的分店也能退稅嗎？",
+      "ref_ja": "この商品がドン・キホーテ新宿東南口店に在庫がある場合、渋谷の店舗でも免税手続きはできますか？",
+      "ref_en": "If this item is in stock at Don Quijote Shinjuku Southeast Exit, can I also get the tax refund at the Shibuya branch?",
+      "expect": {
+        "numbers": [],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V014",
+      "category": "hotel",
+      "traps": [
+        "number-unit-mix",
+        "multi-clause"
+      ],
+      "zh": "我們四個人住兩晚，但是其中一晚要加一張床，然後早餐是七點開始對吧？",
+      "ref_ja": "4人で2泊するんですが、そのうち1泊はエキストラベッドを1台追加してもらえますか？あと、朝食は7時からですよね？",
+      "ref_en": "There are four of us staying for two nights, but we need an extra bed for one of those nights. Also, breakfast starts at seven, right?",
+      "expect": {
+        "numbers": [
+          "4",
+          "2",
+          "1",
+          "7"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V015",
+      "category": "shopping",
+      "traps": [
+        "homophone-risk",
+        "number-unit-mix"
+      ],
+      "zh": "這個辣味餅乾我要買六盒，一盒三百八，沒有算錯吧？另外蝦子口味的不要。",
+      "ref_ja": "この辛口のせんべいを6箱ください。1箱380円で合っていますよね？それから、えび味のものはいりません。",
+      "ref_en": "I'd like six boxes of these spicy rice crackers. It's 380 yen per box, right? And I don't want the shrimp-flavored ones.",
+      "expect": {
+        "numbers": [
+          "6",
+          "1",
+          "380"
+        ],
+        "negation": true,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V016",
+      "category": "emergency",
+      "traps": [
+        "proper-noun-dense",
+        "question-final"
+      ],
+      "zh": "我在目黑站附近的目黑川旁邊迷路了，手機快沒電，可以借我充電器嗎？",
+      "ref_ja": "目黒駅近くの目黒川沿いで道に迷ってしまって、スマホのバッテリーがもうなくなりそうなんですが、充電器を貸してもらえますか？",
+      "ref_en": "I'm lost near the Meguro River close to Meguro Station, and my phone is about to die. Could I borrow a charger?",
+      "expect": {
+        "numbers": [
+          "1"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V017",
+      "category": "shopping",
+      "traps": [
+        "code-switch",
+        "multi-clause"
+      ],
+      "zh": "這件 outer 有沒有 M size？我想試穿，可是如果袖子太短就不用拿了。",
+      "ref_ja": "このアウターはMサイズがありますか？試着したいのですが、袖が短すぎるなら持ってこなくて大丈夫です。",
+      "ref_en": "Do you have this outerwear in a medium? I'd like to try it on, but if the sleeves are too short, you don't need to bring it out.",
+      "expect": {
+        "numbers": [],
+        "negation": true,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V018",
+      "category": "smalltalk",
+      "traps": [
+        "code-switch",
+        "proper-noun-dense"
+      ],
+      "zh": "我超喜歡teamLab在豐洲的那個展，然後又跑去台場的Gundam Base買模型，太開心了！",
+      "ref_ja": "豊洲のteamLabの展示がすごく好きで、その後お台場のガンダムベースに行ってプラモデルを買ったんですけど、最高に楽しかったです！",
+      "ref_en": "I absolutely loved the teamLab exhibit in Toyosu, and then I went to Gundam Base in Odaiba to buy model kits. It was so much fun!",
+      "expect": {
+        "numbers": [
+          "1"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V019",
+      "category": "hotel",
+      "traps": [
+        "proper-noun-dense",
+        "number-unit-mix"
+      ],
+      "zh": "我訂的是上野站旁邊的飯店，不是御徒町那間；我住三晚，明天早上七點能先寄兩件行李嗎？",
+      "ref_ja": "予約したのは上野駅近くのホテルで、御徒町のほうではありません。3泊するのですが、明日の朝7時にスーツケースを2個、先に預けられますか？",
+      "ref_en": "My reservation is for the hotel near Ueno Station, not the one in Okachimachi. I'm staying three nights; can I leave two bags here at 7 tomorrow morning?",
+      "expect": {
+        "numbers": [
+          "3",
+          "7",
+          "2"
+        ],
+        "negation": true,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V020",
+      "category": "directions",
+      "traps": [
+        "number-unit-mix",
+        "question-final"
+      ],
+      "zh": "從京都車站搭巴士到金閣寺要二十分鐘，票價兩百三十日圓，上車投幣對吧？",
+      "ref_ja": "京都駅からバスで金閣寺まで20分くらいで、運賃は230円、乗車時に運賃箱に入れるんですよね？",
+      "ref_en": "It takes about twenty minutes by bus from Kyoto Station to Kinkaku-ji, and the fare is 230 yen. You drop the coins in the box when you get on, right?",
+      "expect": {
+        "numbers": [
+          "20",
+          "230"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V021",
+      "category": "hotel",
+      "traps": [
+        "code-switch",
+        "multi-clause"
+      ],
+      "zh": "我想確認一下 late check-out，十二點退房可以嗎？如果要加錢，麻煩先跟我說。",
+      "ref_ja": "レイトチェックアウトについて確認したいのですが、12時にチェックアウトできますか？追加料金がかかる場合は、先に教えてください。",
+      "ref_en": "I'd like to confirm a late check-out. Can we check out at noon? If there's an extra charge, please let me know first.",
+      "expect": {
+        "numbers": [
+          "12"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V022",
+      "category": "transport",
+      "traps": [
+        "proper-noun-dense",
+        "multi-clause"
+      ],
+      "zh": "我想從難波搭近鐵到奈良看鹿，但是回程想走JR到天王寺再換環狀線回大阪。",
+      "ref_ja": "難波から近鉄で奈良に行って鹿を見たいんですが、帰りはJRで天王寺まで行って、環状線に乗り換えて大阪に戻りたいんです。",
+      "ref_en": "I want to take the Kintetsu from Namba to Nara to see the deer, but on the way back I'd like to take JR to Tennoji and then transfer to the Loop Line back to Osaka.",
+      "expect": {
+        "numbers": [
+          "1"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V023",
+      "category": "emergency",
+      "traps": [
+        "homophone-risk",
+        "multi-clause"
+      ],
+      "zh": "我朋友吃了蝦子後頭很暈，剛剛差點昏倒；附近有診所嗎？",
+      "ref_ja": "友人がえびを食べたあと、頭がふらふらして、さっき倒れそうになりました。近くに診療所はありますか？",
+      "ref_en": "My friend feels very dizzy after eating shrimp and almost passed out just now. Is there a clinic nearby?",
+      "expect": {
+        "numbers": [],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V024",
+      "category": "hotel",
+      "traps": [
+        "proper-noun-dense",
+        "question-final"
+      ],
+      "zh": "你們飯店離博多站中洲口走路五分鐘對吧？從福岡機場搭地鐵兩站就到了嗎？",
+      "ref_ja": "ホテルは博多駅の中洲口から歩いて5分ですよね？福岡空港から地下鉄で2駅で着きますか？",
+      "ref_en": "Your hotel is a five-minute walk from the Nakasu exit of Hakata Station, right? And it's just two subway stops from Fukuoka Airport?",
+      "expect": {
+        "numbers": [
+          "5",
+          "2"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V025",
+      "category": "emergency",
+      "traps": [
+        "proper-noun-dense",
+        "question-final"
+      ],
+      "zh": "我的手機可能掉在澀谷 Sky 到原宿站這段路上，附近的派出所是在明治神宮前站那邊嗎？",
+      "ref_ja": "スマホを渋谷スカイから原宿駅までの間で落としたかもしれません。近くの交番は明治神宮前駅のほうですか？",
+      "ref_en": "I may have dropped my phone somewhere between Shibuya Sky and Harajuku Station. Is the nearest police box near Meiji-jingumae Station?",
+      "expect": {
+        "numbers": [],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V026",
+      "category": "emergency",
+      "traps": [
+        "multi-clause",
+        "number-unit-mix"
+      ],
+      "zh": "我錢包掉了，裡面有五千日圓和兩張信用卡，最後記得是在伏見稻荷大社的千本鳥居那邊。",
+      "ref_ja": "財布を落としてしまったんですが、中に5000円とクレジットカードが2枚入っていて、最後に覚えているのは伏見稲荷大社の千本鳥居のあたりです。",
+      "ref_en": "I lost my wallet. It had 5,000 yen and two credit cards inside, and the last place I remember having it was around the Senbon Torii at Fushimi Inari Taisha.",
+      "expect": {
+        "numbers": [
+          "5000",
+          "2"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V027",
+      "category": "emergency",
+      "traps": [
+        "number-unit-mix",
+        "question-final"
+      ],
+      "zh": "我的護照不見了，最後一次看到是今天下午兩點半；這裡可以幫我報案嗎？",
+      "ref_ja": "パスポートをなくしました。最後に見たのは今日の午後2時半です。ここで届け出を出せますか？",
+      "ref_en": "My passport is missing. The last time I saw it was at 2:30 this afternoon. Can I file a report here?",
+      "expect": {
+        "numbers": [
+          "2:30"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V028",
+      "category": "appointment",
+      "traps": [
+        "proper-noun-dense",
+        "number-unit-mix"
+      ],
+      "zh": "我想預約下週三上午十點在惠比壽的Armani Hotel做SPA，兩位做九十分鐘的課程。",
+      "ref_ja": "来週の水曜日の午前10時に、恵比寿のアルマーニホテルでスパの予約をしたいんですが、2名で90分のコースでお願いします。",
+      "ref_en": "I'd like to book a spa appointment next Wednesday at 10 AM at the Armani Hotel in Ebisu, for two people, the ninety-minute course.",
+      "expect": {
+        "numbers": [
+          "10",
+          "2",
+          "90"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V029",
+      "category": "appointment",
+      "traps": [
+        "number-unit-mix",
+        "code-switch"
+      ],
+      "zh": "我有預約今天下午四點的 hair cut，名字是 Lin；我會晚十分鐘，還可以嗎？",
+      "ref_ja": "今日の午後4時にヘアカットを予約していて、名前はリンです。10分ほど遅れそうですが、大丈夫ですか？",
+      "ref_en": "I have a hair cut appointment at 4 p.m. today under the name Lin. I'll be about ten minutes late; is that okay?",
+      "expect": {
+        "numbers": [
+          "4",
+          "10"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V030",
+      "category": "directions",
+      "traps": [
+        "proper-noun-dense",
+        "number-unit-mix",
+        "question-final"
+      ],
+      "zh": "從橫濱的櫻木町站走路到紅磚倉庫要十五分鐘，然後再去山下公園看港灣夜景，這樣排順嗎？",
+      "ref_ja": "横浜の桜木町駅から赤レンガ倉庫まで歩いて15分くらいで、それから山下公園に行って港の夜景を見るんですが、この順番で大丈夫ですか？",
+      "ref_en": "It's about a fifteen-minute walk from Sakuragicho Station in Yokohama to the Red Brick Warehouse, and then we'd go to Yamashita Park to see the harbor night view. Does that order make sense?",
+      "expect": {
+        "numbers": [
+          "15"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V031",
+      "category": "appointment",
+      "traps": [
+        "proper-noun-dense",
+        "multi-clause"
+      ],
+      "zh": "我約在東京國立博物館附近的牙醫，不過我現在在鶯谷站；如果遲到十五分鐘，還需要過去嗎？",
+      "ref_ja": "東京国立博物館の近くの歯科を予約していますが、今は鶯谷駅にいます。15分遅れるなら、それでも行ったほうがいいですか？",
+      "ref_en": "I have a dentist appointment near the Tokyo National Museum, but I'm at Uguisudani Station now. If I'll be 15 minutes late, should I still go?",
+      "expect": {
+        "numbers": [
+          "15"
+        ],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V032",
+      "category": "smalltalk",
+      "traps": [
+        "proper-noun-dense",
+        "question-final"
+      ],
+      "zh": "我們昨天去了奈良公園，今天要去伏見稻荷再回京都站，這樣行程會不會太趕？",
+      "ref_ja": "昨日は奈良公園へ行って、今日は伏見稲荷大社に行ってから京都駅へ戻る予定です。この予定だと忙しすぎますか？",
+      "ref_en": "We went to Nara Park yesterday, and today we're going to Fushimi Inari before returning to Kyoto Station. Does that sound too rushed?",
+      "expect": {
+        "numbers": [],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V033",
+      "category": "smalltalk",
+      "traps": [
+        "homophone-risk",
+        "code-switch"
+      ],
+      "zh": "這邊的 curry 通常會很辣嗎？我很想吃，但怕吃完會昏倒啦。",
+      "ref_ja": "こちらのカレーは普段かなり辛いですか？食べてみたいのですが、辛すぎて倒れそうなのは心配です。",
+      "ref_en": "Is the curry here usually very spicy? I really want to try it, but I'm worried it might be so spicy that I pass out.",
+      "expect": {
+        "numbers": [],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V034",
+      "category": "smalltalk",
+      "traps": [
+        "multi-clause",
+        "question-final"
+      ],
+      "zh": "今天本來想去看夜景，可是一直下雨；明天早上改去也看得到嗎？",
+      "ref_ja": "今日は夜景を見に行くつもりでしたが、ずっと雨ですね。明日の朝に変更しても見られますか？",
+      "ref_en": "We were going to see the night view today, but it's been raining nonstop. If we go tomorrow morning instead, will we still be able to see it?",
+      "expect": {
+        "numbers": [],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    },
+    {
+      "id": "V035",
+      "category": "directions",
+      "traps": [
+        "proper-noun-dense",
+        "code-switch"
+      ],
+      "zh": "從大阪梅田站去中崎町，再走到天神橋筋商店街，有沒有比較 easy 的路？",
+      "ref_ja": "大阪梅田駅から中崎町へ行って、それから天神橋筋商店街まで歩くなら、わかりやすいルートはありますか？",
+      "ref_en": "Is there an easy route from Osaka-Umeda Station to Nakazakicho and then on foot to Tenjinbashisuji Shopping Street?",
+      "expect": {
+        "numbers": [],
+        "negation": false,
+        "min_len_ratio": 0.5
+      }
+    }
+  ]
+}

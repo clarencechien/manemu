@@ -7,8 +7,9 @@ import { fileURLToPath } from "node:url";
 import { orChat, pmap } from "./or.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const REPAIRER = "openai/gpt-5.4-nano";
+const REPAIRER = process.env.REPAIRER || "openai/gpt-5.4-nano";
 const JUDGE = "anthropic/claude-sonnet-5";
+const SUFFIX = process.env.REPAIRER ? "-" + process.env.REPAIRER.split("/")[1] : "";
 
 const tone = JSON.parse(fs.readFileSync(path.join(root, "out/experiments/tone-check.json"), "utf8"));
 const lost = Object.entries(tone.items).filter(([, i]) => i.src_q && !i.out_q);
@@ -21,7 +22,7 @@ function loadResult(item) {
   return JSON.parse(fs.readFileSync(f, "utf8"));
 }
 
-const outFile = path.join(root, "out/experiments/q3-tone-repair.json");
+const outFile = path.join(root, `out/experiments/q3-tone-repair${SUFFIX}.json`);
 const state = fs.existsSync(outFile) ? JSON.parse(fs.readFileSync(outFile, "utf8")) : { repairs: {} };
 
 const jobs = [...lost.map(([k, i]) => ({ k, i, group: "lost" })), ...kept.map(([k, i]) => ({ k, i, group: "control" }))]
