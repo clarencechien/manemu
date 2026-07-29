@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T041",
+  "category": "appointment",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "如果三點沒有位子的話,四點也可以。",
+  "reference": "3時に席がなければ、4時でも大丈夫です。",
+  "inputTranscript": "如果三點沒有位置的話,四點也可以。",
+  "outputTranscript": "もし3時に空きがなければ、4時でも大丈夫です。",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 3750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -206,
+    "ttft_from_end_ms": -228,
+    "completion_lag_ms": 2965,
+    "ttfa_from_start_ms": 3194
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.167,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:30:25.012Z"
+}

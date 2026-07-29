@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T043",
+  "category": "appointment",
+  "traps": [
+    "negation",
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問最晚可以幾點取消,而不用付取消費?",
+  "reference": "キャンセル料がかからないのは、何時までのキャンセルですか?",
+  "inputTranscript": "请问最晚可以几点取消,而不用付取消费?",
+  "outputTranscript": "すみません、キャンセルはいつまでならキャンセル料がかかりませんか？",
+  "inputDurationMs": 4411,
+  "outputAudioMs": 5000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1285,
+    "ttft_from_end_ms": -1477,
+    "completion_lag_ms": 2964,
+    "ttfa_from_start_ms": 3315
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.148,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:31:07.449Z"
+}

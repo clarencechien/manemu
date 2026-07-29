@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T038",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "我不能打青黴素,我會過敏。",
+  "reference": "I can't have penicillin — I'm allergic to it.",
+  "inputTranscript": "我不能打青霉素,我会过敏。",
+  "outputTranscript": "I can't take penicillin, I'll have an allergic reaction.",
+  "inputDurationMs": 2611,
+  "outputAudioMs": 3250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 325,
+    "ttft_from_end_ms": 300,
+    "completion_lag_ms": 2974,
+    "ttfa_from_start_ms": 3125
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.333,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:29:35.164Z"
+}

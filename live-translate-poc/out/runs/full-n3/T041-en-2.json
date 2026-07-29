@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T041",
+  "category": "appointment",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "如果三點沒有位子的話,四點也可以。",
+  "reference": "If there's nothing available at three, four o'clock works too.",
+  "inputTranscript": "如果三點沒有位置的話,四點也可以。",
+  "outputTranscript": "If there are no seats at 3 o'clock, 4 o'clock is fine too.",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 3750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -248,
+    "ttft_from_end_ms": -269,
+    "completion_lag_ms": 2927,
+    "ttfa_from_start_ms": 3152
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.857,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:30:35.540Z"
+}

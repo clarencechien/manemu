@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T039",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我想預約明天下午三點,兩個大人。",
+  "reference": "明日の午後3時に、大人2人で予約したいです。",
+  "inputTranscript": "我想預約明天下午3點,兩個大人。",
+  "outputTranscript": "明日の午後3時に予約したいです、大人2人。",
+  "inputDurationMs": 3691,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -801,
+    "ttft_from_end_ms": -823,
+    "completion_lag_ms": 2598,
+    "ttfa_from_start_ms": 2999
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.95,
+    "coverage_ok": true,
+    "cer": 0.071
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:29:41.442Z"
+}

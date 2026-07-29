@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T038",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "我不能打青黴素,我會過敏。",
+  "reference": "ペニシリンは打てません。アレルギーがあるんです。",
+  "inputTranscript": "我不能打青霉素,我會過敏。",
+  "outputTranscript": "ペニシリンは打てないんです、アレルギーで。",
+  "inputDurationMs": 2611,
+  "outputAudioMs": 3250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 352,
+    "ttft_from_end_ms": 183,
+    "completion_lag_ms": 2852,
+    "ttfa_from_start_ms": 3152
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.864,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:29:23.636Z"
+}
