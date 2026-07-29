@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:24:51.002Z"
+  "ts": "2026-07-29T07:24:51.002Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完全忠實於原文，數字與條件句皆正確轉換，日文表達自然流暢，雖使用了較口語的語尾助詞「わ」，但在日常對話情境中十分合適。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

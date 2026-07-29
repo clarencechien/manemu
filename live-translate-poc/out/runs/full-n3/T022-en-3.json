@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:24:21.940Z"
+  "ts": "2026-07-29T07:24:21.940Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation changes the interrogative request ('can you do 3,000?') into a declarative statement ('3,000 is fine'), altering the speaker's intent in the negotiation. The English is mostly fluent but contains a comma splice."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

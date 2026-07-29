@@ -34,5 +34,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:23:57.799Z"
+  "ts": "2026-07-29T07:23:57.799Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The translation is mostly accurate and fluent, but it misses the specific quantity 'two' (兩個) in the final question, translating it generally as 'they'. This is a minor omission and number error. The sentence structure contains comma splices, which is typical for spoken transcripts but slightly affects written fluency."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

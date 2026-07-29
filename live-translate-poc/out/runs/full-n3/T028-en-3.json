@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:26:18.396Z"
+  "ts": "2026-07-29T07:26:18.396Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The translation accurately conveys the reservation, name, and duration of stay, but omits the word 'today' (今天). The sentence structure is slightly informal but acceptable for spoken English. The name is translated using Pinyin instead of Wade-Giles, which is acceptable."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

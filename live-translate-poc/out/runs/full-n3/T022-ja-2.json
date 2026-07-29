@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:24:12.008Z"
+  "ts": "2026-07-29T07:24:12.008Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機器譯文將「算我三千塊可以嗎？」(請求折扣) 誤譯為「3000元でいいよ」(3000元就可以了/我出3000元就好)，遺漏了原文中「可以嗎？」的詢問與請求語氣，導致語意發生改變。日文表達本身算自然，但未能準確傳達原文的交際意圖。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }
