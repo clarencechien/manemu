@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T003",
+  "category": "directions",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我不是要去機場,我是要去火車站。",
+  "reference": "空港に行きたいのではなくて、電車の駅に行きたいんです。",
+  "inputTranscript": "我不是要去机场,我是要去火车站。",
+  "outputTranscript": "空港に行くんじゃなくて、駅に行くんだ。",
+  "inputDurationMs": 2931,
+  "outputAudioMs": 3750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 323,
+    "ttft_from_end_ms": 102,
+    "completion_lag_ms": 3287,
+    "ttfa_from_start_ms": 3423
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.68,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:17:46.587Z"
+}

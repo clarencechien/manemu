@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T003",
+  "category": "directions",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "我不是要去機場,我是要去火車站。",
+  "reference": "I'm not going to the airport, I'm going to the train station.",
+  "inputTranscript": "我不是要去机场,我是要去火车站。",
+  "outputTranscript": "I'm not going to the airport, I'm going to the train station.",
+  "inputDurationMs": 2931,
+  "outputAudioMs": 3750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 75,
+    "ttft_from_end_ms": 0,
+    "completion_lag_ms": 3168,
+    "ttfa_from_start_ms": 3174
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:17:57.686Z"
+}

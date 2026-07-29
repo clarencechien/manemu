@@ -1,0 +1,33 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T006",
+  "category": "directions",
+  "traps": [],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "這附近有沒有廁所?我趕時間。",
+  "reference": "Is there a restroom near here? I'm in a hurry.",
+  "inputTranscript": "这附近有没有厕所?我赶时间。",
+  "outputTranscript": "Is there a restroom nearby? I'm in a hurry.",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 3250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 439,
+    "ttft_from_end_ms": 333,
+    "completion_lag_ms": 2925,
+    "ttfa_from_start_ms": 3338
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.941,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:19:00.583Z"
+}

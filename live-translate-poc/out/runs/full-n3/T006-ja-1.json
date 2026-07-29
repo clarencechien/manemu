@@ -1,0 +1,33 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T006",
+  "category": "directions",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "這附近有沒有廁所?我趕時間。",
+  "reference": "この近くにトイレはありますか?急いでいるんです。",
+  "inputTranscript": "这附近有没有厕所?我赶时间。",
+  "outputTranscript": "この近くにトイレはありますか?急いでるんです。",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 3500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 584,
+    "ttft_from_end_ms": 385,
+    "completion_lag_ms": 3329,
+    "ttfa_from_start_ms": 3484
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.955,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:18:51.638Z"
+}
