@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T018",
+  "category": "dining",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我要一份 tonkotsu 拉麵,麵要硬一點。",
+  "reference": "I'd like one tonkotsu ramen, with the noodles on the firm side.",
+  "inputTranscript": "我 要 一 份 豚 骨 汁 拉 面 , 面 要 硬 一 点 。",
+  "outputTranscript": "I'd like a tonkotsu ramen, please, with firm noodles.",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 3120,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 938,
+    "ttft_from_end_ms": 937,
+    "completion_lag_ms": 1601,
+    "ttfa_from_start_ms": 5038
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.837,
+    "coverage_ok": true,
+    "cer": 0.421
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:53:11.748Z"
+}

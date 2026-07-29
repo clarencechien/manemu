@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T020",
+  "category": "dining",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "請問可以幫我們分開結帳嗎?",
+  "reference": "すみません、お会計を別々にしていただけますか?",
+  "inputTranscript": "请 问 可 以 帮 我 们 分 开 结 帐 吗 ?",
+  "outputTranscript": "すみません、別々に会計していただけますか?",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 3300,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 937,
+    "ttft_from_end_ms": 936,
+    "completion_lag_ms": 1657,
+    "ttfa_from_start_ms": 3837
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.905,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:54:01.899Z"
+}

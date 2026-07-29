@@ -1,0 +1,36 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T043",
+  "category": "appointment",
+  "traps": [
+    "negation",
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "請問最晚可以幾點取消,而不用付取消費?",
+  "reference": "キャンセル料がかからないのは、何時までのキャンセルですか?",
+  "inputTranscript": "请 问 最 晚 可 以 几 点 取 消 , 而 不 用 付 取 消 费 ?",
+  "outputTranscript": "キャンセル料を支払わずに、一番遅くて何時までにキャンセルできますか?",
+  "inputDurationMs": 4411,
+  "outputAudioMs": 4880,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 942,
+    "ttft_from_end_ms": 939,
+    "completion_lag_ms": 2070,
+    "ttfa_from_start_ms": 5542
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": false,
+    "coverage_ratio": 1.185,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:04:27.900Z"
+}

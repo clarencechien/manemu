@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T015",
+  "category": "dining",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "我們總共五個人,有兩個小孩,需要兒童椅。",
+  "reference": "There are five of us in total, including two children — we'll need high chairs.",
+  "inputTranscript": "我 们 总 共 五 个 人 , 有 两 个 小 孩 , 需 要 儿 童 椅 。",
+  "outputTranscript": "There are five of us in total, and we have two children who need child seats.",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4471,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 956,
+    "ttft_from_end_ms": 956,
+    "completion_lag_ms": 2459,
+    "ttfa_from_start_ms": 5256
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.984,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:51:45.582Z"
+}

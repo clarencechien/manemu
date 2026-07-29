@@ -1,0 +1,33 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T006",
+  "category": "directions",
+  "traps": [],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "這附近有沒有廁所?我趕時間。",
+  "reference": "Is there a restroom near here? I'm in a hurry.",
+  "inputTranscript": "这 附 近 有 没 有 厕 所 ? 我 赶 时 间 。",
+  "outputTranscript": "Is there a restroom nearby? I'm in a hurry.",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 2801,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 964,
+    "ttft_from_end_ms": 964,
+    "completion_lag_ms": 1312,
+    "ttfa_from_start_ms": 3864
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.941,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:47:48.600Z"
+}

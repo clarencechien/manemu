@@ -1,0 +1,36 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T011",
+  "category": "transport",
+  "traps": [
+    "code-switch",
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我想幫 IC 卡儲值一千日圓。",
+  "reference": "ICカードに1000円チャージしたいんですが。",
+  "inputTranscript": "我 想 帮 IC 卡 充 值 1000 日 元 。",
+  "outputTranscript": "ICカードに1000円チャージしたいです。",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 2730,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 984,
+    "ttft_from_end_ms": 983,
+    "completion_lag_ms": 1450,
+    "ttfa_from_start_ms": 4583
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.909,
+    "coverage_ok": true,
+    "cer": 0.5
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:49:44.822Z"
+}

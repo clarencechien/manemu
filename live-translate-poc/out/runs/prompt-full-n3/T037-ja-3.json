@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "部屋番号は702です。友達が倒れました。",
+  "inputTranscript": "我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。",
+  "outputTranscript": "私の部屋番号は702です。友達が気絶しました。",
+  "inputDurationMs": 5811,
+  "outputAudioMs": 4941,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 915,
+    "ttft_from_end_ms": 915,
+    "completion_lag_ms": 3437,
+    "ttfa_from_start_ms": 6916
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.167,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:01:40.412Z"
+}

@@ -1,0 +1,36 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T021",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "這個不要,我要旁邊那個藍色的,兩個多少錢?",
+  "reference": "これはいりません。隣の青いのがほしいです。2つでいくらですか?",
+  "inputTranscript": "这 个 不 要 , 我 要 旁 边 那 个 蓝 色 的 , 两 个 多 少 钱 ?",
+  "outputTranscript": "これは要りません。隣の青いのが欲しいです。2つでいくらですか?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 4730,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 939,
+    "ttft_from_end_ms": 939,
+    "completion_lag_ms": 2139,
+    "ttfa_from_start_ms": 4939
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:54:18.588Z"
+}

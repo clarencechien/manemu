@@ -1,0 +1,36 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T008",
+  "category": "transport",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "這班車會到大阪,但是應該不會停京都吧?",
+  "reference": "この電車は大阪に行きますが、京都には止まらないですよね?",
+  "inputTranscript": "这 班 车 会 到 大 阪 , 但 是 应 该 不 会 停 京 都 吧 ?",
+  "outputTranscript": "この電車は大阪には行きますが、京都には止まらないはずですよね？",
+  "inputDurationMs": 3851,
+  "outputAudioMs": 4850,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 931,
+    "ttft_from_end_ms": 929,
+    "completion_lag_ms": 2039,
+    "ttfa_from_start_ms": 4931
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.115,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:48:29.992Z"
+}

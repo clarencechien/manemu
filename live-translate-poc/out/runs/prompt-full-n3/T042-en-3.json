@@ -1,0 +1,37 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T042",
+  "category": "appointment",
+  "traps": [
+    "code-switch",
+    "number",
+    "proper-noun"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "我可以用 email 確認預約嗎?我的班機是 BR198。",
+  "reference": "Can I confirm the reservation by email? My flight is BR198.",
+  "inputTranscript": "我 可 以 用 email 确 认 预 约 吗 ? 我 的 班 机 是 BR198 。",
+  "outputTranscript": "Can I confirm my booking via email? My flight is BR198.",
+  "inputDurationMs": 6171,
+  "outputAudioMs": 4281,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1210,
+    "ttft_from_end_ms": 1118,
+    "completion_lag_ms": 2690,
+    "ttfa_from_start_ms": 7510
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.915,
+    "coverage_ok": true,
+    "cer": 0.042
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:04:18.017Z"
+}

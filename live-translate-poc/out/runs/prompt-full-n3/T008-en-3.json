@@ -1,0 +1,36 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T008",
+  "category": "transport",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "這班車會到大阪,但是應該不會停京都吧?",
+  "reference": "This train goes to Osaka, but it doesn't stop at Kyoto, right?",
+  "inputTranscript": "这 班 车 会 到 大 阪 , 但 是 应 该 不 会 停 京 都 吧 ?",
+  "outputTranscript": "This train goes to Osaka, but it probably won't stop in Kyoto, right?",
+  "inputDurationMs": 3851,
+  "outputAudioMs": 4690,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 983,
+    "ttft_from_end_ms": 932,
+    "completion_lag_ms": 2168,
+    "ttfa_from_start_ms": 4983
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.128,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:48:48.125Z"
+}

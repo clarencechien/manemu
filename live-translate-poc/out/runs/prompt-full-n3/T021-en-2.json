@@ -1,0 +1,36 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T021",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "這個不要,我要旁邊那個藍色的,兩個多少錢?",
+  "reference": "Not this one — I want the blue one next to it. How much for two?",
+  "inputTranscript": "这 个 不 要 , 我 要 旁 边 那 个 蓝 色 的 , 两 个 多 少 钱 ?",
+  "outputTranscript": "I don't want this one, I want that one next to it, the blue one. How much are the two?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 4210,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 980,
+    "ttft_from_end_ms": 957,
+    "completion_lag_ms": 2507,
+    "ttfa_from_start_ms": 4980
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.348,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:54:37.287Z"
+}

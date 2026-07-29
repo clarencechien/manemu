@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T019",
+  "category": "dining",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "這道菜看起來很好吃,可是我已經吃飽了。",
+  "reference": "この料理はとてもおいしそうですが、もうお腹がいっぱいなんです。",
+  "inputTranscript": "这 道 菜 看 起 来 很 好 吃 , 可 是 我 已 经 吃 饱 了 。",
+  "outputTranscript": "この料理はとても美味しそうですが、もうお腹がいっぱいです。",
+  "inputDurationMs": 4051,
+  "outputAudioMs": 4100,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 932,
+    "ttft_from_end_ms": 932,
+    "completion_lag_ms": 2400,
+    "ttfa_from_start_ms": 5132
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.931,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:53:30.346Z"
+}
