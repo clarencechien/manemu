@@ -1,0 +1,331 @@
+{
+  "T001": {
+    "file": "data/audio/T001.wav",
+    "bytes": 102794,
+    "skipped": true
+  },
+  "T002": {
+    "file": "data/audio/T002.wav",
+    "bytes": 121994,
+    "skipped": true
+  },
+  "T003": {
+    "file": "data/audio/T003.wav",
+    "bytes": 93834,
+    "skipped": true
+  },
+  "T004": {
+    "file": "data/audio/T004.wav",
+    "bytes": 191114,
+    "skipped": true
+  },
+  "T005": {
+    "file": "data/audio/T005.wav",
+    "bytes": 138634,
+    "skipped": true
+  },
+  "T006": {
+    "file": "data/audio/T006.wav",
+    "bytes": 87434,
+    "skipped": true
+  },
+  "T007": {
+    "file": "data/audio/T007.wav",
+    "bytes": 161674,
+    "skipped": true
+  },
+  "T008": {
+    "file": "data/audio/T008.wav",
+    "bytes": 123274,
+    "skipped": true
+  },
+  "T009": {
+    "file": "data/audio/T009.wav",
+    "bytes": 79754,
+    "skipped": true
+  },
+  "T010": {
+    "file": "data/audio/T010.wav",
+    "bytes": 147594,
+    "skipped": true
+  },
+  "T011": {
+    "file": "data/audio/T011.wav",
+    "durationMs": 3451,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-pro-preview-tts",
+    "note": "corpus text changed from Suica to IC card: TTS refuses to synthesize the trademark Suica (finishReason OTHER)"
+  },
+  "T012": {
+    "file": "data/audio/T012.wav",
+    "durationMs": 4171,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T013": {
+    "file": "data/audio/T013.wav",
+    "durationMs": 2771,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T014": {
+    "file": "data/audio/T014.wav",
+    "bytes": 104074,
+    "skipped": true
+  },
+  "T015": {
+    "file": "data/audio/T015.wav",
+    "durationMs": 4171,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T016": {
+    "file": "data/audio/T016.wav",
+    "durationMs": 4491,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T017": {
+    "file": "data/audio/T017.wav",
+    "durationMs": 6491,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-pro-preview-tts"
+  },
+  "T018": {
+    "file": "data/audio/T018.wav",
+    "durationMs": 3971,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-pro-preview-tts"
+  },
+  "T019": {
+    "file": "data/audio/T019.wav",
+    "durationMs": 4051,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T020": {
+    "file": "data/audio/T020.wav",
+    "durationMs": 2731,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T021": {
+    "file": "data/audio/T021.wav",
+    "durationMs": 3811,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T022": {
+    "file": "data/audio/T022.wav",
+    "durationMs": 2771,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T023": {
+    "file": "data/audio/T023.wav",
+    "durationMs": 3891,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T024": {
+    "file": "data/audio/T024.wav",
+    "durationMs": 3491,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T025": {
+    "file": "data/audio/T025.wav",
+    "durationMs": 4531,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T026": {
+    "file": "data/audio/T026.wav",
+    "durationMs": 3291,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T027": {
+    "file": "data/audio/T027.wav",
+    "durationMs": 3771,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T028": {
+    "file": "data/audio/T028.wav",
+    "durationMs": 5251,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T029": {
+    "file": "data/audio/T029.wav",
+    "durationMs": 3411,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T030": {
+    "file": "data/audio/T030.wav",
+    "durationMs": 4171,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T031": {
+    "file": "data/audio/T031.wav",
+    "durationMs": 3971,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T032": {
+    "file": "data/audio/T032.wav",
+    "durationMs": 3451,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T033": {
+    "file": "data/audio/T033.wav",
+    "durationMs": 4851,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T034": {
+    "file": "data/audio/T034.wav",
+    "durationMs": 2491,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-pro-preview-tts"
+  },
+  "T035": {
+    "file": "data/audio/T035.wav",
+    "durationMs": 3571,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T036": {
+    "file": "data/audio/T036.wav",
+    "durationMs": 3731,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T037": {
+    "file": "data/audio/T037.wav",
+    "durationMs": 5811,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T038": {
+    "file": "data/audio/T038.wav",
+    "durationMs": 2611,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T039": {
+    "file": "data/audio/T039.wav",
+    "durationMs": 3691,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T040": {
+    "file": "data/audio/T040.wav",
+    "durationMs": 6491,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-pro-preview-tts"
+  },
+  "T041": {
+    "file": "data/audio/T041.wav",
+    "durationMs": 3291,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T042": {
+    "file": "data/audio/T042.wav",
+    "durationMs": 6171,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T043": {
+    "file": "data/audio/T043.wav",
+    "durationMs": 4411,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T044": {
+    "file": "data/audio/T044.wav",
+    "durationMs": 4211,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-pro-preview-tts"
+  },
+  "T045": {
+    "file": "data/audio/T045.wav",
+    "durationMs": 3091,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T046": {
+    "file": "data/audio/T046.wav",
+    "durationMs": 3411,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T047": {
+    "file": "data/audio/T047.wav",
+    "durationMs": 4011,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T048": {
+    "file": "data/audio/T048.wav",
+    "durationMs": 2811,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T049": {
+    "file": "data/audio/T049.wav",
+    "durationMs": 3811,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-flash-preview-tts"
+  },
+  "T050": {
+    "file": "data/audio/T050.wav",
+    "durationMs": 2811,
+    "srcMime": "audio/L16;codec=pcm;rate=24000",
+    "voice": "Kore",
+    "model": "models/gemini-2.5-pro-preview-tts"
+  }
+}

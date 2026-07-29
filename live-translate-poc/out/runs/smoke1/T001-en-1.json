@@ -1,0 +1,34 @@
+{
+  "runId": "smoke1",
+  "phraseId": "T001",
+  "category": "directions",
+  "traps": [],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "請問車站在哪裡?怎麼走比較快?",
+  "reference": "Excuse me, where is the station? What's the fastest way to get there?",
+  "inputTranscript": "请问车站在哪里,怎么走比较快?",
+  "outputTranscript": "Excuse me, where is the station? What's the fastest way to get there?",
+  "inputDurationMs": 3211,
+  "outputAudioMs": 45750,
+  "turnCompleted": false,
+  "latency": {
+    "ttfa_from_end_ms": -221,
+    "ttft_from_end_ms": -245,
+    "completion_lag_ms": 44938,
+    "ttfa_from_start_ms": 3177,
+    "heard_complete_est_ms": 44938
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.462
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T06:51:51.428Z"
+}

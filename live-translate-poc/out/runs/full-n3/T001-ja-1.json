@@ -1,0 +1,33 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T001",
+  "category": "directions",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問車站在哪裡?怎麼走比較快?",
+  "reference": "すみません、駅はどこですか?どう行くのが一番早いですか?",
+  "inputTranscript": "请问车站哪里,怎么走比较快?",
+  "outputTranscript": "すみません、駅はどこですか？どう行けば早いですか？",
+  "inputDurationMs": 3211,
+  "outputAudioMs": 4250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -199,
+    "ttft_from_end_ms": -347,
+    "completion_lag_ms": 3302,
+    "ttfa_from_start_ms": 3201
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.88,
+    "coverage_ok": true,
+    "cer": 0.077
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:17:07.441Z"
+}

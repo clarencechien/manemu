@@ -1,0 +1,36 @@
+{
+  "runId": "smoke1",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "これは辛くしないでください。辛いものがあまり食べられないんです。",
+  "inputTranscript": "这个不要了,我不太能吃了。",
+  "outputTranscript": "これはもういいです。もう食べられないです。",
+  "inputDurationMs": 3251,
+  "outputAudioMs": 45750,
+  "turnCompleted": false,
+  "latency": {
+    "ttfa_from_end_ms": -317,
+    "ttft_from_end_ms": -343,
+    "completion_lag_ms": 44827,
+    "ttfa_from_start_ms": 3081,
+    "heard_complete_est_ms": 44827
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.633,
+    "coverage_ok": true,
+    "cer": 0.364
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T06:52:40.602Z"
+}

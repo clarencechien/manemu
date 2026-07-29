@@ -1,0 +1,36 @@
+{
+  "runId": "smoke1",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "No spicy for this one, please — I can't really handle spicy food.",
+  "inputTranscript": "这个不要啦,我不太能吃了。",
+  "outputTranscript": "I don't want this, I can't really eat it.",
+  "inputDurationMs": 3251,
+  "outputAudioMs": 46000,
+  "turnCompleted": false,
+  "latency": {
+    "ttfa_from_end_ms": -441,
+    "ttft_from_end_ms": -441,
+    "completion_lag_ms": 44945,
+    "ttfa_from_start_ms": 2959,
+    "heard_complete_est_ms": 44945
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.592,
+    "coverage_ok": true,
+    "cer": 0.364
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T06:52:40.533Z"
+}

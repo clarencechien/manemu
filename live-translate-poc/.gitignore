@@ -1,0 +1,3 @@
+node_modules/
+# 評測產出的譯音 wav 較大,預設不進 git(結果 JSON 與報告要進)
+out/runs/*/*.wav
