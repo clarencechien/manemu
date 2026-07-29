@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:27:58.493Z"
+  "ts": "2026-07-29T07:27:58.493Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了求救與叫救護車的訊息，但在日文中省略了對應「請」的敬語表達（如「ください」），語氣較為口語，不過在緊急情況下仍算自然。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

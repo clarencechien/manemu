@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:30:03.532Z"
+  "ts": "2026-07-29T07:30:03.532Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文漏譯了「從星期五改到星期六」中的「星期六」，誤譯為「改到星期五」，導致關鍵資訊遺失。日文表達尚算自然。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

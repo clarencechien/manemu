@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:31:49.720Z"
+  "ts": "2026-07-29T07:31:49.720Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文漏譯了「今天真的麻煩你了」的部分，且使用了較為隨便的常體（手伝ってくれて本当にありがとう），未反映出原文的禮貌程度。日文表達自然。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

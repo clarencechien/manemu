@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:28:43.036Z"
+  "ts": "2026-07-29T07:28:43.036Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的語意。但在日文表達上，「頭がめまいがする」稍顯不自然，通常直接說「すごくめまいがする」或「頭がくらくらする」即可。此外，譯文使用了常體（ない），而在醫療問診場景中通常應使用敬體（ありません），因此標記 honorific_off。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

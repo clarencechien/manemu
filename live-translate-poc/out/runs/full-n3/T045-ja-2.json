@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:31:47.995Z"
+  "ts": "2026-07-29T07:31:47.995Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意基本正確，且日文表達自然流暢。但譯文使用了常體（タメ口），而參考譯文使用的是敬體（丁寧語），在沒有上下文的情況下可能會有禮貌程度不符的問題。另外，「麻煩你了」譯為「助かったよ」（幫了大忙）在語境上是通順的，但與原文的字面意思稍有偏差。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

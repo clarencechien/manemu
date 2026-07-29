@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:30:56.834Z"
+  "ts": "2026-07-29T07:30:56.834Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思。「appointment」對應「預約」雖不如「reservation」精確（特別是在提及航班的語境下），但仍可理解。句型「I can ..., right?」在口語中很自然。句末的逗號為輕微的標點符號瑕疵。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

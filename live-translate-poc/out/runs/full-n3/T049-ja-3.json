@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:33:06.716Z"
+  "ts": "2026-07-29T07:33:06.716Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思，且日語表達自然流暢。雖然省略了「玩」的直接對應詞，但在語境中「大阪に来るのは初めてです」已能充分表達來大阪旅遊的意思，不影響整體語意。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

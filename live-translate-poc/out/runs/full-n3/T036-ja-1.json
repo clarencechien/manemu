@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:28:36.779Z"
+  "ts": "2026-07-29T07:28:36.779Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思，但「頭がめまいがする」在日文中稍顯冗餘（通常直接說「めまいがする」即可）。此外，句尾使用了較為隨便且帶有女性語氣的「ないわ」，與參考譯文的敬語不符，在醫療場景中較不自然。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

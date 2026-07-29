@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:29:09.337Z"
+  "ts": "2026-07-29T07:29:09.337Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation accurately conveys the meaning of the original text. The formatting of the room number as '7 02' is slightly unnatural but understandable in a speech transcript context. 'Fainted' is a correct and natural translation for '昏倒了'."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }
