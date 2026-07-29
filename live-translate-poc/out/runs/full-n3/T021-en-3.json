@@ -34,5 +34,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:24:05.149Z"
+  "ts": "2026-07-29T07:24:05.149Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常流暢且語意完整。唯一的小缺點是將「兩個多少錢」譯為 'how much are they'，稍微忽略了『兩個』(two) 的具體數量概念，但整體語意依然十分清晰且符合情境。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

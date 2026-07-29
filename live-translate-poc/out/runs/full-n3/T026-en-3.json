@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:25:38.265Z"
+  "ts": "2026-07-29T07:25:38.265Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文準確且自然地傳達了原文的意思。「I'm not going to buy it yet」很好地對應了「這個還是先不買好了」，語意忠實度與流暢度皆佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

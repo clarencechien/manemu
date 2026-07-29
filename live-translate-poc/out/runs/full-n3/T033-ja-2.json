@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:27:46.008Z"
+  "ts": "2026-07-29T07:27:46.008Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。雖然省略了「一台」的翻譯，但在日文中「タクシーを呼ぶ」本就預設為一台，符合日語表達習慣。語氣禮貌且意思完整傳達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

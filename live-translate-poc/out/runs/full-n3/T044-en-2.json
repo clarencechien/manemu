@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:31:38.952Z"
+  "ts": "2026-07-29T07:31:38.952Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. It correctly conveys the meaning of arriving 30 minutes late and asking to hold the table, with natural phrasing."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

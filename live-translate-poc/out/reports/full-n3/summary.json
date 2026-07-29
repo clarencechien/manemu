@@ -1,0 +1,227 @@
+{
+  "runId": "full-n3",
+  "generatedAt": "2026-07-29T08:09:18.703Z",
+  "model": "models/gemini-3.5-live-translate-preview",
+  "judgeModel": "models/gemini-3.1-pro-preview + models/gemini-3.5-flash",
+  "runtime": "cc-web-node(非 Cloudflare;延遲為機房乾淨網路的樂觀下界)",
+  "caveats": [
+    "評審使用同家 Gemini 文字模型(無 OpenAI 金鑰),存在自評偏誤風險",
+    "gold 參考譯文由 LLM 產生,未經人工校對",
+    "TTS 合成音源乾淨、無噪音,品質與延遲皆為樂觀值",
+    "CC web 沙箱地理位置不可控,網路段延遲僅供參考,端到端以 M4 真機為準"
+  ],
+  "totals": {
+    "results": 300,
+    "errors": 0
+  },
+  "byDir": {
+    "en": {
+      "quality": {
+        "n": 150,
+        "judged": 150,
+        "adequacy_mean": 4.62,
+        "fluency_mean": 4.86,
+        "number_ok_rate": 0.96,
+        "negation_ok_rate": 0.98,
+        "coverage_mean": 0.9681266666666668,
+        "cer_mean": 0.09160666666666668,
+        "flags": {
+          "number_wrong": 0.006666666666666667,
+          "negation_flipped": 0,
+          "honorific_off": 0,
+          "name_mangled": 0.04666666666666667,
+          "omission": 0.10666666666666667,
+          "hallucination": 0.006666666666666667
+        }
+      },
+      "latency": {
+        "ttfa_from_end_ms": {
+          "p50": -839,
+          "p90": 339,
+          "p95": 486,
+          "mean": -892.7533333333333
+        },
+        "ttft_from_end_ms": {
+          "p50": -883,
+          "p90": 247,
+          "p95": 333,
+          "mean": -977.9533333333334
+        },
+        "completion_lag_ms": {
+          "p50": 2572,
+          "p90": 2994,
+          "p95": 3164,
+          "mean": 2568.713333333333
+        },
+        "ttfa_from_start_ms": {
+          "p50": 3153,
+          "p90": 3365,
+          "p95": 3462,
+          "mean": 3168.866666666667
+        }
+      },
+      "byCategory": {
+        "directions": {
+          "n": 18,
+          "adequacy_mean": 4.277777777777778,
+          "ttfa_from_end_p50": -178,
+          "ttfa_from_end_p90": 696,
+          "completion_lag_p90": 3267
+        },
+        "transport": {
+          "n": 21,
+          "adequacy_mean": 4.523809523809524,
+          "ttfa_from_end_p50": -826,
+          "ttfa_from_end_p90": 560,
+          "completion_lag_p90": 2959
+        },
+        "dining": {
+          "n": 21,
+          "adequacy_mean": 4,
+          "ttfa_from_end_p50": -1114,
+          "ttfa_from_end_p90": 273,
+          "completion_lag_p90": 2853
+        },
+        "shopping": {
+          "n": 21,
+          "adequacy_mean": 4.714285714285714,
+          "ttfa_from_end_p50": -810,
+          "ttfa_from_end_p90": 218,
+          "completion_lag_p90": 2753
+        },
+        "hotel": {
+          "n": 18,
+          "adequacy_mean": 4.722222222222222,
+          "ttfa_from_end_p50": -1009,
+          "ttfa_from_end_p90": -464,
+          "completion_lag_p90": 2985
+        },
+        "emergency": {
+          "n": 15,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": -498,
+          "ttfa_from_end_p90": 376,
+          "completion_lag_p90": 2974
+        },
+        "appointment": {
+          "n": 18,
+          "adequacy_mean": 4.944444444444445,
+          "ttfa_from_end_p50": -1344,
+          "ttfa_from_end_p90": -248,
+          "completion_lag_p90": 3260
+        },
+        "smalltalk": {
+          "n": 18,
+          "adequacy_mean": 4.944444444444445,
+          "ttfa_from_end_p50": -83,
+          "ttfa_from_end_p90": 251,
+          "completion_lag_p90": 2955
+        }
+      }
+    },
+    "ja": {
+      "quality": {
+        "n": 150,
+        "judged": 150,
+        "adequacy_mean": 4.593333333333334,
+        "fluency_mean": 4.866666666666666,
+        "number_ok_rate": 0.98,
+        "negation_ok_rate": 0.9866666666666667,
+        "coverage_mean": 0.8732266666666667,
+        "cer_mean": 0.09449333333333336,
+        "flags": {
+          "number_wrong": 0,
+          "negation_flipped": 0,
+          "honorific_off": 0.06666666666666667,
+          "name_mangled": 0.04,
+          "omission": 0.07333333333333333,
+          "hallucination": 0.03333333333333333
+        }
+      },
+      "latency": {
+        "ttfa_from_end_ms": {
+          "p50": -794,
+          "p90": 401,
+          "p95": 532,
+          "mean": -812.84
+        },
+        "ttft_from_end_ms": {
+          "p50": -909,
+          "p90": 273,
+          "p95": 401,
+          "mean": -896.5
+        },
+        "completion_lag_ms": {
+          "p50": 2726,
+          "p90": 3368,
+          "p95": 3750,
+          "mean": 2815.633333333333
+        },
+        "ttfa_from_start_ms": {
+          "p50": 3126,
+          "p90": 3400,
+          "p95": 3529,
+          "mean": 3248.766666666667
+        }
+      },
+      "byCategory": {
+        "directions": {
+          "n": 18,
+          "adequacy_mean": 4.666666666666667,
+          "ttfa_from_end_p50": -199,
+          "ttfa_from_end_p90": 584,
+          "completion_lag_p90": 3329
+        },
+        "transport": {
+          "n": 21,
+          "adequacy_mean": 4.380952380952381,
+          "ttfa_from_end_p50": -518,
+          "ttfa_from_end_p90": 548,
+          "completion_lag_p90": 3084
+        },
+        "dining": {
+          "n": 21,
+          "adequacy_mean": 4.380952380952381,
+          "ttfa_from_end_p50": -1138,
+          "ttfa_from_end_p90": 225,
+          "completion_lag_p90": 3316
+        },
+        "shopping": {
+          "n": 21,
+          "adequacy_mean": 4.571428571428571,
+          "ttfa_from_end_p50": -876,
+          "ttfa_from_end_p90": 226,
+          "completion_lag_p90": 3450
+        },
+        "hotel": {
+          "n": 18,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": -1024,
+          "ttfa_from_end_p90": -552,
+          "completion_lag_p90": 3041
+        },
+        "emergency": {
+          "n": 15,
+          "adequacy_mean": 4.666666666666667,
+          "ttfa_from_end_p50": -506,
+          "ttfa_from_end_p90": 490,
+          "completion_lag_p90": 3542
+        },
+        "appointment": {
+          "n": 18,
+          "adequacy_mean": 4.555555555555555,
+          "ttfa_from_end_p50": -1296,
+          "ttfa_from_end_p90": -94,
+          "completion_lag_p90": 3237
+        },
+        "smalltalk": {
+          "n": 18,
+          "adequacy_mean": 4.611111111111111,
+          "ttfa_from_end_p50": -82,
+          "ttfa_from_end_p90": 274,
+          "completion_lag_p90": 4272
+        }
+      }
+    }
+  }
+}

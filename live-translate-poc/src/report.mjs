@@ -63,7 +63,8 @@ const groupBy = (rs, fn) => {
 
 const summary = {
   runId, generatedAt: new Date().toISOString(),
-  model: results[0]?.model, judgeModel: results[0]?.judgeModel ?? null,
+  model: results[0]?.model,
+  judgeModel: [...new Set(results.map((r) => r.judgeModel).filter(Boolean))].join(" + ") || null,
   runtime: "cc-web-node(非 Cloudflare;延遲為機房乾淨網路的樂觀下界)",
   caveats: [
     "評審使用同家 Gemini 文字模型(無 OpenAI 金鑰),存在自評偏誤風險",
