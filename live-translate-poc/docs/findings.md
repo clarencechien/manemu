@@ -126,9 +126,22 @@ live-translate 是**連續 session**:`audioStreamEnd` 後模型翻完仍持續�
 - 已完成並驗證到能驗的程度:`judge.mjs` 的 `JUDGE_PROVIDER=openai`(gpt-5-mini→`judge_x` 欄位)、`providers/openai-realtime.mjs`(24kHz 重取樣、subprotocol 認證、`session.close` 收尾)、`run.mjs --provider openai`。**WS 握手與認證實測通過**(錯誤發生在應用層 quota,非 401)。
 - 儲值後指令:`JUDGE_PROVIDER=openai npm run judge -- full-n3` 與 `npm run run -- --provider openai --repeats 1 --run-id gpt-n1`。
 
-### 配額後記(更正 §3.5 的推測)
+### 配額後記(使用者 dashboard 證實,2026-07-29)
 
-3.1-pro 的 429 實測 quotaId=`GenerateRequestsPerDayPerProjectPerModel`、quotaValue=**250**。使用者確認專案掛在 Tier 1 postpay 帳單下;無論如何,決策是**全面棄用 pro 級**(postpay 按量計費風險),評審預設改 `gemini-3.5-flash`。
+Tier 1 postpay 專案的實際 per-model 限制(dashboard 截圖與 API 實測吻合):
+
+| 模型 | RPM | RPD | 當日用量 | 含義 |
+| --- | --- | --- | --- | --- |
+| Gemini 3.1 Pro | 25 | **250** | 254(爆) | Tier 1 的 preview/pro 級 RPD 仍很小 → **評審/批次一律 flash 級** |
+| 2.5 Flash TTS | **10** | **100** | 75 | 一次全量合成(50 句+重試)吃掉大半日限 |
+| 2.5 Pro TTS | 10 | 50 | 12 | fallback 用 |
+| 3.5 Flash | 1K | 10K | 352 | 評審/回譯主力,量足 |
+| 3.5 Flash Lite | 4K | 150K | 5 | UI 回譯首選 |
+
+**TTS 的操作結論(先記錄、暫不改碼)**:
+1. Phase A 音檔已進 git,平常不重合成;語料改版一天最多合成一輪。
+2. `synth.mjs` 目前 ~17 req/min 超過 TTS 的 10 RPM——部分「逾時」可能是限流;下次動 synth 時加 ≤10 RPM 節流。
+3. 擴語料/hard-mode 的路線:OpenAI `gpt-4o-mini-tts`(配額獨立,且換音源可檢驗「辣→啦」是否為 Gemini TTS artifact)> Batch API(半價、配額另計)> 三模型輪替(每日 ~150 句容量)。
 
 ## 4. 對計劃的修正建議(帶回 plan v3)
 

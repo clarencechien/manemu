@@ -2902,6 +2902,1206 @@
   "T015-ja-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
    "adequacy": 5,
    "fluency": 5
+  },
+  "T015-ja-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-ja-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-ja-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-ja-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T015-ja-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-ja-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-ja-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T015-en-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T015-en-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T015-en-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-ja-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 2,
+   "fluency": 2
+  },
+  "T015-en-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T015-en-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 4,
+   "fluency": 4
+  },
+  "T015-en-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 4,
+   "fluency": 4
+  },
+  "T016-ja-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T015-en-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 3,
+   "fluency": 1
+  },
+  "T015-en-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 3,
+   "fluency": 5
+  },
+  "T016-ja-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T016-ja-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-ja-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 3
+  },
+  "T016-ja-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T015-en-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 2,
+   "fluency": 2
+  },
+  "T016-en-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 2
+  },
+  "T016-en-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-ja-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T016-en-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 4,
+   "fluency": 4
+  },
+  "T017-ja-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T017-ja-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T017-ja-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T016-en-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T017-ja-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 3,
+   "fluency": 3
+  },
+  "T017-ja-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 1,
+   "fluency": 1
+  },
+  "T017-en-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 2,
+   "fluency": 3
+  },
+  "T017-en-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 2,
+   "fluency": 1
+  },
+  "T017-en-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-ja-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 1,
+   "fluency": 2
+  },
+  "T017-en-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T017-ja-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T017-en-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-ja-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T019-ja-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T019-ja-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T018-en-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T019-ja-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T019-ja-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T019-en-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-ja-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T019-en-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T020-en-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-ja-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T021-ja-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T020-en-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 1,
+   "fluency": 1
+  },
+  "T021-ja-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 4,
+   "fluency": 4
+  },
+  "T021-ja-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 4,
+   "fluency": 3
+  },
+  "T021-ja-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 3,
+   "fluency": 2
+  },
+  "T021-en-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 1,
+   "fluency": 1
+  },
+  "T021-en-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 1,
+   "fluency": 1
+  },
+  "T021-en-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T021-en-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-ja-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-anthropic/claude-sonnet-5|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-openai/gpt-5.6-terra|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-anthropic/claude-sonnet-5|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T022-ja-anthropic/claude-sonnet-5|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 4
+  },
+  "T022-ja-openai/gpt-5.6-terra|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-openai/gpt-5.6-terra|anthropic/claude-sonnet-5": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T022-ja-openai/gpt-5.6-terra|deepseek/deepseek-v3.2": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T022-ja-qwen/qwen3.7-max|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-qwen/qwen3.7-max|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-qwen/qwen3.7-max|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-deepseek/deepseek-v3.2|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-qwen/qwen3.7-max|deepseek/deepseek-v3.2": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-deepseek/deepseek-v3.2|mistralai/mistral-large-2512": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-deepseek/deepseek-v3.2|anthropic/claude-sonnet-5": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-google/gemini-3.6-flash|openai/gpt-5.6-terra": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-google/gemini-3.6-flash|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-google/gemini-3.6-flash|mistralai/mistral-large-2512": {
+   "adequacy": 4,
+   "fluency": 4
+  },
+  "T022-ja-anthropic/claude-sonnet-5|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T021-en-deepseek/deepseek-v3.2|qwen/qwen3.7-plus": {
+   "adequacy": 5,
+   "fluency": 5
+  },
+  "T022-ja-google/gemini-3.6-flash|anthropic/claude-sonnet-5": {
+   "adequacy": 4,
+   "fluency": 5
+  },
+  "T022-ja-google/gemini-3.6-flash|deepseek/deepseek-v3.2": {
+   "adequacy": 4,
+   "fluency": 5
   }
  }
 }
