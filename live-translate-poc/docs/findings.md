@@ -180,6 +180,22 @@ Tier 1 postpay 專案的實際 per-model 限制(dashboard 截圖與 API 實測�
 - **Q7 評審偏差**:qwen 最嚴(-0.17)、deepseek 最鬆(+0.04);deepseek 最愛插 flag(number_wrong 32 vs 其他 1–13)——多評審中位數有效中和了個性。
 - 花費:OpenRouter $7.35(P 波 ~$3.4 + Q 波 ~$4);OpenAI ~$3;Gemini API 走 Tier 1 配額。
 
+## 3.8 W6|「另一條路」實測:一般 Live + 口譯 prompt(重大發現)
+
+同 10 句殺手句(zh→ja,n=20 vs full-n3 同句子集 n=30):
+
+| | translate 專用模式 | 一般 Live + systemInstruction(gemini-3.1-flash-live-preview) |
+| --- | --- | --- |
+| 首音 from start p50 | 3.2s | 5.0s(+1.8s) |
+| 死氣(講完→首音)p50 | -0.5s(同步搶跑) | +1.0s(**仍過 1.5s 門檻**) |
+| adequacy(殺手句) | 4.07 | **4.80** |
+| 災難 | 8/30 | **0/20** |
+
+- 「蝦子/辣/昏倒/可以嗎?」全對——**驗證根因**:災難在「聽」,一般 Live 是完整 LLM 在聽,聽得懂語境;translate 模式管線快但耳朵笨。
+- systemInstruction 20/20 守住「只翻譯不回答」;§6「不能放 prompt」的限制在此路線消失,術語表可原生注入。
+- 代價:無同步口譯、+1.4–1.8s;風險:語域漂移(出現過一次關西腔,prompt 需鎖定「標準語+です・ます」)。
+- **待辦(run3 增列 R1.5)**:prompt 模式全量 50×2×3 + 面板評審;若維持此品質,M3 預設引擎改用此路線,或做「快(translate)/準(prompt)」雙模式。3.1-flash-live 配額/計價待查。
+
 ## 4. 對計劃的修正建議(帶回 plan v3)
 
 1. §3/§6/附錄 F 的 setup 欄位名以本文 §2 實測為準。

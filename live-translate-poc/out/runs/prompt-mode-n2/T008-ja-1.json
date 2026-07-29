@@ -1,0 +1,38 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T008",
+  "category": "transport",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "這班車會到大阪,但是應該不會停京都吧?",
+  "reference": "この電車は大阪に行きますが、京都には止まらないですよね?",
+  "inputTranscript": "这 班 车 会 到 大 阪 , 但 是 应 该 不 会 停 京 都 吧 ?",
+  "outputTranscript": "この電車は大阪に行きますが、京都には止まらないはずですよね?",
+  "inputDurationMs": 3851,
+  "latency": {
+    "ttfa_from_end_ms": 976,
+    "ttfa_from_start_ms": 4976,
+    "completion_lag_ms": 2055
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:26:52.792Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文非常準確且自然。原文中的「應該」被精確地翻譯為「はず」，語意甚至比參考譯文更貼近原文的語氣，整體無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

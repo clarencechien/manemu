@@ -1,0 +1,37 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T016",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我對蝦子過敏,餐點裡請不要放任何海鮮。",
+  "reference": "エビアレルギーがあるので、料理には海鮮を一切入れないでください。",
+  "inputTranscript": "我 对 虾 子 过 敏 , 餐 点 里 请 不 要 放 任 何 海 鲜 。",
+  "outputTranscript": "海老アレルギーがあるので、食事には海鮮を一切入れないでください。",
+  "inputDurationMs": 4491,
+  "latency": {
+    "ttfa_from_end_ms": 941,
+    "ttfa_from_start_ms": 5541,
+    "completion_lag_ms": 2515
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:27:42.811Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思，與參考譯文幾乎一致，僅有「海老/エビ」及「食事/料理」的微小用詞差異，皆完全符合日文表達習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

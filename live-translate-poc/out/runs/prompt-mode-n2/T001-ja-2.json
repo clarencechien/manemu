@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T001",
+  "category": "directions",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "請問車站在哪裡?怎麼走比較快?",
+  "reference": "すみません、駅はどこですか?どう行くのが一番早いですか?",
+  "inputTranscript": "请 问 车 站 在 哪 里 ? 怎 么 走 比 较 快 ?",
+  "outputTranscript": "あの、駅はどこですか?どう行けば早く着けますか?",
+  "inputDurationMs": 3211,
+  "latency": {
+    "ttfa_from_end_ms": 930,
+    "ttfa_from_start_ms": 4330,
+    "completion_lag_ms": 1835
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:26:18.877Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「請問」譯為「あの」在口語中很自然，「怎麼走比較快」譯為「どう行けば早く着けますか」也完全符合原意，語意忠實度與流暢度皆極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

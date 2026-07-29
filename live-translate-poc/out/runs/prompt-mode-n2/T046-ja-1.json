@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T046",
+  "category": "smalltalk",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "你的中文說得真好,是在哪裡學的?",
+  "reference": "中国語がとてもお上手ですね。どこで習ったんですか?",
+  "inputTranscript": "你 的 中 文 说 得 真 好 , 是 在 哪 里 学 的 ?",
+  "outputTranscript": "中国語が本当にお上手ですね。どこで習ったんですか?",
+  "inputDurationMs": 3411,
+  "latency": {
+    "ttfa_from_end_ms": 1006,
+    "ttfa_from_start_ms": 4606,
+    "completion_lag_ms": 2476
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:28:59.460Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，僅將「とても」替換為同樣自然的「本当に」，語意完全忠實。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

@@ -1,0 +1,37 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "これは辛くしないでください。辛いものがあまり食べられないんです。",
+  "inputTranscript": "这 个 不 要 啦 , 我 不 太 能 吃 辣 。",
+  "outputTranscript": "これはやめとくわ。あんまり辛いのは食べられへんねん。",
+  "inputDurationMs": 3251,
+  "latency": {
+    "ttfa_from_end_ms": 957,
+    "ttfa_from_start_ms": 4356,
+    "completion_lag_ms": 1797
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:27:32.671Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "「這個不要辣」（不要加辣）被誤譯為「これはやめとくわ」（這個我就不要了/放棄這個），語意出現嚴重偏差（扭曲/幻覺），會導致點餐錯誤。後半句「我不太能吃辣」翻譯正確，且使用了關西腔，語意大致通順。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

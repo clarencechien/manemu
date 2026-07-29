@@ -1,0 +1,37 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T030",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問退房時間是早上十點還是十一點?",
+  "reference": "チェックアウトは朝10時ですか、それとも11時ですか?",
+  "inputTranscript": "请 问 退 房 时 间 是 早 上 10 点 还 是 11 点 ?",
+  "outputTranscript": "チェックアウト時間は、朝の10時ですか?それとも11時ですか?",
+  "inputDurationMs": 4171,
+  "latency": {
+    "ttfa_from_end_ms": 927,
+    "ttfa_from_start_ms": 5226,
+    "completion_lag_ms": 2203
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:28:17.555Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思，日語表達非常自然流暢，無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

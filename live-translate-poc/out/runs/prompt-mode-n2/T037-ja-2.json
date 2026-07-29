@@ -1,0 +1,37 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "部屋番号は702です。友達が倒れました。",
+  "inputTranscript": "我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。",
+  "outputTranscript": "私の部屋は702です。友達が気を失っています。",
+  "inputDurationMs": 5811,
+  "latency": {
+    "ttfa_from_end_ms": 921,
+    "ttfa_from_start_ms": 6921,
+    "completion_lag_ms": 1775
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:28:50.100Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「私の部屋は702です」很好地傳達了房間號碼，「気を失っています」也精確地翻譯了「昏倒了」，語意完全忠實，語句流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

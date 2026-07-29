@@ -1,0 +1,37 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "これは辛くしないでください。辛いものがあまり食べられないんです。",
+  "inputTranscript": "这 个 不 要 啦 , 我 不 太 能 吃 辣 。",
+  "outputTranscript": "これは遠慮しておきます、辛いものはちょっと苦手なんで。",
+  "inputDurationMs": 3251,
+  "latency": {
+    "ttfa_from_end_ms": 964,
+    "ttfa_from_start_ms": 4364,
+    "completion_lag_ms": 2035
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:27:24.373Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "前半句「這個不要辣」被誤譯為「これは遠慮しておきます」（這個我就不用了/心領了），改變了原意（原本是想要這道菜但要求不加辣，譯文變成了拒絕這道菜）。後半句「我不太能吃辣」翻譯為「辛いものはちょっと苦手なんで」非常道地且自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

@@ -1,0 +1,38 @@
+{
+  "runId": "prompt-mode-n2",
+  "phraseId": "T008",
+  "category": "transport",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "這班車會到大阪,但是應該不會停京都吧?",
+  "reference": "この電車は大阪に行きますが、京都には止まらないですよね?",
+  "inputTranscript": "这 班 车 会 到 大 阪 , 但 是 应 该 不 会 停 京 都 吧 ?",
+  "outputTranscript": "この電車は大阪へ行きますが、京都には止まらないはずですよね?",
+  "inputDurationMs": 3851,
+  "latency": {
+    "ttfa_from_end_ms": 952,
+    "ttfa_from_start_ms": 4952,
+    "completion_lag_ms": 2223
+  },
+  "model": "models/gemini-3.1-flash-live-preview",
+  "mode": "systemInstruction",
+  "ts": "2026-07-29T10:27:01.928Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完美地傳達了原文「應該不會...吧」的語氣（はずですよね）。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

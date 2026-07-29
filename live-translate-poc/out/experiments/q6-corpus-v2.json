@@ -851,7 +851,8 @@
      "min_len_ratio": 0.5
     }
    }
-  ]
+  ],
+  "anthropic/claude-sonnet-5": []
  },
  "reviews": {
   "openai/gpt-5.6-terra#0|anthropic/claude-sonnet-5": {
@@ -1183,6 +1184,101 @@
    "ok": true,
    "severity": "none",
    "issue": "無明顯問題"
+  },
+  "openai/gpt-5.6-terra#2|anthropic/claude-sonnet-5": {
+   "ok": true,
+   "severity": "none",
+   "issue": "無明顯問題"
+  },
+  "openai/gpt-5.6-terra#3|anthropic/claude-sonnet-5": {
+   "ok": true,
+   "severity": "none",
+   "issue": "無"
+  },
+  "openai/gpt-5.6-terra#14|anthropic/claude-sonnet-5": {
+   "ok": false,
+   "severity": "minor",
+   "issue": "traps 標記包含 homophone-risk，但句子內容未體現同音詞混淆的情境"
+  },
+  "openai/gpt-5.6-terra#11|anthropic/claude-sonnet-5": {
+   "ok": true,
+   "severity": "none",
+   "issue": "無"
+  },
+  "openai/gpt-5.6-terra#8|anthropic/claude-sonnet-5": {
+   "ok": true,
+   "severity": "none",
+   "issue": ""
+  },
+  "openai/gpt-5.6-terra#17|anthropic/claude-sonnet-5": {
+   "ok": true,
+   "severity": "none",
+   "issue": "無明顯問題"
+  },
+  "openai/gpt-5.6-terra#15|anthropic/claude-sonnet-5": {
+   "ok": true,
+   "severity": "none",
+   "issue": "無"
+  },
+  "openai/gpt-5.6-terra#21|anthropic/claude-sonnet-5": {
+   "ok": false,
+   "severity": "major",
+   "issue": "traps 標註 homophone-risk 但句中未體現任何同音詞風險"
+  },
+  "qwen/qwen3.7-max#7|openai/gpt-5.6-terra": {
+   "ok": true,
+   "severity": "none",
+   "issue": ""
+  },
+  "qwen/qwen3.7-max#7|anthropic/claude-sonnet-5": {
+   "ok": false,
+   "severity": "major",
+   "issue": "「友都八相機」應為「友都八喜」(Yodobashi Camera)，專有名詞誤譯"
+  },
+  "qwen/qwen3.7-max#3|anthropic/claude-sonnet-5": {
+   "ok": true,
+   "severity": "none",
+   "issue": ""
+  },
+  "qwen/qwen3.7-max#6|anthropic/claude-sonnet-5": {
+   "ok": true,
+   "severity": "none",
+   "issue": "無"
+  },
+  "qwen/qwen3.7-max#11|openai/gpt-5.6-terra": {
+   "ok": false,
+   "severity": "major",
+   "issue": "expect 的 numbers 標註為「1」，但原句及日英文參考譯文都沒有數字資訊，屬標註錯誤。"
+  },
+  "qwen/qwen3.7-max#14|anthropic/claude-sonnet-5": {
+   "ok": true,
+   "severity": "none",
+   "issue": "無明顯問題"
+  },
+  "qwen/qwen3.7-max#12|anthropic/claude-sonnet-5": {
+   "ok": true,
+   "severity": "none",
+   "issue": "無明顯問題"
+  },
+  "qwen/qwen3.7-max#13|anthropic/claude-sonnet-5": {
+   "ok": false,
+   "severity": "major",
+   "issue": "expect.numbers標註為[\"1\"]但句子中沒有任何數字，標註錯誤"
+  },
+  "qwen/qwen3.7-max#16|anthropic/claude-sonnet-5": {
+   "ok": false,
+   "severity": "major",
+   "issue": "京都巴士通常是後門上車、下車時投幣，此句「上車投幣」與實際乘車方式不符"
+  },
+  "qwen/qwen3.7-max#22|anthropic/claude-sonnet-5": {
+   "ok": true,
+   "severity": "none",
+   "issue": "無"
+  },
+  "qwen/qwen3.7-max#23|anthropic/claude-sonnet-5": {
+   "ok": false,
+   "severity": "major",
+   "issue": "expect.numbers標註為[1]但句中並無任何數字，標註錯誤"
   }
  }
 }
