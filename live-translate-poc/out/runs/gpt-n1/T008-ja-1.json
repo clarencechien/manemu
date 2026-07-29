@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:32.849Z"
+  "ts": "2026-07-29T09:02:32.849Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的意思。語音轉寫中「大阪」錯寫為「大坂」，且「行きますでも、」在日語接續上較不自然，應使用「行きますが、」或拆分為兩句「行きます。でも、」，但整體不影響理解。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

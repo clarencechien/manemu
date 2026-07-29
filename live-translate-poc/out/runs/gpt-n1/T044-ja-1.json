@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "30分ほど遅れます。席を取っておいていただけますか?",
+  "inputTranscript": "我们会晚三十分钟到。位子可以保留吗",
+  "outputTranscript": "私たちは三十分遅れて着くので席は確保できますか",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 6000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -3009,
+    "ttft_from_end_ms": -3652,
+    "completion_lag_ms": 827,
+    "ttfa_from_start_ms": 1390
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.958,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:07:21.534Z"
+}

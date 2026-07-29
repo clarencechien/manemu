@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:00.033Z"
+  "ts": "2026-07-29T09:02:00.033Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "「走過去」被誤譯為「出て」（出去），漏譯了「走路」的語意。此外，前半句「だいたい何分か」結構破碎，不夠完整，但後半句「十五分を超えるなら、タクシーに乗ろうと思います」語意表達正確且流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

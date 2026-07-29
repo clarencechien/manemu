@@ -1,0 +1,33 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T046",
+  "category": "smalltalk",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "你的中文說得真好,是在哪裡學的?",
+  "reference": "中国語がとてもお上手ですね。どこで習ったんですか?",
+  "inputTranscript": "你的中文说得真好。,是在哪里学",
+  "outputTranscript": "中国語が本当に上手ですね。どこで学んだんですか?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 5600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1431,
+    "ttft_from_end_ms": -2059,
+    "completion_lag_ms": 652,
+    "ttfa_from_start_ms": 2169
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.957,
+    "coverage_ok": true,
+    "cer": 0.071
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:07:35.809Z"
+}

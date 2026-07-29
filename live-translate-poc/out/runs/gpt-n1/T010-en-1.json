@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:47.635Z"
+  "ts": "2026-07-29T09:02:47.635Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "The machine translation completely missed the destination 'Shinjuku' (新宿) and instead hallucinated 'on the Circular line'. There is also a spacing typo in the English output ('lineis' instead of 'line is')."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

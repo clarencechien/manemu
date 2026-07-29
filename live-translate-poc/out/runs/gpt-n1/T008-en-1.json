@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:32.531Z"
+  "ts": "2026-07-29T09:02:32.531Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "The translation of '大阪' (Osaka) was transliterated as 'Daban' (name_mangled). There is also a minor hallucination/transcription error at the beginning ('Right nowthis' instead of 'This'). Otherwise, the core meaning is well conveyed."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

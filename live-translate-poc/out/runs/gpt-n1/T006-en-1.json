@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:15.763Z"
+  "ts": "2026-07-29T09:02:15.763Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation incorrectly turns a question ('Is there a restroom nearby?') into an assertion ('This place nearby has a bathroom'). Additionally, there is a spacing error ('nearbyhas') which impacts fluency."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

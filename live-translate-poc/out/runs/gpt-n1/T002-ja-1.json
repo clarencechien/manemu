@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:01:44.067Z"
+  "ts": "2026-07-29T09:01:44.067Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "地名「Shibuya（渋谷）」被錯誤翻譯為「徐不娓」，導致專有名詞嚴重毀損（name_mangled）。其餘句型結構與文法皆正確且自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

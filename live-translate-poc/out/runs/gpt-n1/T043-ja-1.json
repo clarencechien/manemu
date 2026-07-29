@@ -1,0 +1,36 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T043",
+  "category": "appointment",
+  "traps": [
+    "negation",
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問最晚可以幾點取消,而不用付取消費?",
+  "reference": "キャンセル料がかからないのは、何時までのキャンセルですか?",
+  "inputTranscript": "请问最晚可以幾點取消而不用付取消費？",
+  "outputTranscript": "この件で最短でいつまでにキャンセルすればキャンセル料がかからないですか",
+  "inputDurationMs": 4411,
+  "outputAudioMs": 6400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2500,
+    "ttft_from_end_ms": -3143,
+    "completion_lag_ms": 524,
+    "ttfa_from_start_ms": 2100
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.296,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:07:13.128Z"
+}

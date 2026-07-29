@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:24.579Z"
+  "ts": "2026-07-29T09:02:24.579Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "「京都」被誤譯為「ダンジョン」（地下城/Dungeon），屬於嚴重的專有名詞翻譯錯誤（Name mangling / Hallucination）。其餘關於張數、大人與小孩的翻譯皆正確且語句流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

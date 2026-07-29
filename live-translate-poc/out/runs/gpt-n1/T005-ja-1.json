@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:08.663Z"
+  "ts": "2026-07-29T09:02:08.663Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文漏譯了開頭的「請問」（すみません）。此外，地標專有名詞出現漢字錯誤：「淺草寺」被誤譯為「前草寺」，「晴空塔」被誤譯為「秦空塔」，這會影響日語母語者的理解。不過，後半句的文法結構「同じ方向ですか？」是正確且自然的。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:09.126Z"
+  "ts": "2026-07-29T09:02:09.126Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "「淺草寺」被嚴重誤譯並幻覺為「Mr. Qian, the minister of finance」，「晴空塔」也被誤譯為「Cloud-Break Pagoda」。雖然英文句法通順，但關鍵地名完全錯誤，導致無法正確傳達語意。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

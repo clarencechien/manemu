@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "We'll be about thirty minutes late — can you hold our table?",
+  "inputTranscript": "我们会晚三十分钟到。位子可以保留",
+  "outputTranscript": "We'll be thirty minutes late, can you hold our seats?",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 5600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1433,
+    "ttft_from_end_ms": -2066,
+    "completion_lag_ms": 477,
+    "ttfa_from_start_ms": 2967
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.891,
+    "coverage_ok": true,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:07:23.219Z"
+}

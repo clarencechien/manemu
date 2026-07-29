@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:01:43.053Z"
+  "ts": "2026-07-29T09:01:43.053Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "專有名詞 'Shibuya Sky' 被錯誤音譯為 'Xu Bu Ya's' 且漏掉了 'Sky'，屬於嚴重的專有名詞翻譯錯誤 (name_mangled, omission)。此外，'請問' 被直譯為 'Please ask'，且整句語序不夠自然，影響流暢度。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:46.925Z"
+  "ts": "2026-07-29T09:02:46.925Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "機器譯文出現嚴重的幻覺與漏譯。「回新宿」被嚴重幻覺為「スターアライド」，導致地名「新宿」漏譯；「最後一班」被誤譯為「最後の一回分」。整句語意嚴重偏差，且缺乏問句語氣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

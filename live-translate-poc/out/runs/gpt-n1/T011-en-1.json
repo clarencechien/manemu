@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:55.110Z"
+  "ts": "2026-07-29T09:02:55.110Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "The machine translation contains a severe hallucination (\"Even with a knife\") and alters the structure of the sentence into an incomplete conditional clause (\"if you top up...\"), which fails to convey the original intent (\"I want to...\")."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

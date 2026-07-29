@@ -1,0 +1,33 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T046",
+  "category": "smalltalk",
+  "traps": [],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "你的中文說得真好,是在哪裡學的?",
+  "reference": "Your Chinese is really good — where did you learn it?",
+  "inputTranscript": "你的中文说得真好。，是在哪里学的？",
+  "outputTranscript": "Your Chinese is excellent, where did you learn it?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 4800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -717,
+    "ttft_from_end_ms": -1746,
+    "completion_lag_ms": 378,
+    "ttfa_from_start_ms": 2882
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.976,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:07:37.527Z"
+}

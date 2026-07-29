@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:00.772Z"
+  "ts": "2026-07-29T09:02:00.772Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural, conveying the exact meaning of the source text. 'I think I'll take a taxi' is a very natural way to express '我想搭計程車' in this context."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }
