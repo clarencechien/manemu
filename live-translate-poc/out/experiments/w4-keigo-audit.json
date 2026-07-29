@@ -1,0 +1,244 @@
+{
+ "items": {
+  "T001-1": {
+   "phraseId": "T001",
+   "category": "directions",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「すみません」與「ですか」禮貌自然，適合向陌生人詢問路線。"
+  },
+  "T003-2": {
+   "phraseId": "T003",
+   "category": "directions",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對站務員說法自然有禮，語氣清楚且不失禮。"
+  },
+  "T001-3": {
+   "phraseId": "T001",
+   "category": "directions",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用ですか與すみません對店員、站務員或路人都自然有禮。"
+  },
+  "T004-1": {
+   "phraseId": "T004",
+   "category": "directions",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用ですか與です禮貌自然，適合向站務員或路人詢問。"
+  },
+  "T003-1": {
+   "phraseId": "T003",
+   "category": "directions",
+   "repeat": 1,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "對店員或站務員用普通體「行くんだ」偏隨便，應改用「駅に行きたいです」。"
+  },
+  "T004-2": {
+   "phraseId": "T004",
+   "category": "directions",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用ですか與です禮貌自然，適合向店員、站務員或路人詢問。"
+  },
+  "T005-1": {
+   "phraseId": "T005",
+   "category": "directions",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員、站務員或路人使用自然有禮，語域適當。"
+  },
+  "T004-3": {
+   "phraseId": "T004",
+   "category": "directions",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對陌生人詢問路程時間時語氣禮貌自然，後句也不失禮。"
+  },
+  "T002-2": {
+   "phraseId": "T002",
+   "category": "directions",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，但「Shibuya」應說作「渋谷」而非「徐博雅」。"
+  },
+  "T002-1": {
+   "phraseId": "T002",
+   "category": "directions",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，但「Shibuya」應寫作「渋谷」以免店員聽不懂。"
+  },
+  "T005-3": {
+   "phraseId": "T005",
+   "category": "directions",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「ですか」向店員、站務員或路人詢問方向自然且有禮。"
+  },
+  "T002-3": {
+   "phraseId": "T002",
+   "category": "directions",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，但「徐博雅」應改為「渋谷」。"
+  },
+  "T001-2": {
+   "phraseId": "T001",
+   "category": "directions",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用ですか的禮貌語，對路人或站務員詢問方向自然不失禮。"
+  },
+  "T006-1": {
+   "phraseId": "T006",
+   "category": "directions",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員或站務員使用自然有禮，且能清楚表達急迫性。"
+  },
+  "T003-3": {
+   "phraseId": "T003",
+   "category": "directions",
+   "repeat": 3,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "對店員或陌生人使用普通體較失禮，宜改為「空港ではなく、駅に行きたいです」。"
+  },
+  "T007-2": {
+   "phraseId": "T007",
+   "category": "transport",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對站務員購票時使用「ください」禮貌自然，後段簡潔補充票種也合適。"
+  },
+  "T007-1": {
+   "phraseId": "T007",
+   "category": "transport",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對站務員購票時使用「ください」得體，後句雖簡略但自然清楚。"
+  },
+  "T007-3": {
+   "phraseId": "T007",
+   "category": "transport",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對站務員或售票員使用「ください」得體清楚，語氣自然有禮。"
+  },
+  "T005-2": {
+   "phraseId": "T005",
+   "category": "directions",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員、站務員或路人使用自然有禮，語域合適。"
+  },
+  "T008-1": {
+   "phraseId": "T008",
+   "category": "transport",
+   "repeat": 1,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "前半禮貌、後半較普通，對站務員說仍可接受。"
+  },
+  "T009-1": {
+   "phraseId": "T009",
+   "category": "transport",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「すみません」加上禮貌語尾，對陌生人詢問座位是否有人坐很自然得體。"
+  },
+  "T009-3": {
+   "phraseId": "T009",
+   "category": "transport",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員、站務員或路人都自然有禮，適合詢問座位是否有人。"
+  },
+  "T006-3": {
+   "phraseId": "T006",
+   "category": "directions",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「ありますか」與「急いでいるんです」禮貌自然，適合向站務員或店員詢問。"
+  },
+  "T008-2": {
+   "phraseId": "T008",
+   "category": "transport",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「ます／でしょう」體，對站務員禮貌自然，但以疑問語調說更符合確認語氣。"
+  },
+  "T006-2": {
+   "phraseId": "T006",
+   "category": "directions",
+   "repeat": 2,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "前句禮貌，後句「急いでる」較口語但加了「んです」當面說不失禮。"
+  },
+  "T009-2": {
+   "phraseId": "T009",
+   "category": "transport",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員或路人詢問座位是否有人時自然且有禮。"
+  },
+  "T011-2": {
+   "phraseId": "T011",
+   "category": "transport",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「～したいです」對站務員表達需求自然且不失禮。"
+  },
+  "T008-3": {
+   "phraseId": "T008",
+   "category": "transport",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用です・ます體並以でしょう確認，對站務員或店員說不失禮。"
+  },
+  "T010-3": {
+   "phraseId": "T010",
+   "category": "transport",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": false,
+   "note": "語氣禮貌，但「新宿」誤譯成「新竹」，會造成嚴重誤解。"
+  },
+  "T011-1": {
+   "phraseId": "T011",
+   "category": "transport",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「～したいです」對站務員或店員禮貌自然，表達清楚。"
+  }
+ }
+}
