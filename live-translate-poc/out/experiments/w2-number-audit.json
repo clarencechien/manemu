@@ -1,0 +1,246 @@
+{
+ "items": {
+  "full-n3|T004-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T004",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T007-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T007",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T004-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T004",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T004-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T004",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T004-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T004",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T004-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T004",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T007-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T007",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T004-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T004",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T007-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T007",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T007-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T007",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T007-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T007",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T007-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T007",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T010-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T010",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": [
+    "地名誤譯:「新宿」(Shinjuku)被誤譯為「Hsinchu」(新竹),非數量語意錯誤但屬於實體誤譯"
+   ]
+  },
+  "full-n3|T011-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T011",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T011-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T011",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T010-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T010",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T011-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T011",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T010-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T010",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T010-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T010",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T011-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T011",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T011-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T011",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T010-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T010",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T011-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T011",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T010-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T010",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T015-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T015",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T015-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T015",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T015-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T015",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T017-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T017",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T017-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T017",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T015-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T015",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  }
+ }
+}

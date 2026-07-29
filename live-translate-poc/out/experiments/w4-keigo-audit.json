@@ -239,6 +239,486 @@
    "keigo": "appropriate",
    "acceptable": true,
    "note": "使用「～したいです」對站務員或店員禮貌自然，表達清楚。"
+  },
+  "T012-1": {
+   "phraseId": "T012",
+   "category": "transport",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「すみません」加上禮貌問句，對站務員或路人詢問公車方向自然得體。"
+  },
+  "T012-3": {
+   "phraseId": "T012",
+   "category": "transport",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對站務員或路人使用自然有禮，適合確認公車目的地。"
+  },
+  "T012-2": {
+   "phraseId": "T012",
+   "category": "transport",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「すみません」加上禮貌問句，對站務員或路人詢問交通資訊很自然。"
+  },
+  "T011-3": {
+   "phraseId": "T011",
+   "category": "transport",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對站務員或店員而言語氣自然有禮，末尾補一句「お願いします」會更完整。"
+  },
+  "T013-3": {
+   "phraseId": "T013",
+   "category": "transport",
+   "repeat": 3,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "對站務員說「なくしちゃった」較口語，雖不算失禮但改成「なくしてしまいました」更合適。"
+  },
+  "T010-2": {
+   "phraseId": "T010",
+   "category": "transport",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌適合詢問站務員，但「新竹」應為「新宿」。"
+  },
+  "T013-1": {
+   "phraseId": "T013",
+   "category": "transport",
+   "repeat": 1,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "語氣偏隨便，對站務員改為「さっきホームでスマホをなくしてしまいました」較合適。"
+  },
+  "T014-2": {
+   "phraseId": "T014",
+   "category": "dining",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣對店員不失禮，但內容變成「不用了、我吃不下了」，沒有表達不要辣。"
+  },
+  "T015-1": {
+   "phraseId": "T015",
+   "category": "dining",
+   "repeat": 1,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "語氣基本禮貌可通，但餐廳應說「子供椅子」而非通常指汽車安全座椅的「チャイルドシート」。"
+  },
+  "T014-3": {
+   "phraseId": "T014",
+   "category": "dining",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣有禮但未表達「不要辣」，且「食べられません」較像吃不下而非不能吃辣。"
+  },
+  "T015-2": {
+   "phraseId": "T015",
+   "category": "dining",
+   "repeat": 2,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "語氣直接但不算失禮，對店員加上「お願いします」會更自然有禮。"
+  },
+  "T010-1": {
+   "phraseId": "T010",
+   "category": "transport",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌適合詢問站務員，但「新竹」應改為「新宿」。"
+  },
+  "T013-2": {
+   "phraseId": "T013",
+   "category": "transport",
+   "repeat": 2,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "對站務員說「なくしちゃった」過於隨便，宜改為「なくしてしまいました」。"
+  },
+  "T015-3": {
+   "phraseId": "T015",
+   "category": "dining",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用です體禮貌自然，向店員提出需求不失禮。"
+  },
+  "T016-2": {
+   "phraseId": "T016",
+   "category": "dining",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「ください」禮貌且清楚，適合向店員說明過敏需求。"
+  },
+  "T014-1": {
+   "phraseId": "T014",
+   "category": "dining",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌，但內容變成「吃不下了」，沒有表達不要辣。"
+  },
+  "T018-1": {
+   "phraseId": "T018",
+   "category": "dining",
+   "repeat": 1,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "對店員使用「ください」得體，「麺は硬めで」雖較簡略但點餐時自然不失禮。"
+  },
+  "T016-3": {
+   "phraseId": "T016",
+   "category": "dining",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「ください」禮貌且適合對店員表達過敏需求，但可補充詢問是否含海鮮更周全。"
+  },
+  "T016-1": {
+   "phraseId": "T016",
+   "category": "dining",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「ください」對店員有禮，雖可更自然地說「魚介類」但不失禮。"
+  },
+  "T018-2": {
+   "phraseId": "T018",
+   "category": "dining",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員使用「ください」並以簡短點餐語表達，禮貌且自然。"
+  },
+  "T018-3": {
+   "phraseId": "T018",
+   "category": "dining",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員點餐時省略式說法自然有禮，語域合適。"
+  },
+  "T019-1": {
+   "phraseId": "T019",
+   "category": "dining",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用禮貌語尾，對店員說自然且不失禮。"
+  },
+  "T017-1": {
+   "phraseId": "T017",
+   "category": "dining",
+   "repeat": 1,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "語氣較口語且省略了「お願いします」，但對店員表達需求仍不至於失禮。"
+  },
+  "T017-2": {
+   "phraseId": "T017",
+   "category": "dining",
+   "repeat": 2,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "語氣較口語省略，但點餐時對店員說出來通常不失禮。"
+  },
+  "T017-3": {
+   "phraseId": "T017",
+   "category": "dining",
+   "repeat": 3,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "語氣較口語且省略禮貌語，但在點餐時仍可理解且通常不至於失禮。"
+  },
+  "T020-1": {
+   "phraseId": "T020",
+   "category": "dining",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，適合在餐廳向店員詢問是否可分開結帳。"
+  },
+  "T020-2": {
+   "phraseId": "T020",
+   "category": "dining",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員禮貌自然，適合詢問是否可分開結帳。"
+  },
+  "T021-2": {
+   "phraseId": "T021",
+   "category": "shopping",
+   "repeat": 2,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "前兩句較口語直接，但最後用「ですか」詢價，對店員說不至於失禮。"
+  },
+  "T019-3": {
+   "phraseId": "T019",
+   "category": "dining",
+   "repeat": 3,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "語氣偏隨意，對店員加上「です」會更得體。"
+  },
+  "T020-3": {
+   "phraseId": "T020",
+   "category": "dining",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員使用「すみません」加上「できますか」自然有禮，適合餐飲場合。"
+  },
+  "T022-1": {
+   "phraseId": "T022",
+   "category": "shopping",
+   "repeat": 1,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "對店員用「高すぎるよ」「いいよ」過於隨便且像在單方面決定價格，容易顯得失禮。"
+  },
+  "T019-2": {
+   "phraseId": "T019",
+   "category": "dining",
+   "repeat": 2,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "對店員說話缺少です／ます，語氣過於隨便。"
+  },
+  "T023-2": {
+   "phraseId": "T023",
+   "category": "shopping",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員使用「すみませんが」加上禮貌問句自然得體。"
+  },
+  "T021-1": {
+   "phraseId": "T021",
+   "category": "shopping",
+   "repeat": 1,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "對店員使用普通體與「いくら？」過於隨便，建議改用「これではなく、隣の青いものをお願いします。二つでおいくらですか」。"
+  },
+  "T022-2": {
+   "phraseId": "T022",
+   "category": "shopping",
+   "repeat": 2,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "對店員用「高すぎるよ、～でいいよ」過於隨便且像在命令對方，應改用較客氣的議價說法。"
+  },
+  "T023-1": {
+   "phraseId": "T023",
+   "category": "shopping",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「すみませんが」開頭並以「ですか」詢問，對店員自然有禮。"
+  },
+  "T024-1": {
+   "phraseId": "T024",
+   "category": "shopping",
+   "repeat": 1,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "「買うわ」對店員過於隨便，宜改為「2着買います」。"
+  },
+  "T023-3": {
+   "phraseId": "T023",
+   "category": "shopping",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「すみませんが」加上「ですか」對店員詢問價格禮貌自然。"
+  },
+  "T022-3": {
+   "phraseId": "T022",
+   "category": "shopping",
+   "repeat": 3,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "對店員使用「高すぎるよ」「いいよ」過於隨便，應改用較禮貌的詢價或議價說法。"
+  },
+  "T025-1": {
+   "phraseId": "T025",
+   "category": "shopping",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員使用「ありますか」「見たんです」自然有禮，語域合適。"
+  },
+  "T024-2": {
+   "phraseId": "T024",
+   "category": "shopping",
+   "repeat": 2,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "「買うわ」對店員過於隨便，宜改為「2着買います」。"
+  },
+  "T021-3": {
+   "phraseId": "T021",
+   "category": "shopping",
+   "repeat": 3,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "前半用普通體略隨便，但結尾有「ですか」，對店員說仍可接受。"
+  },
+  "T025-2": {
+   "phraseId": "T025",
+   "category": "shopping",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員使用「ありますか」得體自然，整體語域合適。"
+  },
+  "T026-2": {
+   "phraseId": "T026",
+   "category": "shopping",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員而言自然有禮，婉拒購買的語氣合適。"
+  },
+  "T026-1": {
+   "phraseId": "T026",
+   "category": "shopping",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，對店員表示暫時不買很合適。"
+  },
+  "T026-3": {
+   "phraseId": "T026",
+   "category": "shopping",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，適合在店內婉拒購買。"
+  },
+  "T025-3": {
+   "phraseId": "T025",
+   "category": "shopping",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員使用「ありますか」與「見たんです」自然有禮，語域合適。"
+  },
+  "T027-2": {
+   "phraseId": "T027",
+   "category": "shopping",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員使用「できますか」禮貌自然，後句簡潔說明購買金額也不失禮。"
+  },
+  "T024-3": {
+   "phraseId": "T024",
+   "category": "shopping",
+   "repeat": 3,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "「買うわ」較隨便，對店員應改用「買います」。"
+  },
+  "T027-3": {
+   "phraseId": "T027",
+   "category": "shopping",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員使用「できますか」禮貌自然，購物退稅情境合適。"
+  },
+  "T028-3": {
+   "phraseId": "T028",
+   "category": "hotel",
+   "repeat": 3,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "整體對飯店人員可接受，但「予約してあります」較口語，改為「予約しております」更自然禮貌。"
+  },
+  "T028-1": {
+   "phraseId": "T028",
+   "category": "hotel",
+   "repeat": 1,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "前半用「あります／です」禮貌，後半「します」也可接受，但飯店櫃檯可改為「2泊の予定です」更自然。"
+  },
+  "T029-1": {
+   "phraseId": "T029",
+   "category": "hotel",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣自然禮貌，適合旅客向飯店櫃檯詢問。"
+  },
+  "T029-2": {
+   "phraseId": "T029",
+   "category": "hotel",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對飯店人員使用自然有禮，語域合適。"
+  },
+  "T029-3": {
+   "phraseId": "T029",
+   "category": "hotel",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，適合在飯店櫃檯詢問是否有空房。"
+  },
+  "T030-1": {
+   "phraseId": "T030",
+   "category": "hotel",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，適合旅客向飯店櫃檯詢問。"
+  },
+  "T030-2": {
+   "phraseId": "T030",
+   "category": "hotel",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用禮貌的ですか問句，對飯店人員自然得體。"
+  },
+  "T027-1": {
+   "phraseId": "T027",
+   "category": "shopping",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「できますか」「買いました」禮貌得體，對店員詢問退稅不失禮。"
+  },
+  "T031-1": {
+   "phraseId": "T031",
+   "category": "hotel",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對飯店人員使用「見てもらえますか」禮貌自然，語域合適。"
+  },
+  "T028-2": {
+   "phraseId": "T028",
+   "category": "hotel",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用です・ます體，對飯店櫃檯說話自然且有禮。"
   }
  }
 }
