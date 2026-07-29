@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T015",
+  "category": "dining",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我們總共五個人,有兩個小孩,需要兒童椅。",
+  "reference": "全部で5人です。子どもが2人いるので、子ども用の椅子をお願いします。",
+  "inputTranscript": "我们总共五个人,有两个小孩,需要儿童椅。",
+  "outputTranscript": "私たちは全部で5人で、子供が2人いて、チャイルドシートが必要です。",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1130,
+    "ttft_from_end_ms": -1257,
+    "completion_lag_ms": 2422,
+    "ttfa_from_start_ms": 3170
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.968,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:21:47.587Z"
+}

@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T017",
+  "category": "dining",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "這杯不要加冰,然後大杯的改成中杯,總共三杯。",
+  "reference": "No ice in this one, and change the large to a medium — three drinks in total.",
+  "inputTranscript": "这杯不要加冰,然后大杯的改成中杯,总共三杯。",
+  "outputTranscript": "Don't add ice to this one, and then change the large size to a medium, so a total of three cups.",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 6500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -3456,
+    "ttft_from_end_ms": -3479,
+    "completion_lag_ms": 2437,
+    "ttfa_from_start_ms": 3144
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.241,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:22:48.393Z"
+}

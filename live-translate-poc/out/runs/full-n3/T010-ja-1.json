@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:20:10.952Z"
+  "ts": "2026-07-29T07:20:10.952Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文漏翻了「最後一班」(最終)，並且將地名「新宿」錯誤翻譯為「新竹」，嚴重影響語意傳達。不過日文句子本身的文法與表達是自然流暢的。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

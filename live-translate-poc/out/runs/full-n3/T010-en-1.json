@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:20:21.803Z"
+  "ts": "2026-07-29T07:20:21.803Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation incorrectly translates the location '新宿' (Shinjuku) as 'Hsinchu' and changes the sentence from a question to a statement, significantly altering the original meaning."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

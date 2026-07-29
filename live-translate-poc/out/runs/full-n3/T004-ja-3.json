@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:18:10.390Z"
+  "ts": "2026-07-29T07:18:10.390Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文自然流暢，語意傳達清晰。雖然將「我想搭計程車」譯為「タクシーに乗ります」（我會搭計程車）而非「乗りたいです」，但在語境中意思相近，不影響理解。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

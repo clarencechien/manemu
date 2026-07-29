@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:19:36.402Z"
+  "ts": "2026-07-29T07:19:36.402Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思，且日文表達自然流暢。「這班車」譯為「このバス」在沒有上下文的情況下是可以接受的。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

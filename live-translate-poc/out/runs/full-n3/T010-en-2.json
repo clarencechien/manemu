@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:20:22.932Z"
+  "ts": "2026-07-29T07:20:22.932Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文將「新宿」(Shinjuku) 錯誤翻譯為「Hsinchu」(新竹)，且將原本的疑問句改成了肯定句，影響了語意傳達。不過英文句子本身的文法與流暢度是自然的。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

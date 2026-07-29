@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T016",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我對蝦子過敏,餐點裡請不要放任何海鮮。",
+  "reference": "I'm allergic to shrimp — please don't put any seafood in my food.",
+  "inputTranscript": "我对瞎子过敏,餐桌里请不要放任何海鲜。",
+  "outputTranscript": "I'm allergic to blind people, so please don't put any seafood on the table.",
+  "inputDurationMs": 4491,
+  "outputAudioMs": 5000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1412,
+    "ttft_from_end_ms": -1603,
+    "completion_lag_ms": 2845,
+    "ttfa_from_start_ms": 3189
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.184,
+    "coverage_ok": true,
+    "cer": 0.118
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:22:19.175Z"
+}

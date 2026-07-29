@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T017",
+  "category": "dining",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "這杯不要加冰,然後大杯的改成中杯,總共三杯。",
+  "reference": "これは氷なしでお願いします。それから、大サイズは中サイズに変えてください。全部で3杯です。",
+  "inputTranscript": "这杯不要加冰,然后大杯的改成中杯,总共三杯。",
+  "outputTranscript": "このグラスは氷なしで、それから大きいサイズを中サイズにして、全部で3杯。",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 6750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -3584,
+    "ttft_from_end_ms": -3584,
+    "completion_lag_ms": 2589,
+    "ttfa_from_start_ms": 3015
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.805,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:22:38.449Z"
+}
