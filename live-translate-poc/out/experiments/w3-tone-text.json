@@ -299,6 +299,1179 @@
    "dir": "en",
    "model": "google/gemini-3.6-flash",
    "out_q": true
+  },
+  "T008-ja-openai/gpt-5.6-terra": {
+   "pid": "T008",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T008-ja-anthropic/claude-sonnet-5": {
+   "pid": "T008",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T008-en-openai/gpt-5.6-terra": {
+   "pid": "T008",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T008-en-anthropic/claude-sonnet-5": {
+   "pid": "T008",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T008-ja-deepseek/deepseek-v3.2": {
+   "pid": "T008",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T008-en-deepseek/deepseek-v3.2": {
+   "pid": "T008",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T008-ja-google/gemini-3.6-flash": {
+   "pid": "T008",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T009-ja-openai/gpt-5.6-terra": {
+   "pid": "T009",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T009-ja-deepseek/deepseek-v3.2": {
+   "pid": "T009",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T008-en-google/gemini-3.6-flash": {
+   "pid": "T008",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T009-en-openai/gpt-5.6-terra": {
+   "pid": "T009",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T009-ja-google/gemini-3.6-flash": {
+   "pid": "T009",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T009-en-deepseek/deepseek-v3.2": {
+   "pid": "T009",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T009-en-anthropic/claude-sonnet-5": {
+   "pid": "T009",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T010-ja-openai/gpt-5.6-terra": {
+   "pid": "T010",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T009-en-google/gemini-3.6-flash": {
+   "pid": "T009",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T008-ja-qwen/qwen3.7-max": {
+   "pid": "T008",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T010-ja-anthropic/claude-sonnet-5": {
+   "pid": "T010",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T009-ja-qwen/qwen3.7-max": {
+   "pid": "T009",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T009-en-qwen/qwen3.7-max": {
+   "pid": "T009",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T008-en-qwen/qwen3.7-max": {
+   "pid": "T008",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T009-ja-anthropic/claude-sonnet-5": {
+   "pid": "T009",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T010-en-openai/gpt-5.6-terra": {
+   "pid": "T010",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T010-ja-google/gemini-3.6-flash": {
+   "pid": "T010",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T010-en-anthropic/claude-sonnet-5": {
+   "pid": "T010",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T010-en-deepseek/deepseek-v3.2": {
+   "pid": "T010",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T010-en-google/gemini-3.6-flash": {
+   "pid": "T010",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T012-ja-openai/gpt-5.6-terra": {
+   "pid": "T012",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T010-ja-deepseek/deepseek-v3.2": {
+   "pid": "T010",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T010-ja-qwen/qwen3.7-max": {
+   "pid": "T010",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T012-ja-anthropic/claude-sonnet-5": {
+   "pid": "T012",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T012-en-openai/gpt-5.6-terra": {
+   "pid": "T012",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T010-en-qwen/qwen3.7-max": {
+   "pid": "T010",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T012-ja-deepseek/deepseek-v3.2": {
+   "pid": "T012",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T012-ja-google/gemini-3.6-flash": {
+   "pid": "T012",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": false
+  },
+  "T012-en-deepseek/deepseek-v3.2": {
+   "pid": "T012",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T012-en-anthropic/claude-sonnet-5": {
+   "pid": "T012",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T012-en-google/gemini-3.6-flash": {
+   "pid": "T012",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T012-en-qwen/qwen3.7-max": {
+   "pid": "T012",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T020-ja-openai/gpt-5.6-terra": {
+   "pid": "T020",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T020-ja-anthropic/claude-sonnet-5": {
+   "pid": "T020",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T020-ja-deepseek/deepseek-v3.2": {
+   "pid": "T020",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T020-en-openai/gpt-5.6-terra": {
+   "pid": "T020",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T020-en-anthropic/claude-sonnet-5": {
+   "pid": "T020",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T020-ja-google/gemini-3.6-flash": {
+   "pid": "T020",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T020-en-deepseek/deepseek-v3.2": {
+   "pid": "T020",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T021-ja-openai/gpt-5.6-terra": {
+   "pid": "T021",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T012-ja-qwen/qwen3.7-max": {
+   "pid": "T012",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T021-ja-anthropic/claude-sonnet-5": {
+   "pid": "T021",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T021-ja-deepseek/deepseek-v3.2": {
+   "pid": "T021",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T020-en-google/gemini-3.6-flash": {
+   "pid": "T020",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T021-en-openai/gpt-5.6-terra": {
+   "pid": "T021",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T020-ja-qwen/qwen3.7-max": {
+   "pid": "T020",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T020-en-qwen/qwen3.7-max": {
+   "pid": "T020",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T021-en-anthropic/claude-sonnet-5": {
+   "pid": "T021",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T021-en-deepseek/deepseek-v3.2": {
+   "pid": "T021",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T021-ja-google/gemini-3.6-flash": {
+   "pid": "T021",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": false
+  },
+  "T022-ja-openai/gpt-5.6-terra": {
+   "pid": "T022",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T021-en-google/gemini-3.6-flash": {
+   "pid": "T021",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T022-ja-anthropic/claude-sonnet-5": {
+   "pid": "T022",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T022-ja-deepseek/deepseek-v3.2": {
+   "pid": "T022",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T022-en-openai/gpt-5.6-terra": {
+   "pid": "T022",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T022-ja-google/gemini-3.6-flash": {
+   "pid": "T022",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T022-en-anthropic/claude-sonnet-5": {
+   "pid": "T022",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T022-en-deepseek/deepseek-v3.2": {
+   "pid": "T022",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T021-ja-qwen/qwen3.7-max": {
+   "pid": "T021",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T023-ja-openai/gpt-5.6-terra": {
+   "pid": "T023",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T023-ja-deepseek/deepseek-v3.2": {
+   "pid": "T023",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T022-en-google/gemini-3.6-flash": {
+   "pid": "T022",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T023-ja-anthropic/claude-sonnet-5": {
+   "pid": "T023",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T021-en-qwen/qwen3.7-max": {
+   "pid": "T021",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T023-ja-google/gemini-3.6-flash": {
+   "pid": "T023",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T023-en-openai/gpt-5.6-terra": {
+   "pid": "T023",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T022-ja-qwen/qwen3.7-max": {
+   "pid": "T022",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T023-en-anthropic/claude-sonnet-5": {
+   "pid": "T023",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T022-en-qwen/qwen3.7-max": {
+   "pid": "T022",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T023-en-deepseek/deepseek-v3.2": {
+   "pid": "T023",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T023-en-google/gemini-3.6-flash": {
+   "pid": "T023",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T023-ja-qwen/qwen3.7-max": {
+   "pid": "T023",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T025-ja-anthropic/claude-sonnet-5": {
+   "pid": "T025",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T025-ja-openai/gpt-5.6-terra": {
+   "pid": "T025",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T025-ja-deepseek/deepseek-v3.2": {
+   "pid": "T025",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T025-en-openai/gpt-5.6-terra": {
+   "pid": "T025",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T025-ja-google/gemini-3.6-flash": {
+   "pid": "T025",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T025-en-anthropic/claude-sonnet-5": {
+   "pid": "T025",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T025-en-deepseek/deepseek-v3.2": {
+   "pid": "T025",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T023-en-qwen/qwen3.7-max": {
+   "pid": "T023",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T025-ja-qwen/qwen3.7-max": {
+   "pid": "T025",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T025-en-google/gemini-3.6-flash": {
+   "pid": "T025",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T027-ja-anthropic/claude-sonnet-5": {
+   "pid": "T027",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T027-ja-openai/gpt-5.6-terra": {
+   "pid": "T027",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T027-en-anthropic/claude-sonnet-5": {
+   "pid": "T027",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T027-en-openai/gpt-5.6-terra": {
+   "pid": "T027",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T027-ja-google/gemini-3.6-flash": {
+   "pid": "T027",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T027-ja-deepseek/deepseek-v3.2": {
+   "pid": "T027",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T025-en-qwen/qwen3.7-max": {
+   "pid": "T025",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T027-en-deepseek/deepseek-v3.2": {
+   "pid": "T027",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T027-en-google/gemini-3.6-flash": {
+   "pid": "T027",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T027-en-qwen/qwen3.7-max": {
+   "pid": "T027",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T027-ja-qwen/qwen3.7-max": {
+   "pid": "T027",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T029-ja-anthropic/claude-sonnet-5": {
+   "pid": "T029",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T029-ja-openai/gpt-5.6-terra": {
+   "pid": "T029",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T029-ja-deepseek/deepseek-v3.2": {
+   "pid": "T029",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T029-en-openai/gpt-5.6-terra": {
+   "pid": "T029",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T029-ja-google/gemini-3.6-flash": {
+   "pid": "T029",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T029-en-anthropic/claude-sonnet-5": {
+   "pid": "T029",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T029-en-deepseek/deepseek-v3.2": {
+   "pid": "T029",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T030-ja-openai/gpt-5.6-terra": {
+   "pid": "T030",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T029-en-google/gemini-3.6-flash": {
+   "pid": "T029",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T030-ja-deepseek/deepseek-v3.2": {
+   "pid": "T030",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T030-en-openai/gpt-5.6-terra": {
+   "pid": "T030",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T030-en-anthropic/claude-sonnet-5": {
+   "pid": "T030",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T030-ja-google/gemini-3.6-flash": {
+   "pid": "T030",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T029-en-qwen/qwen3.7-max": {
+   "pid": "T029",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T030-en-deepseek/deepseek-v3.2": {
+   "pid": "T030",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T030-ja-anthropic/claude-sonnet-5": {
+   "pid": "T030",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T031-ja-openai/gpt-5.6-terra": {
+   "pid": "T031",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T029-ja-qwen/qwen3.7-max": {
+   "pid": "T029",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T031-ja-deepseek/deepseek-v3.2": {
+   "pid": "T031",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T031-en-openai/gpt-5.6-terra": {
+   "pid": "T031",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T030-ja-qwen/qwen3.7-max": {
+   "pid": "T030",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T031-en-anthropic/claude-sonnet-5": {
+   "pid": "T031",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T031-ja-anthropic/claude-sonnet-5": {
+   "pid": "T031",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T031-en-deepseek/deepseek-v3.2": {
+   "pid": "T031",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T031-ja-google/gemini-3.6-flash": {
+   "pid": "T031",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T030-en-qwen/qwen3.7-max": {
+   "pid": "T030",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T031-en-google/gemini-3.6-flash": {
+   "pid": "T031",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T030-en-google/gemini-3.6-flash": {
+   "pid": "T030",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T031-ja-qwen/qwen3.7-max": {
+   "pid": "T031",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T033-ja-openai/gpt-5.6-terra": {
+   "pid": "T033",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T031-en-qwen/qwen3.7-max": {
+   "pid": "T031",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T033-ja-anthropic/claude-sonnet-5": {
+   "pid": "T033",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T033-ja-deepseek/deepseek-v3.2": {
+   "pid": "T033",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T033-en-openai/gpt-5.6-terra": {
+   "pid": "T033",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T033-en-deepseek/deepseek-v3.2": {
+   "pid": "T033",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T033-en-anthropic/claude-sonnet-5": {
+   "pid": "T033",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T033-ja-google/gemini-3.6-flash": {
+   "pid": "T033",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T033-ja-qwen/qwen3.7-max": {
+   "pid": "T033",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T033-en-google/gemini-3.6-flash": {
+   "pid": "T033",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T035-ja-openai/gpt-5.6-terra": {
+   "pid": "T035",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T035-ja-anthropic/claude-sonnet-5": {
+   "pid": "T035",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T035-ja-deepseek/deepseek-v3.2": {
+   "pid": "T035",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T033-en-qwen/qwen3.7-max": {
+   "pid": "T033",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T035-en-anthropic/claude-sonnet-5": {
+   "pid": "T035",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T035-en-openai/gpt-5.6-terra": {
+   "pid": "T035",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T035-ja-google/gemini-3.6-flash": {
+   "pid": "T035",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T035-en-deepseek/deepseek-v3.2": {
+   "pid": "T035",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T035-en-google/gemini-3.6-flash": {
+   "pid": "T035",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T042-ja-anthropic/claude-sonnet-5": {
+   "pid": "T042",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T042-ja-openai/gpt-5.6-terra": {
+   "pid": "T042",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T035-ja-qwen/qwen3.7-max": {
+   "pid": "T035",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T042-en-openai/gpt-5.6-terra": {
+   "pid": "T042",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T035-en-qwen/qwen3.7-max": {
+   "pid": "T035",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T042-ja-google/gemini-3.6-flash": {
+   "pid": "T042",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T042-ja-deepseek/deepseek-v3.2": {
+   "pid": "T042",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T042-en-anthropic/claude-sonnet-5": {
+   "pid": "T042",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T043-ja-anthropic/claude-sonnet-5": {
+   "pid": "T043",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T042-en-deepseek/deepseek-v3.2": {
+   "pid": "T042",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T043-ja-openai/gpt-5.6-terra": {
+   "pid": "T043",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T043-ja-deepseek/deepseek-v3.2": {
+   "pid": "T043",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T042-en-google/gemini-3.6-flash": {
+   "pid": "T042",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T043-en-openai/gpt-5.6-terra": {
+   "pid": "T043",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T043-ja-google/gemini-3.6-flash": {
+   "pid": "T043",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T043-en-anthropic/claude-sonnet-5": {
+   "pid": "T043",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T042-en-qwen/qwen3.7-max": {
+   "pid": "T042",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T043-en-deepseek/deepseek-v3.2": {
+   "pid": "T043",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T044-ja-anthropic/claude-sonnet-5": {
+   "pid": "T044",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T042-ja-qwen/qwen3.7-max": {
+   "pid": "T042",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T044-ja-openai/gpt-5.6-terra": {
+   "pid": "T044",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T043-en-google/gemini-3.6-flash": {
+   "pid": "T043",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T043-ja-qwen/qwen3.7-max": {
+   "pid": "T043",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T044-ja-deepseek/deepseek-v3.2": {
+   "pid": "T044",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T044-ja-google/gemini-3.6-flash": {
+   "pid": "T044",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T044-en-anthropic/claude-sonnet-5": {
+   "pid": "T044",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T044-en-google/gemini-3.6-flash": {
+   "pid": "T044",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T044-en-deepseek/deepseek-v3.2": {
+   "pid": "T044",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T044-ja-qwen/qwen3.7-max": {
+   "pid": "T044",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T043-en-qwen/qwen3.7-max": {
+   "pid": "T043",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T046-ja-anthropic/claude-sonnet-5": {
+   "pid": "T046",
+   "dir": "ja",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T046-ja-deepseek/deepseek-v3.2": {
+   "pid": "T046",
+   "dir": "ja",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T046-ja-openai/gpt-5.6-terra": {
+   "pid": "T046",
+   "dir": "ja",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T044-en-qwen/qwen3.7-max": {
+   "pid": "T044",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T046-en-deepseek/deepseek-v3.2": {
+   "pid": "T046",
+   "dir": "en",
+   "model": "deepseek/deepseek-v3.2",
+   "out_q": true
+  },
+  "T044-en-openai/gpt-5.6-terra": {
+   "pid": "T044",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T046-en-anthropic/claude-sonnet-5": {
+   "pid": "T046",
+   "dir": "en",
+   "model": "anthropic/claude-sonnet-5",
+   "out_q": true
+  },
+  "T046-en-google/gemini-3.6-flash": {
+   "pid": "T046",
+   "dir": "en",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T046-en-openai/gpt-5.6-terra": {
+   "pid": "T046",
+   "dir": "en",
+   "model": "openai/gpt-5.6-terra",
+   "out_q": true
+  },
+  "T046-ja-google/gemini-3.6-flash": {
+   "pid": "T046",
+   "dir": "ja",
+   "model": "google/gemini-3.6-flash",
+   "out_q": true
+  },
+  "T046-en-qwen/qwen3.7-max": {
+   "pid": "T046",
+   "dir": "en",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  },
+  "T046-ja-qwen/qwen3.7-max": {
+   "pid": "T046",
+   "dir": "ja",
+   "model": "qwen/qwen3.7-max",
+   "out_q": true
+  }
+ },
+ "stats": {
+  "byModel": {
+   "deepseek/deepseek-v3.2": {
+    "n": 48,
+    "kept": 48,
+    "kept_rate": 1
+   },
+   "anthropic/claude-sonnet-5": {
+    "n": 48,
+    "kept": 48,
+    "kept_rate": 1
+   },
+   "openai/gpt-5.6-terra": {
+    "n": 48,
+    "kept": 48,
+    "kept_rate": 1
+   },
+   "google/gemini-3.6-flash": {
+    "n": 48,
+    "kept": 46,
+    "kept_rate": 0.958
+   },
+   "qwen/qwen3.7-max": {
+    "n": 48,
+    "kept": 48,
+    "kept_rate": 1
+   }
+  },
+  "speech_reference": {
+   "full-n3": 0.91,
+   "gpt-n1": 0.833
   }
  }
 }

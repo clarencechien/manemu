@@ -241,6 +241,925 @@
    "repeat": 1,
    "numbers_ok": true,
    "issues": []
+  },
+  "full-n3|T017-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T017",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T015-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T015",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T017-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T017",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T015-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T015",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T017-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T017",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T021-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T021",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T021-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T021",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T021-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T021",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T021-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T021",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T022-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T022",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T021-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T021",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T021-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T021",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T017-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T017",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": false,
+   "issues": [
+    "原文「三杯」為飲料量詞,譯文使用「3つ」(通用計數量詞)而非「3杯」,量詞對應不準確"
+   ]
+  },
+  "full-n3|T022-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T022",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T024-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T024",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T022-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T022",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T024-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T024",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T024-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T024",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T024-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T024",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T022-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T022",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T022-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T022",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T027-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T027",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T022-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T022",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T027-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T027",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T024-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T024",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T027-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T027",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T027-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T027",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T027-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T027",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T027-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T027",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T028-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T028",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T024-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T024",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T028-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T028",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T028-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T028",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T028-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T028",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T028-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T028",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T030-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T030",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T030-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T030",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T028-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T028",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T030-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T030",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T030-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T030",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T030-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T030",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T033-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T033",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T030-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T030",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T033-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T033",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T033-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T033",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T033-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T033",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T033-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T033",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T033-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T033",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T037-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T037",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T039-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T039",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T039-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T039",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T039-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T039",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T037-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T037",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T039-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T039",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T037-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T037",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T039-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T039",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T037-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T037",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T041-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T041",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T041-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T041",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T039-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T039",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T041-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T041",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T041-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T041",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T041-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T041",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T041-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T041",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T042-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T042",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T042-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T042",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T042-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T042",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T042-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T042",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T042-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T042",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T042-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T042",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T037-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T037",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T044-en-1": {
+   "runId": "full-n3",
+   "phraseId": "T044",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T044-en-2": {
+   "runId": "full-n3",
+   "phraseId": "T044",
+   "dir": "en",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T044-ja-1": {
+   "runId": "full-n3",
+   "phraseId": "T044",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T044-en-3": {
+   "runId": "full-n3",
+   "phraseId": "T044",
+   "dir": "en",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T044-ja-2": {
+   "runId": "full-n3",
+   "phraseId": "T044",
+   "dir": "ja",
+   "repeat": 2,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T004-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T004",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T004-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T004",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "full-n3|T044-ja-3": {
+   "runId": "full-n3",
+   "phraseId": "T044",
+   "dir": "ja",
+   "repeat": 3,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T007-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T007",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T011-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T011",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T011-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T011",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": false,
+   "issues": [
+    "原文無「刀」相關內容,譯文誤增「Even with a knife」為多餘且錯誤的翻譯"
+   ]
+  },
+  "gpt-n1|T015-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T015",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T017-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T017",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T007-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T007",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T021-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T021",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T010-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T010",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T021-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T021",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T022-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T022",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T015-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T015",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T024-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T024",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T022-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T022",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T017-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T017",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T027-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T027",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T028-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T028",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T030-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T030",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T033-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T033",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T024-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T024",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T030-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T030",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T028-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T028",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T039-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T039",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T037-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T037",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T041-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T041",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T039-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T039",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T033-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T033",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T037-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T037",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T044-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T044",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T042-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T042",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T042-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T042",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  },
+  "gpt-n1|T041-en-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T041",
+   "dir": "en",
+   "repeat": 1,
+   "numbers_ok": false,
+   "issues": [
+    "原文「三點」指三點這個時間點,譯文譯為「after three」(三點之後),時間語意有誤"
+   ]
+  },
+  "gpt-n1|T044-ja-1": {
+   "runId": "gpt-n1",
+   "phraseId": "T044",
+   "dir": "ja",
+   "repeat": 1,
+   "numbers_ok": true,
+   "issues": []
+  }
+ },
+ "stats": {
+  "full-n3": {
+   "n": 107,
+   "ok": 106,
+   "badPhrases": {
+    "T017-ja": [
+     "原文「三杯」為飲料量詞,譯文使用「3つ」(通用計數量詞)而非「3杯」,量詞對應不準確"
+    ]
+   },
+   "semantic_ok_rate": 0.991
+  },
+  "gpt-n1": {
+   "n": 34,
+   "ok": 32,
+   "badPhrases": {
+    "T011-en": [
+     "原文無「刀」相關內容,譯文誤增「Even with a knife」為多餘且錯誤的翻譯"
+    ],
+    "T041-en": [
+     "原文「三點」指三點這個時間點,譯文譯為「after three」(三點之後),時間語意有誤"
+    ]
+   },
+   "semantic_ok_rate": 0.941
   }
  }
 }

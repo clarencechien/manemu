@@ -719,6 +719,555 @@
    "keigo": "appropriate",
    "acceptable": true,
    "note": "使用です・ます體，對飯店櫃檯說話自然且有禮。"
+  },
+  "T030-3": {
+   "phraseId": "T030",
+   "category": "hotel",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對飯店人員使用禮貌問句自然得體。"
+  },
+  "T032-2": {
+   "phraseId": "T032",
+   "category": "hotel",
+   "repeat": 2,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "「必要ないです」と「ありがとう」の語域不一致，對飯店人員宜改用「結構です／お願いします」。"
+  },
+  "T033-3": {
+   "phraseId": "T033",
+   "category": "hotel",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對飯店人員使用「いただけますか」禮貌自然，補充目的地與時間的說法也合宜。"
+  },
+  "T033-2": {
+   "phraseId": "T033",
+   "category": "hotel",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對飯店人員使用「呼んでもらえますか」禮貌自然，需求表達清楚。"
+  },
+  "T032-3": {
+   "phraseId": "T032",
+   "category": "hotel",
+   "repeat": 3,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "語氣較隨便，對飯店人員建議改用「結構です／お願いします」會更禮貌。"
+  },
+  "T031-2": {
+   "phraseId": "T031",
+   "category": "hotel",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，適合向飯店人員請求協助。"
+  },
+  "T034-1": {
+   "phraseId": "T034",
+   "category": "emergency",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "緊急情況下可直接呼救，語氣急迫但不失禮。"
+  },
+  "T033-1": {
+   "phraseId": "T033",
+   "category": "hotel",
+   "repeat": 1,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "「呼んでくれますか」較隨意，對飯店人員改用「呼んでいただけますか」更得體。"
+  },
+  "T031-3": {
+   "phraseId": "T031",
+   "category": "hotel",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，對飯店人員提出請求不失禮。"
+  },
+  "T035-2": {
+   "phraseId": "T035",
+   "category": "emergency",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用ですか詢問地點，對警員、站務員或路人都自然有禮。"
+  },
+  "T035-1": {
+   "phraseId": "T035",
+   "category": "emergency",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「ですが」委婉說明情況並以「ですか」詢問，對警察或路人都自然有禮。"
+  },
+  "T034-2": {
+   "phraseId": "T034",
+   "category": "emergency",
+   "repeat": 2,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "緊急情況下可接受，但若能說「助けてください、救急車を呼んでください」會更禮貌。"
+  },
+  "T036-1": {
+   "phraseId": "T036",
+   "category": "emergency",
+   "repeat": 1,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "「けど」「ないわ」較隨便且句子不自然，急診對醫護宜用「めまいがしますが、心臓病の既往歴はありません」。"
+  },
+  "T035-3": {
+   "phraseId": "T035",
+   "category": "emergency",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對陌生人或站務員使用「んですが、どこですか」禮貌自然，適合緊急求助。"
+  },
+  "T032-1": {
+   "phraseId": "T032",
+   "category": "hotel",
+   "repeat": 1,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "對飯店人員語氣偏隨意，但可理解且當面說不至於失禮。"
+  },
+  "T034-3": {
+   "phraseId": "T034",
+   "category": "emergency",
+   "repeat": 3,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "緊急情況下這樣大喊可接受，但加上「ください」會更禮貌。"
+  },
+  "T036-3": {
+   "phraseId": "T036",
+   "category": "emergency",
+   "repeat": 3,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "「けど」較口語，但緊急醫療情境下對醫護說明仍不失禮。"
+  },
+  "T037-3": {
+   "phraseId": "T037",
+   "category": "emergency",
+   "repeat": 3,
+   "keigo": "mixed",
+   "acceptable": false,
+   "note": "後半誤譯為「朋友結婚了」且使用女性口語「の」，緊急情況應明確說「友達が倒れました」。"
+  },
+  "T037-2": {
+   "phraseId": "T037",
+   "category": "emergency",
+   "repeat": 2,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "語氣基本可接受，但緊急情況下應先說朋友昏倒並加上救助請求會更自然。"
+  },
+  "T037-1": {
+   "phraseId": "T037",
+   "category": "emergency",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "以「です／んです」向店員或醫護求助語氣得體，緊急情況下可直接使用。"
+  },
+  "T038-2": {
+   "phraseId": "T038",
+   "category": "emergency",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對醫護以「んです」說明過敏狀況自然且不失禮，但補上「あります」會更完整。"
+  },
+  "T038-1": {
+   "phraseId": "T038",
+   "category": "emergency",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對醫護使用「んです」說明病況自然且不失禮，但可補充「ペニシリンアレルギーがあります」更明確。"
+  },
+  "T038-3": {
+   "phraseId": "T038",
+   "category": "emergency",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌且醫護能理解，雖較口語但當面說不失禮。"
+  },
+  "T039-1": {
+   "phraseId": "T039",
+   "category": "appointment",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌且能清楚表達預約需求，末尾補上「お願いします」會更自然。"
+  },
+  "T040-3": {
+   "phraseId": "T040",
+   "category": "appointment",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，向店員或櫃台表達更改而非取消預約很合適。"
+  },
+  "T041-1": {
+   "phraseId": "T041",
+   "category": "appointment",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣自然禮貌，適合向店員或醫護人員表示可接受四點。"
+  },
+  "T041-2": {
+   "phraseId": "T041",
+   "category": "appointment",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣自然有禮，適合向店員詢問預約時段。"
+  },
+  "T039-3": {
+   "phraseId": "T039",
+   "category": "appointment",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌且可通達，但補上「でお願いします」會更自然。"
+  },
+  "T040-1": {
+   "phraseId": "T040",
+   "category": "appointment",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣對店員足夠禮貌，但「キャンセルではなく」句尾略顯不完整。"
+  },
+  "T041-3": {
+   "phraseId": "T041",
+   "category": "appointment",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，適合向店員或櫃台人員表示可接受四點。"
+  },
+  "T039-2": {
+   "phraseId": "T039",
+   "category": "appointment",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "「予約したいです」語氣禮貌，後面的「大人2人」雖較簡略但當面使用不失禮。"
+  },
+  "T042-2": {
+   "phraseId": "T042",
+   "category": "appointment",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員或醫護人員使用「できますか」自然有禮，班機資訊表達也清楚。"
+  },
+  "T036-2": {
+   "phraseId": "T036",
+   "category": "emergency",
+   "repeat": 2,
+   "keigo": "too_casual",
+   "acceptable": true,
+   "note": "語氣較口語且「頭がすごくめまい」不自然，但緊急情況下可理解且不失禮。"
+  },
+  "T043-2": {
+   "phraseId": "T043",
+   "category": "appointment",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌，但把「取消」誤譯成「領取票券」。"
+  },
+  "T040-2": {
+   "phraseId": "T040",
+   "category": "appointment",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「すみません」與「～したいんですが」對店員或櫃台人員說明需求，語氣自然且不失禮。"
+  },
+  "T043-3": {
+   "phraseId": "T043",
+   "category": "appointment",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「すみません」及「〜ませんか」禮貌自然，適合向店員詢問取消期限與費用。"
+  },
+  "T044-3": {
+   "phraseId": "T044",
+   "category": "appointment",
+   "repeat": 3,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "句子禮貌度略混雜但對店員說不失禮，建議用「30分遅れて到着しますが、席を取っておいていただけますか」。"
+  },
+  "T044-2": {
+   "phraseId": "T044",
+   "category": "appointment",
+   "repeat": 2,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "語氣略直接且「確保」較生硬，但對店員表達仍不算失禮。"
+  },
+  "T042-1": {
+   "phraseId": "T042",
+   "category": "appointment",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌可接受，但「私の便はBR198で、」句子未說完。"
+  },
+  "T045-2": {
+   "phraseId": "T045",
+   "category": "smalltalk",
+   "repeat": 2,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "「くれてありがとう」「助かったよ」屬隨意口語，對店員、站務員、路人或醫護應改用敬語。"
+  },
+  "T045-3": {
+   "phraseId": "T045",
+   "category": "smalltalk",
+   "repeat": 3,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "對店員、站務員或醫護人員過於隨便，宜改用「手伝ってくださって、本当にありがとうございました」。"
+  },
+  "T044-1": {
+   "phraseId": "T044",
+   "category": "appointment",
+   "repeat": 1,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "前句較直接但可理解，對店員說不算失禮；若改為「30分ほど遅れて到着しますが、席を取っておいていただけますか」更自然禮貌。"
+  },
+  "T046-1": {
+   "phraseId": "T046",
+   "category": "smalltalk",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對初次見面的路人或店員自然有禮，語氣親切。"
+  },
+  "T045-1": {
+   "phraseId": "T045",
+   "category": "smalltalk",
+   "repeat": 1,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "對店員、站務員或醫護人員使用此句過於隨便，應改用「手伝っていただき、ありがとうございました。本当に助かりました」。"
+  },
+  "T042-3": {
+   "phraseId": "T042",
+   "category": "appointment",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「できますか」對店員或站務員的禮貌程度合適，航班資訊也能理解。"
+  },
+  "T046-3": {
+   "phraseId": "T046",
+   "category": "smalltalk",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對店員、站務員或路人而言自然有禮，語氣親切不失禮。"
+  },
+  "T047-3": {
+   "phraseId": "T047",
+   "category": "smalltalk",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用です・ます體，對店員、站務員、路人或醫護都自然有禮。"
+  },
+  "T043-1": {
+   "phraseId": "T043",
+   "category": "appointment",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用「すみません」和「〜かかりませんか」對店員等詢問取消期限自然且不失禮。"
+  },
+  "T046-2": {
+   "phraseId": "T046",
+   "category": "smalltalk",
+   "repeat": 2,
+   "keigo": "too_casual",
+   "acceptable": false,
+   "note": "譯文未完成，無法構成可對人說的禮貌問句。"
+  },
+  "T049-2": {
+   "phraseId": "T049",
+   "category": "smalltalk",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "對陌生人使用禮貌的です・ます體，語域自然得體。"
+  },
+  "T049-3": {
+   "phraseId": "T049",
+   "category": "smalltalk",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用禮貌體，對店員、站務員或初次見面的路人都自然得體。"
+  },
+  "T048-3": {
+   "phraseId": "T048",
+   "category": "smalltalk",
+   "repeat": 3,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "「ありがとう」「見てる」較隨便，對店員說可改為「ありがとうございます、ただ見ているだけです」。"
+  },
+  "T047-2": {
+   "phraseId": "T047",
+   "category": "smalltalk",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用です・ます體，對店員、站務員或初次見面的路人皆得體自然。"
+  },
+  "T048-1": {
+   "phraseId": "T048",
+   "category": "smalltalk",
+   "repeat": 1,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "「ありがとう」較隨便，改成「ありがとうございます」會更適合對店員說。"
+  },
+  "T048-2": {
+   "phraseId": "T048",
+   "category": "smalltalk",
+   "repeat": 2,
+   "keigo": "mixed",
+   "acceptable": true,
+   "note": "「ありがとう」較隨意，但整體當面對店員說仍不算失禮。"
+  },
+  "T049-1": {
+   "phraseId": "T049",
+   "category": "smalltalk",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用禮貌體，適合對店員、站務員、路人或醫護人員說明來訪背景。"
+  },
+  "T050-3": {
+   "phraseId": "T050",
+   "category": "smalltalk",
+   "repeat": 3,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣自然有禮，適合對店員等人當面使用。"
+  },
+  "T047-1": {
+   "phraseId": "T047",
+   "category": "smalltalk",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "使用です・ます體，對陌生人閒聊自然有禮。"
+  },
+  "T050-2": {
+   "phraseId": "T050",
+   "category": "smalltalk",
+   "repeat": 2,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "以「お願いします／連絡します」對店員等使用禮貌得體。"
+  },
+  "T050-1": {
+   "phraseId": "T050",
+   "category": "smalltalk",
+   "repeat": 1,
+   "keigo": "appropriate",
+   "acceptable": true,
+   "note": "語氣禮貌自然，對店員或站務員說也不失禮。"
+  }
+ },
+ "stats": {
+  "auditor": "openai/gpt-5.6-terra",
+  "byCat": {
+   "directions": {
+    "n": 18,
+    "acceptable": 16,
+    "too_casual": 2,
+    "too_stiff": 0,
+    "mixed": 1,
+    "acceptable_rate": 0.889
+   },
+   "transport": {
+    "n": 21,
+    "acceptable": 19,
+    "too_casual": 3,
+    "too_stiff": 0,
+    "mixed": 1,
+    "acceptable_rate": 0.905
+   },
+   "dining": {
+    "n": 21,
+    "acceptable": 20,
+    "too_casual": 6,
+    "too_stiff": 0,
+    "mixed": 2,
+    "acceptable_rate": 0.952
+   },
+   "shopping": {
+    "n": 21,
+    "acceptable": 14,
+    "too_casual": 7,
+    "too_stiff": 0,
+    "mixed": 2,
+    "acceptable_rate": 0.667
+   },
+   "hotel": {
+    "n": 18,
+    "acceptable": 18,
+    "too_casual": 3,
+    "too_stiff": 0,
+    "mixed": 3,
+    "acceptable_rate": 1
+   },
+   "emergency": {
+    "n": 15,
+    "acceptable": 13,
+    "too_casual": 4,
+    "too_stiff": 0,
+    "mixed": 3,
+    "acceptable_rate": 0.867
+   },
+   "appointment": {
+    "n": 18,
+    "acceptable": 18,
+    "too_casual": 0,
+    "too_stiff": 0,
+    "mixed": 3,
+    "acceptable_rate": 1
+   },
+   "smalltalk": {
+    "n": 18,
+    "acceptable": 14,
+    "too_casual": 4,
+    "too_stiff": 0,
+    "mixed": 3,
+    "acceptable_rate": 0.778
+   }
   }
  }
 }
