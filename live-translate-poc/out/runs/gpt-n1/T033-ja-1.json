@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:05:50.133Z"
+  "ts": "2026-07-29T09:05:50.133Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意非常忠實，完整傳達了原文的意思。流暢度方面，「私のために」在日文情境中略顯多餘且不夠自然，但文法完全正確；「着く必要があります」稍微生硬，但符合原文「要到機場」的意思。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

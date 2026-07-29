@@ -46,5 +46,19 @@
     },
     "reason": "The translation is accurate and natural. '這班車' can be translated as 'this bus' or 'this train' depending on the context, so the machine translation is perfectly acceptable."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語句通順自然，但將「這班車」翻為“bus” 而參考譯文為“train”，車種詞彙選擇與參考不符，屬於輕微語義錯誤，整體仍能傳達原意。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

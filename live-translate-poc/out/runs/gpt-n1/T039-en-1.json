@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:06:39.339Z"
+  "ts": "2026-07-29T09:06:39.339Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It successfully conveys all key information from the source text, including the date, time, and number of people. The phrasing 'would it be possible to book' is polite and appropriate for the context of making a reservation."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

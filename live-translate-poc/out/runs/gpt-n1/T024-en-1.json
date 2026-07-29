@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:04:38.299Z"
+  "ts": "2026-07-29T09:04:38.299Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. '打八折' is correctly translated as 'twenty percent off', and the conditional structure is well-rendered. 'two pieces' is a slightly literal but completely acceptable translation of '兩件'."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

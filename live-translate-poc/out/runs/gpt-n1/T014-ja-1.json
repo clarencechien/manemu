@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:03:16.243Z"
+  "ts": "2026-07-29T09:03:16.243Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "「這個不要辣」被誤譯為「これはいらないな」（我不要這個），漏譯了「辣」的要求，這會導致語意出現偏差（變成拒絕整個食物，而非要求不加辣）。後半句「我不太能吃辣」翻譯正確。日文語法流暢度良好。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:03:17.420Z"
+  "ts": "2026-07-29T09:03:17.420Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The machine translation incorrectly translates '這個不要辣' (no spicy for this one) as 'Forget this' (which means rejecting the item entirely). This is a significant omission/distortion of the user's request, although the second part of the sentence is translated perfectly."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

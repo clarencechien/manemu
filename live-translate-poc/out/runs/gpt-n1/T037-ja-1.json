@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:06:23.132Z"
+  "ts": "2026-07-29T09:06:23.132Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有訊息，房號「七〇二」與朋友昏倒「気を失いました」皆翻譯正確。語意忠實度極高。流暢度方面，文法完全正確且自然，唯獨兩句之間缺乏標點符號（語音翻譯常見現象），稍微影響閱讀流暢感，故給予4分。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

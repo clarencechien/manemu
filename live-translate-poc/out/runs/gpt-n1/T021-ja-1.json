@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:04:14.463Z"
+  "ts": "2026-07-29T09:04:14.463Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「隣のあの青いやつを」在口語中省略了後續動詞（如「ください」或「ほしい」），非常符合日語口語習慣。雖然前半句使用常體（いらない），後半句使用敬體（おいくらですか），但在口語口譯中仍屬自然且完全可接受。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

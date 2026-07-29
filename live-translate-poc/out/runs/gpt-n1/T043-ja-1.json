@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:07:13.128Z"
+  "ts": "2026-07-29T09:07:13.128Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "原文中的「最晚」（最遅・何時まで）被誤譯為「最短で」（最短、最早），這導致語意與原意相反。其餘部分如「不用付取消費」翻譯正確，句子文法也算通順。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:04:46.740Z"
+  "ts": "2026-07-29T09:04:46.740Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The machine translation completely omitted the first sentence ('有沒有 limited edition 的款式?') and the second sentence is grammatically incomplete because it lacks the object 'it' ('I saw on Instagram')."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

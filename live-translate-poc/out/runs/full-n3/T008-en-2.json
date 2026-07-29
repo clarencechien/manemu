@@ -46,5 +46,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text and is perfectly fluent. Translating '這班車' as 'This bus' is acceptable without further context. The nuance of '應該不會...吧' is well captured by 'probably won't'."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文語法自然且意義大致相符：都表達到大阪且不會在京都停。但原文中的「這班車」在參考譯文為 train，機器譯文誤譯為 bus，且語氣由原句的確認疑問（…吧?）變成較確定的表述（probably），因此語意不完全忠實，故給中等 adequacy（3）。語句流暢度高，給 5。標記為 hallucination（錯誤引入/替換車種）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

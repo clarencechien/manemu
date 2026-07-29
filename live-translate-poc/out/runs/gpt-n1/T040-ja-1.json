@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:06:47.703Z"
+  "ts": "2026-07-29T09:06:47.703Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation incorrectly translates the days of the week: 'Friday' (星期五) is translated as 'Monday' (月曜), and 'Saturday' (星期六) is translated as 'Thursday' (木曜). This is a critical error for a reservation change, although the rest of the sentence is grammatically fluent."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

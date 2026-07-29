@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:04:21.376Z"
+  "ts": "2026-07-29T09:04:21.376Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "原文の「算我三千塊可以嗎？」（3000元にしてもらえますか？）という提案・交渉の疑問文に対し、訳文は「3000元でいいです」（3000元で良いです）という断定・承諾の表現になっており、ニュアンスが少し異なりますが、意味は大体伝わります。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

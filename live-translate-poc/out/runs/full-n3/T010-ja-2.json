@@ -45,5 +45,19 @@
     },
     "reason": "譯文將「新宿」錯誤翻譯為「新竹」，導致目的地資訊錯誤，但整體句型與文法自然流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文把「新宿」錯譯為「新竹」，目的地資訊錯誤，導致語意不忠。時間與疑問句形式保留且日語表達自然，因此流暢度高，但因重要名詞錯誤，adequacy 評為 2。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

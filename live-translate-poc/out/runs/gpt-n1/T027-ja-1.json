@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:05:02.501Z"
+  "ts": "2026-07-29T09:05:02.501Z",
+  "judge": {
+    "adequacy": 1,
+    "fluency": 1,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文為空，完全遺漏。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

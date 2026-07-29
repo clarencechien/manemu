@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:03:03.073Z"
+  "ts": "2026-07-29T09:03:03.073Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation incorrectly translates the destination '橫濱' (Yokohama) as 'Hengping' (name_mangled), which is a critical error for navigation. Additionally, '這班車' is translated as 'this bus' instead of 'this train', though '車' can be ambiguous without context. The fluency of the English sentence is otherwise natural and grammatically correct."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }
