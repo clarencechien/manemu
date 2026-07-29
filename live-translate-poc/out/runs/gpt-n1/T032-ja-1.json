@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的意思。語氣較為口語和非正式（使用了「しなくていい、ありがとう」而非敬語），在需要禮貌的口譯情境中可能顯得不夠得體，但文法完全正確且表達自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原句意思（我明天不需要打掃房間），日語表達自然。語氣較口語，但並不影響理解，與參考譯文的禮貌用語差異屬風格差異而非錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

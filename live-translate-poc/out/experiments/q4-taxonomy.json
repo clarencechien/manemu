@@ -1,0 +1,327 @@
+{
+ "items": {
+  "full-n3|T002-ja-2": {
+   "runId": "full-n3",
+   "tag": "T002-ja-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "Shibuya 被誤轉寫為「徐博雅」,導致專有名詞辨識錯誤"
+  },
+  "full-n3|T002-en-3": {
+   "runId": "full-n3",
+   "tag": "T002-en-3",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "「Shibuya」被誤轉錄為「徐博雅」,導致專有名詞辨識錯誤"
+  },
+  "full-n3|T010-en-2": {
+   "runId": "full-n3",
+   "tag": "T010-en-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "「新宿」被誤轉錄為「新竹」,地名錯誤導致後續翻譯錯誤"
+  },
+  "full-n3|T002-ja-1": {
+   "runId": "full-n3",
+   "tag": "T002-ja-1",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "「Shibuya」被誤轉寫為「徐博雅」，導致專有名詞辨識錯誤"
+  },
+  "full-n3|T002-en-1": {
+   "runId": "full-n3",
+   "tag": "T002-en-1",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "Shibuya 被誤轉寫為「徐博雅」,專有名詞辨識錯誤,且譯文further將「這棟樓嗎」的疑問句意誤譯為詢問位置"
+  },
+  "full-n3|T010-en-1": {
+   "runId": "full-n3",
+   "tag": "T010-en-1",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "「新宿」被誤轉寫為「新竹」,地名錯誤導致後續翻譯延續此錯誤"
+  },
+  "full-n3|T002-ja-3": {
+   "runId": "full-n3",
+   "tag": "T002-ja-3",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "STT將「Shibuya」誤轉寫為「徐博雅」,導致專有名詞辨識錯誤"
+  },
+  "full-n3|T002-en-2": {
+   "runId": "full-n3",
+   "tag": "T002-en-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "STT將「Shibuya」誤轉寫為「徐博雅」,專有名詞辨識錯誤導致後續翻譯也錯誤"
+  },
+  "full-n3|T010-en-3": {
+   "runId": "full-n3",
+   "tag": "T010-en-3",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「新宿」被誤聽寫為「新竹」,屬同音/近音詞混淆導致地名錯誤"
+  },
+  "full-n3|T010-ja-2": {
+   "runId": "full-n3",
+   "tag": "T010-ja-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「新宿」被誤轉寫為「新竹」,兩地發音相近導致STT錯誤"
+  },
+  "full-n3|T010-ja-1": {
+   "runId": "full-n3",
+   "tag": "T010-ja-1",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「新宿」被誤轉寫為「新竹」，屬同音/近音詞混淆"
+  },
+  "full-n3|T010-ja-3": {
+   "runId": "full-n3",
+   "tag": "T010-ja-3",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「新宿」被誤轉寫為「新竹」，兩詞發音相近導致STT辨識錯誤，後續翻譯也因此沿用錯誤地名"
+  },
+  "full-n3|T014-en-2": {
+   "runId": "full-n3",
+   "tag": "T014-en-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「不要辣」被誤轉寫為「不要了」,「能吃辣」被誤轉寫為「能吃了」,「辣」與「了」同音導致關鍵詞誤判"
+  },
+  "full-n3|T014-ja-1": {
+   "runId": "full-n3",
+   "tag": "T014-ja-1",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「辣」被誤聽成「了」,導致「不要辣」變成「不要了」、「能吃辣」變成「能吃了」,完全改變原意"
+  },
+  "full-n3|T014-ja-2": {
+   "runId": "full-n3",
+   "tag": "T014-ja-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「辣」被誤聽成「了」,導致「不要辣」變成「不要了」、「不太能吃辣」變成「不太能吃了」,完全改變原意"
+  },
+  "full-n3|T014-ja-3": {
+   "runId": "full-n3",
+   "tag": "T014-ja-3",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「不要辣」被誤識別為「不要了」,「吃辣」被誤識別為「吃了」,导致「辣」字丢失"
+  },
+  "full-n3|T016-en-1": {
+   "runId": "full-n3",
+   "tag": "T016-en-1",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「蝦子」被誤轉寫為「瞎子」,導致「過敏」對象由蝦子變成盲人"
+  },
+  "full-n3|T016-en-2": {
+   "runId": "full-n3",
+   "tag": "T016-en-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「蝦子」被誤轉寫為「瞎子」,導致語意由食物過敏變成對人過敏"
+  },
+  "full-n3|T037-ja-3": {
+   "runId": "full-n3",
+   "tag": "T037-ja-3",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「昏倒」被STT誤轉寫為「婚了」,導致譯文變成「友達が結婚したの」"
+  },
+  "full-n3|T014-en-3": {
+   "runId": "full-n3",
+   "tag": "T014-en-3",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「辣」被誤聽為「啦」和「了」,導致辣度資訊完全遺失"
+  },
+  "full-n3|T046-ja-2": {
+   "runId": "full-n3",
+   "tag": "T046-ja-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "truncation",
+   "evidence": "STT逐字稿在「说得真好」後被截斷,遺漏「是在哪裡學的」整句問句,導致譯文也不完整"
+  },
+  "gpt-n1|T002-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T002-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "「Shibuya Sky」被誤轉寫為「徐布亚斯盖」,專有名詞辨識失敗,導致後續翻譯錯誤"
+  },
+  "full-n3|T040-ja-1": {
+   "runId": "full-n3",
+   "tag": "T040-ja-1",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "translation",
+   "type": "omission",
+   "evidence": "原話「從星期五改到星期六」,譯文只譯出「金曜日に変更」,遺漏了「星期六」(土曜日)這一目標日期資訊"
+  },
+  "full-n3|T043-ja-2": {
+   "runId": "full-n3",
+   "tag": "T043-ja-2",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "原話「取消」被STT誤辨識為「取票」,導致譯文將「取消時間」誤譬為「領取機票時間」"
+  },
+  "gpt-n1|T003-ja-1": {
+   "runId": "gpt-n1",
+   "tag": "T003-ja-1",
+   "model": "gpt-realtime-translate",
+   "stage": "translation",
+   "type": "other",
+   "evidence": "「机场」被誤譯為「競技場」而非正確的「空港」,屬於翻譯階段的詞彙誤譯錯誤"
+  },
+  "gpt-n1|T002-ja-1": {
+   "runId": "gpt-n1",
+   "tag": "T002-ja-1",
+   "model": "gpt-realtime-translate",
+   "stage": "stt",
+   "type": "proper_noun",
+   "evidence": "「Shibuya Sky」被誤轉寫為「徐布亚斯盖」,專有名詞未被正確識別,導致後續翻譯出現「徐不娓」這種錯誤譯名"
+  },
+  "gpt-n1|T005-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T005-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「淺草寺」被STT誤聽為「前草寺」,導致後續翻譯將其誤譯為人名「Mr. Qian, the minister of finance」"
+  },
+  "gpt-n1|T005-ja-1": {
+   "runId": "gpt-n1",
+   "tag": "T005-ja-1",
+   "model": "gpt-realtime-translate",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「淺草寺」被誤轉寫為「前草寺」,「晴空塔」被誤轉寫為「秦空塔」,屬同音字錯誤,導致專有名詞在譯文中也錯誤呈現(前草寺と秦空塔)"
+  },
+  "full-n3|T016-en-3": {
+   "runId": "full-n3",
+   "tag": "T016-en-3",
+   "model": "models/gemini-3.5-live-translate-preview",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「蝦子」被誤轉為同音詞「瞎子」,導致翻譯成allergic to blind people"
+  },
+  "gpt-n1|T012-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T012-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "translation",
+   "type": "proper_noun",
+   "evidence": "横滨被誤譯為Hengping,應為Yokohama"
+  },
+  "gpt-n1|T011-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T011-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "both",
+   "type": "homophone",
+   "evidence": "「IC」被誤轉寫為「埃希」,且譯文出現「Even with a knife」這種與原意無關的幻覺翻譯,顯示STT誤聽同音字加上翻譯階段的錯誤延伸"
+  },
+  "gpt-n1|T010-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T010-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "STT將「新宿」誤聽為「新柱」,導致譯文誤譯為Circular line"
+  },
+  "gpt-n1|T025-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T025-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "「有沒有」被誤轉錄為「Your mail」,導致核心問句遺失"
+  },
+  "gpt-n1|T014-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T014-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "stt",
+   "type": "homophone",
+   "evidence": "原話「這個不要辣」被誤聽為「这个不要啦」，「辣」與「啦」同音造成語意錯誤，導致譯文變成「Forget this」而非「不要放辣」"
+  },
+  "gpt-n1|T027-ja-1": {
+   "runId": "gpt-n1",
+   "tag": "T027-ja-1",
+   "model": "gpt-realtime-translate",
+   "stage": "translation",
+   "type": "omission",
+   "evidence": "STT逐字稿內容完整且正確，但譯文完全空白，翻譯階段未輸出任何結果，屬於翻譯遺漏"
+  },
+  "gpt-n1|T048-ja-1": {
+   "runId": "gpt-n1",
+   "tag": "T048-ja-1",
+   "model": "gpt-realtime-translate",
+   "stage": "translation",
+   "type": "omission",
+   "evidence": "STT逐字稿與原話一致,但譯文完全空白,未輸出任何日文翻譯內容"
+  },
+  "gpt-n1|T043-en-1": {
+   "runId": "gpt-n1",
+   "tag": "T043-en-1",
+   "model": "gpt-realtime-translate",
+   "stage": "translation",
+   "type": "hallucination",
+   "evidence": "譯文開頭出現與原話無關的「Thursday」,原話中並無星期四相關內容,屬翻譯階段憑空生成"
+  }
+ },
+ "table": {
+  "full-n3": {
+   "stt": {
+    "proper_noun": 8,
+    "homophone": 14,
+    "truncation": 1
+   },
+   "translation": {
+    "omission": 1
+   }
+  },
+  "gpt-n1": {
+   "stt": {
+    "proper_noun": 2,
+    "homophone": 5
+   },
+   "translation": {
+    "other": 1,
+    "proper_noun": 1,
+    "omission": 2,
+    "hallucination": 1
+   },
+   "both": {
+    "homophone": 1
+   }
+  }
+ }
+}

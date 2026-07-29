@@ -1,0 +1,1760 @@
+{
+ "reviews": {
+  "T001-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T001-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T001-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T001-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T002-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T002-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T002-ja|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「入口はこのビルですか」は入口そのものが建物かのようで不自然。",
+   "better": "すみません、渋谷スカイの入口はこのビルにありますか？"
+  },
+  "T002-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T001-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T003-ja|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「電車の駅」は不自然で、通常は単に「駅」または「鉄道の駅」と言う。",
+   "better": "空港に行くのではなく、駅に行きたいんです。"
+  },
+  "T003-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T003-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T004-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T002-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T004-ja|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「15分以上」包含剛好15分鐘，原文是超過15分鐘。",
+   "better": "ここから歩いて何分ぐらいかかりますか？15分を超えるなら、タクシーに乗りたいです。"
+  },
+  "T004-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T003-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T003-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「電車の駅」稍顯冗長，當地人更常直接說「駅」，但語意正確且自然",
+   "better": ""
+  },
+  "T005-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T002-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T005-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T004-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T005-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T005-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T001-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「どう行くのが一番早いですか」稍嫌直譯，口語上略顯生硬但語意正確",
+   "better": ""
+  },
+  "T006-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T006-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T006-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T006-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T005-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T007-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T004-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T007-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T005-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T007-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T007-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T006-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T004-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T008-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「止まらない」也可理解，但列車在車站停靠通常寫作「停まらない」更自然。",
+   "better": ""
+  },
+  "T006-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「急いでいるんです」語意正確但稍顯直白，口語上「急いでいるので」或「急いでまして」更自然流暢",
+   "better": ""
+  },
+  "T008-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T008-en|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「應該不會」帶有推測語氣，譯文改成確定不會停靠，語意不符。",
+   "better": "This train goes to Osaka, but it probably doesn't stop in Kyoto, right?"
+  },
+  "T009-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T007-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T007-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T009-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T009-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T009-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "此句非文法錯誤,但較自然的說法是「この席、空いていますか?」,直譯「誰か座っていますか」稍嫌生硬",
+   "better": ""
+  },
+  "T010-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T010-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T010-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T010-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T008-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T009-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T011-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T011-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T008-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T011-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T011-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T012-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T011-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T010-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T010-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T012-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T012-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「could you help me check」稍顯正式,口語可用「could you tell me/check for me」更自然,但整體語意正確",
+   "better": ""
+  },
+  "T013-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T011-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T013-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T013-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T014-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T013-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T009-ja|qwen/qwen3.7-max": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「誰か座っていますか」語意不自然，應詢問座位是否空著而非是否有人坐",
+   "better": "すみません、この席は空いていますか？"
+  },
+  "T014-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T014-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "語意正確且自然，僅「No spicy」較口語省略；更自然可說「Not spicy for this one」。",
+   "better": ""
+  },
+  "T014-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T012-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T015-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T015-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T015-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T013-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T015-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T014-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T012-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T013-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T016-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T016-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T016-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T015-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T015-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T017-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T017-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T017-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T018-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T016-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T018-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T016-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T018-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T019-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T018-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T019-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T019-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T014-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「No spicy for this one」語法略不自然，當地人更常說「Make this one not spicy」或「No spice on this one, please」",
+   "better": ""
+  },
+  "T019-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T020-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T017-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「大サイズ／中サイズ」稍嫌生硬，咖啡廳常用「トール／グランデ」或「大きめ／普通」等說法，但語意正確且敬語得體",
+   "better": ""
+  },
+  "T017-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T020-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T020-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T018-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T020-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T018-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T019-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T021-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T021-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T021-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T019-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T021-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T020-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T022-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T022-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T021-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "敬語略顯不足，購物場景對店員宜用更禮貌的表達",
+   "better": "これはいりません。隣の青いのがほしいのですが、2つでいくらですか？"
+  },
+  "T023-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T021-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T023-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T023-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "語意正確，但較自然的說法是「Does this price include tax?」",
+   "better": ""
+  },
+  "T023-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "較自然的說法是「tax included or excluded」,但原譯文語意正確可理解",
+   "better": ""
+  },
+  "T022-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T022-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T024-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T022-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T024-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T024-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T024-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T025-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T023-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T025-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T025-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T025-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「款式」譯為單數的 version 略不如 styles 自然，但語意大致正確。",
+   "better": ""
+  },
+  "T026-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T023-en|qwen/qwen3.7-max": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "語意正確但表達不自然，當地人通常不會說 'with tax or without tax'",
+   "better": "Is this price inclusive of tax, or is tax extra?"
+  },
+  "T026-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T024-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T024-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T026-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T026-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T025-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T027-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T027-ja|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「免税できますか」はやや不自然で、店頭では「免税になりますか」や「免税手続きはできますか」のほうが自然。",
+   "better": "免税になりますか？合計で5,000円以上買いました。"
+  },
+  "T027-en|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「買了超過五千日圓」誤譯成買了日圓，應表達消費金額超過五千日圓。",
+   "better": "Can I get a tax refund? I spent more than 5,000 yen in total."
+  },
+  "T025-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T026-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T027-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T026-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T020-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T028-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T028-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T028-en|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「staying two nights from today」不自然，應表達為從今天起住兩晚。",
+   "better": "I have a reservation under the name Chen Ta-wen for two nights, starting today."
+  },
+  "T029-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T029-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T029-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T029-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T027-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「免税できますか」稍嫌直譯，口語更自然會說「免税してもらえますか」或「免税できますか」亦可接受，整體語意正確且自然",
+   "better": ""
+  },
+  "T030-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T030-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T027-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T030-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T030-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T031-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T029-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T031-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T030-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T031-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T028-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "staying two nights from today 略顯生硬，更自然的說法是 for two nights starting today",
+   "better": ""
+  },
+  "T031-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T032-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T032-ja|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「結構です」は断り方としてやや硬く、ホテルスタッフに対しては「掃除は不要です」のほうが自然で適切です。",
+   "better": "明日は部屋の掃除は不要です。ありがとうございます。"
+  },
+  "T032-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T032-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T028-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「予約しています」稍顯生硬，飯店櫃檯更常說「予約があるのですが」或「予約していますが」",
+   "better": ""
+  },
+  "T030-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T033-ja|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「六點半要到機場」被譯成「六點半想去機場」，未表達需在六點半抵達機場的時間要求。",
+   "better": "タクシーを1台呼んでいただけますか。明日の朝6時半までに空港に着きたいです。"
+  },
+  "T032-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T031-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T033-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T032-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T033-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T034-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T034-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T034-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T031-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T033-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T035-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T034-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T035-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T033-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「行きたいんです」稍顯委婉，直接說「空港までお願いします」更貼近叫車情境，但語意正確且自然",
+   "better": ""
+  },
+  "T035-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T034-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T034-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T035-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「My passport is missing」可理解但較不口語，旅行情境更常說「I've lost my passport」。",
+   "better": ""
+  },
+  "T036-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T036-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T036-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T036-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T035-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T035-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T036-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-ja|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「倒れました」未明確表達「昏倒／失去意識」，且「部屋番号」較不如「702号室」自然。",
+   "better": "私の部屋は702号室です。友達が気を失って倒れました。"
+  },
+  "T038-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T036-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T029-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T038-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「has collapsed」可理解為昏倒，但口語上說「fainted」更直接自然。",
+   "better": ""
+  },
+  "T038-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T038-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「予約したいです」較口語直白,更自然可用「予約をお願いしたいです」或「予約したいのですが」",
+   "better": ""
+  },
+  "T038-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T040-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T040-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T038-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T040-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T040-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T041-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T041-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T041-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T041-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-ja|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「予約の確認」較像確認既有預約，原文是詢問能否用 email 確認／確定預約；且對服務人員宜用較適切敬語。",
+   "better": "メールで予約を確認していただけますか？私の便はBR198です。"
+  },
+  "T040-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "語意正確且自然，但口語預約場景用「予約をお願いします」更禮貌得體",
+   "better": ""
+  },
+  "T041-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T043-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T043-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T041-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T043-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T043-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T044-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T044-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T044-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T045-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T045-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T044-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「席を取っておく」較像先幫忙訂／留位，若指已預約的位子可改為更明確的「席を確保しておく」",
+   "better": ""
+  },
+  "T043-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T045-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T044-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T043-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "語意正確但語序稍不自然，更道地的說法會把時間條件放前面",
+   "better": "キャンセル料がかからないのは、いつまでにキャンセルすればよろしいでしょうか？"
+  },
+  "T045-en|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "漏譯「今天真的麻煩你了」所表達的歉意與讓對方費心的意思。",
+   "better": "Thank you for your help. I'm really sorry for putting you out today."
+  },
+  "T046-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T044-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T046-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T046-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T046-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T047-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T047-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T045-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T045-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T047-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T048-ja|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「結構です」應寫作「結構です」但整句「いえ、結構です」不如購物情境常用的「大丈夫です」自然；且「見ているだけなので」句尾以「ので」收尾不完整、語氣不自然。",
+   "better": "いいえ、大丈夫です。ありがとうございます。ちょっと見ているだけです。"
+  },
+  "T047-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T046-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T048-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T046-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T047-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T048-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T049-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T040-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「キャンセルではありません」稍顯生硬，口語中更自然會說「キャンセルではなく」或「キャンセルじゃないんです」",
+   "better": ""
+  },
+  "T049-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T047-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T049-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T049-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T050-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T048-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「ちょっと見ているだけなので」語尾略顯生硬,口語中更自然會說「見ているだけなんです」",
+   "better": ""
+  },
+  "T048-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T050-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T050-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T050-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T049-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T049-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T050-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T050-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  }
+ },
+ "stats": {
+  "reviewers": [
+   "anthropic/claude-sonnet-5",
+   "openai/gpt-5.6-terra",
+   "qwen/qwen3.7-max"
+  ],
+  "total": 100,
+  "suspicious_n": 0,
+  "suspicious": []
+ }
+}

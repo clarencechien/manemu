@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with excellent fluency, matching the reference translation closely in meaning and tone."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately and completely conveys the original meaning. Wording is natural and fluent in English, matching the reference closely (only minor variation in phrasing: \"In Japan, summers are very hot\" vs. \"Summer in Japan is hot\"). No errors detected."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

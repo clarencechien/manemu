@@ -45,5 +45,19 @@
     },
     "reason": "譯文語意非常忠實，完整傳達了原文的意思。流暢度方面，「私のために」在日文情境中略顯多餘且不夠自然，但文法完全正確；「着く必要があります」稍微生硬，但符合原文「要到機場」的意思。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整保留原意（請求叫計程車及於次日6:30需到達機場），因此語意忠實度高。日語文法通順，但用語偏口語／敬語程度低（「私のために」「呼んでくれますか?」），比參考譯文的禮貌表現弱，故流暢度略降。其餘無錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

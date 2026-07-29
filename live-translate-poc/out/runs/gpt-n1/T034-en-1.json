@@ -43,5 +43,19 @@
     },
     "reason": "The urgent cry for help '救命' (Help!) was mistranslated as 'Saving a life', which sounds like a statement rather than an emergency plea. The second part of the sentence was translated correctly."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文大致傳達請求叫救護車的意思，但開頭用『Saving a life』取代原文的緊急呼喊『救命!/Help!』，改變了語氣並加入具體意圖（正在救人/正在搶救生命），屬於額外資訊/輕微誤譯；句子語法可接受但語氣較不自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

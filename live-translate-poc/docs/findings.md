@@ -126,9 +126,59 @@ live-translate 是**連續 session**:`audioStreamEnd` 後模型翻完仍持續�
 - 已完成並驗證到能驗的程度:`judge.mjs` 的 `JUDGE_PROVIDER=openai`(gpt-5-mini→`judge_x` 欄位)、`providers/openai-realtime.mjs`(24kHz 重取樣、subprotocol 認證、`session.close` 收尾)、`run.mjs --provider openai`。**WS 握手與認證實測通過**(錯誤發生在應用層 quota,非 401)。
 - 儲值後指令:`JUDGE_PROVIDER=openai npm run judge -- full-n3` 與 `npm run run -- --provider openai --repeats 1 --run-id gpt-n1`。
 
-### 配額後記(更正 §3.5 的推測)
+### 配額後記(使用者 dashboard 證實,2026-07-29)
 
-3.1-pro 的 429 實測 quotaId=`GenerateRequestsPerDayPerProjectPerModel`、quotaValue=**250**。使用者確認專案掛在 Tier 1 postpay 帳單下;無論如何,決策是**全面棄用 pro 級**(postpay 按量計費風險),評審預設改 `gemini-3.5-flash`。
+Tier 1 postpay 專案的實際 per-model 限制(dashboard 截圖與 API 實測吻合):
+
+| 模型 | RPM | RPD | 當日用量 | 含義 |
+| --- | --- | --- | --- | --- |
+| Gemini 3.1 Pro | 25 | **250** | 254(爆) | Tier 1 的 preview/pro 級 RPD 仍很小 → **評審/批次一律 flash 級** |
+| 2.5 Flash TTS | **10** | **100** | 75 | 一次全量合成(50 句+重試)吃掉大半日限 |
+| 2.5 Pro TTS | 10 | 50 | 12 | fallback 用 |
+| 3.5 Flash | 1K | 10K | 352 | 評審/回譯主力,量足 |
+| 3.5 Flash Lite | 4K | 150K | 5 | UI 回譯首選 |
+
+**TTS 的操作結論(先記錄、暫不改碼)**:
+1. Phase A 音檔已進 git,平常不重合成;語料改版一天最多合成一輪。
+2. `synth.mjs` 目前 ~17 req/min 超過 TTS 的 10 RPM——部分「逾時」可能是限流;下次動 synth 時加 ≤10 RPM 節流。
+3. 擴語料/hard-mode 的路線:OpenAI `gpt-4o-mini-tts`(配額獨立,且換音源可檢驗「辣→啦」是否為 Gemini TTS artifact)> Batch API(半價、配額另計)> 三模型輪替(每日 ~150 句容量)。
+
+## 3.7 OpenRouter 兩波實驗總結(2026-07-29,詳見 docs/or-plan.md;花費 $7.35)
+
+### 品質數字定案(五廠評審面板,anthropic/openai/qwen/deepseek/mistral)
+
+| | Gemini live-translate(full-n3) | gpt-realtime-translate(gpt-n1) |
+| --- | --- | --- |
+| 共識 adequacy(en / ja) | **4.61 / 4.55** | 4.02 / 3.84 |
+| 共識災難率(≤2) | **8%**(24/300) | 22%(22/100) |
+| 問句保留率(P5) | **91%** | 83% |
+| 首音 ttfa_from_start p50 | 3.1s | **2.2–2.5s** |
+
+- 面板共識與原 Gemini 單評審(4.62/4.59)幾乎一致 → **自評沒有虛胖,full-n3 全部數字可信**。評審間偏差 ±0.17、高分歧句僅 9/400(Q7)。
+- **速度 OpenAI 贏、品質+語氣 Gemini 贏**;雙評審與五廠面板都同向,結論穩固。
+
+### 品質損失拆解(P2 天花板 × Q4 根因)
+
+- 同語料**文字直翻**天花板:四強模型 adequacy **4.8–4.9** → 語音管線代價 ≈ **0.3 分**。
+- Q4 根因分類:full-n3 的 24 筆共識災難,**23 筆在 STT 段**(同音 14、專名 8、截斷 1),翻譯段僅 1 筆。**「問題在耳朵,不在嘴巴」正式定案**——live-translate 的翻譯內核甚至優於 gemini-3.6-flash 純文字翻譯(4.05/4.54)。
+- 產品含義:M3 的所有防禦/修復投資都應該對準「聽」。
+
+### UI 防禦與修復層的可行性矩陣(exp1 + P3 + Q1/Q2/Q3/Q5)
+
+| 層 | 機制 | 效果 | 建議 |
+| --- | --- | --- | --- |
+| 第一防線 | **input 逐字稿即時顯示** | 免費;所有 STT 災難的唯一可靠出口 | **必做**(Q1 證明盲測抓不到「合理的聽錯」如新宿→新竹) |
+| 第二防線 | 回譯確認 | ja 方向偵測 73–100%、en 方向 **100%**;誤報 11–14% | **必做**;引擎:gemini flash-lite(0.4s)或 claude-haiku(1.4s、en 100%@13%) |
+| 第三防線 | STT 合理性偵測(無 ground truth) | sonnet 29%@誤報1%、haiku 45%@7% | 選配:只抓「瞎子過敏」級的荒謬句,當 icon 提示 |
+| 修復 A | 專名 glossary 後修 | **模型等級決定成敗**:sonnet 53%、haiku 39%、nano 8%(誤傷 ≤2%) | 值得做;行程 glossary + haiku 起步 |
+| 修復 B | 問句語氣修復 | nano 58%@誤動5%、haiku 59%@17% | 值得做;**nano 就夠** |
+
+### 其他
+
+- **P4 gold 交叉校對**:100 筆參考譯文 0 筆多數決 major → 「未經人工校對」星號解除(15 筆單票 major 為風格意見,清單在 `out/experiments/gold-check.json`)。
+- **Q6 語料 v2 草稿**:35 句加重埋雷(專名密集/多句連講/問尾/數字混合)在 `data/corpus-v2-draft.json`,供真人錄音與 M4 用。
+- **Q7 評審偏差**:qwen 最嚴(-0.17)、deepseek 最鬆(+0.04);deepseek 最愛插 flag(number_wrong 32 vs 其他 1–13)——多評審中位數有效中和了個性。
+- 花費:OpenRouter $7.35(P 波 ~$3.4 + Q 波 ~$4);OpenAI ~$3;Gemini API 走 Tier 1 配額。
 
 ## 4. 對計劃的修正建議(帶回 plan v3)
 

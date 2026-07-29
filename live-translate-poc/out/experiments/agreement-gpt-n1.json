@@ -1,0 +1,67 @@
+{
+  "runId": "gpt-n1",
+  "n": 100,
+  "geminiJudge": "models/gemini-3.5-flash",
+  "openaiJudge": "gpt-5-mini",
+  "adequacy": {
+    "gemini_mean": 4.14,
+    "openai_mean": 3.93,
+    "pearson_r": 0.903,
+    "within_1_point": 0.97
+  },
+  "disasters": {
+    "gemini_n": 11,
+    "openai_n": 22,
+    "overlap_n": 10,
+    "overlap_of_gemini": 0.909,
+    "only_openai": [
+      "T002-ja-1",
+      "T003-ja-1",
+      "T005-ja-1",
+      "T006-en-1",
+      "T007-ja-1",
+      "T008-en-1",
+      "T012-en-1",
+      "T013-ja-1",
+      "T028-en-1",
+      "T038-en-1",
+      "T043-ja-1",
+      "T047-ja-1"
+    ],
+    "only_gemini": [
+      "T027-en-1"
+    ]
+  },
+  "flags": {
+    "number_wrong": {
+      "agreement": 0.94,
+      "gemini_n": 1,
+      "openai_n": 7
+    },
+    "negation_flipped": {
+      "agreement": 0.99,
+      "gemini_n": 0,
+      "openai_n": 1
+    },
+    "honorific_off": {
+      "agreement": 0.92,
+      "gemini_n": 2,
+      "openai_n": 8
+    },
+    "name_mangled": {
+      "agreement": 0.96,
+      "gemini_n": 12,
+      "openai_n": 12
+    },
+    "omission": {
+      "agreement": 0.93,
+      "gemini_n": 11,
+      "openai_n": 6
+    },
+    "hallucination": {
+      "agreement": 0.85,
+      "gemini_n": 19,
+      "openai_n": 22
+    }
+  }
+}

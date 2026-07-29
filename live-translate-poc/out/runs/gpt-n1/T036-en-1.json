@@ -45,5 +45,19 @@
     },
     "reason": "The translation is fluent and conveys the original meaning accurately, but it includes an unnecessary addition ('Good grief') at the beginning which was not present in the source text."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Overall accurate and natural. Meaning preserved: '頭很暈'→'my head is spinning' and denial of heart disease history is correct. Minor issue: the prefatory exclamation 'Good grief' is not present in the source and adds an unnecessary emotional tone, so adequacy slightly reduced."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

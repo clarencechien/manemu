@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原意，語句自然流暢。唯與參考譯文相比，機器譯文省略了參考中的敬語前綴「お」（お上手 vs 上手），造成禮貌程度略有下降，故標記 honorific_off。其他無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

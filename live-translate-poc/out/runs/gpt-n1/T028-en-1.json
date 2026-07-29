@@ -46,5 +46,19 @@
     },
     "reason": "The key phrase \"我有訂房\" (I have a reservation) was incorrectly translated as \"I have a plan\", which is a hallucination/mistranslation that affects the adequacy of the check-in context. The rest of the sentence is translated accurately and fluently."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "「I have a plan」將「訂房/預約」錯譯為「plan」，改變了語意（應為 reservation/booking）。將今天起住兩晚譯為 \"we'll stay\"（複數主語）也錯誤，原句為第一人稱單數。姓名轉寫為 Chen Dawen 與參考譯文 Chen Ta-wen 有差異，屬於姓名處理不精確（標記為 name_mangled）。整句語法流暢但語意不忠實，故 adequacy 低、fluency 較高。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "原文中的「青黴素」（盤尼西林）被嚴重誤譯為「低用量ピル」（低劑量避孕藥），且「過敏」被誤譯為「副作用が出る」（會出現副作用）。譯文與原文意思完全無關，屬於嚴重的幻覺錯誤。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 1,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "機器譯文將原文「青黴素（ペニシリン）」錯譯為「低用量ピル（低用量ピル／避妊薬）」，且原文的過敏（アレルギー）被改為一般的「副作用が出るので」。語意大幅錯誤或替換，故 adequacy 非常低（1）。日語句子結構和表達大致自然，但用語不當，fluency 評為4。標記 hallucination=true。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

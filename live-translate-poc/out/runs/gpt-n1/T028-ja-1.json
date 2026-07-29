@@ -46,5 +46,19 @@
     },
     "reason": "「訂房」中的「房」被誤譯為「家」（房子），導致語意出現偏差（變成預約了房子而非飯店房間）。此外，「今日は二泊します」文法雖通，但日語習慣說「今日から二泊します」，略顯不自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文大致傳達原句意思（有訂房、名字、住兩晚），但有錯誤與不自然處：機譯使用「家を予約していて」將“訂房”翻為“預訂房子/房屋”，加入了不必要/不正確的語義（應為預訂（旅館の）部屋或予約だけ），屬於增加或幻構資訊；句末「今日は二泊します」語感較不自然，參考譯為「今日から2泊です」，而機譯表達為主觀行為（我將住二晚），仍可理解。姓名以漢字保留並非錯誤，但未做片假名標記也可接受。因此給予 adequacy=3（有部分語義錯誤/增補）、fluency=3（可懂但有不自然處/用詞問題）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

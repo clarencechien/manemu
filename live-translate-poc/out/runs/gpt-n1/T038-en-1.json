@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation incorrectly translated '青黴素' (penicillin) as 'finasteride', which is a completely different medication. This is a critical medical translation error (hallucination). The rest of the sentence is translated accurately and fluently."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 1,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文將原文的藥物『青黴素 (penicillin)』錯譯為『finasteride』，導致核心語意（重要的藥物資訊）完全錯誤，這在醫療語境下為重大錯誤，故給予最低的 adequacy 分數。句子語法與用詞自然流暢，故 fluency 評為高分。標記為 hallucination（虛構/替換實體錯誤）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

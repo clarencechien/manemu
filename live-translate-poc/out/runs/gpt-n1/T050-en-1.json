@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. 'Then I'll need your help' is a very appropriate rendering of '那就麻煩你了' in this context, and 'we'll be in touch later' perfectly translates '之後再聯絡'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達原意：表達感謝並表示之後會再聯絡。唯“那就麻煩你了”被譯為“I'll need your help”，語氣從禮貌性的感謝/拜託偏向陳述需要，略有差別；句子連接使用逗號拼接略不流暢（comma splice）。整體可理解且自然度良好，因此給予 adequacy 4、fluency 4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

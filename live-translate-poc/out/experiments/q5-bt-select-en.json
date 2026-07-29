@@ -1,0 +1,3151 @@
+{
+ "bt": {
+  "T001-3|openai/gpt-5.4-nano": {
+   "bt": "不好意思，怎麼走到車站最快？",
+   "latencyMs": 1317
+  },
+  "T001-2|openai/gpt-5.4-nano": {
+   "bt": "不好意思，請問車站在哪裡？怎麼去那邊最快？",
+   "latencyMs": 1570
+  },
+  "T001-1|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問怎樣最快可以到車站？",
+   "latencyMs": 1621
+  },
+  "T001-1|openai/gpt-5.4-nano": {
+   "bt": "不好意思，怎麼走到車站最快？",
+   "latencyMs": 1688
+  },
+  "T001-2|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問車站在哪裡？怎樣去最快？",
+   "latencyMs": 1784
+  },
+  "T001-3|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問去車站最快的路怎麼走？",
+   "latencyMs": 1996
+  },
+  "T002-1|openai/gpt-5.4-nano": {
+   "bt": "不好意思，徐伯岬天空那邊入口在哪裡？",
+   "latencyMs": 648
+  },
+  "T002-2|openai/gpt-5.4-nano": {
+   "bt": "不好意思，徐伯雅天空館的入口在哪裡啊？",
+   "latencyMs": 639
+  },
+  "T002-1|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問徐伯雅天空的入口在哪裡？",
+   "latencyMs": 1501
+  },
+  "T002-2|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問徐伯雅天空的入口在哪裡？",
+   "latencyMs": 1116
+  },
+  "T002-3|openai/gpt-5.4-nano": {
+   "bt": "不好意思，徐伯雅天空要從哪裡進？",
+   "latencyMs": 751
+  },
+  "T001-1|qwen/qwen3.7-flash": {
+   "bt": "不好意思，去車站最快怎麼走？",
+   "latencyMs": 5202
+  },
+  "T002-3|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，徐伯雅天空的入口在哪裡？",
+   "latencyMs": 1282
+  },
+  "T003-1|openai/gpt-5.4-nano": {
+   "bt": "我不去機場，我要去火車站。",
+   "latencyMs": 608
+  },
+  "T003-1|anthropic/claude-haiku-4.5": {
+   "bt": "我不是要去機場，我是要去火車站。",
+   "latencyMs": 1402
+  },
+  "T003-2|openai/gpt-5.4-nano": {
+   "bt": "我不是要去機場，我是要去火車站。",
+   "latencyMs": 806
+  },
+  "T001-3|qwen/qwen3.7-flash": {
+   "bt": "不好意思，去車站最快怎麼走？",
+   "latencyMs": 6925
+  },
+  "T003-2|anthropic/claude-haiku-4.5": {
+   "bt": "我不是要去機場，我是要去火車站。",
+   "latencyMs": 2146
+  },
+  "T001-2|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問車站在哪裡？要怎麼去最快？",
+   "latencyMs": 10081
+  },
+  "T003-3|anthropic/claude-haiku-4.5": {
+   "bt": "我不是要去機場，我是要去火車站。",
+   "latencyMs": 1139
+  },
+  "T003-3|openai/gpt-5.4-nano": {
+   "bt": "我不去機場，我要去火車站。",
+   "latencyMs": 919
+  },
+  "T004-1|anthropic/claude-haiku-4.5": {
+   "bt": "從這裡走過去大概要幾分鐘？如果超過15分鐘的話，我就叫計程車。",
+   "latencyMs": 1691
+  },
+  "T004-1|openai/gpt-5.4-nano": {
+   "bt": "從這裡走到那邊大概要幾分鐘？如果超過15分鐘，我就搭計程車。",
+   "latencyMs": 690
+  },
+  "T003-3|qwen/qwen3.7-flash": {
+   "bt": "我不去機場，我去火車站。",
+   "latencyMs": 4264
+  },
+  "T002-1|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問徐伯雅Sky入口在哪邊？",
+   "latencyMs": 12939
+  },
+  "T002-2|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問徐伯雅Sky入口在哪邊？",
+   "latencyMs": 11798
+  },
+  "T004-2|openai/gpt-5.4-nano": {
+   "bt": "從這裡走路要大概多久？如果超過15分鐘，我就直接叫計程車。",
+   "latencyMs": 648
+  },
+  "T004-2|anthropic/claude-haiku-4.5": {
+   "bt": "從這裡走過去大概要幾分鐘？如果超過15分鐘的話，我就叫計程車。",
+   "latencyMs": 1306
+  },
+  "T004-3|openai/gpt-5.4-nano": {
+   "bt": "從這裡走過去要大概幾分鐘？如果超過15分鐘，我就叫計程車。",
+   "latencyMs": 729
+  },
+  "T004-3|anthropic/claude-haiku-4.5": {
+   "bt": "從這裡走過去大概要幾分鐘？如果超過15分鐘的話，我就叫計程車。",
+   "latencyMs": 1646
+  },
+  "T002-3|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問徐博雅Sky入口在哪邊？",
+   "latencyMs": 14094
+  },
+  "T005-1|openai/gpt-5.4-nano": {
+   "bt": "不好意思，淺草寺跟晴空塔是在同一個方向嗎？",
+   "latencyMs": 775
+  },
+  "T005-1|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問淺草寺和晴空塔是同一個方向嗎？",
+   "latencyMs": 1451
+  },
+  "T004-2|qwen/qwen3.7-flash": {
+   "bt": "從這裡走過去大概要幾分鐘？如果超過15分鐘的話，我就叫計程車。",
+   "latencyMs": 4636
+  },
+  "T005-2|openai/gpt-5.4-nano": {
+   "bt": "不好意思，淺草寺跟晴空塔是在同一個方向嗎？",
+   "latencyMs": 908
+  },
+  "T005-2|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問淺草寺和晴空塔是同一個方向嗎？",
+   "latencyMs": 1494
+  },
+  "T003-2|qwen/qwen3.7-flash": {
+   "bt": "我不去機場，我去火車站。",
+   "latencyMs": 13119
+  },
+  "T004-1|qwen/qwen3.7-flash": {
+   "bt": "從這裡走過去大概要幾分鐘？如果超過15分鐘的話，我就叫計程車。",
+   "latencyMs": 8848
+  },
+  "T004-3|qwen/qwen3.7-flash": {
+   "bt": "從這裡走過去大概要幾分鐘？如果超過15分鐘的話，我就叫計程車。",
+   "latencyMs": 6844
+  },
+  "T005-3|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問淺草寺和晴空塔是同一個方向嗎？",
+   "latencyMs": 1447
+  },
+  "T006-1|anthropic/claude-haiku-4.5": {
+   "bt": "附近有廁所嗎？我趕時間。",
+   "latencyMs": 1256
+  },
+  "T006-1|openai/gpt-5.4-nano": {
+   "bt": "附近有洗手間嗎？我趕時間。",
+   "latencyMs": 545
+  },
+  "T005-3|openai/gpt-5.4-nano": {
+   "bt": "不好意思，淺草寺跟晴空塔是在同一個方向嗎？",
+   "latencyMs": 902
+  },
+  "T005-1|qwen/qwen3.7-flash": {
+   "bt": "不好意思，淺草寺跟晴空塔方向一樣嗎？",
+   "latencyMs": 7291
+  },
+  "T003-1|qwen/qwen3.7-flash": {
+   "bt": "我不去機場啦，我去火車站。",
+   "latencyMs": 20980
+  },
+  "T006-2|anthropic/claude-haiku-4.5": {
+   "bt": "附近有廁所嗎？我趕時間。",
+   "latencyMs": 1547
+  },
+  "T006-2|openai/gpt-5.4-nano": {
+   "bt": "附近有洗手間嗎？我很趕。",
+   "latencyMs": 1091
+  },
+  "T006-3|anthropic/claude-haiku-4.5": {
+   "bt": "附近有廁所嗎？我趕時間。",
+   "latencyMs": 1214
+  },
+  "T006-3|openai/gpt-5.4-nano": {
+   "bt": "附近有洗手間嗎？我有點趕時間。",
+   "latencyMs": 890
+  },
+  "T007-1|anthropic/claude-haiku-4.5": {
+   "bt": "我要買兩張去京都的票，一張成人票、一張兒童票。",
+   "latencyMs": 1277
+  },
+  "T007-1|openai/gpt-5.4-nano": {
+   "bt": "我想要兩張去京都的票，一張大人的、一張小孩的。",
+   "latencyMs": 1304
+  },
+  "T005-2|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問淺草寺跟晴空塔是在同一個方向嗎？",
+   "latencyMs": 8254
+  },
+  "T007-2|openai/gpt-5.4-nano": {
+   "bt": "我想要兩張去京都的票，一張大人、一張小孩。",
+   "latencyMs": 1097
+  },
+  "T007-2|anthropic/claude-haiku-4.5": {
+   "bt": "我要買兩張去京都的票，一張成人票、一張兒童票。",
+   "latencyMs": 1273
+  },
+  "T007-3|anthropic/claude-haiku-4.5": {
+   "bt": "我要買兩張去京都的票，一張成人票，一張兒童票。",
+   "latencyMs": 1145
+  },
+  "T006-1|qwen/qwen3.7-flash": {
+   "bt": "這附近有廁所嗎？我很趕。",
+   "latencyMs": 8882
+  },
+  "T006-2|qwen/qwen3.7-flash": {
+   "bt": "請問附近有廁所嗎？我趕時間。",
+   "latencyMs": 9331
+  },
+  "T007-3|openai/gpt-5.4-nano": {
+   "bt": "我要兩張去京都的票，一張成人、一張小孩。",
+   "latencyMs": 2622
+  },
+  "T008-1|openai/gpt-5.4-nano": {
+   "bt": "這台公車有去大阪，但我想它應該不會在京都停。",
+   "latencyMs": 1282
+  },
+  "T008-1|anthropic/claude-haiku-4.5": {
+   "bt": "這班公車是去大阪的，但它可能不會在京都停。",
+   "latencyMs": 1451
+  },
+  "T006-3|qwen/qwen3.7-flash": {
+   "bt": "請問這附近有廁所嗎？我趕時間。",
+   "latencyMs": 9525
+  },
+  "T008-2|openai/gpt-5.4-nano": {
+   "bt": "這台公車會到大阪，不過應該不會停在京都。",
+   "latencyMs": 1003
+  },
+  "T008-2|anthropic/claude-haiku-4.5": {
+   "bt": "這班公車是去大阪的，但它可能不會在京都停。",
+   "latencyMs": 1107
+  },
+  "T008-3|openai/gpt-5.4-nano": {
+   "bt": "這台公車會去大阪，不過它應該不會在京都停下來。",
+   "latencyMs": 740
+  },
+  "T008-3|anthropic/claude-haiku-4.5": {
+   "bt": "這班公車是去大阪的，但它可能不會在京都停。",
+   "latencyMs": 1589
+  },
+  "T009-1|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，這個位子有人坐嗎？",
+   "latencyMs": 1451
+  },
+  "T007-2|qwen/qwen3.7-flash": {
+   "bt": "麻煩幫我買兩張去京都的票，一張大人、一張小孩。",
+   "latencyMs": 12600
+  },
+  "T009-1|openai/gpt-5.4-nano": {
+   "bt": "不好意思，這個座位有人坐嗎？",
+   "latencyMs": 1128
+  },
+  "T007-3|qwen/qwen3.7-flash": {
+   "bt": "我想要兩張去京都的票，一張大人、一張小孩。",
+   "latencyMs": 10723
+  },
+  "T008-1|qwen/qwen3.7-flash": {
+   "bt": "這班巴士是去大阪的，但大概不會在京都停。",
+   "latencyMs": 9505
+  },
+  "T009-2|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，這個位子有人坐嗎？",
+   "latencyMs": 1210
+  },
+  "T009-2|openai/gpt-5.4-nano": {
+   "bt": "不好意思，這個位置有人坐嗎？",
+   "latencyMs": 952
+  },
+  "T008-2|qwen/qwen3.7-flash": {
+   "bt": "這班車是去大阪的，但大概不會在京都停。",
+   "latencyMs": 11379
+  },
+  "T008-3|qwen/qwen3.7-flash": {
+   "bt": "這班車是去大阪的，不過大概不會在京都停。",
+   "latencyMs": 9938
+  },
+  "T009-3|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，這個位子有人坐嗎？",
+   "latencyMs": 1537
+  },
+  "T009-3|openai/gpt-5.4-nano": {
+   "bt": "不好意思，這個座位有人坐嗎？",
+   "latencyMs": 622
+  },
+  "T009-1|qwen/qwen3.7-flash": {
+   "bt": "不好意思，這個位子有人坐嗎？",
+   "latencyMs": 5551
+  },
+  "T010-1|anthropic/claude-haiku-4.5": {
+   "bt": "回新竹的末班車是晚上11點45分。",
+   "latencyMs": 1139
+  },
+  "T009-2|qwen/qwen3.7-flash": {
+   "bt": "不好意思，這個位子有人坐嗎？",
+   "latencyMs": 7916
+  },
+  "T010-2|anthropic/claude-haiku-4.5": {
+   "bt": "回新竹的末班車是晚上11點45分。",
+   "latencyMs": 1763
+  },
+  "T010-2|openai/gpt-5.4-nano": {
+   "bt": "最後一班回新竹的火車在晚上11點45分。",
+   "latencyMs": 1190
+  },
+  "T010-1|openai/gpt-5.4-nano": {
+   "bt": "最後一班回新竹的火車是晚上11點45分。",
+   "latencyMs": 2924
+  },
+  "T010-3|anthropic/claude-haiku-4.5": {
+   "bt": "回新竹的末班車是晚上11點45分嗎？",
+   "latencyMs": 1432
+  },
+  "T010-3|openai/gpt-5.4-nano": {
+   "bt": "最後一班回新竹的火車是晚上11點45分嗎？",
+   "latencyMs": 1469
+  },
+  "T011-1|anthropic/claude-haiku-4.5": {
+   "bt": "我想幫我的IC卡儲值1000日圓。",
+   "latencyMs": 1129
+  },
+  "T011-1|openai/gpt-5.4-nano": {
+   "bt": "我想用 1000 日圓把我的悠遊卡儲值到餘額。",
+   "latencyMs": 726
+  },
+  "T007-1|qwen/qwen3.7-flash": {
+   "bt": "麻煩幫我買兩張去京都的票，一個大人、一個小孩。",
+   "latencyMs": 30066
+  },
+  "T011-2|anthropic/claude-haiku-4.5": {
+   "bt": "我想幫我的IC卡加值一千日圓。",
+   "latencyMs": 1313
+  },
+  "T005-3|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問淺草寺跟晴空塔是在同一個方向嗎？",
+   "latencyMs": 9612
+  },
+  "T010-1|qwen/qwen3.7-flash": {
+   "bt": "回新竹的末班車是晚上11點45分。",
+   "latencyMs": 8471
+  },
+  "T010-3|qwen/qwen3.7-flash": {
+   "bt": "回新竹的末班車是晚上11點45分嗎？",
+   "latencyMs": 5119
+  },
+  "T011-2|openai/gpt-5.4-nano": {
+   "bt": "我想把我的IC卡儲值1000日圓，",
+   "latencyMs": 1186
+  },
+  "T009-3|qwen/qwen3.7-flash": {
+   "bt": "不好意思，這個位子有人坐嗎？",
+   "latencyMs": 3212
+  },
+  "T011-3|anthropic/claude-haiku-4.5": {
+   "bt": "我想幫我的IC卡儲值1000日圓。",
+   "latencyMs": 999
+  },
+  "T011-3|openai/gpt-5.4-nano": {
+   "bt": "我想用1000日圓加值我的IC卡。",
+   "latencyMs": 856
+  },
+  "T012-1|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問你可以幫我看一下這班公車是不是去橫濱的嗎？",
+   "latencyMs": 1456
+  },
+  "T012-1|openai/gpt-5.4-nano": {
+   "bt": "不好意思，可以幫我確認一下這班公車是不是要去橫濱嗎？",
+   "latencyMs": 1386
+  },
+  "T012-2|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問你可以幫我看一下這班公車是不是去橫濱的嗎？",
+   "latencyMs": 1510
+  },
+  "T012-2|openai/gpt-5.4-nano": {
+   "bt": "不好意思，請問這班公車有去橫濱嗎？可以幫我確認一下嗎？",
+   "latencyMs": 1019
+  },
+  "T012-3|openai/gpt-5.4-nano": {
+   "bt": "不好意思，你可以幫我確認一下這班公車是不是要去橫濱的嗎？",
+   "latencyMs": 779
+  },
+  "T012-3|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問你可以幫我看一下這班公車是不是去橫濱的嗎？",
+   "latencyMs": 1288
+  },
+  "T011-3|qwen/qwen3.7-flash": {
+   "bt": "我要幫我的IC卡加1000日圓。",
+   "latencyMs": 6487
+  },
+  "T011-2|qwen/qwen3.7-flash": {
+   "bt": "我要幫我的IC卡加值1000日圓。",
+   "latencyMs": 6867
+  },
+  "T011-1|qwen/qwen3.7-flash": {
+   "bt": "我想幫我的IC卡儲值1000日圓。",
+   "latencyMs": 9678
+  },
+  "T010-2|qwen/qwen3.7-flash": {
+   "bt": "回新竹的末班車是晚上11點45分。",
+   "latencyMs": 13387
+  },
+  "T013-1|anthropic/claude-haiku-4.5": {
+   "bt": "我剛才在月台上把手機掉下去了。",
+   "latencyMs": 1172
+  },
+  "T013-2|openai/gpt-5.4-nano": {
+   "bt": "我剛剛把手機掉在月台上了。",
+   "latencyMs": 771
+  },
+  "T013-2|anthropic/claude-haiku-4.5": {
+   "bt": "我剛才在月台上把手機掉下去了。",
+   "latencyMs": 1263
+  },
+  "T012-1|qwen/qwen3.7-flash": {
+   "bt": "不好意思，可以幫我確認一下這班公車是不是去橫濱的嗎？",
+   "latencyMs": 8786
+  },
+  "T013-3|openai/gpt-5.4-nano": {
+   "bt": "我剛把手機掉在月台上了。",
+   "latencyMs": 1008
+  },
+  "T013-3|anthropic/claude-haiku-4.5": {
+   "bt": "我剛才在月台上把手機掉下去了。",
+   "latencyMs": 1387
+  },
+  "T012-3|qwen/qwen3.7-flash": {
+   "bt": "不好意思，可以幫我確認一下這班公車是不是去橫濱的嗎？",
+   "latencyMs": 4937
+  },
+  "T013-1|openai/gpt-5.4-nano": {
+   "bt": "我剛把手機掉到月台上了。",
+   "latencyMs": 3660
+  },
+  "T014-1|openai/gpt-5.4-nano": {
+   "bt": "我不要這個啦，我其實吃不了辣的。",
+   "latencyMs": 1119
+  },
+  "T014-1|anthropic/claude-haiku-4.5": {
+   "bt": "我不要這個，我真的吃不了辣的。",
+   "latencyMs": 1287
+  },
+  "T014-2|anthropic/claude-haiku-4.5": {
+   "bt": "我不要這個了，我真的吃不下。",
+   "latencyMs": 1525
+  },
+  "T012-2|qwen/qwen3.7-flash": {
+   "bt": "不好意思，可以幫我確認一下這班車是不是去橫濱的嗎？",
+   "latencyMs": 10739
+  },
+  "T014-2|openai/gpt-5.4-nano": {
+   "bt": "我不想要這個了，我其實吃不下。",
+   "latencyMs": 841
+  },
+  "T014-3|anthropic/claude-haiku-4.5": {
+   "bt": "我不要這個，我真的吃不了。",
+   "latencyMs": 1527
+  },
+  "T014-3|openai/gpt-5.4-nano": {
+   "bt": "我不要這個，我其實也吃不下去。",
+   "latencyMs": 1855
+  },
+  "T015-1|anthropic/claude-haiku-4.5": {
+   "bt": "我們一共有五個人，其中包括兩個小孩需要高腳椅。",
+   "latencyMs": 1211
+  },
+  "T015-1|openai/gpt-5.4-nano": {
+   "bt": "我們一共五個人，還包含兩個需要高腳椅的小朋友。",
+   "latencyMs": 579
+  },
+  "T015-2|anthropic/claude-haiku-4.5": {
+   "bt": "我們一共有五個人，其中包括兩個小孩需要高腳椅。",
+   "latencyMs": 1305
+  },
+  "T013-1|qwen/qwen3.7-flash": {
+   "bt": "我剛剛手機掉在月台上。",
+   "latencyMs": 13958
+  },
+  "T013-2|qwen/qwen3.7-flash": {
+   "bt": "我剛剛手機掉在月台上。",
+   "latencyMs": 13854
+  },
+  "T015-2|openai/gpt-5.4-nano": {
+   "bt": "我們一共有五個人，包含兩個需要高腳椅的小朋友。",
+   "latencyMs": 1296
+  },
+  "T014-1|qwen/qwen3.7-flash": {
+   "bt": "這個我不要，我實在吃不了辣。",
+   "latencyMs": 10806
+  },
+  "T014-3|qwen/qwen3.7-flash": {
+   "bt": "我不要這個，我實在吃不下。",
+   "latencyMs": 7823
+  },
+  "T015-3|openai/gpt-5.4-nano": {
+   "bt": "我們一共有五個人，包含兩個需要高腳椅的小朋友。",
+   "latencyMs": 621
+  },
+  "T015-3|anthropic/claude-haiku-4.5": {
+   "bt": "我們一共有五個人，其中包括兩個小孩需要高腳椅。",
+   "latencyMs": 1290
+  },
+  "T013-3|qwen/qwen3.7-flash": {
+   "bt": "我剛剛手機不小心掉在月台上啦。",
+   "latencyMs": 14453
+  },
+  "T016-1|anthropic/claude-haiku-4.5": {
+   "bt": "我對盲人過敏，所以拜託不要在桌上放任何海鮮。",
+   "latencyMs": 1107
+  },
+  "T016-1|openai/gpt-5.4-nano": {
+   "bt": "我對盲人過敏，所以拜託不要把任何海鮮放到桌上。",
+   "latencyMs": 1333
+  },
+  "T014-2|qwen/qwen3.7-flash": {
+   "bt": "這我不要了，我真的吃不下。",
+   "latencyMs": 13749
+  },
+  "T015-1|qwen/qwen3.7-flash": {
+   "bt": "我們總共五個人，裡面有兩個小孩要坐高腳椅。",
+   "latencyMs": 10441
+  },
+  "T016-2|openai/gpt-5.4-nano": {
+   "bt": "我對盲人過敏，所以拜託不要把任何海鮮放在桌上。",
+   "latencyMs": 1089
+  },
+  "T016-2|anthropic/claude-haiku-4.5": {
+   "bt": "我對盲人過敏，所以拜託不要在桌上放任何海鮮。",
+   "latencyMs": 1493
+  },
+  "T016-3|anthropic/claude-haiku-4.5": {
+   "bt": "我對盲人過敏，所以拜託不要在桌上放任何海鮮。",
+   "latencyMs": 1448
+  },
+  "T016-3|openai/gpt-5.4-nano": {
+   "bt": "我對盲人過敏，所以拜託不要在桌上放任何海鮮。",
+   "latencyMs": 1511
+  },
+  "T017-1|anthropic/claude-haiku-4.5": {
+   "bt": "這杯不要加冰，然後把大杯改成中杯，所以一共是三杯。",
+   "latencyMs": 1255
+  },
+  "T017-1|openai/gpt-5.4-nano": {
+   "bt": "這杯不要加冰，然後把大杯改成中杯，總共三杯。",
+   "latencyMs": 841
+  },
+  "T015-2|qwen/qwen3.7-flash": {
+   "bt": "我們總共五個人，裡面有兩個小孩要坐高腳椅。",
+   "latencyMs": 9284
+  },
+  "T017-2|openai/gpt-5.4-nano": {
+   "bt": "這杯不要加冰，然後把大杯改成中杯，總共三杯。",
+   "latencyMs": 719
+  },
+  "T016-1|qwen/qwen3.7-flash": {
+   "bt": "我對盲人過敏啦，所以拜託別把海鮮端上桌喔。",
+   "latencyMs": 8609
+  },
+  "T017-2|anthropic/claude-haiku-4.5": {
+   "bt": "這杯不要加冰，然後把大杯改成中杯，所以一共是三杯。",
+   "latencyMs": 1337
+  },
+  "T017-3|openai/gpt-5.4-nano": {
+   "bt": "這杯不要加冰，然後把大的改成中杯，這樣總共三杯。",
+   "latencyMs": 1073
+  },
+  "T017-3|anthropic/claude-haiku-4.5": {
+   "bt": "這杯不要加冰，然後把大杯改成中杯，所以總共是三杯。",
+   "latencyMs": 1481
+  },
+  "T018-1|openai/gpt-5.4-nano": {
+   "bt": "我想來一碗豚骨拉麵，麵條的口感想要稍微硬一點。",
+   "latencyMs": 767
+  },
+  "T018-1|anthropic/claude-haiku-4.5": {
+   "bt": "我要一碗豚骨拉麵，麵條我要硬一點。",
+   "latencyMs": 1339
+  },
+  "T017-1|qwen/qwen3.7-flash": {
+   "bt": "這杯不要加冰，然後大杯改中杯，這樣一共三杯。",
+   "latencyMs": 7125
+  },
+  "T018-2|anthropic/claude-haiku-4.5": {
+   "bt": "我要一碗豚骨拉麵，麵條我要硬一點。",
+   "latencyMs": 1019
+  },
+  "T018-2|openai/gpt-5.4-nano": {
+   "bt": "我想要一碗豚骨拉麵，麵條想稍微硬一點。",
+   "latencyMs": 779
+  },
+  "T015-3|qwen/qwen3.7-flash": {
+   "bt": "我們總共五個人，裡面有兩個小孩要坐高腳椅。",
+   "latencyMs": 17360
+  },
+  "T016-2|qwen/qwen3.7-flash": {
+   "bt": "我對盲人過敏，所以桌上別放海鮮喔。",
+   "latencyMs": 13992
+  },
+  "T018-3|openai/gpt-5.4-nano": {
+   "bt": "我要一碗豚骨拉麵，麵條想要口感硬一點。",
+   "latencyMs": 702
+  },
+  "T017-2|qwen/qwen3.7-flash": {
+   "bt": "這杯不要加冰，然後大杯改成中杯，這樣總共三杯。",
+   "latencyMs": 12196
+  },
+  "T019-1|anthropic/claude-haiku-4.5": {
+   "bt": "這道菜看起來很好吃，但我已經吃飽了。",
+   "latencyMs": 1018
+  },
+  "T017-3|qwen/qwen3.7-flash": {
+   "bt": "這杯免冰，然後大杯改成中杯，這樣總共三杯。",
+   "latencyMs": 12515
+  },
+  "T019-1|openai/gpt-5.4-nano": {
+   "bt": "這道菜看起來好好吃喔，但我已經吃飽了。",
+   "latencyMs": 1173
+  },
+  "T018-1|qwen/qwen3.7-flash": {
+   "bt": "我要豚骨拉麵，麵要硬一點點。",
+   "latencyMs": 10239
+  },
+  "T019-2|openai/gpt-5.4-nano": {
+   "bt": "這道菜看起來好好吃喔，但我已經吃過了。",
+   "latencyMs": 1278
+  },
+  "T016-3|qwen/qwen3.7-flash": {
+   "bt": "我對盲人過敏啦，所以拜託別把海鮮端上桌喔。",
+   "latencyMs": 18976
+  },
+  "T018-3|anthropic/claude-haiku-4.5": {
+   "bt": "我要一碗豚骨拉麵，麵條我要硬一點。",
+   "latencyMs": 1297
+  },
+  "T019-3|anthropic/claude-haiku-4.5": {
+   "bt": "這道菜看起來很好吃，但我已經吃飽了。",
+   "latencyMs": 946
+  },
+  "T019-3|openai/gpt-5.4-nano": {
+   "bt": "這道菜看起來好好吃，不過我已經吃過了。",
+   "latencyMs": 1758
+  },
+  "T018-2|qwen/qwen3.7-flash": {
+   "bt": "我要豚骨拉麵，麵要硬一點點。",
+   "latencyMs": 11769
+  },
+  "T018-3|qwen/qwen3.7-flash": {
+   "bt": "我要豚骨拉麵，麵要硬一點點。",
+   "latencyMs": 9498
+  },
+  "T020-1|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，可以幫我們分開結帳嗎？",
+   "latencyMs": 1108
+  },
+  "T020-2|openai/gpt-5.4-nano": {
+   "bt": "不好意思，可以幫我們把帳單分開付嗎？",
+   "latencyMs": 592
+  },
+  "T020-1|openai/gpt-5.4-nano": {
+   "bt": "不好意思，可以幫我們把帳單分開結嗎？",
+   "latencyMs": 2176
+  },
+  "T020-2|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，可以幫我們分開結帳嗎？",
+   "latencyMs": 1295
+  },
+  "T020-3|openai/gpt-5.4-nano": {
+   "bt": "不好意思，可以幫我們把帳單分開嗎？",
+   "latencyMs": 586
+  },
+  "T020-3|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，可以幫我們分開結帳嗎？",
+   "latencyMs": 1443
+  },
+  "T019-2|qwen/qwen3.7-flash": {
+   "bt": "這道看起來好好吃喔，不過我已經吃過了啦。",
+   "latencyMs": 10078
+  },
+  "T019-3|qwen/qwen3.7-flash": {
+   "bt": "這道菜看起來好好吃喔，不過我已經吃過了啦。",
+   "latencyMs": 9692
+  },
+  "T021-1|anthropic/claude-haiku-4.5": {
+   "bt": "我不要這個，我要旁邊那個藍色的，多少錢？",
+   "latencyMs": 1639
+  },
+  "T021-1|openai/gpt-5.4-nano": {
+   "bt": "這個我不要，我要旁邊那個藍色的。這兩個多少錢？",
+   "latencyMs": 1152
+  },
+  "T019-1|qwen/qwen3.7-flash": {
+   "bt": "這道看起來好好吃喔，但我已經吃飽囉。",
+   "latencyMs": 15012
+  },
+  "T019-2|anthropic/claude-haiku-4.5": {
+   "bt": "這道菜看起來很好吃，但我已經吃飽了。",
+   "latencyMs": 1374
+  },
+  "T021-2|anthropic/claude-haiku-4.5": {
+   "bt": "我不要這個，我要旁邊那個藍色的，兩個多少錢？",
+   "latencyMs": 1329
+  },
+  "T021-2|openai/gpt-5.4-nano": {
+   "bt": "這個我不要，我要旁邊那個藍色的，兩個一起多少錢？",
+   "latencyMs": 689
+  },
+  "T020-1|qwen/qwen3.7-flash": {
+   "bt": "不好意思，可以幫我們分開結帳嗎？",
+   "latencyMs": 9470
+  },
+  "T020-2|qwen/qwen3.7-flash": {
+   "bt": "不好意思，可以幫我們分開結帳嗎？",
+   "latencyMs": 6830
+  },
+  "T021-3|anthropic/claude-haiku-4.5": {
+   "bt": "我不要這個，我要旁邊那個藍色的，多少錢？",
+   "latencyMs": 1029
+  },
+  "T021-3|openai/gpt-5.4-nano": {
+   "bt": "這個我不要，我要旁邊那個藍色的，多少錢啊？",
+   "latencyMs": 1135
+  },
+  "T022-1|openai/gpt-5.4-nano": {
+   "bt": "太貴了啦，3,000 怎麼樣？",
+   "latencyMs": 1219
+  },
+  "T022-2|openai/gpt-5.4-nano": {
+   "bt": "太貴了啦，3000怎麼樣？",
+   "latencyMs": 590
+  },
+  "T022-2|anthropic/claude-haiku-4.5": {
+   "bt": "太貴了，三千塊怎麼樣？",
+   "latencyMs": 1467
+  },
+  "T022-1|anthropic/claude-haiku-4.5": {
+   "bt": "太貴了，三千塊怎麼樣？",
+   "latencyMs": 1479
+  },
+  "T022-3|anthropic/claude-haiku-4.5": {
+   "bt": "太貴了，三千塊就可以了。",
+   "latencyMs": 1141
+  },
+  "T022-3|openai/gpt-5.4-nano": {
+   "bt": "太貴了啦，3000就可以了。",
+   "latencyMs": 619
+  },
+  "T021-1|qwen/qwen3.7-flash": {
+   "bt": "我不要這個，我要旁邊那個藍色的，要多少錢？",
+   "latencyMs": 8175
+  },
+  "T023-1|openai/gpt-5.4-nano": {
+   "bt": "不好意思，這個價格是含稅還是沒含稅啊？",
+   "latencyMs": 647
+  },
+  "T023-1|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問這個價格是含稅還是不含稅？",
+   "latencyMs": 999
+  },
+  "T022-1|qwen/qwen3.7-flash": {
+   "bt": "太貴了啦，3000可以嗎？",
+   "latencyMs": 6542
+  },
+  "T022-2|qwen/qwen3.7-flash": {
+   "bt": "太貴了啦，3000可以嗎？",
+   "latencyMs": 5651
+  },
+  "T023-2|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問這個價格是含稅還是不含稅？",
+   "latencyMs": 1462
+  },
+  "T023-2|openai/gpt-5.4-nano": {
+   "bt": "不好意思，這個價格是含稅還是沒含稅啊？",
+   "latencyMs": 1400
+  },
+  "T022-3|qwen/qwen3.7-flash": {
+   "bt": "太貴了，三千就好。",
+   "latencyMs": 4921
+  },
+  "T023-3|openai/gpt-5.4-nano": {
+   "bt": "不好意思，這個價格是含稅的還是不含稅的呀？",
+   "latencyMs": 638
+  },
+  "T021-2|qwen/qwen3.7-flash": {
+   "bt": "這個我不要，我要旁邊那個藍色的，兩個一起多少錢？",
+   "latencyMs": 11385
+  },
+  "T021-3|qwen/qwen3.7-flash": {
+   "bt": "我不要這個，我要旁邊那個藍色的，要多少錢？",
+   "latencyMs": 10500
+  },
+  "T023-3|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問這個價格是含稅還是不含稅？",
+   "latencyMs": 1778
+  },
+  "T024-1|anthropic/claude-haiku-4.5": {
+   "bt": "如果這個打八折，我就買兩個。",
+   "latencyMs": 1421
+  },
+  "T024-1|openai/gpt-5.4-nano": {
+   "bt": "如果這個打八折，我就買兩個。",
+   "latencyMs": 885
+  },
+  "T024-2|openai/gpt-5.4-nano": {
+   "bt": "如果這個打八折，我就買兩個。",
+   "latencyMs": 672
+  },
+  "T024-2|anthropic/claude-haiku-4.5": {
+   "bt": "如果這個打八折，我就買兩個。",
+   "latencyMs": 1433
+  },
+  "T024-3|openai/gpt-5.4-nano": {
+   "bt": "如果這個有打八折，我就買兩個。",
+   "latencyMs": 815
+  },
+  "T024-3|anthropic/claude-haiku-4.5": {
+   "bt": "如果這個打八折，我就買兩個。",
+   "latencyMs": 1389
+  },
+  "T025-1|anthropic/claude-haiku-4.5": {
+   "bt": "你們有沒有限量款的？我在Instagram上看到的。",
+   "latencyMs": 1497
+  },
+  "T025-1|openai/gpt-5.4-nano": {
+   "bt": "你們有沒有什麼限量款式？我在 Instagram 上看到的。",
+   "latencyMs": 645
+  },
+  "T023-1|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問這個價格是含稅還是不含稅？",
+   "latencyMs": 9026
+  },
+  "T025-2|anthropic/claude-haiku-4.5": {
+   "bt": "你們有沒有限量款的？我在Instagram上看到的。",
+   "latencyMs": 1363
+  },
+  "T025-2|openai/gpt-5.4-nano": {
+   "bt": "你們有什麼限量款嗎？我在 Instagram 上看到的。",
+   "latencyMs": 1078
+  },
+  "T025-3|anthropic/claude-haiku-4.5": {
+   "bt": "你們有沒有限量款的？我在Instagram上看到的。",
+   "latencyMs": 1412
+  },
+  "T025-3|openai/gpt-5.4-nano": {
+   "bt": "你們有沒有什麼限量款式？我在 Instagram 上看到的。",
+   "latencyMs": 3571
+  },
+  "T026-1|anthropic/claude-haiku-4.5": {
+   "bt": "我想了想，我現在還不要買。",
+   "latencyMs": 1486
+  },
+  "T023-3|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問這個價格是含稅還是不含稅？",
+   "latencyMs": 11875
+  },
+  "T026-1|openai/gpt-5.4-nano": {
+   "bt": "我想了一下，先不買，之後再說。",
+   "latencyMs": 587
+  },
+  "T026-2|anthropic/claude-haiku-4.5": {
+   "bt": "我想了想，我現在還不要買。",
+   "latencyMs": 1145
+  },
+  "T026-2|openai/gpt-5.4-nano": {
+   "bt": "我想了一下，先不買。",
+   "latencyMs": 971
+  },
+  "T025-2|qwen/qwen3.7-flash": {
+   "bt": "你們有出限量款嗎？我在IG上看到過。",
+   "latencyMs": 9609
+  },
+  "T026-3|anthropic/claude-haiku-4.5": {
+   "bt": "我想了想，我現在還不要買。",
+   "latencyMs": 1102
+  },
+  "T026-3|openai/gpt-5.4-nano": {
+   "bt": "我想了一下，先不打算買，等一下再說。",
+   "latencyMs": 592
+  },
+  "T024-1|qwen/qwen3.7-flash": {
+   "bt": "如果這個打八折，我就買兩件。",
+   "latencyMs": 16275
+  },
+  "T025-3|qwen/qwen3.7-flash": {
+   "bt": "你們有賣限量款嗎？我在IG上看到過。",
+   "latencyMs": 13265
+  },
+  "T024-3|qwen/qwen3.7-flash": {
+   "bt": "要是這件打八折，我就帶兩件。",
+   "latencyMs": 14930
+  },
+  "T027-1|anthropic/claude-haiku-4.5": {
+   "bt": "我可以退稅嗎？我買超過五千日圓的東西。",
+   "latencyMs": 1271
+  },
+  "T026-1|qwen/qwen3.7-flash": {
+   "bt": "我想了一下，先不買了。",
+   "latencyMs": 10240
+  },
+  "T027-2|openai/gpt-5.4-nano": {
+   "bt": "我可以退稅嗎？我買的超過 5,000 日圓了。",
+   "latencyMs": 657
+  },
+  "T027-2|anthropic/claude-haiku-4.5": {
+   "bt": "我可以退稅嗎？我買超過五千日圓了。",
+   "latencyMs": 1093
+  },
+  "T026-2|qwen/qwen3.7-flash": {
+   "bt": "我想了一下，先不買了。",
+   "latencyMs": 9539
+  },
+  "T026-3|qwen/qwen3.7-flash": {
+   "bt": "我想了一下，先不買了。",
+   "latencyMs": 9581
+  },
+  "T027-1|openai/gpt-5.4-nano": {
+   "bt": "我可以退稅嗎？我買的超過 5,000 日圓。",
+   "latencyMs": 4392
+  },
+  "T027-3|anthropic/claude-haiku-4.5": {
+   "bt": "我可以退稅嗎？我買超過五千日圓了。",
+   "latencyMs": 1500
+  },
+  "T024-2|qwen/qwen3.7-flash": {
+   "bt": "這件要是打八折，我就買兩件。",
+   "latencyMs": 24595
+  },
+  "T028-1|anthropic/claude-haiku-4.5": {
+   "bt": "我有訂房，名字是陳大文，住兩個晚上。",
+   "latencyMs": 1336
+  },
+  "T028-1|openai/gpt-5.4-nano": {
+   "bt": "我有訂位，名字叫陳大文，要住兩晚。",
+   "latencyMs": 690
+  },
+  "T027-3|openai/gpt-5.4-nano": {
+   "bt": "我可以退稅嗎？我買的超過 5,000 日圓了。",
+   "latencyMs": 1214
+  },
+  "T028-2|openai/gpt-5.4-nano": {
+   "bt": "我有訂位，名字是陳大文。我會住兩晚。",
+   "latencyMs": 693
+  },
+  "T028-3|openai/gpt-5.4-nano": {
+   "bt": "我有訂位，姓名叫陳大文，會住兩晚。",
+   "latencyMs": 621
+  },
+  "T028-2|anthropic/claude-haiku-4.5": {
+   "bt": "我有訂房，名字是陳大文。我要住兩個晚上。",
+   "latencyMs": 1311
+  },
+  "T028-3|anthropic/claude-haiku-4.5": {
+   "bt": "我有訂房，名字是陳大文，住兩個晚上。",
+   "latencyMs": 1258
+  },
+  "T029-1|openai/gpt-5.4-nano": {
+   "bt": "我沒有訂房，今晚還有房間嗎？",
+   "latencyMs": 558
+  },
+  "T029-1|anthropic/claude-haiku-4.5": {
+   "bt": "我沒有預訂，你們今晚還有房間嗎？",
+   "latencyMs": 1332
+  },
+  "T029-2|anthropic/claude-haiku-4.5": {
+   "bt": "我沒有預訂，你們今晚還有房間嗎？",
+   "latencyMs": 1619
+  },
+  "T027-1|qwen/qwen3.7-flash": {
+   "bt": "可以退稅嗎？我買超過5,000日圓的東西。",
+   "latencyMs": 13299
+  },
+  "T029-3|anthropic/claude-haiku-4.5": {
+   "bt": "我沒有預訂，你們今晚還有房間嗎？",
+   "latencyMs": 1157
+  },
+  "T029-1|qwen/qwen3.7-flash": {
+   "bt": "我沒有預訂，請問今晚還有空房嗎？",
+   "latencyMs": 7005
+  },
+  "T029-3|openai/gpt-5.4-nano": {
+   "bt": "我沒有訂房，今天晚上還有房間可以住嗎？",
+   "latencyMs": 639
+  },
+  "T027-3|qwen/qwen3.7-flash": {
+   "bt": "可以退稅嗎？我買超過五千日圓了。",
+   "latencyMs": 12861
+  },
+  "T029-2|openai/gpt-5.4-nano": {
+   "bt": "我沒有訂房，今晚還有房間嗎？",
+   "latencyMs": 884
+  },
+  "T028-2|qwen/qwen3.7-flash": {
+   "bt": "我有訂房，名字是陳大文。我住兩晚。",
+   "latencyMs": 11008
+  },
+  "T030-1|openai/gpt-5.4-nano": {
+   "bt": "不好意思，退房時間是早上十點還是十一點啊？",
+   "latencyMs": 791
+  },
+  "T030-1|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問退房時間是上午十點還是十一點？",
+   "latencyMs": 1223
+  },
+  "T030-2|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問退房時間是上午十點還是十一點？",
+   "latencyMs": 1444
+  },
+  "T030-2|openai/gpt-5.4-nano": {
+   "bt": "不好意思，退房時間是早上10點還是11點啊？",
+   "latencyMs": 625
+  },
+  "T030-3|openai/gpt-5.4-nano": {
+   "bt": "不好意思，退房時間是早上10點還是11點啊？",
+   "latencyMs": 538
+  },
+  "T028-1|qwen/qwen3.7-flash": {
+   "bt": "我有訂房，名字是陳大文，住兩晚。",
+   "latencyMs": 16897
+  },
+  "T031-1|anthropic/claude-haiku-4.5": {
+   "bt": "房間的冷氣好像壞掉了，你可以派人來看一下嗎？",
+   "latencyMs": 1564
+  },
+  "T028-3|qwen/qwen3.7-flash": {
+   "bt": "我有訂房，名字是陳大文，住兩晚。",
+   "latencyMs": 14813
+  },
+  "T031-1|openai/gpt-5.4-nano": {
+   "bt": "房間的冷氣好像壞了，你可以派人過來看看嗎？",
+   "latencyMs": 766
+  },
+  "T030-1|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問退房是幾點？10點還是11點？",
+   "latencyMs": 7940
+  },
+  "T029-2|qwen/qwen3.7-flash": {
+   "bt": "我沒訂房，請問今晚還有空房嗎？",
+   "latencyMs": 13038
+  },
+  "T030-3|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問退房時間是上午十點還是十一點？",
+   "latencyMs": 1047
+  },
+  "T029-3|qwen/qwen3.7-flash": {
+   "bt": "我沒有訂房，請問今晚還有空房嗎？",
+   "latencyMs": 9236
+  },
+  "T031-2|openai/gpt-5.4-nano": {
+   "bt": "這間房的冷氣好像壞了，你可以幫我叫個人來看看嗎？",
+   "latencyMs": 601
+  },
+  "T031-2|anthropic/claude-haiku-4.5": {
+   "bt": "房間的冷氣好像壞掉了，你可以派人來檢查一下嗎？",
+   "latencyMs": 1536
+  },
+  "T030-2|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問退房時間是早上10點還是11點？",
+   "latencyMs": 7733
+  },
+  "T031-3|anthropic/claude-haiku-4.5": {
+   "bt": "房間的冷氣好像壞掉了，你可以派人來看一下嗎？",
+   "latencyMs": 1634
+  },
+  "T032-1|openai/gpt-5.4-nano": {
+   "bt": "明天不用我打掃房間啦，謝啦。",
+   "latencyMs": 727
+  },
+  "T031-3|openai/gpt-5.4-nano": {
+   "bt": "房間裡的冷氣好像壞掉了，可以幫我派人來看一下嗎？",
+   "latencyMs": 868
+  },
+  "T032-2|openai/gpt-5.4-nano": {
+   "bt": "明天不用我打掃房間了，謝啦。",
+   "latencyMs": 764
+  },
+  "T032-1|anthropic/claude-haiku-4.5": {
+   "bt": "我明天不用打掃房間，謝謝你。",
+   "latencyMs": 2648
+  },
+  "T032-2|anthropic/claude-haiku-4.5": {
+   "bt": "我明天不用打掃房間，謝謝你。",
+   "latencyMs": 1249
+  },
+  "T030-3|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問退房時間是幾點？10點還是11點？",
+   "latencyMs": 10042
+  },
+  "T032-3|anthropic/claude-haiku-4.5": {
+   "bt": "我明天不用打掃房間，謝謝你。",
+   "latencyMs": 1257
+  },
+  "T032-3|openai/gpt-5.4-nano": {
+   "bt": "明天我不用打掃房間了，謝謝。",
+   "latencyMs": 1780
+  },
+  "T033-1|openai/gpt-5.4-nano": {
+   "bt": "你可以幫我叫一台計程車嗎？我明天早上六點半要去機場。",
+   "latencyMs": 776
+  },
+  "T031-1|qwen/qwen3.7-flash": {
+   "bt": "房間的冷氣好像壞掉了，能不能麻煩派個人來看看？",
+   "latencyMs": 10707
+  },
+  "T033-1|anthropic/claude-haiku-4.5": {
+   "bt": "你能幫我叫計程車嗎？我明天早上六點半要去機場，需要一台。",
+   "latencyMs": 2252
+  },
+  "T031-3|qwen/qwen3.7-flash": {
+   "bt": "房間的冷氣好像壞掉了，麻煩派個人來看看好嗎？",
+   "latencyMs": 8248
+  },
+  "T031-2|qwen/qwen3.7-flash": {
+   "bt": "房間的冷氣好像壞掉了，能不能麻煩派個人來看看？",
+   "latencyMs": 10021
+  },
+  "T033-2|anthropic/claude-haiku-4.5": {
+   "bt": "你能幫我叫計程車嗎？我明天早上六點半要去機場，需要一台。",
+   "latencyMs": 1440
+  },
+  "T032-1|qwen/qwen3.7-flash": {
+   "bt": "明天不用打掃房間，謝謝。",
+   "latencyMs": 8986
+  },
+  "T032-3|qwen/qwen3.7-flash": {
+   "bt": "我明天不用打掃房間，謝謝。",
+   "latencyMs": 6068
+  },
+  "T033-3|anthropic/claude-haiku-4.5": {
+   "bt": "你能幫我叫計程車嗎？我明天早上六點半需要一台。",
+   "latencyMs": 1130
+  },
+  "T033-3|openai/gpt-5.4-nano": {
+   "bt": "你可以幫我叫一台計程車嗎？我明天早上六點半需要用到。",
+   "latencyMs": 768
+  },
+  "T033-2|openai/gpt-5.4-nano": {
+   "bt": "你可以幫我叫一台計程車嗎？我明天早上 6:30 要去機場。",
+   "latencyMs": 2867
+  },
+  "T034-1|openai/gpt-5.4-nano": {
+   "bt": "拜託，快叫救護車。",
+   "latencyMs": 735
+  },
+  "T034-2|openai/gpt-5.4-nano": {
+   "bt": "救命啊，麻煩幫我叫救護車。",
+   "latencyMs": 816
+  },
+  "T034-1|anthropic/claude-haiku-4.5": {
+   "bt": "救命啊，拜託快叫救護車。",
+   "latencyMs": 1141
+  },
+  "T033-2|qwen/qwen3.7-flash": {
+   "bt": "可以幫我叫計程車嗎？明天早上六點半要搭去機場的。",
+   "latencyMs": 4978
+  },
+  "T034-2|anthropic/claude-haiku-4.5": {
+   "bt": "救命啊，拜託快叫救護車。",
+   "latencyMs": 1435
+  },
+  "T034-3|anthropic/claude-haiku-4.5": {
+   "bt": "救命啊，拜託幫我叫救護車。",
+   "latencyMs": 1491
+  },
+  "T034-3|openai/gpt-5.4-nano": {
+   "bt": "救命，麻煩幫我叫救護車。",
+   "latencyMs": 1290
+  },
+  "T032-2|qwen/qwen3.7-flash": {
+   "bt": "明天不用打掃房間，謝謝。",
+   "latencyMs": 14092
+  },
+  "T035-1|openai/gpt-5.4-nano": {
+   "bt": "我的護照不見了，你可以告訴我警察局在哪裡嗎？",
+   "latencyMs": 615
+  },
+  "T035-1|anthropic/claude-haiku-4.5": {
+   "bt": "我的護照不見了，你能告訴我警察局在哪裡嗎？",
+   "latencyMs": 1216
+  },
+  "T035-2|openai/gpt-5.4-nano": {
+   "bt": "我的護照不見了，你可以跟我說警察局在哪裡嗎？",
+   "latencyMs": 872
+  },
+  "T035-2|anthropic/claude-haiku-4.5": {
+   "bt": "我的護照不見了，你能告訴我警察局在哪裡嗎？",
+   "latencyMs": 1367
+  },
+  "T034-1|qwen/qwen3.7-flash": {
+   "bt": "救命啊，拜託叫救護車！",
+   "latencyMs": 7728
+  },
+  "T034-3|qwen/qwen3.7-flash": {
+   "bt": "救命啊，拜託幫我叫救護車！",
+   "latencyMs": 6522
+  },
+  "T035-3|anthropic/claude-haiku-4.5": {
+   "bt": "我的護照不見了，你能告訴我警察局在哪裡嗎？",
+   "latencyMs": 1287
+  },
+  "T033-1|qwen/qwen3.7-flash": {
+   "bt": "可以幫我叫計程車嗎？我明天早上六點半要去機場，麻煩叫一輛。",
+   "latencyMs": 15593
+  },
+  "T033-3|qwen/qwen3.7-flash": {
+   "bt": "可以幫我叫計程車嗎？我明天早上六點半要用的。",
+   "latencyMs": 13266
+  },
+  "T036-1|anthropic/claude-haiku-4.5": {
+   "bt": "我頭很暈，但我沒有心臟病的病史。",
+   "latencyMs": 1762
+  },
+  "T036-1|openai/gpt-5.4-nano": {
+   "bt": "我現在頭很暈，不過我沒有心臟病的病史。",
+   "latencyMs": 1137
+  },
+  "T035-1|qwen/qwen3.7-flash": {
+   "bt": "我護照不見了，可以告訴我警察局在哪邊嗎？",
+   "latencyMs": 6927
+  },
+  "T036-2|anthropic/claude-haiku-4.5": {
+   "bt": "我頭很暈，但我沒有心臟病的病史。",
+   "latencyMs": 1465
+  },
+  "T035-3|openai/gpt-5.4-nano": {
+   "bt": "我的護照不見了，你可以跟我說警察局在哪裡嗎？",
+   "latencyMs": 4798
+  },
+  "T036-2|openai/gpt-5.4-nano": {
+   "bt": "我現在很暈，但我沒有心臟病的病史。",
+   "latencyMs": 1276
+  },
+  "T036-3|anthropic/claude-haiku-4.5": {
+   "bt": "我頭很暈，但我沒有心臟病的病史。",
+   "latencyMs": 1258
+  },
+  "T034-2|qwen/qwen3.7-flash": {
+   "bt": "救命啊，拜託叫救護車！",
+   "latencyMs": 15204
+  },
+  "T036-3|openai/gpt-5.4-nano": {
+   "bt": "我頭很暈，但我沒有心臟病史。",
+   "latencyMs": 1538
+  },
+  "T037-1|anthropic/claude-haiku-4.5": {
+   "bt": "我的房間號碼是702，我的朋友昏倒了。",
+   "latencyMs": 1033
+  },
+  "T037-1|openai/gpt-5.4-nano": {
+   "bt": "我的房號是7-02，我朋友暈倒了。",
+   "latencyMs": 688
+  },
+  "T037-2|anthropic/claude-haiku-4.5": {
+   "bt": "我的房間號碼是702，我的朋友昏倒了。",
+   "latencyMs": 1211
+  },
+  "T037-2|openai/gpt-5.4-nano": {
+   "bt": "我的房間號碼是702，我朋友暈倒了。",
+   "latencyMs": 944
+  },
+  "T035-3|qwen/qwen3.7-flash": {
+   "bt": "我的護照不見了，請問警察局在哪裡？",
+   "latencyMs": 11415
+  },
+  "T035-2|qwen/qwen3.7-flash": {
+   "bt": "我護照不見了，請問警察局在哪邊？",
+   "latencyMs": 14164
+  },
+  "T037-3|anthropic/claude-haiku-4.5": {
+   "bt": "我的房間號碼是702，我的朋友昏倒了。",
+   "latencyMs": 1346
+  },
+  "T037-1|qwen/qwen3.7-flash": {
+   "bt": "我房間是七零二，我朋友暈倒了。",
+   "latencyMs": 4345
+  },
+  "T037-3|openai/gpt-5.4-nano": {
+   "bt": "我的房間號碼是7 02，我朋友昏倒了。",
+   "latencyMs": 839
+  },
+  "T038-1|openai/gpt-5.4-nano": {
+   "bt": "我不能吃青黴素，我對它過敏。",
+   "latencyMs": 1055
+  },
+  "T038-1|anthropic/claude-haiku-4.5": {
+   "bt": "我不能用盤尼西林，我對它過敏。",
+   "latencyMs": 2174
+  },
+  "T036-3|qwen/qwen3.7-flash": {
+   "bt": "頭暈得厲害，不過我沒有心臟病的病史。",
+   "latencyMs": 10177
+  },
+  "T038-2|openai/gpt-5.4-nano": {
+   "bt": "我不能吃青黴素，我對它過敏。",
+   "latencyMs": 643
+  },
+  "T038-2|anthropic/claude-haiku-4.5": {
+   "bt": "我不能用盤尼西林，我對它過敏。",
+   "latencyMs": 1483
+  },
+  "T037-2|qwen/qwen3.7-flash": {
+   "bt": "我房號是702，我朋友暈倒了。",
+   "latencyMs": 7332
+  },
+  "T038-3|openai/gpt-5.4-nano": {
+   "bt": "我不能吃青黴素，吃了會過敏。",
+   "latencyMs": 871
+  },
+  "T036-1|qwen/qwen3.7-flash": {
+   "bt": "頭暈得滿厲害的，不過我沒有心臟病的病史。",
+   "latencyMs": 15675
+  },
+  "T038-3|anthropic/claude-haiku-4.5": {
+   "bt": "我不能吃盤尼西林，我會過敏。",
+   "latencyMs": 1455
+  },
+  "T036-2|qwen/qwen3.7-flash": {
+   "bt": "我頭暈得滿嚴重的，不過我沒有心臟病的病史。",
+   "latencyMs": 13742
+  },
+  "T039-1|anthropic/claude-haiku-4.5": {
+   "bt": "我想預約明天下午三點，兩個大人。",
+   "latencyMs": 783
+  },
+  "T039-1|openai/gpt-5.4-nano": {
+   "bt": "我想約明天3點，兩位大人。",
+   "latencyMs": 1011
+  },
+  "T039-2|anthropic/claude-haiku-4.5": {
+   "bt": "我想預約明天下午三點，兩個大人。",
+   "latencyMs": 1388
+  },
+  "T039-2|openai/gpt-5.4-nano": {
+   "bt": "我想約明天3點的，兩位成人。",
+   "latencyMs": 2125
+  },
+  "T039-3|anthropic/claude-haiku-4.5": {
+   "bt": "我想預約明天下午三點，兩個大人。",
+   "latencyMs": 1582
+  },
+  "T037-3|qwen/qwen3.7-flash": {
+   "bt": "我房號是702，我朋友暈倒了。",
+   "latencyMs": 10870
+  },
+  "T039-3|openai/gpt-5.4-nano": {
+   "bt": "我想約明天下午三點兩位大人。",
+   "latencyMs": 2252
+  },
+  "T040-1|openai/gpt-5.4-nano": {
+   "bt": "不好意思，我想把預約從星期五改到星期六，不能取消。",
+   "latencyMs": 753
+  },
+  "T040-1|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，我想把我的預約從星期五改到星期六，不是要取消啦。",
+   "latencyMs": 1795
+  },
+  "T038-1|qwen/qwen3.7-flash": {
+   "bt": "我不能打盤尼西林，我會過敏。",
+   "latencyMs": 14164
+  },
+  "T040-2|openai/gpt-5.4-nano": {
+   "bt": "不好意思，我想把我的預約從禮拜五改到禮拜六，不是取消。",
+   "latencyMs": 937
+  },
+  "T040-2|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，我想把我的預約從星期五改到星期六，不是要取消啦。",
+   "latencyMs": 1250
+  },
+  "T039-1|qwen/qwen3.7-flash": {
+   "bt": "我想預約明天下午三點，兩位大人。",
+   "latencyMs": 10920
+  },
+  "T040-3|openai/gpt-5.4-nano": {
+   "bt": "不好意思，我想把原本週五的預約改到週六，不是要取消。",
+   "latencyMs": 631
+  },
+  "T040-3|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，我想把我的預約從星期五改到星期六，不是要取消啦。",
+   "latencyMs": 1517
+  },
+  "T039-2|qwen/qwen3.7-flash": {
+   "bt": "我想預約明天下午三點，兩位大人。",
+   "latencyMs": 10851
+  },
+  "T038-2|qwen/qwen3.7-flash": {
+   "bt": "盤尼西林我會過敏，不能吃。",
+   "latencyMs": 15770
+  },
+  "T039-3|qwen/qwen3.7-flash": {
+   "bt": "我想預約明天下午三點，兩位大人。",
+   "latencyMs": 8482
+  },
+  "T041-1|openai/gpt-5.4-nano": {
+   "bt": "如果三點沒位子，四點也可以。",
+   "latencyMs": 859
+  },
+  "T041-1|anthropic/claude-haiku-4.5": {
+   "bt": "如果三點沒有位子，四點也可以啦。",
+   "latencyMs": 1459
+  },
+  "T040-1|qwen/qwen3.7-flash": {
+   "bt": "不好意思，我想把預約從週五改到週六，不是要取消喔。",
+   "latencyMs": 8674
+  },
+  "T038-3|qwen/qwen3.7-flash": {
+   "bt": "我對青黴素過敏，不能打。",
+   "latencyMs": 20164
+  },
+  "T041-3|anthropic/claude-haiku-4.5": {
+   "bt": "如果三點沒有位子，四點也可以啦。",
+   "latencyMs": 2289
+  },
+  "T040-2|qwen/qwen3.7-flash": {
+   "bt": "不好意思，我想把星期五的預約改到星期六，不是要取消喔。",
+   "latencyMs": 10292
+  },
+  "T041-3|openai/gpt-5.4-nano": {
+   "bt": "如果三點沒座位，四點也可以。",
+   "latencyMs": 1274
+  },
+  "T041-2|openai/gpt-5.4-nano": {
+   "bt": "如果三點沒位子，四點也可以。",
+   "latencyMs": 955
+  },
+  "T042-1|anthropic/claude-haiku-4.5": {
+   "bt": "我可以用電郵確認預約，對吧？我的班機是 BR 198。",
+   "latencyMs": 1798
+  },
+  "T041-2|anthropic/claude-haiku-4.5": {
+   "bt": "如果三點沒有位子，四點也可以啦。",
+   "latencyMs": 1454
+  },
+  "T041-2|qwen/qwen3.7-flash": {
+   "bt": "如果三點沒位子，四點也可以。",
+   "latencyMs": 8129
+  },
+  "T042-1|openai/gpt-5.4-nano": {
+   "bt": "我可以用 email 跟你確認預約，對吧？我搭 BR 198 那班飛機，",
+   "latencyMs": 640
+  },
+  "T042-2|openai/gpt-5.4-nano": {
+   "bt": "我可以用電子郵件確認嗎？我的航班是 BR 198。",
+   "latencyMs": 882
+  },
+  "T040-3|qwen/qwen3.7-flash": {
+   "bt": "不好意思，我想把星期五的預約改到星期六，只是要改期，不是取消喔。",
+   "latencyMs": 12280
+  },
+  "T041-1|qwen/qwen3.7-flash": {
+   "bt": "如果三點沒位子，四點也可以。",
+   "latencyMs": 11822
+  },
+  "T042-3|anthropic/claude-haiku-4.5": {
+   "bt": "我可以用電郵確認預約，對吧？我的班機是 BR198。",
+   "latencyMs": 1281
+  },
+  "T042-2|anthropic/claude-haiku-4.5": {
+   "bt": "我可以用電子郵件確認嗎？我的班機是 BR 198。",
+   "latencyMs": 1821
+  },
+  "T041-3|qwen/qwen3.7-flash": {
+   "bt": "如果三點沒位子，四點也可以。",
+   "latencyMs": 5228
+  },
+  "T042-3|openai/gpt-5.4-nano": {
+   "bt": "我可以用 email 確認這個預約，對吧？我的航班是 BR198，",
+   "latencyMs": 904
+  },
+  "T043-1|openai/gpt-5.4-nano": {
+   "bt": "我最晚要什麼時候取消才不會被收取消費？",
+   "latencyMs": 771
+  },
+  "T043-1|anthropic/claude-haiku-4.5": {
+   "bt": "我最晚什麼時候取消才不用付取消費？",
+   "latencyMs": 1554
+  },
+  "T043-2|openai/gpt-5.4-nano": {
+   "bt": "我最晚什麼時候取消才不用付取消手續費？",
+   "latencyMs": 1008
+  },
+  "T043-2|anthropic/claude-haiku-4.5": {
+   "bt": "我最晚什麼時候取消才不用付取消費？",
+   "latencyMs": 2030
+  },
+  "T043-3|openai/gpt-5.4-nano": {
+   "bt": "我最晚什麼時候可以取消而不用付取消費？",
+   "latencyMs": 587
+  },
+  "T043-3|anthropic/claude-haiku-4.5": {
+   "bt": "我最晚什麼時候取消才不用付取消費？",
+   "latencyMs": 1572
+  },
+  "T042-1|qwen/qwen3.7-flash": {
+   "bt": "行程用Email確認對吧？我搭的班機是BR 198，",
+   "latencyMs": 7267
+  },
+  "T044-1|anthropic/claude-haiku-4.5": {
+   "bt": "我們會晚到30分鐘，但你們能幫我們留著位子嗎？",
+   "latencyMs": 1495
+  },
+  "T044-1|openai/gpt-5.4-nano": {
+   "bt": "我們可能會晚30分鐘到，但你可以幫我們先把桌子留著嗎？",
+   "latencyMs": 793
+  },
+  "T044-2|anthropic/claude-haiku-4.5": {
+   "bt": "我們會晚到30分鐘，但你們能幫我們留著位子嗎？",
+   "latencyMs": 1060
+  },
+  "T044-2|openai/gpt-5.4-nano": {
+   "bt": "我們可能會晚30分鐘到，不過你能幫我們先留一下那張桌子嗎？",
+   "latencyMs": 1082
+  },
+  "T042-2|qwen/qwen3.7-flash": {
+   "bt": "我可以用Email確認嗎？我的班機是BR 198。",
+   "latencyMs": 10999
+  },
+  "T044-3|anthropic/claude-haiku-4.5": {
+   "bt": "我們會晚到30分鐘，但你們能幫我們留著位子嗎？",
+   "latencyMs": 1154
+  },
+  "T044-3|openai/gpt-5.4-nano": {
+   "bt": "我們會晚30分鐘到，不過你可以先幫我們把那桌留著嗎？",
+   "latencyMs": 787
+  },
+  "T043-1|qwen/qwen3.7-flash": {
+   "bt": "最晚什麼時候取消才不用付違約金？",
+   "latencyMs": 10241
+  },
+  "T042-3|qwen/qwen3.7-flash": {
+   "bt": "我可以用email確認預約對吧？我的班機是BR198，",
+   "latencyMs": 11287
+  },
+  "T045-1|openai/gpt-5.4-nano": {
+   "bt": "謝謝你幫忙，今天真的很感謝你。",
+   "latencyMs": 620
+  },
+  "T045-1|anthropic/claude-haiku-4.5": {
+   "bt": "謝謝你的幫忙，我今天真的很感謝你。",
+   "latencyMs": 1442
+  },
+  "T045-2|anthropic/claude-haiku-4.5": {
+   "bt": "謝謝你的幫忙，我真的很感謝你。",
+   "latencyMs": 1019
+  },
+  "T045-2|openai/gpt-5.4-nano": {
+   "bt": "謝謝你的幫忙，真的很感謝你。",
+   "latencyMs": 761
+  },
+  "T043-3|qwen/qwen3.7-flash": {
+   "bt": "最晚什麼時候取消才不會被收違約金？",
+   "latencyMs": 12606
+  },
+  "T045-3|anthropic/claude-haiku-4.5": {
+   "bt": "謝謝你的幫忙，我今天真的很感謝你。",
+   "latencyMs": 1130
+  },
+  "T044-2|qwen/qwen3.7-flash": {
+   "bt": "我們大概會晚到30分鐘，可以幫我們留一下位子嗎？",
+   "latencyMs": 8552
+  },
+  "T043-2|qwen/qwen3.7-flash": {
+   "bt": "最晚幾點前取消不用付違約金？",
+   "latencyMs": 14516
+  },
+  "T046-1|anthropic/claude-haiku-4.5": {
+   "bt": "你的中文真的很好，你在哪裡學的？",
+   "latencyMs": 1286
+  },
+  "T045-3|openai/gpt-5.4-nano": {
+   "bt": "謝謝你幫忙，今天真的很感謝你。",
+   "latencyMs": 1790
+  },
+  "T044-1|qwen/qwen3.7-flash": {
+   "bt": "我們會晚到30分鐘，可以幫我們留位子嗎？",
+   "latencyMs": 14505
+  },
+  "T046-1|openai/gpt-5.4-nano": {
+   "bt": "你中文講得真的很好欸，你是在哪裡學的呀？",
+   "latencyMs": 1402
+  },
+  "T045-2|qwen/qwen3.7-flash": {
+   "bt": "謝謝你幫忙，真的很感謝！",
+   "latencyMs": 5936
+  },
+  "T046-2|openai/gpt-5.4-nano": {
+   "bt": "你中文講得真的很好欸，你是在哪裡學的？",
+   "latencyMs": 639
+  },
+  "T044-3|qwen/qwen3.7-flash": {
+   "bt": "我們會晚到30分鐘，麻煩幫我們留一下位子好嗎？",
+   "latencyMs": 12172
+  },
+  "T046-2|anthropic/claude-haiku-4.5": {
+   "bt": "你的中文真的很好，你在哪裡學的？",
+   "latencyMs": 1583
+  },
+  "T045-1|qwen/qwen3.7-flash": {
+   "bt": "謝謝你幫忙，今天真的多虧你了。",
+   "latencyMs": 10580
+  },
+  "T046-3|anthropic/claude-haiku-4.5": {
+   "bt": "你的中文真的很好，你在哪裡學的？",
+   "latencyMs": 1141
+  },
+  "T046-3|openai/gpt-5.4-nano": {
+   "bt": "你中文真的講得很不錯欸，你是在哪裡學的啊？",
+   "latencyMs": 683
+  },
+  "T047-1|openai/gpt-5.4-nano": {
+   "bt": "日本的夏天很熱，但我覺得台北更熱。",
+   "latencyMs": 1003
+  },
+  "T047-1|anthropic/claude-haiku-4.5": {
+   "bt": "日本的夏天很熱，不過我覺得台北更熱。",
+   "latencyMs": 1213
+  },
+  "T047-2|anthropic/claude-haiku-4.5": {
+   "bt": "日本的夏天很熱，不過我覺得台北更熱。",
+   "latencyMs": 1363
+  },
+  "T047-2|openai/gpt-5.4-nano": {
+   "bt": "日本的夏天超熱，但我覺得台北更熱。",
+   "latencyMs": 843
+  },
+  "T046-1|qwen/qwen3.7-flash": {
+   "bt": "你中文講得真好，是在哪裡學的喔？",
+   "latencyMs": 6742
+  },
+  "T046-2|qwen/qwen3.7-flash": {
+   "bt": "你中文講得真好，是在哪裡學的啊？",
+   "latencyMs": 5792
+  },
+  "T047-3|anthropic/claude-haiku-4.5": {
+   "bt": "日本的夏天很熱，不過我覺得台北更熱。",
+   "latencyMs": 1577
+  },
+  "T047-3|openai/gpt-5.4-nano": {
+   "bt": "日本的夏天很熱，不過我覺得台北更熱。",
+   "latencyMs": 923
+  },
+  "T048-1|anthropic/claude-haiku-4.5": {
+   "bt": "不用了，我只是隨便看看。",
+   "latencyMs": 1130
+  },
+  "T048-1|openai/gpt-5.4-nano": {
+   "bt": "不用啦，我只是看看。",
+   "latencyMs": 1160
+  },
+  "T047-1|qwen/qwen3.7-flash": {
+   "bt": "日本夏天真的很熱，不過我覺得台北更熱啦。",
+   "latencyMs": 7338
+  },
+  "T048-2|anthropic/claude-haiku-4.5": {
+   "bt": "不用了，我只是隨便看看。",
+   "latencyMs": 1236
+  },
+  "T048-2|openai/gpt-5.4-nano": {
+   "bt": "不用啦，我只是隨便看看。",
+   "latencyMs": 851
+  },
+  "T045-3|qwen/qwen3.7-flash": {
+   "bt": "謝謝你今天的幫忙，真的非常感謝！",
+   "latencyMs": 16380
+  },
+  "T048-1|qwen/qwen3.7-flash": {
+   "bt": "不用了，謝謝，我只是隨便看看。",
+   "latencyMs": 5194
+  },
+  "T048-3|anthropic/claude-haiku-4.5": {
+   "bt": "不用了，我只是隨便看看。",
+   "latencyMs": 955
+  },
+  "T049-1|openai/gpt-5.4-nano": {
+   "bt": "我來自台灣，這是我第一次來大阪。",
+   "latencyMs": 1249
+  },
+  "T046-3|qwen/qwen3.7-flash": {
+   "bt": "你中文很好耶，是在哪裡學的？",
+   "latencyMs": 12824
+  },
+  "T049-1|anthropic/claude-haiku-4.5": {
+   "bt": "我是台灣人，這是我第一次來大阪。",
+   "latencyMs": 1464
+  },
+  "T047-3|qwen/qwen3.7-flash": {
+   "bt": "日本夏天超熱的，不過我覺得台北更熱啦。",
+   "latencyMs": 8957
+  },
+  "T049-2|anthropic/claude-haiku-4.5": {
+   "bt": "我是台灣人，這是我第一次來大阪。",
+   "latencyMs": 1016
+  },
+  "T048-2|qwen/qwen3.7-flash": {
+   "bt": "不用了，謝謝，我只是看看而已。",
+   "latencyMs": 6215
+  },
+  "T049-3|openai/gpt-5.4-nano": {
+   "bt": "我是台灣人，這是我第一次來大阪。",
+   "latencyMs": 690
+  },
+  "T047-2|qwen/qwen3.7-flash": {
+   "bt": "日本夏天很熱，不過我覺得台北更熱啦。",
+   "latencyMs": 12425
+  },
+  "T049-3|anthropic/claude-haiku-4.5": {
+   "bt": "我是台灣人，這是我第一次來大阪。",
+   "latencyMs": 1356
+  },
+  "T049-2|openai/gpt-5.4-nano": {
+   "bt": "我來自台灣，這是我第一次來到大阪耶。",
+   "latencyMs": 1754
+  },
+  "T050-1|openai/gpt-5.4-nano": {
+   "bt": "那就交給你了，我們再保持聯絡。",
+   "latencyMs": 835
+  },
+  "T050-1|anthropic/claude-haiku-4.5": {
+   "bt": "那就交給你了，我們保持聯絡。",
+   "latencyMs": 1322
+  },
+  "T049-1|qwen/qwen3.7-flash": {
+   "bt": "我是台灣來的，這是我第一次來大阪。",
+   "latencyMs": 5775
+  },
+  "T050-2|anthropic/claude-haiku-4.5": {
+   "bt": "那就交給你了，我們保持聯絡。",
+   "latencyMs": 1634
+  },
+  "T048-3|qwen/qwen3.7-flash": {
+   "bt": "不用啦，謝謝，我只是看看。",
+   "latencyMs": 9298
+  },
+  "T048-3|openai/gpt-5.4-nano": {
+   "bt": "不用了，我只是看看。",
+   "latencyMs": 1637
+  },
+  "T050-2|openai/gpt-5.4-nano": {
+   "bt": "那我就交給你了，之後再聯絡。",
+   "latencyMs": 1766
+  },
+  "T050-3|openai/gpt-5.4-nano": {
+   "bt": "那我就交給你了，我們再聯絡。",
+   "latencyMs": 607
+  },
+  "T050-3|anthropic/claude-haiku-4.5": {
+   "bt": "那就交給你了，我們保持聯絡。",
+   "latencyMs": 1943
+  },
+  "T049-3|qwen/qwen3.7-flash": {
+   "bt": "我是台灣來的，第一次來大阪。",
+   "latencyMs": 7350
+  },
+  "T049-2|qwen/qwen3.7-flash": {
+   "bt": "我是台灣來的，第一次來大板。",
+   "latencyMs": 10679
+  },
+  "T050-1|qwen/qwen3.7-flash": {
+   "bt": "那就交給你囉，有消息再聯絡喔。",
+   "latencyMs": 10392
+  },
+  "T050-3|qwen/qwen3.7-flash": {
+   "bt": "那就拜託你了，有消息再聯絡。",
+   "latencyMs": 7611
+  }
+ },
+ "eq": {
+  "T001-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T001-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T001-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T001-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T001-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T001-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T002-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T002-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T002-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T002-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T002-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T001-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T002-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T003-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T003-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T003-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T001-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T003-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T001-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T003-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T003-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T004-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T004-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T003-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T002-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T002-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T004-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T004-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T004-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T004-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T002-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T005-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T005-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T004-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T005-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T005-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T003-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T004-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T004-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T005-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T006-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T006-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T005-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T005-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T003-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T006-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T006-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T006-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T006-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T007-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T007-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T005-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T007-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T007-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T007-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T006-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T006-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T007-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T008-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T008-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T006-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T008-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T008-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T008-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T008-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T009-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T007-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T009-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T007-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T008-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T009-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T009-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T008-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T008-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T009-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T009-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T009-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T010-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T009-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T010-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T010-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T010-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T010-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T010-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T011-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T011-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T007-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T011-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T005-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T010-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T010-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T011-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T009-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T011-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T011-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T012-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T012-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T012-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T012-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T012-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T012-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T011-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T011-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T011-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T010-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T013-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T013-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T013-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T012-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T013-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T013-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T012-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T013-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T014-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T014-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T014-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T012-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T014-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T014-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T014-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T015-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T015-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T015-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T013-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T013-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T015-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T014-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T014-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T015-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T015-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T013-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T016-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T016-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T014-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T015-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T016-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T016-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T016-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T016-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T017-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T017-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T015-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T017-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T016-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T017-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T017-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T017-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T018-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T018-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T017-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T018-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T018-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T015-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T016-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T018-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T017-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T019-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T017-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T019-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T018-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T019-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T016-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T018-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T019-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T019-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T018-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T018-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T020-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T020-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T020-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T020-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T020-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T020-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T019-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T019-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T021-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T021-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T019-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T019-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T021-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T021-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T020-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T020-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T021-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T021-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T022-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T022-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T022-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T022-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T022-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T022-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T021-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T023-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T023-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T022-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T022-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T023-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T023-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T022-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T023-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T021-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T021-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T023-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T024-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T024-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T024-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T024-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T024-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T024-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T025-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T025-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T023-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T025-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T025-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T025-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T025-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T026-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T023-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T026-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T026-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T026-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T025-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T026-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T026-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T024-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T025-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T024-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T027-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T026-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T027-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T027-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T026-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T026-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T027-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T027-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T024-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T028-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T028-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T027-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T028-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T028-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T028-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T028-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T029-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T029-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T029-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T027-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T029-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T029-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T029-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T027-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T029-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T028-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T030-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T030-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T030-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T030-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T030-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T028-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T031-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T028-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T031-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T030-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T029-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T030-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T029-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T031-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T031-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T030-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T031-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T032-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T031-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T032-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T032-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T032-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T030-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T032-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T032-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T033-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T031-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T033-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T031-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T031-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T033-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T032-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T032-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T033-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T033-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T033-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T034-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T034-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T034-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T033-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T034-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T034-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T034-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T032-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T035-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T035-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T035-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T035-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T034-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T034-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T035-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T033-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T033-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T036-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T036-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T035-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T036-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T035-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T036-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T036-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T034-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T036-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T037-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T037-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T037-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T037-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T035-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T035-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T037-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T037-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T037-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T038-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T038-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T036-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T038-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T038-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T037-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T038-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T036-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T038-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T036-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T039-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T039-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T039-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T039-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T039-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T037-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T039-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T040-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T040-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T038-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T040-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T040-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T039-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T040-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T040-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T039-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T038-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T039-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T041-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T041-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T040-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T038-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T041-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T040-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T041-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T041-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T042-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T041-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T041-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T042-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T042-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T040-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T041-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T042-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T042-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T041-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T042-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T043-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T043-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T043-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T043-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T043-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T043-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T042-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T044-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T044-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T044-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T044-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T042-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T044-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T044-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T043-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T042-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T045-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T045-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T045-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T045-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T043-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T045-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T044-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T043-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T046-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T045-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T044-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T046-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T045-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T046-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T044-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T046-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T045-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T046-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T046-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T047-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T047-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T047-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T047-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T046-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T046-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T047-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T047-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T048-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T048-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T047-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T048-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T048-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T045-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T048-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T048-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T049-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T046-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T049-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T047-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T049-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T048-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T049-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T047-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T049-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T049-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T050-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T050-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T049-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T050-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T048-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T048-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T050-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T050-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T050-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T049-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T049-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T050-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T050-3|qwen/qwen3.7-flash": {
+   "notice": false
+  }
+ },
+ "stats": {
+  "fixedJudge": "mistralai/mistral-large-2512",
+  "dir": "en",
+  "engines": {
+   "anthropic/claude-haiku-4.5": {
+    "n": 150,
+    "disaster_n": 10,
+    "detection_rate": 1,
+    "false_alarm_rate": 0.134,
+    "latency_p50": 1367,
+    "latency_p90": 1762
+   },
+   "openai/gpt-5.4-nano": {
+    "n": 150,
+    "disaster_n": 10,
+    "detection_rate": 1,
+    "false_alarm_rate": 0.209,
+    "latency_p50": 871,
+    "latency_p90": 1758
+   },
+   "qwen/qwen3.7-flash": {
+    "n": 145,
+    "disaster_n": 10,
+    "detection_rate": 1,
+    "false_alarm_rate": 0.14,
+    "latency_p50": 10078,
+    "latency_p90": 14930
+   }
+  }
+ }
+}

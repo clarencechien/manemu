@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation hallucinated the phrase 'Hello friends' at the beginning, which is not present in the source text. However, the rest of the translation is highly accurate and fluent."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "Overall translation conveys the two propositions correctly (room number and friend fainting). The addition of “Hello friends” is not present in the source (unwarranted insertion) — hence a hallucination. Room number and event are accurately rendered; wording is fluent and natural."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

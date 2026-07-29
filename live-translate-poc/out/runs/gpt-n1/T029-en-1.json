@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with correct grammar and appropriate vocabulary ('vacancies' for '空房')."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Translation accurately and fully conveys the original meaning. Minor tense difference ('didn't book' vs 'don't have a reservation') does not alter intent. Sentence is natural and fluent in English."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

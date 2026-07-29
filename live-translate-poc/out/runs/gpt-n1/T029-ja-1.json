@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural, conveying the exact meaning of the source text with appropriate politeness."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意與原文完全一致，表達自然。唯用詞「空き部屋」與參考譯文的「空いている部屋」同義，均為自然說法。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

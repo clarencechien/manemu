@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation incorrectly translates the days of the week: 'Friday' (星期五) is translated as 'Monday' (月曜), and 'Saturday' (星期六) is translated as 'Thursday' (木曜). This is a critical error for a reservation change, although the rest of the sentence is grammatically fluent."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 1,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "機器譯文將原文的「星期五改到星期六」錯譯為「月曜から木曜に変更」(日付/星期完全錯誤)，屬於關鍵資訊錯誤，造成語意不忠實，因此 adequacy 評為 1。譯文日語句子結構大致通順，但結尾以「ではなくて、」未完結，表達不完整，流暢度中等，fluency 評為 3。標記 number_wrong=true（日期錯誤），omission=true（否定句未完整表達），hallucination=true（加入與原文不符的日期資訊）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
