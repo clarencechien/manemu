@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T039",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我想預約明天下午三點,兩個大人。",
+  "reference": "明日の午後3時に、大人2人で予約したいです。",
+  "inputTranscript": "我想预约明天下午三点，两个",
+  "outputTranscript": "私は予約したいです。明日の午後3時、二人分です。",
+  "inputDurationMs": 3691,
+  "outputAudioMs": 5600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2516,
+    "ttft_from_end_ms": -2953,
+    "completion_lag_ms": 519,
+    "ttfa_from_start_ms": 1284
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.05,
+    "coverage_ok": true,
+    "cer": 0.143
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:06:37.325Z"
+}

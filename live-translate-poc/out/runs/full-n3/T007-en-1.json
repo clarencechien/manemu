@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is identical to the reference translation, perfectly conveying the original meaning in natural English."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與原文語意完全一致，與參考譯文相同。用詞與語序自然流暢，無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

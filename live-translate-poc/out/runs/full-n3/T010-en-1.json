@@ -45,5 +45,19 @@
     },
     "reason": "The translation incorrectly translates the location '新宿' (Shinjuku) as 'Hsinchu' and changes the sentence from a question to a statement, significantly altering the original meaning."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "時間資訊（11:45 PM）被正確傳達，但地名「新宿 (Shinjuku)」被誤譯為「Hsinchu」，改變了原句的關鍵語意，屬於重大錯誤，因此語意忠實評為2。目標語句子結構與用詞自然流暢，故流暢度評為5。沒有遺漏或否定顛倒，也未加入原文未提及的資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

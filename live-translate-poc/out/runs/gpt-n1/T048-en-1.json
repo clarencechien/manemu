@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T048",
+  "category": "smalltalk",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "不用了,謝謝,我只是看看而已。",
+  "reference": "No thanks, I'm just looking.",
+  "inputTranscript": "不用了，谢谢。我只是看看",
+  "outputTranscript": "No, thanks, I'm just looking around,",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 4400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -898,
+    "ttft_from_end_ms": -1345,
+    "completion_lag_ms": 461,
+    "ttfa_from_start_ms": 2101
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.286,
+    "coverage_ok": true,
+    "cer": 0.167
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:07:51.676Z"
+}

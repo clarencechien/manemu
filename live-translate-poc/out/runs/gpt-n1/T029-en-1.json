@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T029",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我沒有訂房,請問今晚還有空房嗎?",
+  "reference": "I don't have a reservation — do you have any rooms available tonight?",
+  "inputTranscript": "我没有订房，请问今晚还有空房吗？",
+  "outputTranscript": "I didn't book a room; may I ask, do you have any vacancies tonight?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 6400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1036,
+    "ttft_from_end_ms": -1652,
+    "completion_lag_ms": 881,
+    "ttfa_from_start_ms": 2563
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.926,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:05:20.420Z"
+}

@@ -1,0 +1,36 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T012",
+  "category": "transport",
+  "traps": [
+    "honorific",
+    "proper-noun"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "不好意思,可以幫我看一下這班車是不是往橫濱的嗎?",
+  "reference": "すみません、この電車が横浜行きかどうか、ちょっと見ていただけますか?",
+  "inputTranscript": "不好意思,可以帮我看一下这班车是不是往横滨",
+  "outputTranscript": "すみません、この電車が横浜方面行きか見ていただけますか?",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 7600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -162,
+    "ttft_from_end_ms": -840,
+    "completion_lag_ms": 857,
+    "ttfa_from_start_ms": 4138
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.839,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:03:02.909Z"
+}

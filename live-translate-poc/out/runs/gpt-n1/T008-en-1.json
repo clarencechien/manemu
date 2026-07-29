@@ -1,0 +1,50 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T008",
+  "category": "transport",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "這班車會到大阪,但是應該不會停京都吧?",
+  "reference": "This train goes to Osaka, but it doesn't stop at Kyoto, right?",
+  "inputTranscript": "这班车会到大阪,但是应该不会停京都吧？",
+  "outputTranscript": "Right nowthis bus will go to Daban, but it probably won't stop in Kyoto, right?",
+  "inputDurationMs": 3851,
+  "outputAudioMs": 6000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2642,
+    "ttft_from_end_ms": -3261,
+    "completion_lag_ms": 617,
+    "ttfa_from_start_ms": 1358
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.298,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:02:32.531Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "The translation of '大阪' (Osaka) was transliterated as 'Daban' (name_mangled). There is also a minor hallucination/transcription error at the beginning ('Right nowthis' instead of 'This'). Otherwise, the core meaning is well conveyed."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T049",
+  "category": "smalltalk",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我是從台灣來的,第一次來大阪玩。",
+  "reference": "台湾から来ました。大阪に遊びに来るのは初めてです。",
+  "inputTranscript": "我是从台湾来的,第一次来大阪",
+  "outputTranscript": "私は台湾出身で、大阪に来るのは初めてです。",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 6800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -657,
+    "ttft_from_end_ms": -1345,
+    "completion_lag_ms": 851,
+    "ttfa_from_start_ms": 3344
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.826,
+    "coverage_ok": true,
+    "cer": 0.071
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:07:59.046Z"
+}

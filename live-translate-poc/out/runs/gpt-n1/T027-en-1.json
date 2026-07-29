@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T027",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "可以退稅嗎?我總共買了超過五千日圓。",
+  "reference": "Can I get a tax refund? I bought more than five thousand yen in total.",
+  "inputTranscript": "可以退税吗？我总共买了超过五千",
+  "outputTranscript": "You can get a tax refund, if you buy more than 5,000 yen.",
+  "inputDurationMs": 3771,
+  "outputAudioMs": 6000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2097,
+    "ttft_from_end_ms": -2734,
+    "completion_lag_ms": 750,
+    "ttfa_from_start_ms": 1802
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.778,
+    "coverage_ok": true,
+    "cer": 0.125
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:05:02.096Z"
+}

@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T029",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我沒有訂房,請問今晚還有空房嗎?",
+  "reference": "予約していないんですが、今夜空いている部屋はありますか?",
+  "inputTranscript": "我没有订房，请问今晚还有空房吗",
+  "outputTranscript": "予約していないのですが、今夜空き部屋はありますか?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 5600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1096,
+    "ttft_from_end_ms": -1607,
+    "completion_lag_ms": 671,
+    "ttfa_from_start_ms": 2502
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.885,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:05:18.382Z"
+}

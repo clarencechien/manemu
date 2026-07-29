@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "Thanks in advance — I'll be in touch later.",
+  "inputTranscript": "那就麻烦你了。之后再联络",
+  "outputTranscript": "Then I'll need your help, we'll be in touch later.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 4800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -330,
+    "ttft_from_end_ms": -1228,
+    "completion_lag_ms": 708,
+    "ttfa_from_start_ms": 2671
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.156,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:08:06.747Z"
+}

@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "My room number is seven-oh-two — my friend has collapsed.",
+  "inputTranscript": "我的房间号码是七零二。我朋友昏倒了。",
+  "outputTranscript": "Hello friends, my room number is 702. My friend fainted.",
+  "inputDurationMs": 5811,
+  "outputAudioMs": 7600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -4713,
+    "ttft_from_end_ms": -5329,
+    "completion_lag_ms": 482,
+    "ttfa_from_start_ms": 1286
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.125
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:06:24.697Z"
+}

@@ -1,0 +1,47 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T009",
+  "category": "transport",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問這個位子有人坐嗎?",
+  "reference": "すみません、この席には誰か座っていますか?",
+  "inputTranscript": "请问这个位置有人坐",
+  "outputTranscript": "たとえば、この席、空いてますか?",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 3600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1228,
+    "ttft_from_end_ms": -1667,
+    "completion_lag_ms": 428,
+    "ttfa_from_start_ms": 1372
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.684,
+    "coverage_ok": true,
+    "cer": 0.2
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:02:38.484Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "「請問」被誤譯為「たとえば」（例如），與原文意思不符。後半句「這個位子有人坐嗎？」翻譯為「この席、空いてますか？」（這個位子空著嗎？），意思基本相符且表達自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

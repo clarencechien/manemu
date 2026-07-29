@@ -45,5 +45,19 @@
     },
     "reason": "The translation is perfectly accurate and natural, matching the reference exactly."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯與參考譯文完全相同，語意忠實且目標語自然流暢，無任何錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

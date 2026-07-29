@@ -1,0 +1,47 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T001",
+  "category": "directions",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問車站在哪裡?怎麼走比較快?",
+  "reference": "すみません、駅はどこですか?どう行くのが一番早いですか?",
+  "inputTranscript": "请问车站在哪里？怎么走比较快？",
+  "outputTranscript": "駅はどこですか、どう行けば早いですか。",
+  "inputDurationMs": 3211,
+  "outputAudioMs": 4800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -728,
+    "ttft_from_end_ms": -1613,
+    "completion_lag_ms": 519,
+    "ttfa_from_start_ms": 2672
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.68,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:01:35.142Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思，日語表達非常自然流暢。雖然省略了「請問」的對應敬語（如すみません），但整體語氣依然禮貌，不影響語意表達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

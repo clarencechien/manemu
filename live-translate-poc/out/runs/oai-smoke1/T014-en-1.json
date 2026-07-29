@@ -1,0 +1,35 @@
+{
+  "runId": "oai-smoke1",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "No spicy for this one, please — I can't really handle spicy food.",
+  "inputTranscript": "",
+  "outputTranscript": "Don't need this one, I can't really eat spicy food.",
+  "inputDurationMs": 3251,
+  "outputAudioMs": 4800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -774,
+    "ttft_from_end_ms": -1661,
+    "completion_lag_ms": 512,
+    "ttfa_from_start_ms": 2626
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.776,
+    "coverage_ok": true,
+    "cer": 1
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T08:59:25.058Z"
+}

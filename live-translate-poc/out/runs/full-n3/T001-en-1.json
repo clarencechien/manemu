@@ -43,5 +43,19 @@
     },
     "reason": "The translation merges two distinct questions into one and uses the unnatural phrasing 'where is the fastest way' instead of 'what is the fastest way'. It also omits the direct question asking for the station's location."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機譯把兩個問題合為一問，表達成“Where is the fastest way to get to the station?”，雖然提到到車站的最快路徑，但遺漏了原句第一問“車站在哪裡？”（資訊缺失），且措辭稍不自然。語意部分僅部分保留，故給3分；語句文法通順但不自然，故給4分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

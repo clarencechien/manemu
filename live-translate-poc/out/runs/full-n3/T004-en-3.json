@@ -46,5 +46,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text. The first sentence is slightly awkward in its question structure ('It takes about how many minutes...' instead of 'How many minutes does it take...'), but it is perfectly understandable in a spoken context. No major errors."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意，沒有遺漏或錯誤（因此 adequacy=5）。語句大致通順，但第一句的語序略不自然（\"It takes about how many minutes to walk from here?\" 比較少見的表達），第二句的語氣用未來式（\"I'll take a taxi.\"）與原句較偏向委婉的意願表達（\"我想搭計程車\"）有細微差別，因此 fluency 給 4。其餘無明顯錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

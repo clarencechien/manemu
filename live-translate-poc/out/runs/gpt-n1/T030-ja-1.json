@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T030",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問退房時間是早上十點還是十一點?",
+  "reference": "チェックアウトは朝10時ですか、それとも11時ですか?",
+  "inputTranscript": "请问退房时间是早上十点还是十一",
+  "outputTranscript": "チェックアウトの時間は、午前10時ですか、それとも11時ですか",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 6000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2145,
+    "ttft_from_end_ms": -2770,
+    "completion_lag_ms": 608,
+    "ttfa_from_start_ms": 2155
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.16,
+    "coverage_ok": true,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:05:26.406Z"
+}

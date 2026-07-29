@@ -4,7 +4,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { API_KEY, JUDGE_MODEL, REST_BASE } from "./config.mjs";
+import { API_KEY, JUDGE_MODEL, REST_BASE, OPENAI_API_KEY, OPENAI_JUDGE_MODEL } from "./config.mjs";
+
+// JUDGE_PROVIDER=openai 時走 gpt-5-mini,結果寫到 judge_x 欄位(保留 Gemini judge 做一致性對照)
+const PROVIDER = process.env.JUDGE_PROVIDER || "gemini";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const runId = process.argv[2];
@@ -29,13 +32,36 @@ const SCHEMA = {
   required: ["adequacy", "fluency", "flags", "reason"],
 };
 
-async function judgeOne(r) {
-  const prompt = `你是專業口譯評審。以下為中文原文、機器口譯譯文(語音翻譯的逐字稿)、參考譯文。
+const promptFor = (r) => `你是專業口譯評審。以下為中文原文、機器口譯譯文(語音翻譯的逐字稿)、參考譯文。
 評 adequacy(語意忠實 1-5)與 fluency(目標語自然度 1-5),並標記錯誤旗標。
 若譯文為空或幾乎沒翻,adequacy=1 且 omission=true。
 原文(zh): ${r.zh}
 機器譯文(→${r.dir}): ${r.outputTranscript || "(空)"}
 參考譯文: ${r.reference}`;
+
+async function judgeOpenAI(r) {
+  const res = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    signal: AbortSignal.timeout(90000),
+    headers: { "content-type": "application/json", authorization: `Bearer ${OPENAI_API_KEY}` },
+    body: JSON.stringify({
+      model: OPENAI_JUDGE_MODEL,
+      messages: [{ role: "user", content: promptFor(r) }],
+      response_format: {
+        type: "json_schema",
+        json_schema: { name: "judgement", strict: true, schema: { ...SCHEMA, additionalProperties: false,
+          properties: { ...SCHEMA.properties, flags: { ...SCHEMA.properties.flags, additionalProperties: false } } } },
+      },
+    }),
+  });
+  if (!res.ok) throw new Error(`judge HTTP ${res.status} ${(await res.text()).slice(0, 200)}`);
+  const data = await res.json();
+  return JSON.parse(data.choices[0].message.content);
+}
+
+async function judgeOne(r) {
+  if (PROVIDER === "openai") return judgeOpenAI(r);
+  const prompt = promptFor(r);
   const res = await fetch(`${REST_BASE}/${JUDGE_MODEL}:generateContent`, {
     method: "POST",
     signal: AbortSignal.timeout(60000),
@@ -60,15 +86,16 @@ async function worker() {
   while (idx < files.length) {
     const f = files[idx++];
     const r = JSON.parse(fs.readFileSync(path.join(runDir, f), "utf8"));
-    if (r.judge) { n++; continue; } // 已評過(可續跑)
+    const field = PROVIDER === "openai" ? "judge_x" : "judge";
+    if (r[field]) { n++; continue; } // 已評過(可續跑)
     let ok = false;
     for (let attempt = 1; attempt <= 3 && !ok; attempt++) {
       try {
-        r.judge = await judgeOne(r);
-        r.judgeModel = JUDGE_MODEL;
+        r[field] = await judgeOne(r);
+        r[field + "Model"] = PROVIDER === "openai" ? OPENAI_JUDGE_MODEL : JUDGE_MODEL;
         fs.writeFileSync(path.join(runDir, f), JSON.stringify(r, null, 2));
         ok = true; n++;
-        console.log(`${f} adequacy=${r.judge.adequacy} fluency=${r.judge.fluency}${Object.entries(r.judge.flags).filter(([, v]) => v).map(([k]) => " " + k).join("")}`);
+        console.log(`${f} adequacy=${r[field].adequacy} fluency=${r[field].fluency}${Object.entries(r[field].flags).filter(([, v]) => v).map(([k]) => " " + k).join("")}`);
       } catch (err) {
         console.error(`${f} attempt ${attempt}: ${String(err.message).slice(0, 150)}`);
         // pro-preview 每分鐘配額低,429 要等久一點

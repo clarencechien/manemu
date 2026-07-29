@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T018",
+  "category": "dining",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我要一份 tonkotsu 拉麵,麵要硬一點。",
+  "reference": "I'd like one tonkotsu ramen, with the noodles on the firm side.",
+  "inputTranscript": "我要一份臀骨兹拉面，面要硬一点。",
+  "outputTranscript": "I want a pork-bone ramen. Make the noodles a bit firmer.",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 6400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1137,
+    "ttft_from_end_ms": -1705,
+    "completion_lag_ms": 678,
+    "ttfa_from_start_ms": 2962
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.878,
+    "coverage_ok": true,
+    "cer": 0.421
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:03:53.634Z"
+}

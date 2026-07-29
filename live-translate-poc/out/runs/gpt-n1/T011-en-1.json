@@ -1,0 +1,50 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T011",
+  "category": "transport",
+  "traps": [
+    "code-switch",
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我想幫 IC 卡儲值一千日圓。",
+  "reference": "I'd like to top up my IC card with one thousand yen.",
+  "inputTranscript": "我想帮埃希卡储值一千",
+  "outputTranscript": "Even with a knife, if you top up an IC card with 1,000 yen,",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 5600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2228,
+    "ttft_from_end_ms": -2871,
+    "completion_lag_ms": 622,
+    "ttfa_from_start_ms": 1373
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.103,
+    "coverage_ok": true,
+    "cer": 0.333
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:02:55.110Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "The machine translation contains a severe hallucination (\"Even with a knife\") and alters the structure of the sentence into an incomplete conditional clause (\"if you top up...\"), which fails to convey the original intent (\"I want to...\")."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation accurately and naturally translates the original sentence, perfectly conveying the meaning with correct grammar and terminology."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原句詢問兩地是否在同一方向的意思；語句自然通順。與參考譯文的差異僅為名稱標點/定冠詞細節（Senso-ji vs Sensoji、Skytree 前未加 the），但不影響理解，故評為最高分，無錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

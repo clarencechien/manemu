@@ -1,0 +1,36 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T041",
+  "category": "appointment",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "如果三點沒有位子的話,四點也可以。",
+  "reference": "3時に席がなければ、4時でも大丈夫です。",
+  "inputTranscript": "如果三點沒有位子的話，四點也可以。",
+  "outputTranscript": "もし3時に席がなければ、4時でも大丈夫。",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 5200,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1235,
+    "ttft_from_end_ms": -1643,
+    "completion_lag_ms": 596,
+    "ttfa_from_start_ms": 2164
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:06:54.734Z"
+}

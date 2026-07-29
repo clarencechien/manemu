@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T036",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我頭很暈,但是我沒有心臟病的病史。",
+  "reference": "I feel very dizzy, but I don't have any history of heart disease.",
+  "inputTranscript": "我头很晕,但是我没有心脏病的",
+  "outputTranscript": "Good grief, my head is spinning, but I don't have a history of heart disease.",
+  "inputDurationMs": 3731,
+  "outputAudioMs": 5600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2468,
+    "ttft_from_end_ms": -3101,
+    "completion_lag_ms": 714,
+    "ttfa_from_start_ms": 1432
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.18,
+    "coverage_ok": true,
+    "cer": 0.2
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:06:15.009Z"
+}

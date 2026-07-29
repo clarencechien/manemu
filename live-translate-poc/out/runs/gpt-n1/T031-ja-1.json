@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T031",
+  "category": "hotel",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "房間的冷氣好像壞了,可以請人來看一下嗎?",
+  "reference": "部屋のエアコンが壊れているようなんですが、どなたかに見に来ていただけますか?",
+  "inputTranscript": "房间的冷气好像坏了,可以请人来看一下",
+  "outputTranscript": "部屋のエアコンが、どうやら壊れたみたい。見てもらえますか?",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 5200,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2401,
+    "ttft_from_end_ms": -3054,
+    "completion_lag_ms": 390,
+    "ttfa_from_start_ms": 1699
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.722,
+    "coverage_ok": true,
+    "cer": 0.056
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:05:33.849Z"
+}

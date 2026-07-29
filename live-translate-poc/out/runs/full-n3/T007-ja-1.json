@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文完美地傳達了原文的所有訊息，包含目的地、票數以及票種（大人與小孩），且日文表達自然流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：兩張到京都的車票、大人一張、孩童一張皆正確。語體自然、可直接使用。僅有細微差異：使用「チケット」而非更正式的「切符」，以及「子供」的表記可改為「子ども」，最後一句省略了句尾的「です」，均屬可接受的風格/書寫差異，不影響理解或禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

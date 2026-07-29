@@ -1,0 +1,49 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T010",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "最後一班回新宿的電車是十一點四十五分嗎?",
+  "reference": "Is the last train back to Shinjuku at eleven forty-five?",
+  "inputTranscript": "最后一班回新柱的电车是十一点四十五",
+  "outputTranscript": "The last tram on the Circular lineis at 11:45, right?",
+  "inputDurationMs": 4611,
+  "outputAudioMs": 6800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2172,
+    "ttft_from_end_ms": -2819,
+    "completion_lag_ms": 780,
+    "ttfa_from_start_ms": 2626
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.911,
+    "coverage_ok": true,
+    "cer": 0.158
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:02:47.635Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "The machine translation completely missed the destination 'Shinjuku' (新宿) and instead hallucinated 'on the Circular line'. There is also a spacing typo in the English output ('lineis' instead of 'line is')."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

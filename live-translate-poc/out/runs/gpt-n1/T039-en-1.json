@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T039",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我想預約明天下午三點,兩個大人。",
+  "reference": "I'd like to make a reservation for tomorrow at three p.m., for two adults.",
+  "inputTranscript": "我想预约明天下午三点，两个大",
+  "outputTranscript": "I think, would it be possible to book for tomorrow at 3 p.m., for two adults?",
+  "inputDurationMs": 3691,
+  "outputAudioMs": 6800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2505,
+    "ttft_from_end_ms": -2889,
+    "completion_lag_ms": 818,
+    "ttfa_from_start_ms": 1295
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.018,
+    "coverage_ok": true,
+    "cer": 0.071
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:06:39.339Z"
+}

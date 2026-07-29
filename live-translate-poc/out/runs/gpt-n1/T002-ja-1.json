@@ -1,0 +1,50 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T002",
+  "category": "directions",
+  "traps": [
+    "code-switch",
+    "proper-noun"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "請問 Shibuya Sky 的入口是在這棟樓嗎?",
+  "reference": "すみません、渋谷スカイの入口はこのビルですか?",
+  "inputTranscript": "请问徐布亚斯盖的入口是在这栋楼",
+  "outputTranscript": "失礼、徐不娓のスカイの入口はこのビルの中ですか?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 7600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -317,
+    "ttft_from_end_ms": -947,
+    "completion_lag_ms": 978,
+    "ttfa_from_start_ms": 3682
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.048,
+    "coverage_ok": true,
+    "cer": 0.571
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:01:44.067Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "地名「Shibuya（渋谷）」被錯誤翻譯為「徐不娓」，導致專有名詞嚴重毀損（name_mangled）。其餘句型結構與文法皆正確且自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

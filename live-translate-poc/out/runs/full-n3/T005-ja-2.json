@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，且日語表達自然。「請問」譯為「あの」在口語中十分常見且自然，無明顯錯誤。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "語義完整，將「晴空塔」譯為「スカイツリー」正確，問句意圖與內容皆保留，因此 adequacy=5。目標語通順可理解，但使用「あの、」作為開場詞偏口語/填詞，較不禮貌或不如參考譯文的「すみません、」正式，故 fluency 給 4。沒有數量錯誤、否定翻轉、名稱錯譯、遺漏或杜撰。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

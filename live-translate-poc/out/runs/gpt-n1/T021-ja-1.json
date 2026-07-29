@@ -1,0 +1,36 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T021",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "這個不要,我要旁邊那個藍色的,兩個多少錢?",
+  "reference": "これはいりません。隣の青いのがほしいです。2つでいくらですか?",
+  "inputTranscript": "这个不要,我要旁边那个蓝色的。两个多少钱?",
+  "outputTranscript": "これはいらない、隣のあの青いやつを。その二つでおいくらですか?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 6400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1453,
+    "ttft_from_end_ms": -2341,
+    "completion_lag_ms": 668,
+    "ttfa_from_start_ms": 2547
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:04:14.463Z"
+}

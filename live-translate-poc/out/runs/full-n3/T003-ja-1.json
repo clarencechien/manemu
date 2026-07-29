@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，語法自然流暢。雖然使用了常體（んだ）而非參考譯文的敬體（んです），但在沒有特定語境要求的情況下，仍屬優秀的翻譯。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯句「空港に行くんじゃなくて、駅に行くんだ。」準確傳達了否定（不是去機場）與相反目的地（去某個站）。語句自然、口語化，流暢度高。扣分原因：原文的「火車站」被譯為一般的「駅」，失去「火車／電車」這一具體資訊；此外原文「要去」在中文可含有「想去/要去」的意向，參考譯文用「行きたい」表達願望，機譯用「行くんだ」偏向陳述/將來，改變了語氣的細微差別。整體語意大部分保留，故評為4分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

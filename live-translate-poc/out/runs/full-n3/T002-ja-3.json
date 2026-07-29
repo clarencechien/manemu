@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文將地名「Shibuya」錯誤音譯為「徐博雅」，導致專有名詞錯誤（name_mangled），嚴重影響語意傳達。其餘部分的文法與句意皆自然且正確。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語法自然，表達「入口在這棟樓嗎」的結構正確（この建物ですか／このビルですか都可）。但專有名詞「Shibuya」が被誤譯為「徐博雅Sky」，把原本的地名渋谷（Shibuya）錯寫成完全不同的字，造成關鍵資訊錯誤，影響可理解度。因此語意忠實評為2（主要資訊被誤寫），目標語流暢度評為4（句子自然，但專有名詞不自然）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T038",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我不能打青黴素,我會過敏。",
+  "reference": "I can't have penicillin — I'm allergic to it.",
+  "inputTranscript": "我不能打青霉素，我会过",
+  "outputTranscript": "I can't get finasteride, I'm allergic to it.",
+  "inputDurationMs": 2611,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -910,
+    "ttft_from_end_ms": -1829,
+    "completion_lag_ms": 586,
+    "ttfa_from_start_ms": 1889
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:06:31.399Z"
+}

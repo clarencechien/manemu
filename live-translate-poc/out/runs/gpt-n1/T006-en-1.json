@@ -1,0 +1,47 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T006",
+  "category": "directions",
+  "traps": [],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "這附近有沒有廁所?我趕時間。",
+  "reference": "Is there a restroom near here? I'm in a hurry.",
+  "inputTranscript": "这附近有没有厕所？我赶时间。",
+  "outputTranscript": "This place nearbyhas a bathroom, I'm in a rush.",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 4800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1141,
+    "ttft_from_end_ms": -2038,
+    "completion_lag_ms": 596,
+    "ttfa_from_start_ms": 1758
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.059,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:02:15.763Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation incorrectly turns a question ('Is there a restroom nearby?') into an assertion ('This place nearby has a bathroom'). Additionally, there is a spacing error ('nearbyhas') which impacts fluency."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

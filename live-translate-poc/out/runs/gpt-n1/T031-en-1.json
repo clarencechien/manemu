@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T031",
+  "category": "hotel",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "房間的冷氣好像壞了,可以請人來看一下嗎?",
+  "reference": "The air conditioner in my room seems to be broken — could you send someone to take a look?",
+  "inputTranscript": "房间的冷气好像坏了,可以请人来看一下",
+  "outputTranscript": "It seems the AC in the room is broken, could you have someone come take a look?",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 6000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1171,
+    "ttft_from_end_ms": -2051,
+    "completion_lag_ms": 564,
+    "ttfa_from_start_ms": 2929
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.871,
+    "coverage_ok": true,
+    "cer": 0.056
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:05:36.428Z"
+}

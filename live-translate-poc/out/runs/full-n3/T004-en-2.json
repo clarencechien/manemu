@@ -46,5 +46,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text. The first sentence is slightly unnatural in its question structure ('It takes about how many minutes...' instead of 'How many minutes does it take...'), but it is still perfectly understandable."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "語意忠實：譯文完整傳達原文意思（詢問步行時間及超過15分鐘則想搭計程車），因此給5分。語句自然度：第二句自然，但第一句的語序較不通順（“It takes about how many minutes to walk from here?” 在英語中較少這樣說法，較自然的表達為“About how many minutes does it take to walk from here?”），故給4分。無其他錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

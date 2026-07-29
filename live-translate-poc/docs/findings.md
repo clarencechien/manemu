@@ -103,6 +103,33 @@ live-translate 是**連續 session**:`audioStreamEnd` 後模型翻完仍持續�
 - **品質:條件性通過**——日常寒暄/問路/住宿類 adequacy 4.7–5.0 可用;但**數字金額、緊急、專名密集**場景有 ~7–10% 的「自信錯譯」率,UI 必須顯示原文逐字稿讓使用者能發現聽錯(設計含義:雙逐字稿不是 nice-to-have,是安全機制)。
 - 混評(兩個 judge 模型)與 TTS 音源品質是本輪兩大 confound;建議下一輪:(a) 拿到異家 API key 重評一輪對照,(b) M4 真人語音重點驗 T014/T016/T037/T010/T002。
 
+## 3.6 Run 2 實驗結果(2026-07-29,詳見 docs/run2-plan.md)
+
+### 實驗 1|回譯確認通道:**可行,建議做進 M3 UI**
+
+150 筆 zh→ja 輸出以 `gemini-3.5-flash` 回譯繁中,對照 Gemini 評審分組(`out/experiments/backtranslate-full-n3-ja.json`):
+
+| 指標 | 數字 | 解讀 |
+| --- | --- | --- |
+| 災難組(adequacy≤2, n=11)偵測率 | **8/11 = 73%** | 瞎子/結婚/新竹全數現形 |
+| 漏掉的 3 筆 | 全是 T022「問句變陳述」 | 資訊其實在回譯裡(「三千元就好了」vs 原話「可以嗎」),是自動指標判成「語氣差異不算」;真人細看抓得到 → 73% 是下界 |
+| 正常組(adequacy≥4, n=130)誤報率 | **10.8%** | 多為無害 paraphrase(火車站→車站、未稅、阿拉伯數字) |
+| 誤報中的意外收穫 | T015「兒童椅→安全座椅」 | 回譯抓到**評審漏判的真錯誤**(ja 輸出真的翻成チャイルドシート=汽座)——通道同時是評審的補網 |
+| 回譯延遲(預設 flash) | p50 3.3s | thinking 預設開啟,太慢 |
+| **thinking off / flash-lite** | **~0.8s / ~0.4s** | UI 實際配置,「說完後一拍」內可顯示 |
+
+**UI 建議**:input 逐字稿即時顯示(免費、抓聽錯)+ 回譯確認用 flash-lite(~0.4s,抓譯錯);兩層合起來涵蓋「聽錯」與「譯錯」兩類災難。已知盲區:語氣級錯誤(問句→陳述)兩層都可能放過,考慮 UI 上對句尾「嗎/吧」句加問號 icon 提示。
+
+### 實驗 2、3|被 OpenAI 帳戶額度擋住(程式已就緒)
+
+- `gpt_key` 有效但帳戶 `insufficient_quota`(API 額度與 ChatGPT 訂閱分開,要在 platform.openai.com 儲值)。
+- 已完成並驗證到能驗的程度:`judge.mjs` 的 `JUDGE_PROVIDER=openai`(gpt-5-mini→`judge_x` 欄位)、`providers/openai-realtime.mjs`(24kHz 重取樣、subprotocol 認證、`session.close` 收尾)、`run.mjs --provider openai`。**WS 握手與認證實測通過**(錯誤發生在應用層 quota,非 401)。
+- 儲值後指令:`JUDGE_PROVIDER=openai npm run judge -- full-n3` 與 `npm run run -- --provider openai --repeats 1 --run-id gpt-n1`。
+
+### 配額後記(更正 §3.5 的推測)
+
+3.1-pro 的 429 實測 quotaId=`GenerateRequestsPerDayPerProjectPerModel`、quotaValue=**250**。使用者確認專案掛在 Tier 1 postpay 帳單下;無論如何,決策是**全面棄用 pro 級**(postpay 按量計費風險),評審預設改 `gemini-3.5-flash`。
+
 ## 4. 對計劃的修正建議(帶回 plan v3)
 
 1. §3/§6/附錄 F 的 setup 欄位名以本文 §2 實測為準。

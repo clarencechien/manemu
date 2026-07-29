@@ -1,0 +1,50 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T002",
+  "category": "directions",
+  "traps": [
+    "code-switch",
+    "proper-noun"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "請問 Shibuya Sky 的入口是在這棟樓嗎?",
+  "reference": "Excuse me, is the entrance to Shibuya Sky in this building?",
+  "inputTranscript": "请问徐布亚斯盖的入口是在这栋",
+  "outputTranscript": "Please ask, Xu Bu Ya's entrance is in this building?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 6000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1025,
+    "ttft_from_end_ms": -1660,
+    "completion_lag_ms": 663,
+    "ttfa_from_start_ms": 2975
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.851,
+    "coverage_ok": true,
+    "cer": 0.619
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:01:43.053Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "專有名詞 'Shibuya Sky' 被錯誤音譯為 'Xu Bu Ya's' 且漏掉了 'Sky'，屬於嚴重的專有名詞翻譯錯誤 (name_mangled, omission)。此外，'請問' 被直譯為 'Please ask'，且整句語序不夠自然，影響流暢度。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

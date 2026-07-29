@@ -1,0 +1,35 @@
+{
+  "runId": "gpt-n1",
+  "phraseId": "T020",
+  "category": "dining",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "請問可以幫我們分開結帳嗎?",
+  "reference": "Excuse me, could we get separate checks?",
+  "inputTranscript": "请问可以帮我们分开结账",
+  "outputTranscript": "May I ask if you could split the bill for us?",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1130,
+    "ttft_from_end_ms": -1544,
+    "completion_lag_ms": 543,
+    "ttfa_from_start_ms": 1769
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.063,
+    "coverage_ok": true,
+    "cer": 0.167
+  },
+  "netInject_ms": 0,
+  "model": "gpt-realtime-translate",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T09:04:08.494Z"
+}
