@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:06:15.009Z"
+  "ts": "2026-07-29T09:06:15.009Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "The translation is fluent and conveys the original meaning accurately, but it includes an unnecessary addition ('Good grief') at the beginning which was not present in the source text."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

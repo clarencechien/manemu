@@ -46,6 +46,7 @@ async function judgeOpenAI(r) {
     headers: { "content-type": "application/json", authorization: `Bearer ${OPENAI_API_KEY}` },
     body: JSON.stringify({
       model: OPENAI_JUDGE_MODEL,
+      reasoning_effort: "low", // 新帳戶 TPM 低,reasoning tokens 會吃爆速率限制
       messages: [{ role: "user", content: promptFor(r) }],
       response_format: {
         type: "json_schema",

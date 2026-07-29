@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:03:09.218Z"
+  "ts": "2026-07-29T09:03:09.218Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "「月台」（鐵路月台，日文應為「ホーム」）被誤譯為「ステージ」（舞台/表演台），導致地點語意出現偏差。「弄丟」譯為「落としました」（掉落/弄丟）尚可接受。日文句型本身非常流暢自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

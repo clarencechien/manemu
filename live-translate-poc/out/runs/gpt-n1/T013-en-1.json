@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:03:09.828Z"
+  "ts": "2026-07-29T09:03:09.828Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文多出了「Good morning, everyone.」的幻覺，且將「月台 (platform)」誤譯為「stage (舞台)」，影響語意忠實度。但英文句子本身文法正確且流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:07:59.807Z"
+  "ts": "2026-07-29T09:07:59.807Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "The translation is fluent and captures the main meaning, but it hallucinates the greeting 'Hi' and the name 'Chen', which are not present in the source text."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

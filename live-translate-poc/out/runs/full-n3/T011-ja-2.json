@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文準確傳達了原文的意思，且日語表達自然流暢。雖然參考譯文使用了「〜んですが」來增加委婉語氣，但機器譯文的「〜たいです」也是完全正確且自然的表達。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（想要幫 IC 卡儲值1000日圓），金額正確且語法正確。唯自然度略低於參考譯文：參考用「〜したいんですが」表現請求時的委婉語氣，機器譯成「〜したいです」雖可接受但少了客氣/緩和語氣，因此流暢度給4分，忠實度給5分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

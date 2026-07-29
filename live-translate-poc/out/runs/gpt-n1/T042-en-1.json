@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:07:06.792Z"
+  "ts": "2026-07-29T09:07:06.792Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思。唯一的缺點是第一句使用了陳述句語序配上問號（I can use...?）來表達疑問，雖然在口語中常見，但文法上不如「Can I...」來得自然，稍微影響了流暢度。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

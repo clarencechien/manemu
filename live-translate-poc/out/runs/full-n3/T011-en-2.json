@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation accurately and naturally conveys the meaning of the original text. The use of '1000 yen' is perfectly acceptable and equivalent to the reference."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整且忠實地傳達原意（表示要為 IC 卡儲值一千日圓），語句自然流暢。只有語氣（I want to vs I'd like to）與數字表記（1000 vs one thousand）為細微風格差異，對理解無影響。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

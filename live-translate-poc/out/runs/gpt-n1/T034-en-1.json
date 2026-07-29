@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:05:59.921Z"
+  "ts": "2026-07-29T09:05:59.921Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The urgent cry for help '救命' (Help!) was mistranslated as 'Saving a life', which sounds like a statement rather than an emergency plea. The second part of the sentence was translated correctly."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

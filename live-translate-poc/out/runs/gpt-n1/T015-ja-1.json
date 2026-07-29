@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:03:24.632Z"
+  "ts": "2026-07-29T09:03:24.632Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文將「兒童椅」（通常指餐廳的兒童椅，日語為子ども用の椅子或ベビーチェア）誤譯為「チャイルドシート」（汽車安全座椅），語意有些微偏差，但整體文法流暢且意思大致通順。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

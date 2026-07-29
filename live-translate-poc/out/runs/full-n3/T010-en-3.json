@@ -45,5 +45,19 @@
     },
     "reason": "The translation is fluent and captures most of the meaning, but incorrectly translates the place name '新宿' (Shinjuku) as 'Hsinchu'."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "優點：譯文語法通順、自然，疑問語氣表達正確；時間數字也對應（11:45）。缺點：將「新宿」誤譯為「Hsinchu／新竹」，改變了目的地，屬於重要實體錯譯，影響語意忠實度，因此給較低的adequacy評分。譯文加上“PM”屬於輕微推測，但不影響可理解性。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

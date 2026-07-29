@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:04:08.494Z"
+  "ts": "2026-07-29T09:04:08.494Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and grammatically correct. It perfectly conveys the meaning of the source text, although it is slightly more formal than the reference translation."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

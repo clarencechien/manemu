@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:04:54.574Z"
+  "ts": "2026-07-29T09:04:54.574Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. It correctly conveys the meaning of the source text, translating '我考慮了一下' as 'I thought it over' and '這個還是先不買好了' as 'I'd better not buy it yet'."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

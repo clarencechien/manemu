@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:03:43.429Z"
+  "ts": "2026-07-29T09:03:43.429Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文意思表達尚算完整，但用詞較為生硬。將「這杯」直譯為「このコップ」（杯子本身而非飲料），以及將「大杯/中杯」直譯為「大杯/中杯」（日語通常用「大サイズ/中サイズ」或「Lサイズ/Mサイズ」），顯得不夠自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

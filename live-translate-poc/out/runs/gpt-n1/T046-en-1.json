@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:07:37.527Z"
+  "ts": "2026-07-29T09:07:37.527Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural, capturing the exact meaning of the source text with excellent fluency."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -46,5 +46,19 @@
     },
     "reason": "譯文完整傳達了原文的語意，雖然將「1000円」放在句尾形成倒置，但在口語日文中非常自然，語意忠實且流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "完整且忠實地表達原意（要幫 IC 卡儲值1000日圓），語序和參考譯文稍有不同但為自然口語表達，無錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:02:54.482Z"
+  "ts": "2026-07-29T09:02:54.482Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文將「IC卡」誤譯為「AICカード」（多了A），屬於專有名詞/名稱錯誤（name_mangled），其餘語意與文法皆正確且流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

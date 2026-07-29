@@ -46,5 +46,19 @@
     },
     "reason": "The translation is accurate and natural. Translating '這班車' as 'this bus' is acceptable since '車' can refer to either a bus or a train depending on the context."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "整句語意大致保留（請求幫忙確認是否往橫濱），句子自然通順。但將「這班車」譯為“bus”（公車）而參考譯文為“train”（火車），車種錯誤屬於錯譯/新增資訊，影響準確性，故略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

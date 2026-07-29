@@ -46,5 +46,19 @@
     },
     "reason": "The translation accurately and naturally conveys the meaning of the original text, matching the reference translation perfectly."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實原意，表達清楚自然。與參考譯文僅在語氣（I want vs I'd like）和數字書寫（1000 vs one thousand）上有微小差異，均屬風格差異，無實質錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

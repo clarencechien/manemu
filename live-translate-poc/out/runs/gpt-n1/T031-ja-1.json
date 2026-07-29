@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:05:33.849Z"
+  "ts": "2026-07-29T09:05:33.849Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思，語氣自然流暢。雖然相較於參考譯文稍微口語、簡略了一些（例如省略了「請人」的「どなたかに」），但在日語日常對話中完全合乎習慣且意思表達完整。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文將「新宿」錯誤翻譯為「新竹」，導致目的地完全不同，影響語意傳達。其餘部分翻譯正確且流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "句子通順自然，但目的地翻譯錯誤（將「新宿」誤為「新竹」），改變了關鍵語義，可能導致誤會，故語意忠實度較低。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

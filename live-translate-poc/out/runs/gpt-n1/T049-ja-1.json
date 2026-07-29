@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "gpt-realtime-translate",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T09:07:59.046Z"
+  "ts": "2026-07-29T09:07:59.046Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常流暢且語意完整。雖然相較於參考譯文微幅省略了「玩」（遊びに）的細節，但「大阪に来るのは初めてです」已完全表達出主要語意，且極為自然符合日語表達習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }
