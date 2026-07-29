@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。「冷房」正確對應「冷氣」，後半句的請求表達「どなたかに見ていただくことはできますか」也非常得體、流暢，完全符合日語的日常禮貌表達。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文意味大致正確且日語自然。用語方面以「冷房」取代「エアコン」可接受。但原句請人『來看一下』（來訪的動作）意涵未明確表達，機譯僅說「見ていただくことはできますか？」（請人看一下）而未明確指出要『來』，因此語意上有輕微遺漏，故給予4分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

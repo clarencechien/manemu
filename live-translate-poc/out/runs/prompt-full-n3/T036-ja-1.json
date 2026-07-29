@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，日語表達十分流暢，與參考譯文一樣好。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（頭暈且無心臟病病史），因此語意忠實度高。表達上稍有口語自然度差異：日本語參考譯文使用「めまいがひどいです」更自然，機譯的「とてもめまいがしますが」雖可理解但語感略不自然，故流暢度評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

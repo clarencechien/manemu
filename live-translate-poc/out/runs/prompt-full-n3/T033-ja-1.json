@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。後半句使用「着きたいので」（因為想在...抵達）來解釋叫計程車的原因，語境上十分通順，完全符合原文意思。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "第一句譯文正確且禮貌（タクシーを一台呼んでいただけますか），傳達原意。第二句使用「空港に着きたいので」語尾以「ので」收束不完整，且語氣表達為「想要到達（want）」而非原句的「必須/需要在6:30到達」，導致語義與語氣上有細微偏差，且句子不夠自然流暢。因此語意忠實度稍降，流暢性受語法與表達影響。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

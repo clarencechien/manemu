@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text, and the addition of 'Could you tell me' is a very natural way to translate '請問'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整呈現原句語意（護照不見，詢問警察局在哪裡），語句通順自然，與參考譯文等效，無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

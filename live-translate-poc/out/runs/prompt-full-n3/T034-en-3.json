@@ -43,5 +43,19 @@
     },
     "reason": "The translation is highly accurate and natural. It perfectly conveys the meaning and urgency of the source text, with 'for me' correctly translating '幫我'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，將「請幫我叫救護車」自然地翻作“Please call an ambulance for me.” 意義與語氣與原文一致且語法自然。唯一差異是參考譯文省略了 for me，但不影響忠實度或流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

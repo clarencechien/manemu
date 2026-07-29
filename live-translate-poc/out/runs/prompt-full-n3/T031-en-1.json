@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is exceptionally accurate and natural. It perfectly conveys the meaning of the source text with correct grammar and phrasing."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原文意思，語句自然流暢。僅有 'air conditioning' vs 'air conditioner' 與 'my room' 的細微差異，但不影響語意或禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

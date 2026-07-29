@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is exceptionally accurate and natural. It perfectly conveys the meaning of the source text with correct grammar and phrasing."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。唯一差異為措辭細微（\"call me a taxi\" vs \"call a taxi for me\"），但皆為自然、正確的英文表達。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

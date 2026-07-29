@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，日語表達也十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文整體忠實且自然。將「冷氣/エアコン」翻成「冷房」可接受；句子語氣和禮貌用法也恰當。但原句請人「來看一下」的「來」(見に来て)在機譯中省略了，稍微改變了要對方到現場查看的語意，故給予4分並標記 omission。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

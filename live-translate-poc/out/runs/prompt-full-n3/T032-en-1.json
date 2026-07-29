@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and grammatically correct, perfectly conveying the meaning of the source text."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語法自然且保留了否定信息，但原句可被理解為「我不需要別人幫我打掃/不需要房間被打掃」（參考譯文為被動表達），機譯改為主動表達「我不需要自己打掃」，在代理者上有輕微歧義或資訊偏差，故略降一分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

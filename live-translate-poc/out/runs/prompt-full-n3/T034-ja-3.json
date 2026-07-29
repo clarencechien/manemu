@@ -43,5 +43,19 @@
     },
     "reason": "譯文與參考譯文完全一致，語意準確且表達自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與原文語意完全一致，且日文表達自然、符合緊急呼救用語。與參考譯文一致，無錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

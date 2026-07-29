@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and perfectly natural, conveying the exact meaning of the source text without any errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實於原文意義。中文原句在主語/受詞關係上可解為主動（我打掃）或被動（別人打掃），機器譯文採主動表達但並未扭曲語意；語法與用詞自然流暢，與參考譯文僅在聲態（active vs. passive）不同，仍為接受的翻譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

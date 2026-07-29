@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is exceptionally accurate and natural. It perfectly conveys the meaning of the source text with correct grammar and appropriate phrasing."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately conveys the meaning of the source (air conditioner appears broken and request to have someone check it) and is natural, idiomatic English. No notable errors or omissions."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

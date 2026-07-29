@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural, perfectly conveying the meaning of the source text without any errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思：房號702正確，朋友昏倒的事件也被忠實翻譯。用詞（\"passed out\" vs. 參考譯文的\"has collapsed\"）屬於風格差異但不影響語意或自然度，因此評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
