@@ -109,6 +109,226 @@
     "meaning_preserved": true,
     "changed": true
    }
+  },
+  "full-n3|T022-ja-2": {
+   "group": "lost",
+   "dir": "ja",
+   "before": "高すぎるよ、 3000元でいいよ。",
+   "after": "高すぎますか。3000元でいいですか。",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": false,
+    "changed": true
+   }
+  },
+  "full-n3|T046-ja-2": {
+   "group": "lost",
+   "dir": "ja",
+   "before": "中国語がとても",
+   "after": "中国語がとてもですか",
+   "verdict": {
+    "now_question": false,
+    "meaning_preserved": false,
+    "changed": true
+   }
+  },
+  "gpt-n1|T004-ja-1": {
+   "group": "lost",
+   "dir": "ja",
+   "before": "ここから出て、だいたい何分か、十五分を超えるなら、タクシーに乗ろうと思います。",
+   "after": "ここから出て、だいたい何分か、十五分を超えるなら、タクシーに乗ろうと思いますか。",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": false,
+    "changed": true
+   }
+  },
+  "gpt-n1|T025-en-1": {
+   "group": "lost",
+   "dir": "en",
+   "before": "I saw on Instagram.",
+   "after": "I saw on Instagram.",
+   "verdict": {
+    "now_question": false,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "gpt-n1|T027-ja-1": {
+   "group": "lost",
+   "dir": "ja",
+   "before": "",
+   "after": "疑問/徵詢語氣です。",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": false,
+    "changed": true
+   }
+  },
+  "gpt-n1|T022-ja-1": {
+   "group": "lost",
+   "dir": "ja",
+   "before": "高すぎます。3000元でいいです。",
+   "after": "高すぎます。3000元でいいですか。",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": true
+   }
+  },
+  "gpt-n1|T027-en-1": {
+   "group": "lost",
+   "dir": "en",
+   "before": "You can get a tax refund, if you buy more than 5,000 yen.",
+   "after": "You can get a tax refund if you buy more than 5,000 yen, right?",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": true
+   }
+  },
+  "gpt-n1|T010-ja-1": {
+   "group": "lost",
+   "dir": "ja",
+   "before": "最後の一回分のスターアライドの電車は、11時45分。",
+   "after": "最後の一回分のスターアライドの電車は、11時45分ですか？",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": true
+   }
+  },
+  "full-n3|T001-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、駅はどこですか？どう行けば早いですか？",
+   "after": "すみません、駅はどこですか？どう行けば早いですか？",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "gpt-n1|T022-en-1": {
+   "group": "lost",
+   "dir": "en",
+   "before": "Too expensive, make it 3,000 yuan for me.",
+   "after": "Too expensive—could you make it 3,000 yuan for me?",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": true
+   }
+  },
+  "full-n3|T001-ja-3": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、駅はどこですか？どう行けば早いですか？",
+   "after": "すみません、駅はどこですか？どう行けば早いですか？",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T001-en-2": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, where is the station? What's the fastest way to get there?",
+   "after": "Excuse me, where is the station? What's the fastest way to get there?",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T001-ja-2": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、駅はどこですか？どう行けば早いですか？",
+   "after": "すみません、駅はどこですか？どう行けば早いですか？",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T001-en-3": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, where is the fastest way to the station?",
+   "after": "Excuse me, where is the fastest way to the station?",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T002-en-2": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, where is the entrance to Xu Boya Sky?",
+   "after": "Excuse me, where is the entrance to Xu Boya Sky?",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": false,
+    "changed": false
+   }
+  },
+  "full-n3|T002-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、徐博雅Skyの入り口はこの建物ですか？",
+   "after": "すみません、徐博雅Skyの入り口はこの建物ですか？",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T002-ja-3": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、徐博雅Skyの入り口はこの建物ですか？",
+   "after": "すみません、徐博雅Skyの入り口はこの建物ですか？",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T002-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, where is the entrance to Xu Boya Sky?",
+   "after": "Excuse me, where is the entrance to Xu Boya Sky?",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": false,
+    "changed": false
+   }
+  },
+  "full-n3|T001-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, where is the fastest way to get to the station?",
+   "after": "Excuse me, where is the fastest way to get to the station?",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
+  },
+  "full-n3|T002-ja-2": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、徐博雅Skyの入り口はこの建物ですか？",
+   "after": "すみません、徐博雅Skyの入り口はこの建物ですか？",
+   "verdict": {
+    "now_question": true,
+    "meaning_preserved": true,
+    "changed": false
+   }
   }
  }
 }

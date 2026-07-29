@@ -1,0 +1,334 @@
+{
+ "repairs": {
+  "full-n3|T001-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, where is the fastest way to get to the station?",
+   "after": "Excuse me, where is the fastest way to get to the station?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T001-en-2": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, where is the station? What's the fastest way to get there?",
+   "after": "Excuse me, where is the station? What's the fastest way to get there?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T001-en-3": {
+   "group": "control",
+   "dir": "en",
+   "before": "Excuse me, where is the fastest way to the station?",
+   "after": "Excuse me, where is the fastest way to the station?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T001-ja-2": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、駅はどこですか？どう行けば早いですか？",
+   "after": "すみません、駅はどこですか？どう行けば早いですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T001-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、駅はどこですか？どう行けば早いですか？",
+   "after": "すみません、駅はどこですか？どう行けば早いですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T001-ja-3": {
+   "group": "control",
+   "dir": "ja",
+   "before": "すみません、駅はどこですか？どう行けば早いですか？",
+   "after": "すみません、駅はどこですか？どう行けば早いですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-en-2": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, are Senso-ji Temple and Skytree in the same direction?",
+   "after": "Excuse me, are Sensoji Temple and Tokyo Skytree in the same direction?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, are Senso-ji Temple and Skytree in the same direction?",
+   "after": "Excuse me, are Sensoji Temple and Tokyo Skytree in the same direction?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "あの、浅草寺とスカイツリーは同じ方向ですか？",
+   "after": "あの、浅草寺とスカイツリーは同じ方向ですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-ja-2": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "あの、浅草寺とスカイツリーは同じ方向ですか?",
+   "after": "あの、浅草寺とスカイツリーは同じ方向ですか?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-en-3": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, are Senso-ji Temple and Skytree in the same direction?",
+   "after": "Excuse me, are Sensoji Temple and Tokyo Skytree in the same direction?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T005-ja-3": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "あの、浅草寺とスカイツリーは同じ方向ですか？",
+   "after": "あの、浅草寺とスカイツリーは同じ方向ですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-en-3": {
+   "group": "pn",
+   "dir": "en",
+   "before": "The last train back to Hsinchu is at 11:45 PM?",
+   "after": "The last train back to Hsinchu is at 11:45 PM?",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-en-2": {
+   "group": "pn",
+   "dir": "en",
+   "before": "The last train back to Hsinchu is at 11:45 PM.",
+   "after": "The last train back to Hsinchu is at 11:45 PM.",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "The last train back to Hsinchu is at 11:45 PM.",
+   "after": "The last train back to Hsinchu is at 11:45 PM.",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-ja-3": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "新竹行きの最終電車は11時45分ですか？",
+   "after": "新竹行きの最終電車は11時45分ですか？",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "新竹行きの電車は11時45分ですか？",
+   "after": "新竹行きの電車は11時45分ですか？",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-en-2": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "after": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-en-1": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "after": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T010-ja-2": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "新竹行きの最終電車は11時45分ですか？",
+   "after": "新竹行きの最終電車は11時45分ですか？",
+   "verdict": {
+    "noun_ok_before": false,
+    "noun_ok_after": false,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-en-3": {
+   "group": "pn",
+   "dir": "en",
+   "before": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "after": "Excuse me, could you help me check if this bus is going to Yokohama?",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-ja-1": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "すみません、このバスは横浜行きですか？",
+   "after": "すみません、このバスは横浜行きですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-ja-2": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "すみません、このバスは横浜行きですか？",
+   "after": "すみません、このバスは横浜行きですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T012-ja-3": {
+   "group": "pn",
+   "dir": "ja",
+   "before": "すみません、このバスは横浜行きですか？",
+   "after": "すみません、このバスは横浜行きですか？",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-en-1": {
+   "group": "control",
+   "dir": "en",
+   "before": "I don't want this, I can't really eat spicy food.",
+   "after": "I don't want this, I can't really eat spicy food.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-en-3": {
+   "group": "control",
+   "dir": "en",
+   "before": "I don't want this, I can't really eat it.",
+   "after": "I don't want this, I can't really eat it.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-ja-2": {
+   "group": "control",
+   "dir": "ja",
+   "before": "これはもういいです。もう食べられないです。",
+   "after": "これはもういいです。もう食べられないです。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-en-2": {
+   "group": "control",
+   "dir": "en",
+   "before": "I don't want this anymore, I can't really eat it.",
+   "after": "I don't want this anymore, I can't really eat it.",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-ja-3": {
+   "group": "control",
+   "dir": "ja",
+   "before": "これはもういいです。あまり食べられません。",
+   "after": "これはもういいです。あまり食べられません。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  },
+  "full-n3|T014-ja-1": {
+   "group": "control",
+   "dir": "ja",
+   "before": "これはもういいです。もう食べられません。",
+   "after": "これはもういいです。もう食べられません。",
+   "verdict": {
+    "noun_ok_before": true,
+    "noun_ok_after": true,
+    "damaged": false
+   }
+  }
+ }
+}
