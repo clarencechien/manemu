@@ -38,6 +38,7 @@ async function judgeOne(r) {
 參考譯文: ${r.reference}`;
   const res = await fetch(`${REST_BASE}/${JUDGE_MODEL}:generateContent`, {
     method: "POST",
+    signal: AbortSignal.timeout(60000),
     headers: { "content-type": "application/json", "x-goog-api-key": API_KEY },
     body: JSON.stringify({
       contents: [{ parts: [{ text: prompt }] }],
@@ -54,22 +55,26 @@ async function judgeOne(r) {
 }
 
 const files = fs.readdirSync(runDir).filter((f) => f.endsWith(".json") && !f.includes("error"));
-let n = 0;
-for (const f of files) {
-  const r = JSON.parse(fs.readFileSync(path.join(runDir, f), "utf8"));
-  if (r.judge) { n++; continue; } // 已評過(可續跑)
-  let ok = false;
-  for (let attempt = 1; attempt <= 3 && !ok; attempt++) {
-    try {
-      r.judge = await judgeOne(r);
-      r.judgeModel = JUDGE_MODEL;
-      fs.writeFileSync(path.join(runDir, f), JSON.stringify(r, null, 2));
-      ok = true; n++;
-      console.log(`${f} adequacy=${r.judge.adequacy} fluency=${r.judge.fluency}${Object.entries(r.judge.flags).filter(([, v]) => v).map(([k]) => " " + k).join("")}`);
-    } catch (err) {
-      console.error(`${f} attempt ${attempt}: ${String(err.message).slice(0, 150)}`);
-      await new Promise((res2) => setTimeout(res2, 2000 * attempt));
+let n = 0, idx = 0;
+async function worker() {
+  while (idx < files.length) {
+    const f = files[idx++];
+    const r = JSON.parse(fs.readFileSync(path.join(runDir, f), "utf8"));
+    if (r.judge) { n++; continue; } // 已評過(可續跑)
+    let ok = false;
+    for (let attempt = 1; attempt <= 3 && !ok; attempt++) {
+      try {
+        r.judge = await judgeOne(r);
+        r.judgeModel = JUDGE_MODEL;
+        fs.writeFileSync(path.join(runDir, f), JSON.stringify(r, null, 2));
+        ok = true; n++;
+        console.log(`${f} adequacy=${r.judge.adequacy} fluency=${r.judge.fluency}${Object.entries(r.judge.flags).filter(([, v]) => v).map(([k]) => " " + k).join("")}`);
+      } catch (err) {
+        console.error(`${f} attempt ${attempt}: ${String(err.message).slice(0, 150)}`);
+        await new Promise((res2) => setTimeout(res2, 2000 * attempt));
+      }
     }
   }
 }
+await Promise.all(Array.from({ length: 4 }, worker));
 console.log(`judged ${n}/${files.length}`);

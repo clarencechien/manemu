@@ -21,8 +21,10 @@ const force = args.includes("--force");
 const VOICE = "Kore";
 
 async function synthOne(phrase) {
+  // TTS preview 偶發掛住不回應(3.1 必掛、2.5 偶發),一定要設 timeout 讓重試接手
   const res = await fetch(`${REST_BASE}/${TTS_MODEL}:generateContent`, {
     method: "POST",
+    signal: AbortSignal.timeout(30000),
     headers: { "content-type": "application/json", "x-goog-api-key": API_KEY },
     body: JSON.stringify({
       contents: [{ parts: [{ text: phrase.zh }] }],
