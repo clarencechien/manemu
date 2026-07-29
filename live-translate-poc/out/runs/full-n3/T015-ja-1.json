@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:21:47.587Z"
+  "ts": "2026-07-29T07:21:47.587Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致準確且流暢，但將「兒童椅」譯為「チャイルドシート」（通常指汽車安全座椅）在餐廳情境下略顯不自然，較適合的說法是「子ども用の椅子」或「ベビーチェア」。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

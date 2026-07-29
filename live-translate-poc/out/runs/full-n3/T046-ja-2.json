@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:32:02.878Z"
+  "ts": "2026-07-29T07:32:02.878Z",
+  "judge": {
+    "adequacy": 1,
+    "fluency": 1,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文嚴重漏譯，僅翻譯出「你的中文很」，完全遺漏了「好」以及「是在哪裡學的」等關鍵訊息，句子結構不完整。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

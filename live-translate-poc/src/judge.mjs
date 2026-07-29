@@ -71,10 +71,12 @@ async function worker() {
         console.log(`${f} adequacy=${r.judge.adequacy} fluency=${r.judge.fluency}${Object.entries(r.judge.flags).filter(([, v]) => v).map(([k]) => " " + k).join("")}`);
       } catch (err) {
         console.error(`${f} attempt ${attempt}: ${String(err.message).slice(0, 150)}`);
-        await new Promise((res2) => setTimeout(res2, 2000 * attempt));
+        // pro-preview 每分鐘配額低,429 要等久一點
+        const backoff = String(err.message).includes("429") ? 20000 : 2000 * attempt;
+        await new Promise((res2) => setTimeout(res2, backoff));
       }
     }
   }
 }
-await Promise.all(Array.from({ length: 4 }, worker));
+await Promise.all(Array.from({ length: 2 }, worker));
 console.log(`judged ${n}/${files.length}`);
