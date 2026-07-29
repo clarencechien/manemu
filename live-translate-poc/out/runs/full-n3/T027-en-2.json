@@ -45,5 +45,19 @@
     },
     "reason": "譯文漏譯了「總共」(in total)，但整體語意依然非常清晰且表達自然，故給予4分忠實度與5分流暢度。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問能否退稅並說明購買金額超過五千日圓），數字表達正確。用語略可改進（較自然說法為 \"I bought more than five thousand yen in total\" 或 \"I spent more than ¥5,000\"），因此流暢度給 4 分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

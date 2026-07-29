@@ -48,5 +48,19 @@
     },
     "reason": "譯文非常流暢且語意完整。唯一的小缺點是將「兩個多少錢」譯為 'how much are they'，稍微忽略了『兩個』(two) 的具體數量概念，但整體語意依然十分清晰且符合情境。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達原意（拒絕這個、要旁邊的藍色），但對最後一句的數量資訊處理不夠明確。原文問「兩個多少錢?」應明確表達為“How much for two?”，機譯以“How much are they?”較模糊，可能未明確指兩個因此扣分；語言流暢度良好且無其他錯譯或增補。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

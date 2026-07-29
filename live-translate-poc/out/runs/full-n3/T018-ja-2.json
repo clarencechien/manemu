@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，並且使用了非常道地的日文點餐用語（麺は硬めで）。雖然沒有明確翻出「一份（一つ）」，但在日文語境中十分自然，不影響語意。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達要求點：要一份豚骨拉麵且麵要硬一點。唯有小缺失：未明確說出數量詞「一つ」（但日常會話中省略也可理解），以及省略了禮貌用語「お願いします」，使語氣較簡略。第二句「麺は硬めで。」口語可接受但略顯不完整。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

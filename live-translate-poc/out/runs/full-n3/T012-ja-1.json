@@ -46,5 +46,19 @@
     },
     "reason": "譯文遺漏了「幫我看一下」的語意，直接翻譯為「這班公車是往橫濱的嗎？」，雖然核心詢問目的有傳達，但略有省略。日文表達非常自然。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文語句自然，但把原文的「這班車/電車」誤譯為「バス」（巴士），屬於重要資訊錯誤；且把請對方幫忙看一下的委婉請求簡化為直接提問，造成語氣與意圖上細微偏差，因此語意忠實度較低。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文完全準確地翻譯了原文的意思，語氣自然，與參考譯文幾乎一致，僅在句尾的敬語使用上有些微口語化的省略（要らない、欲しい），但整體非常流暢且符合口譯情境。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意準確，日文表達自然，與參考譯文意義一致。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

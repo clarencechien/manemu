@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，且日文表達自然流暢。「税別」與參考譯文的「税抜き」皆為「不含稅」的常見正確說法。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，將「含稅/不含稅」正確譯為「税込み/税別」，用語自然且禮貌（すみませんが也可接受）。與參考譯文差異僅在於「税別」與「税抜き」的用詞不同，但意義相同，無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

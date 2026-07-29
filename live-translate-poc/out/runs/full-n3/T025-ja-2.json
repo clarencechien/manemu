@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，且日語表達自然流暢。雖然未明確翻譯出「款式」，但在語境中「限定版」已足夠表達需求，不影響整體理解。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文大意正確，問是否有限定版並提到在Instagram上看到，資訊傳達完整度高，故adequacy 4。日語表達自然但略簡短，缺少「款式/モデル」一詞和說話尾音的禮貌語氣（參考譯文的「モデル」「〜んですが」），因此fluency 4。標記 omission=true 表示對「款式/モデル」的具體詞彙有輕微遺漏；無其他明顯錯誤或偽造資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

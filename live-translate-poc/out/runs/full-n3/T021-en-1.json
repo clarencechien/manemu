@@ -48,5 +48,19 @@
     },
     "reason": "The translation is mostly accurate and fluent, but it misses the specific quantity 'two' (兩個) in the final question, translating it generally as 'they'. This is a minor omission and number error. The sentence structure contains comma splices, which is typical for spoken transcripts but slightly affects written fluency."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致忠實：否定與指示（不要這個、要旁邊的藍色那個）都正確傳達。唯獨最後一句語義上稍微偏寬鬆——原文明確問「兩個多少錢？」（詢問兩個的價格），機器譯文為“How much are they?”，雖可理解為在問價格，但不如參考譯文明確表達「兩個」的數量。語句自然流暢，無重大語法或用詞問題。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

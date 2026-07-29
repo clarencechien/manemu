@@ -46,5 +46,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，且日文表達自然流暢。「這班車」譯為「このバス」在沒有上下文的情況下是可以接受的。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "機器譯文大致傳達原句詢問列車是否會停京都的否定含意，句子在日語上也算通順。但原文的「這班車」參考譯文為「電車」，機譯改為「バス（巴士）」屬於錯誤的載具替換，改變了語義細節；此外原句帶有確認疑問語氣（“吧?”），參考譯文以「…ですよね?」呈現，機譯用「…でしょう」表達上的確認感較弱。基於此給予中等忠實度（3）與較高自然度（4），並標記為 hallucination（錯誤引入詞彙）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

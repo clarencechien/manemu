@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，日文表達自然流暢。雖然未明確翻譯出「款式」，但在語境中「限定版」已足夠清楚，不構成嚴重漏譯。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（詢問是否有限定版款式，並說是在 Instagram 上看到的）。日語表達自然流暢，僅在細節上未明說「モデル（款式）」一詞，但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

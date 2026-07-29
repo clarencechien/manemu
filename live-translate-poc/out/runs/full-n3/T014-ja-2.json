@@ -45,5 +45,19 @@
     },
     "reason": "譯文完全遺漏了「辣」的意思，將「不要辣」誤譯為「這個不要了」，將「不能吃辣」誤譯為「吃不下了」，語意完全錯誤。但日文句子本身文法通順。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 1,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "機譯未表達「不要辣/不要加辣」與『不太能吃辣』的語意，反而譯成「這個已經可以了/我已經吃不下了」，與原文意思不符（嚴重遺漏並生成與原句不相關的內容），句子日文本身通順。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

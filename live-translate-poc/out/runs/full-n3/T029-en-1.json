@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation perfectly captures the meaning of the original text and is highly fluent. It matches the reference translation almost exactly, differing only in punctuation."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與原文語意完全一致，表達自然流暢。唯一差異僅為標點處理，但不影響意思或語氣。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

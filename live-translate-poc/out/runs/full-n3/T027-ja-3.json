@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文準確且自然地傳達了原文的語意。「免税はできますか」是詢問退稅的自然說法，「合計で5000円以上買いました」也精確對應了「我總共買了超過五千日圓」。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問是否可退稅，並說明總額超過5000日圓）。用語大致自然，但「免税はできますか？」的助詞使用較不自然，較偏口語或強調主題，故流暢度略降一級。其他詞彙（合計で vs 全部で）均可接受。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -46,5 +46,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text and is perfectly natural in English."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：原句表示經過考慮暫時不買，機器譯文 \"I thought about it, and I'm not going to buy it yet.\" 正確反映該意涵，語句自然流暢，無錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

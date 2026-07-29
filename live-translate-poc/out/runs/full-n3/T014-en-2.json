@@ -45,5 +45,19 @@
     },
     "reason": "The translation completely omits the key concept of 'spicy' (辣), changing the meaning from requesting non-spicy food to rejecting the food entirely."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": true,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "機器譯文語法可理解但改變了原意。原句意為「這個不要辣（請不要加辣），我不太能吃辣」，譯文卻譯成“I don't want this anymore”，把“不要辣”誤解為不再要這個，並且加入“anymore”為原文未提及的內容，因此語意不忠（失去了關於“辣”的拒絕）。此外第二子句接近原意但少了“辛辣/辣”的明確表達，屬於遺漏與誤譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文準確傳達了原文的所有訊息，包括訂房、姓名及住宿天數，且日文表達自然流暢，無明顯錯誤。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意義：有訂房、姓名、從今天住兩晚。日語表達自然（「予約してあります」「今日から2泊します」皆可）。姓名使用漢字表記而非片假名，但未造成語意錯誤或扭曲，因此不標記為錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

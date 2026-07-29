@@ -46,5 +46,19 @@
     },
     "reason": "譯文準確傳達了原文的語意，『打八折』正確翻譯為『2割引』，『兩件』翻譯為『2着』。日文表達自然，使用了口語化的語氣，符合購物情境。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句意思（若打八折就會買兩件），用詞與數量正確。語氣為自然的口語表現（「買うわ」），雖較參考譯文禮貌語少，但不影響流暢度或忠實度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

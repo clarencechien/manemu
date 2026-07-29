@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly fluent and conveys the core meaning well, though 'already eaten' is a slight semantic shift from 'already full' (吃飽了)."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation conveys the intended meaning (refusing the dish because already eaten), but uses \"I've already eaten\" rather than the original \"I'm already full.\" This is a minor nuance difference, so adequacy is slightly reduced. The sentence is fluent and natural in English."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

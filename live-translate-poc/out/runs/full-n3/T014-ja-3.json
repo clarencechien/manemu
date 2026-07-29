@@ -45,5 +45,19 @@
     },
     "reason": "譯文完全遺漏了「辣」的意思，將「不要辣」誤譯為「もういいです」（不需要了），並將「不能吃辣」誤譯為「あまり食べられません」（吃不下太多），導致語意完全改變。目標語本身尚算流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "機譯遺漏了「不要辣/不加辣」這一信息，將句子處理成「これはもういいです」（已經不需要了／沒關係），屬於引入了原句沒有的內容（hallucination）且省略了關鍵資訊（omission）。不過第二句「あまり食べられません」能表達「不太能吃（辣）」的意圖，日語流暢度良好，因此給予 adequacy=2（信息不完整）和 fluency=4（語法自然）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

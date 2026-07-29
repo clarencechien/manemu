@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，日文表達自然流暢。雖然未完全對應「任何」(一切)這個強調詞，但整體語意完整且符合日常對話習慣。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達原意（表明對蝦子過敏並請勿在料理中放入海鮮），日文自然流暢。與參考譯文相比缺少強調詞「一切」，但不影響語意忠實度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

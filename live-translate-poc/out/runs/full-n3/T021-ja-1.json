@@ -46,5 +46,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的意思。雖然機器譯文使用的是常體（口語非敬語：要らない、いい、いくら？），而參考譯文使用的是敬體（いりません、ほしいです、いくらですか），但在口譯情境下，機器譯文的表達方式非常自然且符合口語習慣，語意完全正確。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，傳達「不要這個、要旁邊藍色的、兩個多少錢」的意思。用詞和語氣為自然的口語表達，與參考譯文差異僅在禮貌程度，仍屬自然流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

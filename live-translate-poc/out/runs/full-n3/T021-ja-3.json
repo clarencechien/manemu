@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文完全準確地翻譯了原文的意思，語氣自然，與參考譯文幾乎一致，僅在句尾的敬語使用上有些微口語化的省略（要らない、欲しい），但整體非常流暢且符合口譯情境。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實：把「這個不要，我要旁邊那個藍色的，兩個多少錢?」正確譯為日文，意思、數量、對象與語氣皆保留。日語表現自然（用語和句型都合適）；僅有標點上使用逗號而非句點，但不影響流暢性與理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

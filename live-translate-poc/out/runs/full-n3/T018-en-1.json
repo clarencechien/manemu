@@ -45,5 +45,19 @@
     },
     "reason": "The translation is accurate and natural, perfectly capturing the request for tonkotsu ramen with firm noodles."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達了原文意思（請一份豚骨拉麵、麵要偏硬），所以給予最高語意分。語句自然，但小處可改為 “a bit firmer” 或 “on the firm side” 以更符合英文慣用表達，故流暢度評為4。沒有遺漏或增添資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文漏翻了「最後一班」(最終)，並且將地名「新宿」錯誤翻譯為「新竹」，嚴重影響語意傳達。不過日文句子本身的文法與表達是自然流暢的。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文語法流暢，但語意不忠實：將「新宿」誤譯為「新竹」（地名錯誤），且遺漏了原句中表示「最後一班/最終」的資訊，導致重要訊息缺失。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

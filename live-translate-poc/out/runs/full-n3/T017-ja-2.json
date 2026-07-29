@@ -46,5 +46,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的所有訊息（不加冰、大杯改中杯、總共三杯）。日文表達自然，雖然較為口語，但完全符合日常點餐的情境。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意與原文完全一致：要求不要加冰、將大杯改成中杯，總共三杯都正確。日語表達通順但偏口語、且缺乏原參考譯文中的敬語（丁寧表現），因此 fluency 稍降一分。沒有遺漏或錯誤信息。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常自然且完整傳達了原文的意思。「還是先不買」譯為「やめておきます」符合日語口語習慣，語意忠實度與流暢度皆極高。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文在語意上基本正確，表達了「考慮過後決定不買」的意思，句子自然流暢。但比起參考譯文少了「やっぱり／今回は」的語氣與時間指示（即「還是這次先不買」的意味），屬於輕微遺漏，因此給予4分的忠實度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

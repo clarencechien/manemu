@@ -46,5 +46,19 @@
     },
     "reason": "譯文自然流暢，準確傳達了原文的意思。「這班車」譯為「このバス」在無上下文時可接受。「應該不會停京都吧」譯為「京都には止まらないでしょう」語意準確。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文整體保留原句含意（會到大阪／應該不會在京都停），語句日語也相當自然；但將原文的「這班車」誤譯為バス（公車），而參考譯文為電車，車種資訊被錯誤加入，屬於新增（hallucination）錯誤。此外原句語氣為確認的疑問（『吧?』），機器譯文以『…でしょう。』作結，比較像斷定或不明顯的疑問，語氣上與原文略有出入，因而給予中等忠實度評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

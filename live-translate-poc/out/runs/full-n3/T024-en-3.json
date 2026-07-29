@@ -46,5 +46,19 @@
     },
     "reason": "The translation perfectly captures the meaning of the original sentence and is completely natural in English. '打八折' is correctly translated as '20% off'."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整忠實地傳達原文意思（若打八折就買兩件），且語句自然流暢。使用“20%”數字表記與參考譯文的文字表記差異不影響意義。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

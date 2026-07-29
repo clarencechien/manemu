@@ -46,5 +46,19 @@
     },
     "reason": "譯文準確傳達了原文的所有訊息（去冰、大杯改中杯、總共三杯），日語表達自然流暢，符合口語習慣。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句三個要點：一杯不要加冰、把大杯改成中杯、總共三杯。表意正確且數量無誤。語句略為直譯（例：このグラスは）、缺乏更自然或禮貌的說法，但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "The translation is accurate and natural. 'Split the bill' is a perfectly valid and common equivalent to 'separate checks'."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整且忠實地表達原文意圖（請求幫忙分開結帳），用語自然流暢。與參考譯文僅為措辭差異（split the bill vs separate checks），不影響語意或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

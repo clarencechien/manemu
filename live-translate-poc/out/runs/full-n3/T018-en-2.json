@@ -45,5 +45,19 @@
     },
     "reason": "The translation is accurate and natural, perfectly capturing the request for tonkotsu ramen with firm noodles."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意：點一份 tonkotsu 拉麵，並要求麵條偏硬。語句自然流暢（雖可小幅改為 'one tonkotsu ramen' 或 'the noodles on the firm side'，但目前表達亦無問題）。沒有遺漏或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

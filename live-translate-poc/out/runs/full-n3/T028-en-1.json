@@ -46,5 +46,19 @@
     },
     "reason": "The translation accurately conveys the reservation, the name, and the duration of the stay, and reads fairly naturally. However, it omits the word '今天' (today)."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達有訂房、姓名及住兩晚的資訊，語句自然。但人名轉寫為 \"Chen Dawen\" 與參考譯文的 \"Chen Ta-wen\" 表示處理方式不同（可能影響辨識），因此標示 name_mangled。沒有重大的遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
