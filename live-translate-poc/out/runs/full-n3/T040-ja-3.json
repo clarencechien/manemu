@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的所有訊息，且使用了自然的日語口語表達方式，語意忠實且流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（將預約從週五改到週六，並非取消）。語氣上使用口語的「キャンセルじゃなくて。」略顯未完句，比參考譯文稍微不夠正式或完整，但仍為自然口語表達。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

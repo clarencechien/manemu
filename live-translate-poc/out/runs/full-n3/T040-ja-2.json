@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的所有訊息，且使用了自然的日語口語表達方式，語意忠實且流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句意思：要把預約從星期五改到星期六，並不是取消。用語上「キャンセルじゃなくて」為口語且句尾未完（有點拖尾），略不如參考譯文的正式完整表達，因此流暢度稍降一分；語意忠實度高。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

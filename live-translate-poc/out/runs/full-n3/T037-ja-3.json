@@ -47,5 +47,19 @@
     },
     "reason": "譯文將「昏倒」錯誤翻譯為「結婚」（結婚した），嚴重扭曲了原文的緊急情況，屬於嚴重的語意錯誤。前半部分房間號碼翻譯正確，整體句子通順。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "機譯正確傳達了房間號碼的數字含意（702），但將「昏倒した/倒れました（fainted）」誤譯為「結婚した（got married）」，造成重大語意錯誤，故語意忠實度低（2）。日語句子語法上可理解且自然程度中等，但房號書寫為「7 02」有格式不自然之處，整體自然度中等（3）。標記為hallucination，因為加入了與原文不符的事件（結婚）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

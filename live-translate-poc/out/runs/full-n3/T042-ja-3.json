@@ -47,5 +47,19 @@
     },
     "reason": "譯文完全忠實於原文，日文表達自然流暢，準確傳達了預約確認與班機號碼的資訊。僅句尾標點符號為逗號，但不影響整體語意與口語表達。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整、語意忠實。日文表達自然，與參考譯文意思一致（「メールで予約を確認できますか？」および「私の便はBR198です」）。僅有標點和空白的細微差異，不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

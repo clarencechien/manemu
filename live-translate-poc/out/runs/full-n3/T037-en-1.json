@@ -47,5 +47,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text. The formatting of the room number as '7 02' is slightly unnatural but understandable in a speech transcript context. 'Fainted' is a correct and natural translation for '昏倒了'."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文兩個資訊（房間號與朋友昏倒）。唯一小問題是房號寫作“7 02”不自然，英文通常寫作“702”或拼為“seven-oh-two”；此外標點（逗號）可改為破折號或連接詞以表緊急語氣。動詞時態/語氣（fainted vs. has collapsed）為輕微差異，不影響理解，因此給予較高評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -46,5 +46,19 @@
     },
     "reason": "The translation accurately and fluently conveys the meaning of the original text. No errors were found."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately and completely conveys the original meaning. Wording is natural and fluent in English (e.g., 'If there are no seats at 3 o'clock, 4 o'clock is fine too.'), matching the reference's sense."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

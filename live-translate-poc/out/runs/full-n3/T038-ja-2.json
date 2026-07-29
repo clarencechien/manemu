@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確且非常自然地傳達了原文的意思，口語倒裝句「アレルギーで」符合日語口語表達習慣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（不能打青黴素，因為會過敏），所以語意忠實度高。表現上使用了口語形式「アレルギーで」，語尾較口語且略為省略句，但仍自然可理解，因此流暢度略低於完美。沒有遺漏或錯誤翻轉等問題。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

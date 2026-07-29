@@ -47,5 +47,19 @@
     },
     "reason": "The translation omits the word '預約' (reservation) and the question structure 'I can confirm using email?' is slightly unnatural and lacks an object."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文傳達了原意（詢問是否可用 email 確認預約，並提供班機 BR198），因此語意忠實度接近完整，但有語序/句型問題（應為疑問句 'Can I confirm...' 而不是陳述句加問號），且標點與自然用法略顯不自然（'BR 198,' 的空格與尾逗號不恰當），故 fluency 稍低。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

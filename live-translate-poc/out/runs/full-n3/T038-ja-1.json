@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確且非常自然地傳達了原文的意思，口語倒裝句「アレルギーで」符合日語口語表達習慣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意（無法接種青黴素，原因為過敏）。語句為口語化表現，結尾用『アレルギーで。』略顯不完整但可接受，自然度略低於參考譯文。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

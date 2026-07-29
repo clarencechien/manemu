@@ -47,5 +47,19 @@
     },
     "reason": "譯文語意基本準確，日文表達也算自然，但句尾以「で、」作結，給人話未說完的感覺，與原文的句號略有出入。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文兩個要點：詢問是否可用 email 確認預約，以及班機 BR198。內容正確（航班號無誤）。唯句尾以「、」未完結或標點不自然，造成流暢度略受影響，因此 fluency 評為 4，但語意忠實（adequacy）為 5。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

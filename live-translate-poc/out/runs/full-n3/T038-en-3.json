@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. 'I'll have an allergic reaction' is a perfectly valid and fluent translation of '我會過敏' in this context."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實：原句表達不能使用青黴素因為會過敏，機器譯文正確傳達該意。語句在英語中自然（雖可微調為“I'm allergic to it”或使用破折號，但當前表達無誤）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

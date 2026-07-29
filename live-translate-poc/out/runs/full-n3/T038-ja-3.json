@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的意思。日語口語中採用倒裝句型「～んです、～で」（因為過敏，所以不能打青黴素）非常自然流暢，完全符合口譯情境。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思：表示不能打青黴素且原因為過敏。日語表現自然且口語化（「打てないんです、アレルギーで。」），雖然比參考譯文更口語、後半句用省略形式但仍可理解，無語意錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

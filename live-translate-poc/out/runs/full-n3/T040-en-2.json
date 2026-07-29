@@ -45,5 +45,19 @@
     },
     "reason": "The translation is accurate, natural, and conveys the exact meaning of the original text without any errors."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，保留「不是取消」的否定對比，語句自然流暢，與參考譯文等效。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
