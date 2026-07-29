@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:21:00.983Z"
+  "ts": "2026-07-29T07:21:00.983Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is accurate and natural. Translating '這班車' as 'this bus' is acceptable since '車' can refer to either a bus or a train depending on the context."
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }
