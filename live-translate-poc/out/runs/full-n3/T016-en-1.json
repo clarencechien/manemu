@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:22:19.175Z"
+  "ts": "2026-07-29T07:22:19.175Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "The translation contains a severe homophone error where '蝦子' (shrimp, xiāzi) was mistranslated as 'blind people' (瞎子, xiāzi), making the sentence nonsensical. Additionally, '餐點裡' (in the meal) was translated as 'on the table'."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

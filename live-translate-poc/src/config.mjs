@@ -12,7 +12,9 @@ export const TRANSLATE_MODEL = "models/gemini-3.5-live-translate-preview";
 export const TTS_MODEL = "models/gemini-2.5-flash-preview-tts";
 // 評審模型:計劃預設用異家(OpenAI)降自評偏誤;此環境只有 Gemini 金鑰,
 // 先用同家不同模型代打,報告中標註偏誤風險。之後有 JUDGE_API_KEY 時換 OpenAI。
-export const JUDGE_MODEL = "models/gemini-3.1-pro-preview";
+// 3.1-pro-preview free tier 日配額 ~250 req/day,300 筆會爆;可用 env 換模型續評
+// (每個模型是獨立配額桶;混用會記錄在每筆結果的 judgeModel 欄位)
+export const JUDGE_MODEL = process.env.JUDGE_MODEL || "models/gemini-3.1-pro-preview";
 
 export const REST_BASE = "https://generativelanguage.googleapis.com/v1beta";
 export const LIVE_WS_URL =
