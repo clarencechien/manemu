@@ -1,0 +1,436 @@
+<title>即時口譯 對談流程 Mockup v1</title>
+<style>
+  :root{
+    --paper:#F6F7F5; --ink:#1C2726; --ink-2:#5A6B68; --line:#DDE3E0;
+    --me:#C0392B; --me-soft:#F7E8E5; --them:#33587A; --them-soft:#E7EDF3;
+    --ok:#2E7D4F; --ok-soft:#E3F0E8; --warn:#9A6B00; --warn-soft:#F7EFD8;
+    --chip:#ECEFED; --shadow:0 10px 30px rgba(28,39,38,.14);
+    --phone-bg:#E8EBE9;
+  }
+  @media (prefers-color-scheme: dark){ :root{
+    --paper:#151D1C; --ink:#E8ECEA; --ink-2:#93A29E; --line:#2A3634;
+    --me:#E05A48; --me-soft:#3A2320; --them:#7BA3CC; --them-soft:#1E2B38;
+    --ok:#63B588; --ok-soft:#1D2E25; --warn:#D9A93F; --warn-soft:#33290F;
+    --chip:#222C2A; --shadow:0 10px 30px rgba(0,0,0,.5);
+    --phone-bg:#0D1312;
+  }}
+  :root[data-theme="dark"]{
+    --paper:#151D1C; --ink:#E8ECEA; --ink-2:#93A29E; --line:#2A3634;
+    --me:#E05A48; --me-soft:#3A2320; --them:#7BA3CC; --them-soft:#1E2B38;
+    --ok:#63B588; --ok-soft:#1D2E25; --warn:#D9A93F; --warn-soft:#33290F;
+    --chip:#222C2A; --shadow:0 10px 30px rgba(0,0,0,.5);
+    --phone-bg:#0D1312;
+  }
+  :root[data-theme="light"]{
+    --paper:#F6F7F5; --ink:#1C2726; --ink-2:#5A6B68; --line:#DDE3E0;
+    --me:#C0392B; --me-soft:#F7E8E5; --them:#33587A; --them-soft:#E7EDF3;
+    --ok:#2E7D4F; --ok-soft:#E3F0E8; --warn:#9A6B00; --warn-soft:#F7EFD8;
+    --chip:#ECEFED; --shadow:0 10px 30px rgba(28,39,38,.14);
+    --phone-bg:#E8EBE9;
+  }
+  *{box-sizing:border-box; margin:0}
+  html,body{height:100%}
+  body{
+    font-family:"PingFang TC","Hiragino Sans","Microsoft JhengHei","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;
+    background:var(--phone-bg); color:var(--ink);
+    display:flex; align-items:center; justify-content:center; gap:28px;
+    padding:24px; min-height:100vh;
+  }
+  /* ---------- mockup 外框(桌面) ---------- */
+  .meta{width:230px; font-size:13px; color:var(--ink-2); line-height:1.6}
+  .meta h1{font-size:16px; color:var(--ink); margin-bottom:6px; letter-spacing:.02em}
+  .meta p{margin-bottom:12px}
+  .meta .knob{display:block; width:100%; text-align:left; margin-bottom:8px; padding:8px 12px;
+    border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink);
+    font:inherit; font-size:13px; cursor:pointer}
+  .meta .knob:hover{border-color:var(--ink-2)}
+  .meta .knob:focus-visible,button:focus-visible{outline:2px solid var(--them); outline-offset:2px}
+  .meta small{display:block; margin-top:14px; color:var(--ink-2)}
+  .phone{
+    width:390px; height:780px; background:var(--paper); border-radius:34px;
+    box-shadow:var(--shadow); overflow:hidden; position:relative;
+    border:1px solid var(--line); display:flex; flex-direction:column;
+  }
+  @media (max-width:760px){
+    body{padding:0; gap:0; display:block}
+    .meta{display:none}
+    .phone{width:100%; height:100vh; height:100dvh; border-radius:0; border:none}
+  }
+
+  /* ---------- app 頂列 ---------- */
+  .top{
+    display:flex; align-items:center; gap:8px; padding:14px 14px 10px;
+    border-bottom:1px solid var(--line); flex:none;
+  }
+  .top .scene{font-size:13px; color:var(--ink-2); margin-right:auto}
+  .seg{display:flex; border:1px solid var(--line); border-radius:8px; overflow:hidden}
+  .seg button{
+    font:inherit; font-size:12px; padding:6px 10px; border:none; background:transparent;
+    color:var(--ink-2); cursor:pointer; letter-spacing:.03em;
+  }
+  .seg button[aria-pressed="true"]{background:var(--ink); color:var(--paper)}
+  .engine{font-size:11px; letter-spacing:.05em; padding:5px 9px; border-radius:99px;
+    border:1px solid var(--line); background:var(--chip); color:var(--ink-2); cursor:pointer; font-family:inherit}
+  .engine[data-fast="true"]{border-color:var(--warn); color:var(--warn); background:var(--warn-soft)}
+
+  /* ---------- 對談模式 ---------- */
+  .chatwrap{flex:1; display:flex; flex-direction:column; min-height:0}
+  .stream{flex:1; overflow-y:auto; padding:16px 14px; display:flex; flex-direction:column; gap:14px}
+  .msg{max-width:82%; display:flex; flex-direction:column; gap:4px}
+  .msg.me{align-self:flex-end; align-items:flex-end}
+  .msg.them{align-self:flex-start; align-items:flex-start}
+  .who{font-size:11px; letter-spacing:.08em; color:var(--ink-2)}
+  .bubble{
+    padding:10px 13px; border-radius:14px; font-size:15px; line-height:1.55;
+    border:1px solid var(--line); background:var(--paper); position:relative; user-select:none;
+  }
+  .msg.me .bubble{background:var(--me-soft); border-color:transparent; border-top-right-radius:4px}
+  .msg.them .bubble{background:var(--them-soft); border-color:transparent; border-top-left-radius:4px}
+  .src{font-size:13px; color:var(--ink-2); margin-bottom:4px}
+  .msg.me .tx{color:var(--me)} .msg.them .tx{color:var(--them)}
+  .tx{font-weight:600}
+  .rowmeta{display:flex; gap:6px; align-items:center; font-size:11px; color:var(--ink-2)}
+  .lat{font-variant-numeric:tabular-nums; background:var(--chip); border-radius:5px; padding:1px 6px}
+  .badge{border-radius:5px; padding:1px 8px; cursor:pointer; border:none; font:inherit; font-size:11px}
+  .badge.ok{background:var(--ok-soft); color:var(--ok)}
+  .badge.warn{background:var(--warn-soft); color:var(--warn)}
+  .backtx{
+    font-size:12.5px; color:var(--ink-2); border-left:3px solid var(--warn);
+    padding:6px 10px; margin-top:6px; background:var(--warn-soft); border-radius:0 8px 8px 0;
+  }
+  .backtx.ok{border-color:var(--ok); background:var(--ok-soft)}
+  .hint{font-size:11px; color:var(--warn)}
+  .msg .redoflag{font-size:11px; color:var(--ink-2); text-decoration:line-through; opacity:.7}
+  .speaking .bubble{outline:2px solid currentColor; outline-offset:1px}
+
+  /* ---------- PTT 列 ---------- */
+  .pttbar{
+    flex:none; display:flex; gap:10px; padding:12px 14px calc(14px + env(safe-area-inset-bottom));
+    border-top:1px solid var(--line); background:var(--paper);
+  }
+  .ptt{
+    flex:1; border:none; border-radius:16px; padding:16px 10px 14px; font:inherit; cursor:pointer;
+    color:#fff; display:flex; flex-direction:column; align-items:center; gap:3px;
+    touch-action:none; user-select:none; -webkit-user-select:none;
+    transition:transform .08s ease, filter .12s;
+  }
+  .ptt .big{font-size:15.5px; font-weight:700; letter-spacing:.02em}
+  .ptt .sub{font-size:11px; opacity:.85}
+  .ptt.me{background:var(--me)} .ptt.them{background:var(--them)}
+  .ptt:disabled{filter:grayscale(.6) brightness(.75); cursor:not-allowed}
+  .ptt.holding{transform:scale(.97)}
+  .statusline{
+    flex:none; text-align:center; font-size:12px; color:var(--ink-2); padding:6px 0 0;
+    min-height:22px; letter-spacing:.03em; font-variant-numeric:tabular-nums;
+  }
+  .wave{display:inline-flex; gap:2px; align-items:flex-end; height:10px; margin-left:6px; vertical-align:baseline}
+  .wave i{width:3px; background:currentColor; border-radius:2px; animation:wv .7s ease-in-out infinite}
+  .wave i:nth-child(2){animation-delay:.15s}.wave i:nth-child(3){animation-delay:.3s}.wave i:nth-child(4){animation-delay:.45s}
+  @keyframes wv{0%,100%{height:3px}50%{height:10px}}
+  @media (prefers-reduced-motion: reduce){ .wave i{animation:none; height:6px} }
+
+  /* ---------- 面對面模式 ---------- */
+  .facewrap{flex:1; display:flex; flex-direction:column; min-height:0}
+  .half{flex:1; display:flex; flex-direction:column; min-height:0}
+  .half.jp{transform:rotate(180deg)}
+  .half .feed{flex:1; overflow-y:auto; padding:12px 16px; display:flex; flex-direction:column; gap:10px; justify-content:flex-end}
+  .fline{font-size:19px; line-height:1.45; font-weight:600}
+  .fline small{display:block; font-size:12px; color:var(--ink-2); font-weight:400; margin-top:1px}
+  .fline.mine{color:var(--ink)}
+  .half.jp .fline.mine{color:var(--ink)}
+  .fline.theirs{color:var(--ink-2); font-weight:500; font-size:15px}
+  .fline .fbadge{font-size:11px; vertical-align:2px; margin-left:6px; border-radius:5px; padding:0 6px}
+  .fbadge.ok{background:var(--ok-soft); color:var(--ok)} .fbadge.warn{background:var(--warn-soft); color:var(--warn)}
+  .half .fptt{
+    flex:none; margin:0 16px 12px; border:none; border-radius:14px; padding:13px; font:inherit;
+    color:#fff; cursor:pointer; touch-action:none; user-select:none; -webkit-user-select:none;
+    font-size:15px; font-weight:700;
+  }
+  .half.zh .fptt{background:var(--me)} .half.jp .fptt{background:var(--them)}
+  .half .fptt:disabled{filter:grayscale(.6) brightness(.75)}
+  .half .fstatus{flex:none; text-align:center; font-size:11.5px; color:var(--ink-2); padding:4px 0; min-height:20px}
+  .divider{
+    flex:none; display:flex; align-items:center; justify-content:center; gap:10px;
+    border-top:1px dashed var(--line); border-bottom:1px dashed var(--line);
+    padding:5px; font-size:11px; color:var(--ink-2); letter-spacing:.08em;
+  }
+  .hidden{display:none !important}
+</style>
+
+<aside class="meta">
+  <h1>對談流程 Mockup v1</h1>
+  <p>即時口譯 PoC 的使用流程原型。時序照 harness 實測:預熱 0.5s、精準模式死氣 ~1.0s、快速模式邊講邊出。</p>
+  <button class="knob" id="kTheme">🌗 切換深/淺色</button>
+  <button class="knob" id="kReset">↺ 重播劇本(拉麵店)</button>
+  <small>操作:<b>按住</b> PTT 說話(自動走劇本台詞)→ 放開出譯文。遇到 ⚠ 徽章可點開回譯、<b>長按氣泡</b>重講。面對面模式上半是給對面的人看的(轉 180°)。</small>
+</aside>
+
+<div class="phone" id="app">
+  <div class="top">
+    <span class="scene">🍜 拉麵店</span>
+    <div class="seg" role="group" aria-label="版面模式">
+      <button id="mChat" aria-pressed="true">對談</button>
+      <button id="mFace" aria-pressed="false">面對面</button>
+    </div>
+    <button class="engine" id="mEngine" data-fast="false">精準</button>
+  </div>
+
+  <!-- 對談模式 -->
+  <div class="chatwrap" id="chatMode">
+    <div class="stream" id="stream" aria-live="polite"></div>
+    <div class="statusline" id="status">按住說話</div>
+    <div class="pttbar">
+      <button class="ptt me" id="pttMe"><span class="big">按住・我說中文</span><span class="sub">→ 日本語</span></button>
+      <button class="ptt them" id="pttThem"><span class="big">押して話す</span><span class="sub">→ 中文</span></button>
+    </div>
+  </div>
+
+  <!-- 面對面模式 -->
+  <div class="facewrap hidden" id="faceMode">
+    <div class="half jp">
+      <div class="feed" id="feedJp"></div>
+      <div class="fstatus" id="stJp">押しながら話してください</div>
+      <button class="fptt" id="fpttJp">押して話す(日本語 → 中国語)</button>
+    </div>
+    <div class="divider">⇅ 面對面・上側は相手用</div>
+    <div class="half zh">
+      <div class="feed" id="feedZh"></div>
+      <div class="fstatus" id="stZh">按住下方按鈕說話</div>
+      <button class="fptt" id="fpttZh">按住・我說中文(→ 日本語)</button>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+/* ============ 劇本(拉麵店;含一次誤聽→重講迴圈) ============ */
+const SCRIPT = [
+  { side:"me",   stt:"你好,我要一份豚骨拉麵,麵要硬一點。",
+    tx:"すみません、豚骨ラーメンを一つください。麺は硬めでお願いします。",
+    badge:"ok", back:"你好,請給我一份豚骨拉麵,麵請做硬一點。" },
+  { side:"them", stt:"かしこまりました。トッピングはいかがなさいますか?",
+    tx:"好的。請問配料要加什麼嗎?", badge:"ok", back:"" },
+  { side:"me",   stt:"我對瞎子過敏,餐點請不要放任何海鮮。",
+    tx:"私は盲人にアレルギーがあるので、料理には魚介類を入れないでください。",
+    badge:"warn", back:"我對「盲人」過敏,餐點請不要放海鮮。",
+    hint:"意思可能跑掉了——長按這則氣泡重講一次", needsRedo:true },
+  { side:"me",   stt:"我對『蝦子』過敏,餐點請不要放任何海鮮。",
+    tx:"エビアレルギーがあるので、料理には魚介類を一切入れないでください。",
+    badge:"ok", back:"我有蝦子過敏,餐點請完全不要放海鮮。", isRedo:true },
+  { side:"them", stt:"エビは入っておりません。ご安心ください。",
+    tx:"沒有放蝦子,請放心。", badge:"ok", back:"" },
+  { side:"me",   stt:"太好了,謝謝你!",
+    tx:"よかった、ありがとうございます!", badge:"ok", back:"太好了,非常感謝!" },
+];
+
+/* ============ 狀態 ============ */
+const S = { idx:0, busy:false, fast:false, awaitRedo:false, holdTimer:null, typeTimer:null, lines:[] };
+const $ = (id) => document.getElementById(id);
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+/* ============ 共用:目前該講哪一句 ============ */
+function nextLine(side){
+  const l = SCRIPT[S.idx];
+  if (!l) return null;
+  if (S.awaitRedo && !l.isRedo) return null;      // 誤聽後只接受重講
+  if (l.side !== side) return null;               // 輪到對方
+  return l;
+}
+
+/* ============ 對談模式 render ============ */
+function addBubble(l){
+  const el = document.createElement("div");
+  el.className = "msg " + l.side;
+  el.dataset.idx = S.idx;
+  el.innerHTML = `
+    <span class="who">${l.side === "me" ? "我(中文)" : "店員(日本語)"}</span>
+    <div class="bubble">
+      <div class="src">${l.isRedo ? "🔁 " : ""}${l.stt}</div>
+      <div class="tx"></div>
+    </div>
+    <div class="rowmeta"></div>`;
+  $("stream").appendChild(el);
+  el.scrollIntoView({ block:"end" });
+  return el;
+}
+
+function attachRedo(el){
+  const bub = el.querySelector(".bubble");
+  let t;
+  const start = () => { t = setTimeout(() => { markRedone(el); }, 600); };
+  const stop  = () => clearTimeout(t);
+  bub.addEventListener("pointerdown", start);
+  bub.addEventListener("pointerup", stop);
+  bub.addEventListener("pointerleave", stop);
+}
+
+function markRedone(el){
+  el.querySelector(".src").innerHTML = `<span class="redoflag">${SCRIPT[el.dataset.idx].stt}</span> 已重講 ↓`;
+  el.querySelector(".rowmeta").innerHTML = "";
+  const bt = el.querySelector(".backtx"); if (bt) bt.remove();
+  S.awaitRedo = false;
+  setStatus("好,再按住重講一次");
+}
+
+/* ============ 演出一句(核心流程,兩種模式共用時序) ============ */
+async function playLine(l, ui){
+  S.busy = true;
+  const t0 = performance.now();
+  ui.status("連線中…", true);
+  await sleep(500);                                   // 預熱(實測暖 0.4–0.66s)
+  ui.status("聆聽中 <span class='wave'><i></i><i></i><i></i><i></i></span>", true);
+
+  // 逐字打出 STT;快速模式邊講邊出譯文
+  const el = ui.begin(l);
+  const src = el.srcEl, tx = el.txEl;
+  const chars = [...l.stt];
+  for (let i = 0; i < chars.length; i++){
+    src.textContent = (l.isRedo ? "🔁 " : "") + chars.slice(0, i + 1).join("");
+    if (S.fast && i > 4){
+      const ratio = (i - 3) / chars.length;
+      tx.textContent = [...l.tx].slice(0, Math.floor([...l.tx].length * ratio)).join("");
+    }
+    await sleep(1900 / chars.length);
+  }
+  ui.status("放開了・翻譯中…", true);
+  await sleep(S.fast ? 250 : 1000);                   // 死氣:精準 p50 ≈1.0s、快速搶跑
+  tx.textContent = l.tx;
+
+  ui.status("🔊 播放譯音(此時麥克風關閉)", true);
+  el.host?.classList.add("speaking");
+  await sleep(1600);
+  el.host?.classList.remove("speaking");
+
+  const lag = ((performance.now() - t0) / 1000).toFixed(1);
+  ui.done(l, el, lag);
+  S.busy = false;
+  if (l.needsRedo){ S.awaitRedo = true; }
+  S.idx++;
+  syncFace();
+  ui.status(S.idx >= SCRIPT.length ? "劇本結束・↺ 可重播" : "按住說話", false);
+}
+
+/* ============ 對談模式的 ui 介面 ============ */
+const chatUI = {
+  begin(l){
+    const host = addBubble(l);
+    return { host, srcEl: host.querySelector(".src"), txEl: host.querySelector(".tx") };
+  },
+  done(l, el, lag){
+    const meta = el.host.querySelector(".rowmeta");
+    meta.innerHTML = `<span class="lat">${lag}s</span>`;
+    if (l.side === "me"){
+      const b = document.createElement("button");
+      b.className = "badge " + l.badge;
+      b.textContent = l.badge === "ok" ? "✓ 意思一致" : "⚠ 確認一下";
+      b.addEventListener("click", () => {
+        if (el.host.querySelector(".backtx")) return;
+        const d = document.createElement("div");
+        d.className = "backtx" + (l.badge === "ok" ? " ok" : "");
+        d.innerHTML = `對方聽到的意思:「${l.back}」` + (l.hint ? `<div class="hint">${l.hint}</div>` : "");
+        el.host.querySelector(".bubble").appendChild(d);
+        el.host.scrollIntoView({ block:"end" });
+      });
+      meta.appendChild(b);
+      if (l.badge === "warn") b.click();               // 警告直接展開
+    }
+    if (l.needsRedo) attachRedo(el.host);
+    el.host.scrollIntoView({ block:"end" });
+  },
+  status(html, busyState){ $("status").innerHTML = html; setPtt(busyState); },
+};
+function setStatus(t){ $("status").textContent = t; }
+function setPtt(disabled){
+  $("pttMe").disabled = disabled && !$("pttMe").classList.contains("holding");
+  $("pttThem").disabled = disabled && !$("pttThem").classList.contains("holding");
+}
+
+/* ============ 面對面模式:同一份對話,雙面各自的語言 ============ */
+function syncFace(){
+  const jp = [], zh = [];
+  for (let i = 0; i < S.idx; i++){
+    const l = SCRIPT[i];
+    if (l.needsRedo && SCRIPT[i + 1]?.isRedo && i + 1 < S.idx) continue; // 面對面隱藏已重講的錯誤句
+    const jaText = l.side === "me" ? l.tx : l.stt;
+    const zhText = l.side === "me" ? l.stt : l.tx;
+    jp.push(`<div class="fline ${l.side === "them" ? "mine" : "theirs"}">${jaText}<small>${l.side === "them" ? "あなた" : "相手(中国語)"}</small></div>`);
+    const badge = (l.side === "me") ? `<span class="fbadge ${l.badge}">${l.badge === "ok" ? "✓" : "⚠"}</span>` : "";
+    zh.push(`<div class="fline ${l.side === "me" ? "mine" : "theirs"}">${zhText}${badge}<small>${l.side === "me" ? "你說的" : "對方(日語)"}</small></div>`);
+  }
+  $("feedJp").innerHTML = jp.join("");
+  $("feedZh").innerHTML = zh.join("");
+  $("feedJp").scrollTop = $("feedJp").scrollHeight;
+  $("feedZh").scrollTop = $("feedZh").scrollHeight;
+}
+function faceUI(half){
+  const st = half === "zh" ? $("stZh") : $("stJp");
+  const feed = half === "zh" ? $("feedZh") : $("feedJp");
+  return {
+    begin(l){
+      const d = document.createElement("div");
+      d.className = "fline mine";
+      d.innerHTML = `<span class="fsrc"></span><small>${half === "zh" ? "你說的" : "あなた"}</small>`;
+      feed.appendChild(d);
+      // 面對面:自己那半打 STT 字,對面那半等譯文
+      const other = half === "zh" ? $("feedJp") : $("feedZh");
+      const od = document.createElement("div");
+      od.className = "fline theirs"; od.innerHTML = `<span class="ftx"></span><small>${half === "zh" ? "相手(中国語)" : "對方(日語)"}</small>`;
+      other.appendChild(od);
+      return { host:d, srcEl:d.querySelector(".fsrc"), txEl:od.querySelector(".ftx") };
+    },
+    done(){ syncFace(); },
+    status(html, busyState){
+      st.innerHTML = html;
+      $("fpttZh").disabled = busyState; $("fpttJp").disabled = busyState;
+    },
+  };
+}
+
+/* ============ PTT 按住事件 ============ */
+function bindHold(btn, side, ui){
+  const down = (e) => {
+    e.preventDefault();
+    if (S.busy || S.idx >= SCRIPT.length) return;
+    const l = nextLine(side);
+    if (!l){
+      const msg = S.awaitRedo ? "請先長按錯誤的氣泡取消,再重講" : (SCRIPT[S.idx]?.side === "me" ? "劇本輪到:中文這側" : "劇本輪到:日語這側");
+      ui.status(msg, false);
+      return;
+    }
+    btn.classList.add("holding");
+    playLine(l, ui).then(() => btn.classList.remove("holding"));
+  };
+  btn.addEventListener("pointerdown", down);
+}
+bindHold($("pttMe"), "me", chatUI);
+bindHold($("pttThem"), "them", chatUI);
+bindHold($("fpttZh"), "me", faceUI("zh"));
+bindHold($("fpttJp"), "them", faceUI("jp"));
+
+/* ============ 模式/引擎/主題/重播 ============ */
+$("mChat").addEventListener("click", () => switchMode(false));
+$("mFace").addEventListener("click", () => switchMode(true));
+function switchMode(face){
+  $("mChat").setAttribute("aria-pressed", String(!face));
+  $("mFace").setAttribute("aria-pressed", String(face));
+  $("chatMode").classList.toggle("hidden", face);
+  $("faceMode").classList.toggle("hidden", !face);
+  if (face) syncFace();
+}
+$("mEngine").addEventListener("click", () => {
+  S.fast = !S.fast;
+  $("mEngine").dataset.fast = String(S.fast);
+  $("mEngine").textContent = S.fast ? "快速" : "精準";
+  setStatus(S.fast ? "快速模式:邊講邊翻,請盯著確認文字" : "精準模式:講完約 1 秒出譯音");
+});
+$("kTheme")?.addEventListener("click", () => {
+  const r = document.documentElement;
+  const cur = r.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  r.dataset.theme = cur === "dark" ? "light" : "dark";
+});
+$("kReset")?.addEventListener("click", () => {
+  S.idx = 0; S.busy = false; S.awaitRedo = false;
+  $("stream").innerHTML = ""; $("feedJp").innerHTML = ""; $("feedZh").innerHTML = "";
+  setStatus("按住說話"); setPtt(false);
+});
+</script>
