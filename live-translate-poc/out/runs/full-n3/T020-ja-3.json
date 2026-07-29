@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T020",
+  "category": "dining",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "請問可以幫我們分開結帳嗎?",
+  "reference": "すみません、お会計を別々にしていただけますか?",
+  "inputTranscript": "請問可以幫我們分開結賬嗎?",
+  "outputTranscript": "すみません、別々に会計できますか？",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 3250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 298,
+    "ttft_from_end_ms": 273,
+    "completion_lag_ms": 2938,
+    "ttfa_from_start_ms": 3198
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.714,
+    "coverage_ok": true,
+    "cer": 0.083
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:23:36.696Z"
+}

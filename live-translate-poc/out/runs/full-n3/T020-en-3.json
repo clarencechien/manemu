@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T020",
+  "category": "dining",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "請問可以幫我們分開結帳嗎?",
+  "reference": "Excuse me, could we get separate checks?",
+  "inputTranscript": "請問可以幫我們分開結賬嗎?",
+  "outputTranscript": "Excuse me, could you split the bill for us?",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 2750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 486,
+    "ttft_from_end_ms": 292,
+    "completion_lag_ms": 2509,
+    "ttfa_from_start_ms": 3385
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.031,
+    "coverage_ok": true,
+    "cer": 0.083
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:23:45.234Z"
+}

@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:20:55.534Z"
+  "ts": "2026-07-29T07:20:55.534Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文遺漏了「幫我看一下」的語意，直接翻譯為「這班公車是往橫濱的嗎？」，雖然核心詢問目的有傳達，但略有省略。日文表達非常自然。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }
