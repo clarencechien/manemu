@@ -64,6 +64,13 @@ relay 取代 ephemeral token 的代價是音訊多一跳(edge 延遲 +~10–50ms
 4. 使用者 10s 內再按:開新 session(無 context 繼承;v1 接受此限制)。
 5. DO 端硬上限:單 session 120s、單用戶每日 X 分鐘(env 可調)——費用保險絲。
 
+## 5.5 登入與白名單(封測 gate)
+
+- **Google SSO**(OAuth code flow 在 Worker 端完成,session cookie httpOnly):登入前只有介紹頁+預錄示範(不開 mic、不 call 翻譯 API)。
+- **白名單**:`r2://config/allowlist.json`(email 陣列);登入 callback 時比對,不在名單 → 「等待受邀」頁。名單更新 = 改 R2 物件,不用重部署。
+- **測試模式**(白名單用戶,頂列 🧪):逐句出 T50 語料照念,每句寫 `r2://field-tests/{email}/{ts}-{id}.json`(音檔+STT+譯文+延遲)→ 產品化收集真人語音,直接餵回 harness 評測(R1 的長期版)。
+- 費用保險絲掛在 email 維度:每人每日翻譯分鐘上限(R2/DO 計數)。
+
 ## 6. 工程清單(M3 需要寫的東西)
 
 - [ ] `workers/relay.ts`(DO):WS 雙向轉發 + setup 注入 + 靜音收斂 + 限額
