@@ -1599,6 +1599,206 @@
   "T045-3|openai/gpt-5.4-nano": {
    "bt": "真的謝謝你幫我。",
    "latencyMs": 818
+  },
+  "T043-3|qwen/qwen3.7-flash": {
+   "bt": "不好意思，請問幾點前取消才不會收取消費？",
+   "latencyMs": 10005
+  },
+  "T046-1|openai/gpt-5.4-nano": {
+   "bt": "中文你超厲害欸，你是在哪裡學的啊？",
+   "latencyMs": 648
+  },
+  "T046-1|anthropic/claude-haiku-4.5": {
+   "bt": "你的中文講得真好呢，你是在哪裡學的啊？",
+   "latencyMs": 1267
+  },
+  "T046-2|openai/gpt-5.4-nano": {
+   "bt": "中國語超級",
+   "latencyMs": 535
+  },
+  "T046-2|anthropic/claude-haiku-4.5": {
+   "bt": "中文講得很好",
+   "latencyMs": 2122
+  },
+  "T044-3|qwen/qwen3.7-flash": {
+   "bt": "我會晚到30分鐘，位子可以幫我留一下嗎？",
+   "latencyMs": 7802
+  },
+  "T046-3|openai/gpt-5.4-nano": {
+   "bt": "你中文超厲害欸，是在哪裡學的啊？",
+   "latencyMs": 588
+  },
+  "T046-3|anthropic/claude-haiku-4.5": {
+   "bt": "你的中文講得真好呢。你在哪裡學的啊？",
+   "latencyMs": 1388
+  },
+  "T047-1|anthropic/claude-haiku-4.5": {
+   "bt": "日本的夏天雖然很熱，但我覺得台北更熱。",
+   "latencyMs": 1251
+  },
+  "T047-1|openai/gpt-5.4-nano": {
+   "bt": "日本的夏天超熱的，不過我覺得台北更熱。",
+   "latencyMs": 662
+  },
+  "T047-2|anthropic/claude-haiku-4.5": {
+   "bt": "日本的夏天雖然很熱，但我覺得台北更熱。",
+   "latencyMs": 1461
+  },
+  "T046-3|qwen/qwen3.7-flash": {
+   "bt": "中文說得真好！你在哪裡學的啊？",
+   "latencyMs": 5641
+  },
+  "T047-2|openai/gpt-5.4-nano": {
+   "bt": "日本的夏天雖然很熱，但我覺得台北那邊更熱。",
+   "latencyMs": 619
+  },
+  "T045-2|qwen/qwen3.7-flash": {
+   "bt": "謝謝你幫忙，今天真的幫大忙了。",
+   "latencyMs": 13520
+  },
+  "T045-3|qwen/qwen3.7-flash": {
+   "bt": "真的很謝謝你幫我。",
+   "latencyMs": 12014
+  },
+  "T046-2|qwen/qwen3.7-flash": {
+   "bt": "我中文很溜",
+   "latencyMs": 10391
+  },
+  "T046-1|qwen/qwen3.7-flash": {
+   "bt": "你中文說得真好，是在哪裡學的？",
+   "latencyMs": 11224
+  },
+  "T047-3|openai/gpt-5.4-nano": {
+   "bt": "日本的夏天雖然很熱，不過我覺得台北比那邊更熱。",
+   "latencyMs": 673
+  },
+  "T048-1|anthropic/claude-haiku-4.5": {
+   "bt": "是結構啦，謝謝。我只是在看而已。",
+   "latencyMs": 1128
+  },
+  "T047-3|anthropic/claude-haiku-4.5": {
+   "bt": "日本的夏天雖然很熱，但我覺得台北更熱。",
+   "latencyMs": 2297
+  },
+  "T048-1|openai/gpt-5.4-nano": {
+   "bt": "這就是那個結構，謝啦。不過我只是看看而已。",
+   "latencyMs": 1257
+  },
+  "T048-2|openai/gpt-5.4-nano": {
+   "bt": "就是這樣，謝謝。不過我只是看看而已。",
+   "latencyMs": 674
+  },
+  "T048-2|anthropic/claude-haiku-4.5": {
+   "bt": "是結構啦，謝謝。我只是在看而已。",
+   "latencyMs": 1744
+  },
+  "T047-1|qwen/qwen3.7-flash": {
+   "bt": "日本夏天雖然很熱，不過我覺得台北比較熱啦。",
+   "latencyMs": 8227
+  },
+  "T047-2|qwen/qwen3.7-flash": {
+   "bt": "日本夏天雖然很熱，不過我覺得台北更熱。",
+   "latencyMs": 8443
+  },
+  "T045-1|qwen/qwen3.7-flash": {
+   "bt": "謝謝你幫我，今天真的幫大忙了。",
+   "latencyMs": 23268
+  },
+  "T048-3|openai/gpt-5.4-nano": {
+   "bt": "結構啦，謝謝。不過我只是看看而已。",
+   "latencyMs": 994
+  },
+  "T048-1|qwen/qwen3.7-flash": {
+   "bt": "不用了，謝謝。我只是在旁边看看而已。",
+   "latencyMs": 6429
+  },
+  "T048-3|anthropic/claude-haiku-4.5": {
+   "bt": "是結構啦，謝謝。我只是在看而已。",
+   "latencyMs": 1562
+  },
+  "T049-1|openai/gpt-5.4-nano": {
+   "bt": "我是從台灣來的。來大阪還是第一次。",
+   "latencyMs": 614
+  },
+  "T047-3|qwen/qwen3.7-flash": {
+   "bt": "日本夏天雖然很熱，不過我覺得台北比較熱啦。",
+   "latencyMs": 9403
+  },
+  "T049-1|anthropic/claude-haiku-4.5": {
+   "bt": "我是從台灣來的。這是我第一次來大阪。",
+   "latencyMs": 1394
+  },
+  "T049-2|openai/gpt-5.4-nano": {
+   "bt": "我來自台灣。這是我第一次來大阪。",
+   "latencyMs": 535
+  },
+  "T049-2|anthropic/claude-haiku-4.5": {
+   "bt": "我是從台灣來的。這是我第一次來大阪。",
+   "latencyMs": 1127
+  },
+  "T049-3|openai/gpt-5.4-nano": {
+   "bt": "我從台灣來的，來大阪還是第一次。",
+   "latencyMs": 838
+  },
+  "T049-3|anthropic/claude-haiku-4.5": {
+   "bt": "我是從台灣來的。這是我第一次來大阪。",
+   "latencyMs": 1185
+  },
+  "T050-1|anthropic/claude-haiku-4.5": {
+   "bt": "那就麻煩你了。我等等再跟你聯絡。",
+   "latencyMs": 1028
+  },
+  "T050-1|openai/gpt-5.4-nano": {
+   "bt": "那就麻煩你了，我們再聯絡。",
+   "latencyMs": 660
+  },
+  "T050-2|anthropic/claude-haiku-4.5": {
+   "bt": "那就麻煩你了。我等等再跟你聯絡。",
+   "latencyMs": 1414
+  },
+  "T048-2|qwen/qwen3.7-flash": {
+   "bt": "不用了，謝謝。我只是看看而已。",
+   "latencyMs": 11089
+  },
+  "T050-2|openai/gpt-5.4-nano": {
+   "bt": "那就麻煩你了，我之後再聯絡。",
+   "latencyMs": 669
+  },
+  "T050-3|openai/gpt-5.4-nano": {
+   "bt": "那就麻煩你了，我再聯絡你。",
+   "latencyMs": 577
+  },
+  "T049-1|qwen/qwen3.7-flash": {
+   "bt": "我是台灣來的，第一次來大阪。",
+   "latencyMs": 6391
+  },
+  "T049-2|qwen/qwen3.7-flash": {
+   "bt": "我是台灣來的，第一次來大阪。",
+   "latencyMs": 6114
+  },
+  "T050-3|anthropic/claude-haiku-4.5": {
+   "bt": "那就麻煩你了。我等等再跟你聯絡。",
+   "latencyMs": 1922
+  },
+  "T048-3|qwen/qwen3.7-flash": {
+   "bt": "不用啦，謝謝。我只是來看看而已。",
+   "latencyMs": 10624
+  },
+  "T049-3|qwen/qwen3.7-flash": {
+   "bt": "我是台灣來的，第一次來大阪。",
+   "latencyMs": 9552
+  },
+  "T050-1|qwen/qwen3.7-flash": {
+   "bt": "那，就麻煩你了。我再跟你聯絡。",
+   "latencyMs": 10754
+  },
+  "T050-3|qwen/qwen3.7-flash": {
+   "bt": "那，麻煩你了。我再跟你聯絡。",
+   "latencyMs": 9648
+  },
+  "T050-2|qwen/qwen3.7-flash": {
+   "bt": "那，就麻煩你了。我再跟你聯絡。",
+   "latencyMs": 10012
   }
  },
  "eq": {
@@ -2801,6 +3001,185 @@
   },
   "T045-3|openai/gpt-5.4-nano": {
    "notice": true
+  },
+  "T043-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T046-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T046-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T046-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T046-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T044-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T046-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T046-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T047-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T047-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T047-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T046-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T047-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T045-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T045-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T046-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T046-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T047-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T048-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T047-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T048-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T048-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T048-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T047-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T047-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T045-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T048-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T048-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T048-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T049-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T047-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T049-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T049-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T049-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T049-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T049-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T050-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T050-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T050-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T048-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T050-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T050-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T049-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T049-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T050-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T048-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T049-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T050-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T050-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T050-2|qwen/qwen3.7-flash": {
+   "notice": false
+  }
+ },
+ "stats": {
+  "fixedJudge": "mistralai/mistral-large-2512",
+  "engines": {
+   "anthropic/claude-haiku-4.5": {
+    "n": 150,
+    "detection_rate": 0.727,
+    "disaster_n": 11,
+    "false_alarm_rate": 0.146,
+    "latency_p50": 1298,
+    "latency_p90": 1743
+   },
+   "openai/gpt-5.4-nano": {
+    "n": 150,
+    "detection_rate": 1,
+    "disaster_n": 11,
+    "false_alarm_rate": 0.323,
+    "latency_p50": 788,
+    "latency_p90": 1541
+   },
+   "qwen/qwen3.7-flash": {
+    "n": 150,
+    "detection_rate": 0.818,
+    "disaster_n": 11,
+    "false_alarm_rate": 0.146,
+    "latency_p50": 9138,
+    "latency_p90": 12107
+   }
   }
  }
 }
