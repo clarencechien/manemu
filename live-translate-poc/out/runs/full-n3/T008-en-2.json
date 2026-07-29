@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T008",
+  "category": "transport",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "這班車會到大阪,但是應該不會停京都吧?",
+  "reference": "This train goes to Osaka, but it doesn't stop at Kyoto, right?",
+  "inputTranscript": "这班车会到大阪,但是应该不会停京都吧。",
+  "outputTranscript": "This bus goes to Osaka, but it probably won't stop in Kyoto.",
+  "inputDurationMs": 3851,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -852,
+    "ttft_from_end_ms": -920,
+    "completion_lag_ms": 2501,
+    "ttfa_from_start_ms": 3148
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.979,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:19:44.154Z"
+}

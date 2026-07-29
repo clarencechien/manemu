@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T012",
+  "category": "transport",
+  "traps": [
+    "honorific",
+    "proper-noun"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "不好意思,可以幫我看一下這班車是不是往橫濱的嗎?",
+  "reference": "すみません、この電車が横浜行きかどうか、ちょっと見ていただけますか?",
+  "inputTranscript": "不好意思,可以帮我看一下这班车是不是往横滨的吗?",
+  "outputTranscript": "すみません、このバスは横浜行きですか？",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 3750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -981,
+    "ttft_from_end_ms": -1129,
+    "completion_lag_ms": 2046,
+    "ttfa_from_start_ms": 3319
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.548,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:20:50.343Z"
+}

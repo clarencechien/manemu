@@ -1,0 +1,33 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T009",
+  "category": "transport",
+  "traps": [],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "請問這個位子有人坐嗎?",
+  "reference": "Excuse me, is this seat taken?",
+  "inputTranscript": "请问这个位置有人坐吗?",
+  "outputTranscript": "Excuse me, is this seat taken?",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 3000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 560,
+    "ttft_from_end_ms": 498,
+    "completion_lag_ms": 2925,
+    "ttfa_from_start_ms": 3159
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.1
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:20:01.908Z"
+}

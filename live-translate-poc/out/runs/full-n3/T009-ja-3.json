@@ -1,0 +1,33 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T009",
+  "category": "transport",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "請問這個位子有人坐嗎?",
+  "reference": "すみません、この席には誰か座っていますか?",
+  "inputTranscript": "请问这个位置有人坐吗?",
+  "outputTranscript": "すみません、ここ空いてますか？",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 2500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 548,
+    "ttft_from_end_ms": 459,
+    "completion_lag_ms": 2381,
+    "ttfa_from_start_ms": 3148
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.684,
+    "coverage_ok": true,
+    "cer": 0.1
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:19:55.337Z"
+}
