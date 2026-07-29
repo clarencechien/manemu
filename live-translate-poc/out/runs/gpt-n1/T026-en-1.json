@@ -46,5 +46,19 @@
     },
     "reason": "The translation is highly accurate and natural. It correctly conveys the meaning of the source text, translating '我考慮了一下' as 'I thought it over' and '這個還是先不買好了' as 'I'd better not buy it yet'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（已考慮過，決定暫時不買），語句自然通順。用法與語氣與中文原意一致。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

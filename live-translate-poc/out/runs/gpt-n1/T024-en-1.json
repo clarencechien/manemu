@@ -46,5 +46,19 @@
     },
     "reason": "The translation is highly accurate and natural. '打八折' is correctly translated as 'twenty percent off', and the conditional structure is well-rendered. 'two pieces' is a slightly literal but completely acceptable translation of '兩件'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，意指若該件商品打八折就買兩件；用語自然，僅「pieces」與參考譯文的簡潔表述不同但不影響正確性。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

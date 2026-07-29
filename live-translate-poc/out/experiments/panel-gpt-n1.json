@@ -1266,6 +1266,19 @@
      "hallucination": true
     },
     "reason": "譯文將「回新宿的電車」誤譯為「Circular line」，並添加了原文沒有的「Circular line」資訊，但核心時間與確認意圖傳達正確，英文表達自然。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文將「新宿」誤譯為「Circular line」，且「電車」譯為tram而非train，語意嚴重偏離，並有格式錯誤(lineis)。"
    }
   },
   "T010-ja-1": {
@@ -1320,6 +1333,19 @@
      "hallucination": true
     },
     "reason": "新宿被誤譯為無關詞彙「スターアライド」，且原句疑問語氣消失"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "「新宿」被誤譯為不存在的「スターアライド」，「回」誤譯為「一回分」，且遺失疑問語氣與敬體。"
    }
   },
   "T011-en-1": {
@@ -1335,6 +1361,58 @@
      "hallucination": true
     },
     "reason": "金額與儲值對象正確，但憑空加入「Even with a knife」且句子未完成，嚴重偏離原意。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 1,
+    "fluency": 1,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文完全偏離原文語意，添加無關內容（刀子），屬於嚴重幻覺錯誤"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 1,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文嚴重偏離原意，憑空添加了原文沒有的「即使有刀」的內容，語意忠實度極低；目標語句子結構雖完整但語意不通順。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": true
+    },
+    "reason": "譯文出現與原文無關的「刀」且未表達「我想」的意圖,語意嚴重偏離且句子不完整"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 1,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": true
+    },
+    "reason": "譯文憑空加入「Even with a knife」，嚴重偏離原文語意，且句子結構不完整。"
    }
   },
   "T011-ja-1": {
@@ -1350,6 +1428,1266 @@
      "hallucination": false
     },
     "reason": "語意完整正確，日語表達自然，僅多出的「A」不影響理解。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「ICカード」誤譯為「AICカード」,其餘語意與語氣皆準確流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「IC卡」誤譯為「AICカード」，但金額、動作及語氣均正確。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的語意，且日語表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「IC」被誤譯為「AIC」，屬專有名詞錯誤；語意大致正確但日語表達略顯生硬。"
+   }
+  },
+  "T012-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文自然且保留詢問車輛去向的意思，但將「橫濱」錯譯為「Hengping」。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "地名橫濱被誤譯為Hengping,人名地名錯譯嚴重影響忠實度"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "地名「橫濱」錯譯為「Hengping」，但整體語意和禮貌表達尚可"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "关键地名“横滨”被误译为“Hengping”，且“这班车”被译为“bus”而非更准确的“train”，导致核心信息错误，但句子结构基本通顺。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文流暢自然，但將專有名詞『橫濱』(Yokohama) 誤譯為 Hengping，且將『這班車』(通常指火車或泛指班次) 譯為 bus，語意忠實度受損。"
+   }
+  },
+  "T012-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達詢問此班電車是否前往橫濱的意思，日語自然且敬語恰當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致,語法自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，僅「是不是」的確認語氣略有簡化，但不影響整體準確度。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的询问意图与礼貌语气，日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，敬語使用得體，日語表達自然流暢。"
+   }
+  },
+  "T013-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文憑空加入「大家早安」，且將月台誤譯為舞台，但遺失手機的核心意思仍在。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文將「月台」誤譯為「舞台」，並添加了原文沒有的問候語，導致語意不忠實。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文誤譯月台為舞台且多加了原文沒有的問候語,語意不忠實。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文添加了無關的「Good morning, everyone」並將「月台」誤譯為「stage」，語意不忠實"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文將「月台」誤譯為「stage」（舞台），且無端添加了「Good morning, everyone.」等原文不存在的內容，屬幻譯；語意忠實度低，但英文本身流暢。"
+   }
+  },
+  "T013-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "將「月台」誤譯為「舞台」，且「弄丟」譯成「掉落」語意較弱，但句子自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "关键信息错误：'月台'被误译为'舞台'，导致核心语义不忠实。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「月台」誤譯為「ステージ」(舞台)，語意不完全對應，但整體句意尚可理解。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "「月台」被誤譯為「ステージ」(舞台),地點語意錯誤嚴重"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「ステージ」應為「ホーム（月台）」，語意錯誤導致忠實度大幅下降，但日語表達本身自然流暢。"
+   }
+  },
+  "T014-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "後句正確自然，但將「這個不要辣」誤譯為「Forget this」，嚴重偏離原意。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": true
+    },
+    "reason": "將「這個不要辣」誤譯為「Forget this」,遺漏原意且產生錯誤含義"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「這個不要辣」譯為「Forget this」語氣過強且語意不完全對應，但整體核心意思仍傳達正確。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的核心语义和语气，表达自然流畅，但将‘这个不要辣’译为‘Forget this’略显生硬，不如参考译文直接明确。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "「這個不要辣」被誤譯為「Forget this」（忘掉這個），完全偏離原意，屬嚴重漏譯與語意錯誤；後半句流暢自然。"
+   }
+  },
+  "T014-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "後半正確表達不能吃太辣，但前半誤譯成「這個不要／不需要」，遺漏了要求不要加辣的意思。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「不要辣」譯為「いらないな」語意略有偏差，但整體忠實度尚可；日文表達自然，但口氣較隨意。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "语意基本传达，但将‘不要辣’（请求不加辣）译为‘いらない’（不需要）不够准确，目标语表达自然流畅。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": true,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "「不要辣」被誤譯為「這個不要」,語意從『不要辣』變成『不要這個東西』,意思錯誤。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「不要辣」被誤譯為「不需要這個」，語意嚴重偏差；敬語缺失，語氣不自然。"
+   }
+  },
+  "T015-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達五人、兩名小孩及需要兒童椅的意思，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意基本忠實,但時態由現在轉為過去,略有偏差。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「總共」未完全譯出，「兒童椅」譯為「child seats」而非「high chairs」，但語意基本正確"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意，時態選擇自然且符合語境，表達流暢地道。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致忠實且流暢自然，但時態由現在式轉為過去式，且「兒童椅」譯為 child seats 而非較精確的 high chairs，略失精準。"
+   }
+  },
+  "T015-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "人數與兒童人數均正確且日語自然，但「チャイルドシート」通常指汽車安全座椅，未準確表達餐廳兒童椅。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢且無誤譯或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的人数、儿童数量及需要儿童椅的全部信息，且日语表达自然流畅。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "人數翻譯正確但將「兒童椅」誤譯為汽車安全座椅(チャイルドシート),語意有誤"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "チャイルドシートは自動車用の意味であり、飲食店の子ども用椅子（チェア/キッズチェア）と誤訳され、文脈に合わない。"
+   }
+  },
+  "T016-en-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確且流暢地傳達原文語意"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達對蝦過敏及餐點勿放任何海鮮的要求，英文自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": -5,
+    "flags": {
+     "number_wrong": -5,
+     "negation_flipped": -5,
+     "honorific_off": -5,
+     "name_mangled": -5,
+     "omission": -5,
+     "hallucination": -5
+    },
+    "reason": "語意完全忠實，表達自然地道。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢且無遺漏或錯誤。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的過敏資訊與請求，語意忠實，語句自然流暢，無任何錯誤或遺漏。"
+   }
+  },
+  "T016-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達對蝦過敏及餐點不得加入任何海鮮的意思，日語自然得體。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原意,用詞自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，僅「海鮮」一詞略有差異（魚介類 vs. 海鮮），但不影響整體理解。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文將「海鮮」譯為「魚介類」，語意範圍略有偏差但整體忠實且表達自然。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，日語表達自然流暢，敬語使用得當，無任何錯誤或遺漏。"
+   }
+  },
+  "T017-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達不加冰、大杯改中杯及總共三杯，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原意且語句流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文指示，僅「總共三杯」的表達略顯生硬，但語意無誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的所有关键信息（不加冰、大杯改中杯、总共三杯），且英文表达自然流畅，符合点餐场景。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實地傳達原文所有語意，包括去冰、大改中、總數三杯，且英文表達自然流暢。"
+   }
+  },
+  "T017-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致正確，但「このコップ」與「大杯を中杯に」表達較不自然且省略了變更動作。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文意思，但「このコップ」不如參考譯文自然，「大杯を中杯に」略顯生硬"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完全忠實，但「このコップには」的措辭略顯生硬，不如參考譯文自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本正確但「大杯」「中杯」直譯不自然,略顯生硬"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 3,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「コップ」誤譯為杯子而非杯量，敬語缺失且語氣生硬不自然。"
+   }
+  },
+  "T018-en-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原意且自然流暢"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達一份豚骨拉麵及麵偏硬的要求，英文自然通順。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，自然流暢，無誤譯或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的點餐內容和對麵條硬度的要求，語意完全忠實，且英文表達自然流暢。"
+   }
+  },
+  "T018-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達要一份豚骨拉麵及麵要稍硬的意思，日語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且日語表達自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，用詞自然且符合日語習慣"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的所有关键信息，包括拉面种类、份量和面条硬度要求，且日语表达非常自然地道。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，敬語得體自然，唯「少し」略添原文無之程度副詞，但不影響整體忠實度與流暢度。"
+   }
+  },
+  "T019-en-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文與原文語意完全一致且流暢自然"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實傳達原文語意，英文自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，自然流暢，無錯誤或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的转折语义，且表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全忠實於原文語意，英文表達自然流暢，與參考譯文一致。"
+   }
+  },
+  "T019-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達菜餚看似美味但已吃飽的轉折語意，日語自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然,與原文意思一致。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，僅自然度稍欠（如「看起來很好吃」的「とても」可強化語氣，且「なんです」更符合口語習慣）"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的對比語意，且日語表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T020-en-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實且自然地表達了請求分開結帳的意思"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整表達請求分開結帳，語意忠實且英文自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文的請求語意，且語氣自然流暢，符合英語表達習慣。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文“分开结账”的请求，语法自然，符合英语表达习惯。"
+   }
+  },
+  "T020-ja-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然,僅敬語程度略有差異但不影響整體表達"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整表達請求分開結帳，語意忠實且日語自然禮貌。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實，但敬語程度稍低（缺少「お」和「いただけますか」的謙讓表達）"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文「分開結帳」的請求，語句自然禮貌，與參考譯文僅在敬語細微處有差異，不影響整體語意與流暢度。"
+   }
+  },
+  "T021-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達不要此物、要旁邊藍色物品及詢問兩件總價，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確流暢地傳達原文語意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「兩個多少錢」的「兩個」更自然應譯為「for two」而非「for the two」"
    }
   }
  }

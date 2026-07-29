@@ -199,6 +199,206 @@
   "T005-1|qwen/qwen3.7-flash": {
    "bt": "那個，淺草寺跟晴空塔是同一個方向嗎？",
    "latencyMs": 6960
+  },
+  "T006-1|qwen/qwen3.7-flash": {
+   "bt": "這附近有廁所嗎？我趕時間。",
+   "latencyMs": 4817
+  },
+  "T007-1|openai/gpt-5.4-nano": {
+   "bt": "我要去京都的車票兩張。一張給大人、一張給小孩。",
+   "latencyMs": 608
+  },
+  "T005-3|qwen/qwen3.7-flash": {
+   "bt": "那個，淺草寺跟晴空塔是同一個方向嗎？",
+   "latencyMs": 6456
+  },
+  "T007-1|anthropic/claude-haiku-4.5": {
+   "bt": "我要買兩張去京都的車票。一張大人票、一張小孩票。",
+   "latencyMs": 1087
+  },
+  "T007-3|openai/gpt-5.4-nano": {
+   "bt": "我要兩張去京都的票，一張大人票、一張小孩票。",
+   "latencyMs": 614
+  },
+  "T007-3|anthropic/claude-haiku-4.5": {
+   "bt": "我要買兩張去京都的車票。一張大人票、一張小孩票。",
+   "latencyMs": 1335
+  },
+  "T007-2|openai/gpt-5.4-nano": {
+   "bt": "請給我兩張去京都的票，一張大人的、一張小朋友的。",
+   "latencyMs": 1091
+  },
+  "T007-2|anthropic/claude-haiku-4.5": {
+   "bt": "我要買兩張去京都的車票。一張大人票、一張小孩票。",
+   "latencyMs": 1237
+  },
+  "T008-1|anthropic/claude-haiku-4.5": {
+   "bt": "這班公車是去大阪啦，但是不會停京都喔。",
+   "latencyMs": 1265
+  },
+  "T008-1|openai/gpt-5.4-nano": {
+   "bt": "這台巴士是會去大阪的，不過應該不會停在京都吧。",
+   "latencyMs": 1138
+  },
+  "T008-2|openai/gpt-5.4-nano": {
+   "bt": "這台公車是會去大阪的，不過應該不會停在京都吧。",
+   "latencyMs": 1478
+  },
+  "T008-2|anthropic/claude-haiku-4.5": {
+   "bt": "這班公車是去大阪啦，但是不會停京都喔。",
+   "latencyMs": 1292
+  },
+  "T007-1|qwen/qwen3.7-flash": {
+   "bt": "我要兩張去京都的票，一張大人、一張小孩。",
+   "latencyMs": 7013
+  },
+  "T006-3|qwen/qwen3.7-flash": {
+   "bt": "這附近有廁所嗎？我很趕。",
+   "latencyMs": 9228
+  },
+  "T008-3|anthropic/claude-haiku-4.5": {
+   "bt": "這班公車是去大阪啦，但是不會停京都喔。",
+   "latencyMs": 1211
+  },
+  "T006-2|qwen/qwen3.7-flash": {
+   "bt": "這附近有廁所嗎？我趕時間。",
+   "latencyMs": 10839
+  },
+  "T008-3|openai/gpt-5.4-nano": {
+   "bt": "這台公車是會去大阪的，不過應該不會停在京都吧。",
+   "latencyMs": 1239
+  },
+  "T009-1|openai/gpt-5.4-nano": {
+   "bt": "不好意思，這裡有空位嗎？",
+   "latencyMs": 873
+  },
+  "T009-1|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，這裡有人嗎？",
+   "latencyMs": 1263
+  },
+  "T009-2|openai/gpt-5.4-nano": {
+   "bt": "不好意思，這裡還有空位嗎？",
+   "latencyMs": 640
+  },
+  "T009-2|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，這裡有人嗎？",
+   "latencyMs": 1121
+  },
+  "T008-1|qwen/qwen3.7-flash": {
+   "bt": "這班公車是去大阪的，不過到京都應該不會停吧。",
+   "latencyMs": 9836
+  },
+  "T007-3|qwen/qwen3.7-flash": {
+   "bt": "我要兩張去京都的票，一張大人、一張小孩。",
+   "latencyMs": 12107
+  },
+  "T007-2|qwen/qwen3.7-flash": {
+   "bt": "麻煩給我兩張去京都的車票，一張大人、一張小孩。",
+   "latencyMs": 10902
+  },
+  "T009-3|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，這裡有人嗎？",
+   "latencyMs": 1010
+  },
+  "T009-3|openai/gpt-5.4-nano": {
+   "bt": "不好意思，這裡有人坐嗎？",
+   "latencyMs": 745
+  },
+  "T008-3|qwen/qwen3.7-flash": {
+   "bt": "這班車會去大阪，但應該不會在京都停吧。",
+   "latencyMs": 6436
+  },
+  "T010-2|anthropic/claude-haiku-4.5": {
+   "bt": "去新竹的末班車是11點45分嗎？",
+   "latencyMs": 1273
+  },
+  "T010-2|openai/gpt-5.4-nano": {
+   "bt": "新竹去的最後一班電車是11點45分嗎？",
+   "latencyMs": 883
+  },
+  "T008-2|qwen/qwen3.7-flash": {
+   "bt": "這班公車會去大阪，但應該不會在京都停吧。",
+   "latencyMs": 9104
+  },
+  "T009-1|qwen/qwen3.7-flash": {
+   "bt": "不好意思，這裡有人坐嗎？",
+   "latencyMs": 5986
+  },
+  "T010-1|anthropic/claude-haiku-4.5": {
+   "bt": "去新竹的電車是11點45分嗎？",
+   "latencyMs": 1010
+  },
+  "T010-1|openai/gpt-5.4-nano": {
+   "bt": "去新竹的火車是11點45分嗎？",
+   "latencyMs": 689
+  },
+  "T010-3|anthropic/claude-haiku-4.5": {
+   "bt": "去新竹的末班車是11點45分嗎？",
+   "latencyMs": 1057
+  },
+  "T010-3|openai/gpt-5.4-nano": {
+   "bt": "新竹去的最後一班電車是11點45分嗎？",
+   "latencyMs": 834
+  },
+  "T011-1|anthropic/claude-haiku-4.5": {
+   "bt": "我想在IC卡裡面儲值1000元。",
+   "latencyMs": 1235
+  },
+  "T011-1|openai/gpt-5.4-nano": {
+   "bt": "我想把1000円儲值到IC卡裡。",
+   "latencyMs": 901
+  },
+  "T009-2|qwen/qwen3.7-flash": {
+   "bt": "不好意思，這裡有人嗎？",
+   "latencyMs": 7654
+  },
+  "T011-2|anthropic/claude-haiku-4.5": {
+   "bt": "我想在IC卡裡面儲值1000元。",
+   "latencyMs": 946
+  },
+  "T011-2|openai/gpt-5.4-nano": {
+   "bt": "我想把1000日圓儲值到IC卡裡。",
+   "latencyMs": 741
+  },
+  "T009-3|qwen/qwen3.7-flash": {
+   "bt": "不好意思，這裡有人坐嗎？",
+   "latencyMs": 6524
+  },
+  "T011-3|anthropic/claude-haiku-4.5": {
+   "bt": "我想要幫IC卡儲值，要儲1000圓。",
+   "latencyMs": 1177
+  },
+  "T010-3|qwen/qwen3.7-flash": {
+   "bt": "去新竹的末班車是11點45分嗎？",
+   "latencyMs": 6511
+  },
+  "T012-1|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，這班公車是去橫濱的嗎？",
+   "latencyMs": 1305
+  },
+  "T012-1|openai/gpt-5.4-nano": {
+   "bt": "不好意思，這台公車是去橫濱的嗎？",
+   "latencyMs": 637
+  },
+  "T010-1|qwen/qwen3.7-flash": {
+   "bt": "去新竹的火車是11點45分嗎？",
+   "latencyMs": 9271
+  },
+  "T011-3|openai/gpt-5.4-nano": {
+   "bt": "我想把錢加到IC卡裡，1000日圓。",
+   "latencyMs": 3411
+  },
+  "T010-2|qwen/qwen3.7-flash": {
+   "bt": "去新竹的末班車是11點45分嗎？",
+   "latencyMs": 10899
+  },
+  "T012-2|openai/gpt-5.4-nano": {
+   "bt": "不好意思，這班公車是去橫濱的嗎？",
+   "latencyMs": 698
+  },
+  "T012-2|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，這班公車是去橫濱的嗎？",
+   "latencyMs": 1260
   }
  },
  "eq": {
@@ -350,6 +550,156 @@
    "notice": false
   },
   "T005-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T006-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T007-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T005-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T007-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T007-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T007-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T007-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T007-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T008-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T008-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T008-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T008-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T007-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T006-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T008-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T006-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T008-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T009-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T009-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T009-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T009-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T008-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T007-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T007-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T009-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T009-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T008-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T010-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T010-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T008-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T009-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T010-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T010-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T010-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T010-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T011-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T011-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T009-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T011-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T011-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T009-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T011-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T010-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T012-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T012-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T010-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T011-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T010-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T012-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T012-2|anthropic/claude-haiku-4.5": {
    "notice": false
   }
  }

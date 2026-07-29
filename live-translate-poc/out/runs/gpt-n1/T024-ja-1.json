@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然。「打八折」正確翻譯為「2割引」（意即便宜二成，即八折），「這件...買兩件」翻譯為「これを...二つ買います」亦符合日文語境，無任何錯誤。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（若打八折就會買兩件），語義忠實。語句自然可理解，但用詞上有小瑕疵：'二つ' は物の数として問題ないが、衣類の場合は参考訳のように『二着』の方がより自然。また 'これを2割引にしてくれたら' は話し手が割引を求める表現で、原句の中立的な条件表現（2割引きになるなら）と比べやや語感が異なるため流暢性を4分に評定。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
