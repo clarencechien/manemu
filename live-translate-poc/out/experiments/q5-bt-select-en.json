@@ -399,6 +399,206 @@
   "T012-3|openai/gpt-5.4-nano": {
    "bt": "不好意思，你可以幫我確認一下這班公車是不是要去橫濱的嗎？",
    "latencyMs": 779
+  },
+  "T012-3|anthropic/claude-haiku-4.5": {
+   "bt": "不好意思，請問你可以幫我看一下這班公車是不是去橫濱的嗎？",
+   "latencyMs": 1288
+  },
+  "T011-3|qwen/qwen3.7-flash": {
+   "bt": "我要幫我的IC卡加1000日圓。",
+   "latencyMs": 6487
+  },
+  "T011-2|qwen/qwen3.7-flash": {
+   "bt": "我要幫我的IC卡加值1000日圓。",
+   "latencyMs": 6867
+  },
+  "T011-1|qwen/qwen3.7-flash": {
+   "bt": "我想幫我的IC卡儲值1000日圓。",
+   "latencyMs": 9678
+  },
+  "T010-2|qwen/qwen3.7-flash": {
+   "bt": "回新竹的末班車是晚上11點45分。",
+   "latencyMs": 13387
+  },
+  "T013-1|anthropic/claude-haiku-4.5": {
+   "bt": "我剛才在月台上把手機掉下去了。",
+   "latencyMs": 1172
+  },
+  "T013-2|openai/gpt-5.4-nano": {
+   "bt": "我剛剛把手機掉在月台上了。",
+   "latencyMs": 771
+  },
+  "T013-2|anthropic/claude-haiku-4.5": {
+   "bt": "我剛才在月台上把手機掉下去了。",
+   "latencyMs": 1263
+  },
+  "T012-1|qwen/qwen3.7-flash": {
+   "bt": "不好意思，可以幫我確認一下這班公車是不是去橫濱的嗎？",
+   "latencyMs": 8786
+  },
+  "T013-3|openai/gpt-5.4-nano": {
+   "bt": "我剛把手機掉在月台上了。",
+   "latencyMs": 1008
+  },
+  "T013-3|anthropic/claude-haiku-4.5": {
+   "bt": "我剛才在月台上把手機掉下去了。",
+   "latencyMs": 1387
+  },
+  "T012-3|qwen/qwen3.7-flash": {
+   "bt": "不好意思，可以幫我確認一下這班公車是不是去橫濱的嗎？",
+   "latencyMs": 4937
+  },
+  "T013-1|openai/gpt-5.4-nano": {
+   "bt": "我剛把手機掉到月台上了。",
+   "latencyMs": 3660
+  },
+  "T014-1|openai/gpt-5.4-nano": {
+   "bt": "我不要這個啦，我其實吃不了辣的。",
+   "latencyMs": 1119
+  },
+  "T014-1|anthropic/claude-haiku-4.5": {
+   "bt": "我不要這個，我真的吃不了辣的。",
+   "latencyMs": 1287
+  },
+  "T014-2|anthropic/claude-haiku-4.5": {
+   "bt": "我不要這個了，我真的吃不下。",
+   "latencyMs": 1525
+  },
+  "T012-2|qwen/qwen3.7-flash": {
+   "bt": "不好意思，可以幫我確認一下這班車是不是去橫濱的嗎？",
+   "latencyMs": 10739
+  },
+  "T014-2|openai/gpt-5.4-nano": {
+   "bt": "我不想要這個了，我其實吃不下。",
+   "latencyMs": 841
+  },
+  "T014-3|anthropic/claude-haiku-4.5": {
+   "bt": "我不要這個，我真的吃不了。",
+   "latencyMs": 1527
+  },
+  "T014-3|openai/gpt-5.4-nano": {
+   "bt": "我不要這個，我其實也吃不下去。",
+   "latencyMs": 1855
+  },
+  "T015-1|anthropic/claude-haiku-4.5": {
+   "bt": "我們一共有五個人，其中包括兩個小孩需要高腳椅。",
+   "latencyMs": 1211
+  },
+  "T015-1|openai/gpt-5.4-nano": {
+   "bt": "我們一共五個人，還包含兩個需要高腳椅的小朋友。",
+   "latencyMs": 579
+  },
+  "T015-2|anthropic/claude-haiku-4.5": {
+   "bt": "我們一共有五個人，其中包括兩個小孩需要高腳椅。",
+   "latencyMs": 1305
+  },
+  "T013-1|qwen/qwen3.7-flash": {
+   "bt": "我剛剛手機掉在月台上。",
+   "latencyMs": 13958
+  },
+  "T013-2|qwen/qwen3.7-flash": {
+   "bt": "我剛剛手機掉在月台上。",
+   "latencyMs": 13854
+  },
+  "T015-2|openai/gpt-5.4-nano": {
+   "bt": "我們一共有五個人，包含兩個需要高腳椅的小朋友。",
+   "latencyMs": 1296
+  },
+  "T014-1|qwen/qwen3.7-flash": {
+   "bt": "這個我不要，我實在吃不了辣。",
+   "latencyMs": 10806
+  },
+  "T014-3|qwen/qwen3.7-flash": {
+   "bt": "我不要這個，我實在吃不下。",
+   "latencyMs": 7823
+  },
+  "T015-3|openai/gpt-5.4-nano": {
+   "bt": "我們一共有五個人，包含兩個需要高腳椅的小朋友。",
+   "latencyMs": 621
+  },
+  "T015-3|anthropic/claude-haiku-4.5": {
+   "bt": "我們一共有五個人，其中包括兩個小孩需要高腳椅。",
+   "latencyMs": 1290
+  },
+  "T013-3|qwen/qwen3.7-flash": {
+   "bt": "我剛剛手機不小心掉在月台上啦。",
+   "latencyMs": 14453
+  },
+  "T016-1|anthropic/claude-haiku-4.5": {
+   "bt": "我對盲人過敏，所以拜託不要在桌上放任何海鮮。",
+   "latencyMs": 1107
+  },
+  "T016-1|openai/gpt-5.4-nano": {
+   "bt": "我對盲人過敏，所以拜託不要把任何海鮮放到桌上。",
+   "latencyMs": 1333
+  },
+  "T014-2|qwen/qwen3.7-flash": {
+   "bt": "這我不要了，我真的吃不下。",
+   "latencyMs": 13749
+  },
+  "T015-1|qwen/qwen3.7-flash": {
+   "bt": "我們總共五個人，裡面有兩個小孩要坐高腳椅。",
+   "latencyMs": 10441
+  },
+  "T016-2|openai/gpt-5.4-nano": {
+   "bt": "我對盲人過敏，所以拜託不要把任何海鮮放在桌上。",
+   "latencyMs": 1089
+  },
+  "T016-2|anthropic/claude-haiku-4.5": {
+   "bt": "我對盲人過敏，所以拜託不要在桌上放任何海鮮。",
+   "latencyMs": 1493
+  },
+  "T016-3|anthropic/claude-haiku-4.5": {
+   "bt": "我對盲人過敏，所以拜託不要在桌上放任何海鮮。",
+   "latencyMs": 1448
+  },
+  "T016-3|openai/gpt-5.4-nano": {
+   "bt": "我對盲人過敏，所以拜託不要在桌上放任何海鮮。",
+   "latencyMs": 1511
+  },
+  "T017-1|anthropic/claude-haiku-4.5": {
+   "bt": "這杯不要加冰，然後把大杯改成中杯，所以一共是三杯。",
+   "latencyMs": 1255
+  },
+  "T017-1|openai/gpt-5.4-nano": {
+   "bt": "這杯不要加冰，然後把大杯改成中杯，總共三杯。",
+   "latencyMs": 841
+  },
+  "T015-2|qwen/qwen3.7-flash": {
+   "bt": "我們總共五個人，裡面有兩個小孩要坐高腳椅。",
+   "latencyMs": 9284
+  },
+  "T017-2|openai/gpt-5.4-nano": {
+   "bt": "這杯不要加冰，然後把大杯改成中杯，總共三杯。",
+   "latencyMs": 719
+  },
+  "T016-1|qwen/qwen3.7-flash": {
+   "bt": "我對盲人過敏啦，所以拜託別把海鮮端上桌喔。",
+   "latencyMs": 8609
+  },
+  "T017-2|anthropic/claude-haiku-4.5": {
+   "bt": "這杯不要加冰，然後把大杯改成中杯，所以一共是三杯。",
+   "latencyMs": 1337
+  },
+  "T017-3|openai/gpt-5.4-nano": {
+   "bt": "這杯不要加冰，然後把大的改成中杯，這樣總共三杯。",
+   "latencyMs": 1073
+  },
+  "T017-3|anthropic/claude-haiku-4.5": {
+   "bt": "這杯不要加冰，然後把大杯改成中杯，所以總共是三杯。",
+   "latencyMs": 1481
+  },
+  "T018-1|openai/gpt-5.4-nano": {
+   "bt": "我想來一碗豚骨拉麵，麵條的口感想要稍微硬一點。",
+   "latencyMs": 767
+  },
+  "T018-1|anthropic/claude-haiku-4.5": {
+   "bt": "我要一碗豚骨拉麵，麵條我要硬一點。",
+   "latencyMs": 1339
+  },
+  "T017-1|qwen/qwen3.7-flash": {
+   "bt": "這杯不要加冰，然後大杯改中杯，這樣一共三杯。",
+   "latencyMs": 7125
   }
  },
  "eq": {
@@ -700,6 +900,156 @@
    "notice": false
   },
   "T012-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T012-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T011-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T011-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T011-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T010-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T013-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T013-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T013-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T012-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T013-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T013-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T012-3|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T013-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T014-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T014-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T014-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T012-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T014-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T014-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T014-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T015-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T015-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T015-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T013-1|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T013-2|qwen/qwen3.7-flash": {
+   "notice": false
+  },
+  "T015-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T014-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T014-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T015-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T015-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T013-3|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T016-1|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T016-1|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T014-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T015-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T016-2|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T016-2|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T016-3|anthropic/claude-haiku-4.5": {
+   "notice": true
+  },
+  "T016-3|openai/gpt-5.4-nano": {
+   "notice": true
+  },
+  "T017-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T017-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T015-2|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T017-2|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T016-1|qwen/qwen3.7-flash": {
+   "notice": true
+  },
+  "T017-2|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T017-3|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T017-3|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T018-1|openai/gpt-5.4-nano": {
+   "notice": false
+  },
+  "T018-1|anthropic/claude-haiku-4.5": {
+   "notice": false
+  },
+  "T017-1|qwen/qwen3.7-flash": {
    "notice": false
   }
  }
