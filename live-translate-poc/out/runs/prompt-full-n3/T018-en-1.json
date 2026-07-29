@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:53:11.748Z"
+  "ts": "2026-07-29T10:53:11.748Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is excellent. It accurately conveys the entire meaning of the source text, including the specific noodle preference, and is phrased in a very natural and polite manner in English."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

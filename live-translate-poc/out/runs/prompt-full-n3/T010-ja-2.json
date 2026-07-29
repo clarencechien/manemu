@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:49:17.427Z"
+  "ts": "2026-07-29T10:49:17.427Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "地名「新宿」被錯誤翻譯為「星住」，屬於專有名詞翻譯錯誤（name_mangled）。其餘部分翻譯正確且語句通順。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文保留了問句意圖（詢問最終電車是否在11時45分），但將目的地「新宿」錯譯為「星住」，屬於名稱錯誤，且日文表達「星住へ帰る最終電車は」不自然（多餘的「へ帰る」用法）。因此語意忠實度受重大影響，且目標語自然度也較低。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

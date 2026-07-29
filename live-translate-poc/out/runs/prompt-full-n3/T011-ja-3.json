@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:49:52.806Z"
+  "ts": "2026-07-29T10:49:52.806Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文「想幫IC卡儲值一千日圓」的意思，與參考譯文僅有結尾語氣的微小差異（たいです vs たいんですが），兩者皆符合日語口語表達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文正確傳達要將IC卡儲值1000日圓的主要語意。原句的「我想幫…」有委婉表示為他人代為儲值或想要幫忙的含意，機譯沒有明確標示這層角色，但在多數情境下省略也不影響實際溝通；日語表達自然、語法正確。故語意忠實評為4（非完全逐字但無致命遺漏），自然度評為5。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

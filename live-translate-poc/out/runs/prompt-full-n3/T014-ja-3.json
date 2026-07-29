@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:51:08.513Z"
+  "ts": "2026-07-29T10:51:08.513Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "前半句「這個不要辣」被誤譯為「これはいいです」（不用了/這樣就好），漏譯了「不要辣」的核心要求。後半句「我不太能吃辣」翻譯得非常正確且自然。因此忠實度給予3分，並標記漏譯（omission）。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

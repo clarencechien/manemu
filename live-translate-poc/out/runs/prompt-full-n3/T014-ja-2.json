@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:51:00.904Z"
+  "ts": "2026-07-29T10:51:00.904Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "「這個不要辣」（辛くしないでください）被誤譯為「これは遠慮します」（我不要這個/心領了），改變了原意（從要求不加辣變成拒絕該食物），屬於漏譯/誤譯。後半句「我不太能吃辣」翻譯得非常自然流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

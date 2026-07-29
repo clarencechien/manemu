@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:49:27.391Z"
+  "ts": "2026-07-29T10:49:27.391Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation incorrectly translated the place name '新宿' (Shinjuku) as '星住' (Hoshizumi), which is a name mangling error. The rest of the sentence is grammatically correct and natural."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯句子語法自然，但將「新宿」誤寫為「星住」，造成地名錯誤，影響語意忠實度。整體意思（詢問回到新宿的最終電車時刻）仍可推測，故未評為最低。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

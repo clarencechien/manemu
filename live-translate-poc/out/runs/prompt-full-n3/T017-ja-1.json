@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:52:27.621Z"
+  "ts": "2026-07-29T10:52:27.621Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。將「大杯/中杯」在地化翻譯為「Lサイズ/Mサイズ」非常符合日文日常情境，語意完全忠實，流暢度極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

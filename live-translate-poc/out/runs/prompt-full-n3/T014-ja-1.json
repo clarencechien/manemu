@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:51:00.318Z"
+  "ts": "2026-07-29T10:51:00.318Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "前半句「這個不要辣」（請不要做成辣的）被誤譯為「これは遠慮します」（這個我就心領了/我不要這個），導致語意與原文不符（從要求不加辣變成拒絕該食物）。後半句翻譯得非常流暢且準確。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

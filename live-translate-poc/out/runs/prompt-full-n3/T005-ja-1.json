@@ -45,5 +45,19 @@
     },
     "reason": "譯文與參考譯文完全一致，翻譯非常準確且自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與參考譯文完全一致，語意忠實且日語表達自然、禮貌，無錯誤標記需觸發。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

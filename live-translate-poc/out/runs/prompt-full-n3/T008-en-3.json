@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly captures the meaning of the source text, including the modal '應該' (probably) and the tag question '吧?' (right?). There are no grammatical or semantic errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地表達原意（「應該不會」以“probably won't”表達得當），語句自然流暢；唯「stop in Kyoto」與參考的“stop at Kyoto”皆可接受。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

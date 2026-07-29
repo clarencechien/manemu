@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:51:09.228Z"
+  "ts": "2026-07-29T10:51:09.228Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The phrase '這個不要辣' (Don't make this one spicy) is translated as 'No to this one' (不要這個), which omits the 'spicy' constraint in the first clause and slightly alters the meaning to rejecting the dish entirely. However, the second clause is translated perfectly, and the overall sentence is highly fluent."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

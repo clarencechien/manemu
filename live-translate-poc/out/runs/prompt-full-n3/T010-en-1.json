@@ -45,5 +45,19 @@
     },
     "reason": "The translation is grammatically correct and fluent, but the place name 'Shinjuku' (新宿) was incorrectly translated as 'Shinshu'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "Meaning mostly preserved (asking if the last service is at 11:45) but key errors: 'tram' (should be 'train') and 'Shinshu' is a mistransliteration of 'Shinjuku' — these alter the referent and could mislead. Sentence is grammatically natural otherwise."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

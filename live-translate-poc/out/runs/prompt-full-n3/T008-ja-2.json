@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文「應該不會停」的語氣（はずですよね），與參考譯文高度契合。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原意。原句「應該不會停京都吧?」的推測語氣被日文的「止まらないはずですよね？」良好表現；「大阪には行きますが」中的格助詞使用也自然。整體語意與語氣皆與原文一致，表達流暢自然，無明顯錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

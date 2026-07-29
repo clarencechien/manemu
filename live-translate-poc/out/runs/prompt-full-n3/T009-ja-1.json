@@ -43,5 +43,19 @@
     },
     "reason": "譯文「すみません、この席は空いていますか？」將原文的「請問這個位子有人坐嗎？」轉化為日語中極為常用且自然的問法「請問這個位子是空著的嗎？」，語意完全相符，表達非常流暢自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文意義上與原句等效。原句詢問「這個位子有人坐嗎?」，機器譯文以自然日語表達為「この席は空いていますか?」，語意相當（問座位是否空）。語言流暢、符合日常用法，無錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

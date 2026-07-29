@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly captures the meaning and nuance of the source text, including the speculative tone ('probably', 'right?')."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately conveys the original meaning and nuance (train goes to Osaka, but likely does not stop in Kyoto) and is fluent and natural in English. Minor tense difference ('will go' vs 'goes') does not affect adequacy."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

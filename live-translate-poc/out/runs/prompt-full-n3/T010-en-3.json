@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:49:36.848Z"
+  "ts": "2026-07-29T10:49:36.848Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation incorrectly translated the proper noun '新宿' (Shinjuku) as 'Hsinchu' (新竹), which is a name mangling error. The rest of the sentence is translated accurately and fluently."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation correctly conveys meaning and time but mistranslates the destination name: '新宿' (Shinjuku) rendered as 'Hsinchu' (different city). Fluency is natural aside from minor time formatting ('11 45' instead of '11:45' or 'eleven forty-five')."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

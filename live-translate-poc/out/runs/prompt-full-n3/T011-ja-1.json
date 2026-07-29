@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:49:44.822Z"
+  "ts": "2026-07-29T10:49:44.822Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文「想幫IC卡儲值一千日圓」的意思，與參考譯文僅有結尾語氣的微小差異（たいです vs たいんですが），兩者皆符合日語口語表達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語義基本正確——表達要在IC卡充值1000日圓；日語句子通順自然。但原句有「幫（某人）儲值」的替他人代辦語意，機譯未明確反映此代替性（參考譯文以「〜たいんですが」語氣更客氣委婉）。因此微幅扣分在忠實度與語氣自然度上。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -43,5 +43,19 @@
     },
     "reason": "譯文「この席空いていますか？」(請問這個位子空著嗎？)與原文「這個位子有人坐嗎？」在情境上完全等價，表達非常自然且符合日語習慣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文「この席空いていますか?」與原文「這個位子有人坐嗎?」語意等同，都是詢問該座位是否有人佔用，表達準確。日語表現自然且禮貌，符合目標語用法。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致。「京都まで切符を2枚ください」在日語口語中是非常自然且常用的表達方式，語意完整傳達。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地表達原句意圖：要兩張到京都的車票，一張大人票、一張小孩票。日語表達自然流暢。僅有細微書寫/用法差異（「京都までの切符」省略した「の」や「子ども」的平假名寫法），但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
