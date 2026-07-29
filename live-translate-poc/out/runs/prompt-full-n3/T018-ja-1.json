@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完美傳達了原文的所有訊息，日語表達十分道地。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整忠實地表達了原句意思（請求一份豚骨拉麵並指定麵要硬一點），用詞與參考譯文相同且自然流暢，禮貌用語也恰當。沒有遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

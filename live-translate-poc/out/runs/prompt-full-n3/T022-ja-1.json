@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。「算我三千塊」翻譯成「3000円にまけてもらう」（算便宜我到三千日圓）非常符合殺價的語境，意思表達得十分到位，日語表達也極為流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意（表示太貴並請求以3000元成交），措辭自然且語法正確。與參考譯文只是表現方式不同（まけてもらってもいいですか vs してもらえませんか），但語意等價。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

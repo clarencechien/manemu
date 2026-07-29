@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，日語表達十分道地。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意（不需要這個、要旁邊藍色的、詢問兩個多少錢）。日語表達自然，雖有小幅風格差異（『方をください』vs『のがほしいです』），但不影響語意或禮貌度。無其他錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

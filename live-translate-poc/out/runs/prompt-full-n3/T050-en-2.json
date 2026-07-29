@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:07:46.477Z"
+  "ts": "2026-07-29T11:07:46.477Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation of '那就麻煩你了' as 'Then I'll bother you with it' is too literal and sounds unnatural in English, where 'Thanks in advance' or 'I'll leave it to you' is preferred. However, the overall meaning is preserved, and the second clause is translated accurately."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

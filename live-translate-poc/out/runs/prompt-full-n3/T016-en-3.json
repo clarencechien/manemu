@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text without any errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原文意思（對蝦子過敏，請勿在餐點放任何海鮮）。唯一小瑕疵是用詞自然度稍差（\"in the meals\" 比較不常用，參考譯文的 \"in my food\" 更自然），因此給 fluency 4，adequacy 給 5。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

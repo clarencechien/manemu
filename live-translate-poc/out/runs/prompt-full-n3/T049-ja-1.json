@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:07:04.436Z"
+  "ts": "2026-07-29T11:07:04.436Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「大阪観光は初めてです」完美地對應了「第一次來大阪玩」，語意忠實，日語表達也十分道地。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

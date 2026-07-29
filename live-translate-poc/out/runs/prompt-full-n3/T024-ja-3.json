@@ -46,5 +46,19 @@
     },
     "reason": "The translation is highly accurate and natural. '打八折' (20% off) is correctly translated as '20パーセント引き'. '兩件' is translated as '2枚', which is natural for many clothing items, although the reference uses '2着'. The overall meaning is perfectly preserved."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文忠實表達了原意（20%折扣なら2つ買う）ので語意は完全に保持されているためadequacy=5。ただし「2枚買います」は衣類に対して一般的には「2着買います」が自然であり、やや語感の違和感があるためfluencyを4に設定。その他の誤り（否定転換、數字誤り、省略、捏造など）は見られない。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然。將「大杯/中杯」在地化翻譯為「Lサイズ/Mサイズ」非常符合日文日常情境，語意完全忠實，流暢度極佳。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達了原句三個要點：不要加冰、將大杯改為中杯、總共三杯。語意忠實，故 adequacy 給 5 分。流暢度上用法略偏書面或直譯（例えば「これは氷を入れないでください」），較自然的口語表達可為「氷なしでお願いします」，因此 fluency 給 4 分。未發現數字錯誤、否定顛倒、遺漏或增補等問題。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

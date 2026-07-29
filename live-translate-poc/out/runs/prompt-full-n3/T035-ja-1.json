@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:00:32.345Z"
+  "ts": "2026-07-29T11:00:32.345Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. 'パスポートがなくなりました' (My passport is gone) is a very common and natural way to express '我的護照不見了' in Japanese, and '警察署はどこですか？' is a correct translation for the second part. There are no grammatical or semantic errors."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

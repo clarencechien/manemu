@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is excellent. It accurately conveys the entire meaning of the source text, including the specific noodle preference, and is phrased in a very natural and polite manner in English."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思：點一份豚骨拉麵，要求麵條較硬。用詞自然，語法流暢，與參考譯文差異僅在措辭（'a' vs 'one'、'firm' vs 'on the firm side'），不影響語意。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

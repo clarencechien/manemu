@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:00:16.773Z"
+  "ts": "2026-07-29T11:00:16.773Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與參考譯文完全一致，語意準確且表達自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

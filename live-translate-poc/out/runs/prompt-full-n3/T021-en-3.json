@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文非常準確且自然地翻譯了原文的所有意思，語法完全正確，語氣也十分貼切。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：否定與想要的藍色商品位置關係正確。唯一極細微差異在於原句問法為「兩個多少錢？」（How much for two?）而機譯為“How much are those two?”，語氣略有不同但意義等同。目標語自然、流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -46,5 +46,19 @@
     },
     "reason": "The translation is highly accurate and natural. '打八折' (80% of original price) is correctly translated as '20% off'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，數字與條件表達正確，目標語自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

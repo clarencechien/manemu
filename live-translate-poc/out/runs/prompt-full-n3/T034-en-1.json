@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:00:18.834Z"
+  "ts": "2026-07-29T11:00:18.834Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural, perfectly conveying the urgency of the source text. The addition of 'for me' correctly reflects '幫我' in the source."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

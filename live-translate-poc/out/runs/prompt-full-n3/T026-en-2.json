@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然。「hold off on buying this for now」完美地傳達了「還是先不買好了」的意思，語意忠實度與流暢度皆極佳。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately and fully conveys the original meaning and is natural in English. Minor redundancy ('I've thought about it, and I think') does not affect adequacy or fluency."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

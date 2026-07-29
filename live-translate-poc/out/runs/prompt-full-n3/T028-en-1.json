@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:57:36.152Z"
+  "ts": "2026-07-29T10:57:36.152Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文將中文名字「陳大文」翻譯為「David Chen」，屬於人名翻譯錯誤（name_mangled）。此外，譯文漏譯了「今天」（from today），但整體語意仍算通順，故給予 adequacy 4 分，fluency 5 分。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文完整傳達有預訂、入住兩晚等資訊，語句流暢自然。但將中文姓名「陳大文」誤譯為「David Chen」，改變了當事人姓名，屬於名稱錯譯／不當替換（hallucination），因此語意忠實度下降。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

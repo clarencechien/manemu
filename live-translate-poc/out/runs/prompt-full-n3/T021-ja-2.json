@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文與參考譯文幾乎完全一致，僅有漢字與平假名書寫的微小差異（要りません/いりません、欲しい/ほしい），語意完全忠實且極為自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文與參考譯文在語意與表達上完全一致，僅為漢字/平假名的書寫差異（要りません vs いりません、欲しいです vs ほしいです）であり、意味・語氣ともに正確で自然。無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

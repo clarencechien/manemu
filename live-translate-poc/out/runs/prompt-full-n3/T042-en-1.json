@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:04:05.699Z"
+  "ts": "2026-07-29T11:04:05.699Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. 'booking' is a perfect synonym for 'reservation' in this context, and the flight number is correctly translated."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

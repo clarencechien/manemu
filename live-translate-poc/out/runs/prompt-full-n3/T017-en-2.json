@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, perfectly conveying all the details of the source text without any errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：正確表達「這杯不要加冰」、「把大杯改成中杯」、以及「總共三杯」。語句流暢自然，與參考譯文差異僅在用詞但不影響意思。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

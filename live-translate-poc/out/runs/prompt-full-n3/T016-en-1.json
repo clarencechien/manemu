@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is accurate, fluent, and perfectly conveys the meaning of the source text without any errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實：原句指出對蝦子過敏，並要求餐點不要放任何海鮮，機器譯文正確表達了這兩層意思。語氣自然、通順，用詞（include any seafood / in my meal）與參考譯文等效，沒有遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

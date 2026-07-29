@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:05:38.500Z"
+  "ts": "2026-07-29T11:05:38.500Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is accurate and conveys the original meaning well. 'Thank you for your help' is a perfect translation of the first clause. 'I really put you out today' correctly translates '今天真的麻煩你了' (meaning 'I really inconvenienced you today'), though the phrasing 'put you out' is slightly less common in this exact declarative structure than 'I'm sorry to have put you out' or 'I really appreciate your help'."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

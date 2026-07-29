@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文「分開結帳」的意思，語氣也十分禮貌客氣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實呈現原文意思（要求分開結帳），語序與敬語使用自然，與參考譯文差異僅是表達順序，無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

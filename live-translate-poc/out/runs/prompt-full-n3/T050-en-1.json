@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T11:07:39.681Z"
+  "ts": "2026-07-29T11:07:39.681Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. 'Then I'll leave it to you' is a very appropriate translation for '那就麻煩你了' in this context, and 'I'll get back to you later' perfectly conveys '之後再聯絡'."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

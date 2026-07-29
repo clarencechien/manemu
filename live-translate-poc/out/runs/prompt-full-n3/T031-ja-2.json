@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:58:51.471Z"
+  "ts": "2026-07-29T10:58:51.471Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「冷房」正確對應「冷氣」，後半句的請求表達「どなたかに見ていただくことはできますか」也非常得體、流暢，完全符合日語的日常禮貌表達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

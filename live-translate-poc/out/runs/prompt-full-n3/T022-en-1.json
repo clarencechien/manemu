@@ -45,5 +45,19 @@
     },
     "reason": "The translation is fluent and grammatically correct. However, it changes the polite question '可以嗎？' (can you?) into a more demanding imperative 'just give it to me', which slightly alters the tone of the original request."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文傳達了主要意思（覺得太貴並提出3,000的價格），但將原句的疑問／請求語氣改為較強硬的命令式（\"just give it to me\"），語氣偏離原文的禮貌詢問。語句在英文中可理解並自然，但語氣不完全準確。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

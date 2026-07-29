@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with correct grammar and vocabulary."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意：詢問是否有 limited edition 款式，並說在 Instagram 上看到。語義與參考譯文略有措辭差異（styles/them vs version/it），但不影響理解；英文自然流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

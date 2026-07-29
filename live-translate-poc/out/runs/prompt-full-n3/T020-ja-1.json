@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文「分開結帳」的意思，且日語表達十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文在語意上完全對等，請求將帳單分開結帳的意思皆有表達。日語表現自然，敬語和語序也適當，僅與參考譯文在措辭順序上有些微差異，並不影響理解或禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

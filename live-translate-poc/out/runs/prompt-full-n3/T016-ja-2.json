@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文「對蝦子過敏、餐點不要放海鮮」的意思，無任何錯誤。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實且完整。將「蝦子」譯為「海老」、將「海鮮」譯為「シーフード/海鮮」皆自然可接受，日語表達流暢，語意與語氣均正確。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

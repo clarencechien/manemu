@@ -47,5 +47,19 @@
     },
     "reason": "The translation is highly accurate and natural. 'I spent over five thousand yen in total' is a very natural and correct translation of the source text."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實原意；用語自然流暢，與參考譯文差異僅在於用詞（spent vs. bought），無意義偏差或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

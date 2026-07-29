@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:57:35.253Z"
+  "ts": "2026-07-29T10:57:35.253Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。名字「陳大文」音譯為「チェン・ダーウェン」（華語發音），與參考譯文的日語漢字音讀「チン・ダイブン」相比同樣正確且在現代日語中更為常見。整體語意完整，無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯文完整傳達了訂房、姓名及入住兩晚（從今天起）等語意，句子也很通順。但人名對應有誤（原文「陳大文」，參考譯為「チン・ダイブン」，機譯為「チェン・ダーウェン」），屬於名稱轉寫錯誤，故適當性略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

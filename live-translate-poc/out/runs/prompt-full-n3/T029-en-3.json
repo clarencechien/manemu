@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:58:12.309Z"
+  "ts": "2026-07-29T10:58:12.309Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is accurate and natural. 'I don't have a reservation' perfectly translates '我沒有訂房', and 'Do you have any vacancies tonight?' is a very natural way to ask '請問今晚還有空房嗎?'."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：I don't have a reservation 對應「我沒有訂房」，Do you have any vacancies tonight? 對應「請問今晚還有空房嗎?」。用詞自然，語氣與參考譯文等價，無錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

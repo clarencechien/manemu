@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的所有訊息，語意忠實度極高。在流暢度方面，『何も海鮮物を入れないでください』的表達方式稍微有些不夠自然（日語中更常使用『海鮮類は一切入れないでください』），但文法正確且完全不影響理解，因此給予4分。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，表達了對蝦子過敏並請餐點不要放任何海鮮。日文語句自然，僅用語上與參考譯文略有差異（“海鮮物”與“一切海鮮”），但不影響意義與流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

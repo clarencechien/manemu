@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的所有訊息，人數與需求皆正確無誤，日語表達非常自然流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文資訊（共五人、兩個小孩、需要兒童椅），因此語意忠實度高（5）。日語表述大致自然，但「子供椅子」やや不自然で通常は「子ども用の椅子」や「子ども椅子をお願いします」のように言うため、流暢性稍低（4）。沒有遺漏或錯誤翻譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

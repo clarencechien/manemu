@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. 'Hold off on buying this for now' is an excellent and idiomatic translation of '還是先不買好了'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整忠實地傳達了中文原句的意思（已考慮過、暫時不買/先不買），且用詞和語法自然流暢，與參考譯文的語義相符。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
