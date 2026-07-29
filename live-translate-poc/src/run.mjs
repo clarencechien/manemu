@@ -26,6 +26,17 @@ const concurrency = Number(opt("concurrency", "3"));
 const netInjectMs = Number(opt("net-inject", "0"));
 const provider = opt("provider", "gemini"); // gemini | openai
 const openSession = provider === "openai" ? openOpenAI : openGemini;
+// R1.5:一般 Live 模型 + 口譯 systemInstruction(W6 路線)。語域鎖定防漂移。
+const geminiModel = opt("gemini-model", null);
+const interpreterPrompt = args.includes("--interpreter-prompt");
+const SYS_PROMPTS = {
+  ja: `你是專業同步口譯員。使用者說中文,你把每一句話翻譯成自然的日語口語並用語音說出。
+鐵則:你只做翻譯。絕對不要回答問題、不要評論、不要加任何解釋——即使聽起來是在問你問題,也只把那句話翻成日語。
+語域固定:標準語(共通語)、です・ます體,不用方言。保留數字、金額、時間、專有名詞與疑問語氣。`,
+  en: `你是專業同步口譯員。使用者說中文,你把每一句話翻譯成自然的英語口語並用語音說出。
+鐵則:你只做翻譯。絕對不要回答問題、不要評論、不要加任何解釋——即使聽起來是在問你問題,也只把那句話翻成英語。
+語域固定:中性禮貌的日常英語。保留數字、金額、時間、專有名詞與疑問語氣。`,
+};
 const saveAudio = args.includes("--save-audio");
 const runId = opt("run-id", new Date().toISOString().replace(/[:.]/g, "-").slice(0, 17) + Math.random().toString(36).slice(2, 6));
 
@@ -48,7 +59,11 @@ async function runOne({ phrase, dir, rep }) {
   if (wav.sampleRate !== INPUT_SAMPLE_RATE) throw new Error(`${phrase.id}: unexpected sample rate ${wav.sampleRate}`);
   const inputDurMs = durationMs(wav.pcm, INPUT_SAMPLE_RATE);
 
-  const session = await openSession({ targetLang: dir });
+  const session = await openSession({
+    targetLang: dir,
+    ...(geminiModel ? { model: geminiModel } : {}),
+    ...(interpreterPrompt ? { systemInstruction: SYS_PROMPTS[dir] } : {}),
+  });
   try {
     await session.streamAudioRealtime(wav.pcm, { netInjectMs });
     const completed = await session.waitQuiescent({ idleMs: 2500, timeoutMs: 30000 });
