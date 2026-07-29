@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。雖然第二句使用了過去式「来たのは」而參考譯文使用「来るのは」，但在說話者已經抵達大阪的當下，兩種說法在日語中都極為自然且常用，語意完全忠實。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實且自然。唯一差異為來るのは vs 来たのは的時制選擇，但語意相符且日語流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

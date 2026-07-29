@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文「我們會晚三十分鐘到，位子可以保留嗎？」的意思，日語表達十分流暢且得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意基本正確，表達「會晚30分鐘」和詢問能否保留位子皆有對應。但原句「三十分鐘」含有語助詞語氣（參考譯文用「ほど」表示大約），機譯缺少此不確定性表達；且第二句語氣較直接（「席は確保できますか？」），比參考譯文的敬體請求（「取っておいていただけますか？」）少了敬語，故扣分為4分。語句流暢自然，故fluency給5分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

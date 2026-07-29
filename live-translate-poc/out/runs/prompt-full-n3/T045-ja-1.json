@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的謝意與客氣。使用「助けていただき」與「お手数をおかけしました」符合日文的禮貌表達，與參考譯文一樣好。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文含意：感謝對方的幫忙並表示今日麻煩對方。日文表達自然且敬語使用得當（「助けていただきありがとうございます」「お手数をおかけしました」），與參考譯文差異僅在用詞（手伝う/助ける、お世話になりました/お手数をおかけしました），不影響語意與禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

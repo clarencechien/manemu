@@ -45,5 +45,19 @@
     },
     "reason": "The translation is accurate and conveys the original meaning well. 'Thank you for your help' is a perfect translation of the first clause. 'I really put you out today' correctly translates '今天真的麻煩你了' (meaning 'I really inconvenienced you today'), though the phrasing 'put you out' is slightly less common in this exact declarative structure than 'I'm sorry to have put you out' or 'I really appreciate your help'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達原意：表達感謝並帶有對造成麻煩的歉意。用句 \"I really put you out today\" 稍顯口語且不如參考譯文的 \"I really appreciate everything today\" 自然和禮貌，但語意上仍接近原句的感謝+麻煩之意，因此給予較高的忠實度和流暢度評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

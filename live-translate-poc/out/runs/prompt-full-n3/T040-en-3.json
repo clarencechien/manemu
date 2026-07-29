@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. It perfectly conveys the meaning of the source text without any errors. 'appointment' is an appropriate translation for '預約'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語義忠實。'appointment'與參考譯文的'reservation'皆為合適詞彙，否定'not cancel it'保留正確，句子英語自然流暢。無錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

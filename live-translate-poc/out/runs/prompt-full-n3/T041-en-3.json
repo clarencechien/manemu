@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text with correct grammar and phrasing."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：原句表達「如果三點沒有位子，四點也可以」，機譯準確傳達條件與替代時間，句子自然流暢，與參考譯文意義相同。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

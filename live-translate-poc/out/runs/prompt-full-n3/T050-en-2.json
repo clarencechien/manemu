@@ -45,5 +45,19 @@
     },
     "reason": "The translation of '那就麻煩你了' as 'Then I'll bother you with it' is too literal and sounds unnatural in English, where 'Thanks in advance' or 'I'll leave it to you' is preferred. However, the overall meaning is preserved, and the second clause is translated accurately."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達了要之後再聯絡與請對方處理的意思，但用語不自然且語氣錯位。原文「麻煩你了」在英語中通常譯為“Thanks in advance”或“I'll trouble you”/“Sorry to trouble you”，機器譯成“I'll bother you with it”聽來不禮貌且不符合常用表達，造成語氣與禮貌程度的偏差；句子語法可理解但用詞不自然，故給予中等評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

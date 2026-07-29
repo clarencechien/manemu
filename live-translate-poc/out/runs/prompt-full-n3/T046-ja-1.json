@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然，完美傳達了原文的意思，且日語敬語使用得當，語氣十分自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。‘本当にお上手ですね’與參考的‘とてもお上手ですね’意義相同；‘どこで勉強されたんですか?’雖用敬語被動形，但在語氣上仍為自然且可接受的日語表現，沒有遺漏或增添資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

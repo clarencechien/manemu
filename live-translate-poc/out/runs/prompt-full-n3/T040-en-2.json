@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is exceptionally accurate and natural, perfectly conveying the meaning of the source text with no errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately and completely conveys the source meaning, including the contrastive 'not cancel it.' Wording and grammar are natural and appropriate in English."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

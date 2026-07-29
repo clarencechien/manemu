@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文非常準確且自然地翻譯了原文的所有意思，文法完全正確，符合日語母語者的表達習慣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文與原文語意一致，表達自然流暢。兩者均詢問在不支付取消費的情況下最晚可取消的時間，語氣和資訊無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

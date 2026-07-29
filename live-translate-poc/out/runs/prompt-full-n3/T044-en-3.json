@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, conveying the exact meaning of the source text. It is grammatically correct and matches the reference translation closely."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（我們會晚30分鐘，詢問能否保留位子）。語氣與詞序自然但用法略微不如母語慣用表達（通常說 “hold our table” 或 “reserve our table”），因此流暢度略降。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

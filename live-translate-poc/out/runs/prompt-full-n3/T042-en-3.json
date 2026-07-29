@@ -47,5 +47,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息，與參考譯文語意完全一致。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原文意思（以 email 確認預約，並提供班機 BR198）。用詞與句法自然，可與參考譯文互換（booking/reservation 意義相同於此語境）。無錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文漏譯了「謝謝」（ありがとうございます），其餘部分翻譯得非常自然且準確。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達原句意思（拒絕與表示只是看看），但缺少明確的「謝謝」(感謝語)；此外結尾の「ので」顯得未完成，略影響自然度。故語意忠實略降一級，語言自然度亦略有瑕疵。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

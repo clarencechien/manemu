@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，敬語使用也十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（將晚30分鐘到，請保留座位），語句在日語中自然且禮貌。用語與參考譯文略有差異（到着します vs 遅れます），但不影響意義或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分貼切。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達原意（請求幫忙與之後再聯絡），語氣自然（日語中加入「ね」為口語化，不影響意義），譯句流暢自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

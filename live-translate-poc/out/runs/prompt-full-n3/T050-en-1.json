@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. 'Then I'll leave it to you' is a very appropriate translation for '那就麻煩你了' in this context, and 'I'll get back to you later' perfectly conveys '之後再聯絡'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意且語句自然流暢。\"Then I'll leave it to you\" 與 \"I'll get back to you later\" 對應原句的請託與日後聯絡，語氣與參考譯文相當。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

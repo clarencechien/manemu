@@ -46,5 +46,19 @@
     },
     "reason": "The translation is accurate and natural, perfectly conveying the meaning of the source text with no errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實地傳達原文：日本夏天很熱，但台北更熱。用詞與參考譯文等效，自然流暢，無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

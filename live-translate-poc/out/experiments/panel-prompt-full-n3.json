@@ -7832,6 +7832,19 @@
      "hallucination": false
     },
     "reason": "譯文完整傳達了原文「分開結帳」的請求，用詞自然地道，符合英語表達習慣。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣禮貌自然，符合英語餐廳情境用法。"
    }
   },
   "T020-ja-1": {
@@ -7886,6 +7899,19 @@
      "hallucination": false
     },
     "reason": "译文准确传达了“分开结账”的请求，使用了自然、礼貌的日语表达，与参考译文在语意和功能上完全一致。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，敬語使用得體，表達自然流暢。"
    }
   },
   "T020-ja-2": {
@@ -7940,6 +7966,19 @@
      "hallucination": false
     },
     "reason": "譯文完整傳達了原文「分開結帳」的請求與禮貌語氣，日語表達自然流暢，與參考譯文意思一致。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，敬語使用得當，日語表達自然流暢，無任何錯誤或遺漏。"
    }
   },
   "T020-ja-3": {
@@ -7994,6 +8033,19 @@
      "hallucination": false
     },
     "reason": "譯文完整傳達原文「分開結帳」的請求與禮貌語氣，日語表達自然流暢，與參考譯文核心語意一致。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，敬語使用得體，表達自然流暢。"
    }
   },
   "T021-en-1": {
@@ -8035,6 +8087,32 @@
      "hallucination": false
     },
     "reason": "譯文忠實傳達原意，但「兩個多少錢」譯為「How much are they both?」略顯冗餘，不如參考譯文簡潔。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的全部语义，包括否定、指代、颜色和数量，且英文表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有語意，包括否定、顏色、位置及數量詢問，語句自然流暢，符合英語口語習慣。"
    }
   },
   "T021-en-2": {
@@ -8050,6 +8128,2606 @@
      "hallucination": false
     },
     "reason": "譯文完整準確傳達原意且流暢自然"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達不要這個、要旁邊藍色那個及詢問兩個價格的意思，英文自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的所有语义信息，包括选择、位置、颜色和数量询问，且英文表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有語意，包括否定、選擇、顏色、數量及詢問價格，語句自然流暢，無任何錯誤或遺漏。"
+   }
+  },
+  "T021-en-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達不要此物、要旁邊藍色物品及詢問兩個價格，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原意且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，語氣自然流暢，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的語意，表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有語意，包括否定、顏色、位置及數量詢問，語句自然流暢，符合英語口語習慣。"
+   }
+  },
+  "T021-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實表達不要這個、要旁邊藍色的以及詢問兩個價格，日語自然得體。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，無誤譯或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的全部语义，包括拒绝、指定物品和询问价格，且日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T021-ja-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達原文意思，日語表達自然且與參考譯文一致。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,與參考譯文意思一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全忠實於原文語意，且日語表達自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的語意，包括拒絕、指定物品、詢問價格等所有要素，且日語表達自然流暢，與參考譯文幾乎一致。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T021-ja-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達不要此物、要旁邊藍色物品及詢問兩個價格，日語自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，僅「要らないです」與「ください」略顯客氣，但不影響整體評分。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的語意，包括拒絕、選擇另一物品以及詢問價格的意圖，且日語表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T022-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致忠實，正確表達嫌貴及三千成交的詢問，但「just give it to me」語氣較直接且未明確保留「可以嗎」的請求感。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本忠實但語氣稍強,原文為詢問語氣而譯文較像要求"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文保留了原文的核心語意（價格太貴、三千塊的提議），但語氣略顯生硬，未完全傳達原文的商量口吻。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意基本忠實且表達自然流暢，僅在協商語氣上略有弱化。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致正確，但將詢問語氣「可以嗎」轉為祈使句「just give it to me」，略失委婉。"
+   }
+  },
+  "T022-en-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達嫌貴並詢問能否以三千成交，英文自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，語氣自然，金額表達正確，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的議價語意與語氣，英文表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語句自然流暢，僅添加「dollars」屬合理語境推斷，不構成幻覺。"
+   }
+  },
+  "T022-en-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達嫌貴並詢問能否以三千成交，語意自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致,自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，語氣自然，金額表達正確無誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的议价意图和金额，表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語句自然流暢，僅將貨幣單位推測為美元，屬合理語境補充。"
+   }
+  },
+  "T022-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實表達價格太高並請求降至三千日圓，日語自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且用語自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且敬語使用得當"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然得體，敬語使用正確。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了「太貴」和「請求降價至三千」的語意，且日語表達自然、禮貌得體。"
+   }
+  },
+  "T022-ja-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達嫌貴並詢問能否算三千日圓，日語自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且日語表達自然"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的議價意圖和金額，日語表達自然得體。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌得當，無錯誤或遺漏。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T022-ja-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實傳達價格太高及希望降至三千日圓的禮貌詢問，日語自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文與參考譯文一致,準確且自然"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义和协商语气，日语表达自然流畅。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全忠實傳達原文語意，語氣自然且符合日語表達習慣。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，日語表達自然流暢，敬語使用得當，僅標點與參考譯文略有差異，不影響整體品質。"
+   }
+  },
+  "T023-en-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整準確且表達自然"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達價格是否含稅的詢問，英文自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，表達自然流暢，無錯誤或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文关于价格是否含税的询问，用词专业自然。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，用詞精確自然，「tax-inclusive or tax-exclusive」為道地商業用語，表現優於參考譯文。"
+   }
+  },
+  "T023-en-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確表達價格是否含稅，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,忠實傳達原意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，表達自然流暢，無錯誤或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文询问价格是否含税的全部语义，且英文表达自然、地道、正式。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然得體，用詞精確且符合商務情境。"
+   }
+  },
+  "T023-en-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確表達價格是否含稅，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然對應原文語意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，表達自然流暢，無任何錯誤或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確地傳達了原文關於價格是否含稅的詢問，用詞正式且自然，符合英語表達習慣。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然得體，用詞精確且符合商務情境。"
+   }
+  },
+  "T023-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實表達詢問價格是否含稅，日語自然且禮貌得當。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文詢問價格是否含稅的語意，日語表達自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全忠實傳達原文語意，且日語表達自然流暢，敬語使用得當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確自然,完整表達原文含意"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然得體，敬語使用恰當。"
+   }
+  },
+  "T023-ja-2": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且自然流暢"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達價格是否含稅的詢問，日語自然且禮貌得當。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，語法自然流暢，僅「あの」為多餘但不影響理解"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語使用得體，僅多出語氣詞「あの」不影響理解。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文询问价格是否含税的全部语义，且日语表达非常自然流畅。"
+   }
+  },
+  "T023-ja-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實表達詢問價格是否含稅，日語自然且禮貌得體。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,僅多了禮貌用語"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，表達自然流暢，無錯誤或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文询问价格是否含税的全部语义，且日语表达非常自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然得體，敬語使用恰當。"
+   }
+  },
+  "T024-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文正確傳達打八折與購買兩件的條件及語意，英文自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確且自然地表達了原文語意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，折扣計算正確，數量表達無誤，語句自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的假设条件和购买意图，表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，數字與折扣表達正確，英文自然流暢。"
+   }
+  },
+  "T024-en-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "正確表達打八折即降價二成，且購買兩件的條件與語氣自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確且自然,與參考譯文意思一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，折扣計算正確，數量表達無誤，語句自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的條件與意圖，語法自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與折扣表述正確，英文表達自然流暢。"
+   }
+  },
+  "T024-en-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確表達打八折與購買兩件的條件關係，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實準確且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，折扣計算正確，數量表達無誤，語句自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的假设条件和购买意图，表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與折扣表述正確，英文表達自然流暢。"
+   }
+  },
+  "T024-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "正確傳達八折時購買兩件的條件與數量，日語自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「這件」的量詞「着」未正確翻譯，但語意理解正確，流暢度高。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的假设条件和购买意图，用词自然流畅，完全符合日语表达习惯。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意忠實,惟量詞「2つ」不如「2着」自然"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，數量與條件句皆正確無誤。"
+   }
+  },
+  "T024-ja-2": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達折扣與購買數量,語意與原文一致,表達自然。"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「八折」正確譯為「20%引き」，數量與條件語意完整且日語自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「20%引き」不如「2割引き」自然"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的條件與意圖，且日語表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，數量詞與折扣表述皆正確。"
+   }
+  },
+  "T024-ja-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「八折」正確譯為八折即20%折扣，購買兩件的條件與數量均忠實且日語自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「八折」準確譯為「20パーセント引き」或「2割引き」，但「件」譯為「枚」不如「着」自然（衣物量詞）"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意正確,僅量詞「枚」與衣物慣用「着」略有差異"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的折扣条件和购买意图，且日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢；唯「件」譯為「枚」略欠精準（參考譯文用「着」更貼切），但不影響整體理解。"
+   }
+  },
+  "T025-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達詢問限量款式及在 Instagram 上看到的意思，英文自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確且自然地傳達原文語意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「款式」譯為「styles」尚可，但「limited edition」後的量詞「的」未明確對應，且「version」更貼近原文語意；「它」比「them」更精確對應原文單數指代。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的询问和补充信息，语法自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文語意，語句自然流暢，無任何錯誤或遺漏。"
+   }
+  },
+  "T025-en-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達詢問是否有聯名限定款及在 Instagram 看到的意思，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確流暢地傳達原文語意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「款式」譯為「styles」尚可，但「limited edition」後的量詞「的」未完全對應，參考譯文的「version」更自然；「它」比「them」更精確對應原文的「的」。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的询问和补充信息，语法自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文語意，語句自然流暢，無任何錯誤或遺漏。"
+   }
+  },
+  "T025-en-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達詢問限量款式及在 Instagram 看到的意思，英文自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確且自然地傳達原文語意"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的询问和来源信息，表达自然流畅。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「款式」譯為「styles」尚可，但「limited edition」後未明確對應「版本」或「系列」，語意略有偏差；「它」比「them」更精確對應原文單數指代。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語句自然流暢，無任何錯誤或遺漏。"
+   }
+  },
+  "T025-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達詢問限定版款式及在Instagram看到的意思，日語自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，用詞自然流暢，僅「款式」與「デザイン」略有差異，但不影響整體理解。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的語意，用詞自然地道。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T025-ja-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達詢問限定款及在Instagram看到的意思，日語自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,僅用外來語表達與參考略有不同"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，無誤譯或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文询问限量款和在Instagram上看到的信息，且日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，日語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T025-ja-3": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然流暢"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達詢問限定版款式及在Instagram看到的意思，日語自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，僅「款式」與「デザイン」微差，不影響整體理解，日語表達自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文詢問限量版款式和在Instagram上看到的語意，且日語表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T026-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達考慮後暫時不買的意思，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原意且自然流暢"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的猶豫與最終暫緩購買的決定，用詞自然地道。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢且無錯誤。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語句自然流暢，無任何錯誤或遺漏。"
+   }
+  },
+  "T026-en-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達考慮後暫時不買的意思，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且表達自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，自然流暢且無誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文的猶豫與暫緩購買之意，英文表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語句自然流暢，無任何錯誤或遺漏。"
+   }
+  },
+  "T026-en-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達考慮後暫時不買的意思，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意且語言自然流暢"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的猶豫和最終決定暫不購買的語意，英文表達自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢且無誤譯或遺漏"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語氣自然流暢，符合口語表達習慣。"
+   }
+  },
+  "T026-ja-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意且日語自然流暢"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達考慮後暫時不購買的意思，日語表達自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然流暢，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的犹豫和最终决定不买的含义，日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致忠實且日語自然流暢，惟「まだ」略帶「暫時不買、稍後再說」之意，與原文「先不買」語感相近但稍弱於「やめておきます」的明確放棄語氣。"
+   }
+  },
+  "T026-ja-2": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本忠實,但「まだ」語氣稍生硬,不如參考譯文自然"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文自然且大致忠實，但「先不買」譯為「まだ買わない」較偏暫時尚未購買，語氣略有差異。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的語意，但將'先不買好了'的委婉語氣譯為較為直接、決斷的'買わないことにします'，與參考譯文相比，在細微語感和情境貼合度上略有不足。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，僅表達方式略有不同（如「やっぱり今回はやめておきます」更強調「決定不買」的語氣，但不影響整體評分）"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致忠實且日語表達自然流暢，惟「まだ」略帶「尚未、之後會買」之意，與原文「先不買」的語感略有出入，但整體仍屬可接受範圍。"
+   }
+  },
+  "T026-ja-3": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且日語表達自然。"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實表達考慮後決定暫時不買的意思，日語自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢且無誤譯或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的犹豫和最终决定不买的含义，日语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致正確且日語自然，但「まだ」帶有「暫時不買、之後會買」的語感，與原文「先不買」的語氣略有出入，且未完全傳達「還是」所隱含的轉折與最終決定語氣。"
+   }
+  },
+  "T027-en-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然流暢地表達原文語意"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達可否退稅及消費超過五千日圓的意思，英文自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，僅動詞選擇略有差異（spent vs. bought），不影響整體評分。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的询问退税资格和消费总额的语义，且英文表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與否定皆正確，英文表達自然流暢。"
+   }
+  },
+  "T027-en-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達可否退稅及消費超過五千日圓的意思，英文自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意，數字和金額單位正確，語句自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的全部信息，语法自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實傳達原文語意，數字與金額正確，英文表達自然流暢。"
+   }
+  },
+  "T027-en-3": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確自然,語意與原文一致"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達可否退稅及購買總額超過五千日圓，英文自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「in total」的表達略優於「worth of stuff」，更符合自然英語表述。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達了原文的語意，且表達自然流暢。"
+   }
+  },
+  "T027-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確表達可否退稅及購買總額超過五千日圓，日語自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "退稅譯為免稅略有偏差但語意基本忠實且流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，無誤譯或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文关于退税和购物金额的全部语义，且日语表达自然流畅。"
+   }
+  },
+  "T027-ja-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達可否退稅及購買總額超過五千日圓，日語自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原意且用語自然"
    }
   }
  }

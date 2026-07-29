@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然，完美傳達了原文的所有語意。「日本の夏は暑いですが」對應「日本的夏天很熱，不過」，「台北のほうがもっと暑いと思います」對應「我覺得台北更熱」，文法與用詞皆無可挑剔。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。日語表現自然，雖與參考譯文在語氣詞（ですね/でも vs ですが）上略有不同，但不影響意思和流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

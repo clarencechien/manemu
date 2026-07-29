@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，與參考譯文幾乎一致，僅在量詞上使用了更為客氣的「二名」，完全符合日語口語表達習慣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：正確表達「預約明天下午三點、兩個大人」。日語用法自然（「大人二名で予約をしたいです」與參考譯文差異僅用字），無資訊遺失或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，語意完整傳達，敬語使用也十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文意思。「你的中文說得真好」翻成「中国語が本当にお上手ですね」或參考譯文的「とてもお上手ですね」差異極小且均自然，用詞與語序皆符合日語表達，後半句「どこで習ったんですか?」完全對應原句。無錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

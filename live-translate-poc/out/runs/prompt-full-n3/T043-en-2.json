@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is exceptionally accurate and natural, perfectly conveying the meaning of the source text without any errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately and fully conveys the source meaning and is natural English; matches reference phrasing and no errors present."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

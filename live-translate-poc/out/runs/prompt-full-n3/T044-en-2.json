@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. It conveys the exact meaning of the source text without any errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原句意思（會晚30分鐘，請求保留位子）。用詞自然（reservation/table 都可接受），語法流暢，因此在語意忠實與自然度上皆為最高評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

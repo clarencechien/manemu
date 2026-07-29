@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語句流暢，與參考譯文意思完全一致。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整保留原文語意（日本的夏天很熱，且作者認為台北更熱），沒有遺漏或增添信息；日語表達自然流暢，雖然句型與參考譯文略有不同（『とても暑いですが』vs『暑いですね。でも』），但同義且合適，故評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

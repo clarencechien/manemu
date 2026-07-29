@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，日語表達也十分流暢得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意（稱讚對方中文好並詢問在哪裡學的），語句在日語中自然通順。與參考譯文的差異僅為措辭（勉強しましたか vs 習ったんですか、本当に vs とてもお上手），不影響意義或禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

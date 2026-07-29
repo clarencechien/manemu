@@ -45,5 +45,19 @@
     },
     "reason": "語意非常完整且忠實（Adequacy 5）。但在流暢度方面，「初めて」被誤寫為不存在的詞彙「最初めて」（混淆了『最初』與『初めて』），此為明顯的語法/拼寫錯誤，故流暢度給予 3 分。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致正確：表達來自台灣且是第一次到大阪觀光的意思都有保留，因此語意忠實度可評為4。但目標語自然度不足，句尾的“最初めてです”為不自然/錯誤表現（應為“初めてです”或使用“最初に〜する”結構），整句語法與流暢度受影響，故流暢度評為2。無否定顛倒、數字錯誤、人物名錯誤、遺漏或杜撰內容。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

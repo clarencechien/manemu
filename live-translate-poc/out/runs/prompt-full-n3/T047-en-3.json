@@ -46,5 +46,19 @@
     },
     "reason": "The translation is highly accurate and natural, perfectly conveying the meaning of the source text with no errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整正確，語意與中文原文一致（日本夏天很熱，但我覺得台北更熱），目標語自然流暢，與參考譯文差異僅在措辭細微變化。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

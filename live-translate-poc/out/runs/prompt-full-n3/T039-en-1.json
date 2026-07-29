@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is exceptionally accurate and natural. It perfectly conveys all the information from the source text, including the date, time, and number of people, with native-level fluency."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation accurately and completely conveys the original meaning: requests a reservation for tomorrow at 3 PM for two adults. Wording is natural and matches the reference; no errors or omissions."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

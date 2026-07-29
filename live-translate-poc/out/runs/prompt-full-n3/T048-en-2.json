@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. 'Browsing' is a perfect equivalent for 'just looking' in a retail context."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句含意且語句自然。'I'm just browsing' 與參考譯文 'I'm just looking' 等效，沒有遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

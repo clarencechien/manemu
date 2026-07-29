@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確且完整地傳達了原文的意思，日語表達非常自然流暢，文法正確，無任何錯誤旗標。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達了原句含義（不能打青黴素，因為會過敏）。日語表達自然，句子結構和語氣皆可接受（與參考譯文僅在語氣上略有差異）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, capturing all elements of the source text perfectly without any errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：將「明天下午三點」和「兩個大人」正確表達，語序自然。用詞與參考譯文等效，流暢自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

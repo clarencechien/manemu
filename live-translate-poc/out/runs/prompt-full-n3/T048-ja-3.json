@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文「不用了，謝謝，我只是看看而已」的意思，禮貌語氣也十分恰當。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯把「結構です」錯譯為「構造です」，導致第一句語意錯誤或難以理解；第二句「ただ見ているだけです」基本正確，但缺少參考譯文中更自然的尾句（ちょっと〜なので）的語氣緩和。整體語意傳達不完整且用詞錯誤，流暢度一般。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

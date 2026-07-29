@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。「那就麻煩你了」翻譯為「それでは、お手数ですがよろしくお願いします」，語氣十分得體客氣；「之後再聯絡」翻譯為「また連絡します」亦完全符合原意，無任何錯誤。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思，且日文自然流暢。加入「お手数ですが」為適切禮貌語，與原句的「麻煩你」相符；「また連絡します」與參考譯文的「また後で連絡します」差異不影響語意。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

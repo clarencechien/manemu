@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. 'I'm just browsing' is an excellent and idiomatic translation for '我只是看看而已' in a shopping context."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句含義（婉拒並表示只是看看），語氣自然。用詞 'browsing' 與參考譯文 'looking' 為等效表達，無語意錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

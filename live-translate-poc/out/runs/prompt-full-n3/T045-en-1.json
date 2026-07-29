@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. The phrase '麻煩你了' is appropriately and politely translated as 'I really appreciate it', which fits the context perfectly."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達了感謝與當天的感激，但未完全捕捉「今天真的麻煩你了」中帶有的歉意與對方付出造成不便的含意（machine 用法偏中性：「appreciate it」語意較模糊）。句子語法通順，但「I really appreciate it today」略顯不自然，可改為“I really appreciate everything you did today”或“I really appreciate your help today”。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

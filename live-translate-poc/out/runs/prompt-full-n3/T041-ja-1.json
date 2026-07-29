@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文非常準確且自然地翻譯了原文的意思，與參考譯文幾乎一致，語意完全忠實，日語表達也十分流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地表達原意（若3時沒有位子，4時也可以），日語用法自然，與參考譯文意義相同（表達禮貌的不同措辭）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

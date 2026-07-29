@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完美傳達了原文的意思，日語表達十分流暢且符合禮貌規範。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地表達了原句含義（請託/麻煩與之後再聯絡），敬語使用自然。句子流暢，語氣與參考譯文相當，無重要遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

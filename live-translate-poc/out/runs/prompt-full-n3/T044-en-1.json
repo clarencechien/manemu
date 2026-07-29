@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural, perfectly conveying the meaning of the source text without any errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（會晚三十分鐘，詢問能否保留座位/位子），數字與語意皆正確。用語自然，唯「seats」與參考的「table」不同，但在語境中均可接受，未影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

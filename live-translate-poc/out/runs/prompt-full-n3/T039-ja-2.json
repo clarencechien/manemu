@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。「大人2名」在預約情境中甚至比參考譯文的「大人2人」更為得體、禮貌。整體語意完全忠實，流暢度極佳。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完全忠實：正確表達想預約明天下午3點、兩位大人的意思。流暢度稍有瑕疵：時間用法通常用助詞「に」而非「で」，以及使用「2名」而非口語常用的「2人」，但整體自然且可理解，故給予adequacy 5、fluency 4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

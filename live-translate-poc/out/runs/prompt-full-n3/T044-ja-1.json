@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（將晚30分鐘並請求保留座位），用語禮貌且自然。句子結構與參考譯文略有不同但同樣可接受。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

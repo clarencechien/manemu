@@ -47,5 +47,19 @@
     },
     "reason": "The translation is highly accurate and natural. 'booking' is a perfect synonym for 'reservation' in this context, and the flight number is correctly translated."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。將「預約」譯為 booking（或 reservation）皆可接受，航班編號正確，語句流暢自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

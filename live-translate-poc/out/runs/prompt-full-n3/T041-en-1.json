@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with correct grammar and phrasing."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。原句「如果三點沒有位子的話,四點也可以。」被正確表達為 If there are no seats at three, four is also fine. 用詞與語序自然、無誤，與參考譯文意義一致（可加上 o'clock 但非必要）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
