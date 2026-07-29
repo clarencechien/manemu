@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:46:45.976Z"
+  "ts": "2026-07-29T10:46:45.976Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is exceptionally accurate and natural, conveying the exact meaning of the source text. It is virtually identical to the reference translation, with only minor stylistic differences (e.g., 'over 15' instead of 'more than fifteen')."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意與原文一致，句子自然流暢。僅在數字表達上使用數字形式（15）而非拼寫（fifteen），但不影響忠實度或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

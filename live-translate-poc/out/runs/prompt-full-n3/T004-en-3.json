@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:46:58.204Z"
+  "ts": "2026-07-29T10:46:58.204Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. It slightly simplifies '大概' (about) and '我想' (I'd like to -> I'll), but the core meaning is perfectly preserved and the English is grammatically correct and fluent."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。句子自然流暢。唯一細微差別是原句「我想搭計程車」偏向禮貌或意願表達（I'd like to...），機譯用'I'll take a taxi'稍微確定些，但不影響整體理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

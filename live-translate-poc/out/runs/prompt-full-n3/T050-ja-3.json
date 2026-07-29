@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "では、よろしくお願いします。また後で連絡します。",
+  "inputTranscript": "那 就 麻 烦 你 了 , 之 后 再 联 络 。",
+  "outputTranscript": "それでは、お願いします。また後ほどご連絡します。",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3580,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 959,
+    "ttft_from_end_ms": 958,
+    "completion_lag_ms": 1665,
+    "ttfa_from_start_ms": 3960
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:07:39.120Z"
+}

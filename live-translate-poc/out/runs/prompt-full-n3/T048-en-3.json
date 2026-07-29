@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T048",
+  "category": "smalltalk",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "不用了,謝謝,我只是看看而已。",
+  "reference": "No thanks, I'm just looking.",
+  "inputTranscript": "不 用 了 , 谢 谢 , 我 只 是 看 看 而 已 。",
+  "outputTranscript": "No, thank you, I'm just browsing.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 2050,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1027,
+    "ttft_from_end_ms": 1026,
+    "completion_lag_ms": 1408,
+    "ttfa_from_start_ms": 4026
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.143,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:06:55.317Z"
+}

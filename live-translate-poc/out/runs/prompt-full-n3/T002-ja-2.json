@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:45:40.315Z"
+  "ts": "2026-07-29T10:45:40.315Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「SHIBUYA SKY」使用英文拼寫完全可以接受且清晰，「建物」也是「這棟樓」的正確翻譯，整體語意與流暢度皆無可挑剔。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句問路意圖與資訊（『Shibuya Sky 的入口在這棟樓嗎？』）。唯一小差異為格式與用詞：機譯以英文字母大寫“SHIBUYA SKY”而非日語片假名/漢字（渋谷スカイ），以及使用「この建物」而不是更口語的「このビル」。這些皆不影響語意，但在目標語自然度上稍微降低了流暢性。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

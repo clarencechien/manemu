@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:48:00.435Z"
+  "ts": "2026-07-29T10:48:00.435Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，僅在「京都まで」與「京都までの」有微小語法差異，但完全不影響語意與流暢度。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

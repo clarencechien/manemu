@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "Thank you for your help — I really appreciate everything today.",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "Thank you for your help, I really appreciate it today.",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 2650,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 946,
+    "ttft_from_end_ms": 946,
+    "completion_lag_ms": 2332,
+    "ttfa_from_start_ms": 4146
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.843,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:05:30.763Z"
+}

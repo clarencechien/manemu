@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T10:46:06.437Z"
+  "ts": "2026-07-29T10:46:06.437Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「火車站」翻譯為「駅」在日文中非常符合習慣，句型「空港へ行くのではなく、駅へ行きたいんです」完美表達了原文的對比語氣，語意忠實度與流暢度皆為滿分。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實傳達原句意思（不是去機場，而是要去火車站）。日語表達自然，僅用「駅」而非「電車の駅」並不影響理解，整句流暢且無資訊遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

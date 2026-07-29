@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "30分ほど遅れます。席を取っておいていただけますか?",
+  "inputTranscript": "我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?",
+  "outputTranscript": "30分遅れますが、席は確保できますか?",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 3380,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 973,
+    "ttft_from_end_ms": 973,
+    "completion_lag_ms": 1609,
+    "ttfa_from_start_ms": 5373
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.708,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:05:05.601Z"
+}

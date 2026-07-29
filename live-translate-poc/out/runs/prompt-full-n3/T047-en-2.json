@@ -1,0 +1,36 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T047",
+  "category": "smalltalk",
+  "traps": [
+    "sentence-final",
+    "proper-noun"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "日本的夏天很熱,不過我覺得台北更熱。",
+  "reference": "Summer in Japan is hot, but I think Taipei is even hotter.",
+  "inputTranscript": "日 本 的 夏 天 很 热 , 不 过 我 觉 得 台 北 更 热 。",
+  "outputTranscript": "The summer in Japan is very hot, but I think Taipei is even hotter.",
+  "inputDurationMs": 4011,
+  "outputAudioMs": 4170,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 957,
+    "ttft_from_end_ms": 957,
+    "completion_lag_ms": 1890,
+    "ttfa_from_start_ms": 5156
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.156,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:06:32.392Z"
+}

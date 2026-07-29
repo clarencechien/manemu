@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T049",
+  "category": "smalltalk",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我是從台灣來的,第一次來大阪玩。",
+  "reference": "台湾から来ました。大阪に遊びに来るのは初めてです。",
+  "inputTranscript": "我 是 从 台 湾 来 的 , 第 一 次 来 大 阪 玩 。",
+  "outputTranscript": "台湾から来ました。大阪に遊びに来たのは初めてです。",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 3960,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1205,
+    "ttft_from_end_ms": 1205,
+    "completion_lag_ms": 2032,
+    "ttfa_from_start_ms": 5204
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:07:14.408Z"
+}
