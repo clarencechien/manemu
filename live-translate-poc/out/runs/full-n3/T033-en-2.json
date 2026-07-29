@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, capturing the meaning of the source text perfectly with excellent fluency."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語句通順自然，但將原句「明天早上六點半要到機場」理解為「需要在六點半叫車去機場」（即在該時間搭車去機場），而原意較可能是「要在六點半抵達機場／六點半需要到達機場」。此時間焦點的微弱偏差使得語意忠實度略降。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

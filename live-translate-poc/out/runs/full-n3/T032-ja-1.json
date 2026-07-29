@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，但使用了較為隨便的「ありがとう」和「いいです」，相較於參考譯文的敬語顯得不夠禮貌，因此標記 honorific_off。整體語意忠實且流暢。"
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致保留原意（表示明天不需要/不必打掃房間），因此語意忠實度較高。但表達上較口語且用語與參考譯文相比較不禮貌（「掃除はいいです」「ありがとう」較不正式），故在自然度上略有扣分。沒有反轉否定或遺漏內容，也未出現捏造資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

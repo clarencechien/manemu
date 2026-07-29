@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。雖然省略了「一台」的翻譯，但在日文中「タクシーを呼ぶ」本就預設為一台，符合日語表達習慣。語氣禮貌且意思完整傳達。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文整體自然且禮貌，但未明確表現「一台」(一台計程車)並將「要到機場」翻成「行きたいです」（想去），較偏向意願表達而非必須/預定或到達時間的陳述，屬細微語意差異，故給4分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

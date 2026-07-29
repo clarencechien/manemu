@@ -45,5 +45,19 @@
     },
     "reason": "The translation accurately conveys the meaning of the original text and is grammatically correct and natural. Although the reference translation uses a causative structure ('need my room cleaned'), the machine translation's active structure ('need to clean the room') is also a valid interpretation of the original Chinese sentence."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語法自然且流暢，但將原句被動含意（我不需要別人幫我打掃/不需要房間被打掃）改為主動（我不需要自己打掃），語意有輕微偏差，因此給予較高但非滿分的 adequacy。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation accurately and naturally conveys the meaning of the original text, matching the reference translation closely."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。機譯將「我頭很暈」翻為 \"I'm very dizzy\"，與參考譯文的 \"I feel very dizzy\" 等效；「我沒有心臟病的病史」翻為 \"I don't have a history of heart disease\"，語意正確且自然流暢。沒有任何錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

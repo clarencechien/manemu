@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的意思。在流暢度與語氣方面，「いいです」（敬體）與「ありがとう」（常體）混用，語氣稍微不一致，且「ありがとう」相較於原文的「謝謝」顯得過於隨意（建議使用「ありがとうございます」），因此標記敬語錯誤，但整體仍非常自然且易懂。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句含意（表示明天不需要打掃房間，並道謝），因此語意忠實度高。日文表達稍微不如參考譯文禮貌且用語上可更自然（「いいです」與「ありがとう」較口語，且原句較正式可用「結構です」「ありがとうございます」），故流暢度略降一分。標記 honorific_off 為 true，因為敬語層級較原文/參考譯文降低。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

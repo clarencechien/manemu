@@ -45,5 +45,19 @@
     },
     "reason": "The translation accurately conveys the full meaning of the source text and is highly fluent and natural in English."
   },
-  "judgeModel": "models/gemini-3.1-pro-preview"
+  "judgeModel": "models/gemini-3.1-pro-preview",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Machine translation faithfully conveys the original meaning and request. Minor wording differences ('air conditioning' vs 'air conditioner', 'in the room' vs 'in my room') do not change meaning. The phrasing is natural and polite in English."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

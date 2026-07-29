@@ -45,5 +45,19 @@
     },
     "reason": "譯文準確傳達了原文的意思，語意忠實度極高。日語表達自然流暢，雖然「ありがとう」相較於參考譯文的「ありがとうございます」較為口語，但整體文法與語氣皆符合原意。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯準確傳達原文含意（明天不需要打掃房間，並表達感謝），因此語意忠實度高（5）。日語表達自然但敬語程度較低（使用「ありがとう」而非更禮貌的「ありがとうございます」），微影響流暢/禮貌感（fluency 4）。無數量錯誤、否定翻轉、遺漏或杜撰。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
