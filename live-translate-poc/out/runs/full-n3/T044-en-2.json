@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "We'll be about thirty minutes late — can you hold our table?",
+  "inputTranscript": "我们会晚30分钟到,位置可以保留吗?",
+  "outputTranscript": "We'll be 30 minutes late, but can you hold the table?",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 3750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1298,
+    "ttft_from_end_ms": -1298,
+    "completion_lag_ms": 1866,
+    "ttfa_from_start_ms": 3102
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.87,
+    "coverage_ok": true,
+    "cer": 0.188
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:31:38.952Z"
+}

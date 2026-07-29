@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "手伝っていただいてありがとうございます。今日は本当にお世話になりました。",
+  "inputTranscript": "谢谢你的帮忙,今天真的麻烦你了。",
+  "outputTranscript": "手伝ってくれて本当にありがとう。",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 2500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -82,
+    "ttft_from_end_ms": -104,
+    "completion_lag_ms": 1821,
+    "ttfa_from_start_ms": 3118
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.441,
+    "coverage_ok": false,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:31:49.720Z"
+}

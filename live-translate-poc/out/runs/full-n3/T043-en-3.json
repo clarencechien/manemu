@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T043",
+  "category": "appointment",
+  "traps": [
+    "negation",
+    "honorific"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "請問最晚可以幾點取消,而不用付取消費?",
+  "reference": "What's the latest I can cancel without paying a cancellation fee?",
+  "inputTranscript": "请问最晚可以几点取消而不用付取消费?",
+  "outputTranscript": "What's the latest I can cancel without paying a cancellation fee?",
+  "inputDurationMs": 4411,
+  "outputAudioMs": 4750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1344,
+    "ttft_from_end_ms": -1505,
+    "completion_lag_ms": 2656,
+    "ttfa_from_start_ms": 3256
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:31:22.586Z"
+}
