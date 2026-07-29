@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T029",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我沒有訂房,請問今晚還有空房嗎?",
+  "reference": "予約していないんですが、今夜空いている部屋はありますか?",
+  "inputTranscript": "我沒有訂房,請問今晚還有空房嗎?",
+  "outputTranscript": "予約はしていないのですが、今夜空室はありますか？",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 4250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -584,
+    "ttft_from_end_ms": -615,
+    "completion_lag_ms": 3061,
+    "ttfa_from_start_ms": 3016
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.846,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:26:28.134Z"
+}

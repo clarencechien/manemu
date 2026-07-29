@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T031",
+  "category": "hotel",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "房間的冷氣好像壞了,可以請人來看一下嗎?",
+  "reference": "部屋のエアコンが壊れているようなんですが、どなたかに見に来ていただけますか?",
+  "inputTranscript": "房间的冷气好像坏了,可以请人来看一下吗?",
+  "outputTranscript": "部屋のエアコンが壊れたみたいで、誰かに見てもらえますか？",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -1024,
+    "ttft_from_end_ms": -1049,
+    "completion_lag_ms": 2316,
+    "ttfa_from_start_ms": 3076
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.722,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:27:01.363Z"
+}

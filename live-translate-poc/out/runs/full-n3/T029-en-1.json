@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T029",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "我沒有訂房,請問今晚還有空房嗎?",
+  "reference": "I don't have a reservation — do you have any rooms available tonight?",
+  "inputTranscript": "我没有订房,请问今晚还有空房吗?",
+  "outputTranscript": "I don't have a reservation, do you have any rooms available tonight?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 3750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -464,
+    "ttft_from_end_ms": -490,
+    "completion_lag_ms": 2703,
+    "ttfa_from_start_ms": 3135
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:26:30.887Z"
+}

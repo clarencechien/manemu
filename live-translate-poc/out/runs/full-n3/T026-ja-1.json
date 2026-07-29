@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T026",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 1,
+  "zh": "我考慮了一下,這個還是先不買好了。",
+  "reference": "ちょっと考えたんですが、これはやっぱり今回はやめておきます。",
+  "inputTranscript": "我考虑了一下,这个还是先不买好了。",
+  "outputTranscript": "ちょっと考えたんですが、これはやめておきます。",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 3500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -81,
+    "ttft_from_end_ms": -255,
+    "completion_lag_ms": 2668,
+    "ttfa_from_start_ms": 3319
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.75,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:25:21.817Z"
+}

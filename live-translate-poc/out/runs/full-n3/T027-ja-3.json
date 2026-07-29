@@ -1,0 +1,35 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T027",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "可以退稅嗎?我總共買了超過五千日圓。",
+  "reference": "免税できますか?全部で5000円以上買いました。",
+  "inputTranscript": "可以退稅嗎?我總共買了超過5000日元。",
+  "outputTranscript": "免税はできますか?合計で5000円以上買いました。",
+  "inputDurationMs": 3771,
+  "outputAudioMs": 4250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -941,
+    "ttft_from_end_ms": -970,
+    "completion_lag_ms": 2704,
+    "ttfa_from_start_ms": 2958
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.045,
+    "coverage_ok": true,
+    "cer": 0.313
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:25:47.826Z"
+}

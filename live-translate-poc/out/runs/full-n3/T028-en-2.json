@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T028",
+  "category": "hotel",
+  "traps": [
+    "proper-noun",
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "我有訂房,名字是陳大文,今天住兩個晚上。",
+  "reference": "I have a reservation under the name Chen Ta-wen, staying two nights from today.",
+  "inputTranscript": "我有定房,名字是陳大文。今天住兩個晚上。",
+  "outputTranscript": "I have a reservation, the name is Chen Dawen. I'm staying for two nights.",
+  "inputDurationMs": 5251,
+  "outputAudioMs": 5250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -2224,
+    "ttft_from_end_ms": -2420,
+    "completion_lag_ms": 2275,
+    "ttfa_from_start_ms": 3175
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.889,
+    "coverage_ok": true,
+    "cer": 0.059
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:26:18.097Z"
+}

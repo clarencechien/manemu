@@ -1,0 +1,36 @@
+{
+  "runId": "full-n3",
+  "phraseId": "T026",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "我考慮了一下,這個還是先不買好了。",
+  "reference": "I've thought about it — I'll pass on this one for now.",
+  "inputTranscript": "我考虑了一下,这个还是先不买了。",
+  "outputTranscript": "I thought about it, and I'm not going to buy it yet.",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 3500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": -206,
+    "ttft_from_end_ms": -352,
+    "completion_lag_ms": 2543,
+    "ttfa_from_start_ms": 3192
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.974,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.5-live-translate-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T07:25:38.265Z"
+}
