@@ -20,9 +20,12 @@ const force = args.includes("--force");
 // 固定 voice + 低變異,讓合成可重現、口音一致。
 const VOICE = "Kore";
 
-async function synthOne(phrase) {
+// flash 對個別句子會伺服器端死掛(T011「Suica 儲值」實測 100s 0 bytes),pro 可正常合成
+const FALLBACK_TTS_MODEL = "models/gemini-2.5-pro-preview-tts";
+
+async function synthOne(phrase, model = TTS_MODEL) {
   // TTS preview 偶發掛住不回應(3.1 必掛、2.5 偶發),一定要設 timeout 讓重試接手
-  const res = await fetch(`${REST_BASE}/${TTS_MODEL}:generateContent`, {
+  const res = await fetch(`${REST_BASE}/${model}:generateContent`, {
     method: "POST",
     signal: AbortSignal.timeout(30000),
     headers: { "content-type": "application/json", "x-goog-api-key": API_KEY },
@@ -58,25 +61,34 @@ for (const phrase of corpus.phrases) {
     continue;
   }
   let lastErr = null;
-  for (let attempt = 1; attempt <= 3; attempt++) {
-    try {
-      const { pcm, srcMime } = await synthOne(phrase);
-      fs.writeFileSync(file, wavEncode(pcm, INPUT_SAMPLE_RATE));
-      manifest[phrase.id] = {
-        file: `data/audio/${phrase.id}.wav`,
-        durationMs: Math.round(durationMs(pcm, INPUT_SAMPLE_RATE)),
-        srcMime, voice: VOICE,
-      };
-      console.log(`${phrase.id} ok ${manifest[phrase.id].durationMs}ms`);
-      lastErr = null;
-      break;
-    } catch (err) {
-      lastErr = err;
-      console.error(`${phrase.id} attempt ${attempt} failed: ${err.message}`);
-      await new Promise((r) => setTimeout(r, 2000 * attempt));
+  const plans = [
+    { model: TTS_MODEL, attempts: 3 },
+    { model: FALLBACK_TTS_MODEL, attempts: 2 },
+  ];
+  outer: for (const plan of plans) {
+    for (let attempt = 1; attempt <= plan.attempts; attempt++) {
+      try {
+        const { pcm, srcMime } = await synthOne(phrase, plan.model);
+        fs.writeFileSync(file, wavEncode(pcm, INPUT_SAMPLE_RATE));
+        manifest[phrase.id] = {
+          file: `data/audio/${phrase.id}.wav`,
+          durationMs: Math.round(durationMs(pcm, INPUT_SAMPLE_RATE)),
+          srcMime, voice: VOICE, model: plan.model,
+        };
+        console.log(`${phrase.id} ok ${manifest[phrase.id].durationMs}ms (${plan.model.split("/")[1]})`);
+        lastErr = null;
+        break outer;
+      } catch (err) {
+        lastErr = err;
+        console.error(`${phrase.id} ${plan.model.split("/")[1]} attempt ${attempt} failed: ${err.message}`);
+        await new Promise((r) => setTimeout(r, 2000 * attempt));
+      }
     }
   }
-  if (lastErr) throw lastErr;
+  if (lastErr) {
+    manifest[phrase.id] = { failed: String(lastErr.message).slice(0, 200) };
+    console.error(`${phrase.id} FAILED, continuing`);
+  }
 }
 fs.writeFileSync(path.join(audioDir, "manifest.json"), JSON.stringify(manifest, null, 2));
 console.log("done:", Object.keys(manifest).length, "files");
