@@ -3678,6 +3678,19 @@
      "hallucination": true
     },
     "reason": "將「訂房」誤譯為「plan」屬嚴重語意錯誤（hallucination），姓名音譯不準確（name_mangled），且「今天住兩個晚上」的時態與表達不自然。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "將「訂房」誤譯為「plan」，語意偏差；「今天住兩個晚上」譯為「Today we'll stay for two nights」語意模糊，且原文無「we」，屬輕微幻譯。"
    }
   },
   "T028-ja-1": {
@@ -3866,6 +3879,19 @@
      "hallucination": false
     },
     "reason": "譯文忠實傳達原文語意，僅「空房」的自然度稍遜於參考譯文（空き部屋→空いている部屋）"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，敬語使用得當，日語表達自然流暢。"
    }
   },
   "T030-en-1": {
@@ -3920,6 +3946,19 @@
      "hallucination": false
     },
     "reason": "譯文準確傳達原文的詢問內容與時間點，語氣自然且完整。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文關於退房時間的詢問，語意忠實，語法正確且表達自然流暢。"
    }
   },
   "T030-ja-1": {
@@ -3974,6 +4013,19 @@
      "hallucination": false
     },
     "reason": "译文准确传达了原文询问退房时间（上午十点还是十一点）的全部语义，且日语表达自然流畅，符合酒店场景用语。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語使用得當。"
    }
   },
   "T031-en-1": {
@@ -4028,6 +4080,1294 @@
      "hallucination": false
     },
     "reason": "譯文完整傳達原文語意，英文表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然得體，符合飯店情境請求。"
+   }
+  },
+  "T031-ja-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意忠實且流暢,但敬語略顯隨意"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達冷氣疑似故障並請人前來查看的意思，日語自然得體。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實，但禮貌程度稍低（缺少敬語如「いただけますか」），自然度略降"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的語意與請求語氣，日語表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致正確，但「見てもらえますか」省略了「來」的動作，且語氣略顯口語，敬語使用稍欠完整。"
+   }
+  },
+  "T032-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達明天不需打掃房間及致謝，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確且自然,語意與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意接近原文，但「打掃房間」的被動語態未完全準確傳達"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的語意與禮貌語氣，表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文語意，語法正確，表達自然流暢。"
+   }
+  },
+  "T032-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達明天不需要打掃房間及致謝之意，日語自然但語氣較口語。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意忠實但敬語程度略低於參考譯文"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "语意完全传达，但表达方式比参考译文略显直接。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實，但敬語表達不夠自然（缺少「ありがとうございます」的正式敬體）"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意正確但敬語不足，「しなくていい」與「ありがとう」對說話者而言過於 casual，不符原文婉拒的禮貌語氣。"
+   }
+  },
+  "T033-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達叫計程車及明早六點半到機場的意思，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整且自然,與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文的請求和時間信息，語言自然流暢，無誤譯或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的語意，語法自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文所有資訊，包括時間與地點，語句自然流暢，無任何錯誤或遺漏。"
+   }
+  },
+  "T033-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達叫一台計程車及明早六點半需抵達機場的意思，日語自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本忠實，但「要到機場」譯為「空港に着く必要があります」稍顯生硬，不如參考譯文自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本正確，但「着く必要があります」與原文「要到」的意圖（想要抵達）略有差異，自然度稍欠。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意忠實但敬語程度稍低且措辭略生硬"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致正確，但「空港に着く」應為「空港に着くように」或「空港に行く」，語意略顯不自然，且敬語使用稍嫌生硬。"
+   }
+  },
+  "T034-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達求救與呼叫救護車之意，但「Saving a life」較不如「Help」自然直接。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「救命!」的緊急語氣未完全傳達，但語意基本正確，流暢度高。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "「救命」應譯為Help!的呼救語,卻被誤譯成描述性語句Saving a life,語氣與意義有偏差"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本正確，但將感嘆詞'救命'譯為'Saving a life'略顯生硬，不夠直接自然。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「救命」譯為「Saving a life」語意偏差，應為「Help」，整體語意部分失真但語句通順。"
+   }
+  },
+  "T034-ja-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,僅缺少結尾驚嘆號但不影響語意"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達求救及請求叫救護車的意思，日語自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全忠實傳達原文的緊急求救語意，且日語表達自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文完整准确地传达了原文的紧急呼救语义，且日语表达自然地道。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，僅省略句末驚嘆號，不影響理解與語氣。"
+   }
+  },
+  "T035-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達護照遺失及詢問警察局位置，英文自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全忠於原文語意，表達自然流暢，無任何錯誤或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意，英文表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語氣自然流暢，符合英語詢問情境。"
+   }
+  },
+  "T035-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達護照遺失及詢問警察局位置，日語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且自然地傳達原文語意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語法自然流暢，僅「不見了」與「なくなりました」的表達略有差異，但不影響整體理解"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意，日語表達自然得體。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，日語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T036-en-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文多加了「Good grief」原文並無此語氣詞,屬輕微增譯"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "整體語意正確自然，但「Good grief」為原文未有的情緒感嘆，屬輕微增譯。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「我頭很暈」譯為「my head is spinning」語意接近但不完全相同，原文情感強度略有減弱；其餘部分忠實且自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "译文的自然度很高，但添加了原文没有的感叹词'Good grief'，属于无中生有的信息。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文流暢自然，但「Good grief」為原文所無的添加語，屬輕微幻譯；「頭很暈」譯為 head is spinning 語意忠實。"
+   }
+  },
+  "T036-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達頭暈及沒有心臟病病史的意思，日語口語表達自然但「頭がぼんやり」較弱於嚴重暈眩。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「頭很暈」譯為「頭がぼんやりしてる」語意稍弱，但整體忠實；日文表達自然，但「めまいがひどい」更貼切。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「頭很暈」譯成「頭がぼんやりしてる」語意略偏(頭腦模糊而非暈眩),其餘部分忠實且流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本正確，但'ぼんやりしてる'與'頭暈'的語感略有差異，且句子連貫性可再提升。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致正確，但「頭がぼんやりしてる」語氣偏弱，未能完全傳達「頭很暈」的嚴重程度，且整體表達略顯口語。"
+   }
+  },
+  "T037-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "房號與朋友昏倒的核心意思正確，但無中生有加入了「Hello friends」稱呼。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文多出了「Hello friends,」這部分，屬於無中生有的內容，但其他部分忠實傳達了原文意思且自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文多加了原文沒有的「Hello friends」問候語"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": true,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "數字「七〇二」應譯為口語化的「seven-oh-two」而非直接數字「702」，且譯文開頭多餘添加了「Hello friends」，但核心語意完整且表達流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文正確傳達房間號碼與朋友昏倒的訊息，但開頭添加了原文不存在的「Hello friends」，屬於無中生有的幻覺。"
+   }
+  },
+  "T037-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整且房號正確，僅缺少句點使書面自然度略受影響。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整準確,但缺少句子間的標點導致流暢度略降"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「昏倒」譯為「気を失いました」不如「倒れました」自然，且缺少句號分隔兩句話。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本正確，但譯文缺乏適當標點導致流暢度下降，且「昏倒」的譯詞「気を失いました」雖可接受，但不如參考譯文「倒れました」在該語境下自然。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，但兩句之間缺少標點或連接詞，略顯生硬。"
+   }
+  },
+  "T038-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文將「青黴素」錯譯為「非那雄胺」，核心藥名錯誤，但過敏與否定語意正確且英文自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 1,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "青黴素被誤譯為finasteride(非那雄胺),藥物名稱完全錯誤"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "藥物名稱錯誤（青黴素→finasteride），導致語意不忠實"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "關鍵藥物名稱「青黴素(penicillin)」被誤譯為「finasteride(非那雄胺)」，屬於嚴重語意錯誤與幻覺。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 1,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "原文「青黴素」(penicillin) 被誤譯為 finasteride（非那雄胺，一種治療脫髮/前列腺的藥物），屬嚴重幻覺，語意完全錯誤。"
+   }
+  },
+  "T038-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 1,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文將「青黴素」誤譯為低用量避孕藥，且把過敏改成一般副作用，核心醫療資訊嚴重失真。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 1,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "將青黴素誤譯為低用量避孕藥,且過敏改為副作用,語意完全錯誤"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 1,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "關鍵藥物名稱錯誤（青黴素→低用量ピル），且添加無關副作用描述"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "译文将关键药物“青霉素”误译为“低用量ピル”（低剂量口服避孕药），并错误添加了“副作用”这一原文未提及的信息，导致核心语义严重偏离。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 1,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文將「青黴素」誤譯為「低用量避孕藥」，並自行添加「副作用」等原文未提及之內容，語意嚴重偏離。"
+   }
+  },
+  "T039-en-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達明天下午三點預約兩位成人的意思，英文僅略顯不夠自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": -5,
+    "flags": {
+     "number_wrong": -1,
+     "negation_flipped": -1,
+     "honorific_off": -1,
+     "name_mangled": -1,
+     "omission": -1,
+     "hallucination": -1
+    },
+    "reason": "語意完全忠實，但表達不自然且結構鬆散。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整且自然,僅語氣稍顯迂迴"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意基本正確，但「我想預約」被轉換為疑問句，語氣不完全忠於原文的陳述意圖。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，但「I think, would it be possible」語氣略顯冗贅，自然度稍遜於參考譯文。"
+   }
+  },
+  "T039-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達明天下午三點與兩位成人的預約需求，日語自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": -1,
+    "flags": {
+     "number_wrong": -1,
+     "negation_flipped": -1,
+     "honorific_off": -1,
+     "name_mangled": -1,
+     "omission": -1,
+     "hallucination": -1
+    },
+    "reason": "語意基本正確，但語序不自然，不符合日語預約場景的慣用表達。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，無誤譯或遺漏。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "意思大致正確但漏譯「大人」且語句稍顯生硬"
+   }
+  },
+  "T040-en-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原意且語言流暢自然"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達將預約由星期五改至星期六而非取消的意思，英文自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完全忠於原文語意，表達自然流暢，無任何錯誤或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的語意，包括更正而非取消的意圖，且英文表達自然流暢。"
+   }
+  },
+  "T040-ja-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 1,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "將星期五改星期六誤譯為月曜改木曜，且句尾不完整，核心日期資訊嚴重錯誤。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": true,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "星期五改星期六被誤譯為星期一改星期四,日期完全錯誤"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "日期錯誤（星期一→星期四 而非 星期五→星期六），但否定語意正確且流暢度高"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": true,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "关键日期信息翻译错误，将星期五和星期六误译为星期一和星期四，导致语意严重不忠实。"
+   }
+  },
+  "T041-en-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "譯文多加了「after」造成語意偏差,原文只是指三點沒位子。"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文自然且核心意思正確，但將「三點沒有位子」略譯成「三點過後沒有座位」，時間條件稍有偏差。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意，但「三點沒有位子」的表達略顯迂迴（用「after three and there are no seats」而非更自然的「nothing available at three」）。"
    }
   }
  }

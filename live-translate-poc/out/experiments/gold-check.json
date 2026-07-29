@@ -1199,6 +1199,306 @@
    "severity": "none",
    "issue": "無",
    "better": ""
+  },
+  "T036-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T036-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T036-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T035-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T035-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T036-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-ja|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「倒れました」未明確表達「昏倒／失去意識」，且「部屋番号」較不如「702号室」自然。",
+   "better": "私の部屋は702号室です。友達が気を失って倒れました。"
+  },
+  "T038-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T036-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T029-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T038-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「has collapsed」可理解為昏倒，但口語上說「fainted」更直接自然。",
+   "better": ""
+  },
+  "T038-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T038-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "「予約したいです」較口語直白,更自然可用「予約をお願いしたいです」或「予約したいのですが」",
+   "better": ""
+  },
+  "T038-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T040-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T040-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T038-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T040-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T040-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T037-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T041-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T041-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T041-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T041-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-ja|openai/gpt-5.6-terra": {
+   "ref_ok": false,
+   "severity": "major",
+   "issue": "「予約の確認」較像確認既有預約，原文是詢問能否用 email 確認／確定預約；且對服務人員宜用較適切敬語。",
+   "better": "メールで予約を確認していただけますか？私の便はBR198です。"
+  },
+  "T040-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T039-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "minor",
+   "issue": "語意正確且自然，但口語預約場景用「予約をお願いします」更禮貌得體",
+   "better": ""
+  },
+  "T041-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T043-ja|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T043-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T041-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T043-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T043-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-ja|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T044-ja|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T044-en|anthropic/claude-sonnet-5": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T044-en|openai/gpt-5.6-terra": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
+  },
+  "T042-en|qwen/qwen3.7-max": {
+   "ref_ok": true,
+   "severity": "none",
+   "issue": "無",
+   "better": ""
   }
  }
 }
