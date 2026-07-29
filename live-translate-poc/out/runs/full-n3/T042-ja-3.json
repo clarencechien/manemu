@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:30:49.834Z"
+  "ts": "2026-07-29T07:30:49.834Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完全忠實於原文，日文表達自然流暢，準確傳達了預約確認與班機號碼的資訊。僅句尾標點符號為逗號，但不影響整體語意與口語表達。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

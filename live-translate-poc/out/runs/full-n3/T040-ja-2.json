@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:30:04.917Z"
+  "ts": "2026-07-29T07:30:04.917Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的所有訊息，且使用了自然的日語口語表達方式，語意忠實且流暢。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }

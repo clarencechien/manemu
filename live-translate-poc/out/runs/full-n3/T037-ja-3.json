@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.5-live-translate-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-29T07:29:05.703Z"
+  "ts": "2026-07-29T07:29:05.703Z",
+  "judge": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文將「昏倒」錯誤翻譯為「結婚」（結婚した），嚴重扭曲了原文的緊急情況，屬於嚴重的語意錯誤。前半部分房間號碼翻譯正確，整體句子通順。"
+  },
+  "judgeModel": "models/gemini-3.1-pro-preview"
 }
