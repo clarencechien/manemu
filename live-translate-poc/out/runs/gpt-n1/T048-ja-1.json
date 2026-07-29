@@ -45,5 +45,19 @@
     },
     "reason": "譯文為空，完全沒有翻譯。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 1,
+    "fluency": 1,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文為空，幾乎未翻譯，導致語意完全遺失。依規定當輸出空或幾乎沒翻譯時，adequacy 設為 1 且 omission=true。參考譯文應表達拒絕與禮貌（「いえ、結構です。ありがとうございます。ちょっと見ているだけなので。」），但機器譯文未呈現任何內容。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

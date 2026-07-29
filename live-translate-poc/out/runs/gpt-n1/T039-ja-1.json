@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整傳達了原文的意思。將「兩個大人」譯為「二人分」（兩位/兩人份）在預約情境中十分自然合理，雖未特意譯出「大人」但無傷大雅。句式拆成兩句稍微不夠連貫，但整體流暢易懂。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達了原句的時間與人數（明日の午後3時、二人）。表達上可接受，但用語略不如參考譯文自然（「二人分です」は人数を指すにはやや不自然で、通常は「大人2名で/大人2人で」などと言う）。因此語意忠實度為5，語言自然度給4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

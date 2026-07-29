@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is exceptionally accurate and natural. It perfectly conveys the meaning of the source text with excellent fluency, matching the reference translation's intent and tone."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation fully conveys the original meaning (requesting someone to check a possibly broken air conditioner) with natural English phrasing. 'Have someone come take a look' is an acceptable equivalent to 'send someone to take a look.' No errors or omissions detected."
+  },
+  "judge_xModel": "gpt-5-mini"
 }

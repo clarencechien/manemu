@@ -46,5 +46,19 @@
     },
     "reason": "The translation contains a hallucinated word 'Thursday' at the beginning, which does not exist in the source text. Additionally, there is a spacing typo ('whencan' instead of 'when can') and the phrasing is slightly awkward, though the core meaning is still understandable."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": true,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "機譯大致傳達了詢問最晚何時可取消且不用付取消費的意圖，但加入了原文中不存在的詞“Thursday”（不正確的時間詞，為幻覺/錯誤資訊），並且出現字詞連在一起（\"whencan\"），語序與標點不自然。故語意忠實中等偏低(3)，目標語自然度較差(2)。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

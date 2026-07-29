@@ -45,5 +45,19 @@
     },
     "reason": "譯文將「麻煩你了」（表達感謝、客套）直譯為「迷惑をかけた」（給人添麻煩、添亂），語意上稍微偏向負面，且使用了非常口語、非敬語的表達方式（ありがとう、かけたね），與原句較為客氣的語境不符（敬語缺失），但整體語意仍可溝通。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語義大致正確：表達了感謝與今天造成麻煩的意思，但語氣與參考譯文的禮貌程度不符。機譯使用了較口語/非敬體的表現（助けてくれてありがとう、〜迷惑をかけたね），而原文與參考譯文偏正式客氣（手伝っていただいてありがとうございます、今日は本当にお世話になりました）。因此給予較高的忠實度和自然度分數，但標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

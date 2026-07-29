@@ -43,5 +43,19 @@
     },
     "reason": "機器譯文與參考譯文完全一致，語意完整且表達非常自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與原文語意完全一致，表達自然且符合參考譯文；僅缺尾部驚嘆號但不影響意義或語氣。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

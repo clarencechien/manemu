@@ -47,5 +47,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的意思。流暢度方面，由於是語音翻譯逐字稿，兩句話之間缺少標點符號或停頓（「できますか私の」），稍微影響了閱讀流暢性，但文法與用詞皆十分自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句兩個訊息（可否用 email 確認預約，以及班機號 BR198），語意忠實。自然度略受影響：句子缺少標點/疑問語氣與助詞處理（例如「メールで予約の確認をしてもいいですか？」や「メールで予約を確認できますか？」のように区切るとより自然）。因此給出 fluency 4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

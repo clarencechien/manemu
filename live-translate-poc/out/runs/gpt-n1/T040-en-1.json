@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. It perfectly conveys the meaning of the source text without any errors."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實地表達「想把預約從星期五改到星期六，而不是取消」。用詞自然，僅「Sorry」與參考譯文的「Excuse me」差異為風格差別，無影響語意或流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

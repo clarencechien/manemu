@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It successfully conveys all key information from the source text, including the date, time, and number of people. The phrasing 'would it be possible to book' is polite and appropriate for the context of making a reservation."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意圖（預約明天下午三點、兩位成人）。開頭多了“I think”略顯多餘，句子語氣與標點稍微不自然，但整體忠實且可理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

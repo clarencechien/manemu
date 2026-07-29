@@ -46,5 +46,19 @@
     },
     "reason": "「日本」被錯誤翻譯為「リュック」（背包），屬於專有名詞翻譯錯誤（name_mangled）。其餘部分翻譯正確且通順。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "原句中「日本」被誤譯為「リュック（ryukku）」と出ており，主語が変わってしまっているため語意は大きく損なわれている。一方で文法や表現自体は日本語としてほぼ自然（末尾の敬体の有無を除けば）なので流暢さは保たれている。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

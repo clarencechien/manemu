@@ -43,5 +43,19 @@
     },
     "reason": "The translation is highly accurate and natural, capturing the exact meaning of the source text with excellent fluency."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，與參考譯文意思一致；語句自然流暢，無錯譯或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. 'You've really gone out of your way for me today' is an excellent idiomatic translation for '今天真的麻煩你了'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實；「麻煩你了」以“You've really gone out of your way for me today”表達得自然且符合語境，目標語流暢無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

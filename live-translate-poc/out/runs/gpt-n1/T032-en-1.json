@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯與原文語意一致（都表達不需要明天打掃房間並致謝）。雖然參考譯文用被動結構（my room cleaned），但機譯的主動表達（I don't need to clean my room）在語意與語氣上同樣正確且自然，因此語意忠實與目標語自然度皆為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

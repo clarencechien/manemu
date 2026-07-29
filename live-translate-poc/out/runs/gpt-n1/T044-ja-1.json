@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的意思。語氣稍微直接，但文法正確且語意清晰。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大意正確：表達會晚30分鐘到並詢問能否保留位子。但日語用法較直接，較口語且敬語程度不足。參考譯文用「取っておいていただけますか」更禮貌地請對方幫忙保留，機器譯文用「確保できますか」語感上偏詢問可行性，禮貌與請求語氣略弱。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text without any errors. 'Seats' is a perfectly acceptable translation for '位子' in this context."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（將晚三十分鐘，請對方留位），用詞與參考譯文稍有差異（seats vs. table；未加“about”），但不影響語意或自然度，表達流暢自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
