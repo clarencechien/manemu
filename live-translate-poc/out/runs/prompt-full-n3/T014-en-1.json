@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "No spicy for this one, please — I can't really handle spicy food.",
+  "inputTranscript": "这 个 不 要 啦 , 我 不 太 能 吃 辣 。",
+  "outputTranscript": "No to this one, I can't really handle spicy food.",
+  "inputDurationMs": 3251,
+  "outputAudioMs": 3100,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 968,
+    "ttft_from_end_ms": 968,
+    "completion_lag_ms": 2268,
+    "ttfa_from_start_ms": 4368
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.755,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:51:09.228Z"
+}

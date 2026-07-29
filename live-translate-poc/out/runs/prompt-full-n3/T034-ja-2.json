@@ -1,0 +1,33 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "助けて!救急車を呼んでください!",
+  "inputTranscript": "救 命 , 请 帮 我 叫 救 护 车 。",
+  "outputTranscript": "助けてください、救急車を呼んでください。",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 3161,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 948,
+    "ttft_from_end_ms": 924,
+    "completion_lag_ms": 1492,
+    "ttfa_from_start_ms": 3548
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.286,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T11:00:12.299Z"
+}

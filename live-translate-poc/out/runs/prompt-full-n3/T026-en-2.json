@@ -1,0 +1,36 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T026",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "我考慮了一下,這個還是先不買好了。",
+  "reference": "I've thought about it — I'll pass on this one for now.",
+  "inputTranscript": "我 考 虑 了 一 下 , 这 个 还 是 先 不 买 好 了 。",
+  "outputTranscript": "I've thought about it, and I think I'll hold off on buying this for now.",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 3980,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 963,
+    "ttft_from_end_ms": 941,
+    "completion_lag_ms": 1928,
+    "ttfa_from_start_ms": 4363
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": false,
+    "coverage_ratio": 1.385,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:56:45.958Z"
+}

@@ -1,0 +1,36 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T024",
+  "category": "shopping",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "這件如果打八折的話,我就買兩件。",
+  "reference": "If this is twenty percent off, I'll buy two.",
+  "inputTranscript": "这 件 如 果 打 八 折 的 话 , 我 就 买 两 件 。",
+  "outputTranscript": "If this item is 20% off, I'll buy two.",
+  "inputDurationMs": 3491,
+  "outputAudioMs": 2750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 945,
+    "ttft_from_end_ms": 945,
+    "completion_lag_ms": 1444,
+    "ttfa_from_start_ms": 4545
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.788,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:55:51.513Z"
+}

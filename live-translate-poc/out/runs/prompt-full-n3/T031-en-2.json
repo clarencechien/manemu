@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T031",
+  "category": "hotel",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "房間的冷氣好像壞了,可以請人來看一下嗎?",
+  "reference": "The air conditioner in my room seems to be broken — could you send someone to take a look?",
+  "inputTranscript": "房 间 的 冷 气 好 像 坏 了 , 可 以 请 人 来 看 一 下 吗 ?",
+  "outputTranscript": "It seems like the air conditioning in the room isn't working; could someone come take a look?",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 4400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1015,
+    "ttft_from_end_ms": 991,
+    "completion_lag_ms": 2143,
+    "ttfa_from_start_ms": 5116
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.057,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:59:07.887Z"
+}

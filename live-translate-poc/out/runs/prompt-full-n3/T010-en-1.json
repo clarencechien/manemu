@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T010",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "en",
+  "repeat": 1,
+  "zh": "最後一班回新宿的電車是十一點四十五分嗎?",
+  "reference": "Is the last train back to Shinjuku at eleven forty-five?",
+  "inputTranscript": "最 后 一 班 回 星 住 的 电 车 是 11 点 45 分 吗 ?",
+  "outputTranscript": "Is the last tram back to Shinshu at 11:45?",
+  "inputDurationMs": 4611,
+  "outputAudioMs": 3510,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 968,
+    "ttft_from_end_ms": 944,
+    "completion_lag_ms": 1628,
+    "ttfa_from_start_ms": 5768
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.711,
+    "coverage_ok": true,
+    "cer": 0.368
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:49:27.291Z"
+}

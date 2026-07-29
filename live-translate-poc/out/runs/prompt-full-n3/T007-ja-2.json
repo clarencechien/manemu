@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T007",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "ja",
+  "repeat": 2,
+  "zh": "我要兩張到京都的車票,大人一張、小孩一張。",
+  "reference": "京都までの切符を2枚ください。大人1枚、子ども1枚です。",
+  "inputTranscript": "我 要 两 张 到 京 都 的 车 票 , 大 人 一 张 , 小 孩 一 张 。",
+  "outputTranscript": "京都まで切符を2枚ください。大人1枚、子供1枚です。",
+  "inputDurationMs": 5051,
+  "outputAudioMs": 5100,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 947,
+    "ttft_from_end_ms": 947,
+    "completion_lag_ms": 3431,
+    "ttfa_from_start_ms": 6147
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.92,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:48:00.435Z"
+}

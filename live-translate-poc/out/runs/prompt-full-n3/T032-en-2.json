@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T032",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "en",
+  "repeat": 2,
+  "zh": "我明天不需要打掃房間,謝謝。",
+  "reference": "I don't need my room cleaned tomorrow, thank you.",
+  "inputTranscript": "我 明 天 不 需 要 打 扫 房 间 , 谢 谢 。",
+  "outputTranscript": "I don't need to clean the room tomorrow, thank you.",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 2230,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 942,
+    "ttft_from_end_ms": 942,
+    "completion_lag_ms": 1487,
+    "ttfa_from_start_ms": 4542
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.026,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:59:32.197Z"
+}

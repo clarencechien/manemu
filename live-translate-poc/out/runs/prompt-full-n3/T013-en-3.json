@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T013",
+  "category": "transport",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "en",
+  "repeat": 3,
+  "zh": "我剛剛在月台上把手機弄丟了。",
+  "reference": "I just lost my phone on the platform.",
+  "inputTranscript": "我 刚 刚 在 乐 台 上 把 手 机 弄 丢 了 。",
+  "outputTranscript": "I just lost my phone on the platform.",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 2160,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 942,
+    "ttft_from_end_ms": 940,
+    "completion_lag_ms": 1226,
+    "ttfa_from_start_ms": 3841
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.231
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:50:52.109Z"
+}

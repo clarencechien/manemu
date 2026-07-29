@@ -1,0 +1,35 @@
+{
+  "runId": "prompt-full-n3",
+  "phraseId": "T013",
+  "category": "transport",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "ja",
+  "repeat": 3,
+  "zh": "我剛剛在月台上把手機弄丟了。",
+  "reference": "さっきホームで携帯をなくしてしまいました。",
+  "inputTranscript": "我 刚 刚 在 乐 台 上 把 手 机 弄 丢 了 。",
+  "outputTranscript": "たった今、ホームで携帯を落としました。",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 3281,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 970,
+    "ttft_from_end_ms": 946,
+    "completion_lag_ms": 2465,
+    "ttfa_from_start_ms": 3869
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.85,
+    "coverage_ok": true,
+    "cer": 0.231
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-29T10:50:45.305Z"
+}
