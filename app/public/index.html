@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>manemu まねむ</title>
+<link rel="manifest" href="/manifest.json">
+<style>
+  :root{
+    --paper:#F6F7F5; --ink:#1C2726; --ink-2:#5A6B68; --line:#DDE3E0;
+    --me:#C0392B; --me-soft:#F7E8E5; --them:#33587A; --them-soft:#E7EDF3;
+    --ok:#2E7D4F; --ok-soft:#E3F0E8; --warn:#9A6B00; --warn-soft:#F7EFD8;
+    --chip:#ECEFED; --ghost:#9AA8A4;
+  }
+  @media (prefers-color-scheme: dark){ :root{
+    --paper:#151D1C; --ink:#E8ECEA; --ink-2:#93A29E; --line:#2A3634;
+    --me:#E05A48; --me-soft:#3A2320; --them:#7BA3CC; --them-soft:#1E2B38;
+    --ok:#63B588; --ok-soft:#1D2E25; --warn:#D9A93F; --warn-soft:#33290F;
+    --chip:#222C2A; --ghost:#5E6E6A;
+  }}
+  *{box-sizing:border-box; margin:0}
+  html,body{height:100%}
+  body{
+    font-family:"PingFang TC","Hiragino Sans","Microsoft JhengHei","Noto Sans TC","Noto Sans JP",system-ui,sans-serif;
+    background:var(--paper); color:var(--ink); display:flex; flex-direction:column;
+    height:100vh; height:100dvh; overflow:hidden;
+  }
+  button:focus-visible{outline:2px solid var(--them); outline-offset:2px}
+  .hidden{display:none !important}
+
+  /* 登入前 */
+  .login{flex:1; overflow-y:auto; display:flex; flex-direction:column; padding:48px 28px 28px; max-width:520px; margin:0 auto; width:100%}
+  .wordmark{font-size:34px; font-weight:800; letter-spacing:.04em}
+  .wordmark .kana{font-size:15px; font-weight:500; color:var(--ink-2); margin-left:10px; letter-spacing:.3em}
+  .login .tag{color:var(--ink-2); font-size:14.5px; line-height:1.75; margin:12px 0 22px; text-wrap:balance}
+  .login .tag b{color:var(--ink)} .login .tag .mane{color:var(--me); font-weight:700} .login .tag .mu{color:var(--them); font-weight:700}
+  .sso{border:none; background:var(--ink); color:var(--paper); border-radius:12px; padding:15px; font:inherit; font-size:15px; font-weight:700; cursor:pointer}
+  .login .fine{font-size:11.5px; color:var(--ink-2); line-height:1.7; margin:10px 0 0}
+
+  /* 頂列 */
+  .top{display:flex; align-items:center; gap:6px; padding:10px 12px 8px; border-bottom:1px solid var(--line); flex:none; flex-wrap:wrap}
+  .sceneBtn,.langBtn,.iconBtn{font:inherit; font-size:12.5px; border:1px solid var(--line); background:var(--chip); color:var(--ink); border-radius:8px; padding:6px 9px; cursor:pointer}
+  .sceneBtn{margin-right:auto}
+  .seg{display:flex; border:1px solid var(--line); border-radius:8px; overflow:hidden}
+  .seg button{font:inherit; font-size:12px; padding:6px 9px; border:none; background:transparent; color:var(--ink-2); cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--ink); color:var(--paper)}
+  .engine{font-size:11px; padding:5px 8px; border-radius:99px; border:1px solid var(--line); background:var(--chip); color:var(--ink-2); cursor:pointer; font-family:inherit}
+  .engine[data-fast="true"]{border-color:var(--warn); color:var(--warn); background:var(--warn-soft)}
+  .testChip{font-size:11px; padding:5px 8px; border-radius:99px; border:1px solid var(--line); background:transparent; color:var(--ink-2); cursor:pointer; font-family:inherit}
+  .testChip[data-on="true"]{border-color:var(--them); color:var(--them); background:var(--them-soft)}
+  .usage{font-size:10.5px; color:var(--ink-2); font-variant-numeric:tabular-nums}
+
+  .testbar{flex:none; font-size:13px; padding:9px 14px; background:var(--them-soft); color:var(--them); border-bottom:1px solid var(--line); line-height:1.5}
+  .testbar .rec{display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--me); margin-right:6px; animation:blink 1.2s infinite}
+  @keyframes blink{50%{opacity:.25}}
+  @media (prefers-reduced-motion: reduce){ .testbar .rec{animation:none} }
+
+  /* 對談 */
+  .chatwrap{flex:1; display:flex; flex-direction:column; min-height:0}
+  .stream{flex:1; overflow-y:auto; padding:16px 14px; display:flex; flex-direction:column; gap:14px}
+  .ghost{border:1.5px dashed var(--line); border-radius:14px; padding:12px 14px; color:var(--ghost); font-size:13.5px; line-height:1.7}
+  .ghost b{color:var(--ink-2)} .ghost .gx{display:block; margin-top:2px}
+  .msg{max-width:84%; display:flex; flex-direction:column; gap:4px}
+  .msg.me{align-self:flex-end; align-items:flex-end}
+  .msg.them{align-self:flex-start; align-items:flex-start}
+  .who{font-size:11px; letter-spacing:.08em; color:var(--ink-2)}
+  .bubble{padding:10px 13px; border-radius:14px; font-size:15px; line-height:1.55; background:var(--paper)}
+  .msg.me .bubble{background:var(--me-soft); border-top-right-radius:4px}
+  .msg.them .bubble{background:var(--them-soft); border-top-left-radius:4px}
+  .src{font-size:13px; color:var(--ink-2); margin-bottom:4px; min-height:1em}
+  .msg.me .tx{color:var(--me)} .msg.them .tx{color:var(--them)}
+  .tx{font-weight:600}
+  .rowmeta{display:flex; gap:6px; align-items:center; font-size:11px; color:var(--ink-2)}
+  .lat{font-variant-numeric:tabular-nums; background:var(--chip); border-radius:5px; padding:1px 6px}
+  .badge{border-radius:5px; padding:1px 8px; cursor:pointer; border:none; font:inherit; font-size:11px}
+  .badge.ok{background:var(--ok-soft); color:var(--ok)}
+  .backtx{font-size:12.5px; color:var(--ink-2); border-left:3px solid var(--ok); padding:6px 10px; margin-top:6px; background:var(--ok-soft); border-radius:0 8px 8px 0}
+  .speaking .bubble{outline:2px solid currentColor; outline-offset:1px}
+  .pttbar{flex:none; display:flex; gap:10px; padding:12px 14px calc(14px + env(safe-area-inset-bottom)); border-top:1px solid var(--line); background:var(--paper)}
+  .ptt{flex:1; border:none; border-radius:16px; padding:16px 10px 14px; font:inherit; cursor:pointer; color:#fff; display:flex; flex-direction:column; align-items:center; gap:3px; touch-action:none; user-select:none; -webkit-user-select:none; transition:transform .08s, filter .12s}
+  .ptt .big{font-size:15.5px; font-weight:700} .ptt .sub{font-size:11px; opacity:.85}
+  .ptt.me{background:var(--me)} .ptt.them{background:var(--them)}
+  .ptt:disabled{filter:grayscale(.6) brightness(.75); cursor:not-allowed}
+  .ptt.holding{transform:scale(.97)}
+  .statusline{flex:none; text-align:center; font-size:12px; color:var(--ink-2); padding:6px 0 0; min-height:22px; font-variant-numeric:tabular-nums}
+  .wave{display:inline-flex; gap:2px; align-items:flex-end; height:10px; margin-left:6px}
+  .wave i{width:3px; background:currentColor; border-radius:2px; animation:wv .7s ease-in-out infinite}
+  .wave i:nth-child(2){animation-delay:.15s}.wave i:nth-child(3){animation-delay:.3s}.wave i:nth-child(4){animation-delay:.45s}
+  @keyframes wv{0%,100%{height:3px}50%{height:10px}}
+  @media (prefers-reduced-motion: reduce){ .wave i{animation:none; height:6px} }
+
+  /* 面對面 */
+  .facewrap{flex:1; display:flex; flex-direction:column; min-height:0}
+  .half{flex:1; display:flex; flex-direction:column; min-height:0}
+  .half.other{transform:rotate(180deg)}
+  .half .feed{flex:1; overflow-y:auto; padding:12px 14px; display:flex; flex-direction:column; gap:10px; justify-content:flex-end}
+  .fmsg{max-width:88%; padding:10px 14px; border-radius:14px; font-size:19px; line-height:1.5; font-weight:600}
+  .fmsg small{display:block; font-size:11px; font-weight:400; margin-top:3px; opacity:.75}
+  .fmsg.me{align-self:flex-end; background:var(--me-soft); color:var(--me); border-top-right-radius:4px}
+  .fmsg.them{align-self:flex-start; background:var(--them-soft); color:var(--them); border-top-left-radius:4px}
+  .fghost{border:1.5px dashed var(--line); border-radius:14px; padding:10px 14px; color:var(--ghost); font-size:13px; line-height:1.65}
+  .half .fptt{flex:none; margin:0 14px 12px; border:none; border-radius:14px; padding:13px; font:inherit; color:#fff; cursor:pointer; touch-action:none; user-select:none; -webkit-user-select:none; font-size:15px; font-weight:700}
+  .half.mine .fptt{background:var(--me)} .half.other .fptt{background:var(--them)}
+  .half .fptt:disabled{filter:grayscale(.6) brightness(.75)}
+  .half .fstatus{flex:none; text-align:center; font-size:11.5px; color:var(--ink-2); padding:4px 0; min-height:20px}
+  .divider{flex:none; display:flex; align-items:center; justify-content:center; border-top:1px dashed var(--line); border-bottom:1px dashed var(--line); padding:5px; font-size:11px; color:var(--ink-2); letter-spacing:.08em}
+</style>
+</head>
+<body>
+
+<div class="login hidden" id="loginScreen">
+  <div class="wordmark">manemu<span class="kana">まねむ</span></div>
+  <p class="tag">
+    <span class="mane">まね</span>是模仿,<span class="mu">む</span>是夢。<br>
+    按住說話,manemu 模仿你的語氣、<br>用對方的語言說出來——<br>
+    <b>像夢裡忽然會說外語的那種流利。</b>
+  </p>
+  <button class="sso" onclick="location.href='/auth/login'">使用 Google 登入</button>
+  <p class="fine" id="loginFine">封測中:登入後需在受邀名單內才能啟用翻譯。</p>
+</div>
+
+<div class="hidden" id="appScreen" style="display:flex; flex-direction:column; flex:1; min-height:0">
+  <div class="top">
+    <button class="sceneBtn" id="sceneBtn">🧭 旅遊・通用</button>
+    <button class="langBtn" id="langBtn">対 日本語 ▾</button>
+    <div class="seg" role="group" aria-label="版面">
+      <button id="mChat" aria-pressed="true">對談</button>
+      <button id="mFace" aria-pressed="false">面對面</button>
+    </div>
+    <button class="engine" id="mEngine" data-fast="false">精準</button>
+    <button class="testChip" id="testChip" data-on="false">🧪</button>
+    <button class="iconBtn" id="glossaryBtn" title="行程術語表">📒</button>
+    <span class="usage" id="usage"></span>
+  </div>
+  <div class="testbar hidden" id="testbar"></div>
+
+  <div class="chatwrap" id="chatMode">
+    <div class="stream" id="stream" aria-live="polite"></div>
+    <div class="statusline" id="status">按住說話</div>
+    <div class="pttbar">
+      <button class="ptt me" id="pttMe"><span class="big">按住・我說中文</span><span class="sub" id="pttMeSub">→ 日本語</span></button>
+      <button class="ptt them" id="pttThem"><span class="big" id="pttThemBig">押して話す</span><span class="sub" id="pttThemSub">→ 中文</span></button>
+    </div>
+  </div>
+
+  <div class="facewrap hidden" id="faceMode">
+    <div class="half other">
+      <div class="feed" id="feedOther"></div>
+      <div class="fstatus" id="stOther"></div>
+      <button class="fptt" id="fpttOther"></button>
+    </div>
+    <div class="divider" id="faceDivider">⇅ 面對面・上側は相手用</div>
+    <div class="half mine">
+      <div class="feed" id="feedMine"></div>
+      <div class="fstatus" id="stMine">按住下方按鈕說話</div>
+      <button class="fptt" id="fpttMine">按住・我說中文</button>
+    </div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

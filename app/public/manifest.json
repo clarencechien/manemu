@@ -1,0 +1,10 @@
+{
+  "name": "manemu まねむ",
+  "short_name": "manemu",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F7F5",
+  "theme_color": "#C0392B",
+  "description": "按住說話,對方聽到自己的語言。",
+  "icons": []
+}

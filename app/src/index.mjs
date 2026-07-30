@@ -1,0 +1,111 @@
+// manemu Worker:路由 + Google OIDC + 白名單 + WS relay 轉發 + 回譯 + 測試模式記錄。
+// 安全設計見 live-translate-poc/docs/m3-spec.md §5.6。
+import { sign, verify, cookieGet, cookieSet, sessionFrom, verifyGoogleIdToken, isAllowlisted, randomHex, b64u } from "./auth.mjs";
+export { RelaySession } from "./relay.mjs";
+
+const SEC_HEADERS = {
+  "content-security-policy": "default-src 'self'; connect-src 'self' wss: https:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob: data:; frame-ancestors 'none'",
+  "x-frame-options": "DENY",
+  "x-content-type-options": "nosniff",
+  "referrer-policy": "strict-origin-when-cross-origin",
+};
+const withSec = (res) => {
+  const r = new Response(res.body, res);
+  for (const [k, v] of Object.entries(SEC_HEADERS)) r.headers.set(k, v);
+  return r;
+};
+const sameOrigin = (req) => {
+  const o = req.headers.get("origin");
+  return !o || o === new URL(req.url).origin;
+};
+
+export default {
+  async fetch(req, env, ctx) {
+    const url = new URL(req.url);
+    const p = url.pathname;
+
+    /* ---------- OAuth ---------- */
+    if (p === "/auth/login") {
+      const state = randomHex(), nonce = randomHex();
+      const stCookie = cookieSet("mn_oauth", await sign({ state, nonce, exp: Date.now() / 1000 + 600 }, env.SESSION_SECRET), 600);
+      const q = new URLSearchParams({
+        client_id: env.GOOGLE_CLIENT_ID,
+        redirect_uri: `${url.origin}/auth/callback`,
+        response_type: "code", scope: "openid email", state, nonce, prompt: "select_account",
+      });
+      return new Response(null, { status: 302, headers: { location: `https://accounts.google.com/o/oauth2/v2/auth?${q}`, "set-cookie": stCookie } });
+    }
+    if (p === "/auth/callback") {
+      const st = await verify(cookieGet(req, "mn_oauth"), env.SESSION_SECRET);
+      if (!st || st.state !== url.searchParams.get("state")) return new Response("state mismatch", { status: 403 });
+      const tr = await fetch("https://oauth2.googleapis.com/token", {
+        method: "POST",
+        headers: { "content-type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          code: url.searchParams.get("code"), client_id: env.GOOGLE_CLIENT_ID,
+          client_secret: env.GOOGLE_CLIENT_SECRET, redirect_uri: `${url.origin}/auth/callback`,
+          grant_type: "authorization_code",
+        }),
+      });
+      const tok = await tr.json();
+      const claims = tok.id_token && await verifyGoogleIdToken(tok.id_token, env.GOOGLE_CLIENT_ID, st.nonce);
+      if (!claims) return new Response("token verification failed", { status: 403 });
+      if (!(await isAllowlisted(claims.email, env))) {
+        return new Response(null, { status: 302, headers: { location: "/?waitlist=1", "set-cookie": cookieSet("mn_oauth", "", 0) } });
+      }
+      const session = await sign({ email: claims.email, exp: Date.now() / 1000 + 7 * 86400 }, env.SESSION_SECRET);
+      return new Response(null, { status: 302, headers: { location: "/", "set-cookie": cookieSet("mn_session", session, 7 * 86400) } });
+    }
+    if (p === "/auth/logout") {
+      return new Response(null, { status: 302, headers: { location: "/", "set-cookie": cookieSet("mn_session", "", 0) } });
+    }
+
+    /* ---------- 需要登入的部分 ---------- */
+    const needAuth = p.startsWith("/api/") || p === "/ws";
+    let session = null;
+    if (needAuth) {
+      if (!sameOrigin(req)) return new Response("forbidden", { status: 403 });
+      session = await sessionFrom(req, env);
+      if (!session) return Response.json({ error: "unauthorized" }, { status: 401 });
+    }
+
+    if (p === "/api/me") {
+      const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
+      const u = await (await stub.fetch("https://do/usage")).json();
+      return Response.json({ email: session.email, ...u });
+    }
+
+    if (p === "/ws") {
+      const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
+      return stub.fetch(req);
+    }
+
+    if (p === "/api/backtranslate" && req.method === "POST") {
+      const { text, from } = await req.json();
+      if (!text || text.length > 600) return Response.json({ error: "bad input" }, { status: 400 });
+      const langName = { ja: "日文", en: "英文", ko: "韓文" }[from] ?? "外文";
+      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/${env.BACKTX_MODEL}:generateContent`, {
+        method: "POST",
+        headers: { "content-type": "application/json", "x-goog-api-key": env.GEMINI_API_KEY },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: `把下面這句${langName}翻譯成台灣繁體中文口語。只輸出譯文,不要任何說明。\n\n${text}` }] }],
+          generationConfig: { temperature: 0 },
+        }),
+      });
+      const d = await r.json();
+      const zh = d.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+      return zh ? Response.json({ zh }) : Response.json({ error: "backtranslate failed" }, { status: 502 });
+    }
+
+    if (p === "/api/field-log" && req.method === "POST") {
+      const body = await req.text();
+      if (body.length > 2_500_000) return Response.json({ error: "too large" }, { status: 413 });
+      const key = `field/${session.email}/${new Date().toISOString().replaceAll(":", "-")}.json`;
+      await env.FIELD.put(key, body, { httpMetadata: { contentType: "application/json" } });
+      return Response.json({ ok: true, key });
+    }
+
+    /* ---------- 靜態 ---------- */
+    return withSec(await env.ASSETS.fetch(req));
+  },
+};
