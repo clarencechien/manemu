@@ -83,7 +83,7 @@ export default {
       if (!claims) return new Response("token verification failed", { status: 403 });
       if (!(await resolveUser(claims.email, env)).allowed) {
         await addToWaitlist(claims.email, env).catch(() => {}); // 記進等候名單,admin 可一鍵核准
-        return new Response(null, { status: 302, headers: { location: "/?waitlist=1", "set-cookie": cookieSet("mn_oauth", "", 0) } });
+        return new Response(null, { status: 302, headers: { location: `/?waitlist=1&email=${encodeURIComponent(claims.email)}`, "set-cookie": cookieSet("mn_oauth", "", 0) } });
       }
       const session = await sign({ email: claims.email, exp: Date.now() / 1000 + 7 * 86400 }, env.SESSION_SECRET);
       return new Response(null, { status: 302, headers: { location: "/", "set-cookie": cookieSet("mn_session", session, 7 * 86400) } });

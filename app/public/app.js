@@ -427,8 +427,19 @@ async function mountTurnstile() {
       window.toTrad = (s) => (s ? cc(s) : s);
     } catch (e) { console.warn("OpenCC init failed, using fallback s2t", e); }
   }
-  if (new URLSearchParams(location.search).get("waitlist")) {
-    $("loginFine").textContent = "這個 Google 帳號還不在受邀名單內——已幫你排上等候名單,開通後通知你。";
+  const q = new URLSearchParams(location.search);
+  if (q.get("waitlist")) {
+    $("waitNotice").classList.remove("hidden");
+    const em = q.get("email");
+    if (em) {
+      // textContent 組裝(不走 innerHTML)→ email 純當文字,無注入面
+      const body = $("waitNoticeBody");
+      body.textContent = "";
+      const s = document.createElement("span"); s.className = "em"; s.textContent = em;
+      body.append(s, " 還不在受邀名單內,已自動幫你登記。", document.createElement("br"),
+                  "開通後,用同一個帳號再登入一次就能使用。");
+    }
+    $("ssoBtn").textContent = "換一個 Google 帳號登入";
   }
   let me = null;
   try { const r = await fetch("/api/me"); if (r.ok) me = await r.json(); } catch {}
