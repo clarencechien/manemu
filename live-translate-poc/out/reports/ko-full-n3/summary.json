@@ -1,0 +1,123 @@
+{
+  "runId": "ko-full-n3",
+  "generatedAt": "2026-07-30T01:11:14.898Z",
+  "model": "models/gemini-3.1-flash-live-preview",
+  "judgeModel": "models/gemini-3.5-flash",
+  "runtime": "cc-web-node(非 Cloudflare;延遲為機房乾淨網路的樂觀下界)",
+  "caveats": [
+    "評審使用同家 Gemini 文字模型(無 OpenAI 金鑰),存在自評偏誤風險",
+    "gold 參考譯文由 LLM 產生,未經人工校對",
+    "TTS 合成音源乾淨、無噪音,品質與延遲皆為樂觀值",
+    "CC web 沙箱地理位置不可控,網路段延遲僅供參考,端到端以 M4 真機為準"
+  ],
+  "totals": {
+    "results": 150,
+    "errors": 0
+  },
+  "byDir": {
+    "ko": {
+      "quality": {
+        "n": 150,
+        "judged": 150,
+        "adequacy_mean": 4.94,
+        "fluency_mean": 4.966666666666667,
+        "number_ok_rate": 0.86,
+        "negation_ok_rate": 0.98,
+        "coverage_mean": 1.0601599999999998,
+        "cer_mean": 0.07132,
+        "flags": {
+          "number_wrong": 0,
+          "negation_flipped": 0,
+          "honorific_off": 0,
+          "name_mangled": 0.013333333333333334,
+          "omission": 0.02,
+          "hallucination": 0
+        }
+      },
+      "latency": {
+        "ttfa_from_end_ms": {
+          "p50": 968,
+          "p90": 1028,
+          "p95": 1064,
+          "mean": 974.9933333333333
+        },
+        "ttft_from_end_ms": {
+          "p50": 955,
+          "p90": 1016,
+          "p95": 1040,
+          "mean": 964.5133333333333
+        },
+        "completion_lag_ms": {
+          "p50": 1929,
+          "p90": 2633,
+          "p95": 3028,
+          "mean": 2063.04
+        },
+        "ttfa_from_start_ms": {
+          "p50": 4944,
+          "p90": 6912,
+          "p95": 7264,
+          "mean": 5036.92
+        }
+      },
+      "byCategory": {
+        "directions": {
+          "n": 18,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 966,
+          "ttfa_from_end_p90": 979,
+          "completion_lag_p90": 2586
+        },
+        "transport": {
+          "n": 21,
+          "adequacy_mean": 4.857142857142857,
+          "ttfa_from_end_p50": 960,
+          "ttfa_from_end_p90": 1016,
+          "completion_lag_p90": 2116
+        },
+        "dining": {
+          "n": 21,
+          "adequacy_mean": 4.714285714285714,
+          "ttfa_from_end_p50": 974,
+          "ttfa_from_end_p90": 995,
+          "completion_lag_p90": 2545
+        },
+        "shopping": {
+          "n": 21,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 971,
+          "ttfa_from_end_p90": 1062,
+          "completion_lag_p90": 2598
+        },
+        "hotel": {
+          "n": 18,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 958,
+          "ttfa_from_end_p90": 1041,
+          "completion_lag_p90": 3322
+        },
+        "emergency": {
+          "n": 15,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 993,
+          "ttfa_from_end_p90": 1047,
+          "completion_lag_p90": 2465
+        },
+        "appointment": {
+          "n": 18,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 968,
+          "ttfa_from_end_p90": 1034,
+          "completion_lag_p90": 3075
+        },
+        "smalltalk": {
+          "n": 18,
+          "adequacy_mean": 5,
+          "ttfa_from_end_p50": 977,
+          "ttfa_from_end_p90": 1028,
+          "completion_lag_p90": 2117
+        }
+      }
+    }
+  }
+}
