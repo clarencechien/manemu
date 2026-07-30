@@ -36,6 +36,11 @@
   .login .tag b{color:var(--ink)} .login .tag .mane{color:var(--me); font-weight:700} .login .tag .mu{color:var(--them); font-weight:700}
   .sso{border:none; background:var(--ink); color:var(--paper); border-radius:12px; padding:15px; font:inherit; font-size:15px; font-weight:700; cursor:pointer}
   .login .fine{font-size:11.5px; color:var(--ink-2); line-height:1.7; margin:10px 0 0}
+  /* SSO 後不在名單 → 等候名單卡:要一眼看到,不是小字備註 */
+  .waitNotice{background:var(--warn-soft); border:1.5px solid var(--warn); border-radius:12px;
+    padding:14px 16px; margin:0 0 18px; font-size:15px; line-height:1.7; color:var(--ink)}
+  .waitNotice b{display:block; font-size:16.5px; color:var(--warn); margin-bottom:4px}
+  .waitNotice .em{font-weight:700; color:var(--warn); word-break:break-all}
 
   /* 頂列 */
   .top{display:flex; align-items:center; gap:6px; padding:10px 12px 8px; border-bottom:1px solid var(--line); flex:none; flex-wrap:wrap}
@@ -119,6 +124,10 @@
     按住說話,manemu 模仿你的語氣、<br>用對方的語言說出來——<br>
     <b>像夢裡忽然會說外語的那種流利。</b>
   </p>
+  <div class="waitNotice hidden" id="waitNotice">
+    <b>🕓 已排上等候名單</b>
+    <span id="waitNoticeBody">這個 Google 帳號還不在受邀名單內,已自動幫你登記。<br>開通後,用同一個帳號再登入一次就能使用。</span>
+  </div>
   <form method="POST" action="/auth/login" id="ssoForm">
     <div id="tsWidget" style="margin-bottom:12px"></div>
     <button class="sso" id="ssoBtn" type="submit" style="width:100%">使用 Google 登入</button>
