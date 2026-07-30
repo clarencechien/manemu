@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:09:16.468Z"
+  "ts": "2026-07-30T03:09:16.468Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。雖然機器譯文使用了女性敬語助詞「ค่ะ」而參考譯文使用男性敬語助詞「ครับ」，但在無上下文脈絡的情況下兩者皆屬正確。語意完全忠實傳達，語暢度極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

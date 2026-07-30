@@ -1,0 +1,37 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T027",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "可以退稅嗎?我總共買了超過五千日圓。",
+  "reference": "Cho em hỏi có được hoàn thuế không ạ? Em mua tổng cộng hơn 5000 yên rồi.",
+  "inputTranscript": "可 以 退 税 吗 ? 我 总 共 买 了 超 过 五 千 日 元 。",
+  "outputTranscript": "Dạ có thể hoàn thuế được không ạ? Tôi đã mua tổng cộng hơn năm nghìn yên rồi ạ.",
+  "inputDurationMs": 3771,
+  "outputAudioMs": 4440,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1046,
+    "ttft_from_end_ms": 1023,
+    "completion_lag_ms": 1970,
+    "ttfa_from_start_ms": 4947
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "5000"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.093,
+    "coverage_ok": true,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:15.011Z"
+}

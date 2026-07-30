@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T033",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "可以幫我叫一台計程車嗎?明天早上六點半要到機場。",
+  "reference": "Anh/chị có thể gọi giúp em một chiếc taxi được không? Sáu giờ rưỡi sáng mai em cần ra sân bay.",
+  "inputTranscript": "可 以 帮 我 叫 一 台 出 租 车 吗 ? 明 天 早 上 6 点 半 要 到 机 场 。",
+  "outputTranscript": "Dạ, có thể gọi giúp tôi một chiếc taxi không ạ? 6 rưỡi sáng mai tôi cần đến sân bay.",
+  "inputDurationMs": 4851,
+  "outputAudioMs": 4930,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 941,
+    "ttft_from_end_ms": 940,
+    "completion_lag_ms": 2164,
+    "ttfa_from_start_ms": 5940
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.873,
+    "coverage_ok": true,
+    "cer": 0.136
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:30.584Z"
+}

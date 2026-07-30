@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "ถ้าอย่างนั้นก็รบกวนด้วยนะครับ แล้วจะติดต่อกลับไปอีกทีครับ",
+  "inputTranscript": "那 就 麻 烦 你 了 , 之 后 再 联 络 。",
+  "outputTranscript": "ถ้าอย่างนั้นรบกวนด้วยนะ ครับ/ค่ะ แล้วค่อย ติดต่อกัน ใหม่นะครับ/ค่ะ",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3360,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1022,
+    "ttft_from_end_ms": 999,
+    "completion_lag_ms": 1741,
+    "ttfa_from_start_ms": 4021
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.071,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:20:34.856Z"
+}

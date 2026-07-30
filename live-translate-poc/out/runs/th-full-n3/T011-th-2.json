@@ -1,0 +1,36 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T011",
+  "category": "transport",
+  "traps": [
+    "code-switch",
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我想幫 IC 卡儲值一千日圓。",
+  "reference": "อยากเติมเงินบัตร IC จำนวน 1,000 เยนค่ะ",
+  "inputTranscript": "我 想 帮 IC 卡 充 值 1000 日 元 。",
+  "outputTranscript": "ฉันต้องการเติมเงิน IC card 1,000 เยน ค่ะ",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 3500,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 934,
+    "ttft_from_end_ms": 934,
+    "completion_lag_ms": 1671,
+    "ttfa_from_start_ms": 4534
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.03,
+    "coverage_ok": true,
+    "cer": 0.5
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:38.509Z"
+}

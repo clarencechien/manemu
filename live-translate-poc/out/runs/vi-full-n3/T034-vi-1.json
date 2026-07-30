@@ -1,0 +1,33 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "Cứu tôi! Làm ơn gọi xe cấp cứu giúp tôi!",
+  "inputTranscript": "救 命 , 请 帮 我 叫 救 护 车 。",
+  "outputTranscript": "Cứu mạng, xin hãy gọi xe cấp cứu giúp tôi với ạ!",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 3020,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 947,
+    "ttft_from_end_ms": 947,
+    "completion_lag_ms": 1585,
+    "ttfa_from_start_ms": 3546
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.207,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:41.199Z"
+}

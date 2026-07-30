@@ -1,0 +1,36 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T043",
+  "category": "appointment",
+  "traps": [
+    "negation",
+    "honorific"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "請問最晚可以幾點取消,而不用付取消費?",
+  "reference": "ขอถามหน่อยครับ ยกเลิกได้ช้าสุดถึงกี่โมงโดยไม่ต้องเสียค่ายกเลิกครับ",
+  "inputTranscript": "请 问 最 晚 可 以 几 点 取 消 , 而 不 用 付 取 消 费 ?",
+  "outputTranscript": "ขอทราบว่ายกเลิก ช้าที่สุด ได้ถึง กี่โมง ครับ/ค่ะ",
+  "inputDurationMs": 4411,
+  "outputAudioMs": 3961,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 977,
+    "ttft_from_end_ms": 954,
+    "completion_lag_ms": 1769,
+    "ttfa_from_start_ms": 5576
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": false,
+    "coverage_ratio": 0.662,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:01.565Z"
+}

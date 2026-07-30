@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T038",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我不能打青黴素,我會過敏。",
+  "reference": "ฉันฉีดเพนิซิลลินไม่ได้ ฉันแพ้ค่ะ",
+  "inputTranscript": "我 不 能 打 青 霉 素 , 我 会 过 敏 。",
+  "outputTranscript": "ผมฉีดเพนิซิลลินไม่ได้ครับ ผมแพ้ครับ",
+  "inputDurationMs": 2611,
+  "outputAudioMs": 2950,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 967,
+    "ttft_from_end_ms": 965,
+    "completion_lag_ms": 1503,
+    "ttfa_from_start_ms": 3766
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.097,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:35.822Z"
+}

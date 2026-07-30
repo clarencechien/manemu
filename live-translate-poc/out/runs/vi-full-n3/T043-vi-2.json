@@ -1,0 +1,36 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T043",
+  "category": "appointment",
+  "traps": [
+    "negation",
+    "honorific"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "請問最晚可以幾點取消,而不用付取消費?",
+  "reference": "Dạ cho tôi hỏi, muộn nhất là mấy giờ thì có thể hủy mà không phải trả phí hủy ạ?",
+  "inputTranscript": "请 问 最 晚 可 以 几 点 取 消 , 而 不 用 付 取 消 费 ?",
+  "outputTranscript": "Dạ cho hỏi trễ nhất có thể hủy vào giờ nào mà không cần phải trả phí hủy ạ?",
+  "inputDurationMs": 4411,
+  "outputAudioMs": 5180,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 930,
+    "ttft_from_end_ms": 929,
+    "completion_lag_ms": 2228,
+    "ttfa_from_start_ms": 5530
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.949,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:18:58.666Z"
+}

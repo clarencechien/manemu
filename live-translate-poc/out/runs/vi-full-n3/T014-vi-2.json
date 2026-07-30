@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "Cái này xin đừng cho cay, tôi không ăn cay được nhiều ạ.",
+  "inputTranscript": "这 个 不 要 啦 , 我 不 太 能 吃 辣 。",
+  "outputTranscript": "Dạ, cái này em không ăn cay được lắm ạ.",
+  "inputDurationMs": 3251,
+  "outputAudioMs": 2561,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 935,
+    "ttft_from_end_ms": 935,
+    "completion_lag_ms": 1361,
+    "ttfa_from_start_ms": 4335
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.667,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:10.408Z"
+}

@@ -1,0 +1,39 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T041",
+  "category": "appointment",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "如果三點沒有位子的話,四點也可以。",
+  "reference": "ถ้าบ่ายสามโมงไม่มีที่นั่ง สี่โมงก็ได้ครับ",
+  "inputTranscript": "如 果 三 点 没 有 位 子 的 话 , 四 点 也 可 以 。",
+  "outputTranscript": "ถ้าสามโมงไม่มีที่นั่ง สี่โมงก็ได้ครับ",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 2800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 943,
+    "ttft_from_end_ms": 943,
+    "completion_lag_ms": 1562,
+    "ttfa_from_start_ms": 4342
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3",
+      "4"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.9,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:18:29.374Z"
+}

@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "เราจะไปถึงช้าสามสิบนาทีครับ ช่วยเก็บที่นั่งไว้ให้ได้ไหมครับ",
+  "inputTranscript": "我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?",
+  "outputTranscript": "พวกเราจะไปถึงช้ากว่ากำหนด 30 นาที ยังสามารถจองที่นั่งไว้ได้อยู่ไหมครับ/ค่ะ",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 5520,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1037,
+    "ttft_from_end_ms": 993,
+    "completion_lag_ms": 2319,
+    "ttfa_from_start_ms": 5437
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.207,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:11.105Z"
+}

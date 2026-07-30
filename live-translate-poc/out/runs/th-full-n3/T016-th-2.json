@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T016",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我對蝦子過敏,餐點裡請不要放任何海鮮。",
+  "reference": "ฉันแพ้กุ้งค่ะ รบกวนไม่ใส่อาหารทะเลใดๆในอาหารเลยนะคะ",
+  "inputTranscript": "我 对 虾 子 过 敏 , 餐 点 里 请 不 要 放 任 何 海 鲜 。",
+  "outputTranscript": "ดิฉันแพ้กุ้งค่ะ ในอาหาร กรุณา อย่าใส่ อาหารทะเล เลยนะคะ",
+  "inputDurationMs": 4491,
+  "outputAudioMs": 4420,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 952,
+    "ttft_from_end_ms": 952,
+    "completion_lag_ms": 2102,
+    "ttfa_from_start_ms": 5552
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:42.238Z"
+}

@@ -1,0 +1,38 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T017",
+  "category": "dining",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "這杯不要加冰,然後大杯的改成中杯,總共三杯。",
+  "reference": "แก้วนี้ไม่ใส่น้ำแข็งนะคะ แล้วขอเปลี่ยนจากไซส์ใหญ่เป็นไซส์กลาง รวมทั้งหมด 3 แก้วค่ะ",
+  "inputTranscript": "这 杯 不 要 加 冰 , 然 后 大 杯 的 改 成 中 杯 , 总 共 三 杯 。",
+  "outputTranscript": "แก้วนี้ไม่ใส่น้ำแข็งนะครับ แล้วก็เปลี่ยนแก้วใหญ่เป็นแก้วกลาง ทั้งหมดสามแก้วครับ",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 6221,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 964,
+    "ttft_from_end_ms": 964,
+    "completion_lag_ms": 2586,
+    "ttfa_from_start_ms": 7564
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.987,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:54.363Z"
+}

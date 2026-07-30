@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T022",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "太貴了,算我三千塊可以嗎?",
+  "reference": "แพงไปหน่อยค่ะ คิดให้หน่อยเป็นสามพันบาทได้ไหมคะ",
+  "inputTranscript": "太 贵 了 , 算 我 3000 块 可 以 了 。",
+  "outputTranscript": "แพงเกินไปครับ ลดให้ผมเหลือ 3,000 บาทได้ไหมครับ",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 3600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 945,
+    "ttft_from_end_ms": 944,
+    "completion_lag_ms": 1733,
+    "ttfa_from_start_ms": 3845
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.933,
+    "coverage_ok": true,
+    "cer": 0.455
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:09.795Z"
+}

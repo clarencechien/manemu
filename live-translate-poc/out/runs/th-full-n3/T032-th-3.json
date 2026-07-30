@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T032",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "我明天不需要打掃房間,謝謝。",
+  "reference": "พรุ่งนี้ไม่ต้องทำความสะอาดห้องนะคะ ขอบคุณค่ะ",
+  "inputTranscript": "我 明 天 不 需 要 打 扫 房 间 , 谢 谢 。",
+  "outputTranscript": "พรุ่งนี้ผมไม่ต้องทำความสะอาดห้องครับ ขอบคุณครับ",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 3350,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 989,
+    "ttft_from_end_ms": 989,
+    "completion_lag_ms": 1594,
+    "ttfa_from_start_ms": 4589
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.07,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:26.597Z"
+}

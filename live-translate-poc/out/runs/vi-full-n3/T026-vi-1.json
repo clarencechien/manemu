@@ -1,0 +1,36 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T026",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "我考慮了一下,這個還是先不買好了。",
+  "reference": "Em suy nghĩ lại rồi, cái này thôi để lúc khác em mua ạ.",
+  "inputTranscript": "我 考 虑 了 一 下 , 这 个 还 是 先 不 买 好 了 。",
+  "outputTranscript": "Dạ, tôi cân nhắc rồi, cái này tạm thời chưa mua vội đâu ạ.",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 4441,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 960,
+    "ttft_from_end_ms": 960,
+    "completion_lag_ms": 2057,
+    "ttfa_from_start_ms": 4361
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.05,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:50.034Z"
+}

@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T031",
+  "category": "hotel",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "房間的冷氣好像壞了,可以請人來看一下嗎?",
+  "reference": "Dạ, máy lạnh trong phòng em hình như bị hỏng rồi, anh/chị có thể cho người đến xem giúp em được không?",
+  "inputTranscript": "房 间 的 冷 气 好 像 坏 了 , 可 以 请 人 来 看 一 下 吗 ?",
+  "outputTranscript": "Dạ, hình như máy lạnh trong phòng bị hỏng rồi ạ, có thể nhờ người đến xem giúp được không ạ?",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 4980,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 964,
+    "ttft_from_end_ms": 936,
+    "completion_lag_ms": 2171,
+    "ttfa_from_start_ms": 5063
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.896,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:02.209Z"
+}

@@ -1,0 +1,33 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T009",
+  "category": "transport",
+  "traps": [],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "請問這個位子有人坐嗎?",
+  "reference": "ขอโทษครับ ที่นั่งนี้มีคนนั่งไหมครับ",
+  "inputTranscript": "请 问 这 个 位 置 有 人 坐 吗 ?",
+  "outputTranscript": "ขอโทษนะคะ ตรงนี้ มีคน นั่ง ไหมคะ?",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 3201,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 908,
+    "ttft_from_end_ms": 908,
+    "completion_lag_ms": 1481,
+    "ttfa_from_start_ms": 3508
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.824,
+    "coverage_ok": true,
+    "cer": 0.1
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:06.649Z"
+}

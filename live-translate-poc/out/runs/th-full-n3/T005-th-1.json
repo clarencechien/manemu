@@ -1,0 +1,49 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T005",
+  "category": "directions",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "請問淺草寺跟晴空塔是同一個方向嗎?",
+  "reference": "ขอโทษครับ วัดอาซากุสะกับโตเกียวสกายทรีอยู่ทางเดียวกันไหมครับ",
+  "inputTranscript": "请 问 前 草 寺 跟 晴 空 塔 是 同 一 个 方 向 吗 ?",
+  "outputTranscript": "ขอถามหน่อยครับ วัดเซ็นโซจิ กับ โตเกียวสกายทรี อยู่ทาง เดียวกัน หรือเปล่าครับ",
+  "inputDurationMs": 4331,
+  "outputAudioMs": 5720,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 939,
+    "ttft_from_end_ms": 938,
+    "completion_lag_ms": 3192,
+    "ttfa_from_start_ms": 5438
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.186,
+    "coverage_ok": true,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:10:12.765Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. 'วัดเซ็นโซจิ' is a correct translation for '淺草寺' (Senso-ji), and the overall sentence structure is perfectly natural in Thai."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

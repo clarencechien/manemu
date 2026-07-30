@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T027",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "可以退稅嗎?我總共買了超過五千日圓。",
+  "reference": "ขอคืนภาษีได้ไหมคะ ซื้อรวมกันเกินห้าพันเยนแล้วค่ะ",
+  "inputTranscript": "可 以 退 税 吗 ? 我 总 共 买 了 超 过 五 千 日 元 。",
+  "outputTranscript": "ขอคืนภาษีได้ไหมครับ ผมซื้อของไปทั้งหมดเกิน 5,000 เยนครับ",
+  "inputDurationMs": 3771,
+  "outputAudioMs": 4650,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 975,
+    "ttft_from_end_ms": 972,
+    "completion_lag_ms": 2074,
+    "ttfa_from_start_ms": 4875
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.106,
+    "coverage_ok": true,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:11.314Z"
+}

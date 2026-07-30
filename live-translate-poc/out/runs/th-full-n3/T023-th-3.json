@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T023",
+  "category": "shopping",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "請問這個價格是含稅還是不含稅?",
+  "reference": "ขอถามหน่อยค่ะ ราคานี้รวมภาษีหรือยังไม่รวมภาษีคะ",
+  "inputTranscript": "请 问 这 个 价 格 是 含 税 还 是 不 含 税 ?",
+  "outputTranscript": "ขอถามหน่อยครับ ราคานี้ รวมภาษี แล้วหรือยัง ครับ",
+  "inputDurationMs": 3891,
+  "outputAudioMs": 3630,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 936,
+    "ttft_from_end_ms": 914,
+    "completion_lag_ms": 1820,
+    "ttfa_from_start_ms": 4935
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": false,
+    "coverage_ratio": 0.935,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:27.103Z"
+}

@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T032",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "我明天不需要打掃房間,謝謝。",
+  "reference": "Dạ ngày mai em không cần dọn phòng đâu, cảm ơn anh/chị.",
+  "inputTranscript": "我 明 天 不 需 要 打 扫 房 间 , 谢 谢 。",
+  "outputTranscript": "Dạ, ngày mai tôi không cần dọn phòng đâu ạ, cảm ơn.",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 3521,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 947,
+    "ttft_from_end_ms": 947,
+    "completion_lag_ms": 1733,
+    "ttfa_from_start_ms": 4547
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.902,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:15.693Z"
+}

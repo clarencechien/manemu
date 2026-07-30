@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:09:33.412Z"
+  "ts": "2026-07-30T03:09:33.412Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch hoàn toàn chính xác và tự nhiên, truyền tải đầy đủ ý nghĩa của câu gốc với thái độ lịch sự phù hợp."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

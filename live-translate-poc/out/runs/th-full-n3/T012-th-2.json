@@ -1,0 +1,36 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T012",
+  "category": "transport",
+  "traps": [
+    "honorific",
+    "proper-noun"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "不好意思,可以幫我看一下這班車是不是往橫濱的嗎?",
+  "reference": "ขอโทษนะคะ ช่วยดูให้หน่อยได้ไหมคะว่ารถไฟเที่ยวนี้ไปโยโกฮามะหรือเปล่าคะ",
+  "inputTranscript": "不 好 意 思 , 可 以 帮 我 看 一 下 这 班 车 是 不 是 往 横 滨 的 吗 ?",
+  "outputTranscript": "ขอโทษนะครับ ช่วย ดูให้ หน่อยได้ไหมครับ ว่ารถไฟ ขบวน นี้ ไปโยโกฮาม่า หรือเปล่าครับ",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 5140,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 921,
+    "ttft_from_end_ms": 919,
+    "completion_lag_ms": 2175,
+    "ttfa_from_start_ms": 5222
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.074,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:50.885Z"
+}

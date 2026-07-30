@@ -1,0 +1,36 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T047",
+  "category": "smalltalk",
+  "traps": [
+    "sentence-final",
+    "proper-noun"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "日本的夏天很熱,不過我覺得台北更熱。",
+  "reference": "Mùa hè ở Nhật nóng lắm, nhưng tôi thấy Đài Bắc còn nóng hơn.",
+  "inputTranscript": "日 本 的 夏 天 很 热 , 不 过 我 觉 得 台 北 更 热 。",
+  "outputTranscript": "Mùa hè ở Nhật Bản rất nóng, nhưng tôi thấy Đài Bắc còn nóng hơn nữa ạ.",
+  "inputDurationMs": 4011,
+  "outputAudioMs": 4720,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 946,
+    "ttft_from_end_ms": 945,
+    "completion_lag_ms": 2462,
+    "ttfa_from_start_ms": 5145
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.156,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:50.840Z"
+}

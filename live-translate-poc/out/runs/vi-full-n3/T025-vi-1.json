@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T025",
+  "category": "shopping",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "有沒有 limited edition 的款式?我在 Instagram 上看到的。",
+  "reference": "Có mẫu limited edition không ạ? Em thấy trên Instagram.",
+  "inputTranscript": "有 没 有 limited edition 的 款 式 ? 我 在 Instagram 上 看 到 的 。",
+  "outputTranscript": "Dạ có mẫu giới hạn không ạ? Em thấy ở trên Instagram ạ.",
+  "inputDurationMs": 4531,
+  "outputAudioMs": 3810,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 982,
+    "ttft_from_end_ms": 982,
+    "completion_lag_ms": 1757,
+    "ttfa_from_start_ms": 5683
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.932,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:39.140Z"
+}

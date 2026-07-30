@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T048",
+  "category": "smalltalk",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "不用了,謝謝,我只是看看而已。",
+  "reference": "Dạ không cần đâu, cảm ơn, tôi chỉ xem thử thôi.",
+  "inputTranscript": "不 用 了 , 谢 谢 , 我 只 是 看 看 而 已 。",
+  "outputTranscript": "Dạ không cần đâu ạ, em chỉ xem thôi ạ.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 1960,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1058,
+    "ttft_from_end_ms": 1058,
+    "completion_lag_ms": 1337,
+    "ttfa_from_start_ms": 4058
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.794,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:58.819Z"
+}

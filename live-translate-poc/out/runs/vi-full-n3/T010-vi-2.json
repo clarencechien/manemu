@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T010",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "最後一班回新宿的電車是十一點四十五分嗎?",
+  "reference": "Dạ chuyến tàu cuối về Shinjuku là mười một giờ bốn mươi lăm phải không ạ?",
+  "inputTranscript": "最 后 一 班 回 星 住 的 电 车 是 11 点 45 分 吗 ?",
+  "outputTranscript": "Dạ, chuyến tàu điện cuối về Hsinchu có phải là lúc 11 giờ 45 phút không ạ?",
+  "inputDurationMs": 4611,
+  "outputAudioMs": 4910,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 928,
+    "ttft_from_end_ms": 928,
+    "completion_lag_ms": 1975,
+    "ttfa_from_start_ms": 5728
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.982,
+    "coverage_ok": true,
+    "cer": 0.368
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:21.385Z"
+}

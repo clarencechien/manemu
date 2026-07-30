@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T035",
+  "category": "emergency",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "我的護照不見了,請問警察局在哪裡?",
+  "reference": "Dạ, hộ chiếu của em bị mất rồi, cho em hỏi đồn công an ở đâu vậy?",
+  "inputTranscript": "我 的 护 照 不 见 了 , 请 问 警 察 局 在 哪 里 ?",
+  "outputTranscript": "Dạ, hộ chiếu của cháu bị mất rồi ạ, cho hỏi đồn cảnh sát ở đâu ạ?",
+  "inputDurationMs": 3571,
+  "outputAudioMs": 4451,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1021,
+    "ttft_from_end_ms": 1021,
+    "completion_lag_ms": 2036,
+    "ttfa_from_start_ms": 4721
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:57.236Z"
+}

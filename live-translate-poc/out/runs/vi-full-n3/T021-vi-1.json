@@ -1,0 +1,38 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T021",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "這個不要,我要旁邊那個藍色的,兩個多少錢?",
+  "reference": "Dạ cái này không lấy, cho em cái màu xanh bên cạnh, hai cái giá bao nhiêu ạ?",
+  "inputTranscript": "这 个 不 要 , 我 要 旁 边 那 个 蓝 色 的 , 两 个 多 少 钱 ?",
+  "outputTranscript": "Dạ cái này tôi không lấy, tôi lấy cái màu xanh dương bên cạnh kia kìa, hai cái bao nhiêu tiền ạ?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 5671,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 968,
+    "ttft_from_end_ms": 968,
+    "completion_lag_ms": 3104,
+    "ttfa_from_start_ms": 4968
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.286,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:48.547Z"
+}

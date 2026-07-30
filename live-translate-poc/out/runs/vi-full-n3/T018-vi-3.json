@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T018",
+  "category": "dining",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "我要一份 tonkotsu 拉麵,麵要硬一點。",
+  "reference": "Tôi muốn một phần ramen tonkotsu, mì làm cứng một chút ạ.",
+  "inputTranscript": "我 要 一 份 豚 骨 汁 拉 面 , 面 要 硬 一 点 。",
+  "outputTranscript": "Dạ, cho tôi một phần mì ramen xương hầm, mì lấy loại cứng một chút ạ.",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 4640,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 916,
+    "ttft_from_end_ms": 916,
+    "completion_lag_ms": 2333,
+    "ttfa_from_start_ms": 5015
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.159,
+    "coverage_ok": true,
+    "cer": 0.421
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:15.333Z"
+}

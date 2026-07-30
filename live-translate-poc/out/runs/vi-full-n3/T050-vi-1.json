@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "Vậy thì làm phiền anh/chị nhé, sau này tôi sẽ liên lạc lại.",
+  "inputTranscript": "那 就 麻 烦 你 了 , 之 后 再 联 络 。",
+  "outputTranscript": "Dạ vậy thì phiền anh/chị nhé, liên lạc sau ạ.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3120,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 936,
+    "ttft_from_end_ms": 935,
+    "completion_lag_ms": 1566,
+    "ttfa_from_start_ms": 3936
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.75,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:20:22.357Z"
+}

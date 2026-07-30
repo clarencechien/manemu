@@ -1,0 +1,38 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T028",
+  "category": "hotel",
+  "traps": [
+    "proper-noun",
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "我有訂房,名字是陳大文,今天住兩個晚上。",
+  "reference": "Em có đặt phòng rồi, tên là Trần Đại Văn, ở hai đêm.",
+  "inputTranscript": "我 有 订 房 , 名 字 是 陈 大 文 , 今 天 住 两 个 晚 上 。",
+  "outputTranscript": "Dạ, tôi có đặt phòng ạ, tên là Trần Đại Văn, tôi ở hai đêm bắt đầu từ hôm nay.",
+  "inputDurationMs": 5251,
+  "outputAudioMs": 4590,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 990,
+    "ttft_from_end_ms": 990,
+    "completion_lag_ms": 1957,
+    "ttfa_from_start_ms": 6390
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.486,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:18.126Z"
+}

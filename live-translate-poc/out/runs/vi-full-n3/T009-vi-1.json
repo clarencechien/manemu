@@ -1,0 +1,47 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T009",
+  "category": "transport",
+  "traps": [],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "請問這個位子有人坐嗎?",
+  "reference": "Dạ cho hỏi chỗ này có ai ngồi chưa ạ?",
+  "inputTranscript": "请 问 这 个 位 置 有 人 坐 吗 ?",
+  "outputTranscript": "Dạ cho hỏi chỗ này có người ngồi chưa ạ?",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 2600,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 915,
+    "ttft_from_end_ms": 914,
+    "completion_lag_ms": 1406,
+    "ttfa_from_start_ms": 3515
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.111,
+    "coverage_ok": true,
+    "cer": 0.1
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:04.750Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural, matching the polite tone of the source sentence perfectly. 'có người ngồi' is a very common and natural way to ask if a seat is taken in Vietnamese."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

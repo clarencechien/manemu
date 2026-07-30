@@ -1,0 +1,49 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T003",
+  "category": "directions",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "我不是要去機場,我是要去火車站。",
+  "reference": "Dạ em không đi sân bay, em muốn đi nhà ga xe lửa ạ.",
+  "inputTranscript": "我 不 是 要 去 机 场 , 我 是 要 去 火 车 站 。",
+  "outputTranscript": "Dạ, tôi không đến sân bay, tôi muốn đến ga tàu hỏa ạ.",
+  "inputDurationMs": 2931,
+  "outputAudioMs": 3480,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 945,
+    "ttft_from_end_ms": 928,
+    "completion_lag_ms": 1632,
+    "ttfa_from_start_ms": 4045
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.056,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:49.361Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Bản dịch sử dụng từ ngữ phù hợp ('sân bay', 'ga tàu hỏa') và giữ được sắc thái lịch sự nhờ các từ 'Dạ', 'ạ'."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

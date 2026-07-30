@@ -1,0 +1,47 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T006",
+  "category": "directions",
+  "traps": [],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "這附近有沒有廁所?我趕時間。",
+  "reference": "Dạ gần đây có nhà vệ sinh không ạ? Em đang hơi gấp.",
+  "inputTranscript": "这 附 近 有 没 有 厕 所 ? 我 赶 时 间 。",
+  "outputTranscript": "Dạ quanh đây có Nhà vệ sinh không ạ? Tôi đang vội ạ.",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 3260,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 978,
+    "ttft_from_end_ms": 957,
+    "completion_lag_ms": 1593,
+    "ttfa_from_start_ms": 3878
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.027,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:10:29.710Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。完整傳達了原文的意思，『quanh đây』對應『這附近』，『Tôi đang vội』對應『我趕時間』，且加入了禮貌助詞『Dạ... ạ』，語氣十分得體。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

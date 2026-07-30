@@ -1,0 +1,33 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T046",
+  "category": "smalltalk",
+  "traps": [],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "你的中文說得真好,是在哪裡學的?",
+  "reference": "Anh/chị nói tiếng Trung giỏi thật đấy, học ở đâu vậy?",
+  "inputTranscript": "你 的 中 文 说 得 真 好 , 是 在 哪 里 学 的 ?",
+  "outputTranscript": "Tiếng Trung của bạn nói giỏi quá, bạn học ở đâu vậy ạ?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 3560,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1021,
+    "ttft_from_end_ms": 1019,
+    "completion_lag_ms": 2668,
+    "ttfa_from_start_ms": 4621
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:34.288Z"
+}

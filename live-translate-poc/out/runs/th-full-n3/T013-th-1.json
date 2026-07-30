@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T013",
+  "category": "transport",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我剛剛在月台上把手機弄丟了。",
+  "reference": "เมื่อกี้ทำโทรศัพท์มือถือหายที่ชานชาลาค่ะ",
+  "inputTranscript": "我 刚 刚 在 乐 台 上 把 手 机 弄 丢 了 。",
+  "outputTranscript": "ผมเพิ่งทำมือถือหาย บนชานชาลาเมื่อกี้ครับ",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 2810,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 943,
+    "ttft_from_end_ms": 943,
+    "completion_lag_ms": 1451,
+    "ttfa_from_start_ms": 3843
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.975,
+    "coverage_ok": true,
+    "cer": 0.231
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:58.160Z"
+}

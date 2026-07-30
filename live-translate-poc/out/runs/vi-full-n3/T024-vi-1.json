@@ -1,0 +1,38 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T024",
+  "category": "shopping",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "這件如果打八折的話,我就買兩件。",
+  "reference": "Nếu cái này được giảm 20% thì em mua hai cái ạ.",
+  "inputTranscript": "这 件 如 果 打 八 折 的 话 , 我 就 买 两 件 。",
+  "outputTranscript": "Cái này nếu được giảm 20% thì tôi mua hai cái ạ.",
+  "inputDurationMs": 3491,
+  "outputAudioMs": 4450,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 943,
+    "ttft_from_end_ms": 943,
+    "completion_lag_ms": 2169,
+    "ttfa_from_start_ms": 4542
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.029,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:22.655Z"
+}

@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "Cảm ơn anh/chị đã giúp đỡ, hôm nay thật sự làm phiền anh/chị quá.",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "Dạ, cảm ơn sự giúp đỡ của bạn, hôm nay thật làm phiền bạn rồi ạ.",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 3840,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1017,
+    "ttft_from_end_ms": 1017,
+    "completion_lag_ms": 1737,
+    "ttfa_from_start_ms": 4217
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.958,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:16.180Z"
+}

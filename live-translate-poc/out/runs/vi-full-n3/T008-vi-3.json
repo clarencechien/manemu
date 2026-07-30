@@ -1,0 +1,50 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T008",
+  "category": "transport",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "這班車會到大阪,但是應該不會停京都吧?",
+  "reference": "Dạ chuyến này có đến Osaka, nhưng chắc không dừng ở Kyoto đúng không ạ?",
+  "inputTranscript": "这 班 车 会 到 大 阪 , 但 是 应 该 不 会 停 京 都 吧 ?",
+  "outputTranscript": "Chuyến xe này sẽ đến Osaka, nhưng mà chắc là không dừng ở Kyoto đâu nhỉ?",
+  "inputDurationMs": 3851,
+  "outputAudioMs": 4010,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 927,
+    "ttft_from_end_ms": 927,
+    "completion_lag_ms": 1709,
+    "ttfa_from_start_ms": 4926
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:10:58.028Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source sentence with appropriate phrasing and tone in Vietnamese."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

@@ -1,0 +1,38 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T039",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我想預約明天下午三點,兩個大人。",
+  "reference": "ฉันอยากจองพรุ่งนี้บ่ายสามโมง ผู้ใหญ่สองคนค่ะ",
+  "inputTranscript": "我 想 预 约 明 天 下 午 3 点 , 两 个 大 人 。",
+  "outputTranscript": "ผมขอจอง วันพรุ่งนี้ ตอนบ่าย สามโมง สำหรับ ผู้ใหญ่ สองท่าน ครับ/ค่ะ",
+  "inputDurationMs": 3691,
+  "outputAudioMs": 4001,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 959,
+    "ttft_from_end_ms": 959,
+    "completion_lag_ms": 1816,
+    "ttfa_from_start_ms": 4759
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3",
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.349,
+    "coverage_ok": true,
+    "cer": 0.071
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:52.144Z"
+}

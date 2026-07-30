@@ -1,0 +1,37 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T033",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "可以幫我叫一台計程車嗎?明天早上六點半要到機場。",
+  "reference": "ช่วยเรียกแท็กซี่ให้หน่อยได้ไหมคะ พรุ่งนี้เช้าหกโมงครึ่งต้องไปสนามบินค่ะ",
+  "inputTranscript": "可 以 帮 我 叫 一 台 出 租 车 吗 ? 明 天 早 上 6 点 半 要 到 机 场 。",
+  "outputTranscript": "ช่วยเรียกแท็กซี่ให้คันนึงได้ไหมครับ พอดีต้องไปถึงสนามบินตอนหกโมงครึ่งพรุ่งนี้เช้าครับ",
+  "inputDurationMs": 4851,
+  "outputAudioMs": 0,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": null,
+    "ttft_from_end_ms": 963,
+    "completion_lag_ms": 963,
+    "ttfa_from_start_ms": null
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "6"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.2,
+    "coverage_ok": true,
+    "cer": 0.136
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:42.017Z"
+}

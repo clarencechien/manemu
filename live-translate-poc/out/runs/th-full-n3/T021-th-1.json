@@ -1,0 +1,38 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T021",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "這個不要,我要旁邊那個藍色的,兩個多少錢?",
+  "reference": "อันนี้ไม่เอาค่ะ เอาอันสีฟ้าที่อยู่ข้างๆนี่ดีกว่าค่ะ สองอันราคาเท่าไหร่คะ",
+  "inputTranscript": "这 个 不 要 , 我 要 旁 边 那 个 蓝 色 的 , 两 个 多 少 钱 ?",
+  "outputTranscript": "อันนี้ไม่เอาค่ะ ขออันสีฟ้าข้างๆ ค่ะ สองอันราคาเท่าไหร่คะ",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 4801,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1000,
+    "ttft_from_end_ms": 975,
+    "completion_lag_ms": 3357,
+    "ttfa_from_start_ms": 5000
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.757,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:52.383Z"
+}

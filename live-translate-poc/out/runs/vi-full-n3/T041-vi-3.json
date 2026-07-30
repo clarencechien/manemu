@@ -1,0 +1,39 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T041",
+  "category": "appointment",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "如果三點沒有位子的話,四點也可以。",
+  "reference": "Nếu 3 giờ không có chỗ thì 4 giờ cũng được ạ.",
+  "inputTranscript": "如 果 三 点 没 有 位 子 的 话 , 四 点 也 可 以 。",
+  "outputTranscript": "Dạ, nếu ba giờ không có chỗ, bốn giờ cũng được ạ.",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 3400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 985,
+    "ttft_from_end_ms": 961,
+    "completion_lag_ms": 1918,
+    "ttfa_from_start_ms": 4384
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3",
+      "4"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.061,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:18:26.788Z"
+}

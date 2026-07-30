@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "ขอบคุณสำหรับความช่วยเหลือครับ วันนี้รบกวนคุณมากเลยครับ",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "ขอบคุณที่ช่วยนะคะ วันนี้ รบกวน คุณจริงๆ ค่ะ",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 3060,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 927,
+    "ttft_from_end_ms": 926,
+    "completion_lag_ms": 1516,
+    "ttfa_from_start_ms": 4127
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.736,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:29.083Z"
+}

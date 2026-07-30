@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T020",
+  "category": "dining",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "請問可以幫我們分開結帳嗎?",
+  "reference": "ขอโทษนะคะ ช่วยแยกบิลให้พวกเราได้ไหมคะ",
+  "inputTranscript": "请 问 可 以 帮 我 们 分 开 结 帐 吗 ?",
+  "outputTranscript": "ขอโทษนะครับ ช่วย แยก บิล ให้พวกเราได้ไหมครับ?",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 3101,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 933,
+    "ttft_from_end_ms": 933,
+    "completion_lag_ms": 1608,
+    "ttfa_from_start_ms": 3834
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.111,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:41.835Z"
+}

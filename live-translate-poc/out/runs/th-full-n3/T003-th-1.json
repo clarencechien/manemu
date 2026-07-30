@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:09:42.354Z"
+  "ts": "2026-07-30T03:09:42.354Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且流暢，完整傳達了原文的意思。雖然代名詞使用了「ฉัน」而非參考譯文的「ผม」，但在泰語中仍屬自然且正確的表達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

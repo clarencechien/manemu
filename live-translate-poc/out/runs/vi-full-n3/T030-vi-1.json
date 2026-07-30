@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T030",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "請問退房時間是早上十點還是十一點?",
+  "reference": "Cho em hỏi giờ trả phòng là 10 giờ sáng hay 11 giờ ạ?",
+  "inputTranscript": "请 问 退 房 时 间 是 早 上 10 点 还 是 11 点 ?",
+  "outputTranscript": "Dạ cho hỏi thời gian trả phòng là 10 giờ sáng hay 11 giờ sáng ạ?",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4580,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 942,
+    "ttft_from_end_ms": 942,
+    "completion_lag_ms": 2046,
+    "ttfa_from_start_ms": 5243
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.231,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:46.960Z"
+}

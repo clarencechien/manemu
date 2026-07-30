@@ -1,0 +1,36 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T012",
+  "category": "transport",
+  "traps": [
+    "honorific",
+    "proper-noun"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "不好意思,可以幫我看一下這班車是不是往橫濱的嗎?",
+  "reference": "Dạ xin lỗi, anh/chị xem giúp tôi chuyến này có phải đi Yokohama không ạ?",
+  "inputTranscript": "不 好 意 思 , 可 以 帮 我 看 一 下 这 班 车 是 不 是 往 横 滨 的 吗 ?",
+  "outputTranscript": "Dạ xin lỗi, có thể xem giúp tôi xe này có phải đi Yokohama không ạ?",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4360,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 944,
+    "ttft_from_end_ms": 922,
+    "completion_lag_ms": 1983,
+    "ttfa_from_start_ms": 5244
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.909,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:47.833Z"
+}

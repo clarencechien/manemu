@@ -1,0 +1,33 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "ช่วยด้วยค่ะ! ช่วยเรียกรถพยาบาลให้ด้วยค่ะ",
+  "inputTranscript": "救 命 , 请 帮 我 叫 救 护 车 。",
+  "outputTranscript": "ช่วยด้วยครับ ช่วยเรียกรถพยาบาลให้ผมหน่อยครับ",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 2920,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 948,
+    "ttft_from_end_ms": 948,
+    "completion_lag_ms": 1544,
+    "ttfa_from_start_ms": 3548
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.132,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:48.986Z"
+}

@@ -1,0 +1,36 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T026",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "我考慮了一下,這個還是先不買好了。",
+  "reference": "ขอคิดดูก่อนนะคะ อันนี้ยังไม่ซื้อดีกว่าค่ะ",
+  "inputTranscript": "我 考 虑 了 一 下 , 这 个 还 是 先 不 买 好 了 。",
+  "outputTranscript": "ผมลองคิดดูแล้ว คิดว่า อันนี้ ยังไม่ ซื้อ ดีกว่า ครับ",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 3960,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 952,
+    "ttft_from_end_ms": 950,
+    "completion_lag_ms": 1921,
+    "ttfa_from_start_ms": 4352
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.15,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:02.832Z"
+}

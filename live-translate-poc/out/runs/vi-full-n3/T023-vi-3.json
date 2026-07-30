@@ -1,0 +1,35 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T023",
+  "category": "shopping",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "請問這個價格是含稅還是不含稅?",
+  "reference": "Cho em hỏi giá này đã bao gồm thuế chưa ạ?",
+  "inputTranscript": "请 问 这 个 价 格 是 含 税 还 是 不 含 税 ?",
+  "outputTranscript": "Dạ cho hỏi, giá này đã bao gồm thuế chưa ạ?",
+  "inputDurationMs": 3891,
+  "outputAudioMs": 3040,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 953,
+    "ttft_from_end_ms": 929,
+    "completion_lag_ms": 1583,
+    "ttfa_from_start_ms": 4952
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:21.039Z"
+}

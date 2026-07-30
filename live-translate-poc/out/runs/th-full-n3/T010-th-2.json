@@ -1,0 +1,37 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T010",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "最後一班回新宿的電車是十一點四十五分嗎?",
+  "reference": "รถไฟเที่ยวสุดท้ายที่จะกลับไปชินจูกุคือเวลา 11:45 ใช่ไหมครับ",
+  "inputTranscript": "最 后 一 班 回 星 住 的 电 车 是 11 点 45 分 吗 ?",
+  "outputTranscript": "รถไฟเที่ยวสุดท้าย กลับ ชินจูกุ คือเวลา 23:45 น. ใช่ไหมครับ/คะ",
+  "inputDurationMs": 4611,
+  "outputAudioMs": 5721,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1094,
+    "ttft_from_end_ms": 935,
+    "completion_lag_ms": 3187,
+    "ttfa_from_start_ms": 5894
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "11"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.929,
+    "coverage_ok": true,
+    "cer": 0.368
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:24.320Z"
+}

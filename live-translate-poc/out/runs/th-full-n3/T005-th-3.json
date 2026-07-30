@@ -1,0 +1,49 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T005",
+  "category": "directions",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "請問淺草寺跟晴空塔是同一個方向嗎?",
+  "reference": "ขอโทษครับ วัดอาซากุสะกับโตเกียวสกายทรีอยู่ทางเดียวกันไหมครับ",
+  "inputTranscript": "请 问 前 草 寺 跟 晴 空 塔 是 同 一 个 方 向 吗 ?",
+  "outputTranscript": "ขอถามหน่อย ครับ วัด เซ็นโซจิ กับ โตเกียว สกายทรี อยู่ทาง เดียวกัน ไหมครับ",
+  "inputDurationMs": 4331,
+  "outputAudioMs": 5090,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 944,
+    "ttft_from_end_ms": 941,
+    "completion_lag_ms": 2027,
+    "ttfa_from_start_ms": 5444
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.085,
+    "coverage_ok": true,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:10:22.417Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates '淺草寺' as 'วัดเซ็นโซจิ' (Sensoji Temple), which is a direct and correct translation, even though the reference translation uses 'วัดอาซากุสะ' (Asakusa Temple) — both refer to the same temple. The sentence structure and politeness particles are well-preserved."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

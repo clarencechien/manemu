@@ -1,0 +1,35 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T036",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我頭很暈,但是我沒有心臟病的病史。",
+  "reference": "ฉันรู้สึกเวียนหัวมาก แต่ไม่มีประวัติเป็นโรคหัวใจค่ะ",
+  "inputTranscript": "我 头 很 晕 , 但 是 我 没 有 心 脏 病 的 病 史 。",
+  "outputTranscript": "ผมเวียนศีรษะมากครับ แต่ผมไม่มีประวัติโรคหัวใจครับ",
+  "inputDurationMs": 3731,
+  "outputAudioMs": 4120,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 983,
+    "ttft_from_end_ms": 961,
+    "completion_lag_ms": 1903,
+    "ttfa_from_start_ms": 4883
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.96,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:08.491Z"
+}

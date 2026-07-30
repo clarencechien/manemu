@@ -1,0 +1,38 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T017",
+  "category": "dining",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "這杯不要加冰,然後大杯的改成中杯,總共三杯。",
+  "reference": "Ly này xin đừng cho đá, rồi đổi cỡ lớn thành cỡ vừa, tổng cộng 3 ly ạ.",
+  "inputTranscript": "这 杯 不 要 加 冰 , 然 后 大 杯 的 改 成 中 杯 , 总 共 三 杯 。",
+  "outputTranscript": "Ly này không cho đá ạ, còn ly lớn thì đổi thành ly vừa, tổng cộng là ba ly ạ.",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 5950,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 945,
+    "ttft_from_end_ms": 945,
+    "completion_lag_ms": 2535,
+    "ttfa_from_start_ms": 7545
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:52.206Z"
+}
