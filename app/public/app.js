@@ -69,6 +69,11 @@ const playbackRemaining = () => Math.max(0, (playQ.scheduled - (audioCtx?.curren
 /* ============ 一輪 PTT(核心:真 relay) ============ */
 async function runUtterance({ side, ui }) {
   S.busy = true;
+  try { await runUtteranceInner({ side, ui }); }
+  catch (e) { console.warn("utterance failed", e); ui.status("⚠ 出了點問題,再試一次", false); }
+  finally { S.busy = false; try { stopCapture(); } catch {} window.__pttRelease = null; }
+}
+async function runUtteranceInner({ side, ui }) {
   const t0 = performance.now();
   ui.status("連線中…", true);
   const lang = side === "me" ? S.lang : "zh";
@@ -205,13 +210,15 @@ const chatUI = {
     el.scrollIntoView({ block: "end" });
     return { host: el, srcEl: el.querySelector(".src"), txEl: el.querySelector(".tx") };
   },
-  done({ outTx, deadAir, speechMs, completionMs, lagS }, el) {
-    // 端到端三段:死氣(放開→首音)、播完(放開→譯音結束)、全程(按下→播完)
-    el.host.querySelector(".rowmeta").innerHTML =
-      (deadAir !== null ? `<span class="lat">死氣 ${deadAir}ms</span>` : "")
-      + (outTx ? `<span class="lat">播完 ${(completionMs / 1000).toFixed(1)}s</span>` : "")
-      + `<span class="lat">全程 ${lagS}s</span>`
-      + (S.test && outTx ? `<span class="lat">已記錄</span>` : ""); // 失敗不標已記錄
+  done({ outTx, deadAir, completionMs }, el) {
+    // 口語化小資訊列(讓 user 有感知速度,不丟技術名詞)
+    const bits = [];
+    if (outTx && deadAir !== null) {
+      bits.push(deadAir <= 100 ? "⚡ 幾乎沒等就開口" : `⚡ 放開 ${(deadAir / 1000).toFixed(1)} 秒就開口`);
+    }
+    if (outTx && completionMs) bits.push(`🗣 ${(completionMs / 1000).toFixed(1)} 秒說完`);
+    if (S.test && outTx) bits.push("✓ 已記錄");
+    el.host.querySelector(".rowmeta").innerHTML = bits.map((t) => `<span class="lat">${t}</span>`).join("");
     el.host.scrollIntoView({ block: "end" });
   },
   replay(el, audioB64) {
@@ -220,12 +227,18 @@ const chatUI = {
     b.addEventListener("click", async () => {
       if (S.busy) return;
       S.busy = true; setPtt(true);
-      $("status").textContent = "🔊 重播中";
-      for (const a of audioB64) enqueuePcm(a);
-      await sleep(playbackRemaining() + 100);
-      playQ.playing = false;
-      S.busy = false; setPtt(false);
-      $("status").textContent = "按住說話";
+      try {
+        await ensureAudio(); // 手機閒置後 AudioContext 會被 suspend,點擊是合法手勢可 resume
+        $("status").textContent = "🔊 重播中";
+        playQ.scheduled = Math.max(playQ.scheduled, audioCtx.currentTime); // 過期排程歸位
+        for (const a of audioB64) enqueuePcm(a);
+        await sleep(playbackRemaining() + 150);
+      } catch (e) { console.warn("replay failed", e); $("status").textContent = "重播失敗"; }
+      finally {
+        playQ.playing = false;
+        S.busy = false; setPtt(false);
+        if ($("status").textContent === "🔊 重播中") $("status").textContent = "按住說話";
+      }
     });
     el.host.querySelector(".rowmeta").prepend(b);
   },
