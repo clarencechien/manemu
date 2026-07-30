@@ -132,7 +132,7 @@ export default {
     if (p === "/api/backtranslate" && req.method === "POST") {
       const { text, from } = await req.json();
       if (!text || text.length > 600) return Response.json({ error: "bad input" }, { status: 400 });
-      const langName = { ja: "日文", en: "英文", ko: "韓文" }[from] ?? "外文";
+      const langName = { ja: "日文", en: "英文", ko: "韓文", vi: "越南文", th: "泰文" }[from] ?? "外文";
       const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/${env.BACKTX_MODEL}:generateContent`, {
         method: "POST",
         headers: { "content-type": "application/json", "x-goog-api-key": env.GEMINI_API_KEY },

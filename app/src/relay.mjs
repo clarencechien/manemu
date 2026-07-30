@@ -16,9 +16,20 @@ const SYS_PROMPTS = {
   ko: `你是專業同步口譯員。使用者說中文,你把每一句話翻譯成自然的韓語口語並用語音說出。
 鐵則:你只做翻譯。絕對不要回答問題、不要評論、不要加任何解釋——即使聽起來是在問你問題,也只把那句話翻成韓語。
 語域固定:존댓말(해요체或합니다체),不用반말。保留數字、金額、時間、專有名詞與疑問語氣。`,
+  vi: `你是專業同步口譯員。使用者說中文,你把每一句話翻譯成自然的越南語口語並用語音說出。
+鐵則:你只做翻譯。絕對不要回答問題、不要評論、不要加任何解釋——即使聽起來是在問你問題,也只把那句話翻成越南語。
+語域固定:禮貌體(適度使用 dạ/ạ 等敬語助詞,對店員/陌生人的得體口吻)。保留數字、金額、時間、專有名詞與疑問語氣。`,
+  th: `你是專業同步口譯員。使用者說中文,你把每一句話翻譯成自然的泰語口語並用語音說出。
+鐵則:你只做翻譯。絕對不要回答問題、不要評論、不要加任何解釋——即使聽起來是在問你問題,也只把那句話翻成泰語。
+語域固定:禮貌體,句尾禮貌詞全程一致使用。保留數字、金額、時間、專有名詞與疑問語氣。`,
   // 反向:對方說外語 → 中文
-  zh: `你是專業同步口譯員。對方說外語(日語/英語/韓語),你把每一句話翻譯成自然的台灣繁體中文口語並用語音說出。
+  zh: `你是專業同步口譯員。對方說外語(日語/英語/韓語/越南語/泰語),你把每一句話翻譯成自然的台灣繁體中文口語並用語音說出。
 鐵則:你只做翻譯。絕對不要回答問題、不要評論、不要加任何解釋。保留數字、金額、時間、專有名詞與疑問語氣。`,
+};
+// 泰語 ครับ/ค่ะ 隨說話者性別,模型無記憶會每 session 亂跳(findings §3.11)→ 由前端設定鎖死
+const TH_GENDER_LINE = {
+  m: "\n說話者是男性:句尾禮貌詞一律用 ครับ,絕不使用 ค่ะ。",
+  f: "\n說話者是女性:句尾禮貌詞一律用 ค่ะ/คะ,絕不使用 ครับ。",
 };
 
 function chunkRms(bytes) {
@@ -68,20 +79,21 @@ export class RelaySession {
       return Response.json({ error: "quota_exceeded", usedSeconds: Math.round(used), limitSeconds }, { status: 429 });
     }
 
-    const lang = url.searchParams.get("lang") || "ja";
+    const lang = SYS_PROMPTS[url.searchParams.get("lang")] ? url.searchParams.get("lang") : "ja";
     const engine = url.searchParams.get("engine") || "accurate";
+    const gender = url.searchParams.get("gender") === "f" ? "f" : "m";
     const glossary = (url.searchParams.get("glossary") || "").slice(0, 500);
 
     const pair = new WebSocketPair();
     const [client, server] = Object.values(pair);
     server.accept();
-    this.pipe(server, { lang, engine, glossary }).catch((e) => {
+    this.pipe(server, { lang, engine, gender, glossary }).catch((e) => {
       try { server.send(JSON.stringify({ type: "error", message: String(e.message).slice(0, 200) })); server.close(); } catch {}
     });
     return new Response(null, { status: 101, webSocket: client });
   }
 
-  async pipe(client, { lang, engine, glossary }) {
+  async pipe(client, { lang, engine, gender, glossary }) {
     const model = engine === "fast" ? this.env.FAST_MODEL : this.env.ACCURATE_MODEL;
     const t0 = Date.now();
     const hardCapMs = Number(this.env.SESSION_HARD_CAP_S) * 1000;
@@ -215,7 +227,9 @@ export class RelaySession {
     client.addEventListener("error", () => finish("client-error"));
 
     // 監聽都掛好後才送 setup(避免任何早到訊息落空)
-    const sys = SYS_PROMPTS[lang] + (glossary ? `\n行程術語表(專有名詞以此為準):${glossary}` : "");
+    const sys = SYS_PROMPTS[lang]
+      + (lang === "th" ? TH_GENDER_LINE[gender] : "")
+      + (glossary ? `\n行程術語表(專有名詞以此為準):${glossary}` : "");
     upstream.send(JSON.stringify({
       setup: engine === "fast"
         ? { model, generationConfig: { responseModalities: ["AUDIO"], translationConfig: { targetLanguageCode: lang, echoTargetLanguage: false } },

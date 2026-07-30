@@ -8,8 +8,10 @@ const LANGS = {
   ja: { label: "日本語", btn: "対 日本語", pttThem: "押して話す", pttThemSub: "→ 中文", holdStatus: "押しながら話してください", divider: "⇅ 面對面・上側は相手用", who: "(日本語)", youWord: "あなた", themWord: "相手(中国語)" },
   en: { label: "English", btn: "to English", pttThem: "Hold to speak", pttThemSub: "→ Chinese", holdStatus: "Hold the button and speak", divider: "⇅ Face to face · top side is for them", who: "(English)", youWord: "You", themWord: "Them (Chinese)" },
   ko: { label: "한국어", btn: "한국어로", pttThem: "누르고 말하기", pttThemSub: "→ 中文", holdStatus: "버튼을 누른 채 말해 주세요", divider: "⇅ 面對面・위쪽은 상대방용", who: "(한국어)", youWord: "나", themWord: "상대(중국어)" },
+  vi: { label: "Tiếng Việt", btn: "sang tiếng Việt", pttThem: "Nhấn giữ để nói", pttThemSub: "→ Tiếng Trung", holdStatus: "Nhấn giữ nút và nói", divider: "⇅ 面對面・Phía trên dành cho đối phương", who: "(Tiếng Việt)", youWord: "Bạn", themWord: "Đối phương (tiếng Trung)" },
+  th: { label: "ไทย", btn: "เป็นภาษาไทย", pttThem: "กดค้างเพื่อพูด", pttThemSub: "→ ภาษาจีน", holdStatus: "กดปุ่มค้างไว้แล้วพูด", divider: "⇅ 面對面・ด้านบนสำหรับคู่สนทนา", who: "(ภาษาไทย)", youWord: "คุณ", themWord: "อีกฝ่าย (ภาษาจีน)" },
 };
-const LANG_ORDER = ["ja", "en", "ko"];
+const LANG_ORDER = ["ja", "en", "ko", "vi", "th"];
 const SCENES = {
   general: { label: "🧭 旅遊・通用", ghostTitle: "把「人・事・時・地」說清楚,翻譯會更準。試著說:", ghosts: ["「我要一份〇〇,〇〇不要加。」", "「請問〇〇在哪裡?怎麼走?」", "「我〇點有預約,名字是〇〇。」"] },
   emergency: { label: "🆘 旅遊・緊急", ghostTitle: "求助時照這個句型,一次講完整:", ghosts: ["「我在(地點),我的同伴(發生什麼),請幫我(需要的協助)。」", "例:「我在車站東口,朋友昏倒了,請叫救護車。」", "例:「我的護照不見了,請問要去哪裡報案?」"] },
@@ -22,8 +24,11 @@ const TEST_LINES = [
   { id: "T037", zh: "我的房間號碼是七〇二,我朋友昏倒了。" }, { id: "T044", zh: "我們會晚三十分鐘到,位子可以保留嗎?" },
 ];
 
-const S = { lang: "ja", scene: "general", fast: false, test: false, testIdx: 0, busy: false, msgCount: 0,
+const S = { lang: LANGS[localStorage.getItem("mn_lang")] ? localStorage.getItem("mn_lang") : "ja",
+            scene: "general", fast: false, test: false, testIdx: 0, busy: false, msgCount: 0,
             email: null, tier: null, usedSeconds: 0, limitSeconds: 0 };
+// 泰語句尾禮貌詞由說話者性別決定(ครับ 男/ค่ะ 女);模型無記憶會每 session 亂跳,必須鎖進 prompt
+const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 音訊:擷取(worklet)與播放(24k) ============ */
@@ -85,7 +90,7 @@ async function runUtteranceInner({ side, ui }) {
   ui.status("連線中…", true);
   const lang = side === "me" ? S.lang : "zh";
   const engine = S.fast && side === "me" ? "fast" : "accurate";
-  const ws = new WebSocket(`/ws?lang=${lang}&engine=${engine}&glossary=${encodeURIComponent(localStorage.getItem("mn_glossary") || "")}`);
+  const ws = new WebSocket(`/ws?lang=${lang}&engine=${engine}&gender=${thGender()}&glossary=${encodeURIComponent(localStorage.getItem("mn_glossary") || "")}`);
   ws.binaryType = "arraybuffer";
 
   let ready = false, ended = false;
@@ -354,7 +359,12 @@ function renderEmpty() {
 }
 function applyLang() {
   const L = LANGS[S.lang];
-  $("langBtn").textContent = `${L.btn} ▾`;
+  $("langBtn").value = S.lang;
+  localStorage.setItem("mn_lang", S.lang);
+  // 泰語專用:句尾禮貌詞 chip(其他語言隱藏)
+  const g = $("thGender");
+  g.classList.toggle("hidden", S.lang !== "th");
+  if (S.lang === "th") g.textContent = thGender() === "f" ? "尾詞 ค่ะ(女)" : "尾詞 ครับ(男)";
   $("pttMeSub").textContent = `→ ${L.label}`;
   $("pttThemBig").textContent = L.pttThem;
   $("pttThemSub").textContent = L.pttThemSub;
@@ -445,9 +455,19 @@ async function mountTurnstile() {
     $("sceneBtn").textContent = SCENES[S.scene].label;
     resetConversation();
   });
-  $("langBtn").addEventListener("click", () => {
-    S.lang = LANG_ORDER[(LANG_ORDER.indexOf(S.lang) + 1) % LANG_ORDER.length];
+  // 語言下拉:選項文字用該語言自己的「翻成〇〇」連接詞(対 日本語 / to English / …)
+  $("langBtn").innerHTML = LANG_ORDER.map((k) => `<option value="${k}">${LANGS[k].btn}</option>`).join("");
+  $("langBtn").value = S.lang;
+  $("langBtn").addEventListener("change", (e) => {
+    S.lang = e.target.value;
     applyLang(); resetConversation();
+    if (S.lang === "th" && !localStorage.getItem("mn_th_gender")) {
+      $("status").textContent = "泰語句尾禮貌詞:點上方「尾詞」切換 ครับ(男)/ ค่ะ(女)";
+    }
+  });
+  $("thGender").addEventListener("click", () => {
+    localStorage.setItem("mn_th_gender", thGender() === "f" ? "m" : "f");
+    applyLang();
   });
   $("mChat").addEventListener("click", () => switchMode(false));
   $("mFace").addEventListener("click", () => switchMode(true));
