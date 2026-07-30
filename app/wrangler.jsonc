@@ -6,7 +6,10 @@
   "compatibility_date": "2026-07-01",
   "assets": {
     "directory": "public",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
+    // 靜態檔也先進 worker:否則 canonical-host 檢查與 CSP headers 對靜態頁全部失效
+    // (實測 workers.dev 首頁 200 且無安全 headers 的成因)
+    "run_worker_first": true
   },
   "durable_objects": {
     "bindings": [
