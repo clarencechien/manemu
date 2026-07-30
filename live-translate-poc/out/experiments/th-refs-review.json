@@ -1,0 +1,602 @@
+{
+ "T003": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T002": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "語意正確、自然有禮，句尾一致。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T004": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ผมอยากจะนั่งแท็กซี่」稍顯冗長，口語中通常省略「จะ」並用「นั่งแท็กซี่ไป」更自然流暢",
+   "better": ""
+  }
+ },
+ "T001": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「สถานีอยู่ที่ไหนครับ」語意正確但稍顯生硬，口語中更常用「สถานีอยู่ตรงไหน」或「สถานีอยู่ที่ไหน」搭配「ขอถามว่า」使語氣更自然禮貌；整體無語意錯誤，屬風格小疵。",
+   "better": ""
+  }
+ },
+ "T006": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ผมกำลังรีบครับ」語意正確但稍顯生硬，口語中更自然的說法是「ผมรีบครับ」或「ผมกำลังรีบอยู่ครับ」",
+   "better": ""
+  }
+ },
+ "T007": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "語意正確且禮貌，但「ผู้ใหญ่หนึ่งใบ เด็กหนึ่งใบ」稍顯生硬，口語中通常會說「ผู้ใหญ่หนึ่ง เด็กหนึ่ง」或加上「ใบ」前用「และ」連接更自然。",
+   "better": ""
+  }
+ },
+ "T005": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「วัดอาซากุสะ」非泰語通用稱呼，泰國人普遍稱「วัดเซ็นโซ」(Senso-ji)；「โตเกียวสกายทรี」雖可理解但更常見「โตเกียวสกายทรี」或直接用「สกายทรี」",
+   "better": ""
+  }
+ },
+ "T008": {
+  "openai/gpt-5.6-terra": {
+   "severity": "major",
+   "issue": "漏譯「應該」的不確定語氣，並把「會到大阪」改成獨立確認問句。",
+   "better": "รถไฟขบวนนี้ไปถึงโอซาก้า แต่คงไม่จอดที่เกียวโตใช่ไหมครับ"
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "ใช้ 'ใช่ไหมครับ' ซ้ำสองครั้งทำให้ประโยคดูซ้ำซ้อนและขาดความเป็นธรรมชาติ",
+   "better": "รถไฟเที่ยวนี้ไปถึงโอซาก้าใช่ไหมครับ แต่คงไม่จอดที่เกียวโตหรอกนะครับ"
+  }
+ },
+ "T009": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T010": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「คือเวลา 11:45」略不自然，詢問末班車時通常會說出發時間。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T011": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "缺少句尾禮貌助詞ครับ/ค่ะ，且「บัตร IC」可更自然表述為「บัตร IC การ์ด」或直接使用「บัตร Suica/PASMO」等具體卡名；現有譯文語意正確但稍顯生硬",
+   "better": ""
+  }
+ },
+ "T012": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「รถไฟเที่ยวนี้」用於電車班次略不自然，泰語口語通常說「รถไฟขบวนนี้」；另「ช่วยดูให้หน่อยได้ไหมคะ」稍冗長，可更簡潔。",
+   "better": ""
+  }
+ },
+ "T013": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T014": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "語意正確且禮貌自然，但「ไม่เอาเผ็ด」略不如「ไม่เผ็ด」直接自然。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T015": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "語意正確、自然且句尾敬語一致",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T016": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「อาหารทะเลใดๆในอาหาร」略顯冗贅，可更精簡自然",
+   "better": ""
+  }
+ },
+ "T017": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "語意完整、自然有禮，句尾一致。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T018": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「ราเมง」較偏韓式用語，日式豚骨拉麵通常說「ราเมน」或「ราเม็ง」較自然。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "ทงคตสึ 音譯不夠精準，常見譯法為 ทงคตสึ→ทงโกสึ/ทงคตสึ 均可，但更自然的寫法是 ทงคตสึ；另「เส้นแข็ง」雖可理解，道地說法多用「เส้นแข็งๆ」或「เส้นแบบแข็ง」",
+   "better": ""
+  }
+ },
+ "T019": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T020": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T021": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ดีกว่าค่ะ」帶有「比較好」的比較語氣，原文僅是「我要旁邊那個藍色的」，無比較意圖，略顯多餘但不影響理解。",
+   "better": ""
+  }
+ },
+ "T023": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ขอถามหน่อยค่ะ」稍顯冗長，口語中可直接以「ราคานี้...」提問更自然流暢，但語意正確且禮貌無誤。",
+   "better": ""
+  }
+ },
+ "T022": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「คิดให้หน่อยเป็นสามพันบาทได้ไหมคะ」語序稍顯冗贅，「หน่อย」重複出現略不自然，可簡化更流暢",
+   "better": ""
+  }
+ },
+ "T024": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T025": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T026": {
+  "openai/gpt-5.6-terra": {
+   "severity": "major",
+   "issue": "「ขอคิดดูก่อน」變成「讓我先考慮」，未表達「我考慮了一下」後作出的決定。",
+   "better": "คิดดูแล้ว ตอนนี้ยังไม่ซื้อดีกว่าค่ะ"
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ขอคิดดูก่อน」偏向「讓我先想想（再決定）」，與原文「我考慮了一下（已考慮過）」的已完成語意略有出入，但整體可接受。",
+   "better": ""
+  }
+ },
+ "T027": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "語意正確自然，禮貌句尾一致",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "口語自然度尚可，但「ขอคืนภาษีได้ไหมคะ」略顯直譯，泰語習慣上更常以「ขอคืนภาษีได้หรือเปล่าคะ」或加上「สินค้า」使語意更完整清晰；整體仍屬可接受範圍。",
+   "better": ""
+  }
+ },
+ "T028": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "缺少明確的「今天入住」時間資訊，且未提及訂房人稱呼（如「我」），語意略不完整但可理解",
+   "better": ""
+  }
+ },
+ "T029": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "語意正確且禮貌，但「ห้องว่าง」較口語，飯店情境用「ห้องว่างให้เข้าพัก」或「ห้องพร้อมให้บริการ」更自然專業；另「ไม่ได้จองห้องไว้ค่ะ」可稍作潤飾使語氣更流暢。",
+   "better": "ไม่ได้จองห้องพักไว้ค่ะ ไม่ทราบว่าคืนนี้ยังมีห้องว่างให้เข้าพักไหมคะ"
+  }
+ },
+ "T030": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ขอถามหน่อยค่ะ」稍顯口語隨意，對飯店櫃檯可再禮貌些；「สิบโมงเช้า」雖可懂但「สิบโมง」本身即指上午十點，加「เช้า」略冗餘。",
+   "better": "รบกวนสอบถามค่ะ เวลาเช็คเอาท์คือสิบโมงหรือสิบเอ็ดโมงคะ"
+  }
+ },
+ "T031": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ขอให้คนมาดูให้หน่อยได้ไหมคะ」略顯口語冗贅，「ให้...ดูให้」重複使用ให้稍不自然，可簡化更流暢",
+   "better": ""
+  }
+ },
+ "T032": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T033": {
+  "openai/gpt-5.6-terra": {
+   "severity": "major",
+   "issue": "「六點半要到機場」應表達為六點半抵達，原譯僅說要去機場。",
+   "better": "ช่วยเรียกแท็กซี่ให้หน่อยได้ไหมคะ พรุ่งนี้เช้าต้องไปถึงสนามบินตอนหกโมงครึ่งค่ะ"
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ต้องไปสนามบิน」語意略模糊，未明確表達「要到達機場」，可補「ถึง」使語意更精確。",
+   "better": ""
+  }
+ },
+ "T034": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T035": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ขอถามหน่อยค่ะ」稍顯冗贅，口語中可直接詢問地點更自然流暢。",
+   "better": ""
+  }
+ },
+ "T036": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T037": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "major",
+   "issue": "數字讀法不自然，泰語口語中房間號碼通常逐位讀且七用เจ็ด而非หมายเลขเจ็ดศูนย์สอง這種生硬唸法；另外緊急情境下語句可更緊湊自然。",
+   "better": "ฉันพักห้องเจ็ดศูนย์สองค่ะ เพื่อนฉันหมดสติแล้วค่ะ"
+  }
+ },
+ "T038": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "原文「打」指注射，譯文用「ฉีด」正確，但「ฉันแพ้」未明確指出對青黴素過敏，語意略不完整；禮貌口語自然，句尾「ค่ะ」一致。",
+   "better": ""
+  }
+ },
+ "T039": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「ผู้ใหญ่สองคน」可理解但在預約情境用「ผู้ใหญ่สองท่าน」更自然禮貌。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "語意正確但略顯生硬，缺少量詞「ท่าน/คน」及介詞「สำหรับ」使表達更自然流暢",
+   "better": ""
+  }
+ },
+ "T040": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "ใช้ \"ฉัน\" ในบริบทบริการ/ติดต่อธุรกิจฟังดูเป็นทางการเกินไปและไม่เป็นธรรมชาติสำหรับภาษาพูด ควรใช้ \"ดิฉัน\" (สุภาพ) หรือละประธาน; \"อยากเปลี่ยนนัด\" ฟังดูห้วนเล็กน้อย",
+   "better": ""
+  }
+ },
+ "T041": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T042": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T043": {
+  "openai/gpt-5.6-terra": {
+   "severity": "major",
+   "issue": "「ค่ายกเลิก」不自然，應說「ค่าธรรมเนียมการยกเลิก」。",
+   "better": "ขอถามหน่อยครับ สามารถยกเลิกได้ช้าที่สุดกี่โมงโดยไม่ต้องเสียค่าธรรมเนียมการยกเลิกครับ"
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ยกเลิกได้ช้าสุดถึงกี่โมง」語序略不自然，口語中更常說「ยกเลิกได้ช้าที่สุดถึงกี่โมง」或「ยกเลิกได้จนถึงกี่โมง」；另「ขอถามหน่อยครับ」稍顯冗贅，可直接以「สอบถามครับ」開頭更簡潔自然。",
+   "better": ""
+  }
+ },
+ "T044": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ช้าสามสิบนาที」語序稍不自然，泰語習慣說「ช้าไป 30 นาที」或「เลยเวลาไป 30 นาที」；「เก็บที่นั่งไว้ให้」可更道地說成「จองโต๊ะไว้ให้」(餐廳情境常用)",
+   "better": ""
+  }
+ },
+ "T045": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T046": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T047": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「อีก」用於比較句稍顯多餘且略不自然，去掉後語句更簡潔流暢",
+   "better": ""
+  }
+ },
+ "T048": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "句尾連續三個ครับ略顯冗贅，口語中通常省略首個ครับ或合併語句更自然",
+   "better": "ไม่เป็นไรครับ ขอบคุณครับ ผมแค่ดูเฉยๆ"
+  }
+ },
+ "T049": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T050": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ }
+}

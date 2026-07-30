@@ -1,0 +1,33 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T001",
+  "category": "directions",
+  "traps": [],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "請問車站在哪裡?怎麼走比較快?",
+  "reference": "ขอโทษครับ สถานีอยู่ที่ไหนครับ ไปทางไหนถึงจะเร็วที่สุดครับ",
+  "inputTranscript": "请 问 车 站 在 哪 里 ? 怎 么 走 比 较 快 ?",
+  "outputTranscript": "ขอถามหน่อยครับ สถานีรถไฟ อยู่ที่ไหนครับ ไปทางไหน ถึงจะเร็ว กว่าครับ",
+  "inputDurationMs": 3211,
+  "outputAudioMs": 4660,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 961,
+    "ttft_from_end_ms": 960,
+    "completion_lag_ms": 2036,
+    "ttfa_from_start_ms": 4361
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.127,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:16.584Z"
+}

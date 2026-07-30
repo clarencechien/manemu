@@ -1,0 +1,597 @@
+{
+ "T001": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「em/cháu」以斜線並列不適合作為實際口譯；應依說話者年齡與對象選一種。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「em/cháu」並列未擇一，實際口譯應依說話者年齡選定單一自稱",
+   "better": ""
+  }
+ },
+ "T002": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "語意正確、自然且禮貌。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T003": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「nhà ga xe lửa」略顯冗贅，口語中通常簡稱「ga tàu」或「nhà ga」即可；另「muốn đi」語氣偏向「想去」，原文「是要去」更適合用「đi... cơ」或「cần đến」來表達糾正語氣。",
+   "better": "Dạ em không đi sân bay, em đi ga tàu cơ ạ."
+  }
+ },
+ "T005": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「cùng hướng」語意可懂但略生硬，口語中更自然的說法是「cùng một hướng」或「đi cùng hướng」；另「chùa Sensoji」雖可接受，但淺草寺在越南語旅遊語境中更常直接稱「Sensoji」或「chùa Asakusa」。",
+   "better": ""
+  }
+ },
+ "T004": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "語意正確、自然有禮。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T006": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T007": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "句意正確、自然且禮貌。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T008": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T009": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T010": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T012": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「chuyến này」略不如「xe này／chuyến xe này」明確，且「Dạ xin lỗi」稍顯重複，但整體語意正確且有禮。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T011": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "語序略不自然，「thẻ IC 1000 yên」易誤解為「1000日圓的IC卡」，應將金額與動作緊鄰以明確表達儲值金額。",
+   "better": "Dạ, tôi muốn nạp 1000 yên vào thẻ IC ạ."
+  }
+ },
+ "T013": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T014": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "語意正確且禮貌，但「xin đừng cho cay」稍書面，口語可更自然。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T015": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "正確自然有禮。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「tổng cộng」略顯書面，口語中更自然的說法是「tất cả」或直接說「nhóm mình có 5 người」；「ghế ngồi cho trẻ em」可簡化為「ghế trẻ em」更流暢。",
+   "better": ""
+  }
+ },
+ "T016": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「món ăn」泛指食物，在此語境略顯籠統；「đồ ăn」或直接省略更自然口語。",
+   "better": ""
+  }
+ },
+ "T017": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「đổi cỡ lớn thành cỡ vừa」略省略「ly」，但語意仍清楚自然。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「xin đừng cho đá」略顯生硬，口語點餐更自然的說法是「không lấy đá」或「không đá」；「rồi đổi」也稍帶書面感。",
+   "better": ""
+  }
+ },
+ "T018": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「mì làm cứng」稍不自然，點拉麵時通常說麵要煮硬一些。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「mì làm cứng một chút」語意可懂但略顯生硬，口語中更自然的說法是「mì cứng một chút」或「cho mì cứng một chút」，省略「làm」更流暢。",
+   "better": ""
+  }
+ },
+ "T019": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "語意正確、自然得體。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "缺少禮貌語氣詞 dạ/ạ，對店員或陌生人說話時略顯生硬；「no rồi」可加「đã」使語氣更自然委婉。",
+   "better": "Dạ, món này nhìn ngon quá, nhưng tôi đã no rồi ạ."
+  }
+ },
+ "T020": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T021": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T022": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「tính em 3000」語意可懂但略口語省略，較自然的說法會加上單位或動詞結構，如「tính cho em 3 nghìn」；整體仍屬可接受的市場議價口語。",
+   "better": ""
+  }
+ },
+ "T023": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "譯文語意正確、自然且禮貌。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T024": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T025": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「Em thấy trên Instagram」語意略不完整，宜補上「thấy」的受詞或改用「thấy có」使句意更完整自然",
+   "better": ""
+  }
+ },
+ "T026": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T027": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T029": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T028": {
+  "openai/gpt-5.6-terra": {
+   "severity": "major",
+   "issue": "漏譯「今天」，且對陌生店員用「em」未必得體。",
+   "better": "Dạ, tôi có đặt phòng trước dưới tên Trần Đại Văn, tôi ở hai đêm từ hôm nay ạ."
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ở hai đêm」略顯口語簡略，加上「hôm nay」及量詞「đêm」前補「2」或調整為「ở lại hai đêm」更自然完整",
+   "better": ""
+  }
+ },
+ "T030": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T031": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "語意正確、自然且禮貌。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T032": {
+  "openai/gpt-5.6-terra": {
+   "severity": "major",
+   "issue": "「em không cần dọn phòng」表示「我不需要打掃房間」，未表達「明天不需要幫我打掃房間」的拒絕客房清潔之意。",
+   "better": "Dạ, ngày mai không cần dọn phòng cho em đâu ạ, cảm ơn anh/chị."
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「dọn phòng đâu」語氣略帶反駁/強調否定，對店員稍顯不夠柔和；可改用「không cần dọn phòng ạ」更禮貌自然。",
+   "better": ""
+  }
+ },
+ "T033": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「ra sân bay」較像前往機場，未明確表達六點半必須抵達機場；其餘自然有禮。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「ra sân bay」較口語且未明確表達「要到/抵達」機場的時間要求，用「có mặt ở sân bay」更精確得體。",
+   "better": ""
+  }
+ },
+ "T034": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T035": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「em」預設說話者較年輕，原文未提供年齡或身分，改用「tôi」較中性通用。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「đồn công an」偏向地方派出所，外國旅客尋求護照協助通常應說「trụ sở công an」或「đồn cảnh sát」更通用自然；其餘語意正確、禮貌得體。",
+   "better": ""
+  }
+ },
+ "T036": {
+  "openai/gpt-5.6-terra": {
+   "severity": "major",
+   "issue": "「đầu em rất chóng mặt」不夠自然，應以「em bị chóng mặt」表達頭暈。",
+   "better": "Dạ, em bị chóng mặt nhiều, nhưng em không có tiền sử bệnh tim ạ."
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「đầu em rất chóng mặt」語意略冗贅，chóng mặt 本身已含頭暈，不需加 đầu；口語更自然是「em chóng mặt quá」或「em bị chóng mặt nặng」。",
+   "better": ""
+  }
+ },
+ "T037": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T038": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「tiêm」雖可理解，但醫療語境中「打青黴素」更自然的說法是「tiêm penicillin」或「chích penicillin」，整體語意正確且禮貌得體，僅屬風格微瑕。",
+   "better": ""
+  }
+ },
+ "T039": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "正確自然。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T040": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T041": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T042": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T043": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T044": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「chúng tôi」卻用「giúp tôi」人稱略不一致，屬輕微風格問題。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T045": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「làm phiền」語意偏負面，較自然的致謝說法應以「gây phiền」或「làm mất thời gian」搭配「ạ」結尾，更貼近禮貌口語。",
+   "better": ""
+  }
+ },
+ "T046": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "缺少禮貌助詞 dạ/ạ，對陌生人略顯不夠得體；句末語氣可更自然柔和。",
+   "better": "Anh/chị nói tiếng Trung giỏi thật đấy ạ, anh/chị học ở đâu vậy ạ?"
+  }
+ },
+ "T047": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T048": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「không cần đâu」語氣略顯生硬，對店員可改用更委婉的「không ạ」或「thôi ạ」；「xem thử」帶有「試看」之意，原文「看看而已」用「xem thôi」更貼切自然。",
+   "better": "Dạ thôi ạ, cảm ơn, em chỉ xem thôi ạ."
+  }
+ },
+ "T049": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "語意正確且自然，但對店員或陌生人可加上「Dạ」使語氣更禮貌。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「đến Osaka chơi」略顯生硬，口語中更自然的說法是用「đi du lịch」或調整語序讓語氣更流暢。",
+   "better": "Tôi đến từ Đài Loan, đây là lần đầu tiên tôi đến Osaka du lịch ạ."
+  }
+ },
+ "T050": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「sau này」較像「以後」，此處「之後」用「sau đó」更自然。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「sau này tôi sẽ liên lạc lại」稍顯生硬，「sau này」較偏「將來某天」，口語中多用「lát nữa」或「sau」；且「tôi」對店員/陌生人略顯疏離，可用「em/mình」更自然。",
+   "better": "Vậy thì làm phiền anh/chị nhé, lát nữa em sẽ liên lạc lại ạ."
+  }
+ }
+}

@@ -15,7 +15,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "저기요, 역이 어디에 있어요? 어떻게 가는 게 더 빨라요?",
-      "ref_vi": "Dạ cho em/cháu hỏi nhà ga ở đâu ạ? Đi đường nào thì nhanh hơn ạ?"
+      "ref_vi": "Dạ cho em/cháu hỏi nhà ga ở đâu ạ? Đi đường nào thì nhanh hơn ạ?",
+      "ref_th": "ขอโทษครับ สถานีอยู่ที่ไหนครับ ไปทางไหนถึงจะเร็วที่สุดครับ"
     },
     {
       "id": "T002",
@@ -33,7 +34,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "저기요, 시부야 스카이 입구가 이 건물에 있는 거예요?",
-      "ref_vi": "Dạ cho hỏi lối vào Shibuya Sky là ở tòa nhà này ạ?"
+      "ref_vi": "Dạ cho hỏi lối vào Shibuya Sky là ở tòa nhà này ạ?",
+      "ref_th": "ขอโทษครับ ทางเข้า Shibuya Sky อยู่ในตึกนี้ใช่ไหมครับ"
     },
     {
       "id": "T003",
@@ -50,7 +52,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "저는 공항에 가려는 게 아니고, 기차역에 가려는 거예요.",
-      "ref_vi": "Dạ em không đi sân bay, em muốn đi nhà ga xe lửa ạ."
+      "ref_vi": "Dạ em không đi sân bay, em muốn đi nhà ga xe lửa ạ.",
+      "ref_th": "ผมไม่ได้จะไปสนามบินนะครับ ผมจะไปสถานีรถไฟครับ"
     },
     {
       "id": "T004",
@@ -70,7 +73,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "여기서 걸어가면 몇 분쯯 걸려요? 15분 넘으면 택시 타고 싶어요.",
-      "ref_vi": "Dạ từ đây đi bộ qua đó mất khoảng mấy phút ạ? Nếu quá mười lăm phút thì em muốn đi taxi."
+      "ref_vi": "Dạ từ đây đi bộ qua đó mất khoảng mấy phút ạ? Nếu quá mười lăm phút thì em muốn đi taxi.",
+      "ref_th": "เดินจากที่นี่ไปประมาณกี่นาทีครับ ถ้าเกินสิบห้านาทีผมอยากจะนั่งแท็กซี่ครับ"
     },
     {
       "id": "T005",
@@ -87,7 +91,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "저기요, 센소지랑 스카이트리가 같은 방향이에요?",
-      "ref_vi": "Dạ cho hỏi chùa Sensoji với tháp Skytree có cùng hướng không ạ?"
+      "ref_vi": "Dạ cho hỏi chùa Sensoji với tháp Skytree có cùng hướng không ạ?",
+      "ref_th": "ขอโทษครับ วัดอาซากุสะกับโตเกียวสกายทรีอยู่ทางเดียวกันไหมครับ"
     },
     {
       "id": "T006",
@@ -102,7 +107,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "이 근처에 화장실 있어요? 제가 시간이 좀 급해요.",
-      "ref_vi": "Dạ gần đây có nhà vệ sinh không ạ? Em đang hơi gấp."
+      "ref_vi": "Dạ gần đây có nhà vệ sinh không ạ? Em đang hơi gấp.",
+      "ref_th": "แถวนี้มีห้องน้ำไหมครับ ผมกำลังรีบครับ"
     },
     {
       "id": "T007",
@@ -122,7 +128,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "교토 가는 표 두 장 주세요. 어른 한 장, 어린이 한 장이요.",
-      "ref_vi": "Dạ em muốn mua hai vé đi Kyoto, một vé người lớn và một vé trẻ em."
+      "ref_vi": "Dạ em muốn mua hai vé đi Kyoto, một vé người lớn và một vé trẻ em.",
+      "ref_th": "ขอตั๋วไปเกียวโตสองใบครับ ผู้ใหญ่หนึ่งใบ เด็กหนึ่งใบครับ"
     },
     {
       "id": "T008",
@@ -140,7 +147,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "이 열차 오사카까지 가는데, 교토에는 안 서겠죠?",
-      "ref_vi": "Dạ chuyến này có đến Osaka, nhưng chắc không dừng ở Kyoto đúng không ạ?"
+      "ref_vi": "Dạ chuyến này có đến Osaka, nhưng chắc không dừng ở Kyoto đúng không ạ?",
+      "ref_th": "รถไฟเที่ยวนี้ไปถึงโอซาก้าใช่ไหมครับ แต่ไม่จอดที่เกียวโตใช่ไหมครับ"
     },
     {
       "id": "T009",
@@ -155,7 +163,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "저기요, 이 자리에 누구 있어요?",
-      "ref_vi": "Dạ cho hỏi chỗ này có ai ngồi chưa ạ?"
+      "ref_vi": "Dạ cho hỏi chỗ này có ai ngồi chưa ạ?",
+      "ref_th": "ขอโทษครับ ที่นั่งนี้มีคนนั่งไหมครับ"
     },
     {
       "id": "T010",
@@ -175,7 +184,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "신주쿠로 가는 마지막 열차가 11시 45분이에요?",
-      "ref_vi": "Dạ chuyến tàu cuối về Shinjuku là mười một giờ bốn mươi lăm phải không ạ?"
+      "ref_vi": "Dạ chuyến tàu cuối về Shinjuku là mười một giờ bốn mươi lăm phải không ạ?",
+      "ref_th": "รถไฟเที่ยวสุดท้ายที่จะกลับไปชินจูกุคือเวลา 11:45 ใช่ไหมครับ"
     },
     {
       "id": "T011",
@@ -195,7 +205,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "IC카드에 1000엔 충전하고 싶은데요.",
-      "ref_vi": "Dạ, tôi muốn nạp tiền vào thẻ IC 1000 yên."
+      "ref_vi": "Dạ, tôi muốn nạp tiền vào thẻ IC 1000 yên.",
+      "ref_th": "อยากเติมเงินบัตร IC จำนวน 1,000 เยนค่ะ"
     },
     {
       "id": "T012",
@@ -213,7 +224,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "저기요, 이 열차가 요코하마 가는 거 맞는지 좀 봐주시겠어요?",
-      "ref_vi": "Dạ xin lỗi, anh/chị xem giúp tôi chuyến này có phải đi Yokohama không ạ?"
+      "ref_vi": "Dạ xin lỗi, anh/chị xem giúp tôi chuyến này có phải đi Yokohama không ạ?",
+      "ref_th": "ขอโทษนะคะ ช่วยดูให้หน่อยได้ไหมคะว่ารถไฟเที่ยวนี้ไปโยโกฮามะหรือเปล่าคะ"
     },
     {
       "id": "T013",
@@ -230,7 +242,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "방금 승강장에서 휴대폰을 잃어버렸어요.",
-      "ref_vi": "Tôi vừa mới làm mất điện thoại trên sân ga."
+      "ref_vi": "Tôi vừa mới làm mất điện thoại trên sân ga.",
+      "ref_th": "เมื่อกี้ทำโทรศัพท์มือถือหายที่ชานชาลาค่ะ"
     },
     {
       "id": "T014",
@@ -247,7 +260,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "이거 맵지 않게 해주세요. 매운 걸 잘 못 먹어서요.",
-      "ref_vi": "Cái này xin đừng cho cay, tôi không ăn cay được nhiều ạ."
+      "ref_vi": "Cái này xin đừng cho cay, tôi không ăn cay được nhiều ạ.",
+      "ref_th": "อันนี้ไม่เอาเผ็ดนะคะ ทานเผ็ดไม่ค่อยได้ค่ะ"
     },
     {
       "id": "T015",
@@ -267,7 +281,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "저희 총 다섯 명이고, 아이가 두 명 있어서 아기 의자가 필요해요.",
-      "ref_vi": "Chúng tôi tổng cộng 5 người, có 2 trẻ nhỏ, cần ghế ngồi cho trẻ em ạ."
+      "ref_vi": "Chúng tôi tổng cộng 5 người, có 2 trẻ nhỏ, cần ghế ngồi cho trẻ em ạ.",
+      "ref_th": "พวกเรามาทั้งหมด 5 คนค่ะ มีเด็ก 2 คน ต้องการเก้าอี้เด็กด้วยค่ะ"
     },
     {
       "id": "T016",
@@ -284,7 +299,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "새우 알레르기가 있어서 음식에 해산물은 넣지 말아주세요.",
-      "ref_vi": "Tôi bị dị ứng tôm, xin đừng cho hải sản vào món ăn ạ."
+      "ref_vi": "Tôi bị dị ứng tôm, xin đừng cho hải sản vào món ăn ạ.",
+      "ref_th": "ฉันแพ้กุ้งค่ะ รบกวนไม่ใส่อาหารทะเลใดๆในอาหารเลยนะคะ"
     },
     {
       "id": "T017",
@@ -304,7 +320,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "이거 얼음 넣지 말아주시고, 큰 사이즈는 중간 사이즈로 바꿔주세요. 총 세 잔이에요.",
-      "ref_vi": "Ly này xin đừng cho đá, rồi đổi cỡ lớn thành cỡ vừa, tổng cộng 3 ly ạ."
+      "ref_vi": "Ly này xin đừng cho đá, rồi đổi cỡ lớn thành cỡ vừa, tổng cộng 3 ly ạ.",
+      "ref_th": "แก้วนี้ไม่ใส่น้ำแข็งนะคะ แล้วขอเปลี่ยนจากไซส์ใหญ่เป็นไซส์กลาง รวมทั้งหมด 3 แก้วค่ะ"
     },
     {
       "id": "T018",
@@ -321,7 +338,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "돈코츠 라멘 하나 주세요, 면은 좀 딱딱하게 해주세요.",
-      "ref_vi": "Tôi muốn một phần ramen tonkotsu, mì làm cứng một chút ạ."
+      "ref_vi": "Tôi muốn một phần ramen tonkotsu, mì làm cứng một chút ạ.",
+      "ref_th": "ขอราเมงทงคตสึหนึ่งที่ค่ะ ขอเส้นแข็งหน่อยนะคะ"
     },
     {
       "id": "T019",
@@ -338,7 +356,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "이 음식 맛있어 보이는데, 제가 이미 배가 불러서요.",
-      "ref_vi": "Món này nhìn ngon quá, nhưng tôi no rồi."
+      "ref_vi": "Món này nhìn ngon quá, nhưng tôi no rồi.",
+      "ref_th": "เมนูนี้ดูน่ากินมากเลยค่ะ แต่ว่าฉันอิ่มแล้วค่ะ"
     },
     {
       "id": "T020",
@@ -355,7 +374,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "저희 계산 따로따로 해주실 수 있을까요?",
-      "ref_vi": "Xin hỏi có thể tính tiền riêng cho chúng tôi được không ạ?"
+      "ref_vi": "Xin hỏi có thể tính tiền riêng cho chúng tôi được không ạ?",
+      "ref_th": "ขอโทษนะคะ ช่วยแยกบิลให้พวกเราได้ไหมคะ"
     },
     {
       "id": "T021",
@@ -375,7 +395,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "이거는 아니고, 옆에 있는 파란색이요. 두 개에 얼마예요?",
-      "ref_vi": "Dạ cái này không lấy, cho em cái màu xanh bên cạnh, hai cái giá bao nhiêu ạ?"
+      "ref_vi": "Dạ cái này không lấy, cho em cái màu xanh bên cạnh, hai cái giá bao nhiêu ạ?",
+      "ref_th": "อันนี้ไม่เอาค่ะ เอาอันสีฟ้าที่อยู่ข้างๆนี่ดีกว่าค่ะ สองอันราคาเท่าไหร่คะ"
     },
     {
       "id": "T022",
@@ -394,7 +415,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "너무 비싸요. 3000원에 해 주시면 안 돼요?",
-      "ref_vi": "Đắt quá, tính em 3000 được không ạ?"
+      "ref_vi": "Đắt quá, tính em 3000 được không ạ?",
+      "ref_th": "แพงไปหน่อยค่ะ คิดให้หน่อยเป็นสามพันบาทได้ไหมคะ"
     },
     {
       "id": "T023",
@@ -411,7 +433,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "이 가격이 세금 포함인가요, 아니면 세금 별도인가요?",
-      "ref_vi": "Cho em hỏi giá này đã bao gồm thuế chưa ạ?"
+      "ref_vi": "Cho em hỏi giá này đã bao gồm thuế chưa ạ?",
+      "ref_th": "ขอถามหน่อยค่ะ ราคานี้รวมภาษีหรือยังไม่รวมภาษีคะ"
     },
     {
       "id": "T024",
@@ -431,7 +454,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "이거 20% 세일해 주시면 두 개 살게요.",
-      "ref_vi": "Nếu cái này được giảm 20% thì em mua hai cái ạ."
+      "ref_vi": "Nếu cái này được giảm 20% thì em mua hai cái ạ.",
+      "ref_th": "ถ้าตัวนี้ลดยี่สิบเปอร์เซ็นต์ จะซื้อสองตัวเลยค่ะ"
     },
     {
       "id": "T025",
@@ -448,7 +472,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "리미티드 에디션 있어요? 인스타그램에서 봤어요.",
-      "ref_vi": "Có mẫu limited edition không ạ? Em thấy trên Instagram."
+      "ref_vi": "Có mẫu limited edition không ạ? Em thấy trên Instagram.",
+      "ref_th": "มีรุ่นลิมิเต็ดเอดิชั่นไหมคะ เห็นในอินสตาแกรมค่ะ"
     },
     {
       "id": "T026",
@@ -466,7 +491,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "생각해 봤는데, 이건 일단 안 살게요.",
-      "ref_vi": "Em suy nghĩ lại rồi, cái này thôi để lúc khác em mua ạ."
+      "ref_vi": "Em suy nghĩ lại rồi, cái này thôi để lúc khác em mua ạ.",
+      "ref_th": "ขอคิดดูก่อนนะคะ อันนี้ยังไม่ซื้อดีกว่าค่ะ"
     },
     {
       "id": "T027",
@@ -485,7 +511,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "세금 환급 되나요? 총 5000엔 넘게 샀어요.",
-      "ref_vi": "Cho em hỏi có được hoàn thuế không ạ? Em mua tổng cộng hơn 5000 yên rồi."
+      "ref_vi": "Cho em hỏi có được hoàn thuế không ạ? Em mua tổng cộng hơn 5000 yên rồi.",
+      "ref_th": "ขอคืนภาษีได้ไหมคะ ซื้อรวมกันเกินห้าพันเยนแล้วค่ะ"
     },
     {
       "id": "T028",
@@ -505,7 +532,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "예약했는데요, 이름은 천다원이에요. 오늘부터 2박이에요.",
-      "ref_vi": "Em có đặt phòng rồi, tên là Trần Đại Văn, ở hai đêm."
+      "ref_vi": "Em có đặt phòng rồi, tên là Trần Đại Văn, ở hai đêm.",
+      "ref_th": "จองห้องไว้แล้วค่ะ ชื่อเฉินต้าเหวิน พักสองคืนค่ะ"
     },
     {
       "id": "T029",
@@ -522,7 +550,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "예약을 안 했는데요, 오늘 밤에 빈 방 있어요?",
-      "ref_vi": "Em chưa đặt phòng, cho em hỏi tối nay còn phòng trống không ạ?"
+      "ref_vi": "Em chưa đặt phòng, cho em hỏi tối nay còn phòng trống không ạ?",
+      "ref_th": "ไม่ได้จองห้องไว้ค่ะ คืนนี้ยังมีห้องว่างไหมคะ"
     },
     {
       "id": "T030",
@@ -542,7 +571,8 @@
         "min_len_ratio": 0.5
       },
       "ref_ko": "체크아웃 시간이 오전 10시예요, 아니면 11시예요?",
-      "ref_vi": "Cho em hỏi giờ trả phòng là 10 giờ sáng hay 11 giờ ạ?"
+      "ref_vi": "Cho em hỏi giờ trả phòng là 10 giờ sáng hay 11 giờ ạ?",
+      "ref_th": "ขอถามหน่อยค่ะ เวลาเช็คเอาท์คือสิบโมงเช้าหรือสิบเอ็ดโมงคะ"
     },
     {
       "id": "T031",
@@ -558,7 +588,9 @@
         "negation": false,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "방 에어컨이 고장난 것 같은데요, 사람을 보내서 좀 봐 주실 수 있나요?"
+      "ref_ko": "방 에어컨이 고장난 것 같은데요, 사람을 보내서 좀 봐 주실 수 있나요?",
+      "ref_vi": "Dạ, máy lạnh trong phòng em hình như bị hỏng rồi, anh/chị có thể cho người đến xem giúp em được không?",
+      "ref_th": "แอร์ในห้องดูเหมือนจะเสีย ขอให้คนมาดูให้หน่อยได้ไหมคะ"
     },
     {
       "id": "T032",
@@ -574,7 +606,9 @@
         "negation": true,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "내일은 방 청소 안 해주셔도 돼요. 감사합니다."
+      "ref_ko": "내일은 방 청소 안 해주셔도 돼요. 감사합니다.",
+      "ref_vi": "Dạ ngày mai em không cần dọn phòng đâu, cảm ơn anh/chị.",
+      "ref_th": "พรุ่งนี้ไม่ต้องทำความสะอาดห้องนะคะ ขอบคุณค่ะ"
     },
     {
       "id": "T033",
@@ -592,7 +626,9 @@
         "negation": false,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "택시 한 대 불러 주실 수 있나요? 내일 아침 6시 반에 공항에 가야 해요."
+      "ref_ko": "택시 한 대 불러 주실 수 있나요? 내일 아침 6시 반에 공항에 가야 해요.",
+      "ref_vi": "Anh/chị có thể gọi giúp em một chiếc taxi được không? Sáu giờ rưỡi sáng mai em cần ra sân bay.",
+      "ref_th": "ช่วยเรียกแท็กซี่ให้หน่อยได้ไหมคะ พรุ่งนี้เช้าหกโมงครึ่งต้องไปสนามบินค่ะ"
     },
     {
       "id": "T034",
@@ -606,7 +642,9 @@
         "negation": false,
         "min_len_ratio": 0.4
       },
-      "ref_ko": "살려주세요! 구급차 좀 불러 주세요!"
+      "ref_ko": "살려주세요! 구급차 좀 불러 주세요!",
+      "ref_vi": "Cứu tôi! Làm ơn gọi xe cấp cứu giúp tôi!",
+      "ref_th": "ช่วยด้วยค่ะ! ช่วยเรียกรถพยาบาลให้ด้วยค่ะ"
     },
     {
       "id": "T035",
@@ -622,7 +660,9 @@
         "negation": false,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "제 여권을 잃어버렸는데요, 경찰서가 어디에 있나요?"
+      "ref_ko": "제 여권을 잃어버렸는데요, 경찰서가 어디에 있나요?",
+      "ref_vi": "Dạ, hộ chiếu của em bị mất rồi, cho em hỏi đồn công an ở đâu vậy?",
+      "ref_th": "หนังสือเดินทางของฉันหายค่ะ ขอถามหน่อยค่ะ สถานีตำรวจอยู่ที่ไหนคะ"
     },
     {
       "id": "T036",
@@ -638,7 +678,9 @@
         "negation": true,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "머리가 많이 어지러운데요, 심장병 병력은 없어요."
+      "ref_ko": "머리가 많이 어지러운데요, 심장병 병력은 없어요.",
+      "ref_vi": "Dạ đầu em rất chóng mặt, nhưng em không có tiền sử bệnh tim.",
+      "ref_th": "ฉันรู้สึกเวียนหัวมาก แต่ไม่มีประวัติเป็นโรคหัวใจค่ะ"
     },
     {
       "id": "T037",
@@ -656,7 +698,9 @@
         "negation": false,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "제 방 번호는 702호인데요, 제 친구가 쓰러졌어요."
+      "ref_ko": "제 방 번호는 702호인데요, 제 친구가 쓰러졌어요.",
+      "ref_vi": "Dạ, phòng của em là số 702, bạn em bị ngất xỉu rồi.",
+      "ref_th": "ห้องของฉันหมายเลขเจ็ดศูนย์สอง เพื่อนของฉันหมดสติค่ะ"
     },
     {
       "id": "T038",
@@ -672,7 +716,9 @@
         "negation": true,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "저는 페니실린을 맞으면 안 돼요, 알레르기가 있어요."
+      "ref_ko": "저는 페니실린을 맞으면 안 돼요, 알레르기가 있어요.",
+      "ref_vi": "Em không thể tiêm penicillin được, em bị dị ứng.",
+      "ref_th": "ฉันฉีดเพนิซิลลินไม่ได้ ฉันแพ้ค่ะ"
     },
     {
       "id": "T039",
@@ -691,7 +737,9 @@
         "negation": false,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "내일 오후 3시로 예약하고 싶은데요, 어른 두 명이에요."
+      "ref_ko": "내일 오후 3시로 예약하고 싶은데요, 어른 두 명이에요.",
+      "ref_vi": "Dạ em muốn đặt lịch lúc ba giờ chiều mai, cho hai người lớn.",
+      "ref_th": "ฉันอยากจองพรุ่งนี้บ่ายสามโมง ผู้ใหญ่สองคนค่ะ"
     },
     {
       "id": "T040",
@@ -707,7 +755,9 @@
         "negation": true,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "저기요, 예약을 금요일에서 토요일로 바꾸고 싶은데요, 취소하는 게 아니에요."
+      "ref_ko": "저기요, 예약을 금요일에서 토요일로 바꾸고 싶은데요, 취소하는 게 아니에요.",
+      "ref_vi": "Dạ xin lỗi, em muốn đổi lịch hẹn từ thứ Sáu sang thứ Bảy, không phải là hủy đâu.",
+      "ref_th": "ขอโทษนะคะ ฉันอยากเปลี่ยนนัดจากวันศุกร์เป็นวันเสาร์ ไม่ได้ยกเลิกค่ะ"
     },
     {
       "id": "T041",
@@ -727,7 +777,9 @@
         "negation": true,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "3시에 자리가 없으면, 4시도 괜찮아요."
+      "ref_ko": "3시에 자리가 없으면, 4시도 괜찮아요.",
+      "ref_vi": "Nếu 3 giờ không có chỗ thì 4 giờ cũng được ạ.",
+      "ref_th": "ถ้าบ่ายสามโมงไม่มีที่นั่ง สี่โมงก็ได้ครับ"
     },
     {
       "id": "T042",
@@ -747,7 +799,9 @@
         "negation": false,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "이메일로 예약 확인할 수 있을까요? 제 항공편은 BR198이에요."
+      "ref_ko": "이메일로 예약 확인할 수 있을까요? 제 항공편은 BR198이에요.",
+      "ref_vi": "Dạ, tôi có thể xác nhận đặt chỗ qua email được không? Chuyến bay của tôi là BR198.",
+      "ref_th": "ผมขอยืนยันการจองทางอีเมลได้ไหมครับ เที่ยวบินของผมคือ BR198 ครับ"
     },
     {
       "id": "T043",
@@ -764,7 +818,9 @@
         "negation": true,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "취소 수수료 없이 몇 시까지 취소할 수 있나요?"
+      "ref_ko": "취소 수수료 없이 몇 시까지 취소할 수 있나요?",
+      "ref_vi": "Dạ cho tôi hỏi, muộn nhất là mấy giờ thì có thể hủy mà không phải trả phí hủy ạ?",
+      "ref_th": "ขอถามหน่อยครับ ยกเลิกได้ช้าสุดถึงกี่โมงโดยไม่ต้องเสียค่ายกเลิกครับ"
     },
     {
       "id": "T044",
@@ -782,7 +838,9 @@
         "negation": false,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "저희가 30분 늦게 도착할 것 같은데, 자리 좀 맡아 주실 수 있을까요?"
+      "ref_ko": "저희가 30분 늦게 도착할 것 같은데, 자리 좀 맡아 주실 수 있을까요?",
+      "ref_vi": "Chúng tôi sẽ đến muộn 30 phút, có thể giữ chỗ giúp tôi được không ạ?",
+      "ref_th": "เราจะไปถึงช้าสามสิบนาทีครับ ช่วยเก็บที่นั่งไว้ให้ได้ไหมครับ"
     },
     {
       "id": "T045",
@@ -798,7 +856,9 @@
         "negation": false,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "도와주셔서 감사해요, 오늘 정말 신세 많이 졌어요."
+      "ref_ko": "도와주셔서 감사해요, 오늘 정말 신세 많이 졌어요.",
+      "ref_vi": "Cảm ơn anh/chị đã giúp đỡ, hôm nay thật sự làm phiền anh/chị quá.",
+      "ref_th": "ขอบคุณสำหรับความช่วยเหลือครับ วันนี้รบกวนคุณมากเลยครับ"
     },
     {
       "id": "T046",
@@ -812,7 +872,9 @@
         "negation": false,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "중국어 정말 잘하시네요, 어디서 배우셨어요?"
+      "ref_ko": "중국어 정말 잘하시네요, 어디서 배우셨어요?",
+      "ref_vi": "Anh/chị nói tiếng Trung giỏi thật đấy, học ở đâu vậy?",
+      "ref_th": "คุณพูดภาษาจีนเก่งมากเลยครับ ไปเรียนมาจากที่ไหนครับ"
     },
     {
       "id": "T047",
@@ -829,7 +891,9 @@
         "negation": false,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "일본 여름도 더운데, 타이베이가 더 더운 것 같아요."
+      "ref_ko": "일본 여름도 더운데, 타이베이가 더 더운 것 같아요.",
+      "ref_vi": "Mùa hè ở Nhật nóng lắm, nhưng tôi thấy Đài Bắc còn nóng hơn.",
+      "ref_th": "ฤดูร้อนที่ญี่ปุ่นร้อนมากครับ แต่ผมรู้สึกว่าไทเปร้อนกว่าอีกครับ"
     },
     {
       "id": "T048",
@@ -845,7 +909,9 @@
         "negation": true,
         "min_len_ratio": 0.4
       },
-      "ref_ko": "아니요, 괜찮아요, 그냥 구경하는 거예요."
+      "ref_ko": "아니요, 괜찮아요, 그냥 구경하는 거예요.",
+      "ref_vi": "Dạ không cần đâu, cảm ơn, tôi chỉ xem thử thôi.",
+      "ref_th": "ไม่เป็นไรครับ ขอบคุณครับ ผมแค่ดูเฉยๆครับ"
     },
     {
       "id": "T049",
@@ -861,7 +927,9 @@
         "negation": false,
         "min_len_ratio": 0.5
       },
-      "ref_ko": "저는 대만에서 왔어요, 오사카는 이번이 처음이에요."
+      "ref_ko": "저는 대만에서 왔어요, 오사카는 이번이 처음이에요.",
+      "ref_vi": "Tôi đến từ Đài Loan, đây là lần đầu tôi đến Osaka chơi.",
+      "ref_th": "ผมมาจากไต้หวันครับ มาเที่ยวโอซาก้าครั้งแรกครับ"
     },
     {
       "id": "T050",
@@ -877,7 +945,9 @@
         "negation": false,
         "min_len_ratio": 0.4
       },
-      "ref_ko": "그럼 부탁드릴게요, 나중에 다시 연락드릴게요."
+      "ref_ko": "그럼 부탁드릴게요, 나중에 다시 연락드릴게요.",
+      "ref_vi": "Vậy thì làm phiền anh/chị nhé, sau này tôi sẽ liên lạc lại.",
+      "ref_th": "ถ้าอย่างนั้นก็รบกวนด้วยนะครับ แล้วจะติดต่อกลับไปอีกทีครับ"
     }
   ]
 }
