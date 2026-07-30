@@ -186,6 +186,22 @@ async function runUtteranceInner({ side, ui }) {
   ui.status("按住說話", false);
   refreshUsage();
 }
+// PCM16 chunks(base64)→ WAV Blob URL(重播用;<audio> 在行動瀏覽器最穩)
+function pcmToWavUrl(b64chunks, sampleRate) {
+  const bufs = b64chunks.map((a) => Uint8Array.from(atob(a), (c) => c.charCodeAt(0)));
+  const total = bufs.reduce((s, b) => s + b.length, 0);
+  const wav = new Uint8Array(44 + total);
+  const dv = new DataView(wav.buffer);
+  const wstr = (o, s) => { for (let i = 0; i < s.length; i++) wav[o + i] = s.charCodeAt(i); };
+  wstr(0, "RIFF"); dv.setUint32(4, 36 + total, true); wstr(8, "WAVE");
+  wstr(12, "fmt "); dv.setUint32(16, 16, true); dv.setUint16(20, 1, true); dv.setUint16(22, 1, true);
+  dv.setUint32(24, sampleRate, true); dv.setUint32(28, sampleRate * 2, true);
+  dv.setUint16(32, 2, true); dv.setUint16(34, 16, true);
+  wstr(36, "data"); dv.setUint32(40, total, true);
+  let o = 44; for (const b of bufs) { wav.set(b, o); o += b.length; }
+  return URL.createObjectURL(new Blob([wav], { type: "audio/wav" }));
+}
+
 function concatBytes(arrs) {
   const total = arrs.reduce((a, b) => a + b.length, 0);
   const out = new Uint8Array(total);
@@ -222,22 +238,27 @@ const chatUI = {
     el.host.scrollIntoView({ block: "end" });
   },
   replay(el, audioB64) {
+    // 走 <audio> + WAV Blob:繞開 WebAudio(audioCtx.resume() 在部分 Android 會永不 resolve)
     const b = document.createElement("button");
     b.className = "badge ok"; b.textContent = "🔊 重播";
+    let wavUrl = null, playing = false;
     b.addEventListener("click", async () => {
-      if (S.busy) return;
-      S.busy = true; setPtt(true);
+      if (playing || S.busy) return;
+      playing = true; S.busy = true; setPtt(true);
+      $("status").textContent = "🔊 重播中";
       try {
-        await ensureAudio(); // 手機閒置後 AudioContext 會被 suspend,點擊是合法手勢可 resume
-        $("status").textContent = "🔊 重播中";
-        playQ.scheduled = Math.max(playQ.scheduled, audioCtx.currentTime); // 過期排程歸位
-        for (const a of audioB64) enqueuePcm(a);
-        await sleep(playbackRemaining() + 150);
-      } catch (e) { console.warn("replay failed", e); $("status").textContent = "重播失敗"; }
+        if (!wavUrl) wavUrl = pcmToWavUrl(audioB64, 24000);
+        const a = new Audio(wavUrl);
+        await a.play();
+        await new Promise((res) => {
+          a.addEventListener("ended", res, { once: true });
+          a.addEventListener("error", res, { once: true });
+          setTimeout(res, 30000); // 保險絲:無論如何 30s 內解鎖
+        });
+      } catch (e) { console.warn("replay failed", e); }
       finally {
-        playQ.playing = false;
-        S.busy = false; setPtt(false);
-        if ($("status").textContent === "🔊 重播中") $("status").textContent = "按住說話";
+        playing = false; S.busy = false; setPtt(false);
+        $("status").textContent = "按住說話";
       }
     });
     el.host.querySelector(".rowmeta").prepend(b);
