@@ -175,7 +175,7 @@ export class RelaySession {
     upstream.addEventListener("close", (ev) => { stats.upstreamCloseCode = ev.code; stats.upstreamCloseReason = String(ev.reason || "").slice(0, 200); finish("upstream-closed"); });
     upstream.addEventListener("error", () => finish("upstream-error"));
 
-    client.addEventListener("message", (ev) => {
+    client.addEventListener("message", async (ev) => {
       if (typeof ev.data === "string") {
         try {
           const m = JSON.parse(ev.data);
@@ -184,9 +184,23 @@ export class RelaySession {
         } catch {}
         return;
       }
-      // 二進位 = 16kHz PCM16 100ms 框
-      const bytes = new Uint8Array(ev.data);
-      if (bytes.length > 12800) return; // 400ms 以上的框丟棄(防灌爆)
+      // 二進位 = 16kHz PCM16 100ms 框。
+      // 注意:new Uint8Array(非 ArrayBuffer) 會「靜默」得到長度 0(framesIn 41/bytesIn 0 的根因嫌疑)
+      // → 對每種可能型別顯式轉換,並記錄第一框的實際型別/長度。
+      let bytes;
+      const d = ev.data;
+      try {
+        if (d instanceof ArrayBuffer) bytes = new Uint8Array(d);
+        else if (ArrayBuffer.isView(d)) bytes = new Uint8Array(d.buffer, d.byteOffset, d.byteLength);
+        else if (d && typeof d.arrayBuffer === "function") bytes = new Uint8Array(await d.arrayBuffer());
+        else { stats.badFrames = (stats.badFrames || 0) + 1; return; }
+      } catch { stats.badFrames = (stats.badFrames || 0) + 1; return; }
+      if (stats.firstFrameType === undefined) {
+        stats.firstFrameType = Object.prototype.toString.call(d);
+        stats.firstFrameBytes = bytes.length;
+        saveStats();
+      }
+      if (bytes.length === 0 || bytes.length > 12800) { stats.badFrames = (stats.badFrames || 0) + 1; return; }
       stats.framesIn++; stats.bytesIn += bytes.length;
       upstream.send(JSON.stringify({ realtimeInput: { audio: { data: b64(bytes), mimeType: "audio/pcm;rate=16000" } } }));
     });
