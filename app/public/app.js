@@ -213,6 +213,15 @@ function b64enc(bytes) {
   return btoa(s);
 }
 
+/* ============ PTT 鎖定(全 UI 共用;之前漏移植導致 ReferenceError 卡死) ============ */
+function setPtt(disabled) {
+  const set = (id, v) => { const b = $(id); if (b) b.disabled = v; };
+  set("pttMe", disabled);
+  set("pttThem", disabled || S.test);
+  set("fpttMine", disabled);
+  set("fpttOther", disabled || S.test);
+}
+
 /* ============ 對談 UI ============ */
 const chatUI = {
   begin({ side }) {
@@ -275,7 +284,7 @@ const chatUI = {
     el.host.querySelector(".rowmeta").appendChild(b);
     if (S.fast) b.click(); // 快速模式強制展開
   },
-  status(html, busy) { $("status").innerHTML = html; $("pttMe").disabled = busy; $("pttThem").disabled = busy || S.test; },
+  status(html, busy) { $("status").innerHTML = html; setPtt(busy); },
 };
 
 /* ============ 面對面 UI(同級字、氣泡配色) ============ */
@@ -307,9 +316,9 @@ function faceUI(half) {
 function bindPtt(btn, side, ui) {
   btn.addEventListener("pointerdown", (e) => {
     e.preventDefault();
-    if (S.busy) return;
+    if (S.busy) { $("status").textContent = "稍等一下,上一句還在處理"; return; } // 不再靜默
     btn.classList.add("holding");
-    btn.setPointerCapture?.(e.pointerId);
+    try { btn.setPointerCapture?.(e.pointerId); } catch { /* 快速點放時 pointer 可能已失效,不阻斷整句 */ }
     runUtterance({ side, ui }).finally(() => btn.classList.remove("holding"));
   });
   const release = () => window.__pttRelease?.();
