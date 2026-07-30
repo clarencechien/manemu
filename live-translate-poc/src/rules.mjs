@@ -47,6 +47,8 @@ export function checkNumbers(expected, outputText) {
 const NEG_PATTERNS = {
   ja: /(ない|ありません|ません|なし|抜き|いりません|結構です|やめて|やめと|しないで|なくて|なければ|じゃなくて|ではなく|ではありません|無し|禁止|だめ|ダメ|できません|かからない|税抜)/,
   ko: /(안 |않|못 |못해|없|없어|없습니다|말고|마세요|마시|빼 |빼고|빼주|아니|아닙니다|아니에요|금지|말아)/,
+  vi: /(không|đừng|chưa|khỏi|miễn|cấm|thôi|chẳng)/i,
+  th: /(ไม่|อย่า|ห้าม|งด|เปล่า)/,
   en: /\b(not|no|don't|doesn't|didn't|won't|can't|cannot|isn't|aren't|wasn't|never|without|none|nothing|instead of|rather than|pass on)\b/i,
   "zh-Hant": /(不|沒|別|勿|免|無)/,
 };
