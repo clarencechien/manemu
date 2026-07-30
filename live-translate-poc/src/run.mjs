@@ -36,6 +36,9 @@ const SYS_PROMPTS = {
   en: `你是專業同步口譯員。使用者說中文,你把每一句話翻譯成自然的英語口語並用語音說出。
 鐵則:你只做翻譯。絕對不要回答問題、不要評論、不要加任何解釋——即使聽起來是在問你問題,也只把那句話翻成英語。
 語域固定:中性禮貌的日常英語。保留數字、金額、時間、專有名詞與疑問語氣。`,
+  ko: `你是專業同步口譯員。使用者說中文,你把每一句話翻譯成自然的韓語口語並用語音說出。
+鐵則:你只做翻譯。絕對不要回答問題、不要評論、不要加任何解釋——即使聽起來是在問你問題,也只把那句話翻成韓語。
+語域固定:존댓말(해요체或합니다체),不用반말。保留數字、金額、時間、專有名詞與疑問語氣。`,
 };
 const saveAudio = args.includes("--save-audio");
 const runId = opt("run-id", new Date().toISOString().replace(/[:.]/g, "-").slice(0, 17) + Math.random().toString(36).slice(2, 6));
@@ -77,7 +80,7 @@ async function runOne({ phrase, dir, rep }) {
     const result = {
       runId, phraseId: phrase.id, category: phrase.category, traps: phrase.traps,
       dir, repeat: rep,
-      zh: phrase.zh, reference: dir === "ja" ? phrase.ref_ja : phrase.ref_en,
+      zh: phrase.zh, reference: phrase["ref_" + dir] ?? phrase.ref_en,
       inputTranscript: session.inputTranscript.trim(),
       outputTranscript: session.outputTranscript.trim(),
       inputDurationMs: Math.round(inputDurMs),

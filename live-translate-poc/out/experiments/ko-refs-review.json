@@ -1,0 +1,602 @@
+{
+ "T002": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「저기요」用於呼喚陌生人雖可接受，但口譯場景中略顯隨意，且「있는 거예요?」語氣偏確認已知資訊，與原話「請問」的詢問語氣稍有落差。",
+   "better": ""
+  }
+ },
+ "T004": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「몇 분쯯」有明顯拼寫錯誤，應為「몇 분쯤」。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「몇 분쯯」應為「몇 분쯤」，屬拼寫小誤；其餘語意正確且自然。",
+   "better": ""
+  }
+ },
+ "T001": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "어떻게 가는 게 더 빨라요?는 직역 투로, 한국어에서는 '어떻게 가야 빨라요?' 또는 '어떻게 가야 더 빨리 갈 수 있어요?'가 더 자연스럽다.",
+   "better": ""
+  }
+ },
+ "T003": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T005": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「저기요」作為對陌生人問路的開場白略顯突兀，用「실례합니다」更自然禮貌；「스카이트리」雖可理解，但韓語常用外來語表記為「스카이 트리」或「도쿄 스카이 트리」。",
+   "better": ""
+  }
+ },
+ "T007": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T006": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "\"제가 시간이 좀 급해요\"는 뜻은 통하지만 약간 어색하며 보통 \"시간이 없어서요/급해서요\"라고 합니다.",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T008": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "'안 서겠죠?'는 자연스럽지만, '이 열차'보다 '이 열차는'이 주제 표지로 더 자연스러우며, '오사카까지 가는데'도 '오사카까지는 가는데'으로 대비를 명확히 하면 더 좋음.",
+   "better": ""
+  }
+ },
+ "T009": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "語意正確且自然，但「저기요」略口語，未明確使用更禮貌的敬語形式。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "major",
+   "issue": "「누구 있어요」語意錯誤，原意是詢問座位是否已有人佔用，而非「這裡有誰在」；且缺少對聽者的禮貌呼喚與更自然的敬語表達。",
+   "better": "저기요, 이 자리 비어 있나요?"
+  }
+ },
+ "T010": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T011": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "문법적으로는 맞으나 '충전하고 싶은데요'보다 '충전해 주세요'가 요청 표현으로 더 자연스러움",
+   "better": "IC카드에 1000엔 충전해 주세요."
+  }
+ },
+ "T012": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "'열차'는 기차에 해당하며, '這班車'가 버스일 경우 '버스'가 더 적절할 수 있음. 다만 문맥상 기차일 수도 있으므로 경미한 문제.",
+   "better": ""
+  }
+ },
+ "T013": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T015": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "아기 의자보다 유아용 의자나 어린이 의자가 더 자연스러움",
+   "better": ""
+  }
+ },
+ "T014": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "語意正確且為自然敬語。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T016": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「넣지 말아주세요」語感稍顯生硬，口語中更自然的說法是「넣지 말아 주세요」或「빼 주세요」。",
+   "better": ""
+  }
+ },
+ "T017": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「이거」略顯口語且指代模糊，原文「這杯」更明確；「총 세 잔이에요」語氣稍弱，可改為更自然的確認語氣。",
+   "better": ""
+  }
+ },
+ "T019": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "이미 略顯生硬，口語中更常用 벌써 或 이미 搭配更自然的結尾；整體語意正確且為존댓말，屬風格小疵。",
+   "better": "이 음식 맛있어 보이는데, 벌써 배가 불러서요."
+  }
+ },
+ "T020": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T018": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「면은 좀 딱딱하게」는 의미는 통하지만 라멘 면의 익힘 정도에는 보통 「꼬들꼬들하게」라고 하는 것이 더 자연스럽습니다.",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "면은 좀 딱딱하게 해주세요 略顯口語且不夠精煉，更自然的說法是用 '면은硬め로' 或 '면은 조금 단단하게'，但整體語意正確、敬語使用得當。",
+   "better": ""
+  }
+ },
+ "T021": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「이거는 아니고」語感稍顯生硬，購物情境中更自然的說法是「이건 말고」",
+   "better": ""
+  }
+ },
+ "T022": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "major",
+   "issue": "원문의 '三千塊'는 대만 달러(TWD) 또는 중국 위안(CNY)을 의미할 가능성이 높으나, '3000원'으로 번역하면 한국 원화(KRW)로 오인되어 금액의 의미가 크게 달라짐.",
+   "better": "너무 비싸요. 3000위안에 해 주시면 안 될까요?"
+  }
+ },
+ "T023": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T024": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「20% 세일해 주시면」보다 「20% 할인해 주시면」이 더 자연스럽습니다.",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "세일해 주시면 略顯口語且不夠精確，更自然的說法是用 할인해 주시면",
+   "better": ""
+  }
+ },
+ "T025": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "의미는 정확하지만 여행 통역용 존댓말로는 조금 덜 공손합니다.",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "리미티드 에디션은 한국어에서 '한정판'으로 더 자연스럽게 표현되며, '인스타그램에서 봤어요'는 문맥상 '인스타그램에서 본 게 있어요'처럼 목적을 명시하는 편이 더 자연스럽다.",
+   "better": ""
+  }
+ },
+ "T026": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T027": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "의미는 정확하지만 여행 상황의 존댓말로는 조금 덜 자연스럽습니다.",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "'세금 환급 되나요?'는 약간 어색한 표현으로, '세금 환급이 되나요?' 또는 '세금 환급 받을 수 있나요?'가 더 자연스럽다.",
+   "better": ""
+  }
+ },
+ "T028": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「오늘부터 2박이에요」略顯口語且不夠精確，「2박」後宜加「할 거예요」或「머무를 거예요」使語意更完整自然",
+   "better": ""
+  }
+ },
+ "T029": {
+  "openai/gpt-5.6-terra": {
+   "severity": "major",
+   "issue": "‘있어요?’는 존댓말이지만 여행 상황의 정중한 문의로는 다소 캐주얼하며, ‘빈 방’보다 ‘빈 객실’과 ‘남아 있나요?’가 더 자연스럽습니다.",
+   "better": "예약을 하지 않았는데요, 오늘 밤에 빈 객실이 남아 있나요?"
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "빈 방 있어요? 略顯口語，旅行口譯場景建議用更禮貌的 빈 방이 있을까요? 或 빈 방이 있습니까?",
+   "better": ""
+  }
+ },
+ "T030": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T031": {
+  "openai/gpt-5.6-terra": {
+   "severity": "minor",
+   "issue": "「고장난」的空格與「사람을 보내서」略顯生硬，但語意正確且為敬語。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "'고장난 것 같은데요'는 자연스러우나, '사람을 보내서 좀 봐 주실 수 있나요?'는 호텔 상황에서는 '직원분을 보내 주실 수 있나요?' 또는 '기술자를 불러 주실 수 있나요?'가 더 정중하고 자연스러움.",
+   "better": ""
+  }
+ },
+ "T032": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "안 해주셔도 돼요 略顯口語，旅行口譯場景中稍欠禮貌感",
+   "better": ""
+  }
+ },
+ "T033": {
+  "openai/gpt-5.6-terra": {
+   "severity": "major",
+   "issue": "「공항에 가야 해요」는 공항에 6시 반까지 도착해야 한다는 의미를 충분히 전달하지 못합니다.",
+   "better": "택시 한 대 불러 주실 수 있나요? 내일 아침 6시 반까지 공항에 도착해야 해요."
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T034": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T035": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T036": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T037": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T038": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "major",
+   "issue": "使用了반말形式'안 돼요'和'있어요'应为更正式的존댓말，且表达不够自然流畅",
+   "better": "저는 페니실린을 맞으면 안 됩니다. 알레르기가 있거든요."
+  }
+ },
+ "T039": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T040": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「저기요」作為服務場合開頭略顯隨意，且「취소하는 게 아니에요」語氣稍帶辯解感，可更簡潔自然。",
+   "better": ""
+  }
+ },
+ "T041": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T042": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T043": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T044": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T045": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T046": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T047": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "원문의 '很熱' 강조가 '더운데'로 약화되었고, '不過'의 대조 뉘앙스가 충분히 반영되지 않음",
+   "better": ""
+  }
+ },
+ "T048": {
+  "openai/gpt-5.6-terra": {
+   "severity": "major",
+   "issue": "「謝謝」未譯出，語意不完整。",
+   "better": "아니요, 괜찮습니다. 감사합니다. 그냥 둘러보는 거예요."
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "minor",
+   "issue": "「괜찮아요」略顯口語，「그냥 구경하는 거예요」語尾稍顯生硬，可更自然禮貌。",
+   "better": ""
+  }
+ },
+ "T049": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "一句",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ },
+ "T050": {
+  "openai/gpt-5.6-terra": {
+   "severity": "none",
+   "issue": "語意正確且為自然敬語。",
+   "better": ""
+  },
+  "qwen/qwen3.7-max": {
+   "severity": "none",
+   "issue": "",
+   "better": ""
+  }
+ }
+}
