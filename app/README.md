@@ -92,10 +92,21 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 ## CSP 與 Cloudflare Bot 注入腳本
 
 CSP 刻意不放 `'unsafe-inline'`(script),所以**頁面內不寫行內腳本**——都放獨立 `.js`。
-唯一會被擋的是 **Cloudflare Bot Fight Mode 的 JavaScript Detections 注入腳本**
-(內容含每次變動的 token,無法用 hash 允許)。影響僅止於「CF 的 JS bot 偵測不執行」+ console 噪音;
-真正的門是 Turnstile + 白名單。想清掉 console 訊息:
-Dashboard → Security → Bots → **關閉 JavaScript Detections**(不必動 CSP)。
+唯一會被擋的是 **Cloudflare Bot Fight Mode 的 JavaScript Detections(JSD)注入腳本**
+(內容含每次變動的 token,無法用 hash/nonce 允許)。
+
+**這不是安全取捨,因為 JSD 現在本來就沒在運作**——CSP 擋掉 bootstrap,`main.js` 從未載入。
+三個選項的實際差異只有 console:
+
+| 選項 | JSD 效果 | Console |
+| --- | --- | --- |
+| 現狀(CSP 擋著) | 不運作 | 有訊息 |
+| Dashboard 關掉 JSD | 不運作(同上) | 乾淨 |
+| 加 `'unsafe-inline'` | 運作 | 乾淨 |
+
+**第三個才是真取捨,而且不划算**:為換一項 bot 啟發式訊號,要拆掉 CSP 對 XSS 的主要防線
+(前端有數處 `innerHTML` 渲染逐字稿/譯文/名單,雖已 escape,CSP 是兜底)。**維持嚴格 CSP。**
+Bot Fight Mode 的其他機制(IP 信譽、已知 bot、heuristics)不依賴 JSD,照常生效。
 
 ## 已知未驗(部署後首測清單)
 
