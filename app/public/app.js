@@ -32,7 +32,7 @@ const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 版本標記與診斷(真機回報用) ============ */
-const APP_VER = "v9-micdead-detect";
+const APP_VER = "v10-holdbtn";
 const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
   || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
 const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
@@ -71,6 +71,7 @@ async function ensureAudio() {
 // 僅供本地測試裝置模擬 iOS 凍結(Playwright 從外部拿不到閉包內的 ctx)
 window.__audioDebug = { get ctx() { return audioCtx; } };
 async function startCapture(onFrame) {
+  pauseCapture(); // 清掉可能殘留的舊節點(重建/競態後的孤兒 worklet)
   crumb("ensureAudio");
   await ensureAudio();
   // iOS 關鍵:mic stream 儘量保留(track.stop 會讓系統收回 audio session)。
@@ -216,7 +217,7 @@ async function runUtteranceInner({ side, ui }) {
   const ws = new WebSocket(`/ws?lang=${lang}&engine=${engine}&gender=${thGender()}&glossary=${encodeURIComponent(localStorage.getItem("mn_glossary") || "")}`);
   ws.binaryType = "arraybuffer";
 
-  let ready = false, ended = false;
+  let ready = false, ended = false, endSent = false;
   const preReady = [];
   const micFrames = [];   // 測試模式要上傳
   const el = ui.begin({ side });
@@ -229,7 +230,12 @@ async function runUtteranceInner({ side, ui }) {
       const m = JSON.parse(ev.data);
       S.lastMsgAt = performance.now(); // 保險絲用:relay 還活著的證據
       console.log("[relay]", m.type, m.text ?? m.reason ?? "");   // 手機可接 USB/遠端主控台看
-      if (m.type === "ready") { crumb("ws-ready"); ready = true; for (const f of preReady) ws.send(f); preReady.length = 0; }
+      if (m.type === "ready") {
+        crumb("ws-ready"); ready = true;
+        for (const f of preReady) ws.send(f); preReady.length = 0;
+        // 手快的句子:放開時 ws 還沒 ready,end 得補送,否則 relay 空等(clientlog 實錄)
+        if (ended && !endSent && ws.readyState === 1) { ws.send(JSON.stringify({ type: "end" })); endSent = true; crumb("end-flushed"); }
+      }
       // zh 文字顯示前過簡→正轉換(me 側的 STT、them 側的譯文);外語原樣
       if (m.type === "inTx") { if (!inTx) crumb("inTx1"); inTx += m.text; el.srcEl.textContent = side === "me" ? toTrad(inTx) : inTx; }
       if (m.type === "outTx") { if (!outTx) crumb("outTx1"); outTx += m.text; el.txEl.textContent = side === "me" ? outTx : toTrad(outTx); el.host?.scrollIntoView({ block: "end" }); }
@@ -253,22 +259,28 @@ async function runUtteranceInner({ side, ui }) {
     micFrames.push(new Uint8Array(frameBuf.slice(0)));
     if (ready && ws.readyState === 1) ws.send(frameBuf); else preReady.push(frameBuf);
   };
-  // 開錄 2s 內一個音框都沒有 = mic 靜默死(iOS 的 mute 不一定反映在 track 屬性上)
-  // → ctx+mic 整組砍掉重建一次(權限已給過,Safari 不會再跳提示)
-  const frameFuse = setTimeout(async () => {
-    if (firstFrameLogged || ended) return;
-    crumb("no-frames→rebuild");
-    try {
-      pauseCapture();
-      try { audioCtx?.close(); } catch {}
-      audioCtx = null; playQ.scheduled = 0; playQ.playing = false;
-      releaseMic();
-      await startCapture(onFrame);
-      crumb("rebuild-ok");
-    } catch (e2) { crumb("rebuild-fail:" + (e2?.message ?? e2)); reportClientLog("mic-rebuild-fail"); }
-  }, 2000);
+  // 開錄後 2s 一個音框都沒有 = mic 靜默死(iOS 的 mute 不一定反映在 track 屬性上)
+  // → ctx+mic 整組砍掉重建一次(權限已給過,Safari 不會再跳提示)。
+  // 注意:計時必須從 startCapture「完成後」起算——v9 從按下起算,把慢路徑(getUserMedia 1.5s+)
+  // 誤判成無音框,還跟進行中的 startCapture 打架(clientlog 的 capfail:No ScriptProcessor)。
+  let frameFuse = null;
+  const armFrameFuse = () => {
+    frameFuse = setTimeout(async () => {
+      if (firstFrameLogged || ended) return;
+      crumb("no-frames→rebuild");
+      try {
+        pauseCapture();
+        try { audioCtx?.close(); } catch {}
+        audioCtx = null; playQ.scheduled = 0; playQ.playing = false;
+        releaseMic();
+        await startCapture(onFrame);
+        crumb("rebuild-ok");
+      } catch (e2) { crumb("rebuild-fail:" + (e2?.message ?? e2)); reportClientLog("mic-rebuild-fail"); }
+    }, 2000);
+  };
   try {
     await startCapture(onFrame);
+    if (!ended) armFrameFuse();
   } catch (e) {
     clearTimeout(frameFuse);
     crumb("capfail:" + (e?.message ?? e));
@@ -285,10 +297,27 @@ async function runUtteranceInner({ side, ui }) {
   clearTimeout(frameFuse);
   const tReleased = performance.now();
   S.releasedAt = tReleased; // 保險絲從這一刻起算
-  crumb(firstFrameLogged ? "released" : "released-noframes");
-  if (!firstFrameLogged) reportClientLog("no-frames"); // mic 靜默死:上報並讓診斷氣泡說話(relay 會回 framesIn 0)
+  crumb(`released(${S.relSrc ?? "?"})${firstFrameLogged ? "" : "-noframes"}`);
   pauseCapture(); // 只斷 worklet,mic 保留(iOS audio session 不能斷)
-  if (ws.readyState === 1) ws.send(JSON.stringify({ type: "end" }));
+  // 零音框 = 這句沒有內容:立刻乾淨中止,不等 relay(13s 假卡死的來源)
+  if (!firstFrameLogged) {
+    try { ws.close(); } catch {}
+    el.host?.remove(); el.txEl?.closest(".fmsg")?.remove(); // 收掉空氣泡
+    if (S.msgCount > 0) S.msgCount--;
+    if (S.msgCount === 0) renderEmpty();
+    if (tReleased - t0 < 500) {
+      ui.status("要按住說話,說完再放開", false); // 瞬放(手滑或 iOS 假 cancel)
+    } else {
+      // 按夠久卻零音框 = mic 真的靜默死 → 整組重置,下一句全新重建
+      try { audioCtx?.close(); } catch {}
+      audioCtx = null; playQ.scheduled = 0; playQ.playing = false;
+      releaseMic();
+      reportClientLog("no-frames");
+      ui.status("⚠ 麥克風沒收到聲音,已重置,請再說一次", false);
+    }
+    return;
+  }
+  if (ws.readyState === 1) { ws.send(JSON.stringify({ type: "end" })); endSent = true; }
   ui.status("翻譯中…", true);
 
   await finishPromise;
@@ -388,7 +417,9 @@ function b64enc(bytes) {
 
 /* ============ PTT 鎖定(全 UI 共用;之前漏移植導致 ReferenceError 卡死) ============ */
 function setPtt(disabled) {
-  const set = (id, v) => { const b = $(id); if (b) b.disabled = v; };
+  // 正在被按住的那顆絕不 disable:iOS 對「互動中途被 disable 的元素」會在 ~100ms 後
+  // 補發 cancel/leave → 快路徑(mic 已就緒)的句子被瞬間放開(clientlog 交替卡死的根因)
+  const set = (id, v) => { const b = $(id); if (b) b.disabled = v && id !== S.holdBtnId; };
   set("pttMe", disabled);
   set("pttThem", disabled || S.test);
   set("fpttMine", disabled);
@@ -491,14 +522,15 @@ function bindPtt(btn, side, ui) {
     e.preventDefault();
     if (S.busy) { $("status").textContent = "稍等一下,上一句還在處理"; return; } // 不再靜默
     unlockSpeaker(); // iOS:趁手勢開光 <audio>,fallback 播放才被允許
+    S.holdBtnId = btn.id; // 按住中:這顆不受 setPtt disable(見 setPtt 註解)
     btn.classList.add("holding");
     try { btn.setPointerCapture?.(e.pointerId); } catch { /* 快速點放時 pointer 可能已失效,不阻斷整句 */ }
     runUtterance({ side, ui }).finally(() => btn.classList.remove("holding"));
   });
-  const release = () => window.__pttRelease?.();
-  btn.addEventListener("pointerup", release);
-  btn.addEventListener("pointercancel", release);
-  btn.addEventListener("pointerleave", release);
+  const release = (src) => () => { S.relSrc = src; S.holdBtnId = null; window.__pttRelease?.(); };
+  btn.addEventListener("pointerup", release("up"));
+  btn.addEventListener("pointercancel", release("cancel"));
+  btn.addEventListener("pointerleave", release("leave"));
 }
 
 /* ============ 頂列/雜項 ============ */
