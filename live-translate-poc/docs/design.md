@@ -1,4 +1,17 @@
-# Design.md — 即時口譯 App 設計文件(v1,對應 mockup/conversation-flow.html)
+# Design.md — manemu(まねむ)設計文件(對應 mockup/conversation-flow.html)
+
+## 0. 品牌
+
+- **名字**:manemu = 「まね(mane,模仿)」×「む(mu,夢)」。
+- **一句話**:按住說話,manemu 模仿你的語氣、用對方的語言說出來——像夢裡忽然會說外語的那種流利。
+- 文案裡「まね」用朱色(我方色)、「む」用藍染(對方色)——名字本身就是雙說話者色碼的縮影。
+- wordmark:小寫拉丁 `manemu`(800 weight、+.04em)+ 假名 `まねむ` 次階(+.3em)。
+
+## 0.5 登入前頁(v2.1 版式)
+
+順序:wordmark → 品牌文案 → **Google 登入(上方,不被示範推走)** → 封測小字 →
+「▶ 看 30 秒示範」→ 示範以**真氣泡元件**向下生長(自動捲動),內容固定演「拉麵店 + 一次誤聽→重講」
+——讓訪客在登入前就看懂核心賣點(聽錯看得到、重講就好)。示範不開麥克風、不 call API。
 
 目的:M3 前端的視覺與互動規範。mockup 已可互動(repo 內開檔即用,或 artifact 連結),
 所有時序參數來自 harness 實測(findings §3.9、m3-spec.md),不是示意值。
