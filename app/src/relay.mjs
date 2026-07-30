@@ -95,6 +95,7 @@ export class RelaySession {
     let upstream = null;
     try {
       upstream = new WebSocket(upstreamUrl);
+      upstream.binaryType = "arraybuffer"; // 預設 Blob,TextDecoder 解不了 → 之前 parseFails 9/9 的根因
       stats.transport = "ws-client";
       await new Promise((res, rej) => {
         upstream.addEventListener("open", res, { once: true });
@@ -142,10 +143,15 @@ export class RelaySession {
       if (ended && !gotOutput && Date.now() - lastVoiced > 15000) return finish("no-output");
     }, 250);
 
-    upstream.addEventListener("message", (ev) => {
+    upstream.addEventListener("message", async (ev) => {
       stats.upstreamMsgs++;
       let raw;
-      try { raw = typeof ev.data === "string" ? ev.data : new TextDecoder().decode(ev.data); } catch { stats.parseFails++; return; }
+      try {
+        const d = ev.data;
+        if (typeof d === "string") raw = d;
+        else if (d && typeof d.text === "function") raw = await d.text(); // Blob
+        else raw = new TextDecoder().decode(d);                           // ArrayBuffer/TypedArray
+      } catch (e) { stats.parseFails++; if (!stats.firstMsgSample) { stats.firstMsgSample = `decode-error: ${String(e.message).slice(0, 80)}`; saveStats(); } return; }
       if (stats.firstMsgSample === null) { stats.firstMsgSample = raw.slice(0, 160); saveStats(); }
       let msg;
       try { msg = JSON.parse(raw); } catch { stats.parseFails++; return; }
