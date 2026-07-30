@@ -160,7 +160,7 @@ async function runUtterance({ side, ui }) {
     try {
       const r = await fetch("/api/backtranslate", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text: outTx, from: S.lang }) });
       const d = await r.json();
-      if (d.zh) ui.badge(el, d.zh);
+      if (d.zh) ui.badge(el, toTrad(d.zh));
     } catch {}
   }
   // 測試模式記錄(R1 收集管道)——沒有譯文就不算完成,提示重念
@@ -346,6 +346,13 @@ async function mountTurnstile() {
 
 /* ============ boot:登入判斷 ============ */
 (async function boot() {
+  // 顯示層原則:永不簡中。OpenCC(cn→twp,含台灣化詞彙)為主,s2t.js 字表為載入失敗的後備。
+  if (window.OpenCC) {
+    try {
+      const cc = window.OpenCC.Converter({ from: "cn", to: "twp" });
+      window.toTrad = (s) => (s ? cc(s) : s);
+    } catch (e) { console.warn("OpenCC init failed, using fallback s2t", e); }
+  }
   if (new URLSearchParams(location.search).get("waitlist")) {
     $("loginFine").textContent = "這個 Google 帳號還不在受邀名單內——已幫你排上等候名單,開通後通知你。";
   }
