@@ -159,7 +159,7 @@ export class RelaySession {
     const watchdog = setInterval(() => {
       if (Date.now() - t0 > hardCapMs) return finish("hard-cap");
       if (ended && gotOutput && Date.now() - lastVoiced > IDLE_CONVERGE_MS) return finish("converged");
-      if (ended && !gotOutput && Date.now() - lastVoiced > 15000) return finish("no-output");
+      if (ended && !gotOutput && Date.now() - lastVoiced > 8000) return finish("no-output"); // 快回診斷(前端 12s 保險絲之前)
     }, 250);
 
     upstream.addEventListener("message", async (ev) => {

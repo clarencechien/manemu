@@ -79,5 +79,18 @@ export async function handleAdmin(req, env, path) {
     return Response.json({ ok: true });
   }
 
+  // 最近的前端卡死回報(/api/client-log 寫進 FIELD bucket 的麵包屑)——查 iOS 卡點用
+  if (path === "/api/admin/clientlog" && req.method === "GET") {
+    const listed = await env.FIELD.list({ prefix: "clientlog/", limit: 1000 });
+    const latest = (listed.objects || [])
+      .sort((a, b) => new Date(b.uploaded) - new Date(a.uploaded))
+      .slice(0, 10);
+    const entries = await Promise.all(latest.map(async (o) => {
+      try { return { key: o.key, uploaded: o.uploaded, ...(await (await env.FIELD.get(o.key)).json()) }; }
+      catch { return { key: o.key, uploaded: o.uploaded, error: "unreadable" }; }
+    }));
+    return Response.json({ count: entries.length, entries });
+  }
+
   return bad("not found", 404);
 }

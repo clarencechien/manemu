@@ -32,7 +32,7 @@ const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 版本標記與診斷(真機回報用) ============ */
-const APP_VER = "v8-ios-keepmic";
+const APP_VER = "v9-micdead-detect";
 const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
   || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
 const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
@@ -48,6 +48,7 @@ async function reportClientLog(kind) {
 
 /* ============ 音訊:擷取(worklet)與播放(24k) ============ */
 let audioCtx = null, mediaStream = null, workletNode = null, srcNode = null;
+let ctxGen = 0, micCtxGen = -1; // Safari bug:MediaStream 跨(重建的)AudioContext 重用會靜默無聲 → 世代對不上就換新 mic
 async function ensureAudio() {
   // iOS Safari:mic track 停止後 ctx 會被系統打斷(suspended/interrupted),
   // 且在被打斷的 ctx 上 resume() 可能「永不 resolve」→ 一律 race timeout,救不回就重建。
@@ -62,6 +63,7 @@ async function ensureAudio() {
   }
   if (!audioCtx) {
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    ctxGen++;
     await withTimeout(audioCtx.audioWorklet.addModule("/pcm-worklet.js"), 5000, "worklet-timeout");
     if (audioCtx.state !== "running") await Promise.race([audioCtx.resume().catch(() => {}), sleep(800)]);
   }
@@ -71,16 +73,25 @@ window.__audioDebug = { get ctx() { return audioCtx; } };
 async function startCapture(onFrame) {
   crumb("ensureAudio");
   await ensureAudio();
-  // iOS 關鍵:mic stream 對談期間「全程保留」。track.stop() 會讓系統收回 audio session →
-  // 播放無聲、且下一次 getUserMedia 可能永不 resolve(真機回報的卡死)。
-  // 句與句之間只斷開 worklet(pauseCapture),不送任何音框;離開頁面才真正放掉(releaseMic)。
-  if (!mediaStream || !mediaStream.getTracks().some((t) => t.readyState === "live")) {
+  // iOS 關鍵:mic stream 儘量保留(track.stop 會讓系統收回 audio session)。
+  // 但三種情況必須換新的,否則收不到任何音框(真機第二句卡死的根因群):
+  //  ① track 已死 ② track 被靜音(iOS 在 <audio> 播放後常把錄音端 mute)
+  //  ③ ctx 重建過(Safari:MediaStream 跨 AudioContext 重用 → 靜默無聲)
+  const tracks = mediaStream?.getTracks() ?? [];
+  const micDead = !tracks.length
+    || !tracks.some((t) => t.readyState === "live")
+    || tracks.some((t) => t.muted)
+    || micCtxGen !== ctxGen;
+  if (micDead) {
+    if (mediaStream) crumb(`mic-dead(live:${tracks.some((t) => t.readyState === "live")} muted:${tracks.some((t) => t.muted)} gen:${micCtxGen}/${ctxGen})`);
+    releaseMic();
     crumb("getUserMedia");
     mediaStream = await withTimeout(
       navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 } }),
       8000, "mic-timeout");
+    micCtxGen = ctxGen;
   }
-  crumb("mic-live");
+  crumb(`mic-live g${ctxGen}`);
   srcNode = audioCtx.createMediaStreamSource(mediaStream);
   workletNode = new AudioWorkletNode(audioCtx, "pcm-downsampler");
   workletNode.port.onmessage = (e) => onFrame(e.data);
@@ -165,17 +176,20 @@ async function drainPlayback(b64chunks) {
 
 /* ============ 一輪 PTT(核心:真 relay) ============ */
 async function runUtterance({ side, ui }) {
-  S.busy = true; S.releasedAt = null;
+  S.busy = true; S.releasedAt = null; S.lastMsgAt = 0; S.doneSeen = false;
   let settled = false;
   const inner = runUtteranceInner({ side, ui })
     .catch((e) => { console.warn("utterance failed", e); crumb("err:" + (e?.message ?? e)); ui.status("⚠ 出了點問題,再試一次", false); })
     .finally(() => { settled = true; });
-  // 保險絲:放開按鈕後 25s 內一定要收尾。iOS 真機曾在 resume()/getUserMedia 上「永不 resolve」,
-  // 任何這類掛死都在這裡強制解鎖 + 上報卡點,絕不讓使用者只能重整。
+  // 保險絲:放開按鈕後任何掛死都要能自救,絕不讓使用者只能重整。
+  // relay 死寂(放開後 12s 沒任何訊息)提早放行;done 之後交給播放自己的保險絲,45s 絕對上限。
   const fuse = (async () => {
     while (!settled) {
       await sleep(1000);
-      if (!settled && S.releasedAt && performance.now() - S.releasedAt > 25000) return "stuck";
+      if (settled || !S.releasedAt) continue;
+      const now = performance.now();
+      if (!S.doneSeen && now - Math.max(S.releasedAt, S.lastMsgAt) > 12000) return "stuck";
+      if (now - S.releasedAt > 45000) return "stuck";
     }
     return "ok";
   })();
@@ -213,6 +227,7 @@ async function runUtteranceInner({ side, ui }) {
   const finishPromise = new Promise((resolve) => {
     ws.addEventListener("message", (ev) => {
       const m = JSON.parse(ev.data);
+      S.lastMsgAt = performance.now(); // 保險絲用:relay 還活著的證據
       console.log("[relay]", m.type, m.text ?? m.reason ?? "");   // 手機可接 USB/遠端主控台看
       if (m.type === "ready") { crumb("ws-ready"); ready = true; for (const f of preReady) ws.send(f); preReady.length = 0; }
       // zh 文字顯示前過簡→正轉換(me 側的 STT、them 側的譯文);外語原樣
@@ -224,22 +239,38 @@ async function runUtteranceInner({ side, ui }) {
         if (!IS_IOS) enqueuePcm(m.data); // iOS 不走 WebAudio 串流(無聲風險),收齊後 WAV 一次播
       }
       if (m.type === "error") { relayError = m.message || "relay error"; crumb("relay-err"); resolve("error"); }
-      if (m.type === "done") { crumb("done:" + (m.reason ?? "")); doneStats = m.stats ?? null; resolve(m.reason); }
+      if (m.type === "done") { crumb("done:" + (m.reason ?? "")); S.doneSeen = true; doneStats = m.stats ?? null; resolve(m.reason); }
     });
     ws.addEventListener("close", () => resolve("closed"));
     ws.addEventListener("error", () => resolve("ws-error"));
   });
 
   let firstFrameLogged = false;
+  const onFrame = (frameBuf) => {
+    if (ended) return;
+    if (!firstFrameLogged) { firstFrameLogged = true; crumb("frame1"); console.log("[mic] first frame bytes:", frameBuf?.byteLength); }
+    if (!frameBuf?.byteLength) return; // 空框不送
+    micFrames.push(new Uint8Array(frameBuf.slice(0)));
+    if (ready && ws.readyState === 1) ws.send(frameBuf); else preReady.push(frameBuf);
+  };
+  // 開錄 2s 內一個音框都沒有 = mic 靜默死(iOS 的 mute 不一定反映在 track 屬性上)
+  // → ctx+mic 整組砍掉重建一次(權限已給過,Safari 不會再跳提示)
+  const frameFuse = setTimeout(async () => {
+    if (firstFrameLogged || ended) return;
+    crumb("no-frames→rebuild");
+    try {
+      pauseCapture();
+      try { audioCtx?.close(); } catch {}
+      audioCtx = null; playQ.scheduled = 0; playQ.playing = false;
+      releaseMic();
+      await startCapture(onFrame);
+      crumb("rebuild-ok");
+    } catch (e2) { crumb("rebuild-fail:" + (e2?.message ?? e2)); reportClientLog("mic-rebuild-fail"); }
+  }, 2000);
   try {
-    await startCapture((frameBuf) => {
-      if (ended) return;
-      if (!firstFrameLogged) { firstFrameLogged = true; console.log("[mic] first frame bytes:", frameBuf?.byteLength); }
-      if (!frameBuf?.byteLength) return; // 空框不送
-      micFrames.push(new Uint8Array(frameBuf.slice(0)));
-      if (ready && ws.readyState === 1) ws.send(frameBuf); else preReady.push(frameBuf);
-    });
+    await startCapture(onFrame);
   } catch (e) {
+    clearTimeout(frameFuse);
     crumb("capfail:" + (e?.message ?? e));
     ui.status(e?.message === "mic-timeout" ? "⚠ 麥克風沒有回應(可能被其他 app 占用),再按一次試試" : "需要麥克風權限", false);
     try { ws.close(); } catch {}
@@ -251,9 +282,11 @@ async function runUtteranceInner({ side, ui }) {
   // 等放開(呼叫端在 pointerup 時呼叫 window.__pttRelease)
   await new Promise((r) => { window.__pttRelease = r; });
   ended = true;
+  clearTimeout(frameFuse);
   const tReleased = performance.now();
   S.releasedAt = tReleased; // 保險絲從這一刻起算
-  crumb("released");
+  crumb(firstFrameLogged ? "released" : "released-noframes");
+  if (!firstFrameLogged) reportClientLog("no-frames"); // mic 靜默死:上報並讓診斷氣泡說話(relay 會回 framesIn 0)
   pauseCapture(); // 只斷 worklet,mic 保留(iOS audio session 不能斷)
   if (ws.readyState === 1) ws.send(JSON.stringify({ type: "end" }));
   ui.status("翻譯中…", true);
