@@ -500,7 +500,7 @@ const chatUI = {
   },
   badge(el, backZh) {
     const b = document.createElement("button");
-    b.className = "badge ok"; b.textContent = "↩ 確認";
+    b.className = "badge ok"; b.textContent = "🔍 核對意思";
     b.addEventListener("click", () => {
       if (el.host.querySelector(".backtx")) return;
       const d = document.createElement("div");
