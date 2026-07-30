@@ -89,6 +89,14 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 | 安全 headers(CSP/XFO/nosniff/referrer) | ✅ 全數出現(修正前 assets 繞過 worker 導致缺失) |
 | 備註 | workers.dev route 仍建議在 dashboard 關閉(縱深) |
 
+## CSP 與 Cloudflare Bot 注入腳本
+
+CSP 刻意不放 `'unsafe-inline'`(script),所以**頁面內不寫行內腳本**——都放獨立 `.js`。
+唯一會被擋的是 **Cloudflare Bot Fight Mode 的 JavaScript Detections 注入腳本**
+(內容含每次變動的 token,無法用 hash 允許)。影響僅止於「CF 的 JS bot 偵測不執行」+ console 噪音;
+真正的門是 Turnstile + 白名單。想清掉 console 訊息:
+Dashboard → Security → Bots → **關閉 JavaScript Detections**(不必動 CSP)。
+
 ## 已知未驗(部署後首測清單)
 
 - [x] OAuth 端點行為、Turnstile 強制、canonical-host(上表)
