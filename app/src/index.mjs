@@ -1,6 +1,6 @@
 // manemu Worker:路由 + Google OIDC + 白名單 + WS relay 轉發 + 回譯 + 測試模式記錄。
 // 安全設計見 live-translate-poc/docs/m3-spec.md §5.6。
-import { sign, verify, cookieGet, cookieSet, sessionFrom, verifyGoogleIdToken, isAllowlisted, randomHex, b64u } from "./auth.mjs";
+import { sign, verify, cookieGet, cookieSet, sessionFrom, verifyGoogleIdToken, resolveUser, randomHex, b64u } from "./auth.mjs";
 export { RelaySession } from "./relay.mjs";
 
 const SEC_HEADERS = {
@@ -80,7 +80,7 @@ export default {
       const tok = await tr.json();
       const claims = tok.id_token && await verifyGoogleIdToken(tok.id_token, env.GOOGLE_CLIENT_ID, st.nonce);
       if (!claims) return new Response("token verification failed", { status: 403 });
-      if (!(await isAllowlisted(claims.email, env))) {
+      if (!(await resolveUser(claims.email, env)).allowed) {
         return new Response(null, { status: 302, headers: { location: "/?waitlist=1", "set-cookie": cookieSet("mn_oauth", "", 0) } });
       }
       const session = await sign({ email: claims.email, exp: Date.now() / 1000 + 7 * 86400 }, env.SESSION_SECRET);
@@ -106,15 +106,21 @@ export default {
       return stub.fetch("https://do/debug");
     }
 
+    // 每次請求重算分級 → R2 白名單改了立刻生效(不用重登入、不用重部署)
+    const user = await resolveUser(session.email, env);
+    if (!user.allowed) return Response.json({ error: "not_allowlisted" }, { status: 403 });
+
     if (p === "/api/me") {
       const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
-      const u = await (await stub.fetch("https://do/usage")).json();
-      return Response.json({ email: session.email, ...u });
+      const u = await (await stub.fetch(`https://do/usage?limit=${user.limitSeconds}`)).json();
+      return Response.json({ email: session.email, tier: user.tier, isAdmin: user.isAdmin, ...u });
     }
 
     if (p === "/ws") {
       const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
-      return stub.fetch(req);
+      const wsUrl = new URL(req.url);
+      wsUrl.searchParams.set("limit", String(user.limitSeconds)); // 額度由 Worker 決定,DO 只執行
+      return stub.fetch(new Request(wsUrl, req));
     }
 
     if (p === "/api/backtranslate" && req.method === "POST") {
