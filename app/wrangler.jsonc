@@ -4,6 +4,8 @@
   "name": "manemu",
   "main": "src/index.mjs",
   "compatibility_date": "2026-07-01",
+  // 每次部署重抓 opencc-js(^ 範圍)→ 上游更新自動套用到 vendor bundle
+  "build": { "command": "npm install --no-audit --no-fund && npm run vendor" },
   "assets": {
     "directory": "public",
     "binding": "ASSETS",

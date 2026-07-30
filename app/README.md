@@ -43,7 +43,7 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 ## 測試模式 = R1 真人語音收集
 
 登入後點 🧪:逐句照念 T50 語料,每句寫 `r2://manemu-field/field/{email}/{ts}.json`
-(16kHz 音檔 b64 + STT + 譯文 + 死氣延遲)。拉回 harness 評測:
+(16kHz 音檔 b64 + STT + 譯文 + 接話延遲 deadAirMs)。拉回 harness 評測:
 音檔可直接轉 wav 丟 `live-translate-poc/data/audio-human/`。
 
 ## 部署複驗(2026-07-30 curl 實測)

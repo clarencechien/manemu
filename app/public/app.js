@@ -69,6 +69,11 @@ const playbackRemaining = () => Math.max(0, (playQ.scheduled - (audioCtx?.curren
 /* ============ 一輪 PTT(核心:真 relay) ============ */
 async function runUtterance({ side, ui }) {
   S.busy = true;
+  try { await runUtteranceInner({ side, ui }); }
+  catch (e) { console.warn("utterance failed", e); ui.status("⚠ 出了點問題,再試一次", false); }
+  finally { S.busy = false; try { stopCapture(); } catch {} window.__pttRelease = null; }
+}
+async function runUtteranceInner({ side, ui }) {
   const t0 = performance.now();
   ui.status("連線中…", true);
   const lang = side === "me" ? S.lang : "zh";
@@ -89,8 +94,9 @@ async function runUtterance({ side, ui }) {
       const m = JSON.parse(ev.data);
       console.log("[relay]", m.type, m.text ?? m.reason ?? "");   // 手機可接 USB/遠端主控台看
       if (m.type === "ready") { ready = true; for (const f of preReady) ws.send(f); preReady.length = 0; }
-      if (m.type === "inTx") { inTx += m.text; el.srcEl.textContent = inTx; }
-      if (m.type === "outTx") { outTx += m.text; el.txEl.textContent = outTx; el.host?.scrollIntoView({ block: "end" }); }
+      // zh 文字顯示前過簡→正轉換(me 側的 STT、them 側的譯文);外語原樣
+      if (m.type === "inTx") { inTx += m.text; el.srcEl.textContent = side === "me" ? toTrad(inTx) : inTx; }
+      if (m.type === "outTx") { outTx += m.text; el.txEl.textContent = side === "me" ? outTx : toTrad(outTx); el.host?.scrollIntoView({ block: "end" }); }
       if (m.type === "audio") { if (tFirstAudio === null) tFirstAudio = performance.now(); audioB64.push(m.data); enqueuePcm(m.data); }
       if (m.type === "error") { relayError = m.message || "relay error"; resolve("error"); }
       if (m.type === "done") { doneStats = m.stats ?? null; resolve(m.reason); }
@@ -159,7 +165,7 @@ async function runUtterance({ side, ui }) {
     try {
       const r = await fetch("/api/backtranslate", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text: outTx, from: S.lang }) });
       const d = await r.json();
-      if (d.zh) ui.badge(el, d.zh);
+      if (d.zh) ui.badge(el, toTrad(d.zh));
     } catch {}
   }
   // 測試模式記錄(R1 收集管道)——沒有譯文就不算完成,提示重念
@@ -204,13 +210,15 @@ const chatUI = {
     el.scrollIntoView({ block: "end" });
     return { host: el, srcEl: el.querySelector(".src"), txEl: el.querySelector(".tx") };
   },
-  done({ outTx, deadAir, speechMs, completionMs, lagS }, el) {
-    // 端到端三段:死氣(放開→首音)、播完(放開→譯音結束)、全程(按下→播完)
-    el.host.querySelector(".rowmeta").innerHTML =
-      (deadAir !== null ? `<span class="lat">死氣 ${deadAir}ms</span>` : "")
-      + (outTx ? `<span class="lat">播完 ${(completionMs / 1000).toFixed(1)}s</span>` : "")
-      + `<span class="lat">全程 ${lagS}s</span>`
-      + (S.test && outTx ? `<span class="lat">已記錄</span>` : ""); // 失敗不標已記錄
+  done({ outTx, deadAir, completionMs }, el) {
+    // 口語化小資訊列(讓 user 有感知速度,不丟技術名詞)
+    const bits = [];
+    if (outTx && deadAir !== null) {
+      bits.push(deadAir <= 100 ? "⚡ 秒接話" : `⚡ ${(deadAir / 1000).toFixed(1)} 秒接話`);
+    }
+    if (outTx && completionMs) bits.push(`🗣 ${(completionMs / 1000).toFixed(1)} 秒說完`);
+    if (S.test && outTx) bits.push("✓ 已記錄");
+    el.host.querySelector(".rowmeta").innerHTML = bits.map((t) => `<span class="lat">${t}</span>`).join("");
     el.host.scrollIntoView({ block: "end" });
   },
   replay(el, audioB64) {
@@ -219,12 +227,18 @@ const chatUI = {
     b.addEventListener("click", async () => {
       if (S.busy) return;
       S.busy = true; setPtt(true);
-      $("status").textContent = "🔊 重播中";
-      for (const a of audioB64) enqueuePcm(a);
-      await sleep(playbackRemaining() + 100);
-      playQ.playing = false;
-      S.busy = false; setPtt(false);
-      $("status").textContent = "按住說話";
+      try {
+        await ensureAudio(); // 手機閒置後 AudioContext 會被 suspend,點擊是合法手勢可 resume
+        $("status").textContent = "🔊 重播中";
+        playQ.scheduled = Math.max(playQ.scheduled, audioCtx.currentTime); // 過期排程歸位
+        for (const a of audioB64) enqueuePcm(a);
+        await sleep(playbackRemaining() + 150);
+      } catch (e) { console.warn("replay failed", e); $("status").textContent = "重播失敗"; }
+      finally {
+        playQ.playing = false;
+        S.busy = false; setPtt(false);
+        if ($("status").textContent === "🔊 重播中") $("status").textContent = "按住說話";
+      }
     });
     el.host.querySelector(".rowmeta").prepend(b);
   },
@@ -345,6 +359,13 @@ async function mountTurnstile() {
 
 /* ============ boot:登入判斷 ============ */
 (async function boot() {
+  // 顯示層原則:永不簡中。OpenCC(cn→twp,含台灣化詞彙)為主,s2t.js 字表為載入失敗的後備。
+  if (window.OpenCC) {
+    try {
+      const cc = window.OpenCC.Converter({ from: "cn", to: "twp" });
+      window.toTrad = (s) => (s ? cc(s) : s);
+    } catch (e) { console.warn("OpenCC init failed, using fallback s2t", e); }
+  }
   if (new URLSearchParams(location.search).get("waitlist")) {
     $("loginFine").textContent = "這個 Google 帳號還不在受邀名單內——已幫你排上等候名單,開通後通知你。";
   }

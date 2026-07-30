@@ -1,0 +1,10 @@
+{
+  "name": "manemu-app",
+  "private": true,
+  "scripts": {
+    "vendor": "node scripts/vendor.mjs"
+  },
+  "dependencies": {
+    "opencc-js": "^1.0.5"
+  }
+}
