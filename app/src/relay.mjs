@@ -82,33 +82,45 @@ export class RelaySession {
     const hardCapMs = Number(this.env.SESSION_HARD_CAP_S) * 1000;
     // 診斷統計:每一環節都計數,寫進 lastSession 供 /api/debug 查
     const stats = { ts: new Date().toISOString(), lang, engine, model,
-      hasKey: !!this.env.GEMINI_API_KEY, upstreamStatus: null, upstreamOpened: false,
-      setupComplete: false, framesIn: 0, bytesIn: 0, inTxChars: 0, outTxChars: 0,
+      hasKey: !!this.env.GEMINI_API_KEY, transport: null, upstreamStatus: null, upstreamOpened: false,
+      setupComplete: false, upstreamMsgs: 0, parseFails: 0, firstMsgSample: null,
+      framesIn: 0, bytesIn: 0, inTxChars: 0, outTxChars: 0,
       audioChunks: 0, upstreamCloseCode: null, upstreamCloseReason: null, endSignal: false, finishReason: null };
     const saveStats = () => this.state.storage.put("lastSession", stats).catch(() => {});
 
-    // 上游:Gemini Live(金鑰只存在這裡)
+    // 上游:Gemini Live(金鑰只存在這裡)。
+    // 首選 Workers 原生 WebSocket client(與 harness 語意一致);
+    // 實測 fetch-upgrade 會握手成功(101)但收不到任何訊息 → 降為備援。
+    const upstreamUrl = `${LIVE_WS}?key=${this.env.GEMINI_API_KEY}`;
     let upstream = null;
     try {
-      const resp = await fetch(`${LIVE_WS.replace("wss", "https")}?key=${this.env.GEMINI_API_KEY}`, {
-        headers: { Upgrade: "websocket" },
+      upstream = new WebSocket(upstreamUrl);
+      stats.transport = "ws-client";
+      await new Promise((res, rej) => {
+        upstream.addEventListener("open", res, { once: true });
+        upstream.addEventListener("error", () => rej(new Error("open-error")), { once: true });
+        upstream.addEventListener("close", (e) => rej(new Error(`closed-before-open ${e.code}`)), { once: true });
+        setTimeout(() => rej(new Error("open-timeout")), 10000);
       });
-      stats.upstreamStatus = resp.status;
-      upstream = resp.webSocket;
-    } catch (e) { stats.upstreamStatus = `fetch-error: ${String(e.message).slice(0, 100)}`; }
-    if (!upstream) { stats.finishReason = "upstream-unavailable"; saveStats(); throw new Error(`upstream websocket unavailable (status=${stats.upstreamStatus}, hasKey=${stats.hasKey})`); }
+      stats.upstreamStatus = "open";
+    } catch (e) {
+      stats.upstreamStatus = `ws-client failed: ${String(e.message).slice(0, 80)}`;
+      try { upstream?.close(); } catch {}
+      upstream = null;
+    }
+    if (!upstream) {
+      // 備援:fetch upgrade
+      try {
+        const resp = await fetch(upstreamUrl.replace("wss", "https"), { headers: { Upgrade: "websocket" } });
+        stats.transport = "fetch-upgrade";
+        stats.upstreamStatus += ` | fetch:${resp.status}`;
+        upstream = resp.webSocket;
+        upstream?.accept();
+      } catch (e) { stats.upstreamStatus += ` | fetch-error:${String(e.message).slice(0, 80)}`; }
+    }
+    if (!upstream) { stats.finishReason = "upstream-unavailable"; saveStats(); throw new Error(`upstream unavailable (${stats.upstreamStatus})`); }
     stats.upstreamOpened = true;
-    upstream.accept();
-
-    const sys = SYS_PROMPTS[lang] + (glossary ? `\n行程術語表(專有名詞以此為準):${glossary}` : "");
-    upstream.send(JSON.stringify({
-      setup: engine === "fast"
-        ? { model, generationConfig: { responseModalities: ["AUDIO"], translationConfig: { targetLanguageCode: lang, echoTargetLanguage: false } },
-            inputAudioTranscription: {}, outputAudioTranscription: {} }
-        : { model, generationConfig: { responseModalities: ["AUDIO"] },
-            systemInstruction: { parts: [{ text: sys }] },
-            inputAudioTranscription: {}, outputAudioTranscription: {} },
-    }));
+    saveStats();
 
     let ended = false, lastVoiced = 0, gotOutput = false, closed = false;
     const finish = (reason) => {
@@ -131,8 +143,12 @@ export class RelaySession {
     }, 250);
 
     upstream.addEventListener("message", (ev) => {
+      stats.upstreamMsgs++;
+      let raw;
+      try { raw = typeof ev.data === "string" ? ev.data : new TextDecoder().decode(ev.data); } catch { stats.parseFails++; return; }
+      if (stats.firstMsgSample === null) { stats.firstMsgSample = raw.slice(0, 160); saveStats(); }
       let msg;
-      try { msg = JSON.parse(typeof ev.data === "string" ? ev.data : new TextDecoder().decode(ev.data)); } catch { return; }
+      try { msg = JSON.parse(raw); } catch { stats.parseFails++; return; }
       if (msg.setupComplete) { stats.setupComplete = true; saveStats(); client.send(JSON.stringify({ type: "ready" })); return; }
       const sc = msg.serverContent;
       if (!sc) return;
@@ -170,5 +186,16 @@ export class RelaySession {
     });
     client.addEventListener("close", () => finish("client-closed"));
     client.addEventListener("error", () => finish("client-error"));
+
+    // 監聽都掛好後才送 setup(避免任何早到訊息落空)
+    const sys = SYS_PROMPTS[lang] + (glossary ? `\n行程術語表(專有名詞以此為準):${glossary}` : "");
+    upstream.send(JSON.stringify({
+      setup: engine === "fast"
+        ? { model, generationConfig: { responseModalities: ["AUDIO"], translationConfig: { targetLanguageCode: lang, echoTargetLanguage: false } },
+            inputAudioTranscription: {}, outputAudioTranscription: {} }
+        : { model, generationConfig: { responseModalities: ["AUDIO"] },
+            systemInstruction: { parts: [{ text: sys }] },
+            inputAudioTranscription: {}, outputAudioTranscription: {} },
+    }));
   }
 }
