@@ -89,8 +89,9 @@ async function runUtterance({ side, ui }) {
       const m = JSON.parse(ev.data);
       console.log("[relay]", m.type, m.text ?? m.reason ?? "");   // 手機可接 USB/遠端主控台看
       if (m.type === "ready") { ready = true; for (const f of preReady) ws.send(f); preReady.length = 0; }
-      if (m.type === "inTx") { inTx += m.text; el.srcEl.textContent = inTx; }
-      if (m.type === "outTx") { outTx += m.text; el.txEl.textContent = outTx; el.host?.scrollIntoView({ block: "end" }); }
+      // zh 文字顯示前過簡→正轉換(me 側的 STT、them 側的譯文);外語原樣
+      if (m.type === "inTx") { inTx += m.text; el.srcEl.textContent = side === "me" ? toTrad(inTx) : inTx; }
+      if (m.type === "outTx") { outTx += m.text; el.txEl.textContent = side === "me" ? outTx : toTrad(outTx); el.host?.scrollIntoView({ block: "end" }); }
       if (m.type === "audio") { if (tFirstAudio === null) tFirstAudio = performance.now(); audioB64.push(m.data); enqueuePcm(m.data); }
       if (m.type === "error") { relayError = m.message || "relay error"; resolve("error"); }
       if (m.type === "done") { doneStats = m.stats ?? null; resolve(m.reason); }
