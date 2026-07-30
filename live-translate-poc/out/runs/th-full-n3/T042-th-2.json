@@ -1,0 +1,65 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T042",
+  "category": "appointment",
+  "traps": [
+    "code-switch",
+    "number",
+    "proper-noun"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我可以用 email 確認預約嗎?我的班機是 BR198。",
+  "reference": "ผมขอยืนยันการจองทางอีเมลได้ไหมครับ เที่ยวบินของผมคือ BR198 ครับ",
+  "inputTranscript": "我 可 以 用 email 确 认 预 约 吗 ? 我 的 班 机 是 BR198 。",
+  "outputTranscript": "ดิฉันสามารถยืนยันการจองทางอีเมลได้ไหมคะ?เที่ยวบินของดิฉันคือ BR198ค่ะ",
+  "inputDurationMs": 6171,
+  "outputAudioMs": 6180,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 954,
+    "ttft_from_end_ms": 954,
+    "completion_lag_ms": 2442,
+    "ttfa_from_start_ms": 7254
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.117,
+    "coverage_ok": true,
+    "cer": 0.042
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:18:41.061Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且流暢。與參考譯文的唯一差別在於說話者的性別代名詞與語氣助詞（機器譯文使用女性的 ดิฉัน/คะ，參考譯文使用男性的 ผม/ครับ），在沒有特定上下文的情況下，兩者皆完全正確。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，句意與參考譯文一致，語氣與用詞在泰語中也自然。唯一差異為第一人稱與敬語用法：機器譯文用“ดิฉัน…คะ/ค่ะ”（女性語氣），參考譯文用“ผม…ครับ”（男性語氣），原文中文未標示說話者性別，因此在敬稱/性別上存在差異（標記為 honorific_off）。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

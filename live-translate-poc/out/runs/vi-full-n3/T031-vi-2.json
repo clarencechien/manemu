@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T031",
+  "category": "hotel",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "房間的冷氣好像壞了,可以請人來看一下嗎?",
+  "reference": "Dạ, máy lạnh trong phòng em hình như bị hỏng rồi, anh/chị có thể cho người đến xem giúp em được không?",
+  "inputTranscript": "房 间 的 冷 气 好 像 坏 了 , 可 以 请 人 来 看 一 下 吗 ?",
+  "outputTranscript": "Hình như điều hòa trong phòng bị hỏng rồi ạ, có thể nhờ ai đó đến xem được không ạ?",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 5110,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 943,
+    "ttft_from_end_ms": 923,
+    "completion_lag_ms": 3097,
+    "ttfa_from_start_ms": 5043
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.805,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:07.279Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch máy rất chính xác và tự nhiên. Nó truyền tải trọn vẹn ý nghĩa của câu gốc và sử dụng kính ngữ 'ạ' rất phù hợp trong ngữ cảnh giao tiếp lịch sự."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意，語氣禮貌且自然。僅在受詞上用“nhờ ai đó”較泛，而參考譯文具體為“anh/chị cho người”，但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

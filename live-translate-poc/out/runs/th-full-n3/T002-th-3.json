@@ -1,0 +1,64 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T002",
+  "category": "directions",
+  "traps": [
+    "code-switch",
+    "proper-noun"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "請問 Shibuya Sky 的入口是在這棟樓嗎?",
+  "reference": "ขอโทษครับ ทางเข้า Shibuya Sky อยู่ในตึกนี้ใช่ไหมครับ",
+  "inputTranscript": "请 问 旭 不 亚 Sky 的 入 口 是 在 这 栋 楼 吗 ?",
+  "outputTranscript": "ขอโทษนะครับ ทางเข้า ชิบุยะ สกาย อยู่ใน ตึกนี้ หรือเปล่าครับ",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 4010,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 941,
+    "ttft_from_end_ms": 941,
+    "completion_lag_ms": 1834,
+    "ttfa_from_start_ms": 4941
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.104,
+    "coverage_ok": true,
+    "cer": 0.381
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:34.358Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates 'Shibuya Sky' phonetically into Thai ('ชิบุยะ สกาย') and uses polite particles ('นะครับ', 'ครับ') appropriately, matching the meaning and tone of the source text perfectly."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句含意，將問句正確表達（詢問入口是否在此棟樓），語序自然。僅有細微差異：使用「นะครับ」作為客氣語氣，並將 Shibuya Sky 音譯為「ชิบุยะ สกาย」，皆屬可接受的處理，未影響理解或流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

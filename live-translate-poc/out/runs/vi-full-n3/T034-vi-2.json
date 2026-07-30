@@ -1,0 +1,61 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "Cứu tôi! Làm ơn gọi xe cấp cứu giúp tôi!",
+  "inputTranscript": "救 命 , 请 帮 我 叫 救 护 车 。",
+  "outputTranscript": "Cứu với ạ, làm ơn gọi xe cấp cứu giúp tôi với!",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 3040,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 952,
+    "ttft_from_end_ms": 950,
+    "completion_lag_ms": 1716,
+    "ttfa_from_start_ms": 3552
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.138,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:48.289Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「Cứu với ạ」與「làm ơn gọi xe cấp cứu giúp tôi với!」完美地傳達了原文的緊急語氣與語意，語氣十分客氣且符合越南語口語習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句兩個要素（呼救與請求叫救護車），語意忠實，故給予最高分。語句有些口語化與多餘語氣詞（“với ạ”、“giúp tôi với!”）使表達略顯冗贅/不夠流暢，故流暢度為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

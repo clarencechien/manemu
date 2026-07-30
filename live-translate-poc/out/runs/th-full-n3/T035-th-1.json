@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T035",
+  "category": "emergency",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我的護照不見了,請問警察局在哪裡?",
+  "reference": "หนังสือเดินทางของฉันหายค่ะ ขอถามหน่อยค่ะ สถานีตำรวจอยู่ที่ไหนคะ",
+  "inputTranscript": "我 的 护 照 不 见 了 , 请 问 警 察 局 在 哪 里 ?",
+  "outputTranscript": "พาสปอร์ตของฉันหายค่ะ ไม่ทราบว่าสถานีตำรวจอยู่ที่ไหนคะ",
+  "inputDurationMs": 3571,
+  "outputAudioMs": 4260,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1060,
+    "ttft_from_end_ms": 1033,
+    "completion_lag_ms": 2048,
+    "ttfa_from_start_ms": 4759
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.852,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:57.722Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文非常準確且自然。「พาสปอร์ต」是泰語中常用的「護照」外來語，而「ไม่ทราบว่า...」是翻譯「請問...」時非常道地且有禮貌的表達方式，整體語意與語氣皆完美契合。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句兩個資訊：護照遺失及詢問警察局位置；用詞自然且具禮貌（ค่ะ/คะ），與參考譯文意思相符，無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

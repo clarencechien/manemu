@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "Dạ, phòng của em là số 702, bạn em bị ngất xỉu rồi.",
+  "inputTranscript": "我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。",
+  "outputTranscript": "Số phòng của tôi là 702, bạn tôi bị ngất rồi ạ.",
+  "inputDurationMs": 5811,
+  "outputAudioMs": 3430,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 954,
+    "ttft_from_end_ms": 953,
+    "completion_lag_ms": 1465,
+    "ttfa_from_start_ms": 6953
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.944,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:35.775Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch máy hoàn toàn chính xác và tự nhiên, truyền tải đầy đủ thông tin từ câu gốc. Việc thêm kính ngữ 'ạ' ở cuối câu rất phù hợp với ngữ cảnh khẩn cấp khi gọi trợ giúp."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句資訊（房號702與朋友昏倒），無遺漏或錯誤，故語意忠實評為5。語言自然度高，但「tôi」與句尾敬語「ạ」搭配上與原參考的「dạ...em」有些微風格/敬語差異，故流暢度評4。無數字錯誤、否定顛倒或杜撰內容。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

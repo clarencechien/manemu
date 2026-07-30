@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T013",
+  "category": "transport",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "我剛剛在月台上把手機弄丟了。",
+  "reference": "Tôi vừa mới làm mất điện thoại trên sân ga.",
+  "inputTranscript": "我 刚 刚 在 乐 台 上 把 手 机 弄 丢 了 。",
+  "outputTranscript": "Dạ, tôi vừa mới đánh rơi điện thoại trên nền tảng ga tàu ạ.",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 3320,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 915,
+    "ttft_from_end_ms": 913,
+    "completion_lag_ms": 1682,
+    "ttfa_from_start_ms": 3814
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.333,
+    "coverage_ok": true,
+    "cer": 0.231
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:02.630Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch từ '月台' (sân ga) thành 'nền tảng ga tàu' là không chính xác. Trong tiếng Việt, 'nền tảng' chỉ dùng cho nghĩa trừu tượng hoặc công nghệ (platform), còn ga tàu phải dùng 'sân ga' hoặc 'thềm ga'. Lỗi này làm giảm độ tự nhiên và chính xác của câu dịch."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（剛剛在月台把手機弄丟了），用詞「đánh rơi」比「làm mất」更側重於「掉落」，但仍屬合理表達；句首與句尾的敬語詞（Dạ...ạ）為說話風格增添禮貌，非原文成分但不影響理解。唯一較不自然處為「nền tảng ga tàu」用詞混搭（通常說「sân ga」或「nền tảng」單用其一），因此流暢度略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,66 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T007",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "我要兩張到京都的車票,大人一張、小孩一張。",
+  "reference": "ขอตั๋วไปเกียวโตสองใบครับ ผู้ใหญ่หนึ่งใบ เด็กหนึ่งใบครับ",
+  "inputTranscript": "我 要 两 张 到 京 都 的 车 票 , 大 人 一 张 , 小 孩 一 张 。",
+  "outputTranscript": "ขอตั๋วไป เกียวโต สอง ใบ ค่ะ ผู้ใหญ่ หนึ่งใบ เด็ก หนึ่งใบ ค่ะ",
+  "inputDurationMs": 5051,
+  "outputAudioMs": 4240,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 971,
+    "ttft_from_end_ms": 949,
+    "completion_lag_ms": 1920,
+    "ttfa_from_start_ms": 6169
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2",
+      "1"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.962,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:10:50.424Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural, perfectly matching the meaning of the source text. The only difference from the reference is the polite particle 'ค่ะ' (female) instead of 'ครับ' (male), which is completely acceptable depending on the speaker's gender."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整表達原句意思（到京都兩張票：大人一張、小孩一張），所以語意忠實度高。語言自然度良好；唯一小缺點是詞與助詞間有多餘空格（可能為逐字稿斷詞造成）以及敬語助詞使用為“ค่ะ”（女性語氣），而參考譯文使用“ครับ”（男性語氣），但這不影響資訊正確性。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "เราจะไปถึงช้าสามสิบนาทีครับ ช่วยเก็บที่นั่งไว้ให้ได้ไหมครับ",
+  "inputTranscript": "我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?",
+  "outputTranscript": "พวกเราจะไปถึง ช้า กว่ากำหนด 30 นาที ยังสามารถ เก็บ โต๊ะ ไว้ให้ ได้ไหม ครับ/ค่ะ",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 5291,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 973,
+    "ttft_from_end_ms": 953,
+    "completion_lag_ms": 2725,
+    "ttfa_from_start_ms": 5373
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.155,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:20.877Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了「會晚30分鐘到」以及「能否保留位子」的意思，語意忠實度與流暢度皆極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原意（會晚30分鐘，詢問能否保留位子）。用詞雖有些微差異（「พวกเราจะ」 vs 「เราจะ」，以及「โต๊ะ」 vs 參考的「ที่นั่ง」），但不影響理解。句子有些斷裂與多餘空格，使得流暢度略受影響，故fluency評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

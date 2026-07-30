@@ -1,0 +1,64 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T047",
+  "category": "smalltalk",
+  "traps": [
+    "sentence-final",
+    "proper-noun"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "日本的夏天很熱,不過我覺得台北更熱。",
+  "reference": "ฤดูร้อนที่ญี่ปุ่นร้อนมากครับ แต่ผมรู้สึกว่าไทเปร้อนกว่าอีกครับ",
+  "inputTranscript": "日 本 的 夏 天 很 热 , 不 过 我 觉 得 台 北 更 热 。",
+  "outputTranscript": "ฤดูร้อนของญี่ปุ่นร้อนมากค่ะ แต่ฉันคิดว่าไทเปร้อนกว่าค่ะ",
+  "inputDurationMs": 4011,
+  "outputAudioMs": 4311,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 947,
+    "ttft_from_end_ms": 947,
+    "completion_lag_ms": 2128,
+    "ttfa_from_start_ms": 5147
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.885,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:46.807Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。雖然人稱代詞與語氣助詞使用了女性版本（ฉัน/ค่ะ），而參考譯文使用男性版本（ผม/ครับ），但在無上下文語境下兩者皆屬正確翻譯，語意完全忠實。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實、泰語自然流暢。唯與參考譯文在說話人表徵（機器譯文使用女性形式/ฉัน/ค่ะ，參考為男性形式/ผม/ครับ）不一致，屬禮貌/性別標記差異。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

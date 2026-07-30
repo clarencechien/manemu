@@ -1,0 +1,66 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T015",
+  "category": "dining",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "我們總共五個人,有兩個小孩,需要兒童椅。",
+  "reference": "Chúng tôi tổng cộng 5 người, có 2 trẻ nhỏ, cần ghế ngồi cho trẻ em ạ.",
+  "inputTranscript": "我 们 总 共 五 个 人 , 有 两 个 小 孩 , 需 要 儿 童 椅 。",
+  "outputTranscript": "Dạ, chúng tôi tổng cộng năm người, có hai trẻ em, cần ghế trẻ em ạ.",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4291,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 951,
+    "ttft_from_end_ms": 951,
+    "completion_lag_ms": 1951,
+    "ttfa_from_start_ms": 5251
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "5",
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.96,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:19.706Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完全符合原文意思。譯文中加入的敬語「Dạ」和「ạ」在越南語的服務場景中顯得十分自然得體。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實原意：人數（5人）、兩個小孩、需要兒童椅皆有正確表達。語氣上使用「Dạ...ạ」帶有禮貌，詞彙『ghế trẻ em』與參考譯文的『ghế ngồi cho trẻ em』僅為用詞差異，仍然自然可接受。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

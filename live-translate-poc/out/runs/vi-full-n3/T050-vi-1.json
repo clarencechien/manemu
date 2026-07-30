@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "Vậy thì làm phiền anh/chị nhé, sau này tôi sẽ liên lạc lại.",
+  "inputTranscript": "那 就 麻 烦 你 了 , 之 后 再 联 络 。",
+  "outputTranscript": "Dạ vậy thì phiền anh/chị nhé, liên lạc sau ạ.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3120,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 936,
+    "ttft_from_end_ms": 935,
+    "completion_lag_ms": 1566,
+    "ttfa_from_start_ms": 3936
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.75,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:20:22.357Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch giả đã chuyển ngữ rất chính xác và tự nhiên, giữ được sắc thái lịch sự của câu gốc tiếng Trung."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（表達禮貌請求與之後再聯絡），用詞與語氣自然貼切，與參考譯文差異為風格而非錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T020",
+  "category": "dining",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "請問可以幫我們分開結帳嗎?",
+  "reference": "Xin hỏi có thể tính tiền riêng cho chúng tôi được không ạ?",
+  "inputTranscript": "请 问 可 以 帮 我 们 分 开 结 帐 吗 ?",
+  "outputTranscript": "Dạ, cho em hỏi có thể chia tiền thanh toán riêng được không ạ?",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 3870,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 965,
+    "ttft_from_end_ms": 965,
+    "completion_lag_ms": 1933,
+    "ttfa_from_start_ms": 3866
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.044,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:38.964Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Câu dịch sử dụng kính ngữ lịch sự (Dạ, cho em hỏi... được không ạ?) rất phù hợp với ngữ cảnh giao tiếp."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句請求（詢問是否可以分開結帳）的語意，沒有遺漏關鍵資訊，故語意忠實度高。語句在越南語中可理解且禮貌，但用法上帶有口語向談話者自稱（\"cho em hỏi\"）及詞序/用詞稍微不同於參考譯文（如\"chia tiền thanh toán riêng\"略顯冗贅），因此在自然度上為良好但非完美。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T003",
+  "category": "directions",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "我不是要去機場,我是要去火車站。",
+  "reference": "Dạ em không đi sân bay, em muốn đi nhà ga xe lửa ạ.",
+  "inputTranscript": "我 不 是 要 去 机 场 , 我 是 要 去 火 车 站 。",
+  "outputTranscript": "Dạ, tôi không phải đi sân bay, tôi muốn đi ga tàu hỏa ạ.",
+  "inputDurationMs": 2931,
+  "outputAudioMs": 4080,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 986,
+    "ttft_from_end_ms": 985,
+    "completion_lag_ms": 1903,
+    "ttfa_from_start_ms": 4085
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.111,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:41.476Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思。雖然「không phải đi」在某些語境下可能被理解為「不必去」，但在這裡與後半句對比，語意依然十分清晰，且使用了禮貌語氣詞「Dạ... ạ」，非常符合口譯情境。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（表達不是去機場而是要去火車站），因此語意忠實度高。句子中「tôi không phải đi sân bay」的用法稍顯不自然，且代詞由參考譯文的「em」變為「tôi」，但不影響理解；整體語流可接受但有小幅不自然處，故流暢度略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

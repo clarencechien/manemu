@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T016",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我對蝦子過敏,餐點裡請不要放任何海鮮。",
+  "reference": "ฉันแพ้กุ้งค่ะ รบกวนไม่ใส่อาหารทะเลใดๆในอาหารเลยนะคะ",
+  "inputTranscript": "我 对 虾 子 过 敏 , 餐 点 里 请 不 要 放 任 何 海 鲜 。",
+  "outputTranscript": "ผมแพ้กุ้งครับ ในอาหารโปรดอย่าใส่ อาหารทะเล เลยนะครับ",
+  "inputDurationMs": 4491,
+  "outputAudioMs": 4361,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1018,
+    "ttft_from_end_ms": 973,
+    "completion_lag_ms": 1934,
+    "ttfa_from_start_ms": 5618
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.98,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:40.688Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思，泰語表達非常自然流暢，禮貌語氣也使用得當。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句含意（我對蝦子過敏，請不要在餐點放任何海鮮），因此語意忠實度為5。目標語通順但有輕微格式/語序問題（如「ใส่ อาหารทะเล」之間不必要空格與語序可更自然），因此自然度評4。性別用詞（ผม/ครับ）雖與參考譯文的女性用語不同，但原文未指定性別，故不視為錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,64 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T026",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "我考慮了一下,這個還是先不買好了。",
+  "reference": "Em suy nghĩ lại rồi, cái này thôi để lúc khác em mua ạ.",
+  "inputTranscript": "我 考 虑 了 一 下 , 这 个 还 是 先 不 买 好 了 。",
+  "outputTranscript": "Dạ, tôi suy nghĩ lại rồi, cái này tạm thời chưa mua đâu ạ.",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 3930,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 956,
+    "ttft_from_end_ms": 954,
+    "completion_lag_ms": 1868,
+    "ttfa_from_start_ms": 4355
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.05,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:57.080Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly conveys the meaning of the source text, translating '考慮了一下' as 'suy nghĩ lại rồi' and '先不買好了' as 'tạm thời chưa mua đâu ạ'. The tone is polite and appropriate."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（表達出『考慮過後暫時不買』），用詞自然，句子流暢。僅與參考譯文在第一人稱稱謂（tôi vs. em）與措辭上有細微差異，但不影響語意或禮貌，故評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

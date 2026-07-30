@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "ถ้าอย่างนั้นก็รบกวนด้วยนะครับ แล้วจะติดต่อกลับไปอีกทีครับ",
+  "inputTranscript": "那 就 麻 烦 你 了 , 之 后 再 联 络 。",
+  "outputTranscript": "ถ้าอย่างนั้นรบกวนด้วยนะ ครับ/ค่ะ แล้วค่อย ติดต่อกัน ใหม่นะครับ/ค่ะ",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3360,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1022,
+    "ttft_from_end_ms": 999,
+    "completion_lag_ms": 1741,
+    "ttfa_from_start_ms": 4021
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.071,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:20:34.856Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思。流暢度方面，譯文中出現了「ครับ/ค่ะ」（男/女性敬語助詞的斜線選項），這在機器翻譯中常見，但稍微影響了單一語音輸出的自然度，除此之外語法和用詞都非常自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達原句意思（請求對方幫忙，之後再聯絡），但用詞與語序稍有不自然（如多餘的空格與重複的敬語標記“ครับ/ค่ะ”、“แล้วค่อย ติดต่อกัน ใหม่นะ”聽起來不順），未完全表現出「會再聯絡」的主動語氣（參考譯文為“จะติดต่อกลับไปอีกที”更明確）。因此語意忠實度較高（4），但目標語自然度需降一級（3）。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

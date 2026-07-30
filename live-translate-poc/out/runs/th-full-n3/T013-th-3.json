@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T013",
+  "category": "transport",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "我剛剛在月台上把手機弄丟了。",
+  "reference": "เมื่อกี้ทำโทรศัพท์มือถือหายที่ชานชาลาค่ะ",
+  "inputTranscript": "我 刚 刚 在 乐 台 上 把 手 机 弄 丢 了 。",
+  "outputTranscript": "ผมเพิ่งทำมือถือหายบนชานชาลาเมื่อกี้ครับ",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 2970,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 939,
+    "ttft_from_end_ms": 938,
+    "completion_lag_ms": 1684,
+    "ttfa_from_start_ms": 3859
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.975,
+    "coverage_ok": true,
+    "cer": 0.231
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:05.462Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates all elements of the source sentence: '我剛剛' (เมื่อกี้/เพิ่ง...เมื่อกี้), '在月台上' (บนชานชาลา), and '把手機弄丟了' (ทำมือถือหาย). The addition of the polite particle 'ครับ' and pronoun 'ผม' makes the sentence sound natural and polite in Thai."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句含意（剛剛在月台把手機弄丟），語義忠實，故 adequacy=5。泰語表達自然流暢，語序和用詞都可接受（雖原文未標明說話者性別，機譯使用ผม/ครับ屬正常選擇），故 fluency=5。未發現遺漏、增補或事實錯誤，亦無錯誤旗標。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

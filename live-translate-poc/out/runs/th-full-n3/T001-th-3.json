@@ -1,0 +1,61 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T001",
+  "category": "directions",
+  "traps": [],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "請問車站在哪裡?怎麼走比較快?",
+  "reference": "ขอโทษครับ สถานีอยู่ที่ไหนครับ ไปทางไหนถึงจะเร็วที่สุดครับ",
+  "inputTranscript": "请 问 车 站 在 哪 里 ? 怎 么 走 比 较 快 ?",
+  "outputTranscript": "ขอถามหน่อยครับ สถานี อยู่ที่ไหนครับ ไปทางไหน เร็วที่สุดครับ",
+  "inputDurationMs": 3211,
+  "outputAudioMs": 4590,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 968,
+    "ttft_from_end_ms": 946,
+    "completion_lag_ms": 1921,
+    "ttfa_from_start_ms": 4368
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:24.747Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。將「請問」翻譯為「ขอถามหน่อยครับ」十分道地，整句語意完整，語氣禮貌，與參考譯文幾乎一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文傳達出原句主要訊息（詢問車站位置與如何走比較快）。機譯用「ขอถามหน่อยครับ」替代參考譯文的「ขอโทษครับ」，語氣仍可接受；但缺少「ถึงจะ」等連接詞，使得「怎麼走比較快？」的表述稍嫌不夠自然與完整（語序與連接詞處理不夠精練）。整體仍可理解，流暢度良好但非最佳。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

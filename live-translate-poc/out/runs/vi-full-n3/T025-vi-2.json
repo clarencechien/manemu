@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T025",
+  "category": "shopping",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "有沒有 limited edition 的款式?我在 Instagram 上看到的。",
+  "reference": "Có mẫu limited edition không ạ? Em thấy trên Instagram.",
+  "inputTranscript": "有 没 有 limited edition 的 款 式 ? 我 在 Instagram 上 看 到 的 。",
+  "outputTranscript": "Dạ có mẫu limited edition không ạ? Em có thấy trên Instagram đấy ạ.",
+  "inputDurationMs": 4531,
+  "outputAudioMs": 4800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 936,
+    "ttft_from_end_ms": 915,
+    "completion_lag_ms": 2338,
+    "ttfa_from_start_ms": 5636
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.182,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:41.445Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. It successfully conveys the meaning of the source text and uses appropriate polite particles (Dạ, ạ) in Vietnamese, making it sound very natural and respectful."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意義（詢問是否有 limited edition 款式，並表明是在 Instagram 上看到），沒有遺漏或曲解。用詞與語氣在越南語口語情境下自然（雖有禮貌語氣詞「Dạ」「ạ」與「đấy ạ」，但屬正常口語強調），因此語意忠實與流暢度均評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

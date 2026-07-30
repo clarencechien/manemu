@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T029",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "我沒有訂房,請問今晚還有空房嗎?",
+  "reference": "Em chưa đặt phòng, cho em hỏi tối nay còn phòng trống không ạ?",
+  "inputTranscript": "我 没 有 订 房 , 请 问 今 晚 还 有 空 房 吗 ?",
+  "outputTranscript": "Dạ tôi không có đặt phòng trước ạ, cho hỏi tối nay còn phòng trống không ạ?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 4160,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 945,
+    "ttft_from_end_ms": 944,
+    "completion_lag_ms": 1822,
+    "ttfa_from_start_ms": 4545
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.213,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:42.748Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text and uses appropriate polite particles (Dạ, ạ) in Vietnamese."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意：表示沒有訂房並詢問今晚是否還有空房。用詞自然且禮貌（\"Dạ... ạ\"），語序流暢。與參考譯文唯一差別是代詞選擇（機譯用 \"tôi\"，參考用 \"em\"），屬於語氣差異但不影響語意或禮貌，因此評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

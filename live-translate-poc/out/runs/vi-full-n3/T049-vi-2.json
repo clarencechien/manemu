@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T049",
+  "category": "smalltalk",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "我是從台灣來的,第一次來大阪玩。",
+  "reference": "Tôi đến từ Đài Loan, đây là lần đầu tôi đến Osaka chơi.",
+  "inputTranscript": "我 是 从 台 湾 来 的 , 第 一 次 来 大 阪 玩 。",
+  "outputTranscript": "Dạ, tôi từ Đài Loan đến, đây là lần đầu tiên tôi đến Osaka chơi ạ.",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 4711,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 957,
+    "ttft_from_end_ms": 957,
+    "completion_lag_ms": 2004,
+    "ttfa_from_start_ms": 4957
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.171,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:20:14.738Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。加入的敬詞「Dạ」和「ạ」符合口譯情境中的禮貌語氣，語意完全忠實，流暢度極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實原意，語句自然通順。口語化的語助詞“Dạ”和句尾敬語“ạ”雖加入，但並不影響意義或自然度，符合參考譯文。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

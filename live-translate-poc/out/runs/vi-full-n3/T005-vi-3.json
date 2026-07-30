@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T005",
+  "category": "directions",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "請問淺草寺跟晴空塔是同一個方向嗎?",
+  "reference": "Dạ cho hỏi chùa Sensoji với tháp Skytree có cùng hướng không ạ?",
+  "inputTranscript": "请 问 前 草 寺 跟 晴 空 塔 是 同 一 个 方 向 吗 ?",
+  "outputTranscript": "Dạ cho hỏi là Chùa Sensoji với Tháp Tokyo có cùng hướng không ạ?",
+  "inputDurationMs": 4331,
+  "outputAudioMs": 4610,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1000,
+    "ttft_from_end_ms": 999,
+    "completion_lag_ms": 1973,
+    "ttfa_from_start_ms": 5500
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:10:20.516Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文將「晴空塔」(Skytree) 誤譯為「東京鐵塔」(Tháp Tokyo)，導致專有名詞錯誤，其餘部分語意與文法皆正確且自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問淺草寺與晴空塔方向是否相同），語句自然流暢。但將“晴空塔”譯為“Tháp Tokyo”而非“Tháp Skytree/Tháp Skytree (Tokyo Skytree)”，屬於專有名詞錯誤，故將adequacy評為4並標記name_mangled。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

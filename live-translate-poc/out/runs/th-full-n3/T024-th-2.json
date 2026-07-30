@@ -1,0 +1,66 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T024",
+  "category": "shopping",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "這件如果打八折的話,我就買兩件。",
+  "reference": "ถ้าตัวนี้ลดยี่สิบเปอร์เซ็นต์ จะซื้อสองตัวเลยค่ะ",
+  "inputTranscript": "这 件 如 果 打 八 折 的 话 , 我 就 买 两 件 。",
+  "outputTranscript": "ถ้าตัวนี้ลดยี่สิบเปอร์เซ็นต์ ผมจะซื้อสองตัวครับ",
+  "inputDurationMs": 3491,
+  "outputAudioMs": 3090,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 948,
+    "ttft_from_end_ms": 948,
+    "completion_lag_ms": 1683,
+    "ttfa_from_start_ms": 4547
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:35.329Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. '打八折' (20% off) is correctly translated as 'ลดยี่สิบเปอร์เซ็นต์' (20% discount) in Thai. The addition of the pronoun 'ผม' (I) and the polite particle 'ครับ' is appropriate and natural for spoken Thai."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句條件與結果（若打八折就買兩件），語意忠實且目標語（泰語）自然流暢。性別語氣（原句無明示，機譯用男性代名詞與敬語）為可接受差異，未造成誤解。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

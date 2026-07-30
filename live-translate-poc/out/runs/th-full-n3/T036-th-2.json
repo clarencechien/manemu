@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T036",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我頭很暈,但是我沒有心臟病的病史。",
+  "reference": "ฉันรู้สึกเวียนหัวมาก แต่ไม่มีประวัติเป็นโรคหัวใจค่ะ",
+  "inputTranscript": "我 头 很 晕 , 但 是 我 没 有 心 脏 病 的 病 史 。",
+  "outputTranscript": "ผมเวียนศีรษะมาก ครับ แต่ผมไม่มีประวัติโรคหัวใจครับ",
+  "inputDurationMs": 3731,
+  "outputAudioMs": 4000,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 951,
+    "ttft_from_end_ms": 930,
+    "completion_lag_ms": 1739,
+    "ttfa_from_start_ms": 4851
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.96,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:14.814Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text. The choice of words like 'เวียนศีรษะ' (dizzy) and 'ประวัติโรคหัวใจ' (history of heart disease) is precise and appropriate. The addition of polite particles (ครับ) makes the sentence sound natural and polite."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達了原句含意（我頭暈但沒有心臟病病史），泰語表達自然流暢。性別或敬語選擇（ผม/ครับ vs ฉัน/ค่ะ）屬於措辭差異，不構成錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

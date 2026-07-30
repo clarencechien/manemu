@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T018",
+  "category": "dining",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我要一份 tonkotsu 拉麵,麵要硬一點。",
+  "reference": "ขอราเมงทงคตสึหนึ่งที่ค่ะ ขอเส้นแข็งหน่อยนะคะ",
+  "inputTranscript": "我 要 一 份 豚 骨 汁 拉 面 , 面 要 硬 一 点 。",
+  "outputTranscript": "ขอทงคตสึราเมนที่หนึ่งครับ ขอเส้นแข็งหน่อยนะครับครับ",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 4170,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 934,
+    "ttft_from_end_ms": 934,
+    "completion_lag_ms": 1913,
+    "ttfa_from_start_ms": 5033
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.163,
+    "coverage_ok": true,
+    "cer": 0.421
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:11.828Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有語意。唯一的缺點是結尾出現了重複的禮貌助詞「ครับครับ」，這對流暢度有輕微影響，但整體而言非常自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（要一份豚骨拉麵、麵要硬一點），故語意忠實度高。語句可理解但有些小瑕疵：'ที่หนึ่ง' 的語序較少見且末尾出現重複的敬語 'ครับครับ' 使得自然度略受影響；此外參考譯文使用女性敬語 'ค่ะ'，機譯用男聲 'ครับ' 但不影響理解。因此給 fluency 4。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

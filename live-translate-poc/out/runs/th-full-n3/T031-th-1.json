@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T031",
+  "category": "hotel",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "房間的冷氣好像壞了,可以請人來看一下嗎?",
+  "reference": "แอร์ในห้องดูเหมือนจะเสีย ขอให้คนมาดูให้หน่อยได้ไหมคะ",
+  "inputTranscript": "房 间 的 冷 气 好 像 坏 了 , 可 以 请 人 来 看 一 下 吗 ?",
+  "outputTranscript": "เครื่องปรับอากาศในห้อง ดูเหมือน จะเสีย นะครับ ช่วย ให้ใคร มาดู ให้หน่อย ได้ไหม ครับ",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 4780,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1061,
+    "ttft_from_end_ms": 932,
+    "completion_lag_ms": 3576,
+    "ttfa_from_start_ms": 5161
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.451,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:07.934Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地翻譯了原文的意思。雖然機器譯文使用了男性敬語助詞「ครับ」而參考譯文使用女性的「คะ」，但這在口譯中完全可以接受，且語氣十分禮貌客氣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思：表示房間的冷氣似乎壞了，請求人來檢查。語義忠實且自然流暢。唯一差異為敬語性別（機譯用「ครับ」而參考譯文用「คะ」），但不影響理解，故不視為錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

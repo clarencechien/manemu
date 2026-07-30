@@ -1,0 +1,64 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T026",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "我考慮了一下,這個還是先不買好了。",
+  "reference": "Em suy nghĩ lại rồi, cái này thôi để lúc khác em mua ạ.",
+  "inputTranscript": "我 考 虑 了 一 下 , 这 个 还 是 先 不 买 好 了 。",
+  "outputTranscript": "Dạ, tôi cân nhắc rồi, cái này tạm thời không mua chắc được ạ.",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 3721,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1043,
+    "ttft_from_end_ms": 1043,
+    "completion_lag_ms": 3054,
+    "ttfa_from_start_ms": 4453
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.125,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:58.850Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch truyền tải đầy đủ ý nghĩa của câu gốc. Tuy nhiên, cách diễn đạt ở vế sau \"không mua chắc được\" nghe khá gượng gạo và không tự nhiên trong tiếng Việt. Nên sửa thành \"chắc là tạm thời chưa mua\" hoặc \"thôi tạm thời không mua nữa\"."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文大致表達出不打算先買的意思，但有幾個問題：1) 使用了『tôi』而非原文更口語親近的『em』，改變了說話者的稱謂與語氣（honorific_off=true）；2) 加入了『chắc được』等不必要且改變語氣的成分，帶入了不在原文中的不確定性（hallucination=true）；3) 句子語序與用法不夠自然，尤其『tạm thời không mua chắc được』不通順。基於以上，語意忠實度給3分，目標語自然度給2分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

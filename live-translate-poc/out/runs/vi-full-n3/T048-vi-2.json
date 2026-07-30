@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T048",
+  "category": "smalltalk",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "不用了,謝謝,我只是看看而已。",
+  "reference": "Dạ không cần đâu, cảm ơn, tôi chỉ xem thử thôi.",
+  "inputTranscript": "不 用 了 , 谢 谢 , 我 只 是 看 看 而 已 。",
+  "outputTranscript": "Dạ không cần đâu ạ, em chỉ xem thôi ạ.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 1960,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1058,
+    "ttft_from_end_ms": 1058,
+    "completion_lag_ms": 1337,
+    "ttfa_from_start_ms": 4058
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.794,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:58.819Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The translation is natural and polite, but it omitted the translation for '謝謝' (thank you / cảm ơn)."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致正確且自然，但缺少原句中的「謝謝/感謝」一項（未表達感謝），因此有遺漏，故略降一分。語氣上使用「em/ạ」雖不同於參考的『tôi/感謝』，但仍為自然、可接受的口語表達。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

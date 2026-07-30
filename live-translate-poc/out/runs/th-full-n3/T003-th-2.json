@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T003",
+  "category": "directions",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我不是要去機場,我是要去火車站。",
+  "reference": "ผมไม่ได้จะไปสนามบินนะครับ ผมจะไปสถานีรถไฟครับ",
+  "inputTranscript": "我 不 是 要 去 机 场 , 我 是 要 去 火 车 站 。",
+  "outputTranscript": "ฉันไม่ได้จะไปสนามบินค่ะ ฉันจะไปสถานีรถไฟค่ะ",
+  "inputDurationMs": 2931,
+  "outputAudioMs": 3760,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 932,
+    "ttft_from_end_ms": 931,
+    "completion_lag_ms": 1808,
+    "ttfa_from_start_ms": 4032
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.955,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:43.085Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完全正確且流暢。與參考譯文的差異僅在於說話者性別（機器譯文使用女性代名詞「ฉัน」與語氣助詞「ค่ะ」，參考譯文使用男性代名詞「ผม」與語氣助詞「ครับ」），在無上下文指定性別的情況下，此翻譯完全正確。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整保留原意（否認要去機場、表明要去火車站），語句在泰語中自然流暢。唯一差異是人稱與禮貌語氣：原文參考使用男性第一人稱與語尾助詞（ผม...นะครับ...ครับ），機譯使用女性第一人稱與ค่ะ，屬於敬語/性別表現上的偏差，故標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

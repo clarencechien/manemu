@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T040",
+  "category": "appointment",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "不好意思,我想把預約從星期五改到星期六,不是取消。",
+  "reference": "ขอโทษนะคะ ฉันอยากเปลี่ยนนัดจากวันศุกร์เป็นวันเสาร์ ไม่ได้ยกเลิกค่ะ",
+  "inputTranscript": "不 好 意 思 , 我 想 把 预 约 从 星 期 五 改 到 星 期 六 , 不 是 取 消 。",
+  "outputTranscript": "ขอโทษนะคะ ฉัน อยากจะ เปลี่ยน วันนัด จากวัน ศุกร์ เป็นวัน เสาร์ ค่ะ ไม่ใช่ ยกเลิก นะคะ",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 6251,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1024,
+    "ttft_from_end_ms": 982,
+    "completion_lag_ms": 2386,
+    "ttfa_from_start_ms": 7624
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.141,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:18:18.302Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息，語氣也十分客氣禮貌，與參考譯文幾乎一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地傳達原意：表示要把預約從星期五改到星期六，而不是取消。語句自然，使用了適當的禮貌語氣（ขอโทษนะคะ/ค่ะ）；僅有少許空格分隔在逐字稿中，但不影響理解或流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

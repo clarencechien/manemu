@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T048",
+  "category": "smalltalk",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "不用了,謝謝,我只是看看而已。",
+  "reference": "ไม่เป็นไรครับ ขอบคุณครับ ผมแค่ดูเฉยๆครับ",
+  "inputTranscript": "不 用 了 , 谢 谢 , 我 只 是 看 看 而 已 。",
+  "outputTranscript": "ไม่ต้องครับ ขอบคุณครับ ผมแค่ ดูเฉยๆ ครับ",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3310,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 953,
+    "ttft_from_end_ms": 951,
+    "completion_lag_ms": 1552,
+    "ttfa_from_start_ms": 3952
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.947,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:20:03.706Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural, conveying the exact meaning of the source text with appropriate politeness particles, matching the reference translation almost perfectly."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（婉拒並表示只是看看），用詞與參考譯文稍有不同（ไม่ต้อง vs 不เป็นไร），但同樣自然且禮貌，語句流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

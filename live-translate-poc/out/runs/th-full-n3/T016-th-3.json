@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T016",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "我對蝦子過敏,餐點裡請不要放任何海鮮。",
+  "reference": "ฉันแพ้กุ้งค่ะ รบกวนไม่ใส่อาหารทะเลใดๆในอาหารเลยนะคะ",
+  "inputTranscript": "我 对 虾 子 过 敏 , 餐 点 里 请 不 要 放 任 何 海 鲜 。",
+  "outputTranscript": "ผมแพ้กุ้งครับ รบกวน ไม่ใส่ อาหารทะเล ทุกชนิด ในอาหาร เลยนะครับ",
+  "inputDurationMs": 4491,
+  "outputAudioMs": 4910,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 933,
+    "ttft_from_end_ms": 931,
+    "completion_lag_ms": 2161,
+    "ttfa_from_start_ms": 5533
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.12,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:50.617Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且流暢。機器譯文使用了男性敬語（ผม/ครับ），而參考譯文使用女性敬語（ฉัน/ค่ะ），這在沒有上下文的情況下完全可以接受，不影響語意忠實度與自然度。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達原文意思（我對蝦子過敏，請不要放任何海鮮），故語意忠實評5。語句語法通順但有多餘空格與些微重複詞序，流暢度略減，評4。使用了男性自稱與語尾（ผม...ครับ），與參考譯文的女性形式不同，標記 honorific_off。其餘無誤、無遺漏或杜撰。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

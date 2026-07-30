@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T036",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "我頭很暈,但是我沒有心臟病的病史。",
+  "reference": "Dạ đầu em rất chóng mặt, nhưng em không có tiền sử bệnh tim.",
+  "inputTranscript": "我 头 很 晕 , 但 是 我 没 有 心 脏 病 的 病 史 。",
+  "outputTranscript": "Dạ, tôi rất chóng mặt, nhưng tôi chưa từng có tiền sử bệnh tim.",
+  "inputDurationMs": 3731,
+  "outputAudioMs": 3770,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 967,
+    "ttft_from_end_ms": 966,
+    "completion_lag_ms": 1797,
+    "ttfa_from_start_ms": 4866
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.044,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:14.695Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch máy rất chính xác và tự nhiên. Ý nghĩa của câu gốc được truyền tải đầy đủ và trôi chảy sang tiếng Việt."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句語意：頭暈和沒有心臟病病史都被正確表達。語句在越南語中自然流暢，僅人稱（我/em）與參考譯文不同，但不影響正確性或禮貌，故評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

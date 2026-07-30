@@ -1,0 +1,61 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "Cứu tôi! Làm ơn gọi xe cấp cứu giúp tôi!",
+  "inputTranscript": "救 命 , 请 帮 我 叫 救 护 车 。",
+  "outputTranscript": "Cứu với ạ, làm ơn gọi xe cấp cứu giúp tôi với!",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 2870,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 963,
+    "ttft_from_end_ms": 962,
+    "completion_lag_ms": 1460,
+    "ttfa_from_start_ms": 3563
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.138,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:48.539Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and extremely natural. It perfectly conveys the urgency and meaning of the source text in Vietnamese."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文請求救護車的意思，語意忠實。用詞上有口語化與冗餘（「Cứu với ạ」和句尾的「với」稍嫌不自然或多餘），因此流暢度略低於完美。無遺漏或增譯錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,66 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T017",
+  "category": "dining",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "這杯不要加冰,然後大杯的改成中杯,總共三杯。",
+  "reference": "Ly này xin đừng cho đá, rồi đổi cỡ lớn thành cỡ vừa, tổng cộng 3 ly ạ.",
+  "inputTranscript": "这 杯 不 要 加 冰 , 然 后 大 杯 的 改 成 中 杯 , 总 共 三 杯 。",
+  "outputTranscript": "Ly này không đá ạ, còn ly lớn đổi thành ly vừa, tổng cộng là ba ly ạ.",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 5140,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 948,
+    "ttft_from_end_ms": 947,
+    "completion_lag_ms": 2163,
+    "ttfa_from_start_ms": 7548
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.98,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:04.031Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有語意，並在句末加上了符合服務場景的禮貌語氣詞「ạ」，非常貼切。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：『不要加冰』、杯型從大杯改成中杯、總共三杯皆正確。用語自然、有敬語『ạ』，僅在措辭上與參考譯文略有不同（『không đá』比『xin đừng cho đá』更口語），但並不影響準確性與流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

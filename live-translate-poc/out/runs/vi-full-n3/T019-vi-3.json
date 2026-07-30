@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T019",
+  "category": "dining",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "這道菜看起來很好吃,可是我已經吃飽了。",
+  "reference": "Món này nhìn ngon quá, nhưng tôi no rồi.",
+  "inputTranscript": "这 道 菜 看 起 来 很 好 吃 , 可 是 我 已 经 吃 饱 了 。",
+  "outputTranscript": "Món này trông ngon quá, nhưng tôi no mất rồi ạ.",
+  "inputDurationMs": 4051,
+  "outputAudioMs": 2900,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 938,
+    "ttft_from_end_ms": 937,
+    "completion_lag_ms": 1508,
+    "ttfa_from_start_ms": 5138
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.167,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:31.168Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Việc thêm từ \"mất rồi\" và kính ngữ \"ạ\" ở cuối câu làm cho câu nói trở nên tự nhiên và lịch sự hơn trong văn cảnh giao tiếp hàng ngày."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意與原文一致，保留“看起來很好吃但已經吃飽”的意思。用詞（“trông”/“nhìn”皆可）與語氣自然，雖加了口語強調“mất”與禮貌語尾“ạ”，但不影響忠實性或流暢性。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

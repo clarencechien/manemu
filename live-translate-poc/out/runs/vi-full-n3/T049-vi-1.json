@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T049",
+  "category": "smalltalk",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "我是從台灣來的,第一次來大阪玩。",
+  "reference": "Tôi đến từ Đài Loan, đây là lần đầu tôi đến Osaka chơi.",
+  "inputTranscript": "我 是 从 台 湾 来 的 , 第 一 次 来 大 阪 玩 。",
+  "outputTranscript": "Dạ, tôi đến từ Đài Loan, đây là lần đầu tiên tôi đến Osaka chơi ạ.",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 4950,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 982,
+    "ttft_from_end_ms": 957,
+    "completion_lag_ms": 2042,
+    "ttfa_from_start_ms": 4982
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.171,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:20:07.913Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Việc thêm các từ kính ngữ 'Dạ', 'ạ' làm cho câu nói trở nên lịch sự và phù hợp hơn trong ngữ cảnh giao tiếp trực tiếp."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（來自台灣、第一次來大阪玩），語氣加入敬語『Dạ...ạ』雖與參考譯文略有不同但仍自然且可接受，句子流暢且無資訊遺失或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

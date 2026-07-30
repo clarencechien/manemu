@@ -1,0 +1,64 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T012",
+  "category": "transport",
+  "traps": [
+    "honorific",
+    "proper-noun"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "不好意思,可以幫我看一下這班車是不是往橫濱的嗎?",
+  "reference": "Dạ xin lỗi, anh/chị xem giúp tôi chuyến này có phải đi Yokohama không ạ?",
+  "inputTranscript": "不 好 意 思 , 可 以 帮 我 看 一 下 这 班 车 是 不 是 往 横 滨 的 吗 ?",
+  "outputTranscript": "Dạ xin hỏi, có thể xem giúp tôi xe này có phải là đi Yokohama không ạ?",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4690,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 916,
+    "ttft_from_end_ms": 916,
+    "completion_lag_ms": 1927,
+    "ttfa_from_start_ms": 5216
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.945,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:52.533Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「Dạ xin hỏi」在越南語中是極為禮貌且符合情境的問話開頭，完美對應「不好意思」。「xe này」與「chuyến này」皆能精確表達「這班車」的意思，整句翻譯流暢無瑕疵。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯基本保留原意，詢問是否為開往橫濱的班車。差異在於開頭用語與名詞選擇：原文「不好意思」更接近「Dạ xin lỗi」，機譯用「Dạ xin hỏi」語氣稍有不同；「這班車」譯為「xe này」而非更精確的「chuyến này」。句末的「có phải là đi Yokohama không ạ?」語序和「là」的使用略不自然，但整體可理解。故語意忠實與自然度均為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

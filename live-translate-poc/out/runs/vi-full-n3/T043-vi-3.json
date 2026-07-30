@@ -1,0 +1,64 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T043",
+  "category": "appointment",
+  "traps": [
+    "negation",
+    "honorific"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "請問最晚可以幾點取消,而不用付取消費?",
+  "reference": "Dạ cho tôi hỏi, muộn nhất là mấy giờ thì có thể hủy mà không phải trả phí hủy ạ?",
+  "inputTranscript": "请 问 最 晚 可 以 几 点 取 消 , 而 不 用 付 取 消 费 ?",
+  "outputTranscript": "Dạ cho hỏi muộn nhất có thể hủy lúc mấy giờ mà không phải trả phí hủy ạ?",
+  "inputDurationMs": 4411,
+  "outputAudioMs": 5230,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 990,
+    "ttft_from_end_ms": 970,
+    "completion_lag_ms": 2110,
+    "ttfa_from_start_ms": 5589
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.915,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:18:59.018Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地翻譯了原文的意思，語氣禮貌，完全符合參考譯文的語意與流暢度。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且準確地傳達了原文詢問最晚取消時間且不用付取消費的意思。句子語序與用詞在越南語中自然（帶有禮貌語氣“Dạ...ạ”），與參考譯文差異很小，無實質錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

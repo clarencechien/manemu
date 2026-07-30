@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T035",
+  "category": "emergency",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我的護照不見了,請問警察局在哪裡?",
+  "reference": "หนังสือเดินทางของฉันหายค่ะ ขอถามหน่อยค่ะ สถานีตำรวจอยู่ที่ไหนคะ",
+  "inputTranscript": "我 的 护 照 不 见 了 , 请 问 警 察 局 在 哪 里 ?",
+  "outputTranscript": "พาสปอร์ตของฉันหาย ค่ะ ไม่ทราบว่า สถานีตำรวจ อยู่ที่ไหน คะ?",
+  "inputDurationMs": 3571,
+  "outputAudioMs": 4080,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1028,
+    "ttft_from_end_ms": 1027,
+    "completion_lag_ms": 2027,
+    "ttfa_from_start_ms": 4729
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.852,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:59.650Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. 'พาสปอร์ต' is a very common loanword for passport in Thai, and 'ไม่ทราบว่า...อยู่ที่ไหน' is a polite and natural way to ask for directions, perfectly matching the source meaning."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：『我的護照不見了，請問警察局在哪裡？』正確譯為『พาสปอร์ตของฉันหาย... สถานีตำรวจอยู่ที่ไหนคะ?』。語氣與禮貌助詞使用接近參考譯文，表達自然流暢。沒有遺漏或錯誤信息。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

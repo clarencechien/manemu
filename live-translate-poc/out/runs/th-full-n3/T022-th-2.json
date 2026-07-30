@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T022",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "太貴了,算我三千塊可以嗎?",
+  "reference": "แพงไปหน่อยค่ะ คิดให้หน่อยเป็นสามพันบาทได้ไหมคะ",
+  "inputTranscript": "太 贵 了 , 算 我 3000 块 可 以 了 。",
+  "outputTranscript": "แพงเกินไปครับ คิด ผม 3,000 บาท ได้ไหมครับ",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 3180,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 941,
+    "ttft_from_end_ms": 941,
+    "completion_lag_ms": 1669,
+    "ttfa_from_start_ms": 3842
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.778,
+    "coverage_ok": true,
+    "cer": 0.455
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:09.410Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思。語意忠實度極高。在流暢度方面，'คิด ผม' 中間有空格且語氣稍微不夠自然（通常會說 'คิดผม' 或 'คิดให้ผม'），但整體上泰文讀起來依然通順易懂。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文保留原意——表示太貴並詢問能否算三千塊——數字與請求都正確，因此語意忠實度高（4分）。但目標語不夠自然，主要問題是語序與用詞：應為「คิดให้ผม/ฉันเป็นสามพันบาทได้ไหม」或更自然的「คิดให้หน่อยเป็นสามพันบาทได้ไหมคะ/ครับ」，而機器譯文出現「คิด ผม」的斷詞錯誤與少了介詞，聽起來不流暢；此外參考譯文使用女性敬語「ค่ะ/คะ」，機器用男性「ครับ」，故敬語性別不符（標記 honorific_off）。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

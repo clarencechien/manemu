@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "เราจะไปถึงช้าสามสิบนาทีครับ ช่วยเก็บที่นั่งไว้ให้ได้ไหมครับ",
+  "inputTranscript": "我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?",
+  "outputTranscript": "พวกเราจะไปถึง ช้า 30 นาที ยัง สำรอง ที่นั่ง ไว้ให้ ได้ไหม ครับ",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 4720,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 961,
+    "ttft_from_end_ms": 939,
+    "completion_lag_ms": 1954,
+    "ttfa_from_start_ms": 5360
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.914,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:10.855Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分禮貌，與參考譯文高度契合。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完整，表達了“我們會晚三十分鐘到，能否保留位子”的請求，資訊無遺漏，故 adequacy 給 5。語句有些不自然：使用數字「30」代替中文數字、詞序與助詞（如“ยัง”）使用略顯生硬，且斷詞/空格問題使流暢度下降，故 fluency 給 3。沒有出現數字錯誤、否定顛倒、稱謂問題、名字錯譯、遺漏或杜撰資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

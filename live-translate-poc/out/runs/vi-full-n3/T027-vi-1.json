@@ -1,0 +1,65 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T027",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "可以退稅嗎?我總共買了超過五千日圓。",
+  "reference": "Cho em hỏi có được hoàn thuế không ạ? Em mua tổng cộng hơn 5000 yên rồi.",
+  "inputTranscript": "可 以 退 税 吗 ? 我 总 共 买 了 超 过 五 千 日 元 。",
+  "outputTranscript": "Dạ, có thể hoàn thuế được không ạ? Tôi đã mua tổng cộng hơn năm nghìn yên rồi ạ.",
+  "inputDurationMs": 3771,
+  "outputAudioMs": 4560,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1000,
+    "ttft_from_end_ms": 979,
+    "completion_lag_ms": 2050,
+    "ttfa_from_start_ms": 4901
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "5000"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.093,
+    "coverage_ok": true,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:06.222Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text and uses appropriate polite particles (Dạ, ạ) suitable for the context, matching the reference translation closely."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問是否可退稅與購買金額），語句在目標語上自然流暢。僅在代詞禮貌層次上與參考譯文不同（Tôi vs. Em），但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

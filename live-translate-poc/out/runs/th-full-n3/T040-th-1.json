@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T040",
+  "category": "appointment",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "不好意思,我想把預約從星期五改到星期六,不是取消。",
+  "reference": "ขอโทษนะคะ ฉันอยากเปลี่ยนนัดจากวันศุกร์เป็นวันเสาร์ ไม่ได้ยกเลิกค่ะ",
+  "inputTranscript": "不 好 意 思 , 我 想 把 预 约 从 星 期 五 改 到 星 期 六 , 不 是 取 消 。",
+  "outputTranscript": "ขอโทษนะครับ ผม อยากจะ เปลี่ยนการ นัดหมาย จาก วันศุกร์ เป็นวัน เสาร์ ครับ ไม่ ใช่ยกเลิก ครับ",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 5820,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 961,
+    "ttft_from_end_ms": 961,
+    "completion_lag_ms": 2317,
+    "ttfa_from_start_ms": 7560
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.234,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:18:06.307Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text, changing the appointment from Friday to Saturday instead of cancelling it, using appropriate polite particles."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，正確表達要把預約從星期五改到星期六並非取消。語氣使用男性敬語（ครับ/ผม），與參考譯文的女性用語不同但不影響正確性。少量斷詞/口語痕跡使流暢度略受影響，故 fluency 評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

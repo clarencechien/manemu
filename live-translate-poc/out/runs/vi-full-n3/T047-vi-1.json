@@ -1,0 +1,64 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T047",
+  "category": "smalltalk",
+  "traps": [
+    "sentence-final",
+    "proper-noun"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "日本的夏天很熱,不過我覺得台北更熱。",
+  "reference": "Mùa hè ở Nhật nóng lắm, nhưng tôi thấy Đài Bắc còn nóng hơn.",
+  "inputTranscript": "日 本 的 夏 天 很 热 , 不 过 我 觉 得 台 北 更 热 。",
+  "outputTranscript": "Mùa hè ở Nhật Bản rất nóng, nhưng tôi thấy Đài Bắc còn nóng hơn.",
+  "inputDurationMs": 4011,
+  "outputAudioMs": 4360,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 898,
+    "ttft_from_end_ms": 898,
+    "completion_lag_ms": 1719,
+    "ttfa_from_start_ms": 5098
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.067,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:43.109Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is exceptionally accurate and natural. It conveys the exact meaning of the source text and is grammatically flawless in Vietnamese, almost identical to the reference translation."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：原句「日本的夏天很熱, 不過我覺得台北更熱。」被正確表達為越南語，語序與詞彙自然（Mùa hè ở Nhật Bản rất nóng, nhưng tôi thấy Đài Bắc còn nóng hơn.）。與參考譯文差異僅在「日本」一詞使用全名「Nhật Bản」而參考為簡稱「Nhật」，均屬可接受的表達，無任何遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

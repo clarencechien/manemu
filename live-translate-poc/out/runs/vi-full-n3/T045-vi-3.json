@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "Cảm ơn anh/chị đã giúp đỡ, hôm nay thật sự làm phiền anh/chị quá.",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "Dạ cảm ơn sự giúp đỡ của bạn, hôm nay thực sự phiền bạn quá.",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 3590,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 928,
+    "ttft_from_end_ms": 928,
+    "completion_lag_ms": 1710,
+    "ttfa_from_start_ms": 4128
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.917,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:25.529Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Việc sử dụng từ kính ngữ 'Dạ' ở đầu câu làm tăng thêm sự lịch sự, rất phù hợp với ngữ cảnh cảm ơn trong tiếng Trung."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（感謝與表達“麻煩你了”），因此語意忠實度高但非滿分。用詞上有小不自然處（“hôm nay thực sự phiền bạn quá” 比較少見，通常說法為 “hôm nay thật sự làm phiền anh/chị” 或 “thực sự đã làm phiền anh/chị rồi”），流暢度略受影響。此外原參考譯文使用敬稱“anh/chị”，機譯使用“bạn”，導致敬稱層級不符，故標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

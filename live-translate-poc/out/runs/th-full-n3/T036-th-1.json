@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T036",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我頭很暈,但是我沒有心臟病的病史。",
+  "reference": "ฉันรู้สึกเวียนหัวมาก แต่ไม่มีประวัติเป็นโรคหัวใจค่ะ",
+  "inputTranscript": "我 头 很 晕 , 但 是 我 没 有 心 脏 病 的 病 史 。",
+  "outputTranscript": "ผมเวียนศีรษะมากครับ แต่ผมไม่มีประวัติโรคหัวใจครับ",
+  "inputDurationMs": 3731,
+  "outputAudioMs": 4120,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 983,
+    "ttft_from_end_ms": 961,
+    "completion_lag_ms": 1903,
+    "ttfa_from_start_ms": 4883
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.96,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:08.491Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. It correctly translates all elements of the source sentence. The use of male polite particles (ผม/ครับ) instead of the female ones in the reference (ฉัน/ค่ะ) is perfectly acceptable as no gender context was provided, and the translation is consistent throughout."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（頭暈且無心臟病病史），語句在泰語中自然流暢。性別代詞由「我/ฉัน」變為「ผม」及語氣助詞為ครับ，屬於語者風格差異，不影響忠實度或可讀性。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

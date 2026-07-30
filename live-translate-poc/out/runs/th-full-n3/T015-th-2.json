@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T015",
+  "category": "dining",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我們總共五個人,有兩個小孩,需要兒童椅。",
+  "reference": "พวกเรามาทั้งหมด 5 คนค่ะ มีเด็ก 2 คน ต้องการเก้าอี้เด็กด้วยค่ะ",
+  "inputTranscript": "我 们 总 共 五 个 人 , 有 两 个 小 孩 , 需 要 儿 童 椅 。",
+  "outputTranscript": "พวกเรามี กันทั้งหมด 5 คน มีเด็ก 2 คน ต้องการ เก้าอี้ เด็กด้วย ค่ะ",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4690,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 948,
+    "ttft_from_end_ms": 948,
+    "completion_lag_ms": 2052,
+    "ttfa_from_start_ms": 5248
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:31.085Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文非常準確且自然，完整傳達了原文的所有訊息（總共5人、2個小孩、需要兒童椅），且使用了禮貌助詞「ค่ะ」，與參考譯文高度一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（五個人、兩個小孩、需要兒童椅），資訊無遺漏，故語意忠實評5。句子有些不自然（多出「มี กัน」且詞間空格不當），語流略受影響，故自然度評4。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

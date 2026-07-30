@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T013",
+  "category": "transport",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "我剛剛在月台上把手機弄丟了。",
+  "reference": "Tôi vừa mới làm mất điện thoại trên sân ga.",
+  "inputTranscript": "我 刚 刚 在 乐 台 上 把 手 机 弄 丢 了 。",
+  "outputTranscript": "Dạ, tôi vừa làm mất điện thoại trên bến tàu ạ.",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 2591,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 921,
+    "ttft_from_end_ms": 921,
+    "completion_lag_ms": 1433,
+    "ttfa_from_start_ms": 3821
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.03,
+    "coverage_ok": true,
+    "cer": 0.231
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:59.568Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch rất tự nhiên và chính xác. Từ 'bến tàu' được dùng để dịch '月台' (sân ga), tuy hơi kém chính xác hơn một chút so với 'sân ga' nhưng vẫn hoàn toàn hiểu được trong ngữ cảnh. Việc thêm các từ kính ngữ 'Dạ... ạ' giúp câu thoại trở nên rất tự nhiên trong giao tiếp."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達「我剛剛把手機弄丟」的意思，語句流暢自然（加上禮貌語氣詞也合理）。唯一小瑕疵是將「月台」譯為「bến tàu」，通常指船或碼頭，較精確的對應應為「sân ga/ bục ga/ nền ga」或直接「sân ga」。因此語意稍有不精準，但整體可理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

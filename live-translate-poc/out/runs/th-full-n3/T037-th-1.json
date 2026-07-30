@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "ห้องของฉันหมายเลขเจ็ดศูนย์สอง เพื่อนของฉันหมดสติค่ะ",
+  "inputTranscript": "我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。",
+  "outputTranscript": "ห้องของฉันคือ 702 ค่ะ เพื่อน ของฉัน หมดสติ ไปแล้ว ค่ะ",
+  "inputDurationMs": 5811,
+  "outputAudioMs": 4801,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 988,
+    "ttft_from_end_ms": 988,
+    "completion_lag_ms": 2402,
+    "ttfa_from_start_ms": 6988
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.92,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:26.214Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思。「702」與「朋友昏倒了」皆翻譯得十分得體，並加上了合適的泰語敬詞（ค่ะ）。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。數字702準確，\"หมดสติ ไปแล้ว\"正確表達“昏倒了/已經昏倒”的狀態。雖為語音逐字稿有些斷詞（空格）與重複的語氣詞，但目標語自然可理解，故評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,64 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T012",
+  "category": "transport",
+  "traps": [
+    "honorific",
+    "proper-noun"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "不好意思,可以幫我看一下這班車是不是往橫濱的嗎?",
+  "reference": "ขอโทษนะคะ ช่วยดูให้หน่อยได้ไหมคะว่ารถไฟเที่ยวนี้ไปโยโกฮามะหรือเปล่าคะ",
+  "inputTranscript": "不 好 意 思 , 可 以 帮 我 看 一 下 这 班 车 是 不 是 往 横 滨 的 吗 ?",
+  "outputTranscript": "ขอโทษนะครับ ช่วยดูให้หน่อยได้ไหมครับว่ารถไฟขบวนนี้ไปโยโกฮาม่าหรือเปล่าครับ",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 932,
+    "ttft_from_end_ms": 932,
+    "completion_lag_ms": 2138,
+    "ttfa_from_start_ms": 5233
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.074,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:57.936Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates all elements of the source sentence into polite and fluent Thai, using appropriate vocabulary and sentence structure."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且語意忠實，問句與目的地均正確（使用“รถไฟขบวนนี้ไปโยโกฮาม่า”與原文相符），語句自然流暢。唯一差異為禮貌語氣的性別用詞：機器譯為男性敬語“ครับ”，參考譯為女性敬語“คะ/ค่ะ”，因此標記 honorific_off 為 true。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

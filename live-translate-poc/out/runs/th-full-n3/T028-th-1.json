@@ -1,0 +1,66 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T028",
+  "category": "hotel",
+  "traps": [
+    "proper-noun",
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我有訂房,名字是陳大文,今天住兩個晚上。",
+  "reference": "จองห้องไว้แล้วค่ะ ชื่อเฉินต้าเหวิน พักสองคืนค่ะ",
+  "inputTranscript": "我 有 订 房 , 名 字 是 陈 大 文 , 今 天 住 两 个 晚 上 。",
+  "outputTranscript": "ผมจองห้องพักไว้ครับ ในนาม คุณเฉินต้าเหวิน พัก สองคืน ครับ",
+  "inputDurationMs": 5251,
+  "outputAudioMs": 4750,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 962,
+    "ttft_from_end_ms": 961,
+    "completion_lag_ms": 2092,
+    "ttfa_from_start_ms": 6362
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.156,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:22.530Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有資訊（訂房、姓名、入住兩晚），語氣禮貌且符合泰語母語者的表達習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句三項資訊（有訂房、姓名、住兩晚），語意忠實。用詞（ผม/ครับ vs. ค่ะ）屬於禮貌性別差異，非錯誤。唯有小幅語序/間隔（“พัก สองคืน”有不必要空格）與口氣略不同，故流暢度評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

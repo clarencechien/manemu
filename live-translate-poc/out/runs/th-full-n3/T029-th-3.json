@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T029",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "我沒有訂房,請問今晚還有空房嗎?",
+  "reference": "ไม่ได้จองห้องไว้ค่ะ คืนนี้ยังมีห้องว่างไหมคะ",
+  "inputTranscript": "我 没 有 订 房 , 请 问 今 晚 还 有 空 房 吗 ?",
+  "outputTranscript": "ดิฉันไม่ได้จองห้องพักมาค่ะ ไม่ทราบว่าคืนนี้ยังมีห้องว่างอยู่ไหมคะ",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 4960,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 965,
+    "ttft_from_end_ms": 965,
+    "completion_lag_ms": 2123,
+    "ttfa_from_start_ms": 4565
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.488,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:48.218Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，使用了合適的敬語（ดิฉัน、ค่ะ/คะ），完全符合情境，語意與參考譯文高度一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，將「我沒有訂房」與「今晚還有空房嗎」精確表達；用詞與禮貌語氣（ดิฉัน…ค่ะ/คะ）自然，與參考譯文等效。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

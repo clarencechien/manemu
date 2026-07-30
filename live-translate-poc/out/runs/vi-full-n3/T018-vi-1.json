@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T018",
+  "category": "dining",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "我要一份 tonkotsu 拉麵,麵要硬一點。",
+  "reference": "Tôi muốn một phần ramen tonkotsu, mì làm cứng một chút ạ.",
+  "inputTranscript": "我 要 一 份 豚 骨 汁 拉 面 , 面 要 硬 一 点 。",
+  "outputTranscript": "Dạ, cho con một phần mì ramen Tonkotsu, sợi mì làm cứng một chút ạ.",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 5121,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 940,
+    "ttft_from_end_ms": 920,
+    "completion_lag_ms": 2040,
+    "ttfa_from_start_ms": 5040
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.136,
+    "coverage_ok": true,
+    "cer": 0.421
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:05.815Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。機器譯文使用了極為客氣且符合越南日常點餐情境的謙稱「con」與敬語「Dạ... ạ」，語意完整傳達，流暢度極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完整，正確表達想要一份豚骨拉麵且要求麵條硬一點，與原文對應良好（adequacy=5）。但用詞與語氣稍有不自然或不恰當：使用“cho con”帶有兒童或親屬向長輩的稱呼色彩，與參考譯文的中性說法不同；“sợi mì làm cứng một chút”語感也略生硬，因此流暢度略降（fluency=4）。沒有遺漏或捏造資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

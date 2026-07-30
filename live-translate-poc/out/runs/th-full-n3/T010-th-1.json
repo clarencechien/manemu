@@ -1,0 +1,65 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T010",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "最後一班回新宿的電車是十一點四十五分嗎?",
+  "reference": "รถไฟเที่ยวสุดท้ายที่จะกลับไปชินจูกุคือเวลา 11:45 ใช่ไหมครับ",
+  "inputTranscript": "最 后 一 班 回 星 住 的 电 车 是 11 点 45 分 吗 ?",
+  "outputTranscript": "รถไฟเที่ยวสุดท้าย ที่กลับ บางซื่อ คือเวลา 23:45 น. ใช่ไหมครับ/คะ",
+  "inputDurationMs": 4611,
+  "outputAudioMs": 4840,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 973,
+    "ttft_from_end_ms": 973,
+    "completion_lag_ms": 2619,
+    "ttfa_from_start_ms": 5774
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "11"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.982,
+    "coverage_ok": true,
+    "cer": 0.368
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:18.528Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文將「新宿」（Shinjuku）錯誤翻譯為泰國的地名「บางซื่อ」（Bang Sue），屬於嚴重的專有名詞翻譯錯誤（name_mangled/hallucination）。其餘部分翻譯正確且通順。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文在語意上大致保留句型與時間資訊，但將目的地「新宿(ชินจูกุ)」誤譯為「บางซื่อ(Bang Sue)」，造成關鍵資訊錯誤，因此語意忠實度低。泰語句子語法自然流暢，敬語/疑問語氣也適當表達。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

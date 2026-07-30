@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T007",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我要兩張到京都的車票,大人一張、小孩一張。",
+  "reference": "ขอตั๋วไปเกียวโตสองใบครับ ผู้ใหญ่หนึ่งใบ เด็กหนึ่งใบครับ",
+  "inputTranscript": "我 要 两 张 到 京 都 的 车 票 , 大 人 一 张 , 小 孩 一 张 。",
+  "outputTranscript": "ขอซื้อตั๋วไปเกียวโต 2 ใบครับ ผู้ใหญ่ 1 ใบ เด็ก 1 ใบครับ",
+  "inputDurationMs": 5051,
+  "outputAudioMs": 4650,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 950,
+    "ttft_from_end_ms": 949,
+    "completion_lag_ms": 2054,
+    "ttfa_from_start_ms": 6149
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.887,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:10:40.309Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息，語氣也十分禮貌，與參考譯文幾乎完全一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，將「兩張到京都的車票,大人一張、小孩一張」正確表達。用詞自然，句子流暢（數字以阿拉伯數字表示亦常見），與參考譯文等價。無明顯錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

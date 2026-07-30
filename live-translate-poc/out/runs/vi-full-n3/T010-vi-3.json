@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T010",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "最後一班回新宿的電車是十一點四十五分嗎?",
+  "reference": "Dạ chuyến tàu cuối về Shinjuku là mười một giờ bốn mươi lăm phải không ạ?",
+  "inputTranscript": "最 后 一 班 回 星 住 的 电 车 是 11 点 45 分 吗 ?",
+  "outputTranscript": "Chuyến tàu điện cuối cùng về Shinzuku là lúc 11 giờ 45 phút, đúng không ạ?",
+  "inputDurationMs": 4611,
+  "outputAudioMs": 5860,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1074,
+    "ttft_from_end_ms": 1074,
+    "completion_lag_ms": 2283,
+    "ttfa_from_start_ms": 5874
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.368
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:25.503Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch rất chính xác và tự nhiên. Lỗi duy nhất là viết sai chính tả tên riêng \"Shinjuku\" thành \"Shinzuku\"."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，保留疑問語氣與禮貌語尾，表達自然。唯一小缺點是地名拼寫從“Shinjuku”誤為“Shinzuku”，故標記 name_mangled。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

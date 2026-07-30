@@ -1,0 +1,64 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T026",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我考慮了一下,這個還是先不買好了。",
+  "reference": "ขอคิดดูก่อนนะคะ อันนี้ยังไม่ซื้อดีกว่าค่ะ",
+  "inputTranscript": "我 考 虑 了 一 下 , 这 个 还 是 先 不 买 好 了 。",
+  "outputTranscript": "ฉันลองคิดดูแล้วค่ะ อันนี้ ยังไม่ ซื้อ ก่อนดีกว่า ค่ะ",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 3651,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 976,
+    "ttft_from_end_ms": 975,
+    "completion_lag_ms": 1746,
+    "ttfa_from_start_ms": 4375
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.175,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:02.192Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates '我考慮了一下' as 'ฉันลองคิดดูแล้วค่ะ' (I have thought about it) and '這個還是先不買好了' as 'อันนี้ยังไม่ซื้อก่อนดีกว่าค่ะ' (It's better not to buy this yet), which is grammatically correct and natural in Thai."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原意（已考慮過、先不買），因此語意忠實度高（5）。語句在泰文上可理解且帶有禮貌語尾“ค่ะ”，但有些詞語間空格不自然、語序略口語直譯，流暢度略低（4）。無重大遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

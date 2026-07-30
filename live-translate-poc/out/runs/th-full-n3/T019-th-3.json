@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T019",
+  "category": "dining",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "這道菜看起來很好吃,可是我已經吃飽了。",
+  "reference": "เมนูนี้ดูน่ากินมากเลยค่ะ แต่ว่าฉันอิ่มแล้วค่ะ",
+  "inputTranscript": "这 道 菜 看 起 来 很 好 吃 , 可 是 我 已 经 吃 饱 了 。",
+  "outputTranscript": "อาหารจานนี้ดูน่าอร่อยมากเลยค่ะแต่ว่าตอนนี้อิ่มแล้วล่ะครับ",
+  "inputDurationMs": 4051,
+  "outputAudioMs": 4150,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 926,
+    "ttft_from_end_ms": 926,
+    "completion_lag_ms": 1930,
+    "ttfa_from_start_ms": 5125
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.295,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:34.294Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意非常完整且準確（Adequacy: 5）。但在流暢度方面，同一個句子中前半句使用了女性敬語助詞「ค่ะ」(kha)，後半句卻使用了男性敬語助詞「ครับ」(khrap)，前後語氣/性別不一致，影響了自然度（Fluency: 4）。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達兩個子句（菜看起來很好吃，但說話者已經吃飽），語意忠實度高。語句大致自然，但敬語助詞前後不一致（先用「ค่ะ」接著以「ครับ」收尾），造成禮貌語氣錯誤，應修正為一致的敬語形式。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

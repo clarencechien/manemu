@@ -1,0 +1,66 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T039",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我想預約明天下午三點,兩個大人。",
+  "reference": "ฉันอยากจองพรุ่งนี้บ่ายสามโมง ผู้ใหญ่สองคนค่ะ",
+  "inputTranscript": "我 想 预 约 明 天 下 午 3 点 , 两 个 大 人 。",
+  "outputTranscript": "ดิฉันต้องการ จอง พรุ่งนี้ ตอน บ่าย สามโมง สำหรับ สองท่าน ค่ะ",
+  "inputDurationMs": 3691,
+  "outputAudioMs": 4020,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 928,
+    "ttft_from_end_ms": 928,
+    "completion_lag_ms": 2316,
+    "ttfa_from_start_ms": 4728
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3",
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.209,
+    "coverage_ok": true,
+    "cer": 0.071
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:54.219Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. 'สองท่าน' (two people/guests) is a very natural and polite way to translate '兩個大人' (two adults) in a booking context in Thai."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：表達了想預約（預訂）時間、明天下午三點、兩位成人，且以禮貌語尾“ค่ะ”呈現。句子在泰語中自然流暢，僅有少量空格分隔但不影響可讀性。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

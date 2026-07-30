@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T049",
+  "category": "smalltalk",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我是從台灣來的,第一次來大阪玩。",
+  "reference": "ผมมาจากไต้หวันครับ มาเที่ยวโอซาก้าครั้งแรกครับ",
+  "inputTranscript": "我 是 从 台 湾 来 的 , 第 一 次 来 大 阪 玩 。",
+  "outputTranscript": "ดิฉันมาจากไต้หวัน ค่ะ มาเที่ยว โอซาก้า เป็นครั้งแรก ค่ะ",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 4210,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 969,
+    "ttft_from_end_ms": 969,
+    "completion_lag_ms": 2243,
+    "ttfa_from_start_ms": 4969
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.111,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:20:19.340Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且流暢地表達了原文的意思。雖然機器譯文使用了女性第一人稱代詞「ดิฉัน」和語氣詞「ค่ะ」，而參考譯文使用的是男性版本，但在無上下文的狀況下，這兩種翻譯皆屬正確且自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整忠實地傳達原意（來自台灣，第一次來大阪玩）。語言自然、用詞與禮貌語尾（ค่ะ）一致。與參考譯文在性別敬語（ดิฉัน/ค่ะ vs ผม/ครับ）上不同，但不構成誤譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

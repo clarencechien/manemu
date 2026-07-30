@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T038",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "我不能打青黴素,我會過敏。",
+  "reference": "Em không thể tiêm penicillin được, em bị dị ứng.",
+  "inputTranscript": "我 不 能 打 青 霉 素 , 我 会 过 敏 。",
+  "outputTranscript": "Dạ, tôi không tiêm được penicillin, tôi bị dị ứng ạ.",
+  "inputDurationMs": 2611,
+  "outputAudioMs": 3320,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 938,
+    "ttft_from_end_ms": 936,
+    "completion_lag_ms": 1603,
+    "ttfa_from_start_ms": 3737
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.054,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:43.236Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。完整傳達了「不能打青黴素」與「會過敏」的意思，且加入「Dạ」與「ạ」等敬語助詞，非常符合醫病溝通的口譯情境。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整且語意忠實（表達不能使用青黴素並說明過敏），語句流暢自然。唯用詞人稱禮貌層級與參考譯文不同（tôi vs. em），屬於敬稱/人稱選擇差異，標記為 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

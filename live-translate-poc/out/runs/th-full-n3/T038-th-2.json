@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T038",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我不能打青黴素,我會過敏。",
+  "reference": "ฉันฉีดเพนิซิลลินไม่ได้ ฉันแพ้ค่ะ",
+  "inputTranscript": "我 不 能 打 青 霉 素 , 我 会 过 敏 。",
+  "outputTranscript": "ผมฉีดเพนิซิลลินไม่ได้ครับ ผมแพ้ครับ",
+  "inputDurationMs": 2611,
+  "outputAudioMs": 3060,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 944,
+    "ttft_from_end_ms": 944,
+    "completion_lag_ms": 1506,
+    "ttfa_from_start_ms": 3743
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.097,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:43.488Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。雖然使用了男性代名詞「ผม」和敬語助詞「ครับ」，而參考譯文使用的是女性/中性代名詞與女性敬語，但由於原文並未指定性別，此翻譯完全正確且通順。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原句含意（無法打青黴素，會過敏）。泰語表達自然，語法與用詞合適。性別代詞為男性（ผม/ครับ），與參考譯文的女性用法不同，但原文無性別標記，不能視為錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

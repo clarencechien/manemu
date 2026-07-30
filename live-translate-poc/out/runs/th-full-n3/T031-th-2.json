@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T031",
+  "category": "hotel",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "房間的冷氣好像壞了,可以請人來看一下嗎?",
+  "reference": "แอร์ในห้องดูเหมือนจะเสีย ขอให้คนมาดูให้หน่อยได้ไหมคะ",
+  "inputTranscript": "房 间 的 冷 气 好 像 坏 了 , 可 以 请 人 来 看 一 下 吗 ?",
+  "outputTranscript": "แอร์ในห้องพักเหมือนจะเสียค่ะช่วยส่งคนมาดูหน่อยได้ไหมคะ",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 4150,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1007,
+    "ttft_from_end_ms": 959,
+    "completion_lag_ms": 1871,
+    "ttfa_from_start_ms": 5106
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.059,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:10.122Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is exceptionally accurate and natural. It translates '房間的冷氣' to 'แอร์ในห้องพัก' (air conditioner in the guest room) and '可以請人來看一下嗎' to 'ช่วยส่งคนมาดูหน่อยได้ไหมคะ' (could you please send someone to take a look?), which is polite and perfectly fits the context of a hotel or lodging request."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（房間的冷氣似乎壞了，請人來檢查），用詞與參考譯文相符且語氣禮貌自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

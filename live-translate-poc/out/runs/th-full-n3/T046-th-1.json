@@ -1,0 +1,61 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T046",
+  "category": "smalltalk",
+  "traps": [],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "你的中文說得真好,是在哪裡學的?",
+  "reference": "คุณพูดภาษาจีนเก่งมากเลยครับ ไปเรียนมาจากที่ไหนครับ",
+  "inputTranscript": "你 的 中 文 说 得 真 好 , 是 在 哪 里 学 的 ?",
+  "outputTranscript": "ภาษาจีนของคุณพูดได้เก่งจริงๆ ค่ะ เรียนจากที่ไหนเหรอคะ",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 3961,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1088,
+    "ttft_from_end_ms": 1085,
+    "completion_lag_ms": 1785,
+    "ttfa_from_start_ms": 4688
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.041,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:36.232Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with appropriate politeness and correct grammar."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "語義完整且忠實，機譯保留原句讚美與詢問學習地點（因此 adequacy=5）。語氣與詞序大致自然，但「พูดได้เก่งจริงๆ」較不地道，通常會說「พูดเก่ง」或「พูดได้ดี」，且機譯使用女性敬語（ค่ะ/คะ）而參考譯文為男性敬語（ครับ），故流暢度稍降（fluency=4）並標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T030",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "請問退房時間是早上十點還是十一點?",
+  "reference": "ขอถามหน่อยค่ะ เวลาเช็คเอาท์คือสิบโมงเช้าหรือสิบเอ็ดโมงคะ",
+  "inputTranscript": "请 问 退 房 时 间 是 早 上 10 点 还 是 11 点 ?",
+  "outputTranscript": "ขอถามหน่อยครับ เวลาเช็คเอาท์คือ 10 โมงเช้า หรือว่า 11 โมงเช้า ครับ?",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 5400,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 956,
+    "ttft_from_end_ms": 956,
+    "completion_lag_ms": 2190,
+    "ttfa_from_start_ms": 5256
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.073,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:01.086Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息，語氣也十分禮貌客氣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地傳達原意（詢問退房時間是10點或11點），句子在泰文上也很自然。差異在於敬語性別：原參考使用女性敬語（ค่ะ/คะ），機器譯文使用男性敬語（ครับ），故標記敬語錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

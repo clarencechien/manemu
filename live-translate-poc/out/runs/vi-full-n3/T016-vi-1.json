@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T016",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "我對蝦子過敏,餐點裡請不要放任何海鮮。",
+  "reference": "Tôi bị dị ứng tôm, xin đừng cho hải sản vào món ăn ạ.",
+  "inputTranscript": "我 对 虾 子 过 敏 , 餐 点 里 请 不 要 放 任 何 海 鲜 。",
+  "outputTranscript": "Dạ, tôi bị dị ứng với tôm, làm ơn đừng cho bất kỳ hải sản nào vào món ăn ạ.",
+  "inputDurationMs": 4491,
+  "outputAudioMs": 5070,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 947,
+    "ttft_from_end_ms": 947,
+    "completion_lag_ms": 2233,
+    "ttfa_from_start_ms": 5546
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.395,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:34.796Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Việc thêm các từ kính ngữ như 'Dạ', 'ạ' và 'làm ơn' giúp câu nói trở nên lịch sự và phù hợp với ngữ cảnh giao tiếp."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整忠實地傳達原句意思（表明對蝦子過敏並請勿放任何海鮮），且使用越南語禮貌用語（Dạ...ạ），語序與用詞自然流暢，與參考譯文等效。無遺漏或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

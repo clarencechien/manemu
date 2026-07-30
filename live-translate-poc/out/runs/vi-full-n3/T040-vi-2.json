@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T040",
+  "category": "appointment",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "不好意思,我想把預約從星期五改到星期六,不是取消。",
+  "reference": "Dạ xin lỗi, em muốn đổi lịch hẹn từ thứ Sáu sang thứ Bảy, không phải là hủy đâu.",
+  "inputTranscript": "不 好 意 思 , 我 想 把 预 约 从 星 期 五 改 到 星 期 六 , 不 是 取 消 。",
+  "outputTranscript": "Dạ, xin lỗi, tôi muốn đổi lịch hẹn từ thứ Sáu sang thứ Bảy, không phải là hủy ạ.",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 5550,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1022,
+    "ttft_from_end_ms": 999,
+    "completion_lag_ms": 2438,
+    "ttfa_from_start_ms": 7623
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.983,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:18:10.244Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思。人稱代詞 'tôi' 與句尾助詞 'ạ' 的搭配十分得體，與參考譯文僅有微小的語氣詞差異，整體翻譯品質極高。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地保留原意（將預約從星期五改到星期六，並強調不是取消）。語句在越南語中通順自然，敬語使用（'Dạ...ạ'）恰當。與參考譯文的差異僅為人稱（'tôi' vs 'em'）與語氣助詞（'đâu'），但不影響理解或造成錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

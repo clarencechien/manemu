@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T003",
+  "category": "directions",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我不是要去機場,我是要去火車站。",
+  "reference": "ผมไม่ได้จะไปสนามบินนะครับ ผมจะไปสถานีรถไฟครับ",
+  "inputTranscript": "我 不 是 要 去 机 场 , 我 是 要 去 火 车 站 。",
+  "outputTranscript": "ฉันไม่ได้จะไปสนามบินครับฉันจะไปสถานีรถไฟครับ",
+  "inputDurationMs": 2931,
+  "outputAudioMs": 4260,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 994,
+    "ttft_from_end_ms": 994,
+    "completion_lag_ms": 1848,
+    "ttfa_from_start_ms": 4095
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:42.354Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且流暢，完整傳達了原文的意思。雖然代名詞使用了「ฉัน」而非參考譯文的「ผม」，但在泰語中仍屬自然且正確的表達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意（否定去機場、改去火車站），因此 adequacy 給 4。流暢度稍差：使用了『ฉัน』搭配敬助詞『ครับ』造成敬語/性別不一致，且兩個句子之間未加標點或停頓導致讀起來不夠自然；參考譯文的語氣助詞『นะครับ』也缺失，故 fluency 給 3。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

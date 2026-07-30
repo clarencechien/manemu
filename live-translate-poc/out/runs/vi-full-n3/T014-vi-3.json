@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "Cái này xin đừng cho cay, tôi không ăn cay được nhiều ạ.",
+  "inputTranscript": "这 个 不 要 啦 , 我 不 太 能 吃 辣 。",
+  "outputTranscript": "Dạ, cái này không lấy ạ, tôi không ăn cay được lắm.",
+  "inputDurationMs": 3251,
+  "outputAudioMs": 3521,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 973,
+    "ttft_from_end_ms": 973,
+    "completion_lag_ms": 1630,
+    "ttfa_from_start_ms": 4373
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.881,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:15.376Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The first clause '這個不要辣' (don't make this spicy) was mistranslated as 'cái này không lấy' (I don't take/want this), which changes the meaning from asking for no spice to rejecting the item entirely. The second clause is translated accurately."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": true,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯將「不要辣」誤譯為「不拿/不買(không lấy)」，把否定作用放在取/買上而非辣度，造成語意錯誤；後半句「我不太能吃辣」譯為「tôi không ăn cay được lắm」接近原意且語句自然。整體語意不忠實但語言流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

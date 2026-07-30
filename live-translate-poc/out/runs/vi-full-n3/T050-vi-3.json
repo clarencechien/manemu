@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "Vậy thì làm phiền anh/chị nhé, sau này tôi sẽ liên lạc lại.",
+  "inputTranscript": "那 就 麻 烦 你 了 , 之 后 再 联 络 。",
+  "outputTranscript": "Dạ vậy làm phiền bạn quá, có gì liên lạc sau nhé.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3310,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 948,
+    "ttft_from_end_ms": 946,
+    "completion_lag_ms": 1602,
+    "ttfa_from_start_ms": 3949
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.818,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:20:29.963Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常流暢且語意完整，'Dạ vậy làm phiền bạn quá, có gì liên lạc sau nhé' 完美對應了原文的語氣與意思，甚至比參考譯文更為口語自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大體傳達原意——表示“麻煩你了”並提到“之後再聯絡”。用詞自然口語化，但將敬稱從原文可能的「您/anh/chị」（參考譯文為 anh/chị）換成較親暱的 'bạn'，降低了禮貌層次（標記 honorific_off）。另外機譯的後半句 'có gì liên lạc sau nhé' 與參考譯文的『我會再聯絡』在主語上有些模糊，可能讓聽者誤解為“有事再聯絡（你聯絡我）”而非“我會再聯絡你”，故未給最高分。但整體可理解且語句通順，故 adequacy=4、fluency=4。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

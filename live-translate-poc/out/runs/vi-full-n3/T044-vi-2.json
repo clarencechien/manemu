@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "Chúng tôi sẽ đến muộn 30 phút, có thể giữ chỗ giúp tôi được không ạ?",
+  "inputTranscript": "我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?",
+  "outputTranscript": "Dạ, chúng tôi sẽ đến trễ 30 phút, có thể giữ chỗ được không ạ?",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 4410,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 961,
+    "ttft_from_end_ms": 938,
+    "completion_lag_ms": 1832,
+    "ttfa_from_start_ms": 5361
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.882,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:08.272Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。譯文加入了禮貌助詞「Dạ」和「ạ」，非常符合向店家要求保留座位的語境，語意與原文完全一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（會晚30分鐘，詢問能否保留位子），語氣禮貌且自然。與參考譯文相比差別僅在用詞（trễ vs muộn）及少許禮貌語順序，均屬可接受。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

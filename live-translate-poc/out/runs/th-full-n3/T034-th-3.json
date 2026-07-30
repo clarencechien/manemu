@@ -1,0 +1,61 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "ช่วยด้วยค่ะ! ช่วยเรียกรถพยาบาลให้ด้วยค่ะ",
+  "inputTranscript": "救 命 , 请 帮 我 叫 救 护 车 。",
+  "outputTranscript": "ช่วยด้วยครับ ช่วยเรียกรถพยาบาล ให้หน่อย ครับ",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 2921,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 977,
+    "ttft_from_end_ms": 954,
+    "completion_lag_ms": 1508,
+    "ttfa_from_start_ms": 3577
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.079,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:51.040Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. The use of the male polite particle 'ครับ' instead of the female 'ค่ะ' is perfectly acceptable as there is no gender context provided in the source text."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句求救與請求叫救護車的意圖，內容與參考譯文語義一致。語句在泰語中自然流暢（僅為男性說話者使用「ครับ」，與參考的女性敬語「ค่ะ」性別不同但非錯誤），無遺漏或新增資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

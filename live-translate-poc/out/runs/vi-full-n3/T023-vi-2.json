@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T023",
+  "category": "shopping",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "請問這個價格是含稅還是不含稅?",
+  "reference": "Cho em hỏi giá này đã bao gồm thuế chưa ạ?",
+  "inputTranscript": "请 问 这 个 价 格 是 含 税 还 是 不 含 税 ?",
+  "outputTranscript": "Dạ cho hỏi giá này là đã bao gồm thuế chưa ạ?",
+  "inputDurationMs": 3891,
+  "outputAudioMs": 3530,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 950,
+    "ttft_from_end_ms": 950,
+    "completion_lag_ms": 1656,
+    "ttfa_from_start_ms": 4950
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.065,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:13.896Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文「含稅還是不含稅」的意思，語氣也非常客氣禮貌，與參考譯文基本一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問價格是否含稅），因此語意忠實度給5分。語句自然但有輕微冗餘（“là đã 包含”在越語中稍顯多餘），語氣禮貌但與參考譯文人稱略不同，故流暢度給4分。沒有錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

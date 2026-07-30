@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T032",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "我明天不需要打掃房間,謝謝。",
+  "reference": "Dạ ngày mai em không cần dọn phòng đâu, cảm ơn anh/chị.",
+  "inputTranscript": "我 明 天 不 需 要 打 扫 房 间 , 谢 谢 。",
+  "outputTranscript": "Dạ, ngày mai tôi không cần dọn phòng đâu ạ, xin cảm ơn.",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 3840,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 949,
+    "ttft_from_end_ms": 927,
+    "completion_lag_ms": 1820,
+    "ttfa_from_start_ms": 4549
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.976,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:24.160Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch máy hoàn toàn chính xác và tự nhiên, truyền tải đầy đủ ý nghĩa của câu gốc với thái độ lịch sự phù hợp."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整、語意忠實（正確表達「明天不需要打掃房間」並禮貌致謝），句子自然通順。唯參考譯文使用了不同的稱謂/敬稱（em / anh-chị），機譯使用 tôi / ạ，改變了人稱禮貌層級，故標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,66 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T039",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "我想預約明天下午三點,兩個大人。",
+  "reference": "ฉันอยากจองพรุ่งนี้บ่ายสามโมง ผู้ใหญ่สองคนค่ะ",
+  "inputTranscript": "我 想 预 约 明 天 下 午 3 点 , 两 个 大 人 。",
+  "outputTranscript": "ดิฉันต้องการจองสำหรับวันพรุ่งนี้บ่ายสามโมงค่ะผู้ใหญ่สองท่านค่ะ",
+  "inputDurationMs": 3691,
+  "outputAudioMs": 4950,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 957,
+    "ttft_from_end_ms": 955,
+    "completion_lag_ms": 2161,
+    "ttfa_from_start_ms": 4757
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3",
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.442,
+    "coverage_ok": true,
+    "cer": 0.071
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:18:01.161Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有訊息，語氣禮貌且表達非常自然，完全符合泰語的日常口語習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地傳達原句意思：預約時間（明天下午三點）與人數（兩個大人）均正確。用詞與語氣在泰語中自然禮貌（使用\"ดิฉัน\"與\"ค่ะ\"，以及\"ท่าน/คน\"差異不影響理解），句子流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

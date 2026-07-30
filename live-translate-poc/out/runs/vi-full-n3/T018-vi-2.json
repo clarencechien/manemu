@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T018",
+  "category": "dining",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "我要一份 tonkotsu 拉麵,麵要硬一點。",
+  "reference": "Tôi muốn một phần ramen tonkotsu, mì làm cứng một chút ạ.",
+  "inputTranscript": "我 要 一 份 豚 骨 汁 拉 面 , 面 要 硬 一 点 。",
+  "outputTranscript": "Dạ cho tôi một phần mì ramen nước súp tonkotsu, mì thì lấy loại cứng một chút ạ.",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 5270,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1070,
+    "ttft_from_end_ms": 1070,
+    "completion_lag_ms": 2320,
+    "ttfa_from_start_ms": 5169
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.386,
+    "coverage_ok": true,
+    "cer": 0.421
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:13.496Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Bản dịch đã chuyển ngữ tốt cụm từ 'tonkotsu 拉麵' thành 'mì ramen nước súp tonkotsu' và '麵要硬一點' thành 'mì thì lấy loại cứng một chút ạ', đồng thời thêm các từ kính ngữ 'Dạ', 'ạ' rất phù hợp với ngữ cảnh giao tiếp."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實：正確表達要一份tonkotsu拉麵並要求麵條較硬，語氣禮貌（使用“Dạ”與“ạ”）。雖有「mì ramen nước súp tonkotsu」稍顯冗贅，但仍屬自然可接受的越南語表達，故給予最高評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "อันนี้ไม่เอาเผ็ดนะคะ ทานเผ็ดไม่ค่อยได้ค่ะ",
+  "inputTranscript": "这 个 不 要 啦 , 我 不 太 能 吃 辣 。",
+  "outputTranscript": "อันนี้ไม่เอา ครับ ผมทานเผ็ดไม่ค่อยได้ครับ",
+  "inputDurationMs": 3251,
+  "outputAudioMs": 3241,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 983,
+    "ttft_from_end_ms": 959,
+    "completion_lag_ms": 1509,
+    "ttfa_from_start_ms": 4382
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.975,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:13.591Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機器譯文將「這個不要辣」翻譯為「อันนี้ไม่เอา」（這個不要），漏譯了「辣」（เผ็ด），導致語意變成不要這個品項，而非不要辣。不過後半句「ผมทานเผ็ดไม่ค่อยได้ครับ」（我不太能吃辣）翻譯正確且流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意：「不要辣」與「我不太能吃辣」都正確表達，故語意忠實度高(5)。語句大致通順，但有些口氣與參考譯文不同：機譯使用男性自稱與敬語（'ครับ/ผม'），而參考為女性語氣（'ค่ะ'）；此外出現輕微斷句/多餘停頓（'ครับ ผม...ครับ'）使自然度略受影響，因此給4分。標記 honorific_off=true（敬語/人稱不符）；其餘旗標不適用。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

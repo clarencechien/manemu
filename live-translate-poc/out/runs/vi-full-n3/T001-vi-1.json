@@ -1,0 +1,61 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T001",
+  "category": "directions",
+  "traps": [],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "請問車站在哪裡?怎麼走比較快?",
+  "reference": "Dạ cho em/cháu hỏi nhà ga ở đâu ạ? Đi đường nào thì nhanh hơn ạ?",
+  "inputTranscript": "请 问 车 站 在 哪 里 ? 怎 么 走 比 较 快 ?",
+  "outputTranscript": "Dạ cho em hỏi là ga tàu ở đâu vậy ạ? Đi như thế nào thì nhanh hơn ạ?",
+  "inputDurationMs": 3211,
+  "outputAudioMs": 4120,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 939,
+    "ttft_from_end_ms": 938,
+    "completion_lag_ms": 1895,
+    "ttfa_from_start_ms": 4339
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.043,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:15.014Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch máy rất chính xác và tự nhiên. Nó truyền tải đầy đủ ý nghĩa của câu gốc với giọng điệu lịch sự, phù hợp với ngữ cảnh."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文問路與詢問較快路徑的語意，沒有遺漏或新增資訊。語言自然、禮貌用語（Dạ...ạ）處理得當。唯一差異是用詞上“ga tàu”相較參考的“nhà ga”稍微口語，但不影響理解或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

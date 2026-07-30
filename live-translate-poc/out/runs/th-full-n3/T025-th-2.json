@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T025",
+  "category": "shopping",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "有沒有 limited edition 的款式?我在 Instagram 上看到的。",
+  "reference": "มีรุ่นลิมิเต็ดเอดิชั่นไหมคะ เห็นในอินสตาแกรมค่ะ",
+  "inputTranscript": "有 没 有 limited edition 的 款 式 ? 我 在 Instagram 上 看 到 的 。",
+  "outputTranscript": "มีแบบลิมิเต็ดอิดิชั่นไหมครับ? ผมเห็น ใน Instagram ครับ",
+  "inputDurationMs": 4531,
+  "outputAudioMs": 4230,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 925,
+    "ttft_from_end_ms": 924,
+    "completion_lag_ms": 1966,
+    "ttfa_from_start_ms": 5624
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.065,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:46.067Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地翻譯了原文的所有訊息，泰語表達非常自然流暢，僅在敬語助詞上使用了男性使用的 ครับ（參考譯文為女性使用的 คะ），這在沒有特定語境下是完全可以接受的。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問是否有 limited edition 款式，並說是在 Instagram 上看到的）。表達流暢自然，但使用了男性敬語（ครับ/ผม），而參考譯文為女性語氣（คะ/ค่ะ），敬語性別/禮貌用法不符。其餘無重大錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

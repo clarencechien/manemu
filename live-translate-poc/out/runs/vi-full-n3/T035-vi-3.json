@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T035",
+  "category": "emergency",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "我的護照不見了,請問警察局在哪裡?",
+  "reference": "Dạ, hộ chiếu của em bị mất rồi, cho em hỏi đồn công an ở đâu vậy?",
+  "inputTranscript": "我 的 护 照 不 见 了 , 请 问 警 察 局 在 哪 里 ?",
+  "outputTranscript": "Dạ, hộ chiếu của cháu bị mất rồi ạ, cho cháu hỏi đồn cảnh sát ở đâu ạ?",
+  "inputDurationMs": 3571,
+  "outputAudioMs": 4670,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1020,
+    "ttft_from_end_ms": 1020,
+    "completion_lag_ms": 2070,
+    "ttfa_from_start_ms": 4719
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.087,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:05.822Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. It correctly conveys the meaning of the source text with appropriate politeness markers (Dạ, ạ) and accurate vocabulary (đồn cảnh sát for police station)."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意義（護照遺失與詢問警察局位置）。用詞自然流暢，禮貌語氣（“ạ”）到位。僅有代稱從“em”變為“cháu”及“警察局”譯為“đồn cảnh sát”，均屬可接受的語氣或詞彙差異，未影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

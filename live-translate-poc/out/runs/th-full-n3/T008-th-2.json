@@ -1,0 +1,64 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T008",
+  "category": "transport",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "這班車會到大阪,但是應該不會停京都吧?",
+  "reference": "รถไฟเที่ยวนี้ไปถึงโอซาก้าใช่ไหมครับ แต่ไม่จอดที่เกียวโตใช่ไหมครับ",
+  "inputTranscript": "这 班 车 会 到 大 阪 , 但 是 应 该 不 会 停 京 都 吧 ?",
+  "outputTranscript": "รถไฟขบวนนี้ จะไปถึง โอซาก้า นะครับ แต่น่าจะ ไม่จอด ที่เกียวโต ใช่ไหมครับ",
+  "inputDurationMs": 3851,
+  "outputAudioMs": 5070,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 922,
+    "ttft_from_end_ms": 922,
+    "completion_lag_ms": 2074,
+    "ttfa_from_start_ms": 4922
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.016,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:10:59.556Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地翻譯了原文的意思，語氣也十分貼切，沒有任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整對應原句語意：表達列車會到大阪且應該不會在京都停的疑問語氣皆正確。泰文用詞與語氣（นะครับ/ใช่ไหมครับ）自然，與參考譯文等效，無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

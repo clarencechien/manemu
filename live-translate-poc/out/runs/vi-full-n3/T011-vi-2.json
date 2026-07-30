@@ -1,0 +1,64 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T011",
+  "category": "transport",
+  "traps": [
+    "code-switch",
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "我想幫 IC 卡儲值一千日圓。",
+  "reference": "Dạ, tôi muốn nạp tiền vào thẻ IC 1000 yên.",
+  "inputTranscript": "我 想 帮 IC 卡 充 值 1000 日 元 。",
+  "outputTranscript": "Dạ, tôi muốn nạp tiền vào thẻ IC 1000 yên ạ.",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 3921,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 977,
+    "ttft_from_end_ms": 955,
+    "completion_lag_ms": 1743,
+    "ttfa_from_start_ms": 4577
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.032,
+    "coverage_ok": true,
+    "cer": 0.5
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:11:33.879Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch hoàn toàn chính xác và tự nhiên, có thêm các từ kính ngữ 'Dạ', 'ạ' rất phù hợp với ngữ cảnh giao tiếp lịch sự."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，數字與意思正確。語句自然流暢，只是結尾多了敬語助詞「ạ」，並不影響評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

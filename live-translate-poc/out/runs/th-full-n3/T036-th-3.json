@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T036",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "我頭很暈,但是我沒有心臟病的病史。",
+  "reference": "ฉันรู้สึกเวียนหัวมาก แต่ไม่มีประวัติเป็นโรคหัวใจค่ะ",
+  "inputTranscript": "我 头 很 晕 , 但 是 我 没 有 心 脏 病 的 病 史 。",
+  "outputTranscript": "ผมเวียนหัวมาก ครับ แต่ผม ไม่เคย มีประวัติ โรคหัวใจ ครับ",
+  "inputDurationMs": 3731,
+  "outputAudioMs": 3880,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1023,
+    "ttft_from_end_ms": 1023,
+    "completion_lag_ms": 1921,
+    "ttfa_from_start_ms": 4923
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.98,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:17.440Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. It conveys the exact meaning of the source text with appropriate polite particles in Thai."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意：表達頭暈並說明沒有心臟病病史。唯一小瑕疵為語體與參考譯文不同（機譯用男性自稱“ผม”，參考為中性/女性“ฉัน”）及語句略顯重複/生硬（重複使用ผม、加入คำว่า ‘ไม่เคย’ 但語意相當於「沒有病史」），因此流暢度稍降。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

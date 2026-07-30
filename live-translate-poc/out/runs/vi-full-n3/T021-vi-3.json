@@ -1,0 +1,66 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T021",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "這個不要,我要旁邊那個藍色的,兩個多少錢?",
+  "reference": "Dạ cái này không lấy, cho em cái màu xanh bên cạnh, hai cái giá bao nhiêu ạ?",
+  "inputTranscript": "这 个 不 要 , 我 要 旁 边 那 个 蓝 色 的 , 两 个 多 少 钱 ?",
+  "outputTranscript": "Dạ, cái này không lấy ạ, tôi lấy cái màu xanh bên cạnh cơ, hai cái bao nhiêu tiền ạ?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 5281,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 983,
+    "ttft_from_end_ms": 962,
+    "completion_lag_ms": 2080,
+    "ttfa_from_start_ms": 4983
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.089,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:57.673Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is exceptionally accurate and natural. It perfectly conveys the meaning of the source text and uses polite particles ('dạ', 'ạ') and conversational particles ('cơ') appropriately, making it sound highly authentic and fluent in Vietnamese."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思，未遺漏資訊（因此 adequacy=5）。目標語句子大致自然，但用詞與語氣混用（用『tôi』搭配敬語助詞『ạ』，與參考譯文中較口語/親切的『cho em』不同），造成語氣不一致，故給予 fluency=4。標記 honorific_off 為真。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

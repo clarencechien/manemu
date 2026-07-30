@@ -1,0 +1,65 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T033",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "可以幫我叫一台計程車嗎?明天早上六點半要到機場。",
+  "reference": "ช่วยเรียกแท็กซี่ให้หน่อยได้ไหมคะ พรุ่งนี้เช้าหกโมงครึ่งต้องไปสนามบินค่ะ",
+  "inputTranscript": "可 以 帮 我 叫 一 台 出 租 车 吗 ? 明 天 早 上 6 点 半 要 到 机 场 。",
+  "outputTranscript": "ช่วยเรียกแท็กซี่ให้คันนึงได้ไหมครับ พอดีต้องไปถึงสนามบินตอนหกโมงครึ่งพรุ่งนี้เช้าครับ",
+  "inputDurationMs": 4851,
+  "outputAudioMs": 0,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": null,
+    "ttft_from_end_ms": 963,
+    "completion_lag_ms": 963,
+    "ttfa_from_start_ms": null
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "6"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.2,
+    "coverage_ok": true,
+    "cer": 0.136
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:42.017Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in fluent Thai, using appropriate polite particles and natural phrasing like 'พอดีต้อง...' (actually need to...)."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思：請求幫忙叫一台計程車，並指出時間（明天早上六點半）和目的地（機場）。泰語句子語法自然流暢。但參考譯文使用女性禮貌語氣（คะ/ค่ะ），機器譯文使用男性禮貌語氣（ครับ），與參考語氣不符，因此標示 honorific_off。其餘無錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

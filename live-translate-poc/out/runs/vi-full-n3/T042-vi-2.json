@@ -1,0 +1,65 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T042",
+  "category": "appointment",
+  "traps": [
+    "code-switch",
+    "number",
+    "proper-noun"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "我可以用 email 確認預約嗎?我的班機是 BR198。",
+  "reference": "Dạ, tôi có thể xác nhận đặt chỗ qua email được không? Chuyến bay của tôi là BR198.",
+  "inputTranscript": "我 可 以 用 email 确 认 预 约 吗 ? 我 的 班 机 是 BR198 。",
+  "outputTranscript": "Dạ, tôi có thể xác nhận đặt phòng bằng email không ạ? Chuyến bay của tôi là BR198 ạ.",
+  "inputDurationMs": 6171,
+  "outputAudioMs": 6800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1063,
+    "ttft_from_end_ms": 970,
+    "completion_lag_ms": 3363,
+    "ttfa_from_start_ms": 7363
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.016,
+    "coverage_ok": true,
+    "cer": 0.042
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:18:39.563Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch rất chính xác và tự nhiên. Từ '預約' (hẹn trước/đặt trước) được dịch thành 'đặt phòng', tuy có hơi cụ thể hóa so với 'đặt chỗ' trong ngữ cảnh chuyến bay nhưng vẫn hoàn toàn dễ hiểu và hợp lý. Các kính ngữ 'Dạ', 'ạ' được thêm vào giúp câu nói trở nên lịch sự và tự nhiên hơn."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文整體自然且完整，禮貌語氣（Dạ/ạ）也處理得當。但將「預約/預訂座位」譯為“đặt phòng”（通常指訂房）與原意（此處因提到班機應為訂位/訂票）不符，屬於詞義選擇錯誤，因而降低一分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

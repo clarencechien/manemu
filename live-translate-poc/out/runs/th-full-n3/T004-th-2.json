@@ -1,0 +1,64 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T004",
+  "category": "directions",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。",
+  "reference": "เดินจากที่นี่ไปประมาณกี่นาทีครับ ถ้าเกินสิบห้านาทีผมอยากจะนั่งแท็กซี่ครับ",
+  "inputTranscript": "从 这 里 走 过 去 大 概 要 几 分 钟 , 超 过 15 分 钟 的 话 , 我 想 搭 计 程 车 。",
+  "outputTranscript": "เดินจากที่นี่ ไป ประมาณ กี่นาที ครับ/ค่ะ ถ้าเกิน 15 นาที ผม/ดิฉัน อยากจะ นั่งแท็กซี่ ครับ/ค่ะ",
+  "inputDurationMs": 5971,
+  "outputAudioMs": 6590,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 959,
+    "ttft_from_end_ms": 959,
+    "completion_lag_ms": 2561,
+    "ttfa_from_start_ms": 7060
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.097,
+    "coverage_ok": true,
+    "cer": 0.077
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:10:02.128Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and faithful to the source text. The fluency is slightly affected by the inclusion of slash alternatives for gender-specific pronouns and polite particles (ครับ/ค่ะ, ผม/ดิฉัน), which is common in machine translation templates but less natural in a final output."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完整且正確，內容與原文匹配（詢問步行時間、若超過15分鐘則想搭計程車）。只有格式層面較口語翻譯逐字稿痕跡（有不必要的空格以及以 / 分隔的性別/敬語選項，以及阿拉伯數字 15），影響自然度但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

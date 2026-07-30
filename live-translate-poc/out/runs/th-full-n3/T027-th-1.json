@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T027",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "可以退稅嗎?我總共買了超過五千日圓。",
+  "reference": "ขอคืนภาษีได้ไหมคะ ซื้อรวมกันเกินห้าพันเยนแล้วค่ะ",
+  "inputTranscript": "可 以 退 税 吗 ? 我 总 共 买 了 超 过 五 千 日 元 。",
+  "outputTranscript": "ขอคืนภาษีได้ไหมครับ ผมซื้อของไปทั้งหมดเกิน 5,000 เยนครับ",
+  "inputDurationMs": 3771,
+  "outputAudioMs": 4650,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 975,
+    "ttft_from_end_ms": 972,
+    "completion_lag_ms": 2074,
+    "ttfa_from_start_ms": 4875
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.106,
+    "coverage_ok": true,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:11.314Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息，包含「退稅」、「總共」以及「超過五千日圓」。語氣禮貌，無任何翻譯錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文含意（詢問是否可退稅，並說明總金額超過5,000日圓），數值正確，語氣與參考譯文略有性別/敬語差異（機器譯用男性敬語“ครับ”“ผม”，參考用女性“คะ/ค่ะ”），但不影響語意或流暢度，句子自然通順。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T030",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "請問退房時間是早上十點還是十一點?",
+  "reference": "Cho em hỏi giờ trả phòng là 10 giờ sáng hay 11 giờ ạ?",
+  "inputTranscript": "请 问 退 房 时 间 是 早 上 10 点 还 是 11 点 ?",
+  "outputTranscript": "Dạ cho tôi hỏi, thời gian trả phòng là 10 giờ sáng hay là 11 giờ sáng ạ?",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4870,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 958,
+    "ttft_from_end_ms": 958,
+    "completion_lag_ms": 2642,
+    "ttfa_from_start_ms": 5258
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.359,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:57.061Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也非常客氣有禮貌（使用了 Dạ... ạ）。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意義（詢問退房是10點還是11點），用詞自然且有禮（前後皆有敬語標記）。僅在代詞上與參考譯文不同（tôi vs em），但不影響語意或禮貌，故評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -54,6 +54,10 @@ export class RelaySession {
       const { used } = await this.usage();
       return Response.json({ usedSeconds: Math.round(used), limitSeconds: Number(this.env.DAILY_SECONDS_LIMIT) });
     }
+    if (url.pathname === "/debug") {
+      // 上一個 session 的完整事件統計:診斷「氣泡空白」時看鏈斷在哪
+      return Response.json((await this.state.storage.get("lastSession")) ?? { note: "還沒有任何 session" });
+    }
     if (req.headers.get("Upgrade") !== "websocket") return new Response("expected websocket", { status: 426 });
 
     const { used } = await this.usage();
@@ -76,13 +80,24 @@ export class RelaySession {
     const model = engine === "fast" ? this.env.FAST_MODEL : this.env.ACCURATE_MODEL;
     const t0 = Date.now();
     const hardCapMs = Number(this.env.SESSION_HARD_CAP_S) * 1000;
+    // 診斷統計:每一環節都計數,寫進 lastSession 供 /api/debug 查
+    const stats = { ts: new Date().toISOString(), lang, engine, model,
+      hasKey: !!this.env.GEMINI_API_KEY, upstreamStatus: null, upstreamOpened: false,
+      setupComplete: false, framesIn: 0, bytesIn: 0, inTxChars: 0, outTxChars: 0,
+      audioChunks: 0, upstreamCloseCode: null, upstreamCloseReason: null, endSignal: false, finishReason: null };
+    const saveStats = () => this.state.storage.put("lastSession", stats).catch(() => {});
 
     // 上游:Gemini Live(金鑰只存在這裡)
-    const resp = await fetch(`${LIVE_WS.replace("wss", "https")}?key=${this.env.GEMINI_API_KEY}`, {
-      headers: { Upgrade: "websocket" },
-    });
-    const upstream = resp.webSocket;
-    if (!upstream) throw new Error("upstream websocket unavailable");
+    let upstream = null;
+    try {
+      const resp = await fetch(`${LIVE_WS.replace("wss", "https")}?key=${this.env.GEMINI_API_KEY}`, {
+        headers: { Upgrade: "websocket" },
+      });
+      stats.upstreamStatus = resp.status;
+      upstream = resp.webSocket;
+    } catch (e) { stats.upstreamStatus = `fetch-error: ${String(e.message).slice(0, 100)}`; }
+    if (!upstream) { stats.finishReason = "upstream-unavailable"; saveStats(); throw new Error(`upstream websocket unavailable (status=${stats.upstreamStatus}, hasKey=${stats.hasKey})`); }
+    stats.upstreamOpened = true;
     upstream.accept();
 
     const sys = SYS_PROMPTS[lang] + (glossary ? `\n行程術語表(專有名詞以此為準):${glossary}` : "");
@@ -99,9 +114,11 @@ export class RelaySession {
     const finish = (reason) => {
       if (closed) return;
       closed = true;
+      stats.finishReason = reason;
+      saveStats();
       const seconds = (Date.now() - t0) / 1000;
       this.addUsage(seconds).catch(() => {});
-      try { client.send(JSON.stringify({ type: "done", reason, seconds: Math.round(seconds) })); } catch {}
+      try { client.send(JSON.stringify({ type: "done", reason, seconds: Math.round(seconds), stats })); } catch {}
       try { upstream.close(); } catch {}
       try { client.close(); } catch {}
       clearInterval(watchdog);
@@ -116,14 +133,16 @@ export class RelaySession {
     upstream.addEventListener("message", (ev) => {
       let msg;
       try { msg = JSON.parse(typeof ev.data === "string" ? ev.data : new TextDecoder().decode(ev.data)); } catch { return; }
-      if (msg.setupComplete) { client.send(JSON.stringify({ type: "ready" })); return; }
+      if (msg.setupComplete) { stats.setupComplete = true; saveStats(); client.send(JSON.stringify({ type: "ready" })); return; }
       const sc = msg.serverContent;
       if (!sc) return;
-      if (sc.inputTranscription?.text) client.send(JSON.stringify({ type: "inTx", text: sc.inputTranscription.text }));
-      if (sc.outputTranscription?.text) { lastVoiced = Date.now(); gotOutput = true;
+      if (sc.inputTranscription?.text) { stats.inTxChars += sc.inputTranscription.text.length;
+        client.send(JSON.stringify({ type: "inTx", text: sc.inputTranscription.text })); }
+      if (sc.outputTranscription?.text) { lastVoiced = Date.now(); gotOutput = true; stats.outTxChars += sc.outputTranscription.text.length;
         client.send(JSON.stringify({ type: "outTx", text: sc.outputTranscription.text })); }
       for (const part of sc.modelTurn?.parts ?? []) {
         if (part.inlineData?.data) {
+          stats.audioChunks++;
           const bytes = Uint8Array.from(atob(part.inlineData.data), (c) => c.charCodeAt(0));
           if (chunkRms(bytes) > VOICE_RMS_THRESHOLD) { lastVoiced = Date.now(); gotOutput = true; }
           client.send(JSON.stringify({ type: "audio", data: part.inlineData.data }));
@@ -131,14 +150,14 @@ export class RelaySession {
       }
       if (sc.turnComplete) finish("turn-complete");
     });
-    upstream.addEventListener("close", () => finish("upstream-closed"));
+    upstream.addEventListener("close", (ev) => { stats.upstreamCloseCode = ev.code; stats.upstreamCloseReason = String(ev.reason || "").slice(0, 200); finish("upstream-closed"); });
     upstream.addEventListener("error", () => finish("upstream-error"));
 
     client.addEventListener("message", (ev) => {
       if (typeof ev.data === "string") {
         try {
           const m = JSON.parse(ev.data);
-          if (m.type === "end") { ended = true; lastVoiced = Date.now();
+          if (m.type === "end") { ended = true; stats.endSignal = true; lastVoiced = Date.now();
             upstream.send(JSON.stringify({ realtimeInput: { audioStreamEnd: true } })); }
         } catch {}
         return;
@@ -146,6 +165,7 @@ export class RelaySession {
       // 二進位 = 16kHz PCM16 100ms 框
       const bytes = new Uint8Array(ev.data);
       if (bytes.length > 12800) return; // 400ms 以上的框丟棄(防灌爆)
+      stats.framesIn++; stats.bytesIn += bytes.length;
       upstream.send(JSON.stringify({ realtimeInput: { audio: { data: b64(bytes), mimeType: "audio/pcm;rate=16000" } } }));
     });
     client.addEventListener("close", () => finish("client-closed"));

@@ -1,0 +1,64 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T043",
+  "category": "appointment",
+  "traps": [
+    "negation",
+    "honorific"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "請問最晚可以幾點取消,而不用付取消費?",
+  "reference": "ขอถามหน่อยครับ ยกเลิกได้ช้าสุดถึงกี่โมงโดยไม่ต้องเสียค่ายกเลิกครับ",
+  "inputTranscript": "请 问 最 晚 可 以 几 点 取 消 , 而 不 用 付 取 消 费 ?",
+  "outputTranscript": "ขอทราบว่ายกเลิก ได้ช้า สุดกี่ โมง ครับ โดยไม่ต้อง เสียค่า ธรรมเนียม การยกเลิก ครับ",
+  "inputDurationMs": 4411,
+  "outputAudioMs": 5170,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 922,
+    "ttft_from_end_ms": 921,
+    "completion_lag_ms": 2979,
+    "ttfa_from_start_ms": 5522
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.123,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:01.313Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text, including the polite tone, and matches the reference translation closely."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問最晚可於幾點取消且不用付取消費），語義忠實，故 adequacy=5。目標語句意可理解且用詞正確，但機譯有些斷詞/ spacing 顯得不夠流暢與自然（例如“ได้ช้า สุดกี่ โมง”有多餘斷裂），且用語稍顯機械，故 fluency=4。沒有省略或錯譯，也無顛倒否定或捏造資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

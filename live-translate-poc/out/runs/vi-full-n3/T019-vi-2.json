@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T019",
+  "category": "dining",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "這道菜看起來很好吃,可是我已經吃飽了。",
+  "reference": "Món này nhìn ngon quá, nhưng tôi no rồi.",
+  "inputTranscript": "这 道 菜 看 起 来 很 好 吃 , 可 是 我 已 经 吃 饱 了 。",
+  "outputTranscript": "Món này trông ngon quá, nhưng mà tôi ăn no rồi ạ.",
+  "inputDurationMs": 4051,
+  "outputAudioMs": 3280,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1006,
+    "ttft_from_end_ms": 984,
+    "completion_lag_ms": 1739,
+    "ttfa_from_start_ms": 5205
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.2,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:24.261Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地翻譯了原文的意思。「Món này trông ngon quá, nhưng mà tôi ăn no rồi ạ」完全符合越南語的日常表達習慣，語意忠實度與流暢度皆為滿分。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句語意（這道菜看起來很好吃，但我已經吃飽了），因此語意忠實度高。語句大致自然，但有小幅口語化/風格差異：使用了連詞“mà”、動詞短語“ăn no”（較常見說法為“no”或“đã no”/“đã ăn no rồi”）以及句尾敬語助詞“ạ”，在語域上與原句略有出入，故流暢度略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

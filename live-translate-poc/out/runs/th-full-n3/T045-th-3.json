@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "ขอบคุณสำหรับความช่วยเหลือครับ วันนี้รบกวนคุณมากเลยครับ",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "ขอบคุณที่ช่วยนะคะ วันนี้ รบกวน คุณจริงๆ ค่ะ",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 3060,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 927,
+    "ttft_from_end_ms": 926,
+    "completion_lag_ms": 1516,
+    "ttfa_from_start_ms": 4127
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.736,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:19:29.083Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文謝意與客套的語氣，泰語表達十分道地。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致完整，傳達了「感謝幫忙」與「今天麻煩你」的語意，故語意忠實度較高（4分）。但目標語表達略顯口語且斷句/空格不自然，且使用了女性敬語（นะคะ/ค่ะ）而參考譯文為男性敬語（ครับ），禮貌形式與參考不一致，故自然度給3分並標記honorific_off。其他無重大遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

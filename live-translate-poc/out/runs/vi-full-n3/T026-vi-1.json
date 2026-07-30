@@ -1,0 +1,64 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T026",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "我考慮了一下,這個還是先不買好了。",
+  "reference": "Em suy nghĩ lại rồi, cái này thôi để lúc khác em mua ạ.",
+  "inputTranscript": "我 考 虑 了 一 下 , 这 个 还 是 先 不 买 好 了 。",
+  "outputTranscript": "Dạ, tôi cân nhắc rồi, cái này tạm thời chưa mua vội đâu ạ.",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 4441,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 960,
+    "ttft_from_end_ms": 960,
+    "completion_lag_ms": 2057,
+    "ttfa_from_start_ms": 4361
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.05,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:50.034Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。機器翻譯使用了禮貌助詞「Dạ」和「ạ」，完美傳達了原文客氣婉拒的語氣，且「tạm thời chưa mua vội」（暫時先不急著買）精確地對應了「先不買好了」的意思。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句意思（已考慮、決定暫時不買）。用詞自然且語法正確，但人稱/敬語選擇與參考譯文不同（機譯用「tôi」＋敬語『ạ』，參考用較口語的『em』），造成語域/人稱不匹配，故流暢度略降。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

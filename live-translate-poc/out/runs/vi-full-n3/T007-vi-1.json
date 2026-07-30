@@ -1,0 +1,66 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T007",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "我要兩張到京都的車票,大人一張、小孩一張。",
+  "reference": "Dạ em muốn mua hai vé đi Kyoto, một vé người lớn và một vé trẻ em.",
+  "inputTranscript": "我 要 两 张 到 京 都 的 车 票 , 大 人 一 张 , 小 孩 一 张 。",
+  "outputTranscript": "Dạ cho tôi mua hai vé đi Kyoto, một vé người lớn và một vé trẻ em ạ.",
+  "inputDurationMs": 5051,
+  "outputAudioMs": 4370,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 936,
+    "ttft_from_end_ms": 936,
+    "completion_lag_ms": 2544,
+    "ttfa_from_start_ms": 6136
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2",
+      "1"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.021,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:10:38.955Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch hoàn toàn chính xác và tự nhiên, truyền tải đầy đủ thông tin từ câu gốc và sử dụng kính ngữ phù hợp."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思，數量與票種正確（兩張票：一張大人、一張小孩）。語句在越南語中自然禮貌（使用「Dạ...ạ」），僅在稱謂上以「tôi」替代參考譯文的「em」，但不影響語意或可接受性。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T038",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "我不能打青黴素,我會過敏。",
+  "reference": "Em không thể tiêm penicillin được, em bị dị ứng.",
+  "inputTranscript": "我 不 能 打 青 霉 素 , 我 会 过 敏 。",
+  "outputTranscript": "Pencillin em không tiêm được đâu ạ, em bị dị ứng.",
+  "inputDurationMs": 2611,
+  "outputAudioMs": 3180,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 998,
+    "ttft_from_end_ms": 955,
+    "completion_lag_ms": 1591,
+    "ttfa_from_start_ms": 3797
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:40.675Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch máy rất tự nhiên và chính xác. Từ 'Penicillin' bị viết thiếu một chữ 'i' thành 'Pencillin' nhưng không ảnh hưởng đến việc hiểu nghĩa. Cấu trúc câu và kính ngữ 'ạ' được dùng rất phù hợp."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（不能打青黴素，會過敏），因此語意忠實度高。語序與拼字（Pencillin）略有不自然或小錯誤，敬語“ạ”用法也稍顯口語，但仍可理解，故流暢度給4分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

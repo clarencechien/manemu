@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T018",
+  "category": "dining",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "我要一份 tonkotsu 拉麵,麵要硬一點。",
+  "reference": "ขอราเมงทงคตสึหนึ่งที่ค่ะ ขอเส้นแข็งหน่อยนะคะ",
+  "inputTranscript": "我 要 一 份 豚 骨 汁 拉 面 , 面 要 硬 一 点 。",
+  "outputTranscript": "ขอทงคตสึราเมนที่หนึ่งครับ ขอเส้นแข็งหน่อยครับ",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 3200,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1001,
+    "ttft_from_end_ms": 995,
+    "completion_lag_ms": 2410,
+    "ttfa_from_start_ms": 5102
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.023,
+    "coverage_ok": true,
+    "cer": 0.421
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:20.913Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates 'tonkotsu ramen' as 'ทงคตสึราเมน' and 'firm noodles' as 'เส้นแข็งหน่อย'. The polite particle 'ครับ' is used naturally, making the sentence sound polite and native."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完全傳達原句意思：點一份豚骨拉麵並要求麵硬一點，數量與要求皆正確。語句自然度略有小瑕疵（「ที่หนึ่ง」的語序較不典型，且通常會說「ขอให้เส้นแข็งหน่อย/เอาเส้นแข็งหน่อย」），但仍可被泰語母語者理解，故fluency略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

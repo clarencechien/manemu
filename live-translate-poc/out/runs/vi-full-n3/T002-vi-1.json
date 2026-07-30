@@ -1,0 +1,64 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T002",
+  "category": "directions",
+  "traps": [
+    "code-switch",
+    "proper-noun"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "請問 Shibuya Sky 的入口是在這棟樓嗎?",
+  "reference": "Dạ cho hỏi lối vào Shibuya Sky là ở tòa nhà này ạ?",
+  "inputTranscript": "请 问 旭 不 亚 Sky 的 入 口 是 在 这 栋 楼 吗 ?",
+  "outputTranscript": "Dạ cho tôi hỏi, lối vào của Shibuya Sky có phải ở tòa nhà này không ạ?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 4900,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 985,
+    "ttft_from_end_ms": 985,
+    "completion_lag_ms": 2181,
+    "ttfa_from_start_ms": 4985
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.405,
+    "coverage_ok": true,
+    "cer": 0.381
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:24.254Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Bản dịch máy sử dụng cấu trúc câu hỏi lịch sự rất phù hợp với ngữ cảnh."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意圖（詢問 Shibuya Sky 的入口是否在這棟樓），語序與用詞自然，僅在句首多了「tôi」作為禮貌語氣主語，與參考譯文略有不同但不影響意思或流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

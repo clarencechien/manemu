@@ -1,0 +1,66 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T017",
+  "category": "dining",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "這杯不要加冰,然後大杯的改成中杯,總共三杯。",
+  "reference": "แก้วนี้ไม่ใส่น้ำแข็งนะคะ แล้วขอเปลี่ยนจากไซส์ใหญ่เป็นไซส์กลาง รวมทั้งหมด 3 แก้วค่ะ",
+  "inputTranscript": "这 杯 不 要 加 冰 , 然 后 大 杯 的 改 成 中 杯 , 总 共 三 杯 。",
+  "outputTranscript": "แก้วนี้ไม่ใส่น้ำแข็งนะครับ แล้วก็เปลี่ยนจากแก้วใหญ่เป็นแก้วกลางนะครับ ทั้งหมดสามแก้วครับ",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 6680,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 948,
+    "ttft_from_end_ms": 947,
+    "completion_lag_ms": 2738,
+    "ttfa_from_start_ms": 7547
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.103,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:02.850Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates all elements of the source sentence, including the modifications to the drinks and the total count, using appropriate polite particles."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且語意忠實：保留「不要加冰」、將大杯改成中杯、總共三杯皆正確。泰語表達自然通順，僅與參考譯文在語氣（ครับ/ค่ะ）上不同，但不影響譯文正確性。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

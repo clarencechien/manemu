@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "ห้องของฉันหมายเลขเจ็ดศูนย์สอง เพื่อนของฉันหมดสติค่ะ",
+  "inputTranscript": "我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。",
+  "outputTranscript": "ห้องหมายเลข 702 ครับ เพื่อนของผม เป็นลมหมดสติไปแล้วครับ",
+  "inputDurationMs": 5811,
+  "outputAudioMs": 5140,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 964,
+    "ttft_from_end_ms": 963,
+    "completion_lag_ms": 2023,
+    "ttfa_from_start_ms": 7002
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.02,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:28.716Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly conveys the room number 702 and the emergency situation of the friend fainting, using appropriate polite particles in Thai."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達兩個資訊：房間號碼（702）與朋友昏倒／失去知覺。語句通順，但使用男性語氣（ครับ、เพื่อนของผม）與原參考的女性語氣不同，故標記 honorific_off。其餘無錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,61 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T001",
+  "category": "directions",
+  "traps": [],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "請問車站在哪裡?怎麼走比較快?",
+  "reference": "ขอโทษครับ สถานีอยู่ที่ไหนครับ ไปทางไหนถึงจะเร็วที่สุดครับ",
+  "inputTranscript": "请 问 车 站 在 哪 里 ? 怎 么 走 比 较 快 ?",
+  "outputTranscript": "ขอถามหน่อยค่ะ สถานี อยู่ที่ไหนคะ ไปทางไหน เร็วที่สุดคะ",
+  "inputDurationMs": 3211,
+  "outputAudioMs": 4520,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 931,
+    "ttft_from_end_ms": 927,
+    "completion_lag_ms": 1914,
+    "ttfa_from_start_ms": 4331
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.909,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:16.468Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。雖然機器譯文使用了女性敬語助詞「ค่ะ」而參考譯文使用男性敬語助詞「ครับ」，但在無上下文脈絡的情況下兩者皆屬正確。語意完全忠實傳達，語暢度極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文大致保留原意：詢問車站位置及哪條路比較快。差異為開頭用語由參考的「ขอโทษครับ」變成「ขอถามหน่อยค่ะ」，改變了禮貌語氣與性別呈現（男/女用詞不同），且缺少連接詞「ถึงจะ」，導致「ไปทางไหน เร็วที่สุดคะ」在語流上略顯不自然但仍可理解。故語意忠實評4（輕微遺漏/語氣差異），目標語自然度評4（稍微不流暢/用詞性別不符）。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,67 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T041",
+  "category": "appointment",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "如果三點沒有位子的話,四點也可以。",
+  "reference": "ถ้าบ่ายสามโมงไม่มีที่นั่ง สี่โมงก็ได้ครับ",
+  "inputTranscript": "如 果 三 点 没 有 位 子 的 话 , 四 点 也 可 以 。",
+  "outputTranscript": "ถ้าสามโมงไม่มีที่นั่ง สี่โมงก็ได้ครับ",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 2800,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 943,
+    "ttft_from_end_ms": 943,
+    "completion_lag_ms": 1562,
+    "ttfa_from_start_ms": 4342
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3",
+      "4"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.9,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:18:29.374Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致。機器譯文中的「สามโมง」（三點）與原文「三點」完全對應，雖然參考譯文加上了「บ่าย」（下午），但機器的翻譯已足夠忠實且流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致正確且泰語自然流暢，但原句的「三點」含語境通常為「下午三點」，參考譯文明確為「บ่าย三โมง」。機器譯文省略了「บ่าย」（下午），屬於小幅遺漏，故給予較高但非滿分的 adequacy。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T030",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "請問退房時間是早上十點還是十一點?",
+  "reference": "Cho em hỏi giờ trả phòng là 10 giờ sáng hay 11 giờ ạ?",
+  "inputTranscript": "请 问 退 房 时 间 是 早 上 10 点 还 是 11 点 ?",
+  "outputTranscript": "Dạ cho hỏi giờ trả phòng là 10 giờ hay là 11 giờ sáng ạ?",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4260,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1039,
+    "ttft_from_end_ms": 957,
+    "completion_lag_ms": 3381,
+    "ttfa_from_start_ms": 5339
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.051,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:15:52.866Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch hoàn toàn chính xác và tự nhiên, truyền tải đầy đủ thông tin từ câu gốc một cách lịch sự."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意準確，保留禮貌語氣（Dạ...ạ），與參考譯文差異僅在‘sáng’的位置，並不影響意思或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

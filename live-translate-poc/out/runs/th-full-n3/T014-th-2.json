@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "อันนี้ไม่เอาเผ็ดนะคะ ทานเผ็ดไม่ค่อยได้ค่ะ",
+  "inputTranscript": "这 个 不 要 啦 , 我 不 太 能 吃 辣 。",
+  "outputTranscript": "อันนี้ไม่เอา ค่ะ ดิฉัน ทานเผ็ด ไม่ค่อย ได้ค่ะ",
+  "inputDurationMs": 3251,
+  "outputAudioMs": 3050,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 980,
+    "ttft_from_end_ms": 960,
+    "completion_lag_ms": 1568,
+    "ttfa_from_start_ms": 4380
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:12:13.663Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文漏譯了前半句中的「辣」（不要辣），將其翻譯為「這個不要」（อันนี้ไม่เอา），不過後半句「我不太能吃辣」翻譯得很準確且自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": true
+    },
+    "reason": "譯文大致傳達原意（不吃辣、自己不太能吃辣），但第一句缺少「เผ็ด」（即『不要辣』的辣字缺失），語序與停頓處理不自然。另插入了「ดิฉัน」為原文未提及的人稱詞，屬於不必要的新增資訊（hallucination）。因此語意忠實略有扣分（4分），目標語自然度亦因斷句與多餘人稱而較差（3分）。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

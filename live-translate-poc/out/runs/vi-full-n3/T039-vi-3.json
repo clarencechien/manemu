@@ -1,0 +1,65 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T039",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "我想預約明天下午三點,兩個大人。",
+  "reference": "Dạ em muốn đặt lịch lúc ba giờ chiều mai, cho hai người lớn.",
+  "inputTranscript": "我 想 预 约 明 天 下 午 3 点 , 两 个 大 人 。",
+  "outputTranscript": "Dạ, tôi muốn đặt bàn vào 3 giờ chiều mai, cho hai người lớn ạ.",
+  "inputDurationMs": 3691,
+  "outputAudioMs": 5330,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 951,
+    "ttft_from_end_ms": 949,
+    "completion_lag_ms": 2213,
+    "ttfa_from_start_ms": 4751
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.071
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:17:58.161Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Bản dịch sử dụng kính ngữ 'Dạ... ạ' rất lịch sự và phù hợp với ngữ cảnh đặt chỗ."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（預約時間與人數），用詞自然（「đặt bàn」可表示預約），句子流暢。禮貌詞尾雖與主語人稱略有混用，但不影響理解與自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T020",
+  "category": "dining",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "請問可以幫我們分開結帳嗎?",
+  "reference": "ขอโทษนะคะ ช่วยแยกบิลให้พวกเราได้ไหมคะ",
+  "inputTranscript": "请 问 可 以 帮 我 们 分 开 结 帐 吗 ?",
+  "outputTranscript": "ขอโทษนะครับ ช่วย แยก บิล ให้พวกเราได้ไหมครับ?",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 3101,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 933,
+    "ttft_from_end_ms": 933,
+    "completion_lag_ms": 1608,
+    "ttfa_from_start_ms": 3834
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.111,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:13:41.835Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。機器譯文使用了男性敬語助詞「ครับ」，而參考譯文使用女性敬語助詞「คะ」，兩者皆符合禮貌表達，語意完全一致。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文語意完全對等且表達自然，但使用了男性敬語「ครับ」而參考譯文為女性敬語「คะ」，敬語性別不符。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

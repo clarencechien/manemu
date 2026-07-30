@@ -1,0 +1,61 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T006",
+  "category": "directions",
+  "traps": [],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "這附近有沒有廁所?我趕時間。",
+  "reference": "Dạ gần đây có nhà vệ sinh không ạ? Em đang hơi gấp.",
+  "inputTranscript": "这 附 近 有 没 有 厕 所 ? 我 赶 时 间 。",
+  "outputTranscript": "Gần đây có nhà vệ sinh không ạ? Tôi đang vội.",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 2830,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1105,
+    "ttft_from_end_ms": 1105,
+    "completion_lag_ms": 1440,
+    "ttfa_from_start_ms": 4005
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.892,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:10:22.022Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly translates both sentences with appropriate politeness and correct vocabulary."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完整且自然，問題與催促意圖皆有表達。差別僅在語氣及人稱：原參考以「Dạ」開頭且用「Em」自稱更顯親切／禮貌，機譯使用『Tôi』而非『Em』，稍微改變了社會語用色彩，因此標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

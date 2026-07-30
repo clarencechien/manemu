@@ -1,0 +1,61 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "ช่วยด้วยค่ะ! ช่วยเรียกรถพยาบาลให้ด้วยค่ะ",
+  "inputTranscript": "救 命 , 请 帮 我 叫 救 护 车 。",
+  "outputTranscript": "ช่วยด้วยครับ ช่วยเรียก รถพยาบาล ให้หน่อยครับ",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 2560,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 950,
+    "ttft_from_end_ms": 931,
+    "completion_lag_ms": 1421,
+    "ttfa_from_start_ms": 3550
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.079,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:43.931Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完全準確且自然。機器譯文使用了男性敬語助詞「ครับ」，而參考譯文使用女性敬語助詞「ค่ะ」，由於原文並未指定說話者性別，此差異完全可接受，不影響語意與流暢度。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原文意義（求救並請求叫救護車），用詞自然、流暢。僅性別敬語從參考的「ค่ะ」改為「ครับ」，但不影響理解，故不視為錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

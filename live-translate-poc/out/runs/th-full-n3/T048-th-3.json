@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T048",
+  "category": "smalltalk",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 3,
+  "zh": "不用了,謝謝,我只是看看而已。",
+  "reference": "ไม่เป็นไรครับ ขอบคุณครับ ผมแค่ดูเฉยๆครับ",
+  "inputTranscript": "不 用 了 , 谢 谢 , 我 只 是 看 看 而 已 。",
+  "outputTranscript": "ไม่ต้องครับ/ค่ะ ขอบคุณครับ/ค่ะ ผม/ดิฉันแค่ดูเฉยๆ ครับ/ค่ะ",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3870,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 944,
+    "ttft_from_end_ms": 944,
+    "completion_lag_ms": 1974,
+    "ttfa_from_start_ms": 3944
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.316,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:20:10.088Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思，但文本中包含了「ครับ/ค่ะ」（男/女敬語助詞）和「ผม/ดิฉัน」（男/女第一人稱代名詞）的並列選項，這在口語或自然文本中顯得不自然，影響了流暢度。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句含意（拒絕、不需要、只是看看），因此語意忠實度高（5）。但譯文包含多重選項標記（ครับ/ค่ะ、ผม/ดิฉัน）看起來像逐字機翻或未決定的性別與敬語形式，造成自然度下降且不符合流暢泰語表達（應選一種形式），故流暢度評為3。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

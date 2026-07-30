@@ -1,0 +1,63 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T023",
+  "category": "shopping",
+  "traps": [
+    "negation"
+  ],
+  "dir": "vi",
+  "repeat": 1,
+  "zh": "請問這個價格是含稅還是不含稅?",
+  "reference": "Cho em hỏi giá này đã bao gồm thuế chưa ạ?",
+  "inputTranscript": "请 问 这 个 价 格 是 含 税 还 是 不 含 税 ?",
+  "outputTranscript": "Dạ cho hỏi, giá này đã bao gồm thuế chưa ạ?",
+  "inputDurationMs": 3891,
+  "outputAudioMs": 3921,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 942,
+    "ttft_from_end_ms": 920,
+    "completion_lag_ms": 1700,
+    "ttfa_from_start_ms": 4942
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:12.255Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch thuật rất tự nhiên và chính xác, gần như hoàn toàn trùng khớp với bản dịch tham khảo. Câu dịch truyền tải trọn vẹn và đúng ngữ cảnh ý nghĩa của câu gốc."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與原文語意完全一致且自然。機器譯文的敬語用法（Dạ ... ạ）與參考譯文相當，只是主語表達略有不同（cho hỏi vs cho em hỏi），不影響意義或禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T023",
+  "category": "shopping",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "請問這個價格是含稅還是不含稅?",
+  "reference": "ขอถามหน่อยค่ะ ราคานี้รวมภาษีหรือยังไม่รวมภาษีคะ",
+  "inputTranscript": "请 问 这 个 价 格 是 含 税 还 是 不 含 税 ?",
+  "outputTranscript": "ขอถามหน่อยครับ ราคานี้ รวม ภาษี แล้ว หรือยัง ครับ",
+  "inputDurationMs": 3891,
+  "outputAudioMs": 4120,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 951,
+    "ttft_from_end_ms": 951,
+    "completion_lag_ms": 1899,
+    "ttfa_from_start_ms": 4951
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": false,
+    "coverage_ratio": 0.935,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:18.196Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文將「含稅還是不含稅」稍微簡化翻譯為「是否已含稅」（รวมภาษีแล้วหรือยัง），雖然與原文略有出入，但在泰語情境中表達非常自然且符合常理。語氣助詞使用男性敬語「ครับ」（參考譯文為女性「ค่ะ」）在未指定說話者性別的情況下完全可以接受，整體翻譯流暢度極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語義正確，將「含稅還是不含稅」問法自然地表達為「รวมภาษีแล้วหรือยัง」，符合原意且語氣自然。敬語性別與參考譯文不同，但中文原文並未指定性別，用詞也屬可接受變體，因此不視為錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

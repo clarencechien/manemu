@@ -1,0 +1,66 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T024",
+  "category": "shopping",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "vi",
+  "repeat": 2,
+  "zh": "這件如果打八折的話,我就買兩件。",
+  "reference": "Nếu cái này được giảm 20% thì em mua hai cái ạ.",
+  "inputTranscript": "这 件 如 果 打 八 折 的 话 , 我 就 买 两 件 。",
+  "outputTranscript": "Dạ, cái này nếu được giảm giá 20% thì tôi mua hai cái ạ.",
+  "inputDurationMs": 3491,
+  "outputAudioMs": 4341,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 963,
+    "ttft_from_end_ms": 963,
+    "completion_lag_ms": 1997,
+    "ttfa_from_start_ms": 4563
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.176,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:14:29.640Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Cụm từ '打八折' (giảm 20%) được dịch đúng thành 'giảm giá 20%'. Cấu trúc câu lưu loát và lịch sự."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達原句意思：若打八折就買兩件。數量、折扣正確；語句自然流暢。唯一微小差異為人稱代詞「tôi」 vs. 參考譯文的「em」，但不影響語意或禮貌程度，故評為完全忠實且自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T032",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "th",
+  "repeat": 1,
+  "zh": "我明天不需要打掃房間,謝謝。",
+  "reference": "พรุ่งนี้ไม่ต้องทำความสะอาดห้องนะคะ ขอบคุณค่ะ",
+  "inputTranscript": "我 明 天 不 需 要 打 扫 房 间 , 谢 谢 。",
+  "outputTranscript": "พรุ่งนี้ฉัน ไม่จำเป็น ต้อง ทำความสะอาด ห้อง ครับ ขอบคุณ ครับ",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 3770,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 977,
+    "ttft_from_end_ms": 954,
+    "completion_lag_ms": 1732,
+    "ttfa_from_start_ms": 4577
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.233,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:16:18.364Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思，語法正確且表達自然。僅有敬語助詞的性別（ครับ/ค่ะ）與參考譯文不同，但在無上下文的情況下兩者皆屬正確。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達原句否定內容（明天不用打掃房間）且加上感謝，語意基本忠實。問題為多出主語“ฉัน”屬可有可無且口語上可接受；但敬語結尾用男性敬語“ครับ/ครับ”與參考用女性敬語“ค่ะ/ค่ะ”不一致，可能造成語氣/敬稱不符合原說話者（標記 honorific_off）。另外機譯詞語及間隔略顯生硬，但整體通順。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}
