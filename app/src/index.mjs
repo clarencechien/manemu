@@ -24,6 +24,14 @@ export default {
     const url = new URL(req.url);
     const p = url.pathname;
 
+    // 縱深防禦:workers.dev 等非正式 host 不經 zone WAF,一律導回正式網域
+    if (env.CANONICAL_HOST && url.hostname !== env.CANONICAL_HOST) {
+      if (req.method === "GET" && !p.startsWith("/api") && p !== "/ws") {
+        return Response.redirect(`https://${env.CANONICAL_HOST}${p}${url.search}`, 301);
+      }
+      return new Response("use canonical host", { status: 403 });
+    }
+
     /* ---------- OAuth ---------- */
     if (p === "/auth/login") {
       const state = randomHex(), nonce = randomHex();
