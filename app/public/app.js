@@ -31,6 +31,21 @@ const S = { lang: LANGS[localStorage.getItem("mn_lang")] ? localStorage.getItem(
 const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
+/* ============ 版本標記與診斷(真機回報用) ============ */
+const APP_VER = "v8-ios-keepmic";
+const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
+  || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
+const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
+// 麵包屑:每個階段留腳印,卡死時知道卡在哪(強制解鎖時上報 + 進 console)
+const crumbs = [];
+const crumb = (s) => { crumbs.push(`${(performance.now() / 1000).toFixed(1)} ${s}`); if (crumbs.length > 60) crumbs.shift(); };
+async function reportClientLog(kind) {
+  try {
+    await fetch("/api/client-log", { method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ kind, ver: APP_VER, ua: navigator.userAgent, ios: IS_IOS, ts: new Date().toISOString(), crumbs: crumbs.slice(-40) }) });
+  } catch {}
+}
+
 /* ============ 音訊:擷取(worklet)與播放(24k) ============ */
 let audioCtx = null, mediaStream = null, workletNode = null, srcNode = null;
 async function ensureAudio() {
@@ -47,25 +62,42 @@ async function ensureAudio() {
   }
   if (!audioCtx) {
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    await audioCtx.audioWorklet.addModule("/pcm-worklet.js");
+    await withTimeout(audioCtx.audioWorklet.addModule("/pcm-worklet.js"), 5000, "worklet-timeout");
     if (audioCtx.state !== "running") await Promise.race([audioCtx.resume().catch(() => {}), sleep(800)]);
   }
 }
 // 僅供本地測試裝置模擬 iOS 凍結(Playwright 從外部拿不到閉包內的 ctx)
 window.__audioDebug = { get ctx() { return audioCtx; } };
 async function startCapture(onFrame) {
+  crumb("ensureAudio");
   await ensureAudio();
-  mediaStream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 } });
+  // iOS 關鍵:mic stream 對談期間「全程保留」。track.stop() 會讓系統收回 audio session →
+  // 播放無聲、且下一次 getUserMedia 可能永不 resolve(真機回報的卡死)。
+  // 句與句之間只斷開 worklet(pauseCapture),不送任何音框;離開頁面才真正放掉(releaseMic)。
+  if (!mediaStream || !mediaStream.getTracks().some((t) => t.readyState === "live")) {
+    crumb("getUserMedia");
+    mediaStream = await withTimeout(
+      navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 } }),
+      8000, "mic-timeout");
+  }
+  crumb("mic-live");
   srcNode = audioCtx.createMediaStreamSource(mediaStream);
   workletNode = new AudioWorkletNode(audioCtx, "pcm-downsampler");
   workletNode.port.onmessage = (e) => onFrame(e.data);
   srcNode.connect(workletNode); // 不接到 destination:只擷取不外放
 }
-function stopCapture() {
+function pauseCapture() { // 句間:停止取音但保留 mic(半雙工由此保證,mic 指示燈會亮著)
   try { srcNode?.disconnect(); workletNode?.disconnect(); } catch {}
-  mediaStream?.getTracks().forEach((t) => t.stop());
-  mediaStream = srcNode = workletNode = null;
+  srcNode = workletNode = null;
 }
+function releaseMic() { // 收起頁面/卡死自救:真正放掉裝置
+  pauseCapture();
+  mediaStream?.getTracks().forEach((t) => t.stop());
+  mediaStream = null;
+}
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden" && !S.busy) releaseMic();
+});
 // 24kHz PCM16 佇列播放(300ms 起播 buffer,burst 到達也順)
 const playQ = { chunks: [], scheduled: 0, playing: false };
 function enqueuePcm(b64) {
@@ -97,39 +129,65 @@ function unlockSpeaker() {
   speakEl.play().then(() => speakEl.pause()).catch(() => {});
 }
 
-// 等譯音播完。iOS 在 mic 停止後常把 WebAudio 靜默凍結(currentTime 不走、排程無聲)
-// → 凍結偵測:300ms 內時鐘沒走就棄掉 ctx,改用 <audio>+WAV 相容播放(與重播同路徑,已驗證)
+// <audio>+WAV 播放(重播同路徑;在 iOS 真機上唯一確認會出聲的路)
+async function playWavChunks(b64chunks) {
+  if (!b64chunks?.length) return;
+  const url = pcmToWavUrl(b64chunks, 24000);
+  try {
+    const a = speakEl ?? new Audio();
+    a.src = url;
+    await withTimeout(a.play(), 3000, "play-timeout");
+    await new Promise((res) => {
+      a.addEventListener("ended", res, { once: true });
+      a.addEventListener("error", res, { once: true });
+      setTimeout(res, 30000); // 保險絲
+    });
+  } catch (e) { console.warn("[audio] wav 播放失敗", e); crumb("wavfail:" + e.message); }
+  finally { URL.revokeObjectURL(url); }
+}
+// 等譯音播完。iOS:WebAudio 串流播放不可靠(audio session 被收回時「時鐘照走、輸出無聲」,
+// 偵測不到)→ 一律走 <audio>+WAV;其他平台維持串流 + 凍結偵測 fallback。
 async function drainPlayback(b64chunks) {
   try {
+    if (IS_IOS) { crumb("drain-ios-wav"); await playWavChunks(b64chunks); return; }
     if (!audioCtx || playbackRemaining() <= 0) return;
     const mark = audioCtx.currentTime;
     await sleep(300);
-    if (audioCtx.currentTime > mark) { await sleep(playbackRemaining() + 100); return; } // 正常路徑
+    if (audioCtx.currentTime > mark) { crumb("drain-stream"); await sleep(playbackRemaining() + 100); return; }
     console.warn(`[audio] ctx 凍結(state=${audioCtx.state})→ <audio> WAV 相容播放`);
+    crumb("drain-frozen");
     try { audioCtx.close(); } catch {}   // 已排程的無聲來源一起清掉,下一句在手勢內重建
     audioCtx = null; playQ.scheduled = 0;
-    if (!b64chunks?.length) return;
-    const url = pcmToWavUrl(b64chunks, 24000);
-    try {
-      const a = speakEl ?? new Audio();
-      a.src = url;
-      await a.play();
-      await new Promise((res) => {
-        a.addEventListener("ended", res, { once: true });
-        a.addEventListener("error", res, { once: true });
-        setTimeout(res, 30000); // 保險絲
-      });
-    } catch (e) { console.warn("[audio] fallback 播放失敗", e); }
-    finally { URL.revokeObjectURL(url); }
+    await playWavChunks(b64chunks);
+    reportClientLog("frozen-fallback");
   } finally { playQ.playing = false; }
 }
 
 /* ============ 一輪 PTT(核心:真 relay) ============ */
 async function runUtterance({ side, ui }) {
-  S.busy = true;
-  try { await runUtteranceInner({ side, ui }); }
-  catch (e) { console.warn("utterance failed", e); ui.status("⚠ 出了點問題,再試一次", false); }
-  finally { S.busy = false; try { stopCapture(); } catch {} window.__pttRelease = null; }
+  S.busy = true; S.releasedAt = null;
+  let settled = false;
+  const inner = runUtteranceInner({ side, ui })
+    .catch((e) => { console.warn("utterance failed", e); crumb("err:" + (e?.message ?? e)); ui.status("⚠ 出了點問題,再試一次", false); })
+    .finally(() => { settled = true; });
+  // 保險絲:放開按鈕後 25s 內一定要收尾。iOS 真機曾在 resume()/getUserMedia 上「永不 resolve」,
+  // 任何這類掛死都在這裡強制解鎖 + 上報卡點,絕不讓使用者只能重整。
+  const fuse = (async () => {
+    while (!settled) {
+      await sleep(1000);
+      if (!settled && S.releasedAt && performance.now() - S.releasedAt > 25000) return "stuck";
+    }
+    return "ok";
+  })();
+  if (await Promise.race([inner.then(() => "ok"), fuse]) === "stuck") {
+    console.warn("[fuse] 卡死強制解鎖:", crumbs.join(" | "));
+    reportClientLog("stuck");
+    ui.status("⚠ 這句卡住了,已自動解鎖,直接講下一句就好", false);
+    try { audioCtx?.close(); } catch {}
+    audioCtx = null; playQ.scheduled = 0; playQ.playing = false;
+    releaseMic(); // 連 mic 一起放掉重來,下一句全部重建
+  }
+  S.busy = false; try { pauseCapture(); } catch {} window.__pttRelease = null;
 }
 async function runUtteranceInner({ side, ui }) {
   // 額度預檢:用完就別開麥克風/連線,直接給明確文案
@@ -156,13 +214,17 @@ async function runUtteranceInner({ side, ui }) {
     ws.addEventListener("message", (ev) => {
       const m = JSON.parse(ev.data);
       console.log("[relay]", m.type, m.text ?? m.reason ?? "");   // 手機可接 USB/遠端主控台看
-      if (m.type === "ready") { ready = true; for (const f of preReady) ws.send(f); preReady.length = 0; }
+      if (m.type === "ready") { crumb("ws-ready"); ready = true; for (const f of preReady) ws.send(f); preReady.length = 0; }
       // zh 文字顯示前過簡→正轉換(me 側的 STT、them 側的譯文);外語原樣
-      if (m.type === "inTx") { inTx += m.text; el.srcEl.textContent = side === "me" ? toTrad(inTx) : inTx; }
-      if (m.type === "outTx") { outTx += m.text; el.txEl.textContent = side === "me" ? outTx : toTrad(outTx); el.host?.scrollIntoView({ block: "end" }); }
-      if (m.type === "audio") { if (tFirstAudio === null) tFirstAudio = performance.now(); audioB64.push(m.data); enqueuePcm(m.data); }
-      if (m.type === "error") { relayError = m.message || "relay error"; resolve("error"); }
-      if (m.type === "done") { doneStats = m.stats ?? null; resolve(m.reason); }
+      if (m.type === "inTx") { if (!inTx) crumb("inTx1"); inTx += m.text; el.srcEl.textContent = side === "me" ? toTrad(inTx) : inTx; }
+      if (m.type === "outTx") { if (!outTx) crumb("outTx1"); outTx += m.text; el.txEl.textContent = side === "me" ? outTx : toTrad(outTx); el.host?.scrollIntoView({ block: "end" }); }
+      if (m.type === "audio") {
+        if (tFirstAudio === null) { tFirstAudio = performance.now(); crumb("audio1"); }
+        audioB64.push(m.data);
+        if (!IS_IOS) enqueuePcm(m.data); // iOS 不走 WebAudio 串流(無聲風險),收齊後 WAV 一次播
+      }
+      if (m.type === "error") { relayError = m.message || "relay error"; crumb("relay-err"); resolve("error"); }
+      if (m.type === "done") { crumb("done:" + (m.reason ?? "")); doneStats = m.stats ?? null; resolve(m.reason); }
     });
     ws.addEventListener("close", () => resolve("closed"));
     ws.addEventListener("error", () => resolve("ws-error"));
@@ -177,8 +239,11 @@ async function runUtteranceInner({ side, ui }) {
       micFrames.push(new Uint8Array(frameBuf.slice(0)));
       if (ready && ws.readyState === 1) ws.send(frameBuf); else preReady.push(frameBuf);
     });
-  } catch {
-    ui.status("需要麥克風權限", false); try { ws.close(); } catch {}
+  } catch (e) {
+    crumb("capfail:" + (e?.message ?? e));
+    ui.status(e?.message === "mic-timeout" ? "⚠ 麥克風沒有回應(可能被其他 app 占用),再按一次試試" : "需要麥克風權限", false);
+    try { ws.close(); } catch {}
+    if (e?.message === "mic-timeout") { releaseMic(); reportClientLog("mic-timeout"); }
     S.busy = false; return;
   }
   ui.status("聆聽中 <span class='wave'><i></i><i></i><i></i><i></i></span>", true);
@@ -187,7 +252,9 @@ async function runUtteranceInner({ side, ui }) {
   await new Promise((r) => { window.__pttRelease = r; });
   ended = true;
   const tReleased = performance.now();
-  stopCapture();
+  S.releasedAt = tReleased; // 保險絲從這一刻起算
+  crumb("released");
+  pauseCapture(); // 只斷 worklet,mic 保留(iOS audio session 不能斷)
   if (ws.readyState === 1) ws.send(JSON.stringify({ type: "end" }));
   ui.status("翻譯中…", true);
 
@@ -254,6 +321,7 @@ async function runUtteranceInner({ side, ui }) {
     S.testIdx++;
     updateTestbar();
   }
+  crumb("utter-end");
   S.busy = false;
   ui.status("按住說話", false);
   refreshUsage();
@@ -471,6 +539,8 @@ async function mountTurnstile() {
 
 /* ============ boot:登入判斷 ============ */
 (async function boot() {
+  console.log("[manemu]", APP_VER, IS_IOS ? "(iOS 模式:WAV 播放)" : "");
+  const verEl = $("appver"); if (verEl) verEl.textContent = APP_VER; // 真機確認跑的是哪版
   // 顯示層原則:永不簡中。OpenCC(cn→twp,含台灣化詞彙)為主,s2t.js 字表為載入失敗的後備。
   if (window.OpenCC) {
     try {
