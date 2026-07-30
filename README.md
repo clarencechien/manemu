@@ -4,7 +4,7 @@
 
 - 產品:https://manemu.ai-apps.work (封測,Google 登入 + 受邀名單)
 - 引擎:Gemini Live(`gemini-3.1-flash-live-preview` + 口譯 systemInstruction;快速模式用 `gemini-3.5-live-translate-preview`)
-- 支援方向:中 →(日/英/韓)→ 中
+- 支援方向:中 →(日/英/韓/越/泰)→ 中(五語面板共識 4.85–4.88,災難率 0–2%,跨語言一致)
 
 ## Repo 結構
 

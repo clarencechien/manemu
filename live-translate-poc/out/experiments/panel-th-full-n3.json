@@ -7,6 +7,1508 @@
   "deepseek/deepseek-v3.2",
   "mistralai/mistral-large-2512"
  ],
+ "consensus": {
+  "T001-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T001-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T001-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T002-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T002-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T002-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T003-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T003-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T003-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T004-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T004-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T004-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T005-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T005-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T005-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T006-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T006-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T006-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T008-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    -1,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T008-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T008-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T009-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T009-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T009-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T010-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    4
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T010-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T010-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T012-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T012-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T012-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T013-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T013-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T013-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T014-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    4
+   ],
+   "fluency_median": 4,
+   "omission_votes": 1
+  },
+  "T014-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 3,
+   "adequacy_range": [
+    2,
+    4
+   ],
+   "fluency_median": 3,
+   "omission_votes": 1
+  },
+  "T014-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 3,
+   "adequacy_range": [
+    2,
+    4
+   ],
+   "fluency_median": 4,
+   "omission_votes": 1
+  },
+  "T015-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T015-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T015-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T016-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T016-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 1
+  },
+  "T016-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T017-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T017-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T017-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T018-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T018-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T018-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T019-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T019-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T019-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T020-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T020-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T020-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T021-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T021-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T021-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T022-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    4
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T022-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    4
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T022-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T023-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T023-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    4
+   ],
+   "fluency_median": 4,
+   "omission_votes": 1
+  },
+  "T023-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 1
+  },
+  "T024-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T024-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T024-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T026-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T026-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T026-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T027-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T027-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T027-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T028-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T028-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T028-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T029-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T029-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T029-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T030-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T030-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T030-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T031-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T031-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T031-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T032-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T032-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T032-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T033-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T033-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T033-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T036-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T036-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T036-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T037-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T037-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T037-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T038-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T038-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T038-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T039-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T039-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 1
+  },
+  "T039-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T040-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T040-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T040-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T041-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T041-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T041-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T042-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T042-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T042-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T043-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T043-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T043-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 3,
+   "adequacy_range": [
+    2,
+    4
+   ],
+   "fluency_median": 4,
+   "omission_votes": 5
+  },
+  "T044-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T044-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T044-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T045-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T045-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T045-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T046-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T046-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T046-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T048-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T048-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T048-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T049-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T049-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T049-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T050-th-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T050-th-2": {
+   "n_judges": 5,
+   "adequacy_median": 3,
+   "adequacy_range": [
+    3,
+    4
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T050-th-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 1
+  }
+ },
  "items": {
   "T001-th-2": {
    "openai/gpt-5.6-terra": {
@@ -7899,6 +9401,19 @@
      "hallucination": false
     },
     "reason": "译文准确传达了原文的所有关键信息（道歉、更改预约日期、澄清非取消），且泰语表达自然流畅，礼貌用语使用恰当。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，但泰文斷句空格過多，影響自然度。"
    }
   },
   "T040-th-2": {
@@ -7953,6 +9468,19 @@
      "hallucination": false
     },
     "reason": "譯文完整且準確地傳達了原文的語意，包括道歉、更改預約的意圖（從星期五到星期六）以及澄清並非取消。泰語表達自然流暢，符合口語習慣。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣禮貌自然，符合泰語口語習慣。"
    }
   },
   "T040-th-3": {
@@ -8007,6 +9535,19 @@
      "hallucination": false
     },
     "reason": "译文准确传达了原文的歉意、更改预约而非取消的意图，所有关键信息（星期五、星期六）均正确翻译，且泰语表达自然流畅，符合口语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，但譯文在詞彙間加入多餘空格，略影響自然度。"
    }
   },
   "T041-th-1": {
@@ -8048,6 +9589,1975 @@
      "hallucination": false
     },
     "reason": "譯文忠實傳達原文語意，但「三點」譯為「ตอนสามโมง」不如「บ่ายสามโมง」自然，且「位子」譯為「ที่ว่าง」略有偏差（應為「ที่นั่ง」）"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意基本正確且自然流暢，僅在時間表達上（'三點'譯為'สามโมง'而非更精確的'บ่ายสามโมง'）有細微差異，但不影響整體理解。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，自然流暢，僅「สามโมง」未明確標示下午，但語境可推斷，不影響理解。"
+   }
+  },
+  "T041-th-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達三點沒位子則四點也可以的意思，泰語自然且時間表達正確。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，時間點和條件表達準確，語氣自然且禮貌用詞得當"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的條件與讓步語意，且用詞自然符合泰語口語習慣。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文語意，泰語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T041-th-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達三點若無座位則四點也可，語句自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且流暢,僅未明確標示下午時段但不影響理解"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "時間點「三點」未明確區分上午/下午，但語意基本正確，禮貌用語「ครับ」適當"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": true,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文流暢自然，但將「三點」直譯為「สามโมง」可能造成歧義，在泰語中未明確區分下午時段，參考譯文使用「บ่ายสามโมง」更精準。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且泰語自然流暢，但「三點」譯為「สามโมง」未明確標示下午，可能產生上午三點的歧義，略減忠實度。"
+   }
+  },
+  "T042-th-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整且班機號正確，但女性自稱「ฉัน」搭配男性禮貌詞「ครับ」不一致。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且流暢,僅代詞與敬語搭配略不一致但不影響理解"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，且使用恰當的泰語敬語"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意，泰語表達自然流暢，敬語使用得體。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文語意，航班號碼正確，語氣自然流暢，符合泰語口語表達習慣。"
+   }
+  },
+  "T042-th-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達可否以電郵確認預約及航班編號，泰語自然有禮。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整且自然,僅性別用詞與參考不同但不影響忠實度"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，且正確使用泰語敬語"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的語意，用詞自然流暢，符合泰語表達習慣。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有語意，包括航班號碼，且泰語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T042-th-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達以電郵確認預約及班機編號，泰語自然且敬語得體。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且自然地傳達原文語意,僅性別敬語用詞不同但不影響忠實度"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且使用得體的泰語敬語，自然流暢"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的語意與禮貌語氣，目標語表達自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有語意，包含航班號碼，且泰語表達自然流暢，語氣禮貌得體。"
+   }
+  },
+  "T043-th-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達最晚可免費取消的詢問，僅有空格與語序稍顯不自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意忠實,但用詞略顯生硬且重複"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語序自然流暢，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文关于最晚免费取消时间的询问，语义完整，泰语表达自然流畅，礼貌用语恰当。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，敬語使用正確，惟「ค่า ธรรมเนียม การยกเลิก」略顯冗長，自然度稍遜參考譯文。"
+   }
+  },
+  "T043-th-2": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意忠實但斷詞空格造成閱讀不自然"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達最晚免費取消的詢問，僅詞序與斷詞稍顯不自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，僅語序與助詞略顯生硬，但不影響理解。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完全忠實，但用詞和斷詞略顯生硬，自然度稍遜於參考譯文。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，但泰語斷詞與空格異常，語句不自然。"
+   }
+  },
+  "T043-th-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "譯文自然表達最晚取消時間，但遺漏「不用付取消費」的關鍵條件。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "譯文遺漏了「而不用付取消費」的關鍵條件，但其他部分忠實傳達原意且自然流暢"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 2,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "譯文遺漏了「不用付取消費」的關鍵條件,且ครับ/ค่ะ並列不自然"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "译文省略了关键信息“不用付取消费”，导致语义不完整。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "譯文遺漏「不用付取消費」之關鍵條件，語意不完整。"
+   }
+  },
+  "T044-th-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達會晚到三十分鐘及詢問能否保留座位，泰語自然通順。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，無錯誤或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文关于迟到和请求保留座位的信息，泰语表达自然流畅，符合礼貌用语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與否定皆正確，泰語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T044-th-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達將晚到三十分鐘及詢問能否保留座位，泰語略有空格與語序不夠自然但可理解。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實,但斷詞略生硬影響流暢度。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文基本傳達原意，但「ช้า 30 นาที」的語序不自然，且「ยัง สำรอง」用詞不當（應為「เก็บ...ไว้」），影響流暢度。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本正確，但詞序和用詞不夠自然，影響了流暢度。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，數字與敬語皆正確，但泰語詞間空格過多，影響自然度。"
+   }
+  },
+  "T044-th-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達將晚到三十分鐘及詢問能否保留座位，僅空格與「ครับ/ค่ะ」並列略不自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且完整,僅用詞稍顯生硬"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「ช้า กว่ากำหนด」略顯冗餘，且「โต๊ะ」不如「ที่นั่ง」自然"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义，包括迟到时间和请求保留座位，但表达方式略显冗长，自然度稍逊于参考译文。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，數字與否定皆正確，但泰語語序略顯生硬，「เก็บ โต๊ะ ไว้ให้」中間空格過多，影響自然度。"
+   }
+  },
+  "T045-th-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，泰語措辭自然，僅空格與語氣詞使用略顯不夠流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致,語氣自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的感谢和歉意，用词自然礼貌，符合泰语表达习惯。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然，敬語使用得當，無遺漏或錯誤。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，泰語表達自然流暢，敬語使用得當，無任何錯誤或遺漏。"
+   }
+  },
+  "T045-th-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達感謝與今天多有打擾之意，僅空格與語序略不自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實,僅斷句略生硬"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，僅「真的」的表達稍欠自然（可用「มากเลย」強化語氣）"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的感谢和致歉之意，用词自然流畅，符合泰语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，泰語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T045-th-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達感謝與今日多有打擾之意，僅空格與措辭略顯不自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然,僅斷句稍顯生硬"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「ค่ะ」的敬語使用略顯女性化，可能不完全符合中性或男性口吻的情境"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的感谢和歉意，用词自然礼貌，符合泰语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，泰語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T046-th-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且流暢自然"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文的讚美與詢問語意，用詞自然得體。"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達稱讚中文說得好及詢問學習地點，泰語自然禮貌。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且語氣自然流暢，使用泰語敬語得當"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語氣自然流暢，敬語使用得當，無任何錯誤或遺漏。"
+   }
+  },
+  "T046-th-2": {
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「ได้เก่ง」的表達略顯冗餘，泰語母語者會直接用「เก่งมาก」"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實且泰語自然，僅同時標示ครับ/ค่ะ略顯不夠定型。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整且忠實,僅因同時列出兩種性別敬語稍顯不自然"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的赞美与询问之意，泰语表达自然流畅，礼貌语使用恰当。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，泰語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T046-th-3": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原意且語言自然流暢"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實傳達稱讚中文說得好及詢問學習地點，泰語自然得體。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意且自然流暢，敬語使用得當，無錯誤或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的赞美与询问之意，泰语表达自然流畅，符合口语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然流暢，敬語使用得當，完全符合泰語口語表達習慣。"
+   }
+  },
+  "T047-th-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然,僅性別語尾用詞不同但不影響忠實度"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達原文比較語意，泰語自然流暢，僅使用女性禮貌語氣不影響原意。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但女性敬語「ค่ะ」與原文中性語氣不符，且「ฤดูร้อนของญี่ปุ่น」略顯生硬（更自然應為「ฤดูร้อนที่ญี่ปุ่น」）"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的对比含义，且目标语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文語意，泰語表達自然流暢，語氣得體。"
+   }
+  },
+  "T047-th-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實傳達日本夏天很熱且台北更熱的比較語意，泰語自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確且自然,與原文語意一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「覺得」譯為「ว่า」略顯口語化，不如「รู้สึกว่า」貼切"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的对比含义，且泰语表达自然流畅，礼貌语使用恰当。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，泰語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T047-th-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達原文對日本與台北夏季炎熱程度的比較，泰語自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然度高，僅「覺得」與「รู้สึก」微差但不影響整體評分"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的对比含义，且使用了自然、礼貌的泰语表达。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，日語敬語與泰語禮貌詞尾使用得當，語句自然流暢。"
+   }
+  },
+  "T048-th-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達「不用了、謝謝、只是看看」的意思，泰語自然且禮貌得當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然,僅語氣詞略有差異"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然，敬語使用得當，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的礼貌婉拒和随意浏览的意图，用词自然地道，完全符合泰语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然流暢，敬語使用正確，符合泰語口語習慣。"
+   }
+  },
+  "T048-th-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達「不用了、謝謝、只是看看」的語意，泰語表達自然有禮。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且自然對應原文語意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然，用詞得體，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的礼貌婉拒和随意浏览的意图，用词自然地道，完全符合泰语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然流暢，敬語使用正確，與參考譯文品質相當。"
+   }
+  },
+  "T048-th-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達「不用了、謝謝、只是看看」的意思，僅以男女敬語佔位符呈現略不自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然,僅因同時列出男女敬語詞略顯冗贅。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且自然流暢，敬語使用得當"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的禮貌婉拒和隨意瀏覽的語意，泰語表達自然得體，敬語使用恰當。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，但譯文同時列出男女兩性代名詞與敬語詞尾（ครับ/ค่ะ、ผม/ดิฉัน），不符合自然口語表達，嚴重影響流暢度。"
+   }
+  },
+  "T049-th-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達來自台灣及首次到大阪旅遊的意思，泰語自然通順。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原意,僅性別敬語詞略有不同但不影響忠實度"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且使用泰語的敬語助詞「ค่ะ」符合自然表達，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义和语气，使用泰语女性礼貌语尾词'ค่ะ'符合语境，表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "譯文遺漏主語「我」，但整體語意大致忠實且泰語表達自然流暢。"
+   }
+  },
+  "T049-th-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達來自台灣及首次到大阪旅遊之意，泰語自然但女性敬語與原文未標示性別略有差異。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且自然,僅性別用詞（ดิฉัน/ค่ะ vs ผม/ครับ）與參考不同但不影響忠實度"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但使用女性敬語「ค่ะ」可能不完全符合原文中性語氣，且斷句過多影響流暢度"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的所有信息，包括来源地、首次到访和目的地，且泰语表达自然流畅，敬语使用恰当。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，泰語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T049-th-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達來自台灣及首次到大阪旅遊的意思，泰語自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整且流暢,僅性別語尾詞與參考不同但無礙忠實度"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且使用泰語的敬語助詞「ค่ะ」符合自然表達習慣，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义和语气，使用泰语女性礼貌语尾词'ค่ะ'符合语境，表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，泰語表達自然流暢；雖省略主詞「我」，但泰語口語中常見且語意清晰，敬語使用得體。"
+   }
+  },
+  "T050-th-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達「麻煩你」與「之後再聯絡」之意，泰語自然且敬語得當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌用詞得當，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的请求和后续联系的意思，泰语表达自然礼貌，与参考译文高度一致。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語氣禮貌自然，符合泰語口語習慣。"
+   }
+  },
+  "T050-th-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 3,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "前半句正確，但「ฉบับหน้า」誤作下期／下一版，未自然表達「之後再聯絡」。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文整體忠實傳達原文語意，但「之後再聯絡」的「再」譯為「ฉบับหน้า」略顯生硬，不如參考譯文的「กลับไปอีกที」自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文基本传达了原文的请求和后续联系的意思，但“之后”的翻译“ค่อย ติดต่อกันฉบับหน้าครับ”略显生硬且“ฉบับหน้า”通常用于书面或分次场合，口语自然度稍欠。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": true
+    },
+    "reason": "「ฉบับหน้า」意為下一期,與原文「之後再聯絡」語意不符,造成用詞怪異且略失忠實度"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 3,
+    "fluency": 2,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「ฉบับหน้า」意為「下一期/下一版」，用於「之後再聯絡」語境不自然，應為「ครั้งหน้า」或類似表達，影響流暢度與語意精確性。"
+   }
+  },
+  "T050-th-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，僅以「ครับ/ค่ะ」並列及空格略顯不自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": -1,
+    "flags": {
+     "number_wrong": -1,
+     "negation_flipped": -1,
+     "honorific_off": -1,
+     "name_mangled": -1,
+     "omission": -1,
+     "hallucination": -1
+    },
+    "reason": "語意完全忠實，但目標語自然度因性別選項不自然而扣分。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然,僅性別敬語標記稍顯冗餘"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，禮貌用語與語氣自然，但「之後再聯絡」的「再」譯為「ใหม่」稍顯冗餘，參考譯文的「กลับไปอีกที」更流暢"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，但泰語表達略顯生硬，敬語詞尾重複使用稍欠自然。"
    }
   }
  }
