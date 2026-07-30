@@ -56,8 +56,19 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 
 其他:`SESSION_HARD_CAP_S=120`(單句硬上限)、`DAILY_SECONDS_LIMIT`(分級表查不到時的後備值)。
 
+名單值也可以直接是**秒數**(`{"a@x.com": 7200}` = 60 分... 實為 120 分/日),級別名或秒數都吃。
+
 > 日後要接金流:把「付費方案 → tier 名稱」寫進 `QUOTA_TIERS`,付款成功後更新 R2 白名單的 tier 即可;
 > 之後有後台再把這份 JSON 換成 KV/D1,Worker 端只有 `resolveUser()` 要改。
+
+## 管理頁 `/admin`(僅 ADMIN_EMAILS)
+
+- 網址:`https://manemu.ai-apps.work/admin`——非 admin 開啟只看到「沒有管理權限」,
+  所有 `/api/admin/*` 端點也擋在 session + admin 雙閘門後。
+- **等候名單**:有人用不在名單內的 Google 帳號登入 → 自動寫進 `r2://manemu-config/waitlist.json`
+  → 管理頁一鍵「核准(可選級別)」或「忽略」。核准後對方**下一次操作立即生效**(無需重登入)。
+- **已核准名單**:改級別、填自訂秒數、移除;`ADMIN_EMAILS` 內的帳號不可從 UI 移除(防手滑鎖死自己)。
+- 資料就是 R2 的兩個 JSON,想手動改也行(`wrangler r2 object put`),兩邊等價。
 
 ## 測試模式 = R1 真人語音收集
 

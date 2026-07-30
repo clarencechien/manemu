@@ -93,6 +93,10 @@ export async function resolveUser(email, env) {
   if (isAdmin) tier = "admin";              // admin 一律最高級,不受名單格式影響
   if (!tier) return { allowed: false, tier: null, limitSeconds: 0, isAdmin: false };
 
+  // 名單值可以是級別名(beta/pro/admin…)或直接給秒數(3600 / "3600")→ 自訂額度
+  if (/^\d+$/.test(String(tier))) {
+    return { allowed: true, tier: "custom", limitSeconds: Number(tier), isAdmin };
+  }
   let tiers = {};
   try { tiers = JSON.parse(env.QUOTA_TIERS || "{}"); } catch { /* 格式錯就退回預設 */ }
   const limitSeconds = tier in tiers ? Number(tiers[tier]) : Number(env.DAILY_SECONDS_LIMIT || 1800);

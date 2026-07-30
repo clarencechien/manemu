@@ -2,6 +2,7 @@
 // 安全設計見 live-translate-poc/docs/m3-spec.md §5.6。
 import { sign, verify, cookieGet, cookieSet, sessionFrom, verifyGoogleIdToken, resolveUser, randomHex, b64u } from "./auth.mjs";
 export { RelaySession } from "./relay.mjs";
+import { handleAdmin, addToWaitlist } from "./admin.mjs";
 
 const SEC_HEADERS = {
   // Turnstile 需要 challenges.cloudflare.com 的 script 與 iframe
@@ -81,6 +82,7 @@ export default {
       const claims = tok.id_token && await verifyGoogleIdToken(tok.id_token, env.GOOGLE_CLIENT_ID, st.nonce);
       if (!claims) return new Response("token verification failed", { status: 403 });
       if (!(await resolveUser(claims.email, env)).allowed) {
+        await addToWaitlist(claims.email, env).catch(() => {}); // 記進等候名單,admin 可一鍵核准
         return new Response(null, { status: 302, headers: { location: "/?waitlist=1", "set-cookie": cookieSet("mn_oauth", "", 0) } });
       }
       const session = await sign({ email: claims.email, exp: Date.now() / 1000 + 7 * 86400 }, env.SESSION_SECRET);
@@ -97,6 +99,11 @@ export default {
       if (!sameOrigin(req)) return new Response("forbidden", { status: 403 });
       session = await sessionFrom(req, env);
       if (!session) return Response.json({ error: "unauthorized" }, { status: 401 });
+    }
+
+    if (p.startsWith("/api/admin/")) {
+      if (!user.isAdmin) return Response.json({ error: "admin_only" }, { status: 403 });
+      return handleAdmin(req, env, p);
     }
 
     if (p === "/api/debug") {
@@ -149,6 +156,10 @@ export default {
     }
 
     /* ---------- 靜態 ---------- */
+    if (p === "/admin") {
+      const u = new URL(req.url); u.pathname = "/admin.html";
+      return withSec(await env.ASSETS.fetch(new Request(u, req)));
+    }
     return withSec(await env.ASSETS.fetch(req));
   },
 };
