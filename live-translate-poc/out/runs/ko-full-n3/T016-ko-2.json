@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:51:53.400Z"
+  "ts": "2026-07-30T00:51:53.400Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文非常準確且自然地翻譯了原文的所有訊息，語氣也十分得體，與參考譯文幾乎一致，甚至在表達「任何海鮮」時使用了「어떤 해산물도」，語意非常完整。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

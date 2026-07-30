@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:51:24.363Z"
+  "ts": "2026-07-30T00:51:24.363Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The first clause '這個不要辣' (Don't make this spicy) was mistranslated as '이거는 안 할래요' (I don't want this / I won't do this), omitting the concept of 'spicy' (辣) in the request. However, the second clause '我不太能吃辣' was translated accurately and fluently."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

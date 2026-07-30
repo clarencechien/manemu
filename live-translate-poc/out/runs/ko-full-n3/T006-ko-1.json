@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然，完美傳達了原文的意思，語氣也十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意：「這附近有沒有廁所?我趕時間。」→「이 근처에 화장실이 있나요? 제가 급해서요.」兩句都自然且禮貌。與參考譯文差異僅在語氣與措辭（있나요? vs 있어요?，급해서요 vs 시간이 좀 급해요），均屬可接受的口語變體，無資訊遺失或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

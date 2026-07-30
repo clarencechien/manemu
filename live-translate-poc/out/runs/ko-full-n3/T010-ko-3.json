@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:50:37.084Z"
+  "ts": "2026-07-30T00:50:37.084Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is grammatically natural and accurate, except for a name mangling error where '新宿' (Shinjuku) was translated as '싱주' instead of '신주쿠'."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大體保留原意（詢問回新宿的最後一班車時間是否為11:45），語法自然。但地名翻譯錯誤，將『新宿(신주쿠)』誤譯為『싱주』，導致專有名詞不正確，應標記為 name_mangled，因而降低忠實度評分。其餘用詞（돌아가는、마지막 전철、11시 45분인가요）可接受。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. It perfectly conveys the meaning of the source text with appropriate politeness."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整保留原意，兩地名（센소지, 스카이트리）正確，問句語意無誤，故 adequacy 給 5。語氣上機譯使用了較正式或稍生硬的開場白“말씀 좀 묻겠습니다.”，相較參考譯文的自然招呼語“저기요”稍不自然，因此 fluency 給 4。未出現數字錯誤、否定顛倒、名稱錯寫、省略或幻構。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

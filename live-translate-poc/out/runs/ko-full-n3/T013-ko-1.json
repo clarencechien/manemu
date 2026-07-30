@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:51:08.675Z"
+  "ts": "2026-07-30T00:51:08.675Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，僅「手機」一詞使用了同義詞「휴대전화」代替「휴대폰」，語意完全正確。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

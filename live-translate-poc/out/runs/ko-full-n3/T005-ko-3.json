@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。「請問」翻譯為「말씀 좀 묻겠습니다」（請讓我問個話），語氣十分客氣有禮，其餘部分也完全符合原文語意，文法正確且流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意與原文一致：提到的地點（센소지, 스카이트리）與詢問是否為同一方向的疑問保留。唯開頭用語“말씀 좀 묻겠습니다.” 比參考譯文的口語呼喚(저기요)更正式或略不自然，故流暢度略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

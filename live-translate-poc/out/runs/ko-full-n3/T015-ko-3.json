@@ -34,5 +34,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:51:43.400Z"
+  "ts": "2026-07-30T00:51:43.400Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息。'어린이 의자'（兒童椅）與 '아이가 둘 있어서'（有兩個小孩）的翻譯皆十分道地且符合韓語口語表達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

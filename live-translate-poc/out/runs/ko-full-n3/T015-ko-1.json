@@ -34,5 +34,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:51:33.920Z"
+  "ts": "2026-07-30T00:51:33.920Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "번역이 매우 정확하고 자연스럽습니다. 인원수, 아이 수, 그리고 어린이 의자(아기 의자) 요청까지 누락 없이 완벽하게 번역되었습니다. 존댓말 표현도 적절합니다."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

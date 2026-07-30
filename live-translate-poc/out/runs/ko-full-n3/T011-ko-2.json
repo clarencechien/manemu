@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:50:45.320Z"
+  "ts": "2026-07-30T00:50:45.320Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完美傳達了原文「想幫IC卡儲值一千日圓」的意思，文法與語氣皆十分恰當。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文準確表達原句意圖（要幫IC卡儲值1000日圓），數字與對象均正確。語氣為正式敬體，語法自然流暢，與參考譯文的會話語氣略有不同但不影響可接受性。無明顯錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

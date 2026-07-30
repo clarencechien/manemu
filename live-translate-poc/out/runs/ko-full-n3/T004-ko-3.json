@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is exceptionally accurate and natural. It perfectly conveys the meaning of the source text in polite and fluent Korean, even correcting a minor typo present in the reference translation ('몇 분쯯' -> '몇 분 정도')."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，將「從這裡走過去大概要幾分鐘? 超過十五分鐘的話我想搭計程車。」準確翻為韓文。語氣和用詞自然（'대략 몇 분 정도 걸리나요?'、'15분이 넘으면 택시를 타고 싶어요.'），與參考譯文意思一致，無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
