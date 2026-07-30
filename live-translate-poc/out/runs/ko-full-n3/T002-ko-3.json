@@ -1,0 +1,36 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T002",
+  "category": "directions",
+  "traps": [
+    "code-switch",
+    "proper-noun"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "請問 Shibuya Sky 的入口是在這棟樓嗎?",
+  "reference": "저기요, 시부야 스카이 입구가 이 건물에 있는 거예요?",
+  "inputTranscript": "请 问 旭 不 亚 Sky 的 入 口 是 在 这 栋 楼 吗 ?",
+  "outputTranscript": "실례지만 시부야 스카이 입구가 이 건물에 있나요?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 3931,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 979,
+    "ttft_from_end_ms": 979,
+    "completion_lag_ms": 2261,
+    "ttfa_from_start_ms": 4979
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.952,
+    "coverage_ok": true,
+    "cer": 0.381
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:48:47.240Z"
+}

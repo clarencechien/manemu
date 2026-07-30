@@ -1,0 +1,33 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T001",
+  "category": "directions",
+  "traps": [],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "請問車站在哪裡?怎麼走比較快?",
+  "reference": "저기요, 역이 어디에 있어요? 어떻게 가는 게 더 빨라요?",
+  "inputTranscript": "请 问 车 站 在 哪 里 ? 怎 么 走 比 较 快 ?",
+  "outputTranscript": "말씀 좀 묻겠습니다. 역이 어디에 있나요? 어떻게 가는 것이 빠른가요?",
+  "inputDurationMs": 3211,
+  "outputAudioMs": 5430,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 971,
+    "ttft_from_end_ms": 971,
+    "completion_lag_ms": 2228,
+    "ttfa_from_start_ms": 4372
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.286,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:48:37.958Z"
+}
