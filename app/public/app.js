@@ -143,7 +143,7 @@ async function runUtterance({ side, ui }) {
   el.host?.classList.remove("speaking");
   playQ.playing = false;
 
-  ui.done({ side, inTx, outTx, deadAir, lagS: ((performance.now() - t0) / 1000).toFixed(1) }, el);
+  ui.done({ side, inTx, outTx, deadAir, lagS: ((performance.now() - t0) / 1000).toFixed(1), reason: doneStats?.finishReason }, el);
 
   // 回譯確認(me 側、非測試模式)
   if (side === "me" && !S.test && outTx) {
@@ -195,9 +195,10 @@ const chatUI = {
     el.scrollIntoView({ block: "end" });
     return { host: el, srcEl: el.querySelector(".src"), txEl: el.querySelector(".tx") };
   },
-  done({ deadAir, lagS }, el) {
+  done({ outTx, deadAir, lagS }, el) {
     el.host.querySelector(".rowmeta").innerHTML =
-      `<span class="lat">${lagS}s</span>` + (deadAir !== null ? `<span class="lat">死氣 ${deadAir}ms</span>` : "") + (S.test ? `<span class="lat">已記錄</span>` : "");
+      `<span class="lat">${lagS}s</span>` + (deadAir !== null ? `<span class="lat">死氣 ${deadAir}ms</span>` : "")
+      + (S.test && outTx ? `<span class="lat">已記錄</span>` : ""); // 失敗不標已記錄
     el.host.scrollIntoView({ block: "end" });
   },
   badge(el, backZh) {
