@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in fluent Korean, matching the reference translation almost exactly."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句含意：要一份豚骨拉麵並要求麵較硬，故語意忠實度高。韓文句子文法正確且可理解，但用詞上「딱딱하게」比起參考譯文的「좀 딱딱하게」少了緩和語氣，在母語感上稍顯生硬，所以自然度略降。沒有遺漏或錯誤資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

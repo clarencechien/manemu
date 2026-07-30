@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:59:18.323Z"
+  "ts": "2026-07-30T00:59:18.323Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句意義：拒絕、感謝及僅僅看看三層意思皆有呈現。韓譯自然、語法正確（“보기만 할게요”與參考的“구경하는 거예요”只是表達風格差異，皆可接受）。因此在語意忠實與目標語自然度上皆為最高評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

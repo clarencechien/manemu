@@ -34,5 +34,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:53:03.252Z"
+  "ts": "2026-07-30T00:53:03.252Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「이거 말고」完美對應「這個不要」，「옆에 있는 파란색으로 할게요」也極為自然地表達了「我要旁邊那個藍色的」，整體語意與語氣皆十分貼切。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：『這個不要』->『이거 말고』、『我要旁邊那個藍色的』->『옆에 있는 파란색으로 할게요』、『兩個多少錢?』->『두 개에 얼마예요?』。用詞與語序在韓語中自然可接受。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:55:21.199Z"
+  "ts": "2026-07-30T00:55:21.199Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text using appropriate honorifics and phrasing that matches the context."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：原句請求派人來檢查冷氣是否壞了，機器譯文正確表達為“방의 에어컨이 고장 난 것 같은데, 사람을 불러서 좀 봐주실 수 있을까요?”。用詞與參考譯文略有不同（'불러서' vs '보내서'），但意義相同且禮貌得體，語句自然流暢。沒有遺漏或增補資訊，故給予最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

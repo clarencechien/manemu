@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分客氣得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意義（請求幫忙確認列車是否往橫濱），語氣禮貌且用詞自然。與參考譯文差異僅在用語選擇（'죄송합니다만' vs '저기요'），均屬可接受的禮貌表達。無錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

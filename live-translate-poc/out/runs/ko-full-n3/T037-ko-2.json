@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:56:41.822Z"
+  "ts": "2026-07-30T00:56:41.822Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句資訊：房號為702、朋友昏倒。用詞上有小瑕疵—「호수는 702호」在韓語中稍顯冗贅/不太自然（通常說「방 번호」或直接「702호」），且參考譯文用「쓰러졌어요」較貼近口語，但「기절했어요」也可接受。故語意忠實給5分，自然度給4分。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「방 호수」（房號）與「기절했어요」（昏倒了）皆為極佳的翻譯，語意完全忠實，語氣也十分自然流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

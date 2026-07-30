@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:59:22.462Z"
+  "ts": "2026-07-30T00:59:22.462Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實表達「不用了,謝謝,我只是看看而已」的意思；韓語表達自然流暢，與參考譯文僅在詞序/措辭上有細微差異，無實質誤譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

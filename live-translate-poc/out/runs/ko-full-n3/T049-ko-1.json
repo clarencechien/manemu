@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:59:27.131Z"
+  "ts": "2026-07-30T00:59:27.131Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（來自台灣，第一次來大阪），語意忠實。語句在韓語上稍有不自然處（“오사카에는 처음 여행 왔어요” 的語序/表現略不流暢），但可理解，故流暢度評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

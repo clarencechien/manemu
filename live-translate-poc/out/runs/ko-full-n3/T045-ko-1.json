@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:58:35.324Z"
+  "ts": "2026-07-30T00:58:35.324Z",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達了原句的謝意與對造成麻煩的歉意，語意基本忠實。但用詞語氣與參考譯文略有差異（參考為「신세 많이 졌어요」偏表達受人幫忙的感激，機譯為「번거롭게 해드렸네요」較直接表示造成對方麻煩），因此給予較高但非滿分的評分。語句在韓語上大致自然，微有口氣/措辭不夠自然之處。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

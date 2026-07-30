@@ -48,5 +48,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text. The tone is polite and appropriate, matching the reference translation closely."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地傳達原句意思（不要加冰、把大杯改成中杯、總共三杯）。語句自然、禮貌程度略正式但適切，沒有遺漏或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

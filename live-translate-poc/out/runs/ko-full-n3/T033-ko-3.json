@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:55:56.666Z"
+  "ts": "2026-07-30T00:55:56.666Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。'한 대만' 中的 '만' 以及結尾的 '해서요' 讓韓語表達顯得十分道地且有禮貌，完美符合請求幫忙叫計程車的語境，無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，表達自然。‘택시 한 대만 불러주실 수 있나요?’ 與 ‘내일 아침 6시 반에 공항에 가야 해서요.’ 均符合中文原意與韓語自然用法。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

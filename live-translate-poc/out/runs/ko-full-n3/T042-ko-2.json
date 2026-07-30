@@ -33,5 +33,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:57:55.944Z"
+  "ts": "2026-07-30T00:57:55.944Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實；韓文表達自然。雖然參考譯文用較親切體(이에요)，機譯用較正式的입니다，但不影響正確性或可理解性，故評分皆為最高。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，僅在句尾語氣助詞上有些微差異（입니다 與 이에요），兩者皆符合禮貌體，無任何翻譯錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

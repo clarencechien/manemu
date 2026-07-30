@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，僅「手機」一詞使用了同義詞「휴대전화」代替「휴대폰」，語意完全正確。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：'방금 승강장에서 휴대전화를 잃어버렸어요.' 正確傳達了「剛剛在月台上把手機弄丟了」的時制與地點。用詞自然（雖然參考譯文用 '휴대폰'，但 '휴대전화' 同義且同樣自然）。語法與敬體皆正確，因此 adequacy 與 fluency 均為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

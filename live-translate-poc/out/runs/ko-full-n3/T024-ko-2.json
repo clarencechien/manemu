@@ -34,5 +34,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:53:43.862Z"
+  "ts": "2026-07-30T00:53:43.862Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「打八折」正確地翻譯為「20% 할인」（打八折即折價20%），語意完全符合，語氣也十分自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與原文語意一致，表達自然流暢。機譯使用「할인해 주시면」「제가 두 개 살게요」與參考譯文等義，無錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

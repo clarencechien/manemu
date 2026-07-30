@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:53:28.439Z"
+  "ts": "2026-07-30T00:53:28.439Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. \"실례지만\" is a polite addition for \"請問\", and \"별도인가요\" is a very natural way to express \"不含稅\" (tax-exclusive) in Korean. No errors found."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句意思（詢問價格是否含稅），且加入禮貌用語“실례지만”，語句在目標語中自然流暢，與參考譯文等效。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

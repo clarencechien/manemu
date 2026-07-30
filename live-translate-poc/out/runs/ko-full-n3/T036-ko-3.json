@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:56:30.938Z"
+  "ts": "2026-07-30T00:56:30.938Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（頭暈且沒有心臟病病史）。用詞上「내력」較少見，較常用「병력」，且句尾語氣可更自然（例如“어지러운데요”），但整體通順且忠實。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。雖然將「病史」翻譯為「내력」（來歷、歷史）而非更精確的醫學術語「병력」（病史），但在日常口語對話中完全可以理解，語意表達十分完整。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

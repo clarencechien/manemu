@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:58:26.241Z"
+  "ts": "2026-07-30T00:58:26.241Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（晚三十分鐘並請對方保留位子）。用語自然且禮貌，僅與參考譯文在措詞（'자리 좀 맡아 주실 수 있을까요?' vs '자리를 맡아둘 수 있을까요?'）及語氣緩和詞'좀'上有細微差異，並不影響意思或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural, almost identical to the reference translation. It conveys the meaning perfectly with appropriate honorifics."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:53:53.614Z"
+  "ts": "2026-07-30T00:53:53.614Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「limited edition 스타일이 있나요?」完整表達了「有沒有 limited edition 的款式？」，第二句使用「-거든요」結尾，自然地表達了「因為我在Instagram上看到」的語境，語意忠實度與流暢度皆非常好。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原意（詢問是否有限定版款式並說是在Instagram看到的）。語句在韓語中自然且可接受，僅在用詞上保留英文片語，但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

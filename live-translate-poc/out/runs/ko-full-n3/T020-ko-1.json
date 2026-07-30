@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:52:44.565Z"
+  "ts": "2026-07-30T00:52:44.565Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「혹시」完美地傳達了「請問」在口語中的客氣語氣，而「계산을 따로따로 해 주실 수 있나요?」也精確地翻譯了「幫我們分開結帳嗎」。雖然省略了「我們（저희）」，但在韓語口語中省略主詞是非常自然且符合習慣的，不影響語意表達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且自然，忠實表達「請問可以幫我們分開結帳嗎?」的意思，與參考譯文相當。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

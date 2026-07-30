@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:54:03.711Z"
+  "ts": "2026-07-30T00:54:03.711Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思。'고민해 봤는데' 很好地對應了 '考慮了一下'。後半句 '먼저 사지 않는 게 좋겠어요' 雖然相較於參考譯文的 '일단 안 살게요' 稍微顯得不夠簡練，但語法完全正確且語氣自然、禮貌。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完全傳達原句意思：表達已考慮過且決定先不買，語氣略為禮貌但自然，無遺漏或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -48,5 +48,19 @@
     },
     "reason": "번역이 매우 정확하고 자연스럽습니다. '兒童椅(아동용 의자/유아용 의자)'를 '어린이용 의자'로 적절하게 번역하였으며, 문장의 흐름과 존댓말 표현도 완벽합니다."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原文資訊（五個人、兩個小孩、需要兒童椅）。語意忠實。語句自然，但用詞上「어린이용 의자」比起參考譯文的「아기 의자」稍正式/不那麼口語，因此流暢度給4分而非5分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

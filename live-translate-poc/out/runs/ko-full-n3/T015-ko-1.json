@@ -48,5 +48,19 @@
     },
     "reason": "번역이 매우 정확하고 자연스럽습니다. 인원수, 아이 수, 그리고 어린이 의자(아기 의자) 요청까지 누락 없이 완벽하게 번역되었습니다. 존댓말 표현도 적절합니다."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實：正確表達「總共五個人、兩個小孩、需要兒童椅」的意思。語流自然，用詞和語序符合韓語習慣（'어린이 의자' 與參考譯文的 '아기 의자' 意義相近且可互換），無錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

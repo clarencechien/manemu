@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:58:23.287Z"
+  "ts": "2026-07-30T00:58:23.287Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（告知會晚30分鐘並請對方幫忙保留位子）。語句在韓語中自然，僅在禮貌程度上與參考譯文略有差異（'주실 수 있나요?' vs '주실 수 있을까요?'），但不影響語意或可接受性。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎一致，僅有極微小的語氣差異（'있나요?' 與 '있을까요?'），兩者皆符合韓語的禮貌表達方式。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:52:45.312Z"
+  "ts": "2026-07-30T00:52:45.312Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with correct grammar and appropriate politeness, matching the reference translation's intent closely."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（菜看起來好吃，但說話者已經吃飽），用詞與語氣自然。僅有「요리」 vs 「음식」與句尾表現（'배가 불러요' vs '배가 불러서요'）的細微差異，均屬可接受的自然變體。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

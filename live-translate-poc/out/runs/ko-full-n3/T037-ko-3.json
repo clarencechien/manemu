@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:56:50.241Z"
+  "ts": "2026-07-30T00:56:50.241Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句資訊：房號為702、朋友昏倒了。用語上「호수」較少用於口語（通常說『번호』或直接『702호』），且句尾銜接處略顯生硬，但整體可理解且語法正確；將「昏倒」譯為『기절했어요』比參考的『쓰러졌어요』偏正式，但無誤。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「방 호수」（房號）與「기절했어요」（昏倒了）皆為極佳的翻譯，語意完全忠實，語氣也十分自然流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:54:57.884Z"
+  "ts": "2026-07-30T00:54:57.884Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，語氣客氣有禮，完全符合情境。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原文意思（未訂房，詢問今晚是否有空房），語意忠實且語氣禮貌自然。與參考譯文差異僅在於語氣表現（'혹시...있을까요?' 比參考的 '있어요?' 更禮貌），但不影響正確性與流暢度，故評為滿分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

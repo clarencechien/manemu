@@ -48,5 +48,19 @@
     },
     "reason": "譯文非常準確且自然，完美地傳達了原文的所有細節，韓語表達流暢且符合禮貌語氣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且語義忠實地表達了「不要加冰」、「大杯改中杯」與「總共三杯」。韓語表達自然，符合口語禮貌用法。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

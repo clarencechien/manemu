@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:53:17.046Z"
+  "ts": "2026-07-30T00:53:17.046Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is accurate and natural. It successfully conveys the meaning of bargaining for 3000 ('3000원으로 해 주세요') in polite Korean, which is equivalent to the source text."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思——表示太貴並請求以3000（單位寫作원）成交。語氣比參考譯文稍直接（'해 주세요' vs '해 주시면 안 돼요?'）但語義忠實。韓語表達自然，唯用法上'ren（원）에'比'원으로'稍更常見，故各給4分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

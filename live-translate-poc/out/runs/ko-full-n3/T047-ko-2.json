@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:59:07.039Z"
+  "ts": "2026-07-30T00:59:07.039Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思：將「日本的夏天很熱」譯為「일본의 여름은 매우 덥지만」以及「我覺得台北更熱」譯為「저는 타이베이가 더 덥다고 생각해요」，語意忠實且語氣自然，無明顯錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

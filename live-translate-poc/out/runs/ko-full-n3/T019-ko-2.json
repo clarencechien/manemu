@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:52:37.286Z"
+  "ts": "2026-07-30T00:52:37.286Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural, conveying the exact meaning of the source text with appropriate honorifics and grammar."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句含意（表示菜看起來好吃但說話者已經吃飽），用詞與參考譯文僅有細微差異（'이 요리' vs '이 음식'、句尾表現），語氣與自然度均良好，無錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

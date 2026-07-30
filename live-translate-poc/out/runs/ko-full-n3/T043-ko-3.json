@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:58:15.417Z"
+  "ts": "2026-07-30T00:58:15.417Z",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文意義與原句高度相符，詢問最晚取消時間以免支付取消費用。唯一小差異是機譯使用了「취소해야」（必須取消）的措辭，而原句用「可以取消」（可否取消/在何時之前可取消），語氣上有輕微的義務感差別，但不影響整體意思；句子在韓語中也十分自然。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地翻譯了原文的意思，語意完整，文法正確，符合韓語的日常表達習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

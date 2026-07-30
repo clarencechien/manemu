@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:54:41.939Z"
+  "ts": "2026-07-30T00:54:41.939Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。人名「陳大文」譯為漢字音「진대문」（陳大文），也是一種常見且可接受的翻譯方式，語意完全忠實，語氣也十分自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文大體傳達了訂房、入住時間（今天起兩晚）和報上姓名的意圖，語句通順自然。但人名翻譯錯誤（原名為“陳大文”，機器譯為“진대문”，且與參考譯文的音/寫法不符），這是重要資訊錯誤，降低語意忠實度，因此給予中等偏低的 adequacy 分數。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

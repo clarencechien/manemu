@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:58:52.213Z"
+  "ts": "2026-07-30T00:58:52.213Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意正確，敬語與原意一致。用詞與參考譯文僅有輕微措辭差異（어디에서 vs 어디서, 배우셨나요 vs 배우셨어요），均屬自然用法，無錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:54:40.767Z"
+  "ts": "2026-07-30T00:54:40.767Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。人名「陳大文」採用了韓語漢字音讀「진대문」，這是完全正確且標準的翻譯方式。整句語意完整，語氣自然得體。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思：已預訂、姓名與入住起始日/住兩晚皆正確。韓文表達自然流暢，無語意遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

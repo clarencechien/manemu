@@ -45,5 +45,19 @@
     },
     "reason": "前半句「這個不要辣」被誤譯為「이거는 안 할게요」（這個我不要了/我不做了），漏譯了「不要辣（不加辣）」的意思。後半句「我不太能吃辣」翻譯得很好（제가 매운 걸 잘 못 먹거든요）。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": true,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文把說話者原本的請求（請不要這道菜辣／不要辣）誤譯為說話者自己不做這件事（이거는 안 할게요 = 我不會做/我不吃），主語/語態變動導致語意不符；後半句“제가 매운 걸 잘 못 먹거든요”與參考譯文語意相符且自然。語句本身通順，但關鍵意思被錯譯，故給予較低的語意忠實分數。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

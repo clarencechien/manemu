@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:54:12.132Z"
+  "ts": "2026-07-30T00:54:12.132Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「고민해 봤는데」很好地對應了「我考慮了一下」，而「이건 아직 사지 않는 게 좋겠어요」也完美且得體地表達了「這個還是先不買好了」的意思，語意忠實度與流暢度皆極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且與原文語意相符：原句表達思考後決定暫時不買，機器譯文的 의미(고민해 봤는데, 이건 아직 사지 않는 게 좋겠어요) 與參考譯文的語氣略有不同（建議/委婉表述 vs. 直接決定），但不影響語意忠實度且韓文自然流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

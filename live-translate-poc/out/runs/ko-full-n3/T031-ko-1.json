@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:55:17.021Z"
+  "ts": "2026-07-30T00:55:17.021Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「房間」翻譯為「객실」（客房）在飯店情境下非常合適，整句表達流暢且語氣禮貌，完全符合原文意思。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實表達原意：指出房間的冷氣似乎壞了，請人來查看。措辭自然、敬語妥當。僅在用詞上與參考譯文有微差（객실의 에어컨 vs 방 에어컨；확인해 주실 수 있나요 vs 좀 봐 주실 수 있나요），但意義與語氣一致，沒有資訊遺漏或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

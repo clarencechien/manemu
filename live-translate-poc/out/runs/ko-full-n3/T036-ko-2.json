@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:56:28.340Z"
+  "ts": "2026-07-30T00:56:28.340Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意義（“頭暈”與“無心臟病病史”皆正確），語句在目標語中自然流暢。唯一細微差別是第一個子句尾部參考譯文用“어지러운데요”而機器譯文為“어지러운데,”，但不影響語意或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural, almost identical to the reference translation. It perfectly conveys the meaning of the source text in natural Korean."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

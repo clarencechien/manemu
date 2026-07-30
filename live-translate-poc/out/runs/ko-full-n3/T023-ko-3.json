@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:53:35.004Z"
+  "ts": "2026-07-30T00:53:35.004Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates '請問' as '실례지만' and accurately conveys the choice between tax-inclusive and tax-exclusive ('세금 포함인가요, 아니면 불포함인가요?')."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意，問句清楚自然。加入“실례지만”為禮貌用語，屬於合理增補；第二句雖未重複“세금”，但語意仍明確（“불포함”指未含稅），無誤。故語意忠實與目標語自然度皆為最高評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

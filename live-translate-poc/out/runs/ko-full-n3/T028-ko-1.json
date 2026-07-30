@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:54:31.524Z"
+  "ts": "2026-07-30T00:54:31.524Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且流暢。人名「陳大文」採用了標準的韓文漢字音譯「진대문」，完全符合語意。語氣禮貌且自然，無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達已訂房、入住兩晚與起始日（今天）等資訊，語意大致傳達，但姓名翻譯錯誤（原文陳大文，譯為 '진대문'，應為 '천대문' 或正確音譯），故語意忠實度下降。語句在韓文中流暢自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

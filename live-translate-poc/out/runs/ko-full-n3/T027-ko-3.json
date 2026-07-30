@@ -33,5 +33,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:54:30.259Z"
+  "ts": "2026-07-30T00:54:30.259Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「면세가 되나요?」在日韓旅遊情境中是表達退稅非常道地且常用的說法，後半句的翻譯也完全符合原文意思，語氣自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達了原意（詢問是否能退稅並說明購買金額超過五千日圓）。唯「可以退稅嗎?」更準確的對應為「세금 환급 되나요?」或「환급 받을 수 있나요?」，而機譯用「면세가 되나요?」語義偏向“是否免稅/免稅處理”，屬細微差異，故給予4分。語句自然流暢，故 fluency 給5分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:59:14.564Z"
+  "ts": "2026-07-30T00:59:14.564Z",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文自然且與原意接近。機譯以“괜찮아요, 감사합니다”表達禮貌拒絕，雖未逐字翻成參考譯文開頭的“아니요”，但語意（不用了/謝謝）仍被傳達；“그냥 좀 둘러보는 거예요”與“그냥 구경하는 거예요”差異很小，屬可接受的措辭差異。故給予較高的忠實度與自然度評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

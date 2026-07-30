@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:59:35.998Z"
+  "ts": "2026-07-30T00:59:35.998Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意義且語句自然：『대만에서 왔는데』對應「我是從台灣來的」，『오사카에 놀러 온 건 처음이에요』對應「第一次來大阪玩」。語氣與參考譯文相近，無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

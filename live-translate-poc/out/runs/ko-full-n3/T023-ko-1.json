@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:53:25.999Z"
+  "ts": "2026-07-30T00:53:25.999Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. '혹시' is a very natural colloquial rendering of '請問' in this context, and '세금 포함인가요, 불포함인가요?' perfectly conveys the meaning of '含稅還是不含稅'."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句詢問價格是否含稅的意思，韓語表達自然，可直接對照參考譯文，僅語氣詞「혹시」為禮貌用法，並不影響正確性。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

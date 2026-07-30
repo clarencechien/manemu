@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:53:10.776Z"
+  "ts": "2026-07-30T00:53:10.776Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「안 될까요?」比參考譯文的「안 돼요?」更為客氣委婉，非常符合口語情境，語意完全忠實。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句意思：「太貴了，算我三千塊可以嗎？」被正確翻為要求以3000（單位以원表現）成交的詢問句。語氣與禮貌程度自然，語法流暢。唯一可議處為原文貨幣單位“塊”未明確對應韓元，但不影響語意理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

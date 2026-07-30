@@ -45,5 +45,19 @@
     },
     "reason": "The first clause '這個不要辣' (Don't make this spicy) was mistranslated as '이거는 안 할래요' (I don't want this / I won't do this), omitting the concept of 'spicy' (辣) in the request. However, the second clause '我不太能吃辣' was translated accurately and fluently."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": true,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "第1句將請求（把菜做成不辣）誤譯為拒絕或不想要（“안 할래요” = 我不想做/不要），造成語意錯誤，因此忠實度很低；第2句“매운 걸 잘 못 먹거든요”正確表達了不能吃辣的原因。語句在韓語上通順自然，但主要意思被誤傳，故 adequacy 評為2，fluency 評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

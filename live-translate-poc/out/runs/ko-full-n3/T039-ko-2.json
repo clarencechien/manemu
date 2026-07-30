@@ -33,5 +33,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:57:07.761Z"
+  "ts": "2026-07-30T00:57:07.761Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且準確地傳達了原文意思（預約時間、明天下午3點、兩位大人）。韓語表達自然流暢，只有細微的語氣/連詞差異（參考譯文用 '로' 與語尾稍不同），但不影響理解或禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有訊息，語意忠實度極高。韓文句型表達非常自然流暢，符合韓語母語者的表達習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

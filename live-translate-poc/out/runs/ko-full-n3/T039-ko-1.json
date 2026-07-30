@@ -33,5 +33,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:57:05.857Z"
+  "ts": "2026-07-30T00:57:05.857Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達原意（預約時間、明天下午三點、兩個大人）且語句在目標語（韓語）中自然流暢。與參考譯文相比僅為措辭和禮貌語氣上的細微差異，並不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地翻譯了原文的所有訊息，包含時間（明天下午三點）與人數（兩個大人），語意完全忠實，語句流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

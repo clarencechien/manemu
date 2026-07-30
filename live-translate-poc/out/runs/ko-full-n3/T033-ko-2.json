@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:55:48.406Z"
+  "ts": "2026-07-30T00:55:48.406Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「6시 반까지」（到六點半為止/六點半前）精確地傳達了原文「六點半要到」的意思，整體語氣與用詞皆符合韓語口語習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語句自然流暢且禮貌。唯「내일 아침 6시 반까지 공항에 가야 해요」使用了'까지'(by/until)，相較原文的時間點'在6:30到達'（對應參考譯文用'에'表時間點），語意有輕微偏差（暗示最晚在6:30之前到達而非準確在6:30到達）。因此給予略降的忠實度分數。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

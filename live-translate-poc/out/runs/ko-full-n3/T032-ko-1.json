@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:55:29.625Z"
+  "ts": "2026-07-30T00:55:29.625Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器翻譯非常準確且流暢。雖然參考譯文採用了「不用幫我打掃」的客氣說法（안 해주셔도 돼요），但機器翻譯的「저는 내일 방 청소를 할 필요가 없어요」（我明天不需要打掃房間）在語法和語意上都完全正確且自然，禮貌語氣（감사합니다）也表達得很好。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語法正確且自然，但改變了語者/受話者的視角。原句意為告知對方（例如服務者）『明天不需要幫我打掃房間』，參考譯文使用敬語表達。機譯則變成『我明天不需要打掃房間』，改變了主語並且缺乏參考譯文的敬語，導致語意不完全忠實。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
