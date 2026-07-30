@@ -100,6 +100,8 @@ export default {
     }
 
     if (p === "/api/debug") {
+      // 已在 session 閘門後、且只回自己 DO 的診斷(無金鑰材料);封測結束把 var 改 off
+      if (env.DEBUG_ENDPOINT === "off") return Response.json({ error: "disabled" }, { status: 404 });
       const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
       return stub.fetch("https://do/debug");
     }
