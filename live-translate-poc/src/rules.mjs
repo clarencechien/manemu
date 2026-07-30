@@ -46,6 +46,7 @@ export function checkNumbers(expected, outputText) {
 
 const NEG_PATTERNS = {
   ja: /(ない|ありません|ません|なし|抜き|いりません|結構です|やめて|やめと|しないで|なくて|なければ|じゃなくて|ではなく|ではありません|無し|禁止|だめ|ダメ|できません|かからない|税抜)/,
+  ko: /(안 |않|못 |못해|없|없어|없습니다|말고|마세요|마시|빼 |빼고|빼주|아니|아닙니다|아니에요|금지|말아)/,
   en: /\b(not|no|don't|doesn't|didn't|won't|can't|cannot|isn't|aren't|wasn't|never|without|none|nothing|instead of|rather than|pass on)\b/i,
   "zh-Hant": /(不|沒|別|勿|免|無)/,
 };
@@ -111,7 +112,7 @@ export function cer(hyp, ref) {
 }
 
 export function runRules(phrase, dir, inputTranscript, outputTranscript) {
-  const ref = dir === "ja" ? phrase.ref_ja : phrase.ref_en;
+  const ref = phrase["ref_" + dir] ?? phrase.ref_en;
   const numbers = checkNumbers(phrase.expect.numbers, outputTranscript);
   const negation = checkNegation(phrase.expect.negation, dir, outputTranscript);
   const coverage = coverageRatio(outputTranscript, ref);

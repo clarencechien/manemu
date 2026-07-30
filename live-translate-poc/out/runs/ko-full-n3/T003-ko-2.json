@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T003",
+  "category": "directions",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "我不是要去機場,我是要去火車站。",
+  "reference": "저는 공항에 가려는 게 아니고, 기차역에 가려는 거예요.",
+  "inputTranscript": "我 不 是 要 去 机 场 , 我 是 要 去 火 车 站 。",
+  "outputTranscript": "저는 공항에 가는 게 아니라, 기차역에 가려고 해요.",
+  "inputDurationMs": 2931,
+  "outputAudioMs": 2690,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 932,
+    "ttft_from_end_ms": 930,
+    "completion_lag_ms": 1407,
+    "ttfa_from_start_ms": 4031
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.909,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:48:54.717Z"
+}
