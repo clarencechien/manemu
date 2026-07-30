@@ -34,12 +34,25 @@ const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : I
 /* ============ 音訊:擷取(worklet)與播放(24k) ============ */
 let audioCtx = null, mediaStream = null, workletNode = null, srcNode = null;
 async function ensureAudio() {
+  // iOS Safari:mic track 停止後 ctx 會被系統打斷(suspended/interrupted),
+  // 且在被打斷的 ctx 上 resume() 可能「永不 resolve」→ 一律 race timeout,救不回就重建。
+  // 本函式只在 pointerdown 手勢內被呼叫,重建/resume 都合法。
+  if (audioCtx && audioCtx.state !== "running") {
+    await Promise.race([audioCtx.resume().catch(() => {}), sleep(800)]);
+    if (audioCtx.state !== "running") {
+      console.warn(`[audio] ctx 救不回(state=${audioCtx.state})→ 重建`);
+      try { audioCtx.close(); } catch {}
+      audioCtx = null; playQ.scheduled = 0; playQ.playing = false;
+    }
+  }
   if (!audioCtx) {
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     await audioCtx.audioWorklet.addModule("/pcm-worklet.js");
+    if (audioCtx.state !== "running") await Promise.race([audioCtx.resume().catch(() => {}), sleep(800)]);
   }
-  if (audioCtx.state === "suspended") await audioCtx.resume();
 }
+// 僅供本地測試裝置模擬 iOS 凍結(Playwright 從外部拿不到閉包內的 ctx)
+window.__audioDebug = { get ctx() { return audioCtx; } };
 async function startCapture(onFrame) {
   await ensureAudio();
   mediaStream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 } });
@@ -72,6 +85,44 @@ function enqueuePcm(b64) {
   playQ.playing = true;
 }
 const playbackRemaining = () => Math.max(0, (playQ.scheduled - (audioCtx?.currentTime ?? 0)) * 1000);
+
+// iOS 自動播放限制:程式化 <audio>.play() 只允許發生在「被手勢開光過」的元素上
+// → pointerdown 時用 20ms 無聲 WAV 開光一顆,之後 fallback 播放共用它
+const SILENT_WAV = "data:audio/wav;base64,UklGRmQBAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YUABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==";
+let speakEl = null;
+function unlockSpeaker() {
+  if (speakEl) return;
+  speakEl = new Audio(SILENT_WAV);
+  speakEl.playsInline = true;
+  speakEl.play().then(() => speakEl.pause()).catch(() => {});
+}
+
+// 等譯音播完。iOS 在 mic 停止後常把 WebAudio 靜默凍結(currentTime 不走、排程無聲)
+// → 凍結偵測:300ms 內時鐘沒走就棄掉 ctx,改用 <audio>+WAV 相容播放(與重播同路徑,已驗證)
+async function drainPlayback(b64chunks) {
+  try {
+    if (!audioCtx || playbackRemaining() <= 0) return;
+    const mark = audioCtx.currentTime;
+    await sleep(300);
+    if (audioCtx.currentTime > mark) { await sleep(playbackRemaining() + 100); return; } // 正常路徑
+    console.warn(`[audio] ctx 凍結(state=${audioCtx.state})→ <audio> WAV 相容播放`);
+    try { audioCtx.close(); } catch {}   // 已排程的無聲來源一起清掉,下一句在手勢內重建
+    audioCtx = null; playQ.scheduled = 0;
+    if (!b64chunks?.length) return;
+    const url = pcmToWavUrl(b64chunks, 24000);
+    try {
+      const a = speakEl ?? new Audio();
+      a.src = url;
+      await a.play();
+      await new Promise((res) => {
+        a.addEventListener("ended", res, { once: true });
+        a.addEventListener("error", res, { once: true });
+        setTimeout(res, 30000); // 保險絲
+      });
+    } catch (e) { console.warn("[audio] fallback 播放失敗", e); }
+    finally { URL.revokeObjectURL(url); }
+  } finally { playQ.playing = false; }
+}
 
 /* ============ 一輪 PTT(核心:真 relay) ============ */
 async function runUtterance({ side, ui }) {
@@ -171,9 +222,8 @@ async function runUtteranceInner({ side, ui }) {
   // 等譯音播完再解鎖(半雙工)
   ui.status("🔊 播放譯音(此時麥克風關閉)", true);
   el.host?.classList.add("speaking");
-  await sleep(playbackRemaining() + 100);
+  await drainPlayback(audioB64);
   el.host?.classList.remove("speaking");
-  playQ.playing = false;
 
   // 端到端計時:speech=按住講話長度、deadAir=放開→首音、completion=放開→譯音播完、total=按下→播完
   const speechMs = Math.round(tReleased - t0);
@@ -339,6 +389,7 @@ function bindPtt(btn, side, ui) {
   btn.addEventListener("pointerdown", (e) => {
     e.preventDefault();
     if (S.busy) { $("status").textContent = "稍等一下,上一句還在處理"; return; } // 不再靜默
+    unlockSpeaker(); // iOS:趁手勢開光 <audio>,fallback 播放才被允許
     btn.classList.add("holding");
     try { btn.setPointerCapture?.(e.pointerId); } catch { /* 快速點放時 pointer 可能已失效,不阻斷整句 */ }
     runUtterance({ side, ui }).finally(() => btn.classList.remove("holding"));
