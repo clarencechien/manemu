@@ -21,6 +21,8 @@
     { "binding": "FIELD", "bucket_name": "manemu-field" }
   ],
   "vars": {
+    // 正式網域:設了之後其他 host(含 workers.dev)一律 301/403 → WAF 繞過洞封死
+    "CANONICAL_HOST": "manemu.ai-apps.work",
     // 非秘密設定;秘密(GEMINI_API_KEY / GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET / SESSION_SECRET)
     // 用 wrangler secret put 設,絕不進 repo
     "DAILY_SECONDS_LIMIT": "1800",
