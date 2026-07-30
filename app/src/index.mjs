@@ -94,11 +94,14 @@ export default {
 
     /* ---------- 需要登入的部分 ---------- */
     const needAuth = p.startsWith("/api/") || p === "/ws";
-    let session = null;
+    let session = null, user = null;
     if (needAuth) {
       if (!sameOrigin(req)) return new Response("forbidden", { status: 403 });
       session = await sessionFrom(req, env);
       if (!session) return Response.json({ error: "unauthorized" }, { status: 401 });
+      // 每次請求重算分級 → R2 白名單改了立刻生效(不用重登入、不用重部署)
+      user = await resolveUser(session.email, env);
+      if (!user.allowed) return Response.json({ error: "not_allowlisted" }, { status: 403 });
     }
 
     if (p.startsWith("/api/admin/")) {
@@ -112,10 +115,6 @@ export default {
       const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
       return stub.fetch("https://do/debug");
     }
-
-    // 每次請求重算分級 → R2 白名單改了立刻生效(不用重登入、不用重部署)
-    const user = await resolveUser(session.email, env);
-    if (!user.allowed) return Response.json({ error: "not_allowlisted" }, { status: 403 });
 
     if (p === "/api/me") {
       const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
