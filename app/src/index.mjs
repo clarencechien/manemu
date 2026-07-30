@@ -146,6 +146,15 @@ export default {
       return zh ? Response.json({ zh }) : Response.json({ error: "backtranslate failed" }, { status: 502 });
     }
 
+    // 前端卡死自救時的診斷麵包屑(iOS 真機沒有 console,只能靠這條回報卡點)
+    if (p === "/api/client-log" && req.method === "POST") {
+      const body = await req.text();
+      if (body.length > 20_000) return Response.json({ error: "too large" }, { status: 413 });
+      const key = `clientlog/${session.email}/${new Date().toISOString().replaceAll(":", "-")}.json`;
+      await env.FIELD.put(key, body, { httpMetadata: { contentType: "application/json" } });
+      return Response.json({ ok: true });
+    }
+
     if (p === "/api/field-log" && req.method === "POST") {
       const body = await req.text();
       if (body.length > 2_500_000) return Response.json({ error: "too large" }, { status: 413 });

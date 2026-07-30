@@ -114,10 +114,14 @@ Bot Fight Mode 的其他機制(IP 信譽、已知 bot、heuristics)不依賴 JSD
 - [ ] OAuth 全流程真登入一次(白名單 email)
 - [ ] 真 PTT 一句:relay → Gemini WS → 譯音播放(手機瀏覽器)
 - [ ] iOS Safari:AudioWorklet、`pointerdown` 權限手勢、24k 播放
-  - 已知並已修(真機回報):mic 停止後 iOS 打斷 AudioContext → 第一句無聲、第二句起
-    `resume()` 永不 resolve 卡死。修法:resume 加 800ms timeout 救不回就手勢內重建;
-    播放加凍結偵測(300ms 時鐘不走)→ fallback `<audio>`+WAV(重播同路徑)。
-    凍結情境有本地模擬測試(scratchpad `ios-test.mjs`),真機複驗待做。
+  - 真機回報兩輪(v7 修凍結偵測仍卡)後,v8 改結構性做法:
+    **① mic 全程保留**(track.stop 會讓 iOS 收回 audio session → 播放無聲 + 下一次
+    getUserMedia 掛死;現在句間只斷 worklet,收起頁面才放掉,mic 指示燈會亮著)、
+    **② iOS 一律 `<audio>`+WAV 播放**(WebAudio 串流在 session 被收回時「時鐘照走、輸出無聲」,
+    偵測不到;WAV 路徑 = 重播路徑,真機唯一確認會出聲)、
+    **③ 25s 保險絲**(放開後任何掛死 → 強制解鎖 + 麵包屑上報 `/api/client-log` →
+    R2 `manemu-field/clientlog/`,查卡點用)。頂列有版本標記(v8-ios-keepmic)可確認快取已更新。
+    本地三情境模擬全過(scratchpad `ios-test.mjs`),真機複驗待做。
   - 每次「重新整理」都會再要一次麥克風權限是 Safari 政策(同一次載入內不會重複要);
     加到主畫面(PWA)可記住權限。修掉卡死後就不需要重整了。
 - [ ] 真機 echo(PTT 播放鎖 + echoCancellation 夠不夠)

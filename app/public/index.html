@@ -148,6 +148,7 @@
     <button class="testChip" id="testChip" data-on="false">🧪</button>
     <button class="iconBtn" id="glossaryBtn" title="行程術語表">📒</button>
     <span class="usage" id="usage"></span>
+    <span class="usage" id="appver" style="opacity:.55"></span>
   </div>
   <div class="testbar hidden" id="testbar"></div>
 
@@ -177,6 +178,6 @@
 
 <script src="/s2t.js"></script><!-- fallback 轉換器,OpenCC 載入後被覆蓋 -->
 <script src="/vendor/opencc-cn2t.js"></script>
-<script src="/app.js"></script>
+<script src="/app.js?v=8"></script><!-- 改 app.js 記得同步進版:iOS Safari 對舊快取很固執 -->
 </body>
 </html>
