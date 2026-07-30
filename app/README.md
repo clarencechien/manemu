@@ -117,3 +117,4 @@ Bot Fight Mode 的其他機制(IP 信譽、已知 bot、heuristics)不依賴 JSD
 - [ ] 真機 echo(PTT 播放鎖 + echoCancellation 夠不夠)
 - [ ] fast 模式(translate 引擎)在 relay 下的行為
 - [ ] 🧪 測試模式一輪 → 確認 R2 `manemu-field` 有 field log
+- [ ] 越/泰真機各講一句(泰語切「尾詞」chip 兩種都試,確認 ครับ/ค่ะ 有鎖住)

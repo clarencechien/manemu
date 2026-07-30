@@ -50,7 +50,8 @@
 **未驗**:iOS Safari(AudioWorklet/播放)、真機回音場景(外放+吵雜)、fast 模式在 relay 下的行為。
 
 **下一步**(`docs/run3-plan.md`):R1 真人語音資料集(測試模式已在自動收集)、M4 真機 dogfood
-(劇本見 `docs/m4-scripts.md`)、泰語需先加使用者稱謂設定(ครับ/ค่ะ 每 session 會隨機切換)。
+(劇本見 `docs/m4-scripts.md`)。五語已全部進語言下拉;泰語附「尾詞 ครับ/ค่ะ」設定
+(鎖進 systemInstruction,解決每 session 隨機切換的問題),越/泰待真機驗證。
 
 ## 開發
 
