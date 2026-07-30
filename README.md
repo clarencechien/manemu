@@ -14,7 +14,7 @@
 | --- | --- |
 | `app/` | **Cloudflare Workers 產品本體**:Google OIDC + Turnstile + R2 白名單/分級、Durable Object WS relay(prompt 注入、靜音收斂、每人每日配額)、真實音訊管線前端(AudioWorklet 16k → 24k 播放)、`/admin` 管理頁。部署 runbook 見 `app/README.md` |
 | `live-translate-poc/` | 評測 harness 與全部實驗:語料(v1 50 句 / v2 草稿)、可攜 Node runner、規則檢測、多廠評審面板、報告產生器 |
-| `live-translate-poc/docs/` | **文件入口**:`findings.md`(所有實測結論)、`m3-spec.md`(產品規格 + 安全設計)、`design.md`(視覺/互動/用語)、`plan.md`+`run2/run3/or-plan`(決策歷程) |
+| `live-translate-poc/docs/` | **文件入口**:`findings.md`(所有實測結論)、`m3-spec.md`(產品規格 + 安全設計)、`design.md`(視覺/互動/用語)、`pricing.md`(定價與單位經濟)、`infra.md`(relay 選型:CF vs GCP/AWS/VPS)、`plan.md`+`run2/run3/or-plan`(決策歷程) |
 | `live-translate-poc/mockup/` | 互動原型(氣泡對談 + 面對面 180° 兩種版面、登入前示範) |
 | `live-translate-poc/out/` | 原始評測資料:`runs/`(逐筆結果)、`reports/`(report.html / csv / summary)、`experiments/`(19 個機制實驗) |
 
