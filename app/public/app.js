@@ -32,7 +32,7 @@ const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 版本標記與診斷(真機回報用) ============ */
-const APP_VER = "v10-holdbtn";
+const APP_VER = "v11-prewarm-mic";
 const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
   || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
 const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
@@ -82,7 +82,7 @@ async function startCapture(onFrame) {
   const micDead = !tracks.length
     || !tracks.some((t) => t.readyState === "live")
     || tracks.some((t) => t.muted)
-    || micCtxGen !== ctxGen;
+    || (micCtxGen !== -1 && micCtxGen !== ctxGen); // -1 = 預熱取得、尚未綁定任何 ctx(可直接用)
   if (micDead) {
     if (mediaStream) crumb(`mic-dead(live:${tracks.some((t) => t.readyState === "live")} muted:${tracks.some((t) => t.muted)} gen:${micCtxGen}/${ctxGen})`);
     releaseMic();
@@ -90,8 +90,8 @@ async function startCapture(onFrame) {
     mediaStream = await withTimeout(
       navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 } }),
       8000, "mic-timeout");
-    micCtxGen = ctxGen;
   }
+  micCtxGen = ctxGen; // 綁定到目前 ctx(Safari:stream 不能跨重建的 ctx 重用)
   crumb(`mic-live g${ctxGen}`);
   srcNode = audioCtx.createMediaStreamSource(mediaStream);
   workletNode = new AudioWorkletNode(audioCtx, "pcm-downsampler");
@@ -106,9 +106,29 @@ function releaseMic() { // 收起頁面/卡死自救:真正放掉裝置
   pauseCapture();
   mediaStream?.getTracks().forEach((t) => t.stop());
   mediaStream = null;
+  micCtxGen = -1;
+}
+// 登入後立刻預熱:權限提示在「按 PTT 之前」出現並只出現一次,
+// 第一句不會再被權限框打斷(按住中跳提示 → 鬆手去按允許 → 句子斷掉)
+async function prewarmMic(announce = false) {
+  if (mediaStream?.getTracks().some((t) => t.readyState === "live")) return;
+  if (announce) $("status").textContent = "請先允許使用麥克風(只需要一次)";
+  try {
+    crumb("prewarm-mic");
+    mediaStream = await withTimeout(
+      navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 } }),
+      20000, "mic-timeout");
+    micCtxGen = -1; // 尚未綁定 ctx,第一次 startCapture 時綁
+    if (announce) $("status").textContent = "按住說話";
+  } catch (e) {
+    crumb("prewarm-fail:" + (e?.message ?? e));
+    if (announce) $("status").textContent = "按住說話"; // 失敗照舊:第一次 PTT 時再要權限
+  }
 }
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "hidden" && !S.busy) releaseMic();
+  if (S.busy) return;
+  if (document.visibilityState === "hidden") releaseMic();       // 收起頁面:放掉裝置(指示燈熄)
+  else if (document.visibilityState === "visible") prewarmMic(); // 回來:靜默預熱(權限已給過)
 });
 // 24kHz PCM16 佇列播放(300ms 起播 buffer,burst 到達也順)
 const playQ = { chunks: [], scheduled: 0, playing: false };
@@ -299,21 +319,23 @@ async function runUtteranceInner({ side, ui }) {
   S.releasedAt = tReleased; // 保險絲從這一刻起算
   crumb(`released(${S.relSrc ?? "?"})${firstFrameLogged ? "" : "-noframes"}`);
   pauseCapture(); // 只斷 worklet,mic 保留(iOS audio session 不能斷)
-  // 零音框 = 這句沒有內容:立刻乾淨中止,不等 relay(13s 假卡死的來源)
-  if (!firstFrameLogged) {
+  // 零音框或 <300ms 瞬放 = 這句沒有內容:立刻乾淨中止,不等 relay(13s 假卡死的來源)。
+  // mic 預熱後首框 ~100ms 就到,「瞬放」不再保證零音框,所以按住時長要獨立判斷。
+  const heldMs = tReleased - t0;
+  if (!firstFrameLogged || heldMs < 300) {
     try { ws.close(); } catch {}
     el.host?.remove(); el.txEl?.closest(".fmsg")?.remove(); // 收掉空氣泡
     if (S.msgCount > 0) S.msgCount--;
     if (S.msgCount === 0) renderEmpty();
-    if (tReleased - t0 < 500) {
-      ui.status("要按住說話,說完再放開", false); // 瞬放(手滑或 iOS 假 cancel)
-    } else {
+    if (!firstFrameLogged && heldMs >= 500) {
       // 按夠久卻零音框 = mic 真的靜默死 → 整組重置,下一句全新重建
       try { audioCtx?.close(); } catch {}
       audioCtx = null; playQ.scheduled = 0; playQ.playing = false;
       releaseMic();
       reportClientLog("no-frames");
       ui.status("⚠ 麥克風沒收到聲音,已重置,請再說一次", false);
+    } else {
+      ui.status("要按住說話,說完再放開", false); // 瞬放(手滑或 iOS 假 cancel)
     }
     return;
   }
@@ -641,6 +663,7 @@ async function mountTurnstile() {
     ? `今日 ${Math.round(me.usedSeconds / 60)}/${Math.round(me.limitSeconds / 60)} 分`
     : `今日 ${Math.round(me.usedSeconds / 60)} 分・無上限`;
   applyLang(); renderEmpty();
+  prewarmMic(true); // 不 await:權限框跳出時 UI 照常可用,拿到後 status 恢復「按住說話」
 
   bindPtt($("pttMe"), "me", chatUI);
   bindPtt($("pttThem"), "them", chatUI);
