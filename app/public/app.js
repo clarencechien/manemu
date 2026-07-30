@@ -477,12 +477,7 @@ async function mountTurnstile() {
     $("chatMode").classList.toggle("hidden", face);
     $("faceMode").classList.toggle("hidden", !face);
   }
-  $("mEngine").addEventListener("click", () => {
-    S.fast = !S.fast;
-    $("mEngine").dataset.fast = String(S.fast);
-    $("mEngine").textContent = S.fast ? "快速" : "精準";
-    $("status").textContent = S.fast ? "快速模式:邊講邊翻,請盯著確認文字" : "精準模式:講完約 1 秒出譯音";
-  });
+  // 快速模式 UI 已下架(S.fast 恆 false → engine 一律 accurate);relay 端仍支援,驗完再放回
   $("testChip").addEventListener("click", () => {
     S.test = !S.test;
     $("testChip").dataset.on = String(S.test);
