@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文將「晴空塔」（Skytree）錯誤翻譯為「tháp Tokyo」（東京鐵塔），這是一個嚴重的專有名詞錯誤（name_mangled），影響了語意忠實度。其餘句型結構與語氣皆非常流暢且自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致正確並且流暢，但將「晴空塔 (Skytree)」譯成「tháp Tokyo（東京塔/東京之塔）」造成景點名稱錯誤，可能導致誤解。Senso-ji 的寫法差異（Senso-ji vs Sensoji）為可接受的拼寫變體。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

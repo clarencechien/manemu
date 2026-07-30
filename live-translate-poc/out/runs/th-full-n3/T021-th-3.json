@@ -34,5 +34,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:14:02.265Z"
+  "ts": "2026-07-30T03:14:02.265Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。完整傳達了原文的所有訊息，語氣禮貌且符合泰語口語表達習慣。雖然「สอง อัน」中間有空格，但不影響整體流暢度與理解。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

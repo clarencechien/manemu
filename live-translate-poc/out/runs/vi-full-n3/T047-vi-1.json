@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:19:43.109Z"
+  "ts": "2026-07-30T03:19:43.109Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is exceptionally accurate and natural. It conveys the exact meaning of the source text and is grammatically flawless in Vietnamese, almost identical to the reference translation."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

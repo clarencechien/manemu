@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:16:57.236Z"
+  "ts": "2026-07-30T03:16:57.236Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。將「我的護照不見了」翻譯為「hộ chiếu của cháu bị mất rồi」，「請問警察局在哪裡？」翻譯為「cho hỏi đồn cảnh sát ở đâu ạ?」，語氣十分客氣且符合情境，使用了適當的敬語助詞（Dạ, ạ）。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

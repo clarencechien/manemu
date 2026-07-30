@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:14:05.236Z"
+  "ts": "2026-07-30T03:14:05.236Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且流暢。雖然人稱代詞使用了 'cháu'（晚輩自稱）而參考譯文使用 'em'，這在越南語情境中完全取決於說話者與對方的年齡關係，兩者皆符合禮貌原則，譯文中的 'ạ' 也體現了客氣的語氣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

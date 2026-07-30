@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:12:13.591Z"
+  "ts": "2026-07-30T03:12:13.591Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機器譯文將「這個不要辣」翻譯為「อันนี้ไม่เอา」（這個不要），漏譯了「辣」（เผ็ด），導致語意變成不要這個品項，而非不要辣。不過後半句「ผมทานเผ็ดไม่ค่อยได้ครับ」（我不太能吃辣）翻譯正確且流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

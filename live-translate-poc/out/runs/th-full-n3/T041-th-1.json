@@ -35,5 +35,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:18:21.543Z"
+  "ts": "2026-07-30T03:18:21.543Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文準確傳達了原文的意思，語意非常忠實。流暢度方面，『ก็ ได้』中間多了一個空格，且句尾同時保留了男女性敬語助詞『ครับ/ค่ะ』，稍微影響了目標語的自然度，但整體仍十分通順。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

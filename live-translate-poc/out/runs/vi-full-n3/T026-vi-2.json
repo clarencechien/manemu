@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:14:57.080Z"
+  "ts": "2026-07-30T03:14:57.080Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly conveys the meaning of the source text, translating '考慮了一下' as 'suy nghĩ lại rồi' and '先不買好了' as 'tạm thời chưa mua đâu ạ'. The tone is polite and appropriate."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

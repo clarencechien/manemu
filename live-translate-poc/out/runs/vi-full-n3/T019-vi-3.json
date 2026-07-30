@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:13:31.168Z"
+  "ts": "2026-07-30T03:13:31.168Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Việc thêm từ \"mất rồi\" và kính ngữ \"ạ\" ở cuối câu làm cho câu nói trở nên tự nhiên và lịch sự hơn trong văn cảnh giao tiếp hàng ngày."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

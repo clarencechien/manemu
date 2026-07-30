@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:19:01.565Z"
+  "ts": "2026-07-30T03:19:01.565Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機器譯文漏譯了後半句『而不用付取消費』(โดยไม่ต้องเสียค่ายกเลิก)，因此標記為 omission。前半句『最晚可以幾點取消』翻譯正確且通順。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

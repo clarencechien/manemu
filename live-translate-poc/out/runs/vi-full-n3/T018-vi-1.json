@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:13:05.815Z"
+  "ts": "2026-07-30T03:13:05.815Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。機器譯文使用了極為客氣且符合越南日常點餐情境的謙稱「con」與敬語「Dạ... ạ」，語意完整傳達，流暢度極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

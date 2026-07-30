@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:11:52.533Z"
+  "ts": "2026-07-30T03:11:52.533Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「Dạ xin hỏi」在越南語中是極為禮貌且符合情境的問話開頭，完美對應「不好意思」。「xe này」與「chuyến này」皆能精確表達「這班車」的意思，整句翻譯流暢無瑕疵。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯基本保留原意，詢問是否為開往橫濱的班車。差異在於開頭用語與名詞選擇：原文「不好意思」更接近「Dạ xin lỗi」，機譯用「Dạ xin hỏi」語氣稍有不同；「這班車」譯為「xe này」而非更精確的「chuyến này」。句末的「có phải là đi Yokohama không ạ?」語序和「là」的使用略不自然，但整體可理解。故語意忠實與自然度均為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

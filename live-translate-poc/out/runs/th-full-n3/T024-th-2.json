@@ -34,5 +34,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:14:35.329Z"
+  "ts": "2026-07-30T03:14:35.329Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. '打八折' (20% off) is correctly translated as 'ลดยี่สิบเปอร์เซ็นต์' (20% discount) in Thai. The addition of the pronoun 'ผม' (I) and the polite particle 'ครับ' is appropriate and natural for spoken Thai."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:14:21.039Z"
+  "ts": "2026-07-30T03:14:21.039Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text using standard Vietnamese phrasing ('đã bao gồm thuế chưa' is the natural equivalent of '含稅還是不含稅') and maintains a polite tone with 'Dạ' and 'ạ'."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

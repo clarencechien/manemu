@@ -46,5 +46,19 @@
     },
     "reason": "Bản dịch máy rất chính xác và tự nhiên. Các cụm từ như 'mấy phút' (bao nhiêu phút) và 'quá mười lăm phút' (trên 15 phút) đều được dịch thoát ý và đúng ngữ cảnh."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句意思，句子自然流暢。唯一差異是第二句自稱用“tôi”而參考譯文為“em”，屬於敬稱/人稱選擇的差異。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

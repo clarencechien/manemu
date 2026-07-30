@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:15:42.189Z"
+  "ts": "2026-07-30T03:15:42.189Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。機器譯文使用了男性敬語助詞「ครับ」（而參考譯文使用女性「ค่ะ/คะ」），在原文未指定性別的情況下完全合理。譯文中的「ไม่ทราบว่า...」（不知是否...）很好地對應了中文的「請問」，整體語氣禮貌且流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

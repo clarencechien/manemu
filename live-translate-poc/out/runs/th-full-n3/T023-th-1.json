@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:14:18.196Z"
+  "ts": "2026-07-30T03:14:18.196Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文將「含稅還是不含稅」稍微簡化翻譯為「是否已含稅」（รวมภาษีแล้วหรือยัง），雖然與原文略有出入，但在泰語情境中表達非常自然且符合常理。語氣助詞使用男性敬語「ครับ」（參考譯文為女性「ค่ะ」）在未指定說話者性別的情況下完全可以接受，整體翻譯流暢度極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

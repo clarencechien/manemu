@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:16:11.456Z"
+  "ts": "2026-07-30T03:16:11.456Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch máy rất chính xác và tự nhiên. Ý nghĩa của câu gốc được truyền tải đầy đủ. Việc sử dụng các từ kính ngữ như \"Dạ\", \"ạ\" giúp câu văn trở nên lịch sự và tự nhiên hơn trong ngữ cảnh giao tiếp tiếng Việt."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

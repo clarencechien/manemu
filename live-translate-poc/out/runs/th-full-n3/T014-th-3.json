@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:12:21.627Z"
+  "ts": "2026-07-30T03:12:21.627Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文將前半句的「這個不要辣」（不要加辣）誤譯為「อันนี้ไม่เอาดีกว่าค่ะ」（這個還是不要好了），漏譯了「辣」的意思並改變了原意。後半句「我不太能吃辣」翻譯得很好（ฉันทานเผ็ดไม่ค่อยเก่งค่ะ）。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

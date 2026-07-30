@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:18:06.307Z"
+  "ts": "2026-07-30T03:18:06.307Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text, changing the appointment from Friday to Saturday instead of cancelling it, using appropriate polite particles."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:12:02.630Z"
+  "ts": "2026-07-30T03:12:02.630Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch từ '月台' (sân ga) thành 'nền tảng ga tàu' là không chính xác. Trong tiếng Việt, 'nền tảng' chỉ dùng cho nghĩa trừu tượng hoặc công nghệ (platform), còn ga tàu phải dùng 'sân ga' hoặc 'thềm ga'. Lỗi này làm giảm độ tự nhiên và chính xác của câu dịch."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

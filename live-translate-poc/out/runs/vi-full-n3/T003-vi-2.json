@@ -45,5 +45,19 @@
     },
     "reason": "Bản dịch máy rất chính xác và tự nhiên. Nó truyền tải đúng ý nghĩa của câu gốc (không đi sân bay mà đi ga tàu hỏa) và sử dụng các từ kính ngữ 'Dạ', 'ạ' rất phù hợp."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（不是去機場，而是要去火車站）。語句大致自然，但用詞上有些禮貌/人稱差異：參考譯文用「em」，機器譯為「tôi」，造成敬語層次不同；此外「không phải đi」在某些語境可能略帶『不是應該去』的意味，比直接說『không đi』稍微不自然。其他無明顯錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:18:13.410Z"
+  "ts": "2026-07-30T03:18:13.410Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有訊息。語意忠實度極高。在流暢度方面，使用了較為正式、書面語口吻的詞彙「จำนง」（意為企圖、意圖），在日常口語對話中顯得稍微有些生硬（通常使用「อยาก」或「ต้องการ」即可），但整體文法正確且表達清晰。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

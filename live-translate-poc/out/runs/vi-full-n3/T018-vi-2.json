@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:13:13.496Z"
+  "ts": "2026-07-30T03:13:13.496Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Bản dịch đã chuyển ngữ tốt cụm từ 'tonkotsu 拉麵' thành 'mì ramen nước súp tonkotsu' và '麵要硬一點' thành 'mì thì lấy loại cứng một chút ạ', đồng thời thêm các từ kính ngữ 'Dạ', 'ạ' rất phù hợp với ngữ cảnh giao tiếp."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

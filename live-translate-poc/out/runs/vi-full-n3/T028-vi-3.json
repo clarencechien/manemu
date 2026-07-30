@@ -34,5 +34,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:15:28.809Z"
+  "ts": "2026-07-30T03:15:28.809Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息。譯文使用了「Dạ... ạ」等禮貌用語，非常符合飯店辦理入住的場景，語氣十分得體。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

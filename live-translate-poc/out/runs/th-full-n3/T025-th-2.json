@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:14:46.067Z"
+  "ts": "2026-07-30T03:14:46.067Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地翻譯了原文的所有訊息，泰語表達非常自然流暢，僅在敬語助詞上使用了男性使用的 ครับ（參考譯文為女性使用的 คะ），這在沒有特定語境下是完全可以接受的。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

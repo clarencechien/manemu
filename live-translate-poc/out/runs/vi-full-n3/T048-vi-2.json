@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:19:58.819Z"
+  "ts": "2026-07-30T03:19:58.819Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The translation is natural and polite, but it omitted the translation for '謝謝' (thank you / cảm ơn)."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

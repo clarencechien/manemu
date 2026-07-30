@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:11:33.879Z"
+  "ts": "2026-07-30T03:11:33.879Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch hoàn toàn chính xác và tự nhiên, có thêm các từ kính ngữ 'Dạ', 'ạ' rất phù hợp với ngữ cảnh giao tiếp lịch sự."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，數字與意思正確。語句自然流暢，只是結尾多了敬語助詞「ạ」，並不影響評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

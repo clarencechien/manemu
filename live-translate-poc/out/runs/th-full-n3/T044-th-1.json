@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:19:11.105Z"
+  "ts": "2026-07-30T03:19:11.105Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思。語氣禮貌，唯獨結尾出現「ครับ/ค่ะ」的斜線並列在口譯輸出中稍微不夠自然，但整體流暢度與忠實度皆極高。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

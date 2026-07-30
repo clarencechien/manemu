@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:16:10.122Z"
+  "ts": "2026-07-30T03:16:10.122Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is exceptionally accurate and natural. It translates '房間的冷氣' to 'แอร์ในห้องพัก' (air conditioner in the guest room) and '可以請人來看一下嗎' to 'ช่วยส่งคนมาดูหน่อยได้ไหมคะ' (could you please send someone to take a look?), which is polite and perfectly fits the context of a hotel or lodging request."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

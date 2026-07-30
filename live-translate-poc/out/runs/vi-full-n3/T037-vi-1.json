@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:17:25.375Z"
+  "ts": "2026-07-30T03:17:25.375Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch máy hoàn toàn chính xác và tự nhiên. Các thông tin về số phòng (702) và tình trạng của người bạn (bị ngất) đều được truyền tải đầy đủ và đúng ngữ cảnh."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:19:52.215Z"
+  "ts": "2026-07-30T03:19:52.215Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch máy rất chính xác và tự nhiên, truyền tải trọn vẹn ý nghĩa của câu gốc. Việc thêm đuôi từ \"đấy ạ\" giúp câu nói trở nên lịch sự và tự nhiên hơn trong văn phong nói tiếng Việt."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

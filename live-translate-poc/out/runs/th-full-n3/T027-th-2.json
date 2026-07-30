@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:15:11.999Z"
+  "ts": "2026-07-30T03:15:11.999Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。完整傳達了原文「可以退稅嗎？我總共買了超過五千日圓」的意思。雖然機器譯文使用了男性敬語助詞「ครับ」，而參考譯文使用女性敬語助詞「คะ」，但在沒有上下文指定說話者性別的情況下，這不屬於翻譯錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

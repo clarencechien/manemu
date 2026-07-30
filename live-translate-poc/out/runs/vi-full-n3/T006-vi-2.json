@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原意—詢問附近有無廁所與表明趕時間皆有呈現。用詞上“loanh quanh đây”較口語且不如“gần đây/ xung quanh đây”自然，且參考譯文以“Em”表達較親切的第一人稱，機譯採“Tôi”改變了語氣/敬稱，故標記為honorific_off。語意忠實因此給5分，自然度略降給4分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

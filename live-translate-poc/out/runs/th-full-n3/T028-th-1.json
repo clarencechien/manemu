@@ -34,5 +34,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:15:22.530Z"
+  "ts": "2026-07-30T03:15:22.530Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有資訊（訂房、姓名、入住兩晚），語氣禮貌且符合泰語母語者的表達習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

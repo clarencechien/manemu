@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:13:34.294Z"
+  "ts": "2026-07-30T03:13:34.294Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意非常完整且準確（Adequacy: 5）。但在流暢度方面，同一個句子中前半句使用了女性敬語助詞「ค่ะ」(kha)，後半句卻使用了男性敬語助詞「ครับ」(khrap)，前後語氣/性別不一致，影響了自然度（Fluency: 4）。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

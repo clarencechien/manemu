@@ -43,5 +43,19 @@
     },
     "reason": "The translation is highly accurate and natural, matching the polite tone of the source sentence perfectly. 'có người ngồi' is a very common and natural way to ask if a seat is taken in Vietnamese."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，僅用“có người”替代參考的“có ai”，兩者在口語中皆可接受且自然，敬語詞“Dạ...ạ”保留，流暢且無錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

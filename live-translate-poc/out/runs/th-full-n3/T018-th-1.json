@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:13:11.828Z"
+  "ts": "2026-07-30T03:13:11.828Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有語意。唯一的缺點是結尾出現了重複的禮貌助詞「ครับครับ」，這對流暢度有輕微影響，但整體而言非常自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

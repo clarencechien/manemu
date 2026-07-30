@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:12:13.663Z"
+  "ts": "2026-07-30T03:12:13.663Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文漏譯了前半句中的「辣」（不要辣），將其翻譯為「這個不要」（อันนี้ไม่เอา），不過後半句「我不太能吃辣」翻譯得很準確且自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

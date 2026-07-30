@@ -46,5 +46,19 @@
     },
     "reason": "Bản dịch máy rất tự nhiên và chính xác. Cụm từ 'mấy phút' được dịch thoát ý thành 'bao lâu' rất phù hợp với ngữ cảnh tiếng Việt. Câu thứ hai dịch hoàn toàn chính xác."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意，句子結構與資訊都正確（走路時間詢問與超過15分鐘則搭計程車）。語氣上有些差異：參考譯文使用更親切的敬語/自稱（“dạ… em”），機譯則用“ạ”僅出現在第一句且第二句用“tôi”，故標記為 honorific_off。語句自然度尚可，但第二句略顯直接，故 fluency 置為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

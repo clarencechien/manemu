@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:15:02.192Z"
+  "ts": "2026-07-30T03:15:02.192Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates '我考慮了一下' as 'ฉันลองคิดดูแล้วค่ะ' (I have thought about it) and '這個還是先不買好了' as 'อันนี้ยังไม่ซื้อก่อนดีกว่าค่ะ' (It's better not to buy this yet), which is grammatically correct and natural in Thai."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

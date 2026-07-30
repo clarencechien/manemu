@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:18:39.563Z"
+  "ts": "2026-07-30T03:18:39.563Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch rất chính xác và tự nhiên. Từ '預約' (hẹn trước/đặt trước) được dịch thành 'đặt phòng', tuy có hơi cụ thể hóa so với 'đặt chỗ' trong ngữ cảnh chuyến bay nhưng vẫn hoàn toàn dễ hiểu và hợp lý. Các kính ngữ 'Dạ', 'ạ' được thêm vào giúp câu nói trở nên lịch sự và tự nhiên hơn."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

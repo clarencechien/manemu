@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:11:21.385Z"
+  "ts": "2026-07-30T03:11:21.385Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch sai tên riêng: 'Shinjuku' (新宿) bị dịch nhầm thành 'Hsinchu' (Tân Trúc). Các phần còn lại của câu dịch rất tốt và tự nhiên."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文基本上保留原意（詢問最後一班回某地的電車是否為11:45），語序與敬語自然。但地名被誤譯為 Hsinchu（新竹）而非 Shinjuku（新宿），導致語意錯誤，故給中等忠實度。語言表達流暢，僅地名錯置。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

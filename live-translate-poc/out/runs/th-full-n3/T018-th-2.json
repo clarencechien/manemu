@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:13:16.108Z"
+  "ts": "2026-07-30T03:13:16.108Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。完整傳達了「一份豚骨拉麵（ขอทงคตสึราเมนที่หนึ่ง）」以及「麵要硬一點（ขอเส้นแข็งหน่อย）」的意思。語氣禮貌（使用ครับ代替參考譯文的ค่ะ，僅為說話者性別差異，完全正確）。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

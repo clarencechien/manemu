@@ -29,5 +29,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:10:30.079Z"
+  "ts": "2026-07-30T03:10:30.079Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。將「我趕時間」翻譯為「ผมรีบมากเลยครับ」（我非常趕時間）完全符合情境，語氣也非常自然有禮貌。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:12:10.408Z"
+  "ts": "2026-07-30T03:12:10.408Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機器譯文漏譯了前半句「這個不要辣」（Cái này đừng cho cay/không lấy cay），僅翻譯了後半句「我不太能吃辣」，因此標記為漏譯（omission）。譯出的部分語意正確且語氣自然流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

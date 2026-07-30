@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:20:14.738Z"
+  "ts": "2026-07-30T03:20:14.738Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。加入的敬詞「Dạ」和「ạ」符合口譯情境中的禮貌語氣，語意完全忠實，流暢度極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

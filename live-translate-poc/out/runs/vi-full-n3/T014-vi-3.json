@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:12:15.376Z"
+  "ts": "2026-07-30T03:12:15.376Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The first clause '這個不要辣' (don't make this spicy) was mistranslated as 'cái này không lấy' (I don't take/want this), which changes the meaning from asking for no spice to rejecting the item entirely. The second clause is translated accurately."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:18:41.061Z"
+  "ts": "2026-07-30T03:18:41.061Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且流暢。與參考譯文的唯一差別在於說話者的性別代名詞與語氣助詞（機器譯文使用女性的 ดิฉัน/คะ，參考譯文使用男性的 ผม/ครับ），在沒有特定上下文的情況下，兩者皆完全正確。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

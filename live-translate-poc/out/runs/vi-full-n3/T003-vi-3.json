@@ -45,5 +45,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Bản dịch sử dụng từ ngữ phù hợp ('sân bay', 'ga tàu hỏa') và giữ được sắc thái lịch sự nhờ các từ 'Dạ', 'ạ'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整保留原意（不是去機場，要去火車站），語意忠實度高，因此給5分。目標語句子自然，但用詞上有小差異：使用“tôi”與參考的“em”禮貌/人稱不同，且動詞用“đến”較常見用“đi”，故自然度略減一分。其他無數字錯誤、否定顛倒或遺漏，亦無杜撰資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -35,5 +35,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:18:24.779Z"
+  "ts": "2026-07-30T03:18:24.779Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完全保留了原文的意思。譯文中加入的敬語助詞「Dạ」和「ạ」符合越南語口語的禮貌表達習慣，使句子更顯自然流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

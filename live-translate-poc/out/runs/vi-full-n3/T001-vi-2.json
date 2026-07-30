@@ -43,5 +43,19 @@
     },
     "reason": "Bản dịch máy rất chính xác và tự nhiên. Nó truyền tải đầy đủ ý nghĩa của câu gốc và sử dụng các từ kính ngữ (Dạ, ạ) rất phù hợp trong ngữ cảnh tiếng Việt."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：\"ga tàu/nhà ga\"差異可接受；第二句意義等同（如何走最快 vs 哪條路比較快）。句子自然、禮貌語氣（\"Dạ...ạ\"）也保留。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

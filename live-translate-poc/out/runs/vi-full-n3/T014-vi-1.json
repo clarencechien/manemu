@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:12:07.345Z"
+  "ts": "2026-07-30T03:12:07.345Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly fluent and natural in Vietnamese. However, it omitted the explicit request '不要辣' (don't make it spicy/no chili) and merged the two clauses into 'I can't eat this dish very spicy' (món này tôi không ăn được cay lắm). Therefore, adequacy is rated 3 due to the omission of the instruction."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

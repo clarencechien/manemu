@@ -46,5 +46,19 @@
     },
     "reason": "Bản dịch máy rất chính xác và tự nhiên. Nó truyền tải đầy đủ ý nghĩa của câu gốc và sử dụng các kính ngữ (Dạ, ạ) rất phù hợp trong ngữ cảnh tiếng Việt."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實：把「從這裡走過去大概要幾分鐘?」與「超過十五分鐘的話我想搭計程車」準確表達為越南語，數字與句意正確。用詞自然、禮貌語氣（Dạ...ạ）也恰當。只有人稱代詞由參考譯文的「em」變為「tôi」，但並不影響語意，因此不扣分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

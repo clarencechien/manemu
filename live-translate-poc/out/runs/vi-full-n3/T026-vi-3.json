@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:14:58.850Z"
+  "ts": "2026-07-30T03:14:58.850Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch truyền tải đầy đủ ý nghĩa của câu gốc. Tuy nhiên, cách diễn đạt ở vế sau \"không mua chắc được\" nghe khá gượng gạo và không tự nhiên trong tiếng Việt. Nên sửa thành \"chắc là tạm thời chưa mua\" hoặc \"thôi tạm thời không mua nữa\"."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:11:41.460Z"
+  "ts": "2026-07-30T03:11:41.460Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and conveys the exact meaning of the source text. The fluency is also very good, with only a minor stylistic difference: using 'การ์ด IC' with a space instead of the more natural 'บัตร IC' as seen in the reference."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

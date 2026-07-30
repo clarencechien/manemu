@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:19:58.198Z"
+  "ts": "2026-07-30T03:19:58.198Z",
+  "judge": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文漏譯了「謝謝」（cảm ơn），其餘部分翻譯流暢且語氣客氣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

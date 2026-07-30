@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:17:43.236Z"
+  "ts": "2026-07-30T03:17:43.236Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。完整傳達了「不能打青黴素」與「會過敏」的意思，且加入「Dạ」與「ạ」等敬語助詞，非常符合醫病溝通的口譯情境。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

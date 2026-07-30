@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:17:35.822Z"
+  "ts": "2026-07-30T03:17:35.822Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。雖然使用了男性代名詞「ผม」和敬語助詞「ครับ」，而參考譯文使用的是女性/中性代名詞與女性敬語，但由於原文並未指定性別，此翻譯完全正確且通順。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

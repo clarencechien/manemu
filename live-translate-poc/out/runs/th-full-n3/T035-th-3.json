@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:17:06.308Z"
+  "ts": "2026-07-30T03:17:06.308Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. 'พาสปอร์ต' is a very common colloquial term for passport, and 'ไม่ทราบว่า...อยู่ที่ไหน' is a polite way to ask for directions, equivalent to '請問...在哪裡'. The inclusion of 'ครับ/ค่ะ' covers both genders appropriately."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

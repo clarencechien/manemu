@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:11:43.362Z"
+  "ts": "2026-07-30T03:11:43.362Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Ý nghĩa của câu gốc được truyền tải đầy đủ và chính xác. Tuy nhiên, cụm từ 'có thể xin xem giúp tôi' hơi rườm rà và thiếu tự nhiên trong tiếng Việt (kết hợp cả 'có thể' và 'xin' làm câu bị lặp từ không cần thiết). Nên sửa thành 'có thể xem giúp tôi' hoặc 'xem giúp tôi' như bản dịch tham khảo."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句意思（詢問這班車是否往橫濱），用詞雖稍顯冗贅/語序不太自然（“có thể xin xem giúp tôi”較拗口），但沒有語意錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:13:25.173Z"
+  "ts": "2026-07-30T03:13:25.173Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It conveys the exact meaning of the source text. The only difference from the reference is the gender of the speaker (using male pronouns/particles 'ผม/ครับ' instead of female 'ฉัน/ค่ะ'), which is perfectly acceptable as the source text is gender-neutral."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

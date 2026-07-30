@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:11:25.503Z"
+  "ts": "2026-07-30T03:11:25.503Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch rất chính xác và tự nhiên. Lỗi duy nhất là viết sai chính tả tên riêng \"Shinjuku\" thành \"Shinzuku\"."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，保留疑問語氣與禮貌語尾，表達自然。唯一小缺點是地名拼寫從“Shinjuku”誤為“Shinzuku”，故標記 name_mangled。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

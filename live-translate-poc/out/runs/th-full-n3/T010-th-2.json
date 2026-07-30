@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:11:24.320Z"
+  "ts": "2026-07-30T03:11:24.320Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural. The time '十一點四十五分' (11:45) is appropriately translated to '23:45 น.' considering it refers to the last train (最後一班) back to Shinjuku, which is contextually correct and clear."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

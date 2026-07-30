@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly translates both sentences with appropriate politeness and correct vocabulary."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完整且自然，問題與催促意圖皆有表達。差別僅在語氣及人稱：原參考以「Dạ」開頭且用「Em」自稱更顯親切／禮貌，機譯使用『Tôi』而非『Em』，稍微改變了社會語用色彩，因此標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

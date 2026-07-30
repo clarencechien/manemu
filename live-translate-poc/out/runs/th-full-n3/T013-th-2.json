@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:12:05.586Z"
+  "ts": "2026-07-30T03:12:05.586Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates all elements of the source sentence: '我剛剛' as 'เพิ่ง...เมื่อกี้', '在月台上' as 'บนชานชาลา', and '把手機弄丟了' as 'ทำมือถือหาย'. The addition of the polite pronoun 'ดิฉัน' and particle 'ค่ะ' makes the spoken translation very natural and polite."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:16:07.934Z"
+  "ts": "2026-07-30T03:16:07.934Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地翻譯了原文的意思。雖然機器譯文使用了男性敬語助詞「ครับ」而參考譯文使用女性的「คะ」，但這在口譯中完全可以接受，且語氣十分禮貌客氣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

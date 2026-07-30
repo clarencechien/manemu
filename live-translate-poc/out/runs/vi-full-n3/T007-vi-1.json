@@ -48,5 +48,19 @@
     },
     "reason": "Bản dịch hoàn toàn chính xác và tự nhiên, truyền tải đầy đủ thông tin từ câu gốc và sử dụng kính ngữ phù hợp."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思，數量與票種正確（兩張票：一張大人、一張小孩）。語句在越南語中自然禮貌（使用「Dạ...ạ」），僅在稱謂上以「tôi」替代參考譯文的「em」，但不影響語意或可接受性。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

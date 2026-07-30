@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:20:29.963Z"
+  "ts": "2026-07-30T03:20:29.963Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常流暢且語意完整，'Dạ vậy làm phiền bạn quá, có gì liên lạc sau nhé' 完美對應了原文的語氣與意思，甚至比參考譯文更為口語自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

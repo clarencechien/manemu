@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:18:48.754Z"
+  "ts": "2026-07-30T03:18:48.754Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。使用了禮貌助詞（Dạ, ạ）和合適的人稱代詞（em），非常符合客服情境的對話。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

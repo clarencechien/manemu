@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:11:55.107Z"
+  "ts": "2026-07-30T03:11:55.107Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。加入的敬語助詞「Dạ」和「ạ」在口語情境中（例如向站務人員求助時）非常貼切且符合禮貌習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原句意思（剛在月台上把手機弄丟了）。用詞自然，僅在句首與句尾加了越南語禮貌語氣詞“Dạ…ạ”，不影響流暢度或意思。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

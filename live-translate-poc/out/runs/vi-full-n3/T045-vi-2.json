@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:19:24.394Z"
+  "ts": "2026-07-30T03:19:24.394Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Việc thêm các từ kính ngữ như 'Dạ', 'ạ' giúp câu dịch thể hiện được sự lịch sự, chân thành tương đương với bản gốc tiếng Trung."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:20:29.229Z"
+  "ts": "2026-07-30T03:20:29.229Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文後半句中的「ฉบับหน้า」（下一期/下一封信）屬於不符合語境的誤譯（幻覺），原文「之後再聯絡」應翻譯為「แล้วค่อยติดต่อกันอีกที」或「แล้วจะติดต่อกลับไปอีกที」。前半句翻譯正確。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

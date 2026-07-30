@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:16:42.017Z"
+  "ts": "2026-07-30T03:16:42.017Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in fluent Thai, using appropriate polite particles and natural phrasing like 'พอดีต้อง...' (actually need to...)."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

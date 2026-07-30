@@ -32,5 +32,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:19:50.840Z"
+  "ts": "2026-07-30T03:19:50.840Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思。句尾加上了客氣助詞「ạ」，在口譯情境中顯得十分自然且有禮貌。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

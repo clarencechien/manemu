@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in polite Vietnamese, using appropriate particles like 'Dạ' and 'ạ'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。用詞上「ga tàu」與參考的「nhà ga」皆為可接受的表達；句型與敬語（Dạ...ạ）也保留得當，流暢自然。唯一差異屬語氣或選詞上的細微變體，對理解無影響。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

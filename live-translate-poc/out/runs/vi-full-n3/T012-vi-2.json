@@ -32,5 +32,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:11:47.833Z"
+  "ts": "2026-07-30T03:11:47.833Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. 'xe này' là cách diễn đạt rất tự nhiên trong tiếng Việt để chỉ '這班車' trong ngữ cảnh này."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致正確且禮貌自然。唯一小差異是將「這班車」譯為“xe này”（這輛車/車子）而參考譯文用“chuyến này”（這班/班次），後者更精確表達原文的「班車/班次」概念；此外機譯用“có thể xem giúp tôi”語氣較委婉，與直接稱呼“anh/chị”略有不同，但不影響理解。因此給予較高的忠實度與自然度評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

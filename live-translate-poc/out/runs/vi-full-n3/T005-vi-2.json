@@ -45,5 +45,19 @@
     },
     "reason": "Dịch sai tên địa danh: '晴空塔' (Tháp Skytree) bị dịch nhầm thành 'Tháp Tokyo' (Tháp Tokyo)."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語法與禮貌用語自然，表達清晰。惟將參考譯文的 'Skytree' 翻成 'Tháp Tokyo'，可能造成地名不精確或與 Tokyo Tower 混淆，因而降低語意忠實度。其他部分正確。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

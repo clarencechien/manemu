@@ -34,5 +34,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:14:36.366Z"
+  "ts": "2026-07-30T03:14:36.366Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「打八折」正確地翻譯為「ลดราคา 20%」（打折20%），語意完全相符。譯文中加入代名詞「ฉัน」（我）與語氣助詞「ค่ะ」使句子更顯自然與禮貌。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然。完整傳達了原文的意思，『quanh đây』對應『這附近』，『Tôi đang vội』對應『我趕時間』，且加入了禮貌助詞『Dạ... ạ』，語氣十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思：詢問附近有無廁所，並表達趕時間。用詞自然且句子通順。僅有細微差異，例如使用“quanh đây”而非參考的“gần đây”、用“我(Tôi)”而非較口語/服務場景常用的“em”，以及缺少參考句的程度副詞“ hơi”，但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

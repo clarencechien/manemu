@@ -33,5 +33,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:18:38.559Z"
+  "ts": "2026-07-30T03:18:38.559Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且流暢，完整傳達了原文的意思。代名詞「ฉัน」與敬語「ครับ」搭配雖然在泰語中較少見（通常男性用「ผม...ครับ」），但仍屬完全可理解且自然的表達，不影響整體語意與流暢度。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

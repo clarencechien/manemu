@@ -31,5 +31,19 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:17:35.775Z"
+  "ts": "2026-07-30T03:17:35.775Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Bản dịch máy hoàn toàn chính xác và tự nhiên, truyền tải đầy đủ thông tin từ câu gốc. Việc thêm kính ngữ 'ạ' ở cuối câu rất phù hợp với ngữ cảnh khẩn cấp khi gọi trợ giúp."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

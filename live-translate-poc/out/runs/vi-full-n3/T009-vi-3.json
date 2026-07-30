@@ -29,5 +29,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T03:11:11.710Z"
+  "ts": "2026-07-30T03:11:11.710Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "Dịch hoàn toàn chính xác và tự nhiên, gần như trùng khớp với bản dịch tham khảo, chỉ thêm từ \"vậy\" giúp câu nói tự nhiên hơn trong văn nói."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與參考譯文語意一致，包含敬語（ạ）且表達自然。機譯在句尾多了「vậy」一詞，但不影響原意或禮貌，故評為適切且流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
