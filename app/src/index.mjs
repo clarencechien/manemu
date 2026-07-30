@@ -171,4 +171,25 @@ export default {
        直接交給 assets,/admin 本來就會服務 admin.html。 */
     return withSec(await env.ASSETS.fetch(req));
   },
+
+  // 每日 cron(wrangler.jsonc triggers):過期 clientlog 自動清——admin 沒手動清也不會累積。
+  // field/(🧪 測試模式語料)刻意不清:那是 R1 資料集,使用者明示同意收集。
+  async scheduled(_event, env, ctx) {
+    ctx.waitUntil(purgeClientlog(env));
+  },
 };
+
+async function purgeClientlog(env) {
+  const ttlDays = Number(env.CLIENTLOG_TTL_DAYS || 30);
+  const cutoff = Date.now() - ttlDays * 86400_000;
+  let cursor, deleted = 0;
+  do {
+    const page = await env.FIELD.list({ prefix: "clientlog/", limit: 1000, cursor });
+    const old = (page.objects || []).filter((o) => new Date(o.uploaded).getTime() < cutoff);
+    await Promise.all(old.map((o) => env.FIELD.delete(o.key)));
+    deleted += old.length;
+    cursor = page.truncated ? page.cursor : undefined;
+  } while (cursor);
+  if (deleted) console.log(`[cron] clientlog 清除 ${deleted} 筆(TTL ${ttlDays} 天)`);
+  return deleted;
+}

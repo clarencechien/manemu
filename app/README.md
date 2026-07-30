@@ -84,10 +84,12 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 
 - 🧪 測試模式是唯一收內容的通道,測試列明寫「你的錄音與翻譯結果會被記錄」——同意內建在動作裡。
 - Workers 平台的 observability log(dashboard 可看)只有請求 metadata 與 console 計數,程式不往裡面印內容。
-- 追 bug 的正確姿勢:先開 `CLIENT_LOG=on` 部署 → 重現 → `/api/admin/clientlog` 看麵包屑 →
-  修完 `POST /api/admin/clientlog-clear` 清掉、關回 off。麵包屑本身無內容,風險只在 email 識別。
-- 日後正式開放(名單外的人進來)再做兩件事:clientlog 的 email 改 HMAC 假名化
-  (仍可關聯回報、不可反查)、R2 加 30 天生命週期規則自動清除。封測階段名單內都是熟人,現制即可。
+- 追 bug 的正確姿勢:先開 `CLIENT_LOG=on` 部署 → 重現 → `/admin` 的「診斷回報」看麵包屑 →
+  修完一鍵清空、關回 off。麵包屑本身無內容,風險只在 email 識別。
+- **自動清除**:每日 cron(03:10 UTC)刪除超過 `CLIENTLOG_TTL_DAYS`(預設 30,可改 90)的
+  clientlog——admin 忙了沒手動清也不會累積。`field/`(🧪 測試語料)刻意不在清除範圍。
+- 日後正式開放(名單外的人進來)再補:clientlog 的 email 改 HMAC 假名化
+  (仍可關聯回報、不可反查)。封測階段名單內都是熟人,現制即可。
 
 ## 測試模式 = R1 真人語音收集
 
