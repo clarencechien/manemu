@@ -88,8 +88,14 @@ relay 取代 ephemeral token 的代價是音訊多一跳(edge 延遲 +~10–50ms
 
 **Cloudflare 平台安全(能開就開)**:
 - 靜態回應一律帶:CSP(`default-src 'self'; connect-src 'self' wss:`)、`X-Frame-Options: DENY`、`Referrer-Policy`、`nosniff`。
-- **Turnstile** 放登入頁(擋 bot 打 OAuth 端點)——v0 可後補,介面預留。
-- 掛自有網域進 CF zone 後:**WAF managed rules + Rate Limiting rules**(對 `/auth/*`、`/ws`)、Bot Fight Mode。
+- **Turnstile 是登入頁的挑戰方案(已實作)**:免費、不限次數、與 zone plan 無關,
+  比付費的 WAF Managed Challenge 更可控(自己的 widget、自己的失敗文案)。
+  `TURNSTILE_SITE_KEY`(var)+ `TURNSTILE_SECRET`(secret)設好即強制生效;未設則略過。
+- **⚠ workers.dev 會繞過 zone WAF**:`*.workers.dev` 不屬於你的 zone,WAF/Rate Limiting/Bot Fight 全部失效。
+  必須關掉該 route;程式端另以 `CANONICAL_HOST` 擋(非正式 host → GET 301、API/WS 403)。
+- Free plan 的取捨:自訂 WAF 規則 ~5 條、Rate Limiting 1 條 → **Rate Limiting 花在 `/auth/*`**
+  (`/ws` 已有 session 驗證 + DO 配額);Bot Fight Mode、Always Use HTTPS、Min TLS 1.2 全開。
+- **不需為安全升 Pro**:真正的錢包防線是白名單 + DO 每人每日配額 + 靜音收斂,都在程式內;WAF 是第二層噪音過濾。
 - 升級路徑:改用 **Cloudflare Access**(Google IdP + email 白名單在 Access policy)可整段取代 DIY OIDC——條件是有 zone;先 DIY,介面切齊。
 - R2 bucket 全私有(僅 binding 存取);field-test 錄音含個資,bucket 不開公開網址。
 - 異常保險絲:DO 全域日花費估算超標(env `GLOBAL_DAILY_SECONDS`)→ 全站暫停翻譯、登入頁顯示公告。

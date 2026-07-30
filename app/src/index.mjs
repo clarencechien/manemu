@@ -4,7 +4,8 @@ import { sign, verify, cookieGet, cookieSet, sessionFrom, verifyGoogleIdToken, i
 export { RelaySession } from "./relay.mjs";
 
 const SEC_HEADERS = {
-  "content-security-policy": "default-src 'self'; connect-src 'self' wss: https:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob: data:; frame-ancestors 'none'",
+  // Turnstile 需要 challenges.cloudflare.com 的 script 與 iframe
+  "content-security-policy": "default-src 'self'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; connect-src 'self' wss: https:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob: data:; frame-ancestors 'none'",
   "x-frame-options": "DENY",
   "x-content-type-options": "nosniff",
   "referrer-policy": "strict-origin-when-cross-origin",
@@ -32,8 +33,29 @@ export default {
       return new Response("use canonical host", { status: 403 });
     }
 
+    if (p === "/api/config") {
+      return Response.json({ turnstileSiteKey: env.TURNSTILE_SITE_KEY || null });
+    }
+
     /* ---------- OAuth ---------- */
     if (p === "/auth/login") {
+      // Turnstile:設了 secret 就強制驗(POST + token);沒設則維持 GET 直通
+      if (env.TURNSTILE_SECRET) {
+        if (req.method !== "POST") return new Response(null, { status: 302, headers: { location: "/" } });
+        if (!sameOrigin(req)) return new Response("forbidden", { status: 403 });
+        const form = await req.formData();
+        const token = form.get("cf-turnstile-response");
+        if (!token) return new Response("challenge required", { status: 403 });
+        const vr = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+          method: "POST",
+          headers: { "content-type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({
+            secret: env.TURNSTILE_SECRET, response: String(token),
+            remoteip: req.headers.get("cf-connecting-ip") || "",
+          }),
+        });
+        if (!(await vr.json()).success) return new Response("challenge failed", { status: 403 });
+      }
       const state = randomHex(), nonce = randomHex();
       const stCookie = cookieSet("mn_oauth", await sign({ state, nonce, exp: Date.now() / 1000 + 600 }, env.SESSION_SECRET), 600);
       const q = new URLSearchParams({

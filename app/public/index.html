@@ -115,7 +115,10 @@
     按住說話,manemu 模仿你的語氣、<br>用對方的語言說出來——<br>
     <b>像夢裡忽然會說外語的那種流利。</b>
   </p>
-  <button class="sso" onclick="location.href='/auth/login'">使用 Google 登入</button>
+  <form method="POST" action="/auth/login" id="ssoForm">
+    <div id="tsWidget" style="margin-bottom:12px"></div>
+    <button class="sso" id="ssoBtn" type="submit" style="width:100%">使用 Google 登入</button>
+  </form>
   <p class="fine" id="loginFine">封測中:登入後需在受邀名單內才能啟用翻譯。</p>
 </div>
 
