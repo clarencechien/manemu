@@ -29,7 +29,10 @@
     "SESSION_HARD_CAP_S": "120",
     "ACCURATE_MODEL": "models/gemini-3.1-flash-live-preview",
     "FAST_MODEL": "models/gemini-3.5-live-translate-preview",
-    "BACKTX_MODEL": "models/gemini-3.5-flash-lite"
+    "BACKTX_MODEL": "models/gemini-3.5-flash-lite",
+    // Turnstile site key 是公開值(可放 vars);TURNSTILE_SECRET 走 secret。
+    // 兩者都不設 → 登入頁不出現驗證、Worker 端也不驗(方便先跑通)。
+    "TURNSTILE_SITE_KEY": ""
   },
   "observability": { "enabled": true }
 }

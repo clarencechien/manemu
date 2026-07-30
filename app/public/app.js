@@ -270,6 +270,30 @@ async function refreshUsage() {
   } catch {}
 }
 
+/* ============ Turnstile(登入頁擋 bot;未設 site key 則不出現) ============ */
+async function mountTurnstile() {
+  let siteKey = null;
+  try { siteKey = (await (await fetch("/api/config")).json()).turnstileSiteKey; } catch {}
+  if (!siteKey) return;                       // 未啟用:表單直接 POST(Worker 端也不驗)
+  const btn = $("ssoBtn");
+  btn.disabled = true;
+  btn.textContent = "請先完成人機驗證";
+  await new Promise((resolve, reject) => {
+    const s = document.createElement("script");
+    s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+    s.async = true; s.defer = true;
+    s.onload = resolve; s.onerror = reject;
+    document.head.appendChild(s);
+  }).catch(() => {});
+  if (!window.turnstile) { btn.disabled = false; btn.textContent = "使用 Google 登入"; return; }
+  window.turnstile.render("#tsWidget", {
+    sitekey: siteKey,
+    callback: () => { btn.disabled = false; btn.textContent = "使用 Google 登入"; },
+    "expired-callback": () => { btn.disabled = true; btn.textContent = "驗證過期,請重試"; },
+    "error-callback": () => { btn.disabled = false; btn.textContent = "使用 Google 登入"; },
+  });
+}
+
 /* ============ boot:登入判斷 ============ */
 (async function boot() {
   if (new URLSearchParams(location.search).get("waitlist")) {
@@ -277,7 +301,11 @@ async function refreshUsage() {
   }
   let me = null;
   try { const r = await fetch("/api/me"); if (r.ok) me = await r.json(); } catch {}
-  if (!me) { $("loginScreen").classList.remove("hidden"); return; }
+  if (!me) {
+    $("loginScreen").classList.remove("hidden");
+    await mountTurnstile();
+    return;
+  }
   S.email = me.email;
   $("appScreen").classList.remove("hidden");
   $("usage").textContent = `今日 ${Math.round(me.usedSeconds / 60)}/${Math.round(me.limitSeconds / 60)} 分`;
