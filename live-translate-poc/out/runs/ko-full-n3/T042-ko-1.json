@@ -1,0 +1,65 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T042",
+  "category": "appointment",
+  "traps": [
+    "code-switch",
+    "number",
+    "proper-noun"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我可以用 email 確認預約嗎?我的班機是 BR198。",
+  "reference": "이메일로 예약 확인할 수 있을까요? 제 항공편은 BR198이에요.",
+  "inputTranscript": "我 可 以 用 email 确 认 预 约 吗 ? 我 的 班 机 是 BR198 。",
+  "outputTranscript": "이메일로 예약을 확인할 수 있을까요? 제 항공편은 BR198입니다.",
+  "inputDurationMs": 6171,
+  "outputAudioMs": 5450,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 968,
+    "ttft_from_end_ms": 968,
+    "completion_lag_ms": 2527,
+    "ttfa_from_start_ms": 7269
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.037,
+    "coverage_ok": true,
+    "cer": 0.042
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:57:52.172Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語義忠實。機譯與參考譯文僅在語尾敬語（입니다 vs 이에요）上略有差異，屬於風格差異而非錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息。與參考譯文相比，僅有結尾語氣（입니다 與 이에요）的微小差異，兩者皆符合韓語的禮貌體，無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

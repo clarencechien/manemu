@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "제 방 번호는 702호인데요, 제 친구가 쓰러졌어요.",
+  "inputTranscript": "我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。",
+  "outputTranscript": "제 방 호수는 702호인데, 친구가 기절했어요.",
+  "inputDurationMs": 5811,
+  "outputAudioMs": 3971,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 918,
+    "ttft_from_end_ms": 918,
+    "completion_lag_ms": 1773,
+    "ttfa_from_start_ms": 6918
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.905,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:56:39.228Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實傳達原意：房號702與朋友昏倒的訊息都正確。用詞上僅有小差異（\"호수\" vs 常用的 \"번호\"；\"기절\" vs \"쓰러지다\"），但不影響理解或語氣，語句也通順自然。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「방 호수」（房號）與「기절했어요」（昏倒了）皆為極佳的翻譯，語意完全忠實，語氣也十分自然流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

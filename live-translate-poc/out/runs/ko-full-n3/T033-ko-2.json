@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T033",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "可以幫我叫一台計程車嗎?明天早上六點半要到機場。",
+  "reference": "택시 한 대 불러 주실 수 있나요? 내일 아침 6시 반에 공항에 가야 해요.",
+  "inputTranscript": "可 以 帮 我 叫 一 台 出 租 车 吗 ? 明 天 早 上 6 点 半 要 到 机 场 。",
+  "outputTranscript": "택시 한 대만 불러주실 수 있나요? 내일 아침 6시 반까지 공항에 가야 해요.",
+  "inputDurationMs": 4851,
+  "outputAudioMs": 5510,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 932,
+    "ttft_from_end_ms": 932,
+    "completion_lag_ms": 2271,
+    "ttfa_from_start_ms": 5933
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.074,
+    "coverage_ok": true,
+    "cer": 0.136
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:55:48.406Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「6시 반까지」（到六點半為止/六點半前）精確地傳達了原文「六點半要到」的意思，整體語氣與用詞皆符合韓語口語習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語句自然流暢且禮貌。唯「내일 아침 6시 반까지 공항에 가야 해요」使用了'까지'(by/until)，相較原文的時間點'在6:30到達'（對應參考譯文用'에'表時間點），語意有輕微偏差（暗示最晚在6:30之前到達而非準確在6:30到達）。因此給予略降的忠實度分數。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

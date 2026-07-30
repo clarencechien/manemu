@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T031",
+  "category": "hotel",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "房間的冷氣好像壞了,可以請人來看一下嗎?",
+  "reference": "방 에어컨이 고장난 것 같은데요, 사람을 보내서 좀 봐 주실 수 있나요?",
+  "inputTranscript": "房 间 的 冷 气 好 像 坏 了 , 可 以 请 人 来 看 一 下 吗 ?",
+  "outputTranscript": "객실 에어컨이 고장 난 것 같은데, 사람을 불러서 좀 봐주실 수 있을까요?",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 5251,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 951,
+    "ttft_from_end_ms": 951,
+    "completion_lag_ms": 2775,
+    "ttfa_from_start_ms": 5052
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.037,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:55:27.046Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完美傳達了原文的意思，語氣也十分得體客氣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，語氣與參考譯文同樣禮貌且自然。用詞（객실 vs 방, 불러서 vs 보내서）皆合適，無資訊遺失或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

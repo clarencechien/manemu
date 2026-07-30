@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T049",
+  "category": "smalltalk",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我是從台灣來的,第一次來大阪玩。",
+  "reference": "저는 대만에서 왔어요, 오사카는 이번이 처음이에요.",
+  "inputTranscript": "我 是 从 台 湾 来 的 , 第 一 次 来 大 阪 玩 。",
+  "outputTranscript": "대만에서 왔는데, 오사카에는 처음 여행 왔어요.",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 3690,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 975,
+    "ttft_from_end_ms": 951,
+    "completion_lag_ms": 1648,
+    "ttfa_from_start_ms": 4975
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.905,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:59:27.131Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（來自台灣，第一次來大阪），語意忠實。語句在韓語上稍有不自然處（“오사카에는 처음 여행 왔어요” 的語序/表現略不流暢），但可理解，故流暢度評為4。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地翻譯了原文的意思，語氣也十分得體，完全符合原意。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

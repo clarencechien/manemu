@@ -1,0 +1,1244 @@
+<!doctype html><meta charset="utf-8">
+<title>live-translate harness ko-full-n3</title>
+<style>
+body{font-family:system-ui,"Noto Sans TC",sans-serif;margin:24px auto;max-width:1100px;padding:0 16px;line-height:1.5}
+table{border-collapse:collapse;margin:8px 0;width:100%}
+td,th{border:1px solid #ccc;padding:4px 8px;font-size:13px;text-align:left;vertical-align:top}
+th{background:#f4f4f4}small{color:#666}.zh{min-width:180px}
+.caveat{background:#fff8e1;border:1px solid #e6c200;padding:8px 12px;border-radius:6px}
+</style>
+<h1>即時口語翻譯 harness 報告</h1>
+<p>runId=<code>ko-full-n3</code> · model=<code>models/gemini-3.1-flash-live-preview</code> · judge=<code>models/gemini-3.5-flash</code> · runtime=cc-web-node(非 Cloudflare;延遲為機房乾淨網路的樂觀下界) · 2026-07-30T01:11:14.898Z</p>
+<div class="caveat"><b>解讀前先看的假設/限制:</b><ul><li>評審使用同家 Gemini 文字模型(無 OpenAI 金鑰),存在自評偏誤風險</li><li>gold 參考譯文由 LLM 產生,未經人工校對</li><li>TTS 合成音源乾淨、無噪音,品質與延遲皆為樂觀值</li><li>CC web 沙箱地理位置不可控,網路段延遲僅供參考,端到端以 M4 真機為準</li></ul>
+結果筆數 150,失敗 0。門檻參考(§4.4):ttfa_from_end p90 ≤1500ms 順、≤3000ms 可接受、>5000ms 視為不可用。</div>
+
+<h2>方向:zh → ko</h2>
+<h3>延遲(ms,基準=講完那一刻;§4.2)</h3>
+<table><tr><th>指標</th><th>p50</th><th>p90</th><th>p95</th><th>mean</th></tr>
+<tr><td>ttfa_from_end(死氣時間)</td><td>968</td><td>1028</td><td>1064</td><td>975</td></tr>
+<tr><td>ttft_from_end(首字)</td><td>955</td><td>1016</td><td>1040</td><td>965</td></tr>
+<tr><td>completion_lag(譯音收完)</td><td>1929</td><td>2633</td><td>3028</td><td>2063</td></tr>
+<tr><td>ttfa_from_start(對照官方)</td><td>4944</td><td>6912</td><td>7264</td><td>5037</td></tr>
+</table>
+<h3>品質</h3>
+<table>
+<tr><th>n</th><th>adequacy</th><th>fluency</th><th>數字OK率</th><th>否定OK率</th><th>覆蓋率</th><th>CER</th></tr>
+<tr><td>150</td><td>4.94</td><td>4.97</td>
+<td>86.0%</td><td>98.0%</td>
+<td>1.06</td><td>0.071</td></tr>
+</table>
+<p>評審旗標比例:number_wrong 0.0% · negation_flipped 0.0% · honorific_off 0.0% · name_mangled 1.3% · omission 2.0% · hallucination 0.0%</p>
+<h3>各類別</h3>
+<table><tr><th>類別</th><th>n</th><th>adequacy</th><th>ttfa_end p50</th><th>ttfa_end p90</th><th>completion p90</th></tr>
+<tr><td>directions</td><td>18</td><td>5.00</td><td>966</td><td>979</td><td>2586</td></tr>
+<tr><td>transport</td><td>21</td><td>4.86</td><td>960</td><td>1016</td><td>2116</td></tr>
+<tr><td>dining</td><td>21</td><td>4.71</td><td>974</td><td>995</td><td>2545</td></tr>
+<tr><td>shopping</td><td>21</td><td>5.00</td><td>971</td><td>1062</td><td>2598</td></tr>
+<tr><td>hotel</td><td>18</td><td>5.00</td><td>958</td><td>1041</td><td>3322</td></tr>
+<tr><td>emergency</td><td>15</td><td>5.00</td><td>993</td><td>1047</td><td>2465</td></tr>
+<tr><td>appointment</td><td>18</td><td>5.00</td><td>968</td><td>1034</td><td>3075</td></tr>
+<tr><td>smalltalk</td><td>18</td><td>5.00</td><td>977</td><td>1028</td><td>2117</td></tr>
+</table>
+<h2>逐句明細</h2>
+<table><tr><th>句</th><th>原文 / STT</th><th>譯文 / 參考</th><th>ttfa_end / completion (ms)</th><th>規則</th><th>評審 a/f</th></tr>
+<tr>
+<td>T001<br><small>ko#1</small></td>
+<td class="zh">請問車站在哪裡?怎麼走比較快?<br><small>STT: 请 问 车 站 在 哪 里 ? 怎 么 走 比 较 快 ?</small></td>
+<td>말씀 좀 여쭤볼게요, 역이 어디에 있나요? 어떻게 가면 빨리 갈 수 있죠?<br><small>ref: 저기요, 역이 어디에 있어요? 어떻게 가는 게 더 빨라요?</small></td>
+<td>970 / 2630</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. '말씀 좀 여쭤볼게요' is an excellent and polite translation for '請問' in this context, and the rest of the sentence is translated perfectly with natural Korean phrasing.</small></td>
+</tr>
+<tr>
+<td>T001<br><small>ko#2</small></td>
+<td class="zh">請問車站在哪裡?怎麼走比較快?<br><small>STT: 请 问 车 站 在 哪 里 ? 怎 么 走 比 较 快 ?</small></td>
+<td>죄송하지만 역이 어디에 있나요? 어떻게 가면 빨리 갈 수 있을까요?<br><small>ref: 저기요, 역이 어디에 있어요? 어떻게 가는 게 더 빨라요?</small></td>
+<td>949 / 2059</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It correctly translates '請問' as '죄송하지만' (excuse me) and accurately conveys the meaning of '怎麼走比較快' as '어떻게 가면 빨리 갈 수 있을까요?' (how can I go to get there quickly/faster), which is very natural in Korean.</small></td>
+</tr>
+<tr>
+<td>T001<br><small>ko#3</small></td>
+<td class="zh">請問車站在哪裡?怎麼走比較快?<br><small>STT: 请 问 车 站 在 哪 里 ? 怎 么 走 比 较 快 ?</small></td>
+<td>말씀 좀 묻겠습니다. 역이 어디에 있나요? 어떻게 가는 것이 빠른가요?<br><small>ref: 저기요, 역이 어디에 있어요? 어떻게 가는 게 더 빨라요?</small></td>
+<td>971 / 2228</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「請問」翻譯為「말씀 좀 묻겠습니다」十分得體，後半句的詢問也完全符合原意，語法正確，語氣自然。</small></td>
+</tr>
+<tr>
+<td>T002<br><small>ko#1</small></td>
+<td class="zh">請問 Shibuya Sky 的入口是在這棟樓嗎?<br><small>STT: 请 问 旭 不 亚 Sky 的 入 口 是 在 这 栋 楼 吗 ?</small></td>
+<td>실례지만, 시부야 스카이 입구는 이 건물에 맞나요?<br><small>ref: 저기요, 시부야 스카이 입구가 이 건물에 있는 거예요?</small></td>
+<td>966 / 1741</td>
+<td> cer=0.38</td>
+<td>5/5<br><small>譯文非常準確且自然。「실례지만, 시부야 스카이 입구는 이 건물에 맞나요?」完美地傳達了原文的意思，語氣也非常得體，沒有任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T002<br><small>ko#2</small></td>
+<td class="zh">請問 Shibuya Sky 的入口是在這棟樓嗎?<br><small>STT: 请 问 旭 不 亚 Sky 的 入 口 是 在 这 栋 楼 吗 ?</small></td>
+<td>실례지만 시부야 스카이 입구가 이 건물에 있나요?<br><small>ref: 저기요, 시부야 스카이 입구가 이 건물에 있는 거예요?</small></td>
+<td>932 / 1697</td>
+<td> cer=0.38</td>
+<td>5/5<br><small>機器譯文非常準確且自然地翻譯了原文的意思，與參考譯文幾乎一致，無任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T002<br><small>ko#3</small></td>
+<td class="zh">請問 Shibuya Sky 的入口是在這棟樓嗎?<br><small>STT: 请 问 旭 不 亚 Sky 的 入 口 是 在 这 栋 楼 吗 ?</small></td>
+<td>실례지만 시부야 스카이 입구가 이 건물에 있나요?<br><small>ref: 저기요, 시부야 스카이 입구가 이 건물에 있는 거예요?</small></td>
+<td>979 / 2261</td>
+<td> cer=0.38</td>
+<td>5/5<br><small>The translation is highly accurate and natural, conveying the exact meaning of the source text in polite Korean.</small></td>
+</tr>
+<tr>
+<td>T003<br><small>ko#1</small></td>
+<td class="zh">我不是要去機場,我是要去火車站。<br><small>STT: 我 不 是 要 去 机 场 , 我 是 要 去 火 车 站 。</small></td>
+<td>공항에 가는 게 아니라, 기차역에 가는 거예요.<br><small>ref: 저는 공항에 가려는 게 아니고, 기차역에 가려는 거예요.</small></td>
+<td>1105 / 2586</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然地傳達了原文的意思。雖然與參考譯文在時態/意圖表達（가는 게 vs 가려는 게）上有些微差異，但完全符合日常口語表達，語意忠實度與流暢度皆為滿分。</small></td>
+</tr>
+<tr>
+<td>T003<br><small>ko#2</small></td>
+<td class="zh">我不是要去機場,我是要去火車站。<br><small>STT: 我 不 是 要 去 机 场 , 我 是 要 去 火 车 站 。</small></td>
+<td>저는 공항에 가는 게 아니라, 기차역에 가려고 해요.<br><small>ref: 저는 공항에 가려는 게 아니고, 기차역에 가려는 거예요.</small></td>
+<td>932 / 1407</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然地傳達了原文的意思。'공항에 가는 게 아니라'（不是要去機場）和'기차역에 가려고 해요'（是要去火車站）皆符合原意，語氣也十分自然流暢。</small></td>
+</tr>
+<tr>
+<td>T003<br><small>ko#3</small></td>
+<td class="zh">我不是要去機場,我是要去火車站。<br><small>STT: 我 不 是 要 去 机 场 , 我 是 要 去 火 车 站 。</small></td>
+<td>공항에 가는 게 아니라, 기차역에 가는 거예요.<br><small>ref: 저는 공항에 가려는 게 아니고, 기차역에 가려는 거예요.</small></td>
+<td>968 / 1756</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然地傳達了原文的意思，語氣也十分得體，與參考譯文語意高度一致。</small></td>
+</tr>
+<tr>
+<td>T004<br><small>ko#1</small></td>
+<td class="zh">從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。<br><small>STT: 从 这 里 走 过 去 大 概 要 几 分 钟 , 超 过 15 分 钟 的 话 , 我 想 搭 计 程 车 。</small></td>
+<td>여기서 걸어서 대략 몇 분 정도 걸리나요? 15분이 넘으면 택시를 타고 싶어요.<br><small>ref: 여기서 걸어가면 몇 분쯯 걸려요? 15분 넘으면 택시 타고 싶어요.</small></td>
+<td>942 / 2297</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in polite, natural Korean.</small></td>
+</tr>
+<tr>
+<td>T004<br><small>ko#2</small></td>
+<td class="zh">從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。<br><small>STT: 从 这 里 走 过 去 大 概 要 几 分 钟 , 超 过 15 分 钟 的 话 , 我 想 搭 计 程 车 。</small></td>
+<td>여기서 걸어서 대략 몇 분 정도 걸릴까요? 15분이 넘으면 택시를 타고 싶어요.<br><small>ref: 여기서 걸어가면 몇 분쯯 걸려요? 15분 넘으면 택시 타고 싶어요.</small></td>
+<td>956 / 2303</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in polite Korean without any errors.</small></td>
+</tr>
+<tr>
+<td>T004<br><small>ko#3</small></td>
+<td class="zh">從這裡走過去大概要幾分鐘?超過十五分鐘的話我想搭計程車。<br><small>STT: 从 这 里 走 过 去 大 概 要 几 分 钟 , 超 过 15 分 钟 的 话 , 我 想 搭 计 程 车 。</small></td>
+<td>여기서 걸어가면 대략 몇 분 정도 걸리나요? 15분이 넘으면 택시를 타고 싶어요.<br><small>ref: 여기서 걸어가면 몇 분쯯 걸려요? 15분 넘으면 택시 타고 싶어요.</small></td>
+<td>967 / 2481</td>
+<td> cer=0.08</td>
+<td>5/5<br><small>The machine translation is exceptionally accurate and natural. It perfectly conveys the meaning of the source text in polite and fluent Korean, even correcting a minor typo present in the reference translation ('몇 분쯯' -&gt; '몇 분 정도').</small></td>
+</tr>
+<tr>
+<td>T005<br><small>ko#1</small></td>
+<td class="zh">請問淺草寺跟晴空塔是同一個方向嗎?<br><small>STT: 请 问 前 草 寺 跟 晴 空 塔 是 同 一 个 方 向 吗 ?</small></td>
+<td>실례지만 센소지와 스카이트리는 같은 방향인가요?<br><small>ref: 저기요, 센소지랑 스카이트리가 같은 방향이에요?</small></td>
+<td>963 / 1744</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>譯文非常準確且自然，完美傳達了原文的意思，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T005<br><small>ko#2</small></td>
+<td class="zh">請問淺草寺跟晴空塔是同一個方向嗎?<br><small>STT: 请 问 前 草 寺 跟 晴 空 塔 是 同 一 个 方 向 吗 ?</small></td>
+<td>말씀 좀 묻겠습니다. 센소지와 스카이트리는 같은 방향인가요?<br><small>ref: 저기요, 센소지랑 스카이트리가 같은 방향이에요?</small></td>
+<td>941 / 1999</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>The translation is highly accurate and natural. It perfectly conveys the meaning of the source text with appropriate politeness.</small></td>
+</tr>
+<tr>
+<td>T005<br><small>ko#3</small></td>
+<td class="zh">請問淺草寺跟晴空塔是同一個方向嗎?<br><small>STT: 请 问 前 草 寺 跟 晴 空 塔 是 同 一 个 方 向 吗 ?</small></td>
+<td>말씀 좀 묻겠습니다. 센소지와 스카이트리는 같은 방향인가요?<br><small>ref: 저기요, 센소지랑 스카이트리가 같은 방향이에요?</small></td>
+<td>937 / 2243</td>
+<td> cer=0.06</td>
+<td>5/5<br><small>譯文非常準確且自然。「請問」翻譯為「말씀 좀 묻겠습니다」（請讓我問個話），語氣十分客氣有禮，其餘部分也完全符合原文語意，文法正確且流暢。</small></td>
+</tr>
+<tr>
+<td>T006<br><small>ko#1</small></td>
+<td class="zh">這附近有沒有廁所?我趕時間。<br><small>STT: 这 附 近 有 没 有 厕 所 ? 我 赶 时 间 。</small></td>
+<td>이 근처에 화장실이 있나요? 제가 급해서요.<br><small>ref: 이 근처에 화장실 있어요? 제가 시간이 좀 급해요.</small></td>
+<td>976 / 1631</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完美傳達了原文的意思，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T006<br><small>ko#2</small></td>
+<td class="zh">這附近有沒有廁所?我趕時間。<br><small>STT: 这 附 近 有 没 有 厕 所 ? 我 赶 时 间 。</small></td>
+<td>이 근처에 화장실이 있나요? 제가 좀 급해서요.<br><small>ref: 이 근처에 화장실 있어요? 제가 시간이 좀 급해요.</small></td>
+<td>969 / 1661</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。將「我趕時間」翻譯為「제가 좀 급해서요」非常符合韓語口語習慣，語意完整，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T006<br><small>ko#3</small></td>
+<td class="zh">這附近有沒有廁所?我趕時間。<br><small>STT: 这 附 近 有 没 有 厕 所 ? 我 赶 时 间 。</small></td>
+<td>이 근처에 화장실 있나요? 제가 좀 바빠서요.<br><small>ref: 이 근처에 화장실 있어요? 제가 시간이 좀 급해요.</small></td>
+<td>958 / 1560</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「이 근처에 화장실 있나요?」完美對應「這附近有沒有廁所？」，而「제가 좀 바빠서요」也是韓語中表達「我趕時間」非常道地且有禮貌的說法，語意與語氣皆十分貼切。</small></td>
+</tr>
+<tr>
+<td>T007<br><small>ko#1</small></td>
+<td class="zh">我要兩張到京都的車票,大人一張、小孩一張。<br><small>STT: 我 要 两 张 到 京 都 的 车 票 , 大 人 一 张 , 小 孩 一 张 。</small></td>
+<td>교토행 표 두 장 주세요. 어른 한 장, 어린이 한 장이요.<br><small>ref: 교토 가는 표 두 장 주세요. 어른 한 장, 어린이 한 장이요.</small></td>
+<td>974 / 1871</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，與參考譯文幾乎一致。「교토행」（京都行）與參考譯文的「교토 가는」（去京都的）意思完全相同，且更為簡潔。無任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T007<br><small>ko#2</small></td>
+<td class="zh">我要兩張到京都的車票,大人一張、小孩一張。<br><small>STT: 我 要 两 张 到 京 都 的 车 票 , 大 人 一 张 , 小 孩 一 张 。</small></td>
+<td>교토행 표 두 장 주세요. 어른 한 장, 어린이 한 장이요.<br><small>ref: 교토 가는 표 두 장 주세요. 어른 한 장, 어린이 한 장이요.</small></td>
+<td>1016 / 1909</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，與參考譯文幾乎一致，僅「교토행」（京都行）與「교토 가는」（去京都的）有微小的自然表達差異，完全不影響語意與流暢度。</small></td>
+</tr>
+<tr>
+<td>T007<br><small>ko#3</small></td>
+<td class="zh">我要兩張到京都的車票,大人一張、小孩一張。<br><small>STT: 我 要 两 张 到 京 都 的 车 票 , 大 人 一 张 , 小 孩 一 张 。</small></td>
+<td>교토까지 가는 표 두 장 주세요. 어른 한 장, 어린이 한 장이요.<br><small>ref: 교토 가는 표 두 장 주세요. 어른 한 장, 어린이 한 장이요.</small></td>
+<td>960 / 1893</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>The machine translation is exceptionally accurate and natural, matching the reference translation almost perfectly with no errors.</small></td>
+</tr>
+<tr>
+<td>T008<br><small>ko#1</small></td>
+<td class="zh">這班車會到大阪,但是應該不會停京都吧?<br><small>STT: 这 班 车 会 到 大 阪 , 但 是 应 该 不 会 停 京 都 吧 ?</small></td>
+<td>이 열차는 오사카에 가지만, 교토에는 서지 않겠죠?<br><small>ref: 이 열차 오사카까지 가는데, 교토에는 안 서겠죠?</small></td>
+<td>978 / 1733</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source sentence with appropriate grammar and tone, matching the reference translation closely.</small></td>
+</tr>
+<tr>
+<td>T008<br><small>ko#2</small></td>
+<td class="zh">這班車會到大阪,但是應該不會停京都吧?<br><small>STT: 这 班 车 会 到 大 阪 , 但 是 应 该 不 会 停 京 都 吧 ?</small></td>
+<td>이 열차는 오사카까지 가지만, 교토에는 정차하지 않겠죠?<br><small>ref: 이 열차 오사카까지 가는데, 교토에는 안 서겠죠?</small></td>
+<td>966 / 1933</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text in fluent Korean.</small></td>
+</tr>
+<tr>
+<td>T008<br><small>ko#3</small></td>
+<td class="zh">這班車會到大阪,但是應該不會停京都吧?<br><small>STT: 这 班 车 会 到 大 阪 , 但 是 应 该 不 会 停 京 都 吧 ?</small></td>
+<td>이 열차는 오사카까지 가지만, 교토에는 서지 않겠죠?<br><small>ref: 이 열차 오사카까지 가는데, 교토에는 안 서겠죠?</small></td>
+<td>959 / 1802</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source sentence in fluent Korean, matching the tone and nuance of the reference translation.</small></td>
+</tr>
+<tr>
+<td>T009<br><small>ko#1</small></td>
+<td class="zh">請問這個位子有人坐嗎?<br><small>STT: 请 问 这 个 位 置 有 人 坐 吗 ?</small></td>
+<td>혹시 이 자리에 누가 앉아 계신가요?<br><small>ref: 저기요, 이 자리에 누구 있어요?</small></td>
+<td>1003 / 1922</td>
+<td> cer=0.10</td>
+<td>5/5<br><small>譯文非常準確且自然。「혹시」很好地傳達了「請問」的委婉語氣，「이 자리에 누가 앉아 계신가요?」語意忠實且符合韓語敬語習慣，無任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T009<br><small>ko#2</small></td>
+<td class="zh">請問這個位子有人坐嗎?<br><small>STT: 请 问 这 个 位 置 有 人 坐 吗 ?</small></td>
+<td>실례지만 이 자리에 아무도 없나요?<br><small>ref: 저기요, 이 자리에 누구 있어요?</small></td>
+<td>964 / 1608</td>
+<td> cer=0.10</td>
+<td>5/4<br><small>譯文「실례지만 이 자리에 아무도 없나요?」（不好意思，這位置沒人嗎？）雖然使用了否定問句，但語意與原文「請問這個位子有人坐嗎？」相符，且文法正確、表達自然。</small></td>
+</tr>
+<tr>
+<td>T009<br><small>ko#3</small></td>
+<td class="zh">請問這個位子有人坐嗎?<br><small>STT: 请 问 这 个 位 置 有 人 坐 吗 ?</small></td>
+<td>실례지만 이 자리에 누가 앉아 계신가요?<br><small>ref: 저기요, 이 자리에 누구 있어요?</small></td>
+<td>916 / 1425</td>
+<td> cer=0.10</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文「請問這個位子有人坐嗎？」的意思，語氣也非常禮貌客氣。</small></td>
+</tr>
+<tr>
+<td>T010<br><small>ko#1</small></td>
+<td class="zh">最後一班回新宿的電車是十一點四十五分嗎?<br><small>STT: 最 后 一 班 回 星 住 的 电 车 是 11 点 45 分 吗 ?</small></td>
+<td>시내로 돌아가는 마지막 전철은 밤 11시 45분인가요?<br><small>ref: 신주쿠로 가는 마지막 열차가 11시 45분이에요?</small></td>
+<td>931 / 1857</td>
+<td> cer=0.37</td>
+<td>3/5<br><small>고유명사인 '新宿(신주쿠)'를 '시내'로 잘못 번역하여 정보의 왜곡이 발생했습니다(name_mangled). 그 외의 문장 구조와 표현은 매우 자연스럽고 유창합니다.</small></td>
+</tr>
+<tr>
+<td>T010<br><small>ko#2</small></td>
+<td class="zh">最後一班回新宿的電車是十一點四十五分嗎?<br><small>STT: 最 后 一 班 回 星 住 的 电 车 是 11 点 45 分 吗 ?</small></td>
+<td>신주쿠로 돌아가는 마지막 전철은 11시 45분인가요?<br><small>ref: 신주쿠로 가는 마지막 열차가 11시 45분이에요?</small></td>
+<td>979 / 3230</td>
+<td> cer=0.37</td>
+<td>5/5<br><small>譯文非常準確且自然，完美地翻譯了原文的所有訊息，語法和語氣也都十分恰當。</small></td>
+</tr>
+<tr>
+<td>T010<br><small>ko#3</small></td>
+<td class="zh">最後一班回新宿的電車是十一點四十五分嗎?<br><small>STT: 最 后 一 班 回 星 住 的 电 车 是 11 点 45 分 吗 ?</small></td>
+<td>싱주로 돌아가는 마지막 전철은 11시 45분인가요?<br><small>ref: 신주쿠로 가는 마지막 열차가 11시 45분이에요?</small></td>
+<td>972 / 1904</td>
+<td> cer=0.37</td>
+<td>4/5<br><small>The translation is grammatically natural and accurate, except for a name mangling error where '新宿' (Shinjuku) was translated as '싱주' instead of '신주쿠'.</small></td>
+</tr>
+<tr>
+<td>T011<br><small>ko#1</small></td>
+<td class="zh">我想幫 IC 卡儲值一千日圓。<br><small>STT: 我 想 帮 IC 卡 充 值 1000 日 元 。</small></td>
+<td>IC 카드에 1000엔을 충전하고 싶어요.<br><small>ref: IC카드에 1000엔 충전하고 싶은데요.</small></td>
+<td>1067 / 1838</td>
+<td> cer=0.50</td>
+<td>5/5<br><small>機器譯文非常準確且自然地翻譯了原文的意思，與參考譯文幾乎一致，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T011<br><small>ko#2</small></td>
+<td class="zh">我想幫 IC 卡儲值一千日圓。<br><small>STT: 我 想 帮 IC 卡 充 值 1000 日 元 。</small></td>
+<td>IC카드에 1000엔을 충전하고 싶습니다.<br><small>ref: IC카드에 1000엔 충전하고 싶은데요.</small></td>
+<td>954 / 1622</td>
+<td> cer=0.50</td>
+<td>5/5<br><small>譯文非常準確且自然，完美傳達了原文「想幫IC卡儲值一千日圓」的意思，文法與語氣皆十分恰當。</small></td>
+</tr>
+<tr>
+<td>T011<br><small>ko#3</small></td>
+<td class="zh">我想幫 IC 卡儲值一千日圓。<br><small>STT: 我 想 帮 IC 卡 充 值 1000 日 元 。</small></td>
+<td>IC카드에 1000엔을 충전하고 싶어요.<br><small>ref: IC카드에 1000엔 충전하고 싶은데요.</small></td>
+<td>960 / 1851</td>
+<td> cer=0.50</td>
+<td>5/5<br><small>機器譯文非常準確且自然地翻譯了原文的意思，與參考譯文幾乎完全一致，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T012<br><small>ko#1</small></td>
+<td class="zh">不好意思,可以幫我看一下這班車是不是往橫濱的嗎?<br><small>STT: 不 好 意 思 , 可 以 帮 我 看 一 下 这 班 车 是 不 是 往 横 滨 的 吗 ?</small></td>
+<td>죄송합니다만, 이 열차가 요코하마 행인지 좀 봐주실 수 있나요?<br><small>ref: 저기요, 이 열차가 요코하마 가는 거 맞는지 좀 봐주시겠어요?</small></td>
+<td>920 / 2044</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的意思，語氣也十分客氣得體。</small></td>
+</tr>
+<tr>
+<td>T012<br><small>ko#2</small></td>
+<td class="zh">不好意思,可以幫我看一下這班車是不是往橫濱的嗎?<br><small>STT: 不 好 意 思 , 可 以 帮 我 看 一 下 这 班 车 是 不 是 往 横 滨 的 吗 ?</small></td>
+<td>죄송한데요, 이 열차가 요코하마 행인지 확인해 주실 수 있을까요?<br><small>ref: 저기요, 이 열차가 요코하마 가는 거 맞는지 좀 봐주시겠어요?</small></td>
+<td>930 / 2010</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完美地將原文的意思轉譯為得體的韓語，語氣也十分客氣禮貌。</small></td>
+</tr>
+<tr>
+<td>T012<br><small>ko#3</small></td>
+<td class="zh">不好意思,可以幫我看一下這班車是不是往橫濱的嗎?<br><small>STT: 不 好 意 思 , 可 以 帮 我 看 一 下 这 班 车 是 不 是 往 横 滨 的 吗 ?</small></td>
+<td>죄송하지만, 이 열차가 요코하마행이 맞는지 좀 봐주실 수 있을까요?<br><small>ref: 저기요, 이 열차가 요코하마 가는 거 맞는지 좀 봐주시겠어요?</small></td>
+<td>949 / 2116</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文非常準確且自然地翻譯了原文的所有訊息，語氣也十分客氣得體，與參考譯文一樣優秀。</small></td>
+</tr>
+<tr>
+<td>T013<br><small>ko#1</small></td>
+<td class="zh">我剛剛在月台上把手機弄丟了。<br><small>STT: 我 刚 刚 在 乐 台 上 把 手 机 弄 丢 了 。</small></td>
+<td>방금 승강장에서 휴대전화를 잃어버렸어요.<br><small>ref: 방금 승강장에서 휴대폰을 잃어버렸어요.</small></td>
+<td>939 / 1883</td>
+<td> cer=0.23</td>
+<td>5/5<br><small>譯文非常準確且自然，與參考譯文幾乎完全一致，僅「手機」一詞使用了同義詞「휴대전화」代替「휴대폰」，語意完全正確。</small></td>
+</tr>
+<tr>
+<td>T013<br><small>ko#2</small></td>
+<td class="zh">我剛剛在月台上把手機弄丟了。<br><small>STT: 我 刚 刚 在 乐 台 上 把 手 机 弄 丢 了 。</small></td>
+<td>방금 승강장에서 휴대폰을 잃어버렸어요.<br><small>ref: 방금 승강장에서 휴대폰을 잃어버렸어요.</small></td>
+<td>1020 / 2305</td>
+<td> cer=0.23</td>
+<td>5/5<br><small>譯文與參考譯文完全一致，翻譯非常準確且自然。</small></td>
+</tr>
+<tr>
+<td>T013<br><small>ko#3</small></td>
+<td class="zh">我剛剛在月台上把手機弄丟了。<br><small>STT: 我 刚 刚 在 乐 台 上 把 手 机 弄 丢 了 。</small></td>
+<td>방금 승강장에서 휴대폰을 잃어버렸어요.<br><small>ref: 방금 승강장에서 휴대폰을 잃어버렸어요.</small></td>
+<td>940 / 1880</td>
+<td> cer=0.23</td>
+<td>5/5<br><small>機器譯文與參考譯文完全一致，翻譯非常準確且自然。</small></td>
+</tr>
+<tr>
+<td>T014<br><small>ko#1</small></td>
+<td class="zh">這個不要辣,我不太能吃辣。<br><small>STT: 这 个 不 要 啦 , 我 不 太 能 吃 辣 。</small></td>
+<td>이거는 안 할래요. 저는 매운 걸 잘 못 먹거든요.<br><small>ref: 이거 맵지 않게 해주세요. 매운 걸 잘 못 먹어서요.</small></td>
+<td>1001 / 1813</td>
+<td> cer=0.09</td>
+<td>3/4<br><small>前半句「這個不要辣」被誤譯為「이거는 안 할래요」（這個我不要/我不做了），漏譯了「不要辣（不加辣）」的核心意思。後半句「我不太能吃辣」翻譯正確且自然。整體語意有偏差，故給予中等評價。</small></td>
+</tr>
+<tr>
+<td>T014<br><small>ko#2</small></td>
+<td class="zh">這個不要辣,我不太能吃辣。<br><small>STT: 这 个 不 要 啦 , 我 不 太 能 吃 辣 。</small></td>
+<td>이거는 안 할래요. 저는 매운 걸 잘 못 먹거든요.<br><small>ref: 이거 맵지 않게 해주세요. 매운 걸 잘 못 먹어서요.</small></td>
+<td>960 / 1677</td>
+<td> cer=0.09</td>
+<td>3/5<br><small>The first clause '這個不要辣' (Don't make this spicy) was mistranslated as '이거는 안 할래요' (I don't want this / I won't do this), omitting the concept of 'spicy' (辣) in the request. However, the second clause '我不太能吃辣' was translated accurately and fluently.</small></td>
+</tr>
+<tr>
+<td>T014<br><small>ko#3</small></td>
+<td class="zh">這個不要辣,我不太能吃辣。<br><small>STT: 这 个 不 要 啦 , 我 不 太 能 吃 辣 。</small></td>
+<td>이거는 안 할게요, 제가 매운 걸 잘 못 먹거든요.<br><small>ref: 이거 맵지 않게 해주세요. 매운 걸 잘 못 먹어서요.</small></td>
+<td>964 / 1674</td>
+<td> cer=0.09</td>
+<td>3/4<br><small>前半句「這個不要辣」被誤譯為「이거는 안 할게요」（這個我不要了/我不做了），漏譯了「不要辣（不加辣）」的意思。後半句「我不太能吃辣」翻譯得很好（제가 매운 걸 잘 못 먹거든요）。</small></td>
+</tr>
+<tr>
+<td>T015<br><small>ko#1</small></td>
+<td class="zh">我們總共五個人,有兩個小孩,需要兒童椅。<br><small>STT: 我 们 总 共 五 个 人 , 有 两 个 小 孩 , 需 要 儿 童 椅 。</small></td>
+<td>저희는 총 다섯 명이고, 아이가 두 명이라 어린이 의자가 필요해요.<br><small>ref: 저희 총 다섯 명이고, 아이가 두 명 있어서 아기 의자가 필요해요.</small></td>
+<td>970 / 2061</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>번역이 매우 정확하고 자연스럽습니다. 인원수, 아이 수, 그리고 어린이 의자(아기 의자) 요청까지 누락 없이 완벽하게 번역되었습니다. 존댓말 표현도 적절합니다.</small></td>
+</tr>
+<tr>
+<td>T015<br><small>ko#2</small></td>
+<td class="zh">我們總共五個人,有兩個小孩,需要兒童椅。<br><small>STT: 我 们 总 共 五 个 人 , 有 两 个 小 孩 , 需 要 儿 童 椅 。</small></td>
+<td>저희는 총 다섯 명이고, 아이가 두 명 있어서 어린이용 의자가 필요해요.<br><small>ref: 저희 총 다섯 명이고, 아이가 두 명 있어서 아기 의자가 필요해요.</small></td>
+<td>955 / 2122</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>번역이 매우 정확하고 자연스럽습니다. '兒童椅(아동용 의자/유아용 의자)'를 '어린이용 의자'로 적절하게 번역하였으며, 문장의 흐름과 존댓말 표현도 완벽합니다.</small></td>
+</tr>
+<tr>
+<td>T015<br><small>ko#3</small></td>
+<td class="zh">我們總共五個人,有兩個小孩,需要兒童椅。<br><small>STT: 我 们 总 共 五 个 人 , 有 两 个 小 孩 , 需 要 儿 童 椅 。</small></td>
+<td>저희는 총 다섯 명이고, 아이가 둘 있어서 어린이 의자가 필요해요.<br><small>ref: 저희 총 다섯 명이고, 아이가 두 명 있어서 아기 의자가 필요해요.</small></td>
+<td>953 / 2158</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的所有訊息。'어린이 의자'（兒童椅）與 '아이가 둘 있어서'（有兩個小孩）的翻譯皆十分道地且符合韓語口語表達。</small></td>
+</tr>
+<tr>
+<td>T016<br><small>ko#1</small></td>
+<td class="zh">我對蝦子過敏,餐點裡請不要放任何海鮮。<br><small>STT: 我 对 虾 子 过 敏 , 餐 点 里 请 不 要 放 任 何 海 鲜 。</small></td>
+<td>저는 새우 알레르기가 있어서, 음식에 어떤 해산물도 넣지 말아 주세요.<br><small>ref: 새우 알레르기가 있어서 음식에 해산물은 넣지 말아주세요.</small></td>
+<td>984 / 2257</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in polite Korean, matching the reference translation closely.</small></td>
+</tr>
+<tr>
+<td>T016<br><small>ko#2</small></td>
+<td class="zh">我對蝦子過敏,餐點裡請不要放任何海鮮。<br><small>STT: 我 对 虾 子 过 敏 , 餐 点 里 请 不 要 放 任 何 海 鲜 。</small></td>
+<td>저는 새우 알레르기가 있어서, 음식에 어떤 해산물도 넣지 말아 주세요.<br><small>ref: 새우 알레르기가 있어서 음식에 해산물은 넣지 말아주세요.</small></td>
+<td>955 / 2279</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文非常準確且自然地翻譯了原文的所有訊息，語氣也十分得體，與參考譯文幾乎一致，甚至在表達「任何海鮮」時使用了「어떤 해산물도」，語意非常完整。</small></td>
+</tr>
+<tr>
+<td>T016<br><small>ko#3</small></td>
+<td class="zh">我對蝦子過敏,餐點裡請不要放任何海鮮。<br><small>STT: 我 对 虾 子 过 敏 , 餐 点 里 请 不 要 放 任 何 海 鲜 。</small></td>
+<td>저는 새우 알레르기가 있어서, 식사에 어떤 해산물도 넣지 말아 주세요.<br><small>ref: 새우 알레르기가 있어서 음식에 해산물은 넣지 말아주세요.</small></td>
+<td>1014 / 2218</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in polite Korean without any errors.</small></td>
+</tr>
+<tr>
+<td>T017<br><small>ko#1</small></td>
+<td class="zh">這杯不要加冰,然後大杯的改成中杯,總共三杯。<br><small>STT: 这 杯 不 要 加 冰 , 然 后 大 杯 的 改 成 中 杯 , 总 共 三 杯 。</small></td>
+<td>이 잔은 얼음 빼주시고요, 큰 컵은 중간 컵으로 바꿔서, 총 세 잔이요.<br><small>ref: 이거 얼음 넣지 말아주시고, 큰 사이즈는 중간 사이즈로 바꿔주세요. 총 세 잔이에요.</small></td>
+<td>949 / 2912</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完美地傳達了原文的所有細節，韓語表達流暢且符合禮貌語氣。</small></td>
+</tr>
+<tr>
+<td>T017<br><small>ko#2</small></td>
+<td class="zh">這杯不要加冰,然後大杯的改成中杯,總共三杯。<br><small>STT: 这 杯 不 要 加 冰 , 然 后 大 杯 的 改 成 中 杯 , 总 共 三 杯 。</small></td>
+<td>이 잔은 얼음을 넣지 말아 주시고, 큰 잔은 중간 크기로 변경해 주세요. 총 세 잔입니다.<br><small>ref: 이거 얼음 넣지 말아주시고, 큰 사이즈는 중간 사이즈로 바꿔주세요. 총 세 잔이에요.</small></td>
+<td>975 / 2633</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text. The tone is polite and appropriate, matching the reference translation closely.</small></td>
+</tr>
+<tr>
+<td>T017<br><small>ko#3</small></td>
+<td class="zh">這杯不要加冰,然後大杯的改成中杯,總共三杯。<br><small>STT: 这 杯 不 要 加 冰 , 然 后 大 杯 的 改 成 中 杯 , 总 共 三 杯 。</small></td>
+<td>이 잔은 얼음 빼주시고요, 큰 잔은 중간 잔으로 바꿔서, 총 세 잔이요.<br><small>ref: 이거 얼음 넣지 말아주시고, 큰 사이즈는 중간 사이즈로 바꿔주세요. 총 세 잔이에요.</small></td>
+<td>984 / 2545</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的所有訊息，且韓語表達十分道地，甚至比參考譯文更符合口語習慣。</small></td>
+</tr>
+<tr>
+<td>T018<br><small>ko#1</small></td>
+<td class="zh">我要一份 tonkotsu 拉麵,麵要硬一點。<br><small>STT: 我 要 一 份 豚 骨 汁 拉 面 , 面 要 硬 一 点 。</small></td>
+<td>돈코츠 라멘 하나 주세요. 면은 딱딱하게 해 주세요.<br><small>ref: 돈코츠 라멘 하나 주세요, 면은 좀 딱딱하게 해주세요.</small></td>
+<td>995 / 1925</td>
+<td> cer=0.42</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in fluent Korean, matching the reference translation almost exactly.</small></td>
+</tr>
+<tr>
+<td>T018<br><small>ko#2</small></td>
+<td class="zh">我要一份 tonkotsu 拉麵,麵要硬一點。<br><small>STT: 我 要 一 份 豚 骨 汁 拉 面 , 面 要 硬 一 点 。</small></td>
+<td>돈코츠 라멘 하나 주세요. 면은 좀 딱딱하게 해주세요.<br><small>ref: 돈코츠 라멘 하나 주세요, 면은 좀 딱딱하게 해주세요.</small></td>
+<td>974 / 1852</td>
+<td> cer=0.42</td>
+<td>5/5<br><small>譯文非常準確且自然，與參考譯文幾乎完全一致，完整傳達了原文的所有細節。</small></td>
+</tr>
+<tr>
+<td>T018<br><small>ko#3</small></td>
+<td class="zh">我要一份 tonkotsu 拉麵,麵要硬一點。<br><small>STT: 我 要 一 份 豚 骨 汁 拉 面 , 面 要 硬 一 点 。</small></td>
+<td>돈코츠 라멘 하나 주세요. 면은 좀 딱딱하게 해주세요.<br><small>ref: 돈코츠 라멘 하나 주세요, 면은 좀 딱딱하게 해주세요.</small></td>
+<td>981 / 1928</td>
+<td> cer=0.42</td>
+<td>5/5<br><small>譯文非常準確且自然，與參考譯文幾乎完全一致，完整傳達了原文的所有語意。</small></td>
+</tr>
+<tr>
+<td>T019<br><small>ko#1</small></td>
+<td class="zh">這道菜看起來很好吃,可是我已經吃飽了。<br><small>STT: 这 道 菜 看 起 来 很 好 吃 , 可 是 我 已 经 吃 饱 了 。</small></td>
+<td>이 음식은 맛있어 보이지만, 저는 이미 배가 불러요.<br><small>ref: 이 음식 맛있어 보이는데, 제가 이미 배가 불러서요.</small></td>
+<td>942 / 1920</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的意思，文法與語氣皆十分恰當。</small></td>
+</tr>
+<tr>
+<td>T019<br><small>ko#2</small></td>
+<td class="zh">這道菜看起來很好吃,可是我已經吃飽了。<br><small>STT: 这 道 菜 看 起 来 很 好 吃 , 可 是 我 已 经 吃 饱 了 。</small></td>
+<td>이 요리는 맛있어 보이는데, 저는 이미 배가 불러요.<br><small>ref: 이 음식 맛있어 보이는데, 제가 이미 배가 불러서요.</small></td>
+<td>945 / 1930</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is highly accurate and natural, conveying the exact meaning of the source text with appropriate honorifics and grammar.</small></td>
+</tr>
+<tr>
+<td>T019<br><small>ko#3</small></td>
+<td class="zh">這道菜看起來很好吃,可是我已經吃飽了。<br><small>STT: 这 道 菜 看 起 来 很 好 吃 , 可 是 我 已 经 吃 饱 了 。</small></td>
+<td>이 요리는 맛있어 보이는데, 저는 이미 배가 불러요.<br><small>ref: 이 음식 맛있어 보이는데, 제가 이미 배가 불러서요.</small></td>
+<td>984 / 1831</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with correct grammar and appropriate politeness, matching the reference translation's intent closely.</small></td>
+</tr>
+<tr>
+<td>T020<br><small>ko#1</small></td>
+<td class="zh">請問可以幫我們分開結帳嗎?<br><small>STT: 请 问 可 以 帮 我 们 分 开 结 帐 吗 ?</small></td>
+<td>혹시 계산을 따로따로 해 주실 수 있나요?<br><small>ref: 저희 계산 따로따로 해주실 수 있을까요?</small></td>
+<td>950 / 1474</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「혹시」完美地傳達了「請問」在口語中的客氣語氣，而「계산을 따로따로 해 주실 수 있나요?」也精確地翻譯了「幫我們分開結帳嗎」。雖然省略了「我們（저희）」，但在韓語口語中省略主詞是非常自然且符合習慣的，不影響語意表達。</small></td>
+</tr>
+<tr>
+<td>T020<br><small>ko#2</small></td>
+<td class="zh">請問可以幫我們分開結帳嗎?<br><small>STT: 请 问 可 以 帮 我 们 分 开 结 帐 吗 ?</small></td>
+<td>혹시 따로 계산해 주실 수 있나요?<br><small>ref: 저희 계산 따로따로 해주실 수 있을까요?</small></td>
+<td>990 / 1524</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source sentence in polite Korean, using appropriate phrasing ('혹시 따로 계산해 주실 수 있나요?').</small></td>
+</tr>
+<tr>
+<td>T020<br><small>ko#3</small></td>
+<td class="zh">請問可以幫我們分開結帳嗎?<br><small>STT: 请 问 可 以 帮 我 们 分 开 结 帐 吗 ?</small></td>
+<td>혹시 따로 계산해 주실 수 있나요?<br><small>ref: 저희 계산 따로따로 해주실 수 있을까요?</small></td>
+<td>976 / 1413</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完美傳達了「分開結帳」的意思，語氣也十分禮貌客氣。</small></td>
+</tr>
+<tr>
+<td>T021<br><small>ko#1</small></td>
+<td class="zh">這個不要,我要旁邊那個藍色的,兩個多少錢?<br><small>STT: 这 个 不 要 , 我 要 旁 边 那 个 蓝 色 的 , 两 个 多 少 钱 ?</small></td>
+<td>이건 안 할래요. 옆에 파란색 걸로 주세요. 두 개에 얼마예요?<br><small>ref: 이거는 아니고, 옆에 있는 파란색이요. 두 개에 얼마예요?</small></td>
+<td>972 / 1929</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完美傳達了原文的意思，韓語表達流暢且符合語境。</small></td>
+</tr>
+<tr>
+<td>T021<br><small>ko#2</small></td>
+<td class="zh">這個不要,我要旁邊那個藍色的,兩個多少錢?<br><small>STT: 这 个 不 要 , 我 要 旁 边 那 个 蓝 色 的 , 两 个 多 少 钱 ?</small></td>
+<td>이거 말고, 옆에 있는 파란색으로 할게요. 두 개에 얼마예요?<br><small>ref: 이거는 아니고, 옆에 있는 파란색이요. 두 개에 얼마예요?</small></td>
+<td>932 / 3439</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「이거 말고」完美對應「這個不要」，「옆에 있는 파란색으로 할게요」也極為自然地表達了「我要旁邊那個藍色的」，整體語意與語氣皆十分貼切。</small></td>
+</tr>
+<tr>
+<td>T021<br><small>ko#3</small></td>
+<td class="zh">這個不要,我要旁邊那個藍色的,兩個多少錢?<br><small>STT: 这 个 不 要 , 我 要 旁 边 那 个 蓝 色 的 , 两 个 多 少 钱 ?</small></td>
+<td>이거 말고, 옆에 있는 파란색이요. 두 개에 얼마인가요?<br><small>ref: 이거는 아니고, 옆에 있는 파란색이요. 두 개에 얼마예요?</small></td>
+<td>944 / 1963</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完美傳達了原文的所有語意，且韓語表達十分流暢、得體。</small></td>
+</tr>
+<tr>
+<td>T022<br><small>ko#1</small></td>
+<td class="zh">太貴了,算我三千塊可以嗎?<br><small>STT: 太 贵 了 , 算 我 3000 块 可 以 了 。</small></td>
+<td>너무 비싸요, 3000원에 해주시면 안 될까요?<br><small>ref: 너무 비싸요. 3000원에 해 주시면 안 돼요?</small></td>
+<td>995 / 1639</td>
+<td> cer=0.46</td>
+<td>5/5<br><small>譯文非常準確且自然。「안 될까요?」比參考譯文的「안 돼요?」更為客氣委婉，非常符合口語情境，語意完全忠實。</small></td>
+</tr>
+<tr>
+<td>T022<br><small>ko#2</small></td>
+<td class="zh">太貴了,算我三千塊可以嗎?<br><small>STT: 太 贵 了 , 算 我 3000 块 可 以 了 。</small></td>
+<td>너무 비싸요. 3000원으로 해 주세요.<br><small>ref: 너무 비싸요. 3000원에 해 주시면 안 돼요?</small></td>
+<td>991 / 1728</td>
+<td> cer=0.46</td>
+<td>5/5<br><small>The machine translation is accurate and natural. It successfully conveys the meaning of bargaining for 3000 ('3000원으로 해 주세요') in polite Korean, which is equivalent to the source text.</small></td>
+</tr>
+<tr>
+<td>T022<br><small>ko#3</small></td>
+<td class="zh">太貴了,算我三千塊可以嗎?<br><small>STT: 太 贵 了 , 算 我 3000 块 可 以 了 。</small></td>
+<td>너무 비싸요, 3000원으로 해주시면 안 될까요?<br><small>ref: 너무 비싸요. 3000원에 해 주시면 안 돼요?</small></td>
+<td>969 / 1700</td>
+<td> cer=0.46</td>
+<td>5/5<br><small>譯文非常準確且自然，語意與參考譯文高度一致，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T023<br><small>ko#1</small></td>
+<td class="zh">請問這個價格是含稅還是不含稅?<br><small>STT: 请 问 这 个 价 格 是 含 税 还 是 不 含 税 ?</small></td>
+<td>혹시 이 가격은 세금 포함인가요, 불포함인가요?<br><small>ref: 이 가격이 세금 포함인가요, 아니면 세금 별도인가요?</small></td>
+<td>1062 / 1915</td>
+<td>🚫 cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. '혹시' is a very natural colloquial rendering of '請問' in this context, and '세금 포함인가요, 불포함인가요?' perfectly conveys the meaning of '含稅還是不含稅'.</small></td>
+</tr>
+<tr>
+<td>T023<br><small>ko#2</small></td>
+<td class="zh">請問這個價格是含稅還是不含稅?<br><small>STT: 请 问 这 个 价 格 是 含 税 还 是 不 含 税 ?</small></td>
+<td>실례지만 이 가격은 세금 포함인가요, 아니면 별도인가요?<br><small>ref: 이 가격이 세금 포함인가요, 아니면 세금 별도인가요?</small></td>
+<td>955 / 3445</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is highly accurate and natural. "실례지만" is a polite addition for "請問", and "별도인가요" is a very natural way to express "不含稅" (tax-exclusive) in Korean. No errors found.</small></td>
+</tr>
+<tr>
+<td>T023<br><small>ko#3</small></td>
+<td class="zh">請問這個價格是含稅還是不含稅?<br><small>STT: 请 问 这 个 价 格 是 含 税 还 是 不 含 税 ?</small></td>
+<td>실례지만 이 가격은 세금 포함인가요, 아니면 불포함인가요?<br><small>ref: 이 가격이 세금 포함인가요, 아니면 세금 별도인가요?</small></td>
+<td>941 / 1997</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It correctly translates '請問' as '실례지만' and accurately conveys the choice between tax-inclusive and tax-exclusive ('세금 포함인가요, 아니면 불포함인가요?').</small></td>
+</tr>
+<tr>
+<td>T024<br><small>ko#1</small></td>
+<td class="zh">這件如果打八折的話,我就買兩件。<br><small>STT: 这 件 如 果 打 八 折 的 话 , 我 就 买 两 件 。</small></td>
+<td>이게 20% 할인되면 두 개 살게요.<br><small>ref: 이거 20% 세일해 주시면 두 개 살게요.</small></td>
+<td>1129 / 2598</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。中文的「打八折」正確地轉換為韓文的「20% 할인」（折價20%），語意完全契合，且句型流暢符合韓語口語表達。</small></td>
+</tr>
+<tr>
+<td>T024<br><small>ko#2</small></td>
+<td class="zh">這件如果打八折的話,我就買兩件。<br><small>STT: 这 件 如 果 打 八 折 的 话 , 我 就 买 两 件 。</small></td>
+<td>이거 20% 할인해 주시면, 제가 두 개 살게요.<br><small>ref: 이거 20% 세일해 주시면 두 개 살게요.</small></td>
+<td>972 / 2178</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「打八折」正確地翻譯為「20% 할인」（打八折即折價20%），語意完全符合，語氣也十分自然。</small></td>
+</tr>
+<tr>
+<td>T024<br><small>ko#3</small></td>
+<td class="zh">這件如果打八折的話,我就買兩件。<br><small>STT: 这 件 如 果 打 八 折 的 话 , 我 就 买 两 件 。</small></td>
+<td>이거 20% 할인이 되면 두 개 살게요.<br><small>ref: 이거 20% 세일해 주시면 두 개 살게요.</small></td>
+<td>1064 / 1789</td>
+<td>🔢 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。中文的「打八折」正確地轉換為韓文的「20% 할인」（折價20%），整句話的語意與語氣皆符合韓語母語者的表達習慣。</small></td>
+</tr>
+<tr>
+<td>T025<br><small>ko#1</small></td>
+<td class="zh">有沒有 limited edition 的款式?我在 Instagram 上看到的。<br><small>STT: 有 没 有 limited edition 的 款 式 ? 我 在 Instagram 上 看 到 的 。</small></td>
+<td>limited edition 스타일이 있나요? 인스타그램에서 봤거든요.<br><small>ref: 리미티드 에디션 있어요? 인스타그램에서 봤어요.</small></td>
+<td>1049 / 1954</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「limited edition 스타일이 있나요?」完整表達了「有沒有 limited edition 的款式？」，第二句使用「-거든요」結尾，自然地表達了「因為我在Instagram上看到」的語境，語意忠實度與流暢度皆非常好。</small></td>
+</tr>
+<tr>
+<td>T025<br><small>ko#2</small></td>
+<td class="zh">有沒有 limited edition 的款式?我在 Instagram 上看到的。<br><small>STT: 有 没 有 limited edition 的 款 式 ? 我 在 Instagram 上 看 到 的 。</small></td>
+<td>혹시 한정판 디자인이 있나요? 인스타그램에서 봤거든요.<br><small>ref: 리미티드 에디션 있어요? 인스타그램에서 봤어요.</small></td>
+<td>966 / 1850</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. 'limited edition' is translated to '한정판' (limited edition) and '款式' to '디자인' (design), which fits the context perfectly. The tone is polite and natural.</small></td>
+</tr>
+<tr>
+<td>T025<br><small>ko#3</small></td>
+<td class="zh">有沒有 limited edition 的款式?我在 Instagram 上看到的。<br><small>STT: 有 没 有 limited edition 的 款 式 ? 我 在 Instagram 上 看 到 的 。</small></td>
+<td>한정판 디자인이 있나요? 인스타그램에서 봤거든요.<br><small>ref: 리미티드 에디션 있어요? 인스타그램에서 봤어요.</small></td>
+<td>939 / 2047</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「한정판 디자인」（限量版款式）與「인스타그램에서 봤거든요」（在Instagram上看到的）皆符合韓語母語者的說法，語氣也非常自然得體，無任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T026<br><small>ko#1</small></td>
+<td class="zh">我考慮了一下,這個還是先不買好了。<br><small>STT: 我 考 虑 了 一 下 , 这 个 还 是 先 不 买 好 了 。</small></td>
+<td>제가 좀 고민해 봤는데, 이건 아무래도 먼저 사지 않는 게 좋겠어요.<br><small>ref: 생각해 봤는데, 이건 일단 안 살게요.</small></td>
+<td>944 / 2210</td>
+<td> cer=0.00</td>
+<td>5/4<br><small>譯文完整且準確地傳達了原文的意思。'고민해 봤는데' 很好地對應了 '考慮了一下'。後半句 '먼저 사지 않는 게 좋겠어요' 雖然相較於參考譯文的 '일단 안 살게요' 稍微顯得不夠簡練，但語法完全正確且語氣自然、禮貌。</small></td>
+</tr>
+<tr>
+<td>T026<br><small>ko#2</small></td>
+<td class="zh">我考慮了一下,這個還是先不買好了。<br><small>STT: 我 考 虑 了 一 下 , 这 个 还 是 先 不 买 好 了 。</small></td>
+<td>고민해 봤는데, 이건 아직 사지 않는 게 좋겠어요.<br><small>ref: 생각해 봤는데, 이건 일단 안 살게요.</small></td>
+<td>960 / 1838</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「고민해 봤는데」完美對應「我考慮了一下」，「이건 아직 사지 않는 게 좋겠어요」也極為自然地傳達了「這個還是先不買好了」的語氣與語意，無任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T026<br><small>ko#3</small></td>
+<td class="zh">我考慮了一下,這個還是先不買好了。<br><small>STT: 我 考 虑 了 一 下 , 这 个 还 是 先 不 买 好 了 。</small></td>
+<td>고민해 봤는데, 이건 아직 사지 않는 게 좋겠어요.<br><small>ref: 생각해 봤는데, 이건 일단 안 살게요.</small></td>
+<td>968 / 1824</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「고민해 봤는데」很好地對應了「我考慮了一下」，而「이건 아직 사지 않는 게 좋겠어요」也完美且得體地表達了「這個還是先不買好了」的意思，語意忠實度與流暢度皆極佳。</small></td>
+</tr>
+<tr>
+<td>T027<br><small>ko#1</small></td>
+<td class="zh">可以退稅嗎?我總共買了超過五千日圓。<br><small>STT: 可 以 退 税 吗 ? 我 总 共 买 了 超 过 五 千 日 元 。</small></td>
+<td>면세 받을 수 있나요? 총 5천 엔 이상 구매했거든요.<br><small>ref: 세금 환급 되나요? 총 5000엔 넘게 샀어요.</small></td>
+<td>991 / 2492</td>
+<td>🔢 cer=0.06</td>
+<td>5/5<br><small>機器譯文非常準確且自然。「면세 받을 수 있나요?」是詢問退稅非常道地的韓文表達方式，「총 5천 엔 이상 구매했거든요」也完美且流暢地傳達了「總共買了超過五千日圓」的意思，語氣十分自然。</small></td>
+</tr>
+<tr>
+<td>T027<br><small>ko#2</small></td>
+<td class="zh">可以退稅嗎?我總共買了超過五千日圓。<br><small>STT: 可 以 退 税 吗 ? 我 总 共 买 了 超 过 五 千 日 元 。</small></td>
+<td>면세 받을 수 있나요? 총 5천 엔 이상 구매했어요.<br><small>ref: 세금 환급 되나요? 총 5000엔 넘게 샀어요.</small></td>
+<td>972 / 1767</td>
+<td>🔢 cer=0.06</td>
+<td>5/5<br><small>譯文非常準確且自然。「면세 받을 수 있나요?」在日韓旅遊購物的語境下是「退稅」非常道地的表達方式，後半句「총 5천 엔 이상 구매했어요」也完美對應原文的「總共買了超過五千日圓」，無任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T027<br><small>ko#3</small></td>
+<td class="zh">可以退稅嗎?我總共買了超過五千日圓。<br><small>STT: 可 以 退 税 吗 ? 我 总 共 买 了 超 过 五 千 日 元 。</small></td>
+<td>면세가 되나요? 총 5천 엔 이상 구매했어요.<br><small>ref: 세금 환급 되나요? 총 5000엔 넘게 샀어요.</small></td>
+<td>971 / 2367</td>
+<td>🔢 cer=0.06</td>
+<td>5/5<br><small>譯文非常準確且自然。「면세가 되나요?」在日韓旅遊情境中是表達退稅非常道地且常用的說法，後半句的翻譯也完全符合原文意思，語氣自然。</small></td>
+</tr>
+<tr>
+<td>T028<br><small>ko#1</small></td>
+<td class="zh">我有訂房,名字是陳大文,今天住兩個晚上。<br><small>STT: 我 有 订 房 , 名 字 是 陈 大 文 , 今 天 住 两 个 晚 上 。</small></td>
+<td>예약했습니다. 이름은 진대문이고, 오늘부터 2박입니다.<br><small>ref: 예약했는데요, 이름은 천다원이에요. 오늘부터 2박이에요.</small></td>
+<td>944 / 1940</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且流暢。人名「陳大文」採用了標準的韓文漢字音譯「진대문」，完全符合語意。語氣禮貌且自然，無任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T028<br><small>ko#2</small></td>
+<td class="zh">我有訂房,名字是陳大文,今天住兩個晚上。<br><small>STT: 我 有 订 房 , 名 字 是 陈 大 文 , 今 天 住 两 个 晚 上 。</small></td>
+<td>예약을 했는데요, 이름은 진대문이고 오늘부터 2박입니다.<br><small>ref: 예약했는데요, 이름은 천다원이에요. 오늘부터 2박이에요.</small></td>
+<td>964 / 2196</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。人名「陳大文」採用了韓語漢字音讀「진대문」，這是完全正確且標準的翻譯方式。整句語意完整，語氣自然得體。</small></td>
+</tr>
+<tr>
+<td>T028<br><small>ko#3</small></td>
+<td class="zh">我有訂房,名字是陳大文,今天住兩個晚上。<br><small>STT: 我 有 订 房 , 名 字 是 陈 大 文 , 今 天 住 两 个 晚 上 。</small></td>
+<td>예약했습니다. 이름은 진대문이고, 오늘부터 2박입니다.<br><small>ref: 예약했는데요, 이름은 천다원이에요. 오늘부터 2박이에요.</small></td>
+<td>962 / 2136</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。人名「陳大文」譯為漢字音「진대문」（陳大文），也是一種常見且可接受的翻譯方式，語意完全忠實，語氣也十分自然。</small></td>
+</tr>
+<tr>
+<td>T029<br><small>ko#1</small></td>
+<td class="zh">我沒有訂房,請問今晚還有空房嗎?<br><small>STT: 我 没 有 订 房 , 请 问 今 晚 还 有 空 房 吗 ?</small></td>
+<td>예약하지 않았는데, 혹시 오늘 밤에 빈 방 있을까요?<br><small>ref: 예약을 안 했는데요, 오늘 밤에 빈 방 있어요?</small></td>
+<td>993 / 1863</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完美傳達了原文的意思，語氣也非常得體、有禮貌。</small></td>
+</tr>
+<tr>
+<td>T029<br><small>ko#2</small></td>
+<td class="zh">我沒有訂房,請問今晚還有空房嗎?<br><small>STT: 我 没 有 订 房 , 请 问 今 晚 还 有 空 房 吗 ?</small></td>
+<td>예약하지 않았는데, 혹시 오늘 밤에 빈 방 남아 있을까요?<br><small>ref: 예약을 안 했는데요, 오늘 밤에 빈 방 있어요?</small></td>
+<td>942 / 2393</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完美傳達了原文的意思，語氣也非常客氣得體，與參考譯文一樣好，甚至在語氣上更顯自然禮貌。</small></td>
+</tr>
+<tr>
+<td>T029<br><small>ko#3</small></td>
+<td class="zh">我沒有訂房,請問今晚還有空房嗎?<br><small>STT: 我 没 有 订 房 , 请 问 今 晚 还 有 空 房 吗 ?</small></td>
+<td>예약하지 않았는데, 혹시 오늘 밤에 빈 방 있을까요?<br><small>ref: 예약을 안 했는데요, 오늘 밤에 빈 방 있어요?</small></td>
+<td>958 / 1814</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，語氣客氣有禮，完全符合情境。</small></td>
+</tr>
+<tr>
+<td>T030<br><small>ko#1</small></td>
+<td class="zh">請問退房時間是早上十點還是十一點?<br><small>STT: 请 问 退 房 时 间 是 早 上 10 点 还 是 11 点 ?</small></td>
+<td>죄송하지만 체크아웃 시간이 오전 10시인가요, 아니면 11시인가요?<br><small>ref: 체크아웃 시간이 오전 10시예요, 아니면 11시예요?</small></td>
+<td>926 / 2137</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>譯文非常準確且自然。「請問」翻譯為「죄송하지만」（不好意思/請問）非常符合韓語口語習慣，整句語氣禮貌且語意完全忠實於原文。</small></td>
+</tr>
+<tr>
+<td>T030<br><small>ko#2</small></td>
+<td class="zh">請問退房時間是早上十點還是十一點?<br><small>STT: 请 问 退 房 时 间 是 早 上 10 点 还 是 11 点 ?</small></td>
+<td>체크아웃 시간이 오전 10시인가요, 아니면 11시인가요?<br><small>ref: 체크아웃 시간이 오전 10시예요, 아니면 11시예요?</small></td>
+<td>1113 / 2433</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的所有訊息，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T030<br><small>ko#3</small></td>
+<td class="zh">請問退房時間是早上十點還是十一點?<br><small>STT: 请 问 退 房 时 间 是 早 上 10 点 还 是 11 点 ?</small></td>
+<td>체크아웃 시간은 오전 10시인가요, 아니면 11시인가요?<br><small>ref: 체크아웃 시간이 오전 10시예요, 아니면 11시예요?</small></td>
+<td>960 / 3322</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with appropriate honorifics and correct numbers.</small></td>
+</tr>
+<tr>
+<td>T031<br><small>ko#1</small></td>
+<td class="zh">房間的冷氣好像壞了,可以請人來看一下嗎?<br><small>STT: 房 间 的 冷 气 好 像 坏 了 , 可 以 请 人 来 看 一 下 吗 ?</small></td>
+<td>객실의 에어컨이 고장 난 것 같은데, 사람을 보내서 확인해 주실 수 있나요?<br><small>ref: 방 에어컨이 고장난 것 같은데요, 사람을 보내서 좀 봐 주실 수 있나요?</small></td>
+<td>955 / 2263</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「房間」翻譯為「객실」（客房）在飯店情境下非常合適，整句表達流暢且語氣禮貌，完全符合原文意思。</small></td>
+</tr>
+<tr>
+<td>T031<br><small>ko#2</small></td>
+<td class="zh">房間的冷氣好像壞了,可以請人來看一下嗎?<br><small>STT: 房 间 的 冷 气 好 像 坏 了 , 可 以 请 人 来 看 一 下 吗 ?</small></td>
+<td>방의 에어컨이 고장 난 것 같은데, 사람을 불러서 좀 봐주실 수 있을까요?<br><small>ref: 방 에어컨이 고장난 것 같은데요, 사람을 보내서 좀 봐 주실 수 있나요?</small></td>
+<td>1041 / 3455</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text using appropriate honorifics and phrasing that matches the context.</small></td>
+</tr>
+<tr>
+<td>T031<br><small>ko#3</small></td>
+<td class="zh">房間的冷氣好像壞了,可以請人來看一下嗎?<br><small>STT: 房 间 的 冷 气 好 像 坏 了 , 可 以 请 人 来 看 一 下 吗 ?</small></td>
+<td>객실 에어컨이 고장 난 것 같은데, 사람을 불러서 좀 봐주실 수 있을까요?<br><small>ref: 방 에어컨이 고장난 것 같은데요, 사람을 보내서 좀 봐 주실 수 있나요?</small></td>
+<td>951 / 2775</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完美傳達了原文的意思，語氣也十分得體客氣。</small></td>
+</tr>
+<tr>
+<td>T032<br><small>ko#1</small></td>
+<td class="zh">我明天不需要打掃房間,謝謝。<br><small>STT: 我 明 天 不 需 要 打 扫 房 间 , 谢 谢 。</small></td>
+<td>저는 내일 방 청소를 할 필요가 없어요, 감사합니다.<br><small>ref: 내일은 방 청소 안 해주셔도 돼요. 감사합니다.</small></td>
+<td>944 / 1648</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器翻譯非常準確且流暢。雖然參考譯文採用了「不用幫我打掃」的客氣說法（안 해주셔도 돼요），但機器翻譯的「저는 내일 방 청소를 할 필요가 없어요」（我明天不需要打掃房間）在語法和語意上都完全正確且自然，禮貌語氣（감사합니다）也表達得很好。</small></td>
+</tr>
+<tr>
+<td>T032<br><small>ko#2</small></td>
+<td class="zh">我明天不需要打掃房間,謝謝。<br><small>STT: 我 明 天 不 需 要 打 扫 房 间 , 谢 谢 。</small></td>
+<td>저는 내일 방을 청소할 필요가 없어요, 감사합니다.<br><small>ref: 내일은 방 청소 안 해주셔도 돼요. 감사합니다.</small></td>
+<td>978 / 2898</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器翻譯非常準確且流暢。雖然參考譯文採用了客房服務情境的譯法（不用幫我打掃），但機器翻譯對原文「我明天不需要打掃房間」進行了直譯（我不需要打掃），語法完全正確且語氣自然。</small></td>
+</tr>
+<tr>
+<td>T032<br><small>ko#3</small></td>
+<td class="zh">我明天不需要打掃房間,謝謝。<br><small>STT: 我 明 天 不 需 要 打 扫 房 间 , 谢 谢 。</small></td>
+<td>저는 내일 방 청소를 할 필요가 없어요, 감사합니다.<br><small>ref: 내일은 방 청소 안 해주셔도 돼요. 감사합니다.</small></td>
+<td>941 / 1600</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文完整且準確地翻譯了原文的意思，語法正確，語氣自然。雖然參考譯文更偏向「不用幫我打掃」的服務情境，但機器譯文的「我不需要打掃」在無上下文的情況下也是完全正確且流暢的翻譯。</small></td>
+</tr>
+<tr>
+<td>T033<br><small>ko#1</small></td>
+<td class="zh">可以幫我叫一台計程車嗎?明天早上六點半要到機場。<br><small>STT: 可 以 帮 我 叫 一 台 出 租 车 吗 ? 明 天 早 上 6 点 半 要 到 机 场 。</small></td>
+<td>택시 한 대 불러주실 수 있나요? 내일 아침 6시 반에 공항에 가야 해요.<br><small>ref: 택시 한 대 불러 주실 수 있나요? 내일 아침 6시 반에 공항에 가야 해요.</small></td>
+<td>961 / 2206</td>
+<td> cer=0.14</td>
+<td>5/5<br><small>The machine translation is perfect and matches the reference translation almost exactly, with only a minor spacing difference that does not affect naturalness.</small></td>
+</tr>
+<tr>
+<td>T033<br><small>ko#2</small></td>
+<td class="zh">可以幫我叫一台計程車嗎?明天早上六點半要到機場。<br><small>STT: 可 以 帮 我 叫 一 台 出 租 车 吗 ? 明 天 早 上 6 点 半 要 到 机 场 。</small></td>
+<td>택시 한 대만 불러주실 수 있나요? 내일 아침 6시 반까지 공항에 가야 해요.<br><small>ref: 택시 한 대 불러 주실 수 있나요? 내일 아침 6시 반에 공항에 가야 해요.</small></td>
+<td>932 / 2271</td>
+<td> cer=0.14</td>
+<td>5/5<br><small>譯文非常準確且自然。「6시 반까지」（到六點半為止/六點半前）精確地傳達了原文「六點半要到」的意思，整體語氣與用詞皆符合韓語口語習慣。</small></td>
+</tr>
+<tr>
+<td>T033<br><small>ko#3</small></td>
+<td class="zh">可以幫我叫一台計程車嗎?明天早上六點半要到機場。<br><small>STT: 可 以 帮 我 叫 一 台 出 租 车 吗 ? 明 天 早 上 6 点 半 要 到 机 场 。</small></td>
+<td>택시 한 대만 불러주실 수 있나요? 내일 아침 6시 반에 공항에 가야 해서요.<br><small>ref: 택시 한 대 불러 주실 수 있나요? 내일 아침 6시 반에 공항에 가야 해요.</small></td>
+<td>928 / 2095</td>
+<td> cer=0.14</td>
+<td>5/5<br><small>譯文非常準確且自然。'한 대만' 中的 '만' 以及結尾的 '해서요' 讓韓語表達顯得十分道地且有禮貌，完美符合請求幫忙叫計程車的語境，無任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T034<br><small>ko#1</small></td>
+<td class="zh">救命!請幫我叫救護車!<br><small>STT: 救 命 , 请 帮 我 叫 救 护 车 。</small></td>
+<td>살려주세요, 구급차 좀 불러주세요.<br><small>ref: 살려주세요! 구급차 좀 불러 주세요!</small></td>
+<td>939 / 1326</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，與參考譯文幾乎完全一致，完美傳達了原文的緊急求助語意。</small></td>
+</tr>
+<tr>
+<td>T034<br><small>ko#2</small></td>
+<td class="zh">救命!請幫我叫救護車!<br><small>STT: 救 命 , 请 帮 我 叫 救 护 车 。</small></td>
+<td>살려주세요, 구급차 좀 불러주세요.<br><small>ref: 살려주세요! 구급차 좀 불러 주세요!</small></td>
+<td>1014 / 2041</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，與參考譯文幾乎完全一致，完美傳達了原文的緊急求救語意。</small></td>
+</tr>
+<tr>
+<td>T034<br><small>ko#3</small></td>
+<td class="zh">救命!請幫我叫救護車!<br><small>STT: 救 命 , 请 帮 我 叫 救 护 车 。</small></td>
+<td>살려주세요, 구급차 좀 불러주세요.<br><small>ref: 살려주세요! 구급차 좀 불러 주세요!</small></td>
+<td>1086 / 1592</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，與參考譯文幾乎完全一致，完美傳達了原文的緊急求助語意。</small></td>
+</tr>
+<tr>
+<td>T035<br><small>ko#1</small></td>
+<td class="zh">我的護照不見了,請問警察局在哪裡?<br><small>STT: 我 的 护 照 不 见 了 , 请 问 警 察 局 在 哪 里 ?</small></td>
+<td>제 여권이 없어졌어요. 경찰서가 어디에 있나요?<br><small>ref: 제 여권을 잃어버렸는데요, 경찰서가 어디에 있나요?</small></td>
+<td>1014 / 1846</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It correctly translates '我的護照不見了' as '제 여권이 없어졌어요' and '請問警察局在哪裡?' as '경찰서가 어디에 있나요?', maintaining the polite tone and exact meaning of the source text.</small></td>
+</tr>
+<tr>
+<td>T035<br><small>ko#2</small></td>
+<td class="zh">我的護照不見了,請問警察局在哪裡?<br><small>STT: 我 的 护 照 不 见 了 , 请 问 警 察 局 在 哪 里 ?</small></td>
+<td>제 여권이 없어졌어요. 경찰서가 어디에 있나요?<br><small>ref: 제 여권을 잃어버렸는데요, 경찰서가 어디에 있나요?</small></td>
+<td>1047 / 1956</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的意思，敬語使用也十分恰當。</small></td>
+</tr>
+<tr>
+<td>T035<br><small>ko#3</small></td>
+<td class="zh">我的護照不見了,請問警察局在哪裡?<br><small>STT: 我 的 护 照 不 见 了 , 请 问 警 察 局 在 哪 里 ?</small></td>
+<td>제 여권을 잃어버렸어요. 경찰서가 어디에 있나요?<br><small>ref: 제 여권을 잃어버렸는데요, 경찰서가 어디에 있나요?</small></td>
+<td>1019 / 2465</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T036<br><small>ko#1</small></td>
+<td class="zh">我頭很暈,但是我沒有心臟病的病史。<br><small>STT: 我 头 很 晕 , 但 是 我 没 有 心 脏 病 的 病 史 。</small></td>
+<td>머리가 많이 어지러운데, 심장병 이력은 없어요.<br><small>ref: 머리가 많이 어지러운데요, 심장병 병력은 없어요.</small></td>
+<td>993 / 2348</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text. While the reference translation uses '병력' (medical history) instead of '이력' (history), '이력' is still completely understandable and acceptable in this context.</small></td>
+</tr>
+<tr>
+<td>T036<br><small>ko#2</small></td>
+<td class="zh">我頭很暈,但是我沒有心臟病的病史。<br><small>STT: 我 头 很 晕 , 但 是 我 没 有 心 脏 病 的 病 史 。</small></td>
+<td>머리가 많이 어지러운데, 심장병 병력은 없어요.<br><small>ref: 머리가 많이 어지러운데요, 심장병 병력은 없어요.</small></td>
+<td>928 / 1752</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural, almost identical to the reference translation. It perfectly conveys the meaning of the source text in natural Korean.</small></td>
+</tr>
+<tr>
+<td>T036<br><small>ko#3</small></td>
+<td class="zh">我頭很暈,但是我沒有心臟病的病史。<br><small>STT: 我 头 很 晕 , 但 是 我 没 有 心 脏 病 的 病 史 。</small></td>
+<td>머리가 많이 어지럽지만, 심장병 내력은 없어요.<br><small>ref: 머리가 많이 어지러운데요, 심장병 병력은 없어요.</small></td>
+<td>1001 / 1829</td>
+<td> cer=0.07</td>
+<td>5/5<br><small>譯文非常準確且自然。雖然將「病史」翻譯為「내력」（來歷、歷史）而非更精確的醫學術語「병력」（病史），但在日常口語對話中完全可以理解，語意表達十分完整。</small></td>
+</tr>
+<tr>
+<td>T037<br><small>ko#1</small></td>
+<td class="zh">我的房間號碼是七〇二,我朋友昏倒了。<br><small>STT: 我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。</small></td>
+<td>제 방 호수는 702호인데, 친구가 기절했어요.<br><small>ref: 제 방 번호는 702호인데요, 제 친구가 쓰러졌어요.</small></td>
+<td>918 / 1773</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>譯文非常準確且自然。「방 호수」（房號）與「기절했어요」（昏倒了）皆為極佳的翻譯，語意完全忠實，語氣也十分自然流暢。</small></td>
+</tr>
+<tr>
+<td>T037<br><small>ko#2</small></td>
+<td class="zh">我的房間號碼是七〇二,我朋友昏倒了。<br><small>STT: 我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。</small></td>
+<td>제 방 호수는 702호인데, 친구가 기절했어요.<br><small>ref: 제 방 번호는 702호인데요, 제 친구가 쓰러졌어요.</small></td>
+<td>913 / 1897</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>譯文非常準確且自然。「방 호수」（房號）與「기절했어요」（昏倒了）皆為極佳的翻譯，語意完全忠實，語氣也十分自然流暢。</small></td>
+</tr>
+<tr>
+<td>T037<br><small>ko#3</small></td>
+<td class="zh">我的房間號碼是七〇二,我朋友昏倒了。<br><small>STT: 我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。</small></td>
+<td>제 방 호수는 702호인데, 친구가 기절했어요.<br><small>ref: 제 방 번호는 702호인데요, 제 친구가 쓰러졌어요.</small></td>
+<td>936 / 1832</td>
+<td> cer=0.25</td>
+<td>5/5<br><small>譯文非常準確且自然。「방 호수」（房號）與「기절했어요」（昏倒了）皆為極佳的翻譯，語意完全忠實，語氣也十分自然流暢。</small></td>
+</tr>
+<tr>
+<td>T038<br><small>ko#1</small></td>
+<td class="zh">我不能打青黴素,我會過敏。<br><small>STT: 我 不 能 打 青 霉 素 , 我 会 过 敏 。</small></td>
+<td>저는 페니실린을 맞을 수 없어요. 알레르기가 있거든요.<br><small>ref: 저는 페니실린을 맞으면 안 돼요, 알레르기가 있어요.</small></td>
+<td>905 / 1592</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的意思，韓語表達十分流暢。</small></td>
+</tr>
+<tr>
+<td>T038<br><small>ko#2</small></td>
+<td class="zh">我不能打青黴素,我會過敏。<br><small>STT: 我 不 能 打 青 霉 素 , 我 会 过 敏 。</small></td>
+<td>저는 페니실린을 맞을 수 없어요, 알레르기가 있거든요.<br><small>ref: 저는 페니실린을 맞으면 안 돼요, 알레르기가 있어요.</small></td>
+<td>972 / 1763</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然地表達了原文的意思。「맞을 수 없어요」與「알레르기가 있거든요」皆符合韓語口語表達習慣，因果關係表達得甚至比參考譯文更為自然流暢。</small></td>
+</tr>
+<tr>
+<td>T038<br><small>ko#3</small></td>
+<td class="zh">我不能打青黴素,我會過敏。<br><small>STT: 我 不 能 打 青 霉 素 , 我 会 过 敏 。</small></td>
+<td>저는 페니실린을 맞을 수 없어요, 알레르기가 있거든요.<br><small>ref: 저는 페니실린을 맞으면 안 돼요, 알레르기가 있어요.</small></td>
+<td>1044 / 2930</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「맞을 수 없어요」（不能打）很好地對應了原文的「不能打」，而「알레르기가 있거든요」（因為我有過敏）則自然地表達了原文隱含的因果關係，語意忠實度與流暢度皆極佳。</small></td>
+</tr>
+<tr>
+<td>T039<br><small>ko#1</small></td>
+<td class="zh">我想預約明天下午三點,兩個大人。<br><small>STT: 我 想 预 约 明 天 下 午 3 点 , 两 个 大 人 。</small></td>
+<td>내일 오후 3시에 어른 두 명 예약하고 싶어요.<br><small>ref: 내일 오후 3시로 예약하고 싶은데요, 어른 두 명이에요.</small></td>
+<td>949 / 2066</td>
+<td>🔢 cer=0.07</td>
+<td>5/5<br><small>譯文非常準確且自然地翻譯了原文的所有訊息，包含時間（明天下午三點）與人數（兩個大人），語意完全忠實，語句流暢。</small></td>
+</tr>
+<tr>
+<td>T039<br><small>ko#2</small></td>
+<td class="zh">我想預約明天下午三點,兩個大人。<br><small>STT: 我 想 预 约 明 天 下 午 3 点 , 两 个 大 人 。</small></td>
+<td>내일 오후 3시에 어른 두 명 예약하고 싶어요.<br><small>ref: 내일 오후 3시로 예약하고 싶은데요, 어른 두 명이에요.</small></td>
+<td>996 / 1837</td>
+<td>🔢 cer=0.07</td>
+<td>5/5<br><small>譯文完整且準確地傳達了原文的所有訊息，語意忠實度極高。韓文句型表達非常自然流暢，符合韓語母語者的表達習慣。</small></td>
+</tr>
+<tr>
+<td>T039<br><small>ko#3</small></td>
+<td class="zh">我想預約明天下午三點,兩個大人。<br><small>STT: 我 想 预 约 明 天 下 午 3 点 , 两 个 大 人 。</small></td>
+<td>내일 오후 3시에 어른 두 명 예약하고 싶습니다.<br><small>ref: 내일 오후 3시로 예약하고 싶은데요, 어른 두 명이에요.</small></td>
+<td>985 / 2939</td>
+<td>🔢 cer=0.07</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys all the information from the source text (tomorrow at 3 PM, two adults, want to book) in a polite and grammatically correct Korean sentence.</small></td>
+</tr>
+<tr>
+<td>T040<br><small>ko#1</small></td>
+<td class="zh">不好意思,我想把預約從星期五改到星期六,不是取消。<br><small>STT: 不 好 意 思 , 我 想 把 预 约 从 星 期 五 改 到 星 期 六 , 不 是 取 消 。</small></td>
+<td>죄송하지만, 예약을 금요일에서 토요일로 변경하고 싶어요. 취소하는 건 아니고요.<br><small>ref: 저기요, 예약을 금요일에서 토요일로 바꾸고 싶은데요, 취소하는 게 아니에요.</small></td>
+<td>1119 / 2747</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with appropriate honorifics and phrasing in Korean.</small></td>
+</tr>
+<tr>
+<td>T040<br><small>ko#2</small></td>
+<td class="zh">不好意思,我想把預約從星期五改到星期六,不是取消。<br><small>STT: 不 好 意 思 , 我 想 把 预 约 从 星 期 五 改 到 星 期 六 , 不 是 取 消 。</small></td>
+<td>죄송하지만, 예약을 금요일에서 토요일로 변경하고 싶어요. 취소가 아니고요.<br><small>ref: 저기요, 예약을 금요일에서 토요일로 바꾸고 싶은데요, 취소하는 게 아니에요.</small></td>
+<td>947 / 2580</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文非常準確且自然地翻譯了原文的所有訊息，語意完全忠實，韓語表達也十分流暢、得體。</small></td>
+</tr>
+<tr>
+<td>T040<br><small>ko#3</small></td>
+<td class="zh">不好意思,我想把預約從星期五改到星期六,不是取消。<br><small>STT: 不 好 意 思 , 我 想 把 预 约 从 星 期 五 改 到 星 期 六 , 不 是 取 消 。</small></td>
+<td>죄송하지만, 예약을 금요일에서 토요일로 변경하고 싶어요. 취소가 아니고요.<br><small>ref: 저기요, 예약을 금요일에서 토요일로 바꾸고 싶은데요, 취소하는 게 아니에요.</small></td>
+<td>938 / 2397</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text, including the distinction between changing the date and canceling, using appropriate honorifics and phrasing in Korean.</small></td>
+</tr>
+<tr>
+<td>T041<br><small>ko#1</small></td>
+<td class="zh">如果三點沒有位子的話,四點也可以。<br><small>STT: 如 果 三 点 没 有 位 子 的 话 , 四 点 也 可 以 。</small></td>
+<td>3시에 자리가 없으면 4시도 괜찮아요.<br><small>ref: 3시에 자리가 없으면, 4시도 괜찮아요.</small></td>
+<td>1013 / 2511</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is perfect and matches the reference translation exactly, conveying the correct meaning with natural Korean phrasing.</small></td>
+</tr>
+<tr>
+<td>T041<br><small>ko#2</small></td>
+<td class="zh">如果三點沒有位子的話,四點也可以。<br><small>STT: 如 果 三 点 没 有 位 子 的 话 , 四 点 也 可 以 。</small></td>
+<td>3시에 자리가 없으면, 4시도 괜찮아요.<br><small>ref: 3시에 자리가 없으면, 4시도 괜찮아요.</small></td>
+<td>1001 / 1583</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>機器譯文與參考譯文完全一致，語意準確且表達非常自然。</small></td>
+</tr>
+<tr>
+<td>T041<br><small>ko#3</small></td>
+<td class="zh">如果三點沒有位子的話,四點也可以。<br><small>STT: 如 果 三 点 没 有 位 子 的 话 , 四 点 也 可 以 。</small></td>
+<td>3시에 자리가 없으면, 4시도 괜찮아요.<br><small>ref: 3시에 자리가 없으면, 4시도 괜찮아요.</small></td>
+<td>955 / 1498</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文與參考譯文完全一致，語意準確且表達自然。</small></td>
+</tr>
+<tr>
+<td>T042<br><small>ko#1</small></td>
+<td class="zh">我可以用 email 確認預約嗎?我的班機是 BR198。<br><small>STT: 我 可 以 用 email 确 认 预 约 吗 ? 我 的 班 机 是 BR198 。</small></td>
+<td>이메일로 예약을 확인할 수 있을까요? 제 항공편은 BR198입니다.<br><small>ref: 이메일로 예약 확인할 수 있을까요? 제 항공편은 BR198이에요.</small></td>
+<td>968 / 2527</td>
+<td> cer=0.04</td>
+<td>5/5<br><small>譯文非常準確且自然，完整傳達了原文的所有訊息。與參考譯文相比，僅有結尾語氣（입니다 與 이에요）的微小差異，兩者皆符合韓語的禮貌體，無任何錯誤。</small></td>
+</tr>
+<tr>
+<td>T042<br><small>ko#2</small></td>
+<td class="zh">我可以用 email 確認預約嗎?我的班機是 BR198。<br><small>STT: 我 可 以 用 email 确 认 预 约 吗 ? 我 的 班 机 是 BR198 。</small></td>
+<td>이메일로 예약을 확인할 수 있을까요? 제 항공편은 BR198입니다.<br><small>ref: 이메일로 예약 확인할 수 있을까요? 제 항공편은 BR198이에요.</small></td>
+<td>956 / 3075</td>
+<td> cer=0.04</td>
+<td>5/5<br><small>譯文非常準確且自然，與參考譯文幾乎完全一致，僅在句尾語氣助詞上有些微差異（입니다 與 이에요），兩者皆符合禮貌體，無任何翻譯錯誤。</small></td>
+</tr>
+<tr>
+<td>T042<br><small>ko#3</small></td>
+<td class="zh">我可以用 email 確認預約嗎?我的班機是 BR198。<br><small>STT: 我 可 以 用 email 确 认 预 约 吗 ? 我 的 班 机 是 BR198 。</small></td>
+<td>이메일로 예약을 확인할 수 있을까요? 제 비행편은 BR198입니다.<br><small>ref: 이메일로 예약 확인할 수 있을까요? 제 항공편은 BR198이에요.</small></td>
+<td>965 / 2387</td>
+<td> cer=0.04</td>
+<td>5/5<br><small>The translation is highly accurate and natural, matching the reference translation closely in meaning and tone.</small></td>
+</tr>
+<tr>
+<td>T043<br><small>ko#1</small></td>
+<td class="zh">請問最晚可以幾點取消,而不用付取消費?<br><small>STT: 请 问 最 晚 可 以 几 点 取 消 , 而 不 用 付 取 消 费 ?</small></td>
+<td>혹시 취소 수수료를 내지 않고 취소할 수 있는 가장 늦은 시간이 언제인가요?<br><small>ref: 취소 수수료 없이 몇 시까지 취소할 수 있나요?</small></td>
+<td>1034 / 2325</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in polite and fluent Korean, matching the intent of the reference translation.</small></td>
+</tr>
+<tr>
+<td>T043<br><small>ko#2</small></td>
+<td class="zh">請問最晚可以幾點取消,而不用付取消費?<br><small>STT: 请 问 最 晚 可 以 几 点 取 消 , 而 不 用 付 取 消 费 ?</small></td>
+<td>늦어도 몇 시까지 취소해야 취소 수수료를 내지 않나요?<br><small>ref: 취소 수수료 없이 몇 시까지 취소할 수 있나요?</small></td>
+<td>977 / 1762</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural, conveying the exact meaning of the source text in fluent Korean without any errors.</small></td>
+</tr>
+<tr>
+<td>T043<br><small>ko#3</small></td>
+<td class="zh">請問最晚可以幾點取消,而不用付取消費?<br><small>STT: 请 问 最 晚 可 以 几 点 取 消 , 而 不 用 付 取 消 费 ?</small></td>
+<td>늦어도 몇 시까지 취소해야 취소 수수료를 내지 않을까요?<br><small>ref: 취소 수수료 없이 몇 시까지 취소할 수 있나요?</small></td>
+<td>959 / 1821</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然地翻譯了原文的意思，語意完整，文法正確，符合韓語的日常表達習慣。</small></td>
+</tr>
+<tr>
+<td>T044<br><small>ko#1</small></td>
+<td class="zh">我們會晚三十分鐘到,位子可以保留嗎?<br><small>STT: 我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?</small></td>
+<td>저희가 30분 늦게 도착할 것 같은데, 자리를 맡아 주실 수 있나요?<br><small>ref: 저희가 30분 늦게 도착할 것 같은데, 자리 좀 맡아 주실 수 있을까요?</small></td>
+<td>965 / 2161</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，與參考譯文幾乎一致，僅有極微小的語氣差異（'있나요?' 與 '있을까요?'），兩者皆符合韓語的禮貌表達方式。</small></td>
+</tr>
+<tr>
+<td>T044<br><small>ko#2</small></td>
+<td class="zh">我們會晚三十分鐘到,位子可以保留嗎?<br><small>STT: 我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?</small></td>
+<td>저희가 30분 늦게 도착할 것 같은데, 자리를 맡아둘 수 있을까요?<br><small>ref: 저희가 30분 늦게 도착할 것 같은데, 자리 좀 맡아 주실 수 있을까요?</small></td>
+<td>960 / 3391</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural, almost identical to the reference translation. It conveys the meaning perfectly with appropriate honorifics.</small></td>
+</tr>
+<tr>
+<td>T044<br><small>ko#3</small></td>
+<td class="zh">我們會晚三十分鐘到,位子可以保留嗎?<br><small>STT: 我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?</small></td>
+<td>저희가 30분 정도 늦을 것 같은데, 자리를 유지해 주실 수 있나요?<br><small>ref: 저희가 30분 늦게 도착할 것 같은데, 자리 좀 맡아 주실 수 있을까요?</small></td>
+<td>974 / 2041</td>
+<td> cer=0.00</td>
+<td>5/4<br><small>譯文完整且準確地傳達了原文的意思。在流暢度方面，韓文的「자리를 유지하다」（維持位子）語感上稍微有些不自然，通常在保留餐廳座位的語境下，使用「자리를 맡아두다」或「예약을 유지하다」會更為道地，但整體上仍非常清晰易懂。</small></td>
+</tr>
+<tr>
+<td>T045<br><small>ko#1</small></td>
+<td class="zh">謝謝你的幫忙,今天真的麻煩你了。<br><small>STT: 谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。</small></td>
+<td>도와주셔서 감사합니다. 오늘 정말 번거롭게 해드렸네요.<br><small>ref: 도와주셔서 감사해요, 오늘 정말 신세 많이 졌어요.</small></td>
+<td>979 / 3028</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「도와주셔서 감사합니다」完美對應「謝謝你的幫忙」，而「오늘 정말 번거롭게 해드렸네요」也是表達「今天真的麻煩你了」非常道地且得體的韓文說法，語氣十分自然。</small></td>
+</tr>
+<tr>
+<td>T045<br><small>ko#2</small></td>
+<td class="zh">謝謝你的幫忙,今天真的麻煩你了。<br><small>STT: 谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。</small></td>
+<td>도와주셔서 감사합니다, 오늘 정말 번거롭게 해드렸네요.<br><small>ref: 도와주셔서 감사해요, 오늘 정말 신세 많이 졌어요.</small></td>
+<td>980 / 1813</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「번거롭게 해드렸네요」完美對應了中文的「麻煩你了」，語氣客氣且符合韓語表達習慣。</small></td>
+</tr>
+<tr>
+<td>T045<br><small>ko#3</small></td>
+<td class="zh">謝謝你的幫忙,今天真的麻煩你了。<br><small>STT: 谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。</small></td>
+<td>도와주셔서 감사합니다, 오늘은 정말 번거롭게 해드렸네요.<br><small>ref: 도와주셔서 감사해요, 오늘 정말 신세 많이 졌어요.</small></td>
+<td>1106 / 2117</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「도와주셔서 감사합니다」完美對應「謝謝你的幫忙」，而「오늘은 정말 번거롭게 해드렸네요」也是表達「今天真的麻煩你了」非常道地且得體的韓文說法，語氣與敬語使用皆十分恰當。</small></td>
+</tr>
+<tr>
+<td>T046<br><small>ko#1</small></td>
+<td class="zh">你的中文說得真好,是在哪裡學的?<br><small>STT: 你 的 中 文 说 得 真 好 , 是 在 哪 里 学 的 ?</small></td>
+<td>중국어를 정말 잘하시네요, 어디에서 배우셨어요?<br><small>ref: 중국어 정말 잘하시네요, 어디서 배우셨어요?</small></td>
+<td>1028 / 1677</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The translation is highly accurate and natural, matching the reference translation almost perfectly with only a minor stylistic variation (어디에서 instead of 어디서, which is also correct).</small></td>
+</tr>
+<tr>
+<td>T046<br><small>ko#2</small></td>
+<td class="zh">你的中文說得真好,是在哪裡學的?<br><small>STT: 你 的 中 文 说 得 真 好 , 是 在 哪 里 学 的 ?</small></td>
+<td>중국어를 정말 잘하시네요! 어디에서 배우셨나요?<br><small>ref: 중국어 정말 잘하시네요, 어디서 배우셨어요?</small></td>
+<td>1010 / 1797</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text with appropriate honorifics, very similar to the reference translation.</small></td>
+</tr>
+<tr>
+<td>T046<br><small>ko#3</small></td>
+<td class="zh">你的中文說得真好,是在哪裡學的?<br><small>STT: 你 的 中 文 说 得 真 好 , 是 在 哪 里 学 的 ?</small></td>
+<td>중국어를 정말 잘하시네요! 어디에서 배우셨나요?<br><small>ref: 중국어 정말 잘하시네요, 어디서 배우셨어요?</small></td>
+<td>1016 / 2083</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text with appropriate honorifics, very similar to the reference translation.</small></td>
+</tr>
+<tr>
+<td>T047<br><small>ko#1</small></td>
+<td class="zh">日本的夏天很熱,不過我覺得台北更熱。<br><small>STT: 日 本 的 夏 天 很 热 , 不 过 我 觉 得 台 北 更 热 。</small></td>
+<td>일본의 여름은 매우 덥지만, 저는 타이베이가 더 덥다고 생각해요.<br><small>ref: 일본 여름도 더운데, 타이베이가 더 더운 것 같아요.</small></td>
+<td>926 / 1978</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in fluent Korean, matching the reference translation's intent closely.</small></td>
+</tr>
+<tr>
+<td>T047<br><small>ko#2</small></td>
+<td class="zh">日本的夏天很熱,不過我覺得台北更熱。<br><small>STT: 日 本 的 夏 天 很 热 , 不 过 我 觉 得 台 北 更 热 。</small></td>
+<td>일본의 여름은 매우 덥지만, 저는 타이베이가 더 덥다고 생각해요.<br><small>ref: 일본 여름도 더운데, 타이베이가 더 더운 것 같아요.</small></td>
+<td>977 / 1941</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in fluent Korean, matching the reference translation's intent closely.</small></td>
+</tr>
+<tr>
+<td>T047<br><small>ko#3</small></td>
+<td class="zh">日本的夏天很熱,不過我覺得台北更熱。<br><small>STT: 日 本 的 夏 天 很 热 , 不 过 我 觉 得 台 北 更 热 。</small></td>
+<td>일본의 여름은 매우 덥지만, 저는 타이베이가 더 덥다고 생각해요.<br><small>ref: 일본 여름도 더운데, 타이베이가 더 더운 것 같아요.</small></td>
+<td>942 / 1854</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in fluent Korean, matching the reference translation's intent closely.</small></td>
+</tr>
+<tr>
+<td>T048<br><small>ko#1</small></td>
+<td class="zh">不用了,謝謝,我只是看看而已。<br><small>STT: 不 用 了 , 谢 谢 , 我 只 是 看 看 而 已 。</small></td>
+<td>괜찮아요, 감사합니다. 그냥 좀 둘러보는 거예요.<br><small>ref: 아니요, 괜찮아요, 그냥 구경하는 거예요.</small></td>
+<td>944 / 1617</td>
+<td>🚫 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。「不用了，謝謝」翻譯為「괜찮아요, 감사합니다」十分得體，「我只是看看而已」翻譯為「그냥 좀 둘러보는 거예요」也非常符合韓語的日常表達習慣，語意完全忠實，流暢度極佳。</small></td>
+</tr>
+<tr>
+<td>T048<br><small>ko#2</small></td>
+<td class="zh">不用了,謝謝,我只是看看而已。<br><small>STT: 不 用 了 , 谢 谢 , 我 只 是 看 看 而 已 。</small></td>
+<td>아니요, 괜찮아요. 그냥 보기만 할게요.<br><small>ref: 아니요, 괜찮아요, 그냥 구경하는 거예요.</small></td>
+<td>975 / 1542</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完美傳達了原文「不用了，謝謝，我只是看看而已」的意思，韓語表達「아니요, 괜찮아요. 그냥 보기만 할게요.」非常道地且符合情境。</small></td>
+</tr>
+<tr>
+<td>T048<br><small>ko#3</small></td>
+<td class="zh">不用了,謝謝,我只是看看而已。<br><small>STT: 不 用 了 , 谢 谢 , 我 只 是 看 看 而 已 。</small></td>
+<td>괜찮아요, 감사합니다. 그냥 좀 둘러보고 있어요.<br><small>ref: 아니요, 괜찮아요, 그냥 구경하는 거예요.</small></td>
+<td>972 / 1898</td>
+<td>🚫 cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然地傳達了原文的意思，韓語表達十分道地，禮貌語氣也符合情境。</small></td>
+</tr>
+<tr>
+<td>T049<br><small>ko#1</small></td>
+<td class="zh">我是從台灣來的,第一次來大阪玩。<br><small>STT: 我 是 从 台 湾 来 的 , 第 一 次 来 大 阪 玩 。</small></td>
+<td>대만에서 왔는데, 오사카에는 처음 여행 왔어요.<br><small>ref: 저는 대만에서 왔어요, 오사카는 이번이 처음이에요.</small></td>
+<td>975 / 1648</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然地翻譯了原文的意思，語氣也十分得體，完全符合原意。</small></td>
+</tr>
+<tr>
+<td>T049<br><small>ko#2</small></td>
+<td class="zh">我是從台灣來的,第一次來大阪玩。<br><small>STT: 我 是 从 台 湾 来 的 , 第 一 次 来 大 阪 玩 。</small></td>
+<td>대만에서 왔는데, 오사카에 처음 놀러 왔어요.<br><small>ref: 저는 대만에서 왔어요, 오사카는 이번이 처음이에요.</small></td>
+<td>986 / 1685</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，完美地傳達了原文的意思，語氣也十分得體。</small></td>
+</tr>
+<tr>
+<td>T049<br><small>ko#3</small></td>
+<td class="zh">我是從台灣來的,第一次來大阪玩。<br><small>STT: 我 是 从 台 湾 来 的 , 第 一 次 来 大 阪 玩 。</small></td>
+<td>대만에서 왔는데, 오사카에 놀러 온 건 처음이에요.<br><small>ref: 저는 대만에서 왔어요, 오사카는 이번이 처음이에요.</small></td>
+<td>995 / 1773</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然地翻譯了原文的意思。「대만에서 왔는데, 오사카에 놀러 온 건 처음이에요.」完美對應了「我是從台灣來的，第一次來大阪玩」，語氣也非常自然流暢。</small></td>
+</tr>
+<tr>
+<td>T050<br><small>ko#1</small></td>
+<td class="zh">那就麻煩你了,之後再聯絡。<br><small>STT: 那 就 麻 烦 你 了 , 之 后 再 联 络 。</small></td>
+<td>그럼 부탁드릴게요. 나중에 다시 연락드릴게요.<br><small>ref: 그럼 부탁드릴게요, 나중에 다시 연락드릴게요.</small></td>
+<td>977 / 1924</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，與參考譯文完全一致，語意和語氣皆完美傳達。</small></td>
+</tr>
+<tr>
+<td>T050<br><small>ko#2</small></td>
+<td class="zh">那就麻煩你了,之後再聯絡。<br><small>STT: 那 就 麻 烦 你 了 , 之 后 再 联 络 。</small></td>
+<td>그럼 잘 부탁드릴게요. 나중에 다시 연락드리겠습니다.<br><small>ref: 그럼 부탁드릴게요, 나중에 다시 연락드릴게요.</small></td>
+<td>964 / 1686</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然，語氣與敬語使用得當，與參考譯文高度契合。</small></td>
+</tr>
+<tr>
+<td>T050<br><small>ko#3</small></td>
+<td class="zh">那就麻煩你了,之後再聯絡。<br><small>STT: 那 就 麻 烦 你 了 , 之 后 再 联 络 。</small></td>
+<td>그럼 부탁드릴게요, 나중에 다시 연락드리겠습니다.<br><small>ref: 그럼 부탁드릴게요, 나중에 다시 연락드릴게요.</small></td>
+<td>949 / 1625</td>
+<td> cer=0.00</td>
+<td>5/5<br><small>譯文非常準確且自然。機器譯文結尾使用了「-겠습니다」，相較於參考譯文的「-게요」稍微更正式一些，但兩者皆符合韓語的敬語規範，語意完全一致且流暢。</small></td>
+</tr>
+</table>

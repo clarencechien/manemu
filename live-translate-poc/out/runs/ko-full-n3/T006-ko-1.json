@@ -1,0 +1,61 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T006",
+  "category": "directions",
+  "traps": [],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "這附近有沒有廁所?我趕時間。",
+  "reference": "이 근처에 화장실 있어요? 제가 시간이 좀 급해요.",
+  "inputTranscript": "这 附 近 有 没 有 厕 所 ? 我 赶 时 间 。",
+  "outputTranscript": "이 근처에 화장실이 있나요? 제가 급해서요.",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 3621,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 976,
+    "ttft_from_end_ms": 976,
+    "completion_lag_ms": 1631,
+    "ttfa_from_start_ms": 3876
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.895,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:49:35.458Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完美傳達了原文的意思，語氣也十分得體。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意：「這附近有沒有廁所?我趕時間。」→「이 근처에 화장실이 있나요? 제가 급해서요.」兩句都自然且禮貌。與參考譯文差異僅在語氣與措辭（있나요? vs 있어요?，급해서요 vs 시간이 좀 급해요），均屬可接受的口語變體，無資訊遺失或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

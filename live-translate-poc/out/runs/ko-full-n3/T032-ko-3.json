@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T032",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "我明天不需要打掃房間,謝謝。",
+  "reference": "내일은 방 청소 안 해주셔도 돼요. 감사합니다.",
+  "inputTranscript": "我 明 天 不 需 要 打 扫 房 间 , 谢 谢 。",
+  "outputTranscript": "저는 내일 방 청소를 할 필요가 없어요, 감사합니다.",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 3410,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 941,
+    "ttft_from_end_ms": 941,
+    "completion_lag_ms": 1600,
+    "ttfa_from_start_ms": 4541
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.111,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:55:38.025Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且準確地翻譯了原文的意思，語法正確，語氣自然。雖然參考譯文更偏向「不用幫我打掃」的服務情境，但機器譯文的「我不需要打掃」在無上下文的情況下也是完全正確且流暢的翻譯。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": true,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文表面流暢的韓語，但主語變成「我(저)」表達「我不需要自己打掃」，而原文是對對方說「你(對方)不需要替我/打掃房間」，導致語意錯置（agent/責任翻轉）。此外參考譯文使用對對方的敬語表現，機譯未對應原句的禮貌對象，屬於敬語/受話者處理不當。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

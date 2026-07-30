@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T035",
+  "category": "emergency",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "我的護照不見了,請問警察局在哪裡?",
+  "reference": "제 여권을 잃어버렸는데요, 경찰서가 어디에 있나요?",
+  "inputTranscript": "我 的 护 照 不 见 了 , 请 问 警 察 局 在 哪 里 ?",
+  "outputTranscript": "제 여권을 잃어버렸어요. 경찰서가 어디에 있나요?",
+  "inputDurationMs": 3571,
+  "outputAudioMs": 4180,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1019,
+    "ttft_from_end_ms": 1018,
+    "completion_lag_ms": 2465,
+    "ttfa_from_start_ms": 4718
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.952,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:56:19.718Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達原文語意（護照遺失並詢問警察局位置），與參考譯文僅在語氣連接詞（'...는데요'）上略有差異，屬可接受的自然表達。語法與用詞皆自然，無錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

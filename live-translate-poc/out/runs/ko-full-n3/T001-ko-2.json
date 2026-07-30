@@ -29,5 +29,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:48:28.860Z"
+  "ts": "2026-07-30T00:48:28.860Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句兩部分意義（詢問車站位置與詢問較快路線），語氣禮貌自然，與參考譯文差異屬同義表達，無誤。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates '請問' as '죄송하지만' (excuse me) and accurately conveys the meaning of '怎麼走比較快' as '어떻게 가면 빨리 갈 수 있을까요?' (how can I go to get there quickly/faster), which is very natural in Korean."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -1,0 +1,66 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T015",
+  "category": "dining",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "我們總共五個人,有兩個小孩,需要兒童椅。",
+  "reference": "저희 총 다섯 명이고, 아이가 두 명 있어서 아기 의자가 필요해요.",
+  "inputTranscript": "我 们 总 共 五 个 人 , 有 两 个 小 孩 , 需 要 儿 童 椅 。",
+  "outputTranscript": "저희는 총 다섯 명이고, 아이가 둘 있어서 어린이 의자가 필요해요.",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4920,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 953,
+    "ttft_from_end_ms": 951,
+    "completion_lag_ms": 2158,
+    "ttfa_from_start_ms": 5254
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "5",
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.04,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:51:43.400Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息。'어린이 의자'（兒童椅）與 '아이가 둘 있어서'（有兩個小孩）的翻譯皆十分道地且符合韓語口語表達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯準確傳達了原文意思：總共有五人、兩個小孩、需要兒童椅。用詞（'어린이 의자' vs 參考譯文的 '아기 의자'）皆為自然可接受的表達，句子流暢，自然度高，無資訊遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

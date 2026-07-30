@@ -31,5 +31,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:48:54.717Z"
+  "ts": "2026-07-30T00:48:54.717Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地傳達了原文的意思。'공항에 가는 게 아니라'（不是要去機場）和'기차역에 가려고 해요'（是要去火車站）皆符合原意，語氣也十分自然流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地表達原句意（否定對象為前者，目的地為後者），語法與用詞自然。與參考譯文的差異僅在表現方式（가는 게 아니라 / 가려는 게 아니고，가려고 해요 / 가려는 거예요），均為可接受的口語表達，無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

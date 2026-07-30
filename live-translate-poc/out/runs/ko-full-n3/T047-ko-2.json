@@ -1,0 +1,64 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T047",
+  "category": "smalltalk",
+  "traps": [
+    "sentence-final",
+    "proper-noun"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "日本的夏天很熱,不過我覺得台北更熱。",
+  "reference": "일본 여름도 더운데, 타이베이가 더 더운 것 같아요.",
+  "inputTranscript": "日 本 的 夏 天 很 热 , 不 过 我 觉 得 台 北 更 热 。",
+  "outputTranscript": "일본의 여름은 매우 덥지만, 저는 타이베이가 더 덥다고 생각해요.",
+  "inputDurationMs": 4011,
+  "outputAudioMs": 4531,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 977,
+    "ttft_from_end_ms": 977,
+    "completion_lag_ms": 1941,
+    "ttfa_from_start_ms": 5176
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.3,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:59:07.039Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思：將「日本的夏天很熱」譯為「일본의 여름은 매우 덥지만」以及「我覺得台北更熱」譯為「저는 타이베이가 더 덥다고 생각해요」，語意忠實且語氣自然，無明顯錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in fluent Korean, matching the reference translation's intent closely."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

@@ -1,0 +1,61 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T046",
+  "category": "smalltalk",
+  "traps": [],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "你的中文說得真好,是在哪裡學的?",
+  "reference": "중국어 정말 잘하시네요, 어디서 배우셨어요?",
+  "inputTranscript": "你 的 中 文 说 得 真 好 , 是 在 哪 里 学 的 ?",
+  "outputTranscript": "중국어를 정말 잘하시네요! 어디에서 배우셨나요?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 3771,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1010,
+    "ttft_from_end_ms": 1010,
+    "completion_lag_ms": 1797,
+    "ttfa_from_start_ms": 4610
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.111,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:58:52.213Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意正確，敬語與原意一致。用詞與參考譯文僅有輕微措辭差異（어디에서 vs 어디서, 배우셨나요 vs 배우셨어요），均屬自然用法，無錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text with appropriate honorifics, very similar to the reference translation."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

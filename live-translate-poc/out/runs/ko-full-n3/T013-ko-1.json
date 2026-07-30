@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T013",
+  "category": "transport",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我剛剛在月台上把手機弄丟了。",
+  "reference": "방금 승강장에서 휴대폰을 잃어버렸어요.",
+  "inputTranscript": "我 刚 刚 在 乐 台 上 把 手 机 弄 丢 了 。",
+  "outputTranscript": "방금 승강장에서 휴대전화를 잃어버렸어요.",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 3200,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 939,
+    "ttft_from_end_ms": 937,
+    "completion_lag_ms": 1883,
+    "ttfa_from_start_ms": 3839
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.059,
+    "coverage_ok": true,
+    "cer": 0.231
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:51:08.675Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，僅「手機」一詞使用了同義詞「휴대전화」代替「휴대폰」，語意完全正確。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：'방금 승강장에서 휴대전화를 잃어버렸어요.' 正確傳達了「剛剛在月台上把手機弄丟了」的時制與地點。用詞自然（雖然參考譯文用 '휴대폰'，但 '휴대전화' 同義且同樣自然）。語法與敬體皆正確，因此 adequacy 與 fluency 均為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

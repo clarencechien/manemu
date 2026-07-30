@@ -1,0 +1,64 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T041",
+  "category": "appointment",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "如果三點沒有位子的話,四點也可以。",
+  "reference": "3시에 자리가 없으면, 4시도 괜찮아요.",
+  "inputTranscript": "如 果 三 点 没 有 位 子 的 话 , 四 点 也 可 以 。",
+  "outputTranscript": "3시에 자리가 없으면, 4시도 괜찮아요.",
+  "inputDurationMs": 3291,
+  "outputAudioMs": 3150,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1001,
+    "ttft_from_end_ms": 1001,
+    "completion_lag_ms": 1583,
+    "ttfa_from_start_ms": 4401
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:57:40.322Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文與參考譯文完全相同，語意忠實且目標語自然流暢，無錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文與參考譯文完全一致，語意準確且表達非常自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T016",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "我對蝦子過敏,餐點裡請不要放任何海鮮。",
+  "reference": "새우 알레르기가 있어서 음식에 해산물은 넣지 말아주세요.",
+  "inputTranscript": "我 对 虾 子 过 敏 , 餐 点 里 请 不 要 放 任 何 海 鲜 。",
+  "outputTranscript": "저는 새우 알레르기가 있어서, 식사에 어떤 해산물도 넣지 말아 주세요.",
+  "inputDurationMs": 4491,
+  "outputAudioMs": 5420,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1014,
+    "ttft_from_end_ms": 1013,
+    "completion_lag_ms": 2218,
+    "ttfa_from_start_ms": 5613
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.167,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:51:57.739Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in polite Korean without any errors."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（對蝦子過敏，請不要在餐點中放任何海鮮），語句自然、用詞恰當，與參考譯文差異僅在措辭細微差別，無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

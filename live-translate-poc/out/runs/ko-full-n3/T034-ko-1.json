@@ -1,0 +1,61 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "살려주세요! 구급차 좀 불러 주세요!",
+  "inputTranscript": "救 命 , 请 帮 我 叫 救 护 车 。",
+  "outputTranscript": "살려주세요, 구급차 좀 불러주세요.",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 2390,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 939,
+    "ttft_from_end_ms": 939,
+    "completion_lag_ms": 1326,
+    "ttfa_from_start_ms": 3538
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:55:54.862Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，完美傳達了原文的緊急求助語意。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原文緊急求救與請求叫救護車的意思，語句自然流暢。僅有標點差異，對意義無影響。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

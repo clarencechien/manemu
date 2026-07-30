@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T010",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "最後一班回新宿的電車是十一點四十五分嗎?",
+  "reference": "신주쿠로 가는 마지막 열차가 11시 45분이에요?",
+  "inputTranscript": "最 后 一 班 回 星 住 的 电 车 是 11 点 45 分 吗 ?",
+  "outputTranscript": "신주쿠로 돌아가는 마지막 전철은 11시 45분인가요?",
+  "inputDurationMs": 4611,
+  "outputAudioMs": 4320,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 979,
+    "ttft_from_end_ms": 929,
+    "completion_lag_ms": 3230,
+    "ttfa_from_start_ms": 5779
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.095,
+    "coverage_ok": true,
+    "cer": 0.368
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:50:34.847Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完美地翻譯了原文的所有訊息，語法和語氣也都十分恰當。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實原意。使用「돌아가는」與參考譯文的「가는」表達略有差異，但在語境中皆可接受。用詞與句型在目標語自然流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

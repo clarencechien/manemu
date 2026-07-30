@@ -1,0 +1,64 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T008",
+  "category": "transport",
+  "traps": [
+    "negation",
+    "sentence-final"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "這班車會到大阪,但是應該不會停京都吧?",
+  "reference": "이 열차 오사카까지 가는데, 교토에는 안 서겠죠?",
+  "inputTranscript": "这 班 车 会 到 大 阪 , 但 是 应 该 不 会 停 京 都 吧 ?",
+  "outputTranscript": "이 열차는 오사카까지 가지만, 교토에는 서지 않겠죠?",
+  "inputDurationMs": 3851,
+  "outputAudioMs": 4270,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 959,
+    "ttft_from_end_ms": 936,
+    "completion_lag_ms": 1802,
+    "ttfa_from_start_ms": 4959
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.105,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:50:10.615Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source sentence in fluent Korean, matching the tone and nuance of the reference translation."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句含義（說明班車到大阪但應該不會在京都停），語氣及否定問句處理自然，與參考譯文差異僅為措辭而非錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

@@ -1,0 +1,66 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T024",
+  "category": "shopping",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "這件如果打八折的話,我就買兩件。",
+  "reference": "이거 20% 세일해 주시면 두 개 살게요.",
+  "inputTranscript": "这 件 如 果 打 八 折 的 话 , 我 就 买 两 件 。",
+  "outputTranscript": "이게 20% 할인되면 두 개 살게요.",
+  "inputDurationMs": 3491,
+  "outputAudioMs": 2870,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1129,
+    "ttft_from_end_ms": 989,
+    "completion_lag_ms": 2598,
+    "ttfa_from_start_ms": 4730
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.867,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:53:37.070Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。中文的「打八折」正確地轉換為韓文的「20% 할인」（折價20%），語意完全契合，且句型流暢符合韓語口語表達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地傳達原句意思（若打八折就買兩件），用詞與語序在韓語中自然流暢。與參考譯文僅在用詞（할인되면 vs 세일해 주시면）上有細微差異，並不影響語意或可接受性。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

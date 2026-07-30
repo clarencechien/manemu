@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T022",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "太貴了,算我三千塊可以嗎?",
+  "reference": "너무 비싸요. 3000원에 해 주시면 안 돼요?",
+  "inputTranscript": "太 贵 了 , 算 我 3000 块 可 以 了 。",
+  "outputTranscript": "너무 비싸요. 3000원으로 해 주세요.",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 3161,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 991,
+    "ttft_from_end_ms": 991,
+    "completion_lag_ms": 1728,
+    "ttfa_from_start_ms": 3892
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.889,
+    "coverage_ok": true,
+    "cer": 0.455
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:53:17.046Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is accurate and natural. It successfully conveys the meaning of bargaining for 3000 ('3000원으로 해 주세요') in polite Korean, which is equivalent to the source text."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思——表示太貴並請求以3000（單位寫作원）成交。語氣比參考譯文稍直接（'해 주세요' vs '해 주시면 안 돼요?'）但語義忠實。韓語表達自然，唯用法上'ren（원）에'比'원으로'稍更常見，故各給4分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

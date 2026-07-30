@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T020",
+  "category": "dining",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "請問可以幫我們分開結帳嗎?",
+  "reference": "저희 계산 따로따로 해주실 수 있을까요?",
+  "inputTranscript": "请 问 可 以 帮 我 们 分 开 结 帐 吗 ?",
+  "outputTranscript": "혹시 따로 계산해 주실 수 있나요?",
+  "inputDurationMs": 2731,
+  "outputAudioMs": 2260,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 990,
+    "ttft_from_end_ms": 969,
+    "completion_lag_ms": 1524,
+    "ttfa_from_start_ms": 3890
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.813,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:52:51.626Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source sentence in polite Korean, using appropriate phrasing ('혹시 따로 계산해 주실 수 있나요?')."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地傳達「請幫我們分開結帳」的意思，語句在韓語中自然通順，與參考譯文表達相同意圖（僅語氣略有差異）。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

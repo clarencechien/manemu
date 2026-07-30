@@ -1,0 +1,66 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T021",
+  "category": "shopping",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "這個不要,我要旁邊那個藍色的,兩個多少錢?",
+  "reference": "이거는 아니고, 옆에 있는 파란색이요. 두 개에 얼마예요?",
+  "inputTranscript": "这 个 不 要 , 我 要 旁 边 那 个 蓝 色 的 , 两 个 多 少 钱 ?",
+  "outputTranscript": "이거 말고, 옆에 있는 파란색으로 할게요. 두 개에 얼마예요?",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 5110,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 932,
+    "ttft_from_end_ms": 932,
+    "completion_lag_ms": 3439,
+    "ttfa_from_start_ms": 4932
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.045,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:53:03.252Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「이거 말고」完美對應「這個不要」，「옆에 있는 파란색으로 할게요」也極為自然地表達了「我要旁邊那個藍色的」，整體語意與語氣皆十分貼切。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：『這個不要』->『이거 말고』、『我要旁邊那個藍色的』->『옆에 있는 파란색으로 할게요』、『兩個多少錢?』->『두 개에 얼마예요?』。用詞與語序在韓語中自然可接受。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

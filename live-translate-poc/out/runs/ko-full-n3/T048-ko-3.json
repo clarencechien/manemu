@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T048",
+  "category": "smalltalk",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "不用了,謝謝,我只是看看而已。",
+  "reference": "아니요, 괜찮아요, 그냥 구경하는 거예요.",
+  "inputTranscript": "不 用 了 , 谢 谢 , 我 只 是 看 看 而 已 。",
+  "outputTranscript": "괜찮아요, 감사합니다. 그냥 좀 둘러보고 있어요.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 4401,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 972,
+    "ttft_from_end_ms": 949,
+    "completion_lag_ms": 1898,
+    "ttfa_from_start_ms": 3972
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": false,
+    "coverage_ratio": 1.188,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:59:22.462Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實表達「不用了,謝謝,我只是看看而已」的意思；韓語表達自然流暢，與參考譯文僅在詞序/措辭上有細微差異，無實質誤譯。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地傳達了原文的意思，韓語表達十分道地，禮貌語氣也符合情境。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

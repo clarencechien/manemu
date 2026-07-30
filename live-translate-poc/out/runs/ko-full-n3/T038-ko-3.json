@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T038",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "我不能打青黴素,我會過敏。",
+  "reference": "저는 페니실린을 맞으면 안 돼요, 알레르기가 있어요.",
+  "inputTranscript": "我 不 能 打 青 霉 素 , 我 会 过 敏 。",
+  "outputTranscript": "저는 페니실린을 맞을 수 없어요, 알레르기가 있거든요.",
+  "inputDurationMs": 2611,
+  "outputAudioMs": 4370,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1044,
+    "ttft_from_end_ms": 1034,
+    "completion_lag_ms": 2930,
+    "ttfa_from_start_ms": 3843
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.048,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:56:59.056Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，語句自然。'맞을 수 없어요' 與參考句的 '맞으면 안 돼요' 意義相近，'알레르기가 있거든요' 作為解釋語氣也恰當。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「맞을 수 없어요」（不能打）很好地對應了原文的「不能打」，而「알레르기가 있거든요」（因為我有過敏）則自然地表達了原文隱含的因果關係，語意忠實度與流暢度皆極佳。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

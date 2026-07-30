@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T023",
+  "category": "shopping",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "請問這個價格是含稅還是不含稅?",
+  "reference": "이 가격이 세금 포함인가요, 아니면 세금 별도인가요?",
+  "inputTranscript": "请 问 这 个 价 格 是 含 税 还 是 不 含 税 ?",
+  "outputTranscript": "실례지만 이 가격은 세금 포함인가요, 아니면 불포함인가요?",
+  "inputDurationMs": 3891,
+  "outputAudioMs": 4520,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 941,
+    "ttft_from_end_ms": 941,
+    "completion_lag_ms": 1997,
+    "ttfa_from_start_ms": 4941
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.143,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:53:35.004Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates '請問' as '실례지만' and accurately conveys the choice between tax-inclusive and tax-exclusive ('세금 포함인가요, 아니면 불포함인가요?')."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意，問句清楚自然。加入“실례지만”為禮貌用語，屬於合理增補；第二句雖未重複“세금”，但語意仍明確（“불포함”指未含稅），無誤。故語意忠實與目標語自然度皆為最高評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

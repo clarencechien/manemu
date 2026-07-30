@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T010",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "最後一班回新宿的電車是十一點四十五分嗎?",
+  "reference": "신주쿠로 가는 마지막 열차가 11시 45분이에요?",
+  "inputTranscript": "最 后 一 班 回 星 住 的 电 车 是 11 点 45 分 吗 ?",
+  "outputTranscript": "시내로 돌아가는 마지막 전철은 밤 11시 45분인가요?",
+  "inputDurationMs": 4611,
+  "outputAudioMs": 4360,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 931,
+    "ttft_from_end_ms": 931,
+    "completion_lag_ms": 1857,
+    "ttfa_from_start_ms": 5731
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.095,
+    "coverage_ok": true,
+    "cer": 0.368
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:50:27.236Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "고유명사인 '新宿(신주쿠)'를 '시내'로 잘못 번역하여 정보의 왜곡이 발생했습니다(name_mangled). 그 외의 문장 구조와 표현은 매우 자연스럽고 유창합니다."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文保留了時間與疑問句形式，語言自然流暢。但原文中特定目的地「新宿(신주쿠)」被改為泛指的「市內(시내)」，改變了語意細節，屬於目的地資訊遺漏/錯寫，故語意忠實度下降。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

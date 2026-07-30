@@ -1,0 +1,65 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T039",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "我想預約明天下午三點,兩個大人。",
+  "reference": "내일 오후 3시로 예약하고 싶은데요, 어른 두 명이에요.",
+  "inputTranscript": "我 想 预 约 明 天 下 午 3 点 , 两 个 大 人 。",
+  "outputTranscript": "내일 오후 3시에 어른 두 명 예약하고 싶어요.",
+  "inputDurationMs": 3691,
+  "outputAudioMs": 3870,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 996,
+    "ttft_from_end_ms": 996,
+    "completion_lag_ms": 1837,
+    "ttfa_from_start_ms": 4796
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.818,
+    "coverage_ok": true,
+    "cer": 0.071
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:57:07.761Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且準確地傳達了原文意思（預約時間、明天下午3點、兩位大人）。韓語表達自然流暢，只有細微的語氣/連詞差異（參考譯文用 '로' 與語尾稍不同），但不影響理解或禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的所有訊息，語意忠實度極高。韓文句型表達非常自然流暢，符合韓語母語者的表達習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "저희가 30분 늦게 도착할 것 같은데, 자리 좀 맡아 주실 수 있을까요?",
+  "inputTranscript": "我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?",
+  "outputTranscript": "저희가 30분 늦게 도착할 것 같은데, 자리를 맡아 주실 수 있나요?",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 5601,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 965,
+    "ttft_from_end_ms": 942,
+    "completion_lag_ms": 2161,
+    "ttfa_from_start_ms": 5365
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.963,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:58:23.287Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（告知會晚30分鐘並請對方幫忙保留位子）。語句在韓語中自然，僅在禮貌程度上與參考譯文略有差異（'주실 수 있나요?' vs '주실 수 있을까요?'），但不影響語意或可接受性。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎一致，僅有極微小的語氣差異（'있나요?' 與 '있을까요?'），兩者皆符合韓語的禮貌表達方式。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

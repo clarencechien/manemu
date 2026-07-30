@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T022",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "太貴了,算我三千塊可以嗎?",
+  "reference": "너무 비싸요. 3000원에 해 주시면 안 돼요?",
+  "inputTranscript": "太 贵 了 , 算 我 3000 块 可 以 了 。",
+  "outputTranscript": "너무 비싸요, 3000원에 해주시면 안 될까요?",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 3250,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 995,
+    "ttft_from_end_ms": 994,
+    "completion_lag_ms": 1639,
+    "ttfa_from_start_ms": 3896
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.056,
+    "coverage_ok": true,
+    "cer": 0.455
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:53:10.776Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「안 될까요?」比參考譯文的「안 돼요?」更為客氣委婉，非常符合口語情境，語意完全忠實。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句意思：「太貴了，算我三千塊可以嗎？」被正確翻為要求以3000（單位以원表現）成交的詢問句。語氣與禮貌程度自然，語法流暢。唯一可議處為原文貨幣單位“塊”未明確對應韓元，但不影響語意理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

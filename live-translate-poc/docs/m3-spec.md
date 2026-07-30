@@ -71,6 +71,36 @@ relay 取代 ephemeral token 的代價是音訊多一跳(edge 延遲 +~10–50ms
 - **測試模式**(白名單用戶,頂列 🧪):逐句出 T50 語料照念,每句寫 `r2://field-tests/{email}/{ts}-{id}.json`(音檔+STT+譯文+延遲)→ 產品化收集真人語音,直接餵回 harness 評測(R1 的長期版)。
 - 費用保險絲掛在 email 維度:每人每日翻譯分鐘上限(R2/DO 計數)。
 
+## 5.6 安全設計(SSO 防盜用——後面綁著 Gemini key,這是錢包門)
+
+**認證鏈(DIY Google OIDC,全部 server-side)**:
+1. `/auth/login`:302 到 Google,帶 `state`(隨機值,HMAC 簽章後放短效 cookie)+ `nonce` + PKCE。
+2. `/auth/callback`:驗 state → code 換 token(client_secret 只在 Worker)→ **驗 id_token 簽章**(Google JWKS,RS256,WebCrypto)+ iss/aud/exp/nonce + `email_verified`。
+3. 白名單:R2 `config/allowlist.json` 比對 email,**每次登入都查**(名單熱更新)。
+4. Session:HMAC 簽章 cookie(`HttpOnly; Secure; SameSite=Lax; Path=/`,TTL 7 天),payload 只有 email+exp。**沒有任何 token 落在前端 JS 可讀處**。
+
+**每一道 API/WS 的防線**:
+- WS upgrade 與所有 `/api/*`:驗 session cookie + **Origin 檢查**(擋跨站 WS 劫持)。
+- Relay DO **以 email 命名**(`idFromName(email)`)→ 同一用戶天然序列化,配額計數無競態:
+  每日翻譯秒數上限(env 可調,預設 30 分鐘)、單 session 硬上限 120s、逾時強制關上游。
+- `/api/backtranslate`、`/api/field-log`:長度/大小上限、同樣走 DO 配額。
+- 金鑰:`GEMINI_API_KEY`/`GOOGLE_CLIENT_SECRET`/`SESSION_SECRET` 全在 Worker Secrets,repo 零秘密。
+
+**Cloudflare 平台安全(能開就開)**:
+- 靜態回應一律帶:CSP(`default-src 'self'; connect-src 'self' wss:`)、`X-Frame-Options: DENY`、`Referrer-Policy`、`nosniff`。
+- **Turnstile** 放登入頁(擋 bot 打 OAuth 端點)——v0 可後補,介面預留。
+- 掛自有網域進 CF zone 後:**WAF managed rules + Rate Limiting rules**(對 `/auth/*`、`/ws`)、Bot Fight Mode。
+- 升級路徑:改用 **Cloudflare Access**(Google IdP + email 白名單在 Access policy)可整段取代 DIY OIDC——條件是有 zone;先 DIY,介面切齊。
+- R2 bucket 全私有(僅 binding 存取);field-test 錄音含個資,bucket 不開公開網址。
+- 異常保險絲:DO 全域日花費估算超標(env `GLOBAL_DAILY_SECONDS`)→ 全站暫停翻譯、登入頁顯示公告。
+
+## 5.7 部署連動(push 即上版)
+
+- repo 根目錄 `app/` = Workers 專案;Cloudflare dashboard 連 GitHub repo,**Workers Builds** 指到 `app/`,push `claude/*`→preview、main→production。
+- `wrangler.jsonc` 宣告:DO(RelaySession, migration)、R2 bindings(CONFIG/FIELD)、assets(`public/`)、vars;**secrets 只宣告名字**,值用 `wrangler secret put` 或 dashboard 設一次。
+- 一次性手動步驟(README 列表):建兩個 R2 bucket、上傳 `allowlist.json`、設 4 個 secret、綁 Google OAuth redirect URI。
+- 測試模式即 R1 收集管道:每句寫 `r2://field/{email}/{ts}-{id}.json`(音檔 b64+STT+譯文+延遲),harness 可直接拉下來評。
+
 ## 6. 工程清單(M3 需要寫的東西)
 
 - [ ] `workers/relay.ts`(DO):WS 雙向轉發 + setup 注入 + 靜音收斂 + 限額

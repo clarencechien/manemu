@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "도와주셔서 감사해요, 오늘 정말 신세 많이 졌어요.",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "도와주셔서 감사합니다, 오늘 정말 번거롭게 해드렸네요.",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 4091,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 980,
+    "ttft_from_end_ms": 980,
+    "completion_lag_ms": 1813,
+    "ttfa_from_start_ms": 4179
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.15,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:58:41.051Z",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達原意（感謝與承認給對方帶來麻煩），因此語意忠實度較高（4）。但韓文表達有些不自然或語氣混用：'도와주셔서 감사합니다' 與 '번거롭게 해드렸네요' 在敬語和語感上不夠協調，且 '해드렸네요' 用法容易讓人誤解為「替您做了什麼」，較常見的說法為 '번거롭게 해드렸어요' 或 '번거롭게 해드려 죄송합니다'、'신세 많이 졌어요' 等，故自然度較低（3）。沒有遺漏或新增資訊。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「번거롭게 해드렸네요」完美對應了中文的「麻煩你了」，語氣客氣且符合韓語表達習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

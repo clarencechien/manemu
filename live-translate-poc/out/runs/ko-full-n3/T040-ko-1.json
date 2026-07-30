@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T040",
+  "category": "appointment",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "不好意思,我想把預約從星期五改到星期六,不是取消。",
+  "reference": "저기요, 예약을 금요일에서 토요일로 바꾸고 싶은데요, 취소하는 게 아니에요.",
+  "inputTranscript": "不 好 意 思 , 我 想 把 预 约 从 星 期 五 改 到 星 期 六 , 不 是 取 消 。",
+  "outputTranscript": "죄송하지만, 예약을 금요일에서 토요일로 변경하고 싶어요. 취소하는 건 아니고요.",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 6530,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1119,
+    "ttft_from_end_ms": 1119,
+    "completion_lag_ms": 2747,
+    "ttfa_from_start_ms": 7719
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.065,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:57:19.905Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原意，語氣與參考譯文自然相符，否定部分正確表達。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with appropriate honorifics and phrasing in Korean."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

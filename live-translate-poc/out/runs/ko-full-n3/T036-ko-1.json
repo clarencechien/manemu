@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T036",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我頭很暈,但是我沒有心臟病的病史。",
+  "reference": "머리가 많이 어지러운데요, 심장병 병력은 없어요.",
+  "inputTranscript": "我 头 很 晕 , 但 是 我 没 有 心 脏 病 的 病 史 。",
+  "outputTranscript": "머리가 많이 어지러운데, 심장병 이력은 없어요.",
+  "inputDurationMs": 3731,
+  "outputAudioMs": 4240,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 993,
+    "ttft_from_end_ms": 968,
+    "completion_lag_ms": 2348,
+    "ttfa_from_start_ms": 4894
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.95,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:56:22.111Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句意思：表達頭暈並否認有心臟病病史。用詞上「이력」較偏通用／非醫療專業，但仍可理解；語氣標記（어지러운데요）與標點略有差異，影響自然度一點。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text. While the reference translation uses '병력' (medical history) instead of '이력' (history), '이력' is still completely understandable and acceptable in this context."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

@@ -1,0 +1,66 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T017",
+  "category": "dining",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "這杯不要加冰,然後大杯的改成中杯,總共三杯。",
+  "reference": "이거 얼음 넣지 말아주시고, 큰 사이즈는 중간 사이즈로 바꿔주세요. 총 세 잔이에요.",
+  "inputTranscript": "这 杯 不 要 加 冰 , 然 后 大 杯 的 改 成 中 杯 , 总 共 三 杯 。",
+  "outputTranscript": "이 잔은 얼음 빼주시고요, 큰 잔은 중간 잔으로 바꿔서, 총 세 잔이요.",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 5560,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 984,
+    "ttft_from_end_ms": 960,
+    "completion_lag_ms": 2545,
+    "ttfa_from_start_ms": 7583
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.788,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:52:18.027Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息，且韓語表達十分道地，甚至比參考譯文更符合口語習慣。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句三個要素（不要加冰、把大杯改成中杯、總共三杯），語意忠實。語句自然但有小幅口語連接詞使用（如“바꿔서”結尾略顯不完整），因此流暢度略降一級。沒有數量或否定錯誤，無遺漏或杜撰。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

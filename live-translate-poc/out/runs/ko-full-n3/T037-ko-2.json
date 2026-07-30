@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "제 방 번호는 702호인데요, 제 친구가 쓰러졌어요.",
+  "inputTranscript": "我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。",
+  "outputTranscript": "제 방 호수는 702호인데, 친구가 기절했어요.",
+  "inputDurationMs": 5811,
+  "outputAudioMs": 4580,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 913,
+    "ttft_from_end_ms": 912,
+    "completion_lag_ms": 1897,
+    "ttfa_from_start_ms": 6912
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.905,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:56:41.822Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句資訊：房號為702、朋友昏倒。用詞上有小瑕疵—「호수는 702호」在韓語中稍顯冗贅/不太自然（通常說「방 번호」或直接「702호」），且參考譯文用「쓰러졌어요」較貼近口語，但「기절했어요」也可接受。故語意忠實給5分，自然度給4分。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「방 호수」（房號）與「기절했어요」（昏倒了）皆為極佳的翻譯，語意完全忠實，語氣也十分自然流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

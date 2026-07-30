@@ -1,0 +1,66 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T007",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我要兩張到京都的車票,大人一張、小孩一張。",
+  "reference": "교토 가는 표 두 장 주세요. 어른 한 장, 어린이 한 장이요.",
+  "inputTranscript": "我 要 两 张 到 京 都 的 车 票 , 大 人 一 张 , 小 孩 一 张 。",
+  "outputTranscript": "교토행 표 두 장 주세요. 어른 한 장, 어린이 한 장이요.",
+  "inputDurationMs": 5051,
+  "outputAudioMs": 4120,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 974,
+    "ttft_from_end_ms": 951,
+    "completion_lag_ms": 1871,
+    "ttfa_from_start_ms": 6174
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2",
+      "1"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.952,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:49:51.171Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎一致。「교토행」（京都行）與參考譯文的「교토 가는」（去京都的）意思完全相同，且更為簡潔。無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（兩張到京都的車票：大人一張、小孩一張），語句在目標語（韓語）中表達自然、通順。“교토행 표”與參考譯文的“교토 가는 표”同樣正確且常用，無錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

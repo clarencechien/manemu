@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T029",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "我沒有訂房,請問今晚還有空房嗎?",
+  "reference": "예약을 안 했는데요, 오늘 밤에 빈 방 있어요?",
+  "inputTranscript": "我 没 有 订 房 , 请 问 今 晚 还 有 空 房 吗 ?",
+  "outputTranscript": "예약하지 않았는데, 혹시 오늘 밤에 빈 방 있을까요?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 3850,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 958,
+    "ttft_from_end_ms": 957,
+    "completion_lag_ms": 1814,
+    "ttfa_from_start_ms": 4559
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.176,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:54:57.884Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，語氣客氣有禮，完全符合情境。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原文意思（未訂房，詢問今晚是否有空房），語意忠實且語氣禮貌自然。與參考譯文差異僅在於語氣表現（'혹시...있을까요?' 比參考的 '있어요?' 更禮貌），但不影響正確性與流暢度，故評為滿分。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

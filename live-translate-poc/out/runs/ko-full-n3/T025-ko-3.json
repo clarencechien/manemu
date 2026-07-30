@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T025",
+  "category": "shopping",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "有沒有 limited edition 的款式?我在 Instagram 上看到的。",
+  "reference": "리미티드 에디션 있어요? 인스타그램에서 봤어요.",
+  "inputTranscript": "有 没 有 limited edition 的 款 式 ? 我 在 Instagram 上 看 到 的 。",
+  "outputTranscript": "한정판 디자인이 있나요? 인스타그램에서 봤거든요.",
+  "inputDurationMs": 4531,
+  "outputAudioMs": 3200,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 939,
+    "ttft_from_end_ms": 939,
+    "completion_lag_ms": 2047,
+    "ttfa_from_start_ms": 5639
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.05,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:54:03.112Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「한정판 디자인」（限量版款式）與「인스타그램에서 봤거든요」（在Instagram上看到的）皆符合韓語母語者的說法，語氣也非常自然得體，無任何錯誤。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整且忠實表達原意，“limited edition”翻成“한정판 디자인”與語境相符；句子自然流暢，語氣與參考譯文相當。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

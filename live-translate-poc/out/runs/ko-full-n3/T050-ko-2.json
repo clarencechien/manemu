@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "그럼 부탁드릴게요, 나중에 다시 연락드릴게요.",
+  "inputTranscript": "那 就 麻 烦 你 了 , 之 后 再 联 络 。",
+  "outputTranscript": "그럼 잘 부탁드릴게요. 나중에 다시 연락드리겠습니다.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3860,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 964,
+    "ttft_from_end_ms": 964,
+    "completion_lag_ms": 1686,
+    "ttfa_from_start_ms": 3964
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.158,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:59:43.652Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意且語句自然。語氣稍較正式，但不影響忠實與流暢性。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，語氣與敬語使用得當，與參考譯文高度契合。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

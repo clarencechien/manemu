@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "저희가 30분 늦게 도착할 것 같은데, 자리 좀 맡아 주실 수 있을까요?",
+  "inputTranscript": "我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?",
+  "outputTranscript": "저희가 30분 정도 늦을 것 같은데, 자리를 유지해 주실 수 있나요?",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 4770,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 974,
+    "ttft_from_end_ms": 952,
+    "completion_lag_ms": 2041,
+    "ttfa_from_start_ms": 5374
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.963,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:58:32.958Z",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（將晚30分鐘並請求保留位子），因此語意忠實度高。用詞上略顯不自然：韓語中對「保留座位」更常說“자리 맡다/자리 좀 맡아 주시겠어요?”，而“자리를 유지해 주실 수 있나요?” 雖可理解但偏機械化，故流暢度稍降一分。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的意思。在流暢度方面，韓文的「자리를 유지하다」（維持位子）語感上稍微有些不自然，通常在保留餐廳座位的語境下，使用「자리를 맡아두다」或「예약을 유지하다」會更為道地，但整體上仍非常清晰易懂。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

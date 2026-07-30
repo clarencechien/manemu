@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "이거 맵지 않게 해주세요. 매운 걸 잘 못 먹어서요.",
+  "inputTranscript": "这 个 不 要 啦 , 我 不 太 能 吃 辣 。",
+  "outputTranscript": "이거는 안 할게요, 제가 매운 걸 잘 못 먹거든요.",
+  "inputDurationMs": 3251,
+  "outputAudioMs": 3961,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 964,
+    "ttft_from_end_ms": 962,
+    "completion_lag_ms": 1674,
+    "ttfa_from_start_ms": 4365
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.947,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:51:27.934Z",
+  "judge": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "前半句「這個不要辣」被誤譯為「이거는 안 할게요」（這個我不要了/我不做了），漏譯了「不要辣（不加辣）」的意思。後半句「我不太能吃辣」翻譯得很好（제가 매운 걸 잘 못 먹거든요）。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 2,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": true,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文把說話者原本的請求（請不要這道菜辣／不要辣）誤譯為說話者自己不做這件事（이거는 안 할게요 = 我不會做/我不吃），主語/語態變動導致語意不符；後半句“제가 매운 걸 잘 못 먹거든요”與參考譯文語意相符且自然。語句本身通順，但關鍵意思被錯譯，故給予較低的語意忠實分數。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

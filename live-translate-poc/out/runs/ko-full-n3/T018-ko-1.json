@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T018",
+  "category": "dining",
+  "traps": [
+    "code-switch"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我要一份 tonkotsu 拉麵,麵要硬一點。",
+  "reference": "돈코츠 라멘 하나 주세요, 면은 좀 딱딱하게 해주세요.",
+  "inputTranscript": "我 要 一 份 豚 骨 汁 拉 面 , 面 要 硬 一 点 。",
+  "outputTranscript": "돈코츠 라멘 하나 주세요. 면은 딱딱하게 해 주세요.",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 4040,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 995,
+    "ttft_from_end_ms": 949,
+    "completion_lag_ms": 1925,
+    "ttfa_from_start_ms": 5094
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.952,
+    "coverage_ok": true,
+    "cer": 0.421
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:52:19.052Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in fluent Korean, matching the reference translation almost exactly."
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句含意：要一份豚骨拉麵並要求麵較硬，故語意忠實度高。韓文句子文法正確且可理解，但用詞上「딱딱하게」比起參考譯文的「좀 딱딱하게」少了緩和語氣，在母語感上稍顯生硬，所以自然度略降。沒有遺漏或錯誤資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
+}

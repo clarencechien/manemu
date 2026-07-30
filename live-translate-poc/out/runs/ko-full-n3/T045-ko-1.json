@@ -1,0 +1,63 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "도와주셔서 감사해요, 오늘 정말 신세 많이 졌어요.",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "도와주셔서 감사합니다. 오늘 정말 번거롭게 해드렸네요.",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 4010,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 979,
+    "ttft_from_end_ms": 975,
+    "completion_lag_ms": 3028,
+    "ttfa_from_start_ms": 4179
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.15,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:58:35.324Z",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達了原句的謝意與對造成麻煩的歉意，語意基本忠實。但用詞語氣與參考譯文略有差異（參考為「신세 많이 졌어요」偏表達受人幫忙的感激，機譯為「번거롭게 해드렸네요」較直接表示造成對方麻煩），因此給予較高但非滿分的評分。語句在韓語上大致自然，微有口氣/措辭不夠自然之處。"
+  },
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「도와주셔서 감사합니다」完美對應「謝謝你的幫忙」，而「오늘 정말 번거롭게 해드렸네요」也是表達「今天真的麻煩你了」非常道地且得體的韓文說法，語氣十分自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}
