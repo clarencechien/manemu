@@ -154,11 +154,10 @@ export default {
       return Response.json({ ok: true, key });
     }
 
-    /* ---------- 靜態 ---------- */
-    if (p === "/admin") {
-      const u = new URL(req.url); u.pathname = "/admin.html";
-      return withSec(await env.ASSETS.fetch(new Request(u, req)));
-    }
+    /* ---------- 靜態 ----------
+       不要自己把 /admin 改寫成 /admin.html:assets 的 html_handling 會把 .html
+       正規化回 /admin,兩邊互推造成無限重導向(實測 ERR_TOO_MANY_REDIRECTS)。
+       直接交給 assets,/admin 本來就會服務 admin.html。 */
     return withSec(await env.ASSETS.fetch(req));
   },
 };
