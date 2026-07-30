@@ -55,7 +55,9 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 | `/api/config` | ✅ 回 Turnstile site key(已啟用) |
 | `/auth/login` GET(Turnstile 啟用後) | ✅ 302 回首頁(強制走 POST+驗證) |
 | workers.dev `/api/me` | ✅ 403(canonical-host 擋下) |
-| workers.dev `/`、安全 headers | ⚠ 曾失效:assets 預設不進 worker → 已加 `run_worker_first` 修正;workers.dev route 仍建議在 dashboard 關閉 |
+| workers.dev `/` | ✅ 301 → 正式網域(`run_worker_first` 修正後複驗通過) |
+| 安全 headers(CSP/XFO/nosniff/referrer) | ✅ 全數出現(修正前 assets 繞過 worker 導致缺失) |
+| 備註 | workers.dev route 仍建議在 dashboard 關閉(縱深) |
 
 ## 已知未驗(部署後首測清單)
 
