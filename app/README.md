@@ -46,10 +46,23 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 (16kHz 音檔 b64 + STT + 譯文 + 死氣延遲)。拉回 harness 評測:
 音檔可直接轉 wav 丟 `live-translate-poc/data/audio-human/`。
 
+## 部署複驗(2026-07-30 curl 實測)
+
+| 檢查 | 結果 |
+| --- | --- |
+| `https://manemu.ai-apps.work/` | ✅ 200 |
+| `/api/me` 未登入 | ✅ 401 |
+| `/api/config` | ✅ 回 Turnstile site key(已啟用) |
+| `/auth/login` GET(Turnstile 啟用後) | ✅ 302 回首頁(強制走 POST+驗證) |
+| workers.dev `/api/me` | ✅ 403(canonical-host 擋下) |
+| workers.dev `/`、安全 headers | ⚠ 曾失效:assets 預設不進 worker → 已加 `run_worker_first` 修正;workers.dev route 仍建議在 dashboard 關閉 |
+
 ## 已知未驗(部署後首測清單)
 
-- [ ] OAuth 全流程(state/nonce/JWKS 驗章)真打一次
-- [ ] Worker `fetch` upgrade 到 Gemini WS(DO 內 upstream)——CC web 環境無法起 workerd,僅過語法
+- [x] OAuth 端點行為、Turnstile 強制、canonical-host(上表)
+- [ ] OAuth 全流程真登入一次(白名單 email)
+- [ ] 真 PTT 一句:relay → Gemini WS → 譯音播放(手機瀏覽器)
 - [ ] iOS Safari:AudioWorklet、`pointerdown` 權限手勢、24k 播放
 - [ ] 真機 echo(PTT 播放鎖 + echoCancellation 夠不夠)
 - [ ] fast 模式(translate 引擎)在 relay 下的行為
+- [ ] 🧪 測試模式一輪 → 確認 R2 `manemu-field` 有 field log
