@@ -83,6 +83,7 @@ async function runUtterance({ side, ui }) {
   let inTx = "", outTx = "", tFirstAudio = null;
 
   let doneStats = null, relayError = null;
+  const audioB64 = []; // 供重播
   const finishPromise = new Promise((resolve) => {
     ws.addEventListener("message", (ev) => {
       const m = JSON.parse(ev.data);
@@ -90,7 +91,7 @@ async function runUtterance({ side, ui }) {
       if (m.type === "ready") { ready = true; for (const f of preReady) ws.send(f); preReady.length = 0; }
       if (m.type === "inTx") { inTx += m.text; el.srcEl.textContent = inTx; }
       if (m.type === "outTx") { outTx += m.text; el.txEl.textContent = outTx; el.host?.scrollIntoView({ block: "end" }); }
-      if (m.type === "audio") { if (tFirstAudio === null) tFirstAudio = performance.now(); enqueuePcm(m.data); }
+      if (m.type === "audio") { if (tFirstAudio === null) tFirstAudio = performance.now(); audioB64.push(m.data); enqueuePcm(m.data); }
       if (m.type === "error") { relayError = m.message || "relay error"; resolve("error"); }
       if (m.type === "done") { doneStats = m.stats ?? null; resolve(m.reason); }
     });
@@ -146,7 +147,12 @@ async function runUtterance({ side, ui }) {
   el.host?.classList.remove("speaking");
   playQ.playing = false;
 
-  ui.done({ side, inTx, outTx, deadAir, lagS: ((performance.now() - t0) / 1000).toFixed(1), reason: doneStats?.finishReason }, el);
+  // 端到端計時:speech=按住講話長度、deadAir=放開→首音、completion=放開→譯音播完、total=按下→播完
+  const speechMs = Math.round(tReleased - t0);
+  const completionMs = Math.round(performance.now() - tReleased);
+  ui.done({ side, inTx, outTx, deadAir, speechMs, completionMs,
+    lagS: ((performance.now() - t0) / 1000).toFixed(1), reason: doneStats?.finishReason }, el);
+  if (outTx && audioB64.length) ui.replay?.(el, audioB64);
 
   // 回譯確認(me 側、非測試模式)
   if (side === "me" && !S.test && outTx) {
@@ -166,7 +172,7 @@ async function runUtterance({ side, ui }) {
     const pcm = concatBytes(micFrames);
     fetch("/api/field-log", { method: "POST", headers: { "content-type": "application/json" },
       body: JSON.stringify({ id: line?.id, expectedZh: line?.zh, lang: S.lang, engine, stt: inTx, tx: outTx,
-        deadAirMs: deadAir, ts: new Date().toISOString(), audioB64: b64enc(pcm), sampleRate: 16000 }) }).catch(() => {});
+        deadAirMs: deadAir, speechMs, completionMs, ts: new Date().toISOString(), audioB64: b64enc(pcm), sampleRate: 16000 }) }).catch(() => {});
     S.testIdx++;
     updateTestbar();
   }
@@ -198,11 +204,29 @@ const chatUI = {
     el.scrollIntoView({ block: "end" });
     return { host: el, srcEl: el.querySelector(".src"), txEl: el.querySelector(".tx") };
   },
-  done({ outTx, deadAir, lagS }, el) {
+  done({ outTx, deadAir, speechMs, completionMs, lagS }, el) {
+    // 端到端三段:死氣(放開→首音)、播完(放開→譯音結束)、全程(按下→播完)
     el.host.querySelector(".rowmeta").innerHTML =
-      `<span class="lat">${lagS}s</span>` + (deadAir !== null ? `<span class="lat">死氣 ${deadAir}ms</span>` : "")
+      (deadAir !== null ? `<span class="lat">死氣 ${deadAir}ms</span>` : "")
+      + (outTx ? `<span class="lat">播完 ${(completionMs / 1000).toFixed(1)}s</span>` : "")
+      + `<span class="lat">全程 ${lagS}s</span>`
       + (S.test && outTx ? `<span class="lat">已記錄</span>` : ""); // 失敗不標已記錄
     el.host.scrollIntoView({ block: "end" });
+  },
+  replay(el, audioB64) {
+    const b = document.createElement("button");
+    b.className = "badge ok"; b.textContent = "🔊 重播";
+    b.addEventListener("click", async () => {
+      if (S.busy) return;
+      S.busy = true; setPtt(true);
+      $("status").textContent = "🔊 重播中";
+      for (const a of audioB64) enqueuePcm(a);
+      await sleep(playbackRemaining() + 100);
+      playQ.playing = false;
+      S.busy = false; setPtt(false);
+      $("status").textContent = "按住說話";
+    });
+    el.host.querySelector(".rowmeta").prepend(b);
   },
   badge(el, backZh) {
     const b = document.createElement("button");
