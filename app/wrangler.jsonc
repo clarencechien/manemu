@@ -4,6 +4,10 @@
   "name": "manemu",
   "main": "src/index.mjs",
   "compatibility_date": "2026-07-01",
+  // 安全:workers.dev 與 preview URL 都不經 zone WAF(繞過洞),設定碼層級關死——
+  // 就算 dashboard 被誤開,下次部署也會關回來。程式端另有 CANONICAL_HOST 縱深。
+  "workers_dev": false,
+  "preview_urls": false,
   // 每次部署重抓 opencc-js(^ 範圍)→ 上游更新自動套用到 vendor bundle
   "build": { "command": "npm install --no-audit --no-fund && npm run vendor" },
   "assets": {
