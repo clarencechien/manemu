@@ -70,6 +70,25 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 - **已核准名單**:改級別、填自訂秒數、移除;`ADMIN_EMAILS` 內的帳號不可從 UI 移除(防手滑鎖死自己)。
 - 資料就是 R2 的兩個 JSON,想手動改也行(`wrangler r2 object put`),兩邊等價。
 
+## Log 與隱私(誰在寫什麼、寫在哪)
+
+**原則:一般對話零留存。** relay 只轉送音訊與譯文,不落地任何內容;DO 只存「用了幾秒」。
+這是隱私設計也是產品賣點,收費後尤其站得住。全部的資料落點只有四個:
+
+| 落點 | 內容 | 有無對話內容 | 開關 |
+| --- | --- | --- | --- |
+| DO `usage` | 每日用量秒數 | 無 | 恆開(計費必要) |
+| DO `lastSession`(`/api/debug`) | 各環節計數器(框數/字數/關閉原因) | 無(`firstMsgSample` 只會是 setup 回應) | `DEBUG_ENDPOINT` |
+| R2 `clientlog/`(`/api/client-log`) | 卡死麵包屑:階段名+時間戳+UA,**key 含 email** | 無 | `CLIENT_LOG`(**平時 off**) |
+| R2 `field/`(🧪 測試模式) | **完整錄音+STT+譯文**+延遲數據 | **有,且明示** | 使用者主動開 🧪 才寫 |
+
+- 🧪 測試模式是唯一收內容的通道,測試列明寫「你的錄音與翻譯結果會被記錄」——同意內建在動作裡。
+- Workers 平台的 observability log(dashboard 可看)只有請求 metadata 與 console 計數,程式不往裡面印內容。
+- 追 bug 的正確姿勢:先開 `CLIENT_LOG=on` 部署 → 重現 → `/api/admin/clientlog` 看麵包屑 →
+  修完 `POST /api/admin/clientlog-clear` 清掉、關回 off。麵包屑本身無內容,風險只在 email 識別。
+- 日後正式開放(名單外的人進來)再做兩件事:clientlog 的 email 改 HMAC 假名化
+  (仍可關聯回報、不可反查)、R2 加 30 天生命週期規則自動清除。封測階段名單內都是熟人,現制即可。
+
 ## 測試模式 = R1 真人語音收集
 
 登入後點 🧪:逐句照念 T50 語料,每句寫 `r2://manemu-field/field/{email}/{ts}.json`
@@ -113,15 +132,14 @@ Bot Fight Mode 的其他機制(IP 信譽、已知 bot、heuristics)不依賴 JSD
 - [x] OAuth 端點行為、Turnstile 強制、canonical-host(上表)
 - [ ] OAuth 全流程真登入一次(白名單 email)
 - [ ] 真 PTT 一句:relay → Gemini WS → 譯音播放(手機瀏覽器)
-- [ ] iOS Safari:AudioWorklet、`pointerdown` 權限手勢、24k 播放
-  - 真機回報兩輪(v7 修凍結偵測仍卡)後,v8 改結構性做法:
-    **① mic 全程保留**(track.stop 會讓 iOS 收回 audio session → 播放無聲 + 下一次
-    getUserMedia 掛死;現在句間只斷 worklet,收起頁面才放掉,mic 指示燈會亮著)、
-    **② iOS 一律 `<audio>`+WAV 播放**(WebAudio 串流在 session 被收回時「時鐘照走、輸出無聲」,
-    偵測不到;WAV 路徑 = 重播路徑,真機唯一確認會出聲)、
-    **③ 25s 保險絲**(放開後任何掛死 → 強制解鎖 + 麵包屑上報 `/api/client-log` →
-    R2 `manemu-field/clientlog/`,查卡點用)。頂列有版本標記(v8-ios-keepmic)可確認快取已更新。
-    本地三情境模擬全過(scratchpad `ios-test.mjs`),真機複驗待做。
+- [x] iOS Safari:**真機驗證通過(v10)**,連續多句可用。修復史(v7→v10)值得記:
+  - v8:mic 全程保留(track.stop 會讓 iOS 收回 audio session)+ iOS 一律 `<audio>`+WAV 播放
+    (WebAudio 串流在 session 被收回時「時鐘照走、輸出無聲」)+ 保險絲與麵包屑上報。
+  - v9:偵測靜默死掉的 mic(muted / 跨 ctx 重用)並換新;`/api/admin/clientlog` 檢視回報。
+  - v10(**破案**,靠麵包屑):按下瞬間 setPtt 把按住中的按鈕 disable → iOS 對互動中被
+    disable 的元素 ~100ms 後補發 cancel → 快路徑句子被瞬間放開。修:按住中的按鈕永不
+    disable;零音框放開改立即乾淨中止。教訓:**iOS 音訊 bug 猜不到,要靠階段麵包屑**
+    (本地模擬測試 `ios-test.mjs` 四情境保住不退化)。
   - 每次「重新整理」都會再要一次麥克風權限是 Safari 政策(同一次載入內不會重複要);
     加到主畫面(PWA)可記住權限。修掉卡死後就不需要重整了。
 - [ ] 真機 echo(PTT 播放鎖 + echoCancellation 夠不夠)

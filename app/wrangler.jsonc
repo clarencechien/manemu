@@ -47,7 +47,10 @@
     // 兩者都不設 → 登入頁不出現驗證、Worker 端也不驗(方便先跑通)。
     "TURNSTILE_SITE_KEY": "0x4AAAAAAEBVTLYxe23qYu09",
     // 個人 session 診斷端點(session 閘門後、self-scoped、無金鑰材料);封測結束改 "off"
-    "DEBUG_ENDPOINT": "on"
+    "DEBUG_ENDPOINT": "on",
+    // 前端卡死麵包屑上報(只有階段名+時間戳,無對話內容;key 含 email)。
+    // iOS 卡死已修,平時關;要追 bug 時改 "on" 再部署(隱私原則見 README「Log 與隱私」)
+    "CLIENT_LOG": "off"
   },
   "observability": { "enabled": true }
 }
