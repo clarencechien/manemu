@@ -239,9 +239,10 @@
 "use strict";
 /* ============ 語言包(對方語言;介面/按鍵文案跟著換) ============ */
 const LANGS = {
-  ja: { label:"日本語", pttThem:"押して話す", pttThemSub:"→ 中文", holdStatus:"押しながら話してください",
+  // btn:連接詞跟著目標語言的書寫慣例走(和式「対」/英式 to),不是簡體
+  ja: { label:"日本語", btn:"対 日本語", pttThem:"押して話す", pttThemSub:"→ 中文", holdStatus:"押しながら話してください",
         divider:"⇅ 面對面・上側は相手用", who:"(日本語)", ghostWho:"相手(中国語)" },
-  en: { label:"English", pttThem:"Hold to speak", pttThemSub:"→ Chinese", holdStatus:"Hold the button and speak",
+  en: { label:"English", btn:"to English", pttThem:"Hold to speak", pttThemSub:"→ Chinese", holdStatus:"Hold the button and speak",
         divider:"⇅ Face to face · top side is for them", who:"(English)", ghostWho:"They said (Chinese)" },
 };
 
@@ -590,7 +591,7 @@ $("langBtn").addEventListener("click", () => {
 });
 function applyLang(){
   const L = LANGS[S.lang];
-  $("langBtn").textContent = `対 ${L.label} ▾`;
+  $("langBtn").textContent = `${L.btn} ▾`;
   $("pttMeSub").textContent = `→ ${L.label}`;
   $("pttThemBig").textContent = L.pttThem;
   $("pttThemSub").textContent = L.pttThemSub;
