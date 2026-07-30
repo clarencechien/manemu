@@ -99,6 +99,11 @@ export default {
       if (!session) return Response.json({ error: "unauthorized" }, { status: 401 });
     }
 
+    if (p === "/api/debug") {
+      const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
+      return stub.fetch("https://do/debug");
+    }
+
     if (p === "/api/me") {
       const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
       const u = await (await stub.fetch("https://do/usage")).json();

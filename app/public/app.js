@@ -82,15 +82,17 @@ async function runUtterance({ side, ui }) {
   const el = ui.begin({ side });
   let inTx = "", outTx = "", tFirstAudio = null;
 
+  let doneStats = null, relayError = null;
   const finishPromise = new Promise((resolve) => {
     ws.addEventListener("message", (ev) => {
       const m = JSON.parse(ev.data);
+      console.log("[relay]", m.type, m.text ?? m.reason ?? "");   // 手機可接 USB/遠端主控台看
       if (m.type === "ready") { ready = true; for (const f of preReady) ws.send(f); preReady.length = 0; }
       if (m.type === "inTx") { inTx += m.text; el.srcEl.textContent = inTx; }
       if (m.type === "outTx") { outTx += m.text; el.txEl.textContent = outTx; el.host?.scrollIntoView({ block: "end" }); }
       if (m.type === "audio") { if (tFirstAudio === null) tFirstAudio = performance.now(); enqueuePcm(m.data); }
-      if (m.type === "error") { ui.status("⚠ " + (m.message || "錯誤"), false); resolve("error"); }
-      if (m.type === "done") resolve(m.reason);
+      if (m.type === "error") { relayError = m.message || "relay error"; resolve("error"); }
+      if (m.type === "done") { doneStats = m.stats ?? null; resolve(m.reason); }
     });
     ws.addEventListener("close", () => resolve("closed"));
     ws.addEventListener("error", () => resolve("ws-error"));
@@ -119,6 +121,21 @@ async function runUtterance({ side, ui }) {
   await finishPromise;
   const deadAir = tFirstAudio !== null ? Math.round(tFirstAudio - tReleased) : null;
 
+  // 空結果 = 鏈路斷了:把斷點直接寫在氣泡上,不假裝成功
+  if (!outTx) {
+    const s = doneStats;
+    const diag = relayError ? `relay 錯誤:${relayError}`
+      : s ? `斷點診斷:上游${s.upstreamOpened ? "已連" : "未連(status=" + s.upstreamStatus + ", key=" + s.hasKey + ")"}`
+          + `,setup ${s.setupComplete ? "✓" : "✗"},收到你的音框 ${s.framesIn} 個,`
+          + `辨識 ${s.inTxChars} 字/譯文 ${s.outTxChars} 字,關閉原因 ${s.upstreamCloseCode ?? "-"} ${s.upstreamCloseReason ?? ""}`
+      : "沒有診斷資料(relay 版本較舊?)";
+    el.txEl.innerHTML = `<span style="color:var(--warn)">⚠ 沒有收到譯文</span>`;
+    const d = document.createElement("div");
+    d.className = "backtx"; d.style.borderColor = "var(--warn)";
+    d.textContent = diag + " — 完整資料開 /api/debug";
+    el.host?.querySelector(".bubble")?.appendChild(d);
+  }
+
   // 等譯音播完再解鎖(半雙工)
   ui.status("🔊 播放譯音(此時麥克風關閉)", true);
   el.host?.classList.add("speaking");
@@ -136,7 +153,11 @@ async function runUtterance({ side, ui }) {
       if (d.zh) ui.badge(el, d.zh);
     } catch {}
   }
-  // 測試模式記錄(R1 收集管道)
+  // 測試模式記錄(R1 收集管道)——沒有譯文就不算完成,提示重念
+  if (S.test && side === "me" && !outTx) {
+    ui.status("這句沒有成功,請再念一次(不會跳下一句)", false);
+    S.busy = false; refreshUsage(); return;
+  }
   if (S.test && side === "me") {
     const line = TEST_LINES[S.testIdx];
     const pcm = concatBytes(micFrames);
