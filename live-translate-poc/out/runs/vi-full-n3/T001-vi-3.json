@@ -1,0 +1,33 @@
+{
+  "runId": "vi-full-n3",
+  "phraseId": "T001",
+  "category": "directions",
+  "traps": [],
+  "dir": "vi",
+  "repeat": 3,
+  "zh": "請問車站在哪裡?怎麼走比較快?",
+  "reference": "Dạ cho em/cháu hỏi nhà ga ở đâu ạ? Đi đường nào thì nhanh hơn ạ?",
+  "inputTranscript": "请 问 车 站 在 哪 里 ? 怎 么 走 比 较 快 ?",
+  "outputTranscript": "Dạ cho hỏi ga tàu ở đâu vậy ạ? Đi đường nào cho nhanh hơn ạ?",
+  "inputDurationMs": 3211,
+  "outputAudioMs": 3710,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 918,
+    "ttft_from_end_ms": 917,
+    "completion_lag_ms": 1758,
+    "ttfa_from_start_ms": 4318
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.935,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:23.539Z"
+}

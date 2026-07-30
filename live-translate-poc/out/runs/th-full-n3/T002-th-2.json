@@ -1,0 +1,36 @@
+{
+  "runId": "th-full-n3",
+  "phraseId": "T002",
+  "category": "directions",
+  "traps": [
+    "code-switch",
+    "proper-noun"
+  ],
+  "dir": "th",
+  "repeat": 2,
+  "zh": "請問 Shibuya Sky 的入口是在這棟樓嗎?",
+  "reference": "ขอโทษครับ ทางเข้า Shibuya Sky อยู่ในตึกนี้ใช่ไหมครับ",
+  "inputTranscript": "请 问 旭 不 亚 Sky 的 入 口 是 在 这 栋 楼 吗 ?",
+  "outputTranscript": "ขอถามหน่อย ครับ ทางเข้า ของ Shibuya Sky อยู่ใน ตึกนี้ หรือเปล่า ครับ",
+  "inputDurationMs": 3811,
+  "outputAudioMs": 4340,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1199,
+    "ttft_from_end_ms": 968,
+    "completion_lag_ms": 3464,
+    "ttfa_from_start_ms": 5199
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.229,
+    "coverage_ok": true,
+    "cer": 0.381
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T03:09:34.928Z"
+}
