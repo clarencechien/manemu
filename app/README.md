@@ -70,6 +70,39 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 - **已核准名單**:改級別、填自訂秒數、移除;`ADMIN_EMAILS` 內的帳號不可從 UI 移除(防手滑鎖死自己)。
 - 資料就是 R2 的兩個 JSON,想手動改也行(`wrangler r2 object put`),兩邊等價。
 
+## 網路路徑與死氣(實測 + 旅途預測)
+
+死氣鏈:使用者 → **Cloudflare 邊緣(colo)** → DO relay → Google Gemini。後兩段走機房骨幹很穩,
+變異幾乎全來自第一段「使用者被導進哪個 colo」。查法:開
+`https://manemu.ai-apps.work/cdn-cgi/trace` 看 `colo=` 那行。
+
+**實測(2026-07-30,同一帳號同一 DO)**
+
+| 網路 | colo | 死氣 |
+| --- | --- | --- |
+| 台灣 5G(行動網路) | TPE(推測) | **~0.4s** |
+| HiNet 光世代(手機+筆電同樣) | **SIN** | ~2.0s |
+
+HiNet 家用流量被導去新加坡是「Cloudflare 免費方案 × HiNet 互連成本」的已知現象,
+要穩定進 TPE 得升 Business 級或 Argo。**決策:接受,不花這個錢**——產品場景是旅途
+(當地 SIM/漫遊/5G),不是家用光纖;**台灣行動網路的 0.4s 才是代表值**。
+在家開發測到 ~2s 時先查 colo,別誤判成 app 退步。
+
+**旅途路徑預測(M4 真機驗證時記得各抓一次 trace)**
+
+| 上網方式 | 流量出口 | 預測 colo | 預測死氣 |
+| --- | --- | --- | --- |
+| 中華電信漫遊(日/韓) | 隧道回台灣(home-routed) | TPE | ~0.5–0.7s(多一段日台/韓台隧道) |
+| 日本當地/旅日 eSIM(local breakout) | 日本 | NRT/TYO | ~0.4–0.6s |
+| 韓國當地 eSIM | 韓國 | ICN | ~0.4–0.6s |
+| 便宜港系 eSIM(3HK/CMI 系,出口香港) | 香港 | HKG | ~0.5–0.8s,**可用** |
+| 出口繞中國大陸的卡 | 中國 | 不定 | 避開:到 Cloudflare 本身就不穩 |
+
+**香港出口不會讓 AI 不能用**:Gemini 金鑰與 API 呼叫都在 Worker(Cloudflare 機房)端發出,
+Google 看到的是 Cloudflare 的出口、不是使用者 IP;使用者只需要連得上 manemu。
+這是 server-side relay 架構的額外紅利——在 Gemini 不開放的地區(香港等)照樣能用。
+唯一要避開的是「出口繞中國大陸」的卡:卡點不在 Google,在使用者到 Cloudflare 的連線品質。
+
 ## Log 與隱私(誰在寫什麼、寫在哪)
 
 **原則:一般對話零留存。** relay 只轉送音訊與譯文,不落地任何內容;DO 只存「用了幾秒」。
