@@ -146,8 +146,10 @@ export default {
       return zh ? Response.json({ zh }) : Response.json({ error: "backtranslate failed" }, { status: 502 });
     }
 
-    // 前端卡死自救時的診斷麵包屑(iOS 真機沒有 console,只能靠這條回報卡點)
+    // 前端卡死自救時的診斷麵包屑(iOS 真機沒有 console,只能靠這條回報卡點)。
+    // 平時關(CLIENT_LOG=off):靜默丟棄,舊版前端也不會報錯;追 bug 時開回 "on"
     if (p === "/api/client-log" && req.method === "POST") {
+      if (env.CLIENT_LOG !== "on") return new Response(null, { status: 204 });
       const body = await req.text();
       if (body.length > 20_000) return Response.json({ error: "too large" }, { status: 413 });
       const key = `clientlog/${session.email}/${new Date().toISOString().replaceAll(":", "-")}.json`;
@@ -169,4 +171,25 @@ export default {
        直接交給 assets,/admin 本來就會服務 admin.html。 */
     return withSec(await env.ASSETS.fetch(req));
   },
+
+  // 每日 cron(wrangler.jsonc triggers):過期 clientlog 自動清——admin 沒手動清也不會累積。
+  // field/(🧪 測試模式語料)刻意不清:那是 R1 資料集,使用者明示同意收集。
+  async scheduled(_event, env, ctx) {
+    ctx.waitUntil(purgeClientlog(env));
+  },
 };
+
+async function purgeClientlog(env) {
+  const ttlDays = Number(env.CLIENTLOG_TTL_DAYS || 30);
+  const cutoff = Date.now() - ttlDays * 86400_000;
+  let cursor, deleted = 0;
+  do {
+    const page = await env.FIELD.list({ prefix: "clientlog/", limit: 1000, cursor });
+    const old = (page.objects || []).filter((o) => new Date(o.uploaded).getTime() < cutoff);
+    await Promise.all(old.map((o) => env.FIELD.delete(o.key)));
+    deleted += old.length;
+    cursor = page.truncated ? page.cursor : undefined;
+  } while (cursor);
+  if (deleted) console.log(`[cron] clientlog 清除 ${deleted} 筆(TTL ${ttlDays} 天)`);
+  return deleted;
+}

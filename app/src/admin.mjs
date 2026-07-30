@@ -79,6 +79,13 @@ export async function handleAdmin(req, env, path) {
     return Response.json({ ok: true });
   }
 
+  // 清空既有的卡死回報(bug 修完就清,不留 email 相關資料)
+  if (path === "/api/admin/clientlog-clear" && req.method === "POST") {
+    const listed = await env.FIELD.list({ prefix: "clientlog/", limit: 1000 });
+    await Promise.all((listed.objects || []).map((o) => env.FIELD.delete(o.key)));
+    return Response.json({ ok: true, deleted: (listed.objects || []).length });
+  }
+
   // 最近的前端卡死回報(/api/client-log 寫進 FIELD bucket 的麵包屑)——查 iOS 卡點用
   if (path === "/api/admin/clientlog" && req.method === "GET") {
     const listed = await env.FIELD.list({ prefix: "clientlog/", limit: 1000 });

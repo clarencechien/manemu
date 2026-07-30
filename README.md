@@ -47,7 +47,10 @@
 強制(workers.dev route 已關,WAF 繞過洞封死)、`/auth/*` rate limit、R2 私有、金鑰只在 Worker;
 錢包三道保險絲 = 白名單 + 每人每日秒數上限 + 單句 120s 硬上限 + 靜音強制收斂。細節見 `app/README.md`。
 
-**未驗**:iOS Safari(AudioWorklet/播放)、真機回音場景(外放+吵雜)、fast 模式在 relay 下的行為。
+**已驗補充**:iOS Safari 真機通過(v10;四輪修復史與教訓見 `app/README.md`)。
+**未驗**:真機回音場景(外放+吵雜)、fast 模式在 relay 下的行為(UI 已暫時下架)。
+**隱私**:一般對話零留存;唯一收內容的是使用者主動開啟的 🧪 測試模式(明示記錄)。
+細節與 log 落點清單見 `app/README.md`「Log 與隱私」。
 
 **下一步**(`docs/run3-plan.md`):R1 真人語音資料集(測試模式已在自動收集)、M4 真機 dogfood
 (劇本見 `docs/m4-scripts.md`)。五語已全部進語言下拉;泰語附「尾詞 ครับ/ค่ะ」設定

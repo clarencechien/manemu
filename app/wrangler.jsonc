@@ -47,7 +47,14 @@
     // 兩者都不設 → 登入頁不出現驗證、Worker 端也不驗(方便先跑通)。
     "TURNSTILE_SITE_KEY": "0x4AAAAAAEBVTLYxe23qYu09",
     // 個人 session 診斷端點(session 閘門後、self-scoped、無金鑰材料);封測結束改 "off"
-    "DEBUG_ENDPOINT": "on"
+    "DEBUG_ENDPOINT": "on",
+    // 前端卡死麵包屑上報(只有階段名+時間戳,無對話內容;key 含 email)。
+    // iOS 卡死已修,平時關;要追 bug 時改 "on" 再部署(隱私原則見 README「Log 與隱私」)
+    "CLIENT_LOG": "off",
+    // clientlog 保存天數:每日 cron 自動清過期(admin 忙了沒手動清也會清);改 90 之類即可
+    "CLIENTLOG_TTL_DAYS": "30"
   },
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
+  // 每日 03:10 UTC 跑 scheduled handler:自動清過期的 clientlog(TTL 見 CLIENTLOG_TTL_DAYS)
+  "triggers": { "crons": ["10 3 * * *"] }
 }

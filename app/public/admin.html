@@ -73,6 +73,14 @@
   </form>
   <p class="hint" id="tierHint"></p>
   <div id="allowBox"></div>
+
+  <h2>診斷回報</h2>
+  <p class="hint">卡死麵包屑(無對話內容,key 含 email)。收集開關在 var <code>CLIENT_LOG</code>(平時 off);bug 修完就清。</p>
+  <div class="row-actions" style="margin-top:8px">
+    <button id="clogView">查看最近回報</button>
+    <button class="danger" id="clogClear">清空全部回報</button>
+  </div>
+  <pre id="clogBox" style="font-size:11px; line-height:1.5; overflow-x:auto; margin-top:10px; white-space:pre-wrap"></pre>
 </div>
 
 <div id="toast"></div>

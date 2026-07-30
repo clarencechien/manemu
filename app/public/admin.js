@@ -107,6 +107,19 @@ $("addForm").addEventListener("submit", async (e) => {
   } catch (err) { toast("失敗:" + err.message); }
 });
 
+$("clogView").addEventListener("click", async () => {
+  try {
+    const d = await api("/api/admin/clientlog");
+    $("clogBox").textContent = d.count === 0 ? "沒有回報。" :
+      d.entries.map((e) => `▸ ${e.key}\n  ${e.kind} ${e.ver ?? ""} ${e.ios ? "iOS" : ""}\n  ${(e.crumbs ?? []).join(" | ")}`).join("\n\n");
+  } catch (err) { toast("失敗:" + err.message); }
+});
+$("clogClear").addEventListener("click", async () => {
+  if (!confirm("清空全部診斷回報?")) return;
+  try { const d = await api("/api/admin/clientlog-clear", {}); toast(`已清 ${d.deleted} 筆`); $("clogBox").textContent = ""; }
+  catch (err) { toast("失敗:" + err.message); }
+});
+
 (async function boot() {
   let me = null;
   try { const r = await fetch("/api/me"); if (r.ok) me = await r.json(); } catch {}
