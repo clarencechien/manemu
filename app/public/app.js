@@ -98,9 +98,12 @@ async function runUtterance({ side, ui }) {
     ws.addEventListener("error", () => resolve("ws-error"));
   });
 
+  let firstFrameLogged = false;
   try {
     await startCapture((frameBuf) => {
       if (ended) return;
+      if (!firstFrameLogged) { firstFrameLogged = true; console.log("[mic] first frame bytes:", frameBuf?.byteLength); }
+      if (!frameBuf?.byteLength) return; // 空框不送
       micFrames.push(new Uint8Array(frameBuf.slice(0)));
       if (ready && ws.readyState === 1) ws.send(frameBuf); else preReady.push(frameBuf);
     });
