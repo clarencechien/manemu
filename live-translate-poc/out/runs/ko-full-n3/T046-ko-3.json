@@ -1,0 +1,33 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T046",
+  "category": "smalltalk",
+  "traps": [],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "你的中文說得真好,是在哪裡學的?",
+  "reference": "중국어 정말 잘하시네요, 어디서 배우셨어요?",
+  "inputTranscript": "你 的 中 文 说 得 真 好 , 是 在 哪 里 学 的 ?",
+  "outputTranscript": "중국어를 정말 잘하시네요! 어디에서 배우셨나요?",
+  "inputDurationMs": 3411,
+  "outputAudioMs": 3761,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1016,
+    "ttft_from_end_ms": 1016,
+    "completion_lag_ms": 2083,
+    "ttfa_from_start_ms": 4616
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.111,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:58:57.964Z"
+}

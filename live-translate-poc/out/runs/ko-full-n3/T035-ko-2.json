@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T035",
+  "category": "emergency",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "我的護照不見了,請問警察局在哪裡?",
+  "reference": "제 여권을 잃어버렸는데요, 경찰서가 어디에 있나요?",
+  "inputTranscript": "我 的 护 照 不 见 了 , 请 问 警 察 局 在 哪 里 ?",
+  "outputTranscript": "제 여권이 없어졌어요. 경찰서가 어디에 있나요?",
+  "inputDurationMs": 3571,
+  "outputAudioMs": 4240,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1047,
+    "ttft_from_end_ms": 1045,
+    "completion_lag_ms": 1956,
+    "ttfa_from_start_ms": 4746
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.905,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:56:12.849Z"
+}

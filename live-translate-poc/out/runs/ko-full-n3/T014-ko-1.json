@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T014",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "這個不要辣,我不太能吃辣。",
+  "reference": "이거 맵지 않게 해주세요. 매운 걸 잘 못 먹어서요.",
+  "inputTranscript": "这 个 不 要 啦 , 我 不 太 能 吃 辣 。",
+  "outputTranscript": "이거는 안 할래요. 저는 매운 걸 잘 못 먹거든요.",
+  "inputDurationMs": 3251,
+  "outputAudioMs": 3840,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1001,
+    "ttft_from_end_ms": 958,
+    "completion_lag_ms": 1813,
+    "ttfa_from_start_ms": 4400
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.947,
+    "coverage_ok": true,
+    "cer": 0.091
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:51:19.889Z"
+}

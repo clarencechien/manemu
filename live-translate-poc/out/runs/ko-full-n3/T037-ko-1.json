@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T037",
+  "category": "emergency",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我的房間號碼是七〇二,我朋友昏倒了。",
+  "reference": "제 방 번호는 702호인데요, 제 친구가 쓰러졌어요.",
+  "inputTranscript": "我 的 房 间 号 码 是 702 , 我 朋 友 昏 倒 了 。",
+  "outputTranscript": "제 방 호수는 702호인데, 친구가 기절했어요.",
+  "inputDurationMs": 5811,
+  "outputAudioMs": 3971,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 918,
+    "ttft_from_end_ms": 918,
+    "completion_lag_ms": 1773,
+    "ttfa_from_start_ms": 6918
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.905,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:56:39.228Z"
+}

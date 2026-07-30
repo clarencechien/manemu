@@ -1,0 +1,36 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T043",
+  "category": "appointment",
+  "traps": [
+    "negation",
+    "honorific"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "請問最晚可以幾點取消,而不用付取消費?",
+  "reference": "취소 수수료 없이 몇 시까지 취소할 수 있나요?",
+  "inputTranscript": "请 问 最 晚 可 以 几 点 取 消 , 而 不 用 付 取 消 费 ?",
+  "outputTranscript": "늦어도 몇 시까지 취소해야 취소 수수료를 내지 않나요?",
+  "inputDurationMs": 4411,
+  "outputAudioMs": 4011,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 977,
+    "ttft_from_end_ms": 977,
+    "completion_lag_ms": 1762,
+    "ttfa_from_start_ms": 5577
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.222,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:58:13.650Z"
+}

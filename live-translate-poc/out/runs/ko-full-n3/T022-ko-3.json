@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T022",
+  "category": "shopping",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "太貴了,算我三千塊可以嗎?",
+  "reference": "너무 비싸요. 3000원에 해 주시면 안 돼요?",
+  "inputTranscript": "太 贵 了 , 算 我 3000 块 可 以 了 。",
+  "outputTranscript": "너무 비싸요, 3000원으로 해주시면 안 될까요?",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 3560,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 969,
+    "ttft_from_end_ms": 947,
+    "completion_lag_ms": 1700,
+    "ttfa_from_start_ms": 3869
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.111,
+    "coverage_ok": true,
+    "cer": 0.455
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:53:18.267Z"
+}

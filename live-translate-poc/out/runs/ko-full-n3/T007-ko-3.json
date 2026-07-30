@@ -1,0 +1,38 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T007",
+  "category": "transport",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "我要兩張到京都的車票,大人一張、小孩一張。",
+  "reference": "교토 가는 표 두 장 주세요. 어른 한 장, 어린이 한 장이요.",
+  "inputTranscript": "我 要 两 张 到 京 都 的 车 票 , 大 人 一 张 , 小 孩 一 张 。",
+  "outputTranscript": "교토까지 가는 표 두 장 주세요. 어른 한 장, 어린이 한 장이요.",
+  "inputDurationMs": 5051,
+  "outputAudioMs": 4580,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 960,
+    "ttft_from_end_ms": 960,
+    "completion_lag_ms": 1893,
+    "ttfa_from_start_ms": 6160
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2",
+      "1"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.095,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:50:01.372Z"
+}

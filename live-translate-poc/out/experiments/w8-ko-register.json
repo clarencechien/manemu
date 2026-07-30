@@ -1,0 +1,484 @@
+{
+ "items": {
+  "T002-3": {
+   "phraseId": "T002",
+   "category": "directions",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「실례지만」與아요體，對路人詢問地點自然有禮。"
+  },
+  "T002-1": {
+   "phraseId": "T002",
+   "category": "directions",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「실례지만」與「-나요?」禮貌自然，適合向路人或站務員詢問。"
+  },
+  "T003-2": {
+   "phraseId": "T003",
+   "category": "directions",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用해요體，對站務員或路人說明目的地自然有禮。"
+  },
+  "T003-1": {
+   "phraseId": "T003",
+   "category": "directions",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「거예요」的禮貌口語，適合向站務員或路人說明目的地。"
+  },
+  "T001-3": {
+   "phraseId": "T001",
+   "category": "directions",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "整體使用敬語，對陌生人詢問方向不失禮，但開頭略顯正式。"
+  },
+  "T001-2": {
+   "phraseId": "T001",
+   "category": "directions",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「죄송하지만」及「-나요/-을까요」禮貌自然，適合向站務員或路人問路。"
+  },
+  "T003-3": {
+   "phraseId": "T003",
+   "category": "directions",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「거예요」的禮貌語尾，適合向站務員或路人說明目的地。"
+  },
+  "T004-3": {
+   "phraseId": "T004",
+   "category": "directions",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「걸리나요」與「싶어요」的禮貌體，對陌生人詢路自然不失禮。"
+  },
+  "T001-1": {
+   "phraseId": "T001",
+   "category": "directions",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「여쭤볼게요、있나요、갈 수 있죠」等敬語，對路人詢問方向自然有禮。"
+  },
+  "T002-2": {
+   "phraseId": "T002",
+   "category": "directions",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「실례지만」與「있나요?」禮貌自然，適合向路人或工作人員問路。"
+  },
+  "T005-1": {
+   "phraseId": "T005",
+   "category": "directions",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「실례지만」與「-인가요?」禮貌自然，適合向路人或站務員問路。"
+  },
+  "T004-2": {
+   "phraseId": "T004",
+   "category": "directions",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用了禮貌的요體和詢問式，適合向路人或站務員詢問路程與表達搭計程車的意願。"
+  },
+  "T004-1": {
+   "phraseId": "T004",
+   "category": "directions",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用了禮貌的요體，對路人或站務員詢問路程自然得體。"
+  },
+  "T005-2": {
+   "phraseId": "T005",
+   "category": "directions",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「묻겠습니다」與「인가요」對陌生人詢問方向禮貌自然。"
+  },
+  "T006-2": {
+   "phraseId": "T006",
+   "category": "directions",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用敬語疑問與委婉說明，適合向陌生人詢問。"
+  },
+  "T006-1": {
+   "phraseId": "T006",
+   "category": "directions",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用了禮貌的아요/어요體，對陌生人詢問廁所並說明急迫情況自然得體。"
+  },
+  "T007-1": {
+   "phraseId": "T007",
+   "category": "transport",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「주세요」與「-이요」對站務員購票禮貌自然，語域合適。"
+  },
+  "T007-3": {
+   "phraseId": "T007",
+   "category": "transport",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「주세요」與「-이요」對站務員購票禮貌自然。"
+  },
+  "T007-2": {
+   "phraseId": "T007",
+   "category": "transport",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「주세요」與「-이요」向站務員購票自然有禮。"
+  },
+  "T006-3": {
+   "phraseId": "T006",
+   "category": "directions",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用나요與요體，對店員、站務員或路人詢問方向時禮貌自然。"
+  },
+  "T009-1": {
+   "phraseId": "T009",
+   "category": "transport",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用敬語且語氣自然，適合詢問陌生人座位是否有人。"
+  },
+  "T010-1": {
+   "phraseId": "T010",
+   "category": "transport",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「인가요?」禮貌自然，適合向站務員或路人詢問末班車時間。"
+  },
+  "T009-3": {
+   "phraseId": "T009",
+   "category": "transport",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「실례지만」與敬語「계신가요」禮貌自然，適合向陌生人詢問座位。"
+  },
+  "T005-3": {
+   "phraseId": "T005",
+   "category": "directions",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "對陌生人使用敬語自然有禮，但開頭稍正式仍可接受。"
+  },
+  "T008-3": {
+   "phraseId": "T008",
+   "category": "transport",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「-겠죠?」禮貌自然，適合向站務員詢問列車是否停靠京都。"
+  },
+  "T010-2": {
+   "phraseId": "T010",
+   "category": "transport",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「인가요?」禮貌自然，適合向站務員詢問末班車時間。"
+  },
+  "T008-1": {
+   "phraseId": "T008",
+   "category": "transport",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「않겠죠?」為禮貌確認語氣，適合向站務員詢問。"
+  },
+  "T011-1": {
+   "phraseId": "T011",
+   "category": "transport",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用어요體，對站務員或店員表達需求禮貌自然。"
+  },
+  "T011-2": {
+   "phraseId": "T011",
+   "category": "transport",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "對站務員或店員使用합니다體禮貌且自然。"
+  },
+  "T011-3": {
+   "phraseId": "T011",
+   "category": "transport",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用아요/어요體，對站務員或店員禮貌自然。"
+  },
+  "T008-2": {
+   "phraseId": "T008",
+   "category": "transport",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「-겠죠?」禮貌自然，適合向站務員或路人確認列車是否停靠京都。"
+  },
+  "T012-2": {
+   "phraseId": "T012",
+   "category": "transport",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用正式禮貌的請求語氣，適合向站務員詢問。"
+  },
+  "T012-1": {
+   "phraseId": "T012",
+   "category": "transport",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用敬語委婉詢問站務員，語氣得體自然。"
+  },
+  "T012-3": {
+   "phraseId": "T012",
+   "category": "transport",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用了죄송하지만與敬語請求，對站務員詢問班車方向自然有禮。"
+  },
+  "T013-1": {
+   "phraseId": "T013",
+   "category": "transport",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用어요體，對站務員說明遺失情況禮貌且自然。"
+  },
+  "T013-2": {
+   "phraseId": "T013",
+   "category": "transport",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用了禮貌的어요體，適合向站務員求助。"
+  },
+  "T010-3": {
+   "phraseId": "T010",
+   "category": "transport",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「인가요？」為禮貌詢問語氣，適合向站務員或路人詢問。"
+  },
+  "T014-1": {
+   "phraseId": "T014",
+   "category": "dining",
+   "repeat": 1,
+   "register": "mixed",
+   "acceptable": false,
+   "note": "「안 할래요」用於拒絕點餐不自然且語氣偏隨便，應改為「안 맵게 해 주세요」或「매운 건 빼 주세요」。"
+  },
+  "T014-2": {
+   "phraseId": "T014",
+   "category": "dining",
+   "repeat": 2,
+   "register": "mixed",
+   "acceptable": true,
+   "note": "整體是禮貌語，但「안 할래요」較像隨意地表示不想要，對店員說略不夠自然。"
+  },
+  "T015-2": {
+   "phraseId": "T015",
+   "category": "dining",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用요體禮貌自然，適合向餐廳店員說明人數與兒童椅需求。"
+  },
+  "T015-3": {
+   "phraseId": "T015",
+   "category": "dining",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用요體，對餐廳店員禮貌且自然。"
+  },
+  "T016-1": {
+   "phraseId": "T016",
+   "category": "dining",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「주세요」禮貌且適合對餐廳店員說明過敏需求。"
+  },
+  "T009-2": {
+   "phraseId": "T009",
+   "category": "transport",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「실례지만」與「없나요」對站務員或陌生人詢問座位是否有人，語氣禮貌自然。"
+  },
+  "T016-3": {
+   "phraseId": "T016",
+   "category": "dining",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用敬語請求，對餐廳店員自然有禮。"
+  },
+  "T015-1": {
+   "phraseId": "T015",
+   "category": "dining",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用禮貌的아요體，適合向餐廳店員提出需求。"
+  },
+  "T016-2": {
+   "phraseId": "T016",
+   "category": "dining",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「주세요」禮貌且適合向餐廳店員表達過敏需求。"
+  },
+  "T017-2": {
+   "phraseId": "T017",
+   "category": "dining",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用敬語請求，適合對店員點餐時說。"
+  },
+  "T018-3": {
+   "phraseId": "T018",
+   "category": "dining",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「주세요／해주세요」敬語，適合在餐廳向店員點餐。"
+  },
+  "T018-2": {
+   "phraseId": "T018",
+   "category": "dining",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用주세요與해주세요，對餐廳店員點餐禮貌自然。"
+  },
+  "T014-3": {
+   "phraseId": "T014",
+   "category": "dining",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用禮貌語尾，對餐廳店員說話自然有禮。"
+  },
+  "T017-3": {
+   "phraseId": "T017",
+   "category": "dining",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「빼주시고요」與點餐省略式語尾自然有禮，適合對店員說。"
+  },
+  "T013-3": {
+   "phraseId": "T013",
+   "category": "transport",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用了禮貌的어요體，適合向站務員或路人說明遺失手機。"
+  },
+  "T017-1": {
+   "phraseId": "T017",
+   "category": "dining",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "以「-주시고요」和「-이요」向店員點餐禮貌自然，整體不失禮。"
+  },
+  "T019-3": {
+   "phraseId": "T019",
+   "category": "dining",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用요體，對店員說話禮貌自然。"
+  },
+  "T020-1": {
+   "phraseId": "T020",
+   "category": "dining",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用敬語且語氣委婉，適合向餐廳店員詢問分開結帳。"
+  },
+  "T019-1": {
+   "phraseId": "T019",
+   "category": "dining",
+   "repeat": 1,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「-어요」敬語，對餐廳店員說話自然有禮。"
+  },
+  "T020-3": {
+   "phraseId": "T020",
+   "category": "dining",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用禮貌的敬語請求，適合對店員詢問分開結帳。"
+  },
+  "T021-2": {
+   "phraseId": "T021",
+   "category": "shopping",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「할게요」與「얼마예요」的敬語，對店員自然有禮。"
+  },
+  "T021-3": {
+   "phraseId": "T021",
+   "category": "shopping",
+   "repeat": 3,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用「-요」與「얼마인가요」對店員禮貌自然，省略主詞也符合購物情境。"
+  },
+  "T019-2": {
+   "phraseId": "T019",
+   "category": "dining",
+   "repeat": 2,
+   "register": "appropriate",
+   "acceptable": true,
+   "note": "使用요體敬語，對餐廳店員說話自然有禮。"
+  }
+ }
+}

@@ -1,0 +1,38 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T017",
+  "category": "dining",
+  "traps": [
+    "negation",
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "這杯不要加冰,然後大杯的改成中杯,總共三杯。",
+  "reference": "이거 얼음 넣지 말아주시고, 큰 사이즈는 중간 사이즈로 바꿔주세요. 총 세 잔이에요.",
+  "inputTranscript": "这 杯 不 要 加 冰 , 然 后 大 杯 的 改 成 中 杯 , 总 共 三 杯 。",
+  "outputTranscript": "이 잔은 얼음 빼주시고요, 큰 컵은 중간 컵으로 바꿔서, 총 세 잔이요.",
+  "inputDurationMs": 6491,
+  "outputAudioMs": 5730,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 949,
+    "ttft_from_end_ms": 949,
+    "completion_lag_ms": 2912,
+    "ttfa_from_start_ms": 7549
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "3"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.788,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:52:05.892Z"
+}

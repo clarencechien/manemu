@@ -29,5 +29,33 @@
   "netInject_ms": 0,
   "model": "models/gemini-3.1-flash-live-preview",
   "runtime": "cc-web-node",
-  "ts": "2026-07-30T00:48:37.958Z"
+  "ts": "2026-07-30T00:48:37.958Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「請問」翻譯為「말씀 좀 묻겠습니다」十分得體，後半句的詢問也完全符合原意，語法正確，語氣自然。"
+  },
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原意（詢問車站位置與哪條路比較快），因此語意忠實度高。用詞與語法都正確，但開頭的“말씀 좀 묻겠습니다.” 比較不自然或過於 격식的表達（參考譯文用較口語的“저기요”），句尾表現略顯書面，故流暢度略降一級。沒有遺漏、數字錯誤或增添虛構資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

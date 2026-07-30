@@ -1,0 +1,49 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T005",
+  "category": "directions",
+  "traps": [
+    "proper-noun"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "請問淺草寺跟晴空塔是同一個方向嗎?",
+  "reference": "저기요, 센소지랑 스카이트리가 같은 방향이에요?",
+  "inputTranscript": "请 问 前 草 寺 跟 晴 空 塔 是 同 一 个 方 向 吗 ?",
+  "outputTranscript": "실례지만 센소지와 스카이트리는 같은 방향인가요?",
+  "inputDurationMs": 4331,
+  "outputAudioMs": 3880,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 963,
+    "ttft_from_end_ms": 963,
+    "completion_lag_ms": 1744,
+    "ttfa_from_start_ms": 5463
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.05,
+    "coverage_ok": true,
+    "cer": 0.063
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:49:23.679Z",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完美傳達了原文的意思，語氣也十分得體。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
+}

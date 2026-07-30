@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T019",
+  "category": "dining",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "這道菜看起來很好吃,可是我已經吃飽了。",
+  "reference": "이 음식 맛있어 보이는데, 제가 이미 배가 불러서요.",
+  "inputTranscript": "这 道 菜 看 起 来 很 好 吃 , 可 是 我 已 经 吃 饱 了 。",
+  "outputTranscript": "이 음식은 맛있어 보이지만, 저는 이미 배가 불러요.",
+  "inputDurationMs": 4051,
+  "outputAudioMs": 4360,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 942,
+    "ttft_from_end_ms": 940,
+    "completion_lag_ms": 1920,
+    "ttfa_from_start_ms": 5142
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:52:36.246Z"
+}

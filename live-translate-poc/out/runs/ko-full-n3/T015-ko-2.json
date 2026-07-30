@@ -1,0 +1,38 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T015",
+  "category": "dining",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "我們總共五個人,有兩個小孩,需要兒童椅。",
+  "reference": "저희 총 다섯 명이고, 아이가 두 명 있어서 아기 의자가 필요해요.",
+  "inputTranscript": "我 们 总 共 五 个 人 , 有 两 个 小 孩 , 需 要 儿 童 椅 。",
+  "outputTranscript": "저희는 총 다섯 명이고, 아이가 두 명 있어서 어린이용 의자가 필요해요.",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4790,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 955,
+    "ttft_from_end_ms": 955,
+    "completion_lag_ms": 2122,
+    "ttfa_from_start_ms": 5256
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "5",
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 1.12,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:51:37.507Z"
+}

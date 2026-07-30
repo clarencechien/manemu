@@ -1,0 +1,33 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T009",
+  "category": "transport",
+  "traps": [],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "請問這個位子有人坐嗎?",
+  "reference": "저기요, 이 자리에 누구 있어요?",
+  "inputTranscript": "请 问 这 个 位 置 有 人 坐 吗 ?",
+  "outputTranscript": "실례지만 이 자리에 아무도 없나요?",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 2481,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 964,
+    "ttft_from_end_ms": 943,
+    "completion_lag_ms": 1608,
+    "ttfa_from_start_ms": 3564
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.167,
+    "coverage_ok": true,
+    "cer": 0.1
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:50:17.548Z"
+}

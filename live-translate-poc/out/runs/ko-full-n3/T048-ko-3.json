@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T048",
+  "category": "smalltalk",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "不用了,謝謝,我只是看看而已。",
+  "reference": "아니요, 괜찮아요, 그냥 구경하는 거예요.",
+  "inputTranscript": "不 用 了 , 谢 谢 , 我 只 是 看 看 而 已 。",
+  "outputTranscript": "괜찮아요, 감사합니다. 그냥 좀 둘러보고 있어요.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 4401,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 972,
+    "ttft_from_end_ms": 949,
+    "completion_lag_ms": 1898,
+    "ttfa_from_start_ms": 3972
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": false,
+    "coverage_ratio": 1.188,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:59:22.462Z"
+}

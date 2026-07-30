@@ -1,0 +1,33 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T034",
+  "category": "emergency",
+  "traps": [],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "救命!請幫我叫救護車!",
+  "reference": "살려주세요! 구급차 좀 불러 주세요!",
+  "inputTranscript": "救 命 , 请 帮 我 叫 救 护 车 。",
+  "outputTranscript": "살려주세요, 구급차 좀 불러주세요.",
+  "inputDurationMs": 2491,
+  "outputAudioMs": 2390,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 939,
+    "ttft_from_end_ms": 939,
+    "completion_lag_ms": 1326,
+    "ttfa_from_start_ms": 3538
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:55:54.862Z"
+}

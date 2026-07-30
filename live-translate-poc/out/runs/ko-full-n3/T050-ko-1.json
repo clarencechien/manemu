@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T050",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "那就麻煩你了,之後再聯絡。",
+  "reference": "그럼 부탁드릴게요, 나중에 다시 연락드릴게요.",
+  "inputTranscript": "那 就 麻 烦 你 了 , 之 后 再 联 络 。",
+  "outputTranscript": "그럼 부탁드릴게요. 나중에 다시 연락드릴게요.",
+  "inputDurationMs": 2811,
+  "outputAudioMs": 3470,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 977,
+    "ttft_from_end_ms": 976,
+    "completion_lag_ms": 1924,
+    "ttfa_from_start_ms": 3976
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:59:39.275Z"
+}

@@ -1,0 +1,38 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T024",
+  "category": "shopping",
+  "traps": [
+    "number",
+    "sentence-final"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "這件如果打八折的話,我就買兩件。",
+  "reference": "이거 20% 세일해 주시면 두 개 살게요.",
+  "inputTranscript": "这 件 如 果 打 八 折 的 话 , 我 就 买 两 件 。",
+  "outputTranscript": "이거 20% 할인이 되면 두 개 살게요.",
+  "inputDurationMs": 3491,
+  "outputAudioMs": 3360,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1064,
+    "ttft_from_end_ms": 1040,
+    "completion_lag_ms": 1789,
+    "ttfa_from_start_ms": 4664
+  },
+  "rules": {
+    "number_ok": false,
+    "numbers_missing": [
+      "2"
+    ],
+    "negation_ok": true,
+    "coverage_ratio": 0.933,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:53:45.545Z"
+}

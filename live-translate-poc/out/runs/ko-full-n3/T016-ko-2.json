@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T016",
+  "category": "dining",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "我對蝦子過敏,餐點裡請不要放任何海鮮。",
+  "reference": "새우 알레르기가 있어서 음식에 해산물은 넣지 말아주세요.",
+  "inputTranscript": "我 对 虾 子 过 敏 , 餐 点 里 请 不 要 放 任 何 海 鲜 。",
+  "outputTranscript": "저는 새우 알레르기가 있어서, 음식에 어떤 해산물도 넣지 말아 주세요.",
+  "inputDurationMs": 4491,
+  "outputAudioMs": 5640,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 955,
+    "ttft_from_end_ms": 955,
+    "completion_lag_ms": 2279,
+    "ttfa_from_start_ms": 5555
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.167,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:51:53.400Z"
+}

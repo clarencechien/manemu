@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T036",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我頭很暈,但是我沒有心臟病的病史。",
+  "reference": "머리가 많이 어지러운데요, 심장병 병력은 없어요.",
+  "inputTranscript": "我 头 很 晕 , 但 是 我 没 有 心 脏 病 的 病 史 。",
+  "outputTranscript": "머리가 많이 어지러운데, 심장병 이력은 없어요.",
+  "inputDurationMs": 3731,
+  "outputAudioMs": 4240,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 993,
+    "ttft_from_end_ms": 968,
+    "completion_lag_ms": 2348,
+    "ttfa_from_start_ms": 4894
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.95,
+    "coverage_ok": true,
+    "cer": 0.067
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:56:22.111Z"
+}

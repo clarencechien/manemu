@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T030",
+  "category": "hotel",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "請問退房時間是早上十點還是十一點?",
+  "reference": "체크아웃 시간이 오전 10시예요, 아니면 11시예요?",
+  "inputTranscript": "请 问 退 房 时 间 是 早 上 10 点 还 是 11 点 ?",
+  "outputTranscript": "죄송하지만 체크아웃 시간이 오전 10시인가요, 아니면 11시인가요?",
+  "inputDurationMs": 4171,
+  "outputAudioMs": 4980,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 926,
+    "ttft_from_end_ms": 925,
+    "completion_lag_ms": 2137,
+    "ttfa_from_start_ms": 5225
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.318,
+    "coverage_ok": true,
+    "cer": 0.25
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:55:00.646Z"
+}

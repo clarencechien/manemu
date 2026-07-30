@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T032",
+  "category": "hotel",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我明天不需要打掃房間,謝謝。",
+  "reference": "내일은 방 청소 안 해주셔도 돼요. 감사합니다.",
+  "inputTranscript": "我 明 天 不 需 要 打 扫 房 间 , 谢 谢 。",
+  "outputTranscript": "저는 내일 방 청소를 할 필요가 없어요, 감사합니다.",
+  "inputDurationMs": 3451,
+  "outputAudioMs": 3650,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 944,
+    "ttft_from_end_ms": 944,
+    "completion_lag_ms": 1648,
+    "ttfa_from_start_ms": 4543
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.111,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:55:29.625Z"
+}

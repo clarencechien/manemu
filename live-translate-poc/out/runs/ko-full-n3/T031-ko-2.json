@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T031",
+  "category": "hotel",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ko",
+  "repeat": 2,
+  "zh": "房間的冷氣好像壞了,可以請人來看一下嗎?",
+  "reference": "방 에어컨이 고장난 것 같은데요, 사람을 보내서 좀 봐 주실 수 있나요?",
+  "inputTranscript": "房 间 的 冷 气 好 像 坏 了 , 可 以 请 人 来 看 一 下 吗 ?",
+  "outputTranscript": "방의 에어컨이 고장 난 것 같은데, 사람을 불러서 좀 봐주실 수 있을까요?",
+  "inputDurationMs": 3971,
+  "outputAudioMs": 5001,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 1041,
+    "ttft_from_end_ms": 1019,
+    "completion_lag_ms": 3455,
+    "ttfa_from_start_ms": 5141
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.037,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:55:21.199Z"
+}

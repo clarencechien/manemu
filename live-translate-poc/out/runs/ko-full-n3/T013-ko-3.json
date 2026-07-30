@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T013",
+  "category": "transport",
+  "traps": [
+    "sentence-final"
+  ],
+  "dir": "ko",
+  "repeat": 3,
+  "zh": "我剛剛在月台上把手機弄丟了。",
+  "reference": "방금 승강장에서 휴대폰을 잃어버렸어요.",
+  "inputTranscript": "我 刚 刚 在 乐 台 上 把 手 机 弄 丢 了 。",
+  "outputTranscript": "방금 승강장에서 휴대폰을 잃어버렸어요.",
+  "inputDurationMs": 2771,
+  "outputAudioMs": 2971,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 940,
+    "ttft_from_end_ms": 918,
+    "completion_lag_ms": 1880,
+    "ttfa_from_start_ms": 3841
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1,
+    "coverage_ok": true,
+    "cer": 0.231
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:51:16.290Z"
+}

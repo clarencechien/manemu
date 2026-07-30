@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T045",
+  "category": "smalltalk",
+  "traps": [
+    "honorific"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "謝謝你的幫忙,今天真的麻煩你了。",
+  "reference": "도와주셔서 감사해요, 오늘 정말 신세 많이 졌어요.",
+  "inputTranscript": "谢 谢 你 的 帮 忙 , 今 天 真 的 麻 烦 你 了 。",
+  "outputTranscript": "도와주셔서 감사합니다. 오늘 정말 번거롭게 해드렸네요.",
+  "inputDurationMs": 3091,
+  "outputAudioMs": 4010,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 979,
+    "ttft_from_end_ms": 975,
+    "completion_lag_ms": 3028,
+    "ttfa_from_start_ms": 4179
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.15,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:58:35.324Z"
+}

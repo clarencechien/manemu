@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T038",
+  "category": "emergency",
+  "traps": [
+    "negation"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我不能打青黴素,我會過敏。",
+  "reference": "저는 페니실린을 맞으면 안 돼요, 알레르기가 있어요.",
+  "inputTranscript": "我 不 能 打 青 霉 素 , 我 会 过 敏 。",
+  "outputTranscript": "저는 페니실린을 맞을 수 없어요. 알레르기가 있거든요.",
+  "inputDurationMs": 2611,
+  "outputAudioMs": 3480,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 905,
+    "ttft_from_end_ms": 904,
+    "completion_lag_ms": 1592,
+    "ttfa_from_start_ms": 3705
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 1.048,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:56:49.374Z"
+}

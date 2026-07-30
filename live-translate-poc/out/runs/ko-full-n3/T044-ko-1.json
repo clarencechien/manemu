@@ -1,0 +1,35 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T044",
+  "category": "appointment",
+  "traps": [
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我們會晚三十分鐘到,位子可以保留嗎?",
+  "reference": "저희가 30분 늦게 도착할 것 같은데, 자리 좀 맡아 주실 수 있을까요?",
+  "inputTranscript": "我 们 会 晚 三 十 分 钟 到 , 位 子 可 以 保 留 吗 ?",
+  "outputTranscript": "저희가 30분 늦게 도착할 것 같은데, 자리를 맡아 주실 수 있나요?",
+  "inputDurationMs": 4211,
+  "outputAudioMs": 5601,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 965,
+    "ttft_from_end_ms": 942,
+    "completion_lag_ms": 2161,
+    "ttfa_from_start_ms": 5365
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.963,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:58:23.287Z"
+}

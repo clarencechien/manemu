@@ -1,0 +1,36 @@
+{
+  "runId": "ko-full-n3",
+  "phraseId": "T028",
+  "category": "hotel",
+  "traps": [
+    "proper-noun",
+    "number"
+  ],
+  "dir": "ko",
+  "repeat": 1,
+  "zh": "我有訂房,名字是陳大文,今天住兩個晚上。",
+  "reference": "예약했는데요, 이름은 천다원이에요. 오늘부터 2박이에요.",
+  "inputTranscript": "我 有 订 房 , 名 字 是 陈 大 文 , 今 天 住 两 个 晚 上 。",
+  "outputTranscript": "예약했습니다. 이름은 진대문이고, 오늘부터 2박입니다.",
+  "inputDurationMs": 5251,
+  "outputAudioMs": 4441,
+  "turnCompleted": true,
+  "latency": {
+    "ttfa_from_end_ms": 944,
+    "ttft_from_end_ms": 944,
+    "completion_lag_ms": 1940,
+    "ttfa_from_start_ms": 6345
+  },
+  "rules": {
+    "number_ok": true,
+    "numbers_missing": [],
+    "negation_ok": true,
+    "coverage_ratio": 0.958,
+    "coverage_ok": true,
+    "cer": 0
+  },
+  "netInject_ms": 0,
+  "model": "models/gemini-3.1-flash-live-preview",
+  "runtime": "cc-web-node",
+  "ts": "2026-07-30T00:54:31.524Z"
+}
