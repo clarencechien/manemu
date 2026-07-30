@@ -68,13 +68,39 @@ export async function verifyGoogleIdToken(idToken, clientId, expectedNonce) {
   return payload;
 }
 
-export async function isAllowlisted(email, env) {
+/* ---- 白名單 + 分級(為日後不同收費留彈性) ----
+   allowlist.json 支援兩種格式(R2 熱更新,改檔即生效、不用重部署):
+     ["a@x.com", "b@x.com"]                     → 全部套 DEFAULT_TIER
+     {"a@x.com": "admin", "b@x.com": "beta"}    → 逐人分級
+   分級的秒數在 var QUOTA_TIERS 定義,0 = 無上限。 */
+export async function resolveUser(email, env) {
+  const lower = String(email).toLowerCase();
+  let tier = null;
   try {
     const obj = await env.CONFIG.get("allowlist.json");
-    if (!obj) return false;
-    const list = await obj.json();
-    return Array.isArray(list) && list.map((e) => String(e).toLowerCase()).includes(email.toLowerCase());
-  } catch { return false; }
+    if (obj) {
+      const data = await obj.json();
+      if (Array.isArray(data)) {
+        if (data.map((e) => String(e).toLowerCase()).includes(lower)) tier = env.DEFAULT_TIER || "beta";
+      } else if (data && typeof data === "object") {
+        const hit = Object.entries(data).find(([k]) => k.toLowerCase() === lower);
+        if (hit) tier = String(hit[1] || env.DEFAULT_TIER || "beta");
+      }
+    }
+  } catch { /* 讀不到就當不在名單 */ }
+
+  const isAdmin = (env.ADMIN_EMAILS || "").toLowerCase().split(",").map((s) => s.trim()).filter(Boolean).includes(lower);
+  if (isAdmin) tier = "admin";              // admin 一律最高級,不受名單格式影響
+  if (!tier) return { allowed: false, tier: null, limitSeconds: 0, isAdmin: false };
+
+  // 名單值可以是級別名(beta/pro/admin…)或直接給秒數(3600 / "3600")→ 自訂額度
+  if (/^\d+$/.test(String(tier))) {
+    return { allowed: true, tier: "custom", limitSeconds: Number(tier), isAdmin };
+  }
+  let tiers = {};
+  try { tiers = JSON.parse(env.QUOTA_TIERS || "{}"); } catch { /* 格式錯就退回預設 */ }
+  const limitSeconds = tier in tiers ? Number(tiers[tier]) : Number(env.DAILY_SECONDS_LIMIT || 1800);
+  return { allowed: true, tier, limitSeconds, isAdmin };
 }
 
 export const randomHex = (n = 16) =>

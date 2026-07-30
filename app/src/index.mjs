@@ -1,7 +1,8 @@
 // manemu Worker:路由 + Google OIDC + 白名單 + WS relay 轉發 + 回譯 + 測試模式記錄。
 // 安全設計見 live-translate-poc/docs/m3-spec.md §5.6。
-import { sign, verify, cookieGet, cookieSet, sessionFrom, verifyGoogleIdToken, isAllowlisted, randomHex, b64u } from "./auth.mjs";
+import { sign, verify, cookieGet, cookieSet, sessionFrom, verifyGoogleIdToken, resolveUser, randomHex, b64u } from "./auth.mjs";
 export { RelaySession } from "./relay.mjs";
+import { handleAdmin, addToWaitlist } from "./admin.mjs";
 
 const SEC_HEADERS = {
   // Turnstile 需要 challenges.cloudflare.com 的 script 與 iframe
@@ -80,7 +81,8 @@ export default {
       const tok = await tr.json();
       const claims = tok.id_token && await verifyGoogleIdToken(tok.id_token, env.GOOGLE_CLIENT_ID, st.nonce);
       if (!claims) return new Response("token verification failed", { status: 403 });
-      if (!(await isAllowlisted(claims.email, env))) {
+      if (!(await resolveUser(claims.email, env)).allowed) {
+        await addToWaitlist(claims.email, env).catch(() => {}); // 記進等候名單,admin 可一鍵核准
         return new Response(null, { status: 302, headers: { location: "/?waitlist=1", "set-cookie": cookieSet("mn_oauth", "", 0) } });
       }
       const session = await sign({ email: claims.email, exp: Date.now() / 1000 + 7 * 86400 }, env.SESSION_SECRET);
@@ -99,6 +101,11 @@ export default {
       if (!session) return Response.json({ error: "unauthorized" }, { status: 401 });
     }
 
+    if (p.startsWith("/api/admin/")) {
+      if (!user.isAdmin) return Response.json({ error: "admin_only" }, { status: 403 });
+      return handleAdmin(req, env, p);
+    }
+
     if (p === "/api/debug") {
       // 已在 session 閘門後、且只回自己 DO 的診斷(無金鑰材料);封測結束把 var 改 off
       if (env.DEBUG_ENDPOINT === "off") return Response.json({ error: "disabled" }, { status: 404 });
@@ -106,15 +113,21 @@ export default {
       return stub.fetch("https://do/debug");
     }
 
+    // 每次請求重算分級 → R2 白名單改了立刻生效(不用重登入、不用重部署)
+    const user = await resolveUser(session.email, env);
+    if (!user.allowed) return Response.json({ error: "not_allowlisted" }, { status: 403 });
+
     if (p === "/api/me") {
       const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
-      const u = await (await stub.fetch("https://do/usage")).json();
-      return Response.json({ email: session.email, ...u });
+      const u = await (await stub.fetch(`https://do/usage?limit=${user.limitSeconds}`)).json();
+      return Response.json({ email: session.email, tier: user.tier, isAdmin: user.isAdmin, ...u });
     }
 
     if (p === "/ws") {
       const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
-      return stub.fetch(req);
+      const wsUrl = new URL(req.url);
+      wsUrl.searchParams.set("limit", String(user.limitSeconds)); // 額度由 Worker 決定,DO 只執行
+      return stub.fetch(new Request(wsUrl, req));
     }
 
     if (p === "/api/backtranslate" && req.method === "POST") {
@@ -143,6 +156,10 @@ export default {
     }
 
     /* ---------- 靜態 ---------- */
+    if (p === "/admin") {
+      const u = new URL(req.url); u.pathname = "/admin.html";
+      return withSec(await env.ASSETS.fetch(new Request(u, req)));
+    }
     return withSec(await env.ASSETS.fetch(req));
   },
 };

@@ -36,9 +36,39 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
    - Bot Fight Mode、Always Use HTTPS、Min TLS 1.2:全部免費,開。
    - **不需要為安全升 Pro**:錢包防線是白名單 + DO 每日配額(程式內),WAF 只是擋噪音的第二層。
 
-## 配額(vars,可在 dashboard 改)
+## 配額與分級(UI 出來前的彈性機制)
 
-`DAILY_SECONDS_LIMIT=1800`(每人每日 30 分鐘)、`SESSION_HARD_CAP_S=120`(單句上限)。
+**計量**:每日翻譯**秒數**(session 牆鐘,含預熱與收斂),不是次數;一句約 10–20 秒。
+**失敗不計費**:沒有任何輸出的 session(連不上/沒聽到/逾時)不扣額度。
+**重置**:UTC 00:00(台灣早上 08:00)。
+
+**分級表(var `QUOTA_TIERS`,0 = 無上限)**
+```json
+{"admin":0,"pro":10800,"beta":1800,"trial":600}
+```
+**指定某人的級別**:R2 `allowlist.json` 兩種格式都吃,**改檔即生效、不用重部署也不用重登入**:
+```json
+["a@x.com","b@x.com"]                    // 全部套 DEFAULT_TIER(beta)
+{"a@x.com":"admin","b@x.com":"trial"}    // 逐人分級
+```
+**Admin**:var `ADMIN_EMAILS`(逗號分隔)——列在裡面的 email 一律 admin 級(無上限),
+不受白名單格式影響,適合自己與內部帳號。
+
+其他:`SESSION_HARD_CAP_S=120`(單句硬上限)、`DAILY_SECONDS_LIMIT`(分級表查不到時的後備值)。
+
+名單值也可以直接是**秒數**(`{"a@x.com": 7200}` = 60 分... 實為 120 分/日),級別名或秒數都吃。
+
+> 日後要接金流:把「付費方案 → tier 名稱」寫進 `QUOTA_TIERS`,付款成功後更新 R2 白名單的 tier 即可;
+> 之後有後台再把這份 JSON 換成 KV/D1,Worker 端只有 `resolveUser()` 要改。
+
+## 管理頁 `/admin`(僅 ADMIN_EMAILS)
+
+- 網址:`https://manemu.ai-apps.work/admin`——非 admin 開啟只看到「沒有管理權限」,
+  所有 `/api/admin/*` 端點也擋在 session + admin 雙閘門後。
+- **等候名單**:有人用不在名單內的 Google 帳號登入 → 自動寫進 `r2://manemu-config/waitlist.json`
+  → 管理頁一鍵「核准(可選級別)」或「忽略」。核准後對方**下一次操作立即生效**(無需重登入)。
+- **已核准名單**:改級別、填自訂秒數、移除;`ADMIN_EMAILS` 內的帳號不可從 UI 移除(防手滑鎖死自己)。
+- 資料就是 R2 的兩個 JSON,想手動改也行(`wrangler r2 object put`),兩邊等價。
 
 ## 測試模式 = R1 真人語音收集
 

@@ -22,7 +22,9 @@ const TEST_LINES = [
   { id: "T037", zh: "我的房間號碼是七〇二,我朋友昏倒了。" }, { id: "T044", zh: "我們會晚三十分鐘到,位子可以保留嗎?" },
 ];
 
-const S = { lang: "ja", scene: "general", fast: false, test: false, testIdx: 0, busy: false, msgCount: 0, email: null };
+const S = { lang: "ja", scene: "general", fast: false, test: false, testIdx: 0, busy: false, msgCount: 0,
+            email: null, tier: null, usedSeconds: 0, limitSeconds: 0 };
+const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 音訊:擷取(worklet)與播放(24k) ============ */
 let audioCtx = null, mediaStream = null, workletNode = null, srcNode = null;
@@ -74,6 +76,11 @@ async function runUtterance({ side, ui }) {
   finally { S.busy = false; try { stopCapture(); } catch {} window.__pttRelease = null; }
 }
 async function runUtteranceInner({ side, ui }) {
+  // 額度預檢:用完就別開麥克風/連線,直接給明確文案
+  if (quotaLeft() <= 0) {
+    ui.status(`今天的翻譯額度用完了(${Math.round(S.limitSeconds / 60)} 分鐘),明天 UTC 00:00 重置`, false);
+    return;
+  }
   const t0 = performance.now();
   ui.status("連線中…", true);
   const lang = side === "me" ? S.lang : "zh";
@@ -133,6 +140,16 @@ async function runUtteranceInner({ side, ui }) {
 
   // 空結果 = 鏈路斷了:把斷點直接寫在氣泡上,不假裝成功
   if (!outTx) {
+    await refreshUsage();                                   // 可能是額度剛用完
+    if (quotaLeft() <= 0) {
+      el.txEl.innerHTML = `<span style="color:var(--warn)">今天的翻譯額度用完了</span>`;
+      const d = document.createElement("div");
+      d.className = "backtx"; d.style.borderColor = "var(--warn)";
+      d.textContent = `上限 ${Math.round(S.limitSeconds / 60)} 分鐘/日,UTC 00:00 重置。這次沒有成功所以不計費。`;
+      el.host?.querySelector(".bubble")?.appendChild(d);
+      ui.done({ side, inTx, outTx, deadAir: null, completionMs: 0, lagS: "0.0" }, el);
+      return;
+    }
     const s = doneStats;
     const diag = relayError ? `relay 錯誤:${relayError}`
       : s ? `斷點診斷:上游${s.upstreamOpened ? "已連" : "未連(status=" + s.upstreamStatus + ", key=" + s.hasKey + ")"}`
@@ -359,7 +376,11 @@ function resetConversation() {
 async function refreshUsage() {
   try {
     const d = await (await fetch("/api/me")).json();
-    if (d.usedSeconds !== undefined) $("usage").textContent = `今日 ${Math.round(d.usedSeconds / 60)}/${Math.round(d.limitSeconds / 60)} 分`;
+    if (d.usedSeconds === undefined) return;
+    S.usedSeconds = d.usedSeconds; S.limitSeconds = d.limitSeconds; S.tier = d.tier;
+    $("usage").textContent = d.limitSeconds > 0
+      ? `今日 ${Math.round(d.usedSeconds / 60)}/${Math.round(d.limitSeconds / 60)} 分`
+      : `今日 ${Math.round(d.usedSeconds / 60)} 分・無上限`;
   } catch {}
 }
 
@@ -406,9 +427,12 @@ async function mountTurnstile() {
     await mountTurnstile();
     return;
   }
-  S.email = me.email;
+  S.email = me.email; S.tier = me.tier;
+  S.usedSeconds = me.usedSeconds; S.limitSeconds = me.limitSeconds;
   $("appScreen").classList.remove("hidden");
-  $("usage").textContent = `今日 ${Math.round(me.usedSeconds / 60)}/${Math.round(me.limitSeconds / 60)} 分`;
+  $("usage").textContent = me.limitSeconds > 0
+    ? `今日 ${Math.round(me.usedSeconds / 60)}/${Math.round(me.limitSeconds / 60)} 分`
+    : `今日 ${Math.round(me.usedSeconds / 60)} 分・無上限`;
   applyLang(); renderEmpty();
 
   bindPtt($("pttMe"), "me", chatUI);

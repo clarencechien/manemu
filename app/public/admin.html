@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>manemu 名單管理</title>
+<style>
+  :root{
+    --paper:#F6F7F5; --ink:#1C2726; --ink-2:#5A6B68; --line:#DDE3E0; --chip:#ECEFED;
+    --me:#C0392B; --them:#33587A; --ok:#2E7D4F; --ok-soft:#E3F0E8; --warn:#9A6B00; --warn-soft:#F7EFD8;
+  }
+  @media (prefers-color-scheme: dark){ :root{
+    --paper:#151D1C; --ink:#E8ECEA; --ink-2:#93A29E; --line:#2A3634; --chip:#222C2A;
+    --me:#E05A48; --them:#7BA3CC; --ok:#63B588; --ok-soft:#1D2E25; --warn:#D9A93F; --warn-soft:#33290F;
+  }}
+  *{box-sizing:border-box; margin:0}
+  body{
+    font-family:"PingFang TC","Hiragino Sans","Microsoft JhengHei","Noto Sans TC",system-ui,sans-serif;
+    background:var(--paper); color:var(--ink); line-height:1.6;
+    max-width:860px; margin:0 auto; padding:28px 20px 60px;
+  }
+  h1{font-size:22px; letter-spacing:.02em}
+  h1 small{font-size:12px; font-weight:400; color:var(--ink-2); margin-left:10px; letter-spacing:.1em}
+  h2{font-size:15px; margin:32px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--line); letter-spacing:.04em}
+  h2 .count{color:var(--ink-2); font-weight:400; font-size:13px; margin-left:6px}
+  table{width:100%; border-collapse:collapse; font-size:14px}
+  th,td{text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); vertical-align:middle}
+  th{font-size:11.5px; letter-spacing:.08em; color:var(--ink-2); font-weight:600}
+  td.email{word-break:break-all}
+  .tier{display:inline-block; font-size:11.5px; padding:2px 8px; border-radius:99px; background:var(--chip); color:var(--ink-2)}
+  .tier.admin{background:var(--warn-soft); color:var(--warn)}
+  .tier.custom{background:var(--ok-soft); color:var(--ok)}
+  .ts{font-size:12px; color:var(--ink-2); font-variant-numeric:tabular-nums}
+  input,select,button{font:inherit; font-size:14px}
+  input[type=email],input[type=text],select{
+    padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink);
+  }
+  input[type=email]{min-width:230px}
+  button{padding:8px 13px; border-radius:8px; border:1px solid var(--line); background:var(--chip); color:var(--ink); cursor:pointer}
+  button.primary{background:var(--ink); color:var(--paper); border-color:var(--ink); font-weight:600}
+  button.danger{color:var(--me); border-color:var(--me)}
+  button:hover{filter:brightness(.96)}
+  button:focus-visible{outline:2px solid var(--them); outline-offset:2px}
+  form.add{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:14px 0 4px}
+  .hint{font-size:12.5px; color:var(--ink-2); margin-top:6px}
+  .empty{font-size:13.5px; color:var(--ink-2); padding:14px 6px}
+  #toast{
+    position:fixed; left:50%; bottom:24px; transform:translateX(-50%);
+    background:var(--ink); color:var(--paper); padding:10px 16px; border-radius:10px; font-size:13.5px;
+    opacity:0; transition:opacity .2s; pointer-events:none; max-width:90vw;
+  }
+  #toast.show{opacity:1}
+  .gate{padding:40px 0; font-size:15px}
+  .gate a{color:var(--them)}
+  .row-actions{display:flex; gap:6px; align-items:center; flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div id="gate" class="gate">載入中…</div>
+
+<div id="main" hidden>
+  <h1>名單管理<small id="whoami"></small></h1>
+
+  <h2>等候名單<span class="count" id="waitCount"></span></h2>
+  <div id="waitBox"></div>
+
+  <h2>已核准名單<span class="count" id="allowCount"></span></h2>
+  <form class="add" id="addForm">
+    <input type="email" id="addEmail" placeholder="email@example.com" required>
+    <select id="addTier"></select>
+    <input type="text" id="addCustom" placeholder="或自訂秒數" size="10" inputmode="numeric">
+    <button class="primary" type="submit">加入名單</button>
+  </form>
+  <p class="hint" id="tierHint"></p>
+  <div id="allowBox"></div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+let DATA = null;
+
+function toast(msg) {
+  const t = $("toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("show"), 2600);
+}
+const api = async (path, body) => {
+  const r = await fetch(path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {});
+  const d = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(d.error || `HTTP ${r.status}`);
+  return d;
+};
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const mins = (sec) => (Number(sec) === 0 ? "無上限" : `${Math.round(Number(sec) / 60)} 分/日`);
+
+function tierLabel(value) {
+  const isNum = /^\d+$/.test(String(value));
+  const cls = isNum ? "custom" : (value === "admin" ? "admin" : "");
+  const limit = isNum ? Number(value) : DATA.tiers[value];
+  const detail = limit === undefined ? "級別未定義" : mins(limit);
+  return `<span class="tier ${cls}">${esc(isNum ? "自訂" : value)}</span> <span class="ts">${detail}</span>`;
+}
+
+function tierOptions(selected) {
+  return Object.keys(DATA.tiers).map((t) =>
+    `<option value="${esc(t)}"${t === selected ? " selected" : ""}>${esc(t)} · ${mins(DATA.tiers[t])}</option>`).join("");
+}
+
+function render() {
+  // 等候名單
+  $("waitCount").textContent = DATA.waitlist.length ? `(${DATA.waitlist.length})` : "";
+  $("waitBox").innerHTML = DATA.waitlist.length === 0
+    ? `<p class="empty">目前沒有人在等候。有人用不在名單內的 Google 帳號登入,就會自動出現在這裡。</p>`
+    : `<table><thead><tr><th>EMAIL</th><th>申請時間</th><th>動作</th></tr></thead><tbody>${
+        DATA.waitlist.map((w) => `<tr>
+          <td class="email">${esc(w.email)}</td>
+          <td class="ts">${esc(String(w.ts).replace("T", " ").slice(0, 16))}</td>
+          <td><div class="row-actions">
+            <select data-approve-tier="${esc(w.email)}">${tierOptions(DATA.defaultTier)}</select>
+            <button class="primary" data-approve="${esc(w.email)}">核准</button>
+            <button class="danger" data-wait-remove="${esc(w.email)}">忽略</button>
+          </div></td></tr>`).join("")}</tbody></table>`;
+
+  // 已核准
+  const entries = Object.entries(DATA.allowlist).sort((a, b) => a[0].localeCompare(b[0]));
+  $("allowCount").textContent = entries.length ? `(${entries.length})` : "";
+  $("allowBox").innerHTML = entries.length === 0
+    ? `<p class="empty">名單是空的。</p>`
+    : `<table><thead><tr><th>EMAIL</th><th>額度</th><th>動作</th></tr></thead><tbody>${
+        entries.map(([email, tier]) => {
+          const isAdminVar = DATA.admins.includes(email);
+          return `<tr>
+            <td class="email">${esc(email)}${isAdminVar ? ' <span class="tier admin">ADMIN_EMAILS</span>' : ""}</td>
+            <td>${tierLabel(tier)}</td>
+            <td><div class="row-actions">
+              <select data-change-tier="${esc(email)}">${tierOptions(String(tier))}</select>
+              <button data-change="${esc(email)}">改額度</button>
+              ${isAdminVar ? "" : `<button class="danger" data-remove="${esc(email)}">移除</button>`}
+            </div></td></tr>`;
+        }).join("")}</tbody></table>`;
+
+  $("addTier").innerHTML = tierOptions(DATA.defaultTier);
+  $("tierHint").textContent = `級別定義在 QUOTA_TIERS 變數:` +
+    Object.entries(DATA.tiers).map(([t, s]) => `${t}=${mins(s)}`).join("、") +
+    `。填「自訂秒數」會覆蓋級別選單(例:3600 = 60 分/日)。名單改動立即生效,不用重部署。`;
+}
+
+async function reload() { DATA = await api("/api/admin/data"); render(); }
+
+document.addEventListener("click", async (e) => {
+  const b = e.target.closest("button");
+  if (!b) return;
+  try {
+    if (b.dataset.approve) {
+      const tier = document.querySelector(`[data-approve-tier="${CSS.escape(b.dataset.approve)}"]`).value;
+      await api("/api/admin/allow", { email: b.dataset.approve, tier });
+      toast(`已核准 ${b.dataset.approve}(${tier})`);
+      await reload();
+    } else if (b.dataset.waitRemove) {
+      await api("/api/admin/waitlist-remove", { email: b.dataset.waitRemove });
+      toast("已從等候名單移除"); await reload();
+    } else if (b.dataset.change) {
+      const tier = document.querySelector(`[data-change-tier="${CSS.escape(b.dataset.change)}"]`).value;
+      await api("/api/admin/allow", { email: b.dataset.change, tier });
+      toast(`${b.dataset.change} → ${tier}`); await reload();
+    } else if (b.dataset.remove) {
+      if (!confirm(`確定把 ${b.dataset.remove} 移出名單?他下一次操作就會被擋下。`)) return;
+      await api("/api/admin/remove", { email: b.dataset.remove });
+      toast("已移除"); await reload();
+    }
+  } catch (err) { toast("失敗:" + err.message); }
+});
+
+$("addForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = $("addEmail").value.trim();
+  const custom = $("addCustom").value.trim();
+  const tier = custom || $("addTier").value;
+  try {
+    await api("/api/admin/allow", { email, tier });
+    toast(`已加入 ${email}`);
+    $("addEmail").value = ""; $("addCustom").value = "";
+    await reload();
+  } catch (err) { toast("失敗:" + err.message); }
+});
+
+(async function boot() {
+  let me = null;
+  try { const r = await fetch("/api/me"); if (r.ok) me = await r.json(); } catch {}
+  if (!me) { $("gate").innerHTML = `請先 <a href="/auth/login">登入</a>。`; return; }
+  if (!me.isAdmin) { $("gate").textContent = `${me.email} 沒有管理權限。`; return; }
+  $("whoami").textContent = me.email;
+  try {
+    await reload();
+    $("gate").hidden = true; $("main").hidden = false;
+  } catch (err) { $("gate").textContent = "讀取失敗:" + err.message; }
+})();
+</script>
+</body>
+</html>

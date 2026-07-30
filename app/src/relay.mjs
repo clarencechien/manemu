@@ -50,9 +50,12 @@ export class RelaySession {
 
   async fetch(req) {
     const url = new URL(req.url);
+    // 額度上限由 Worker 依分級傳入(0 = 無上限);DO 只負責計數與執行
+    const limitSeconds = url.searchParams.has("limit")
+      ? Number(url.searchParams.get("limit")) : Number(this.env.DAILY_SECONDS_LIMIT || 1800);
     if (url.pathname === "/usage") {
       const { used } = await this.usage();
-      return Response.json({ usedSeconds: Math.round(used), limitSeconds: Number(this.env.DAILY_SECONDS_LIMIT) });
+      return Response.json({ usedSeconds: Math.round(used), limitSeconds });
     }
     if (url.pathname === "/debug") {
       // 上一個 session 的完整事件統計:診斷「氣泡空白」時看鏈斷在哪
@@ -61,7 +64,9 @@ export class RelaySession {
     if (req.headers.get("Upgrade") !== "websocket") return new Response("expected websocket", { status: 426 });
 
     const { used } = await this.usage();
-    if (used >= Number(this.env.DAILY_SECONDS_LIMIT)) return new Response("daily quota exceeded", { status: 429 });
+    if (limitSeconds > 0 && used >= limitSeconds) {
+      return Response.json({ error: "quota_exceeded", usedSeconds: Math.round(used), limitSeconds }, { status: 429 });
+    }
 
     const lang = url.searchParams.get("lang") || "ja";
     const engine = url.searchParams.get("engine") || "accurate";
@@ -128,10 +133,12 @@ export class RelaySession {
       if (closed) return;
       closed = true;
       stats.finishReason = reason;
-      saveStats();
       const seconds = (Date.now() - t0) / 1000;
-      this.addUsage(seconds).catch(() => {});
-      try { client.send(JSON.stringify({ type: "done", reason, seconds: Math.round(seconds), stats })); } catch {}
+      // 失敗不計費:沒有任何輸出的 session(連不上/沒聽到/逾時)不扣額度
+      stats.charged = gotOutput;
+      saveStats();
+      if (gotOutput) this.addUsage(seconds).catch(() => {});
+      try { client.send(JSON.stringify({ type: "done", reason, seconds: Math.round(seconds), charged: gotOutput, stats })); } catch {}
       try { upstream.close(); } catch {}
       try { client.close(); } catch {}
       clearInterval(watchdog);

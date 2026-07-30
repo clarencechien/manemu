@@ -30,6 +30,10 @@
     "CANONICAL_HOST": "manemu.ai-apps.work",
     // 非秘密設定;秘密(GEMINI_API_KEY / GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET / SESSION_SECRET)
     // 用 wrangler secret put 設,絕不進 repo
+    // 額度分級:0 = 無上限。日後要收費就在這加級別、在 R2 白名單標人,不用改碼
+    "QUOTA_TIERS": "{\"admin\":0,\"pro\":10800,\"beta\":1800,\"trial\":600}",
+    "DEFAULT_TIER": "beta",
+    "ADMIN_EMAILS": "clarence.chien@gmail.com",
     "DAILY_SECONDS_LIMIT": "1800",
     "SESSION_HARD_CAP_S": "120",
     "ACCURATE_MODEL": "models/gemini-3.1-flash-live-preview",
