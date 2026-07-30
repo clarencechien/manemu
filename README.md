@@ -52,6 +52,11 @@
 **隱私**:一般對話零留存;唯一收內容的是使用者主動開啟的 🧪 測試模式(明示記錄)。
 細節與 log 落點清單見 `app/README.md`「Log 與隱私」。
 
+**延遲與網路**:死氣的代表值是**台灣行動網路的 ~0.4s**;HiNet 光世代因 Cloudflare 免費方案
+路由(colo=SIN)會拉到 ~2s——已知、已接受(場景是旅途不是家用,查法 `/cdn-cgi/trace`)。
+港系便宜 eSIM 也能用:AI 呼叫在伺服器端,Google 看不到使用者 IP。
+漫遊/eSIM 路徑預測表見 `app/README.md`「網路路徑與死氣」。
+
 **下一步**(`docs/run3-plan.md`):R1 真人語音資料集(測試模式已在自動收集)、M4 真機 dogfood
 (劇本見 `docs/m4-scripts.md`)。五語已全部進語言下拉;泰語附「尾詞 ครับ/ค่ะ」設定
 (鎖進 systemInstruction,解決每 session 隨機切換的問題),越/泰待真機驗證。
