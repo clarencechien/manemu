@@ -214,7 +214,7 @@ const chatUI = {
     // 口語化小資訊列(讓 user 有感知速度,不丟技術名詞)
     const bits = [];
     if (outTx && deadAir !== null) {
-      bits.push(deadAir <= 100 ? "⚡ 幾乎沒等就開口" : `⚡ 放開 ${(deadAir / 1000).toFixed(1)} 秒就開口`);
+      bits.push(deadAir <= 100 ? "⚡ 秒接話" : `⚡ ${(deadAir / 1000).toFixed(1)} 秒接話`);
     }
     if (outTx && completionMs) bits.push(`🗣 ${(completionMs / 1000).toFixed(1)} 秒說完`);
     if (S.test && outTx) bits.push("✓ 已記錄");
