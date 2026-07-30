@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整傳達原文意思（來自台灣，第一次來大阪），語意忠實。語句在韓語上稍有不自然處（“오사카에는 처음 여행 왔어요” 的語序/表現略不流暢），但可理解，故流暢度評為4。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地翻譯了原文的意思，語氣也十分得體，完全符合原意。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

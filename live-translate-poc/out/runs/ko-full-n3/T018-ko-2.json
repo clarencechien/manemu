@@ -45,5 +45,19 @@
     },
     "reason": "譯文與原文語意完全一致，包含菜名與要求（麵要硬一點），且韓文表達自然，與參考譯文相同。沒有錯誤。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致，完整傳達了原文的所有細節。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文完全傳達原句意思：來自台灣、第一次到大阪玩。表達自然，語法用法皆合宜（'처음 놀러 왔어요' 與參考譯文意義一致）。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，完美地傳達了原文的意思，語氣也十分得體。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

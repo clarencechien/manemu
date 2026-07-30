@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文與參考譯文內容一致，語意完整忠實地傳達了原句「那就麻煩你了，之後再聯絡」的意思，且敬語形式（-요）保留，表達自然流暢，無錯誤或遺漏。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然，與參考譯文完全一致，語意和語氣皆完美傳達。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

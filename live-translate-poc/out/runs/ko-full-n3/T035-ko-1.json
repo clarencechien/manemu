@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整傳達原意。用語自然，與參考譯文僅在措辭上略有差異（없어졌어요 vs 잃어버렸는데요），但不影響語意或禮貌程度。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It correctly translates '我的護照不見了' as '제 여권이 없어졌어요' and '請問警察局在哪裡?' as '경찰서가 어디에 있나요?', maintaining the polite tone and exact meaning of the source text."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

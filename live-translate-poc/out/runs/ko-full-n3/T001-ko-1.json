@@ -43,5 +43,19 @@
     },
     "reason": "譯文完整且語意忠實；語氣與參考譯文同為禮貌用法，表達自然流暢，無錯誤或遺漏。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. '말씀 좀 여쭤볼게요' is an excellent and polite translation for '請問' in this context, and the rest of the sentence is translated perfectly with natural Korean phrasing."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

@@ -43,5 +43,19 @@
     },
     "reason": "譯文完整傳達原句意義，包含讚美與詢問學習地點。語氣與敬語使用得體（배우셨나요/배우셨어요皆自然），句子流暢自然，無明顯錯誤或遺漏。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text with appropriate honorifics, very similar to the reference translation."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

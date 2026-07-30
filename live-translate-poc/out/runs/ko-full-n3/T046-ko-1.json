@@ -43,5 +43,19 @@
     },
     "reason": "機器譯文與原文語意完全一致，無遺漏或新增資訊。韓語表達自然，敬語使用正確（배우셨어요），即使 어디에서 與 参考譯文的 어디서 差異亦為同義且皆為自然用法。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The translation is highly accurate and natural, matching the reference translation almost perfectly with only a minor stylistic variation (어디에서 instead of 어디서, which is also correct)."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

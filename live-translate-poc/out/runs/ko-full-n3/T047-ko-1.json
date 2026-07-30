@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文完整傳達原文意思：指出日本夏天很熱，並表達說話者覺得台北更熱。韓文表達自然、禮貌，沒有語意或細節錯誤。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in fluent Korean, matching the reference translation's intent closely."
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

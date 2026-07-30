@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且語意忠實。唯一差別是敬語層級（참고譯文의 '연락드릴게요'보다 '연락드리겠습니다'가 더 격식적임）但不影響意思或自然度。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。機器譯文結尾使用了「-겠습니다」，相較於參考譯文的「-게요」稍微更正式一些，但兩者皆符合韓語的敬語規範，語意完全一致且流暢。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

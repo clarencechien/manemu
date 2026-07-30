@@ -45,5 +45,19 @@
     },
     "reason": "譯文傳達了原句的感謝與今天給對方添麻煩的意思，但韓文表達不夠自然。\"번거롭게 해드렸네요\" 用法不佳（聽起來不自然或敬語用詞不當），且整句語氣與參考譯文相比較為機械與不流暢。故語意較忠實但自然度需加強。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然。「도와주셔서 감사합니다」完美對應「謝謝你的幫忙」，而「오늘은 정말 번거롭게 해드렸네요」也是表達「今天真的麻煩你了」非常道地且得體的韓文說法，語氣與敬語使用皆十分恰當。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }

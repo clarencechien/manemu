@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且忠實表達「不用了,謝謝,我只是看看而已」的意思；韓語表達自然流暢，與參考譯文僅在詞序/措辭上有細微差異，無實質誤譯。"
   },
-  "judge_xModel": "gpt-5-mini"
+  "judge_xModel": "gpt-5-mini",
+  "judge": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文非常準確且自然地傳達了原文的意思，韓語表達十分道地，禮貌語氣也符合情境。"
+  },
+  "judgeModel": "models/gemini-3.5-flash"
 }
