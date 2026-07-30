@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息，語氣也十分客氣禮貌。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實原意，否定句保留正確。語句在越南語中自然流暢，僅與參考譯文在稱謂（tôi vs em）與是否明確寫出「hẹn/約」有細微差異，對理解無影響。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

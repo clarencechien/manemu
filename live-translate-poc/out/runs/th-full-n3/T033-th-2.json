@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, fully conveying the meaning of the source text. The use of the polite particle 'ครับ' (male) instead of 'คะ' (female) is perfectly acceptable and does not constitute an error."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意：請叫計程車、時間為明天早上6:30、目的地為機場，無內容遺漏或錯誤。語句大致自然，但有些多餘空格與「ต้องไป ถึงสนามบิน」的斷句略不流暢；此外敬語代詞由參考文的「ค่ะ」改為「ครับ」，造成禮貌性別語氣不符，故標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

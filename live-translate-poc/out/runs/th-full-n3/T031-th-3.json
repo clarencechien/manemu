@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文非常準確且自然，完整傳達了原文的意思，語氣也十分禮貌，使用了合適的泰文敬語助詞（นะคะ/คะ）。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文忠實傳達原意（房間冷氣疑似壞掉，請人來查看），因此語意忠實度高。目標語大致通順但有些措辭稍顯不自然（「ช่วยให้ใครมาดูหน่อยได้ไหมคะ」比起更自然的說法如「ช่วยเรียก/ขอให้คนมาดูหน่อยได้ไหมคะ」或使用「คน」較合適），故流暢度略降一分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

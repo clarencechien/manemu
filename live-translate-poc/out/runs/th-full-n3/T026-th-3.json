@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly translates '我考慮了一下' as 'ผมลองคิดดูแล้ว' (I've thought about it) and '這個還是先不買好了' as 'คิดว่า อันนี้ ยังไม่ ซื้อ ดีกว่า ครับ' (I think it's better not to buy this yet). The polite particle 'ครับ' is used appropriately."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實表達原句意涵：已考慮過且決定暫不購買，故語意完整（5分）。但目標語流暢性略受影響：有多餘的重複“ลองคิดดูแล้ว คิดว่า”、以及單字間不自然空格（“ยังไม่ ซื้อ”），且使用男性自稱/敬語“ผม...ครับ”而非參考的女性/中性禮貌語尾（ค่ะ/ค่ะ），因此流暢度給4分。標記honorific_off=true。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -47,5 +47,19 @@
     },
     "reason": "The translation is highly accurate and natural. The time '十一點四十五分' (11:45) is appropriately translated to '23:45 น.' considering it refers to the last train (最後一班) back to Shinjuku, which is contextually correct and clear."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，時間與含義與原文及參考譯文一致；語句在泰語中自然（僅有些空格格式問題但不影響理解）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

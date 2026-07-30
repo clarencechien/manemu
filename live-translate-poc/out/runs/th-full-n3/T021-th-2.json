@@ -48,5 +48,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly translates all parts of the source sentence into polite and fluent Thai, matching the meaning of the reference translation perfectly."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句內容：拒絕這個、想要旁邊藍色的、詢問兩個多少錢，語序與詞義均正確。泰文自然流暢。唯一差異為敬語/說話者詞尾性別：機器譯文用男性用語（ครับ/ผม），參考為女性用語（ค่ะ/คะ），若需保持說話者性別或禮貌形式一致則為錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

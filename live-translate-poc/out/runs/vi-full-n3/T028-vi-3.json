@@ -48,5 +48,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息。譯文使用了「Dạ... ạ」等禮貌用語，非常符合飯店辦理入住的場景，語氣十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整呈現原句所有資訊（有訂房、姓名陳大文、住兩個晚上），人名正確且語序自然。敬語用了「Dạ」而非參考譯文的「Em」，但屬語域差異，並不影響忠實度或流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

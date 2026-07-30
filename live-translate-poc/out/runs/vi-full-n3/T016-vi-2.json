@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It successfully conveys the allergy warning and the request to exclude seafood. The addition of polite particles like 'Dạ' and 'giúp tôi với ạ' makes the Vietnamese translation sound very polite and natural for a restaurant context."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（表明對蝦子過敏並要求餐點不要放任何海鮮），因此語意忠實度高（5）。用詞與句法整體通順，但出現多餘或略顯口語冗贅的禮貌用語（\"làm ơn... giúp tôi với ạ\"）相比參考譯文稍微不自然，故流暢度評為4。沒有錯誤或新增資訊，亦無遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

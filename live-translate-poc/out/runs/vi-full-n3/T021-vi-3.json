@@ -48,5 +48,19 @@
     },
     "reason": "The machine translation is exceptionally accurate and natural. It perfectly conveys the meaning of the source text and uses polite particles ('dạ', 'ạ') and conversational particles ('cơ') appropriately, making it sound highly authentic and fluent in Vietnamese."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思，未遺漏資訊（因此 adequacy=5）。目標語句子大致自然，但用詞與語氣混用（用『tôi』搭配敬語助詞『ạ』，與參考譯文中較口語/親切的『cho em』不同），造成語氣不一致，故給予 fluency=4。標記 honorific_off 為真。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

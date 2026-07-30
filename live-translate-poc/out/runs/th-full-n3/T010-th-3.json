@@ -47,5 +47,19 @@
     },
     "reason": "譯文非常準確且自然。將「十一點四十五分」翻譯為「23:45 น.」非常符合「最後一班車」的語境，語意完全忠實，表達流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且與原文意義一致（時間23:45正確，疑問語氣保留）。泰語表達自然，僅在地名使用拉丁字母“Shinjuku”而非泰文“ชินจูกุ”，但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in polite Thai, matching the reference translation closely."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思（何時可最晚取消而不用付費），因此語意忠實度為5。語句可理解，但有些詞序與斷詞略顯不自然（如“ได้ช้า ที่สุด”不如“ช้าสุด”或“ยกเลิกได้ช้าสุด”流暢），且使用“ค่า ธรรมเนียม การยกเลิก”較正式，整體自然度評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

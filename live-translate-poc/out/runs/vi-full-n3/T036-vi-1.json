@@ -45,5 +45,19 @@
     },
     "reason": "Bản dịch hoàn toàn chính xác và tự nhiên. Các kính ngữ 'Dạ', 'ạ' được thêm vào một cách phù hợp trong ngữ cảnh giao tiếp y tế."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整且忠實傳達原意（我頭很暈，但沒有心臟病史）。句子在越南語中自然通順。使用『tôi』與參考譯文的『em』在語域上略有不同，但不影響資訊或可理解性，因此不視為錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

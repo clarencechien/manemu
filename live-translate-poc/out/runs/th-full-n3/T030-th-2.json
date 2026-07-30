@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分禮貌，沒有任何錯誤。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句詢問退房時間是 10 點或 11 點，無語意遺漏或錯誤。泰語表達自然（雖有男性禮貌語氣“ครับ”，但屬風格差異，非錯誤）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

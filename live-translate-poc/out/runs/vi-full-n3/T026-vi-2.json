@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly conveys the meaning of the source text, translating '考慮了一下' as 'suy nghĩ lại rồi' and '先不買好了' as 'tạm thời chưa mua đâu ạ'. The tone is polite and appropriate."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（表達出『考慮過後暫時不買』），用詞自然，句子流暢。僅與參考譯文在第一人稱稱謂（tôi vs. em）與措辭上有細微差異，但不影響語意或禮貌，故評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

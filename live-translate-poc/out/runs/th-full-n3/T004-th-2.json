@@ -46,5 +46,19 @@
     },
     "reason": "The translation is highly accurate and faithful to the source text. The fluency is slightly affected by the inclusion of slash alternatives for gender-specific pronouns and polite particles (ครับ/ค่ะ, ผม/ดิฉัน), which is common in machine translation templates but less natural in a final output."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完整且正確，內容與原文匹配（詢問步行時間、若超過15分鐘則想搭計程車）。只有格式層面較口語翻譯逐字稿痕跡（有不必要的空格以及以 / 分隔的性別/敬語選項，以及阿拉伯數字 15），影響自然度但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

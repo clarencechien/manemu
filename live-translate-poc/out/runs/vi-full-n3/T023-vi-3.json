@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text using standard Vietnamese phrasing ('đã bao gồm thuế chưa' is the natural equivalent of '含稅還是不含稅') and maintains a polite tone with 'Dạ' and 'ạ'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，措辭與參考譯文僅在開頭稱呼用詞不同（Dạ cho hỏi vs Cho em hỏi），皆為自然且禮貌的表達，流暢度高。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

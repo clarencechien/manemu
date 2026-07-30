@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。完整傳達了「一份豚骨拉麵（ขอทงคตสึราเมนที่หนึ่ง）」以及「麵要硬一點（ขอเส้นแข็งหน่อย）」的意思。語氣禮貌（使用ครับ代替參考譯文的ค่ะ，僅為說話者性別差異，完全正確）。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原意（要一份tonkotsu拉麵，麵要硬一點），用詞可理解且自然，但敬語性別用法與參考譯文不同（ครับ vs ค่ะ），因此標記 honorific_off。語句流暢但有小幅調整空間。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

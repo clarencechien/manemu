@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly translates 'limited edition' to 'mẫu giới hạn' and maintains a polite, natural tone in Vietnamese, matching the meaning of the source text perfectly."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句意義（詢問是否有限量款，並提到在 Instagram 上看到），用詞自然（「mẫu giới hạn」對應 limited edition），語氣禮貌且流暢，無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

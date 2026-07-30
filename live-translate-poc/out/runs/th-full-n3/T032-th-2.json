@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, perfectly conveying the meaning of the source text. The only difference from the reference is the gender of the polite particles and pronouns (male 'ผม/ครับ' vs female 'คะ/ค่ะ'), which is completely acceptable."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（我明天不需要打掃房間，謝謝）。泰文語句自然通順，但機器譯文使用男性敬語（ผม/ครับ），與參考譯文的女性敬語（นะคะ/ค่ะ）存在敬語性別不匹配，故標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

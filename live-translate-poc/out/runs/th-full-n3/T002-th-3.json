@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly translates 'Shibuya Sky' phonetically into Thai ('ชิบุยะ สกาย') and uses polite particles ('นะครับ', 'ครับ') appropriately, matching the meaning and tone of the source text perfectly."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句含意，將問句正確表達（詢問入口是否在此棟樓），語序自然。僅有細微差異：使用「นะครับ」作為客氣語氣，並將 Shibuya Sky 音譯為「ชิบุยะ สกาย」，皆屬可接受的處理，未影響理解或流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

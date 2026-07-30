@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的所有語意。唯一的缺點是結尾出現了重複的禮貌助詞「ครับครับ」，這對流暢度有輕微影響，但整體而言非常自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（要一份豚骨拉麵、麵要硬一點），故語意忠實度高。語句可理解但有些小瑕疵：'ที่หนึ่ง' 的語序較少見且末尾出現重複的敬語 'ครับครับ' 使得自然度略受影響；此外參考譯文使用女性敬語 'ค่ะ'，機譯用男聲 'ครับ' 但不影響理解。因此給 fluency 4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

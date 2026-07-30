@@ -45,5 +45,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Việc thêm từ \"mất rồi\" và kính ngữ \"ạ\" ở cuối câu làm cho câu nói trở nên tự nhiên và lịch sự hơn trong văn cảnh giao tiếp hàng ngày."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意與原文一致，保留“看起來很好吃但已經吃飽”的意思。用詞（“trông”/“nhìn”皆可）與語氣自然，雖加了口語強調“mất”與禮貌語尾“ạ”，但不影響忠實性或流暢性。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

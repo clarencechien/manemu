@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural, preserving the exact meaning of the source text. The use of polite particles is appropriate."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句兩部分（詢問是否有 limited edition 款式、在 Instagram 上看到），語意忠實。用詞自然（雖保留英文 limited edition，泰語使用者常見），僅有敬語用詞與參考譯文不同（機器譯為男性語氣 'ครับ'，參考為女性語氣 'คะ/ค่ะ'），因此流暢度略降一級並標註 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly conveys the meaning of the source text. The addition of polite particles 'Dạ' and 'ạ' is very appropriate for spoken Vietnamese, making the translation sound polite and natural."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意，包含稱呼與禮貌語氣。微弱不自然處在於語序／用法：\"tiếng Trung của anh/chị nói hay quá\" 比較不順，通常會說 \"Anh/chị nói tiếng Trung hay quá\"，因此流暢度略降一分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

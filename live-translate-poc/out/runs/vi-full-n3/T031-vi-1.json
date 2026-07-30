@@ -45,5 +45,19 @@
     },
     "reason": "Bản dịch máy rất chính xác và tự nhiên. Việc thêm các từ lịch sự như 'Dạ', 'ạ' rất phù hợp với ngữ cảnh yêu cầu dịch vụ trong tiếng Việt."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達請人來檢查冷氣的意圖，句子流暢自然。唯少了原文/參考譯文中的第一人稱受詞「em」以及未明確以「anh/chị」稱呼對方，導致敬稱/人稱資訊略有缺失，故語意忠實稍降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

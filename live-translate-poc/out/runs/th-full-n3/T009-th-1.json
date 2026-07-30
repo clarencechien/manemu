@@ -43,5 +43,19 @@
     },
     "reason": "The translation is highly accurate and natural. Using 'ตรงนี้' (here) is a very common and natural way to ask if a seat is taken in Thai. The politeness particles are also used correctly."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地表達原句意思（詢問座位是否有人），語序與用詞自然；僅在敬語語尾使用女性語氣（ค่ะ/คะ）而非男性（ครับ/ครับ），但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

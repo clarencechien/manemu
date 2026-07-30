@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然。「Cứu với ạ」與「làm ơn gọi xe cấp cứu giúp tôi với!」完美地傳達了原文的緊急語氣與語意，語氣十分客氣且符合越南語口語習慣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句兩個要素（呼救與請求叫救護車），語意忠實，故給予最高分。語句有些口語化與多餘語氣詞（“với ạ”、“giúp tôi với!”）使表達略顯冗贅/不夠流暢，故流暢度為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

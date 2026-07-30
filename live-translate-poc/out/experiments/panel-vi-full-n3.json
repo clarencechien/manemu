@@ -7,6 +7,1508 @@
   "deepseek/deepseek-v3.2",
   "mistralai/mistral-large-2512"
  ],
+ "consensus": {
+  "T001-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T001-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T001-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T002-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T002-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T002-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T003-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T003-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T003-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T004-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T004-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T004-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T005-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T005-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T005-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T006-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T006-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T006-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T007-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T008-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T008-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T008-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T009-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T009-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T009-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T010-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T010-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    3
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T010-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T011-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T012-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T012-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T012-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T013-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T013-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T013-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T014-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    3,
+    4
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T014-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    2,
+    4
+   ],
+   "fluency_median": 5,
+   "omission_votes": 3
+  },
+  "T014-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 2,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 0
+  },
+  "T015-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T015-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T015-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T016-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T016-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T016-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T017-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T017-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T017-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T018-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T018-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T018-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T019-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T019-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T019-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T020-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T020-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T020-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T021-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T021-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T021-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T022-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T022-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T022-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T023-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T023-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T023-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T024-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T024-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T024-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T025-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    2,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T026-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T026-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T026-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    4
+   ],
+   "fluency_median": 3,
+   "omission_votes": 0
+  },
+  "T027-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T027-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T027-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T028-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T028-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T028-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T029-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T029-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T029-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T030-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T030-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T030-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T031-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T031-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T031-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T032-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T032-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T032-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T033-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T033-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T033-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T034-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T035-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T036-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T036-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T036-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T037-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T037-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T037-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T038-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T038-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 4,
+   "omission_votes": 1
+  },
+  "T038-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T039-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T039-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T039-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T040-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T040-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T040-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T041-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T041-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T041-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T042-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T042-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T042-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T043-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T043-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T043-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T044-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T044-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T044-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T045-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T045-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T045-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T046-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T046-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T046-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T047-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T048-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    4
+   ],
+   "fluency_median": 5,
+   "omission_votes": 3
+  },
+  "T048-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 4,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 2
+  },
+  "T048-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T049-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T049-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T049-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    5,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T050-vi-1": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    4,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 0
+  },
+  "T050-vi-2": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    -1,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  },
+  "T050-vi-3": {
+   "n_judges": 5,
+   "adequacy_median": 5,
+   "adequacy_range": [
+    -1,
+    5
+   ],
+   "fluency_median": 5,
+   "omission_votes": 1
+  }
+ },
  "items": {
   "T001-vi-2": {
    "openai/gpt-5.6-terra": {
@@ -5152,6 +6654,19 @@
      "hallucination": false
     },
     "reason": "译文准确传达了原文“考虑了一下”和“暂时不买”的完整语义，且越南语表达非常自然、地道，符合口语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，自然流暢，敬語使用得當，無任何錯誤或遺漏。"
    }
   },
   "T026-vi-3": {
@@ -5206,6 +6721,19 @@
      "hallucination": false
     },
     "reason": "译文准确传达了原文“考虑了一下”和“先不买”的核心意思，语气自然流畅，但“chắc được ạ”的确定性比原文的“好了”稍强一些。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致忠實，但「không mua chắc được」語意模糊，偏向「可能無法買」，與原文「先不買」的決定語氣略有出入，且句尾語氣詞堆疊略顯不自然。"
    }
   },
   "T027-vi-1": {
@@ -5260,6 +6788,19 @@
      "hallucination": false
     },
     "reason": "譯文完整傳達原文語意，用詞自然流暢，符合越南語口語習慣。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與否定皆正確，敬語使用得體，語句自然流暢。"
    }
   },
   "T027-vi-2": {
@@ -5314,6 +6855,19 @@
      "hallucination": false
     },
     "reason": "譯文忠實傳達原文語意，數字、敬語及問句結構均正確無誤，自然流暢"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與否定皆正確，敬語使用得體，語句自然流暢。"
    }
   },
   "T027-vi-3": {
@@ -5355,6 +6909,32 @@
      "hallucination": false
     },
     "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，數字與貨幣單位正確無誤"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的询问退税资格和购物金额的全部信息，且越南语表达自然、礼貌，符合口语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與否定皆正確，敬語使用得體，語句自然流暢。"
    }
   },
   "T028-vi-1": {
@@ -5370,6 +6950,4614 @@
      "hallucination": false
     },
     "reason": "完整忠實傳達已訂房、姓名及從今天起入住兩晚，越南語自然有禮。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,語意與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，敬語使用得當，無錯誤或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文完整准确地传达了原文的预订信息、姓名和住宿时长，添加的礼貌用语和‘bắt đầu từ hôm nay’的补充符合越南语表达习惯，自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣禮貌自然，符合越南語口語情境。"
+   }
+  },
+  "T028-vi-2": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實且流暢,語意與原文一致"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達已訂房、姓名與入住兩晚，越南語表達自然有禮。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然度高，敬語使用得當，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文完整准确地传达了原文的预订信息、姓名和住宿时长，所有关键信息均无遗漏或错误；同时，译文使用了越南语中礼貌且自然的表达方式（如句尾的“ạ”），符合目标语习惯，非常流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，越南語表達自然流暢，敬語使用得體，人名音譯正確。"
+   }
+  },
+  "T028-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達訂房、姓名與入住兩晚資訊，越南語表達自然有禮。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,無明顯錯誤。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，且使用越南語適當的敬語"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意，用詞自然且符合越南語禮貌表達習慣。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，人名與數字皆正確，語氣禮貌自然，符合越南語旅館情境。"
+   }
+  },
+  "T029-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達未訂房及詢問今晚空房的意思，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實且自然,語意與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，無錯誤或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文“没有订房”和“询问空房”的语义，且越南语表达自然流畅，符合口语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，敬語使用得當，語句自然流暢，符合越南語口語情境。"
+   }
+  },
+  "T029-vi-2": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然流暢"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達未訂房及詢問今晚是否有空房，越南語自然有禮。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，無錯誤或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义和礼貌询问的语气，用词自然流畅，完全符合越南语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T029-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實表達未訂房及詢問今晚是否有空房，越南語自然有禮。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且符合越南語敬語習慣"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文“没有订房”和“询问空房”的全部语义，且越南语表达非常自然、礼貌，符合语境。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣禮貌自然，符合越南語口語情境。"
+   }
+  },
+  "T030-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達退房時間詢問，越南語表達自然且敬語得體。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然對應原文詢問內容"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，時間點準確，禮貌用語恰當，自然流暢"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文询问退房时间（10点或11点）的完整语义，且越南语表达自然、礼貌、流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與時間皆正確，敬語使用得當，語句自然流暢。"
+   }
+  },
+  "T030-vi-2": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原意且用語自然"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達詢問退房時間為早上十點或十一點，越南語表達自然有禮。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，時間點準確，禮貌用語恰當，語句自然流暢"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文关于退房时间的询问，语义完整，且越南语表达自然流畅，符合口语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣禮貌自然，符合越南語口語習慣。"
+   }
+  },
+  "T030-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達退房時間詢問，越南語表達自然且敬語恰當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然對應原文詢問內容"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，時間點準確，禮貌用語恰當，語句自然流暢"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的詢問意圖與所有細節，用詞自然得體。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與時間皆正確，敬語使用得體，語句自然流暢。"
+   }
+  },
+  "T031-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達冷氣疑似故障及請人前來查看的請求，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,語意與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，無遺漏或錯誤"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义和礼貌请求，语言自然流畅，符合越南语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語氣禮貌自然，敬語使用得當，無任何錯漏。"
+   }
+  },
+  "T031-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達房間冷氣疑似故障及禮貌請人查看的意思，越南語自然得體。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣禮貌自然，無遺漏或錯誤"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文完整准确地传达了原文的语义和礼貌请求的语气，且表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣禮貌自然，敬語使用得當，無遺漏或錯誤。"
+   }
+  },
+  "T031-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達冷氣疑似故障及請人前來查看的請求，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原意且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，無遺漏或錯誤"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整且流暢自然，但未使用'em'、'anh/chị'等人稱代詞，禮貌性稱謂略有偏差。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T032-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實表達明天不需要打掃房間及致謝，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整且自然,與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且語氣自然、敬語使用得當"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义和礼貌语气，且越南语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T032-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整保留明天、不需要打掃房間與致謝之意，越南語表達自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然,與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且語氣自然、禮貌得體，無錯誤或遺漏"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語氣自然得體，敬語使用恰當。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完全正確，表達自然流暢，但人稱代詞'我'譯為'tôi'（中性/正式）而非參考譯文的'em'（謙稱），在特定上下文中可能不夠貼切，但整體不影響理解。"
+   }
+  },
+  "T032-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整保留明天、不需要打掃房間與致謝之意，越南語表達自然且敬語恰當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然,與原文一致"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义和礼貌语气，越南语表达自然流畅。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且語氣自然得體，榮譽詞使用恰當"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，敬語與語氣自然得體，無任何錯誤或遺漏。"
+   }
+  },
+  "T033-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達叫計程車及明早六點半到機場的需求，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確完整且自然通順,語意與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「Dạ」與「ạ」的敬語使用略顯冗餘，且「ra sân bay」比「đến sân bay」更自然"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完全正確且流暢自然，但機器譯文使用了適用於晚輩或平輩的'Dạ'和'tôi'，而參考譯文使用了更符合服務請求場景的尊稱'Anh/chị'和自謙詞'em'，因此標記敬語使用不當。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與時間皆正確，越南語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T033-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達請求叫計程車及明早六點半到機場的意思，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，時間、地點及請求均準確無誤，且語氣自然得體"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整正確，表達流暢自然，但人稱敬語使用與參考譯文不同，未明確區分說話者與聽話者的身份關係。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T033-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達請叫計程車及明早六點半到機場的意思，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，時間、地點及請求內容均準確無誤，且語氣自然得體，符合越南語禮貌表達習慣。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本忠實，但譯文使用了禮貌助詞'Dạ'和'ạ'，並將主語轉換為'我'，這與原文中性且以請求者為視角的語氣略有差異，導致敬語使用不當。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整正確，但將原文對司機/服務人員的請求語氣誤譯為向第三方請求代叫計程車，且敬語使用略顯不自然。"
+   }
+  },
+  "T034-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達求救及請求叫救護車的意思，越南語表達自然有禮。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整且自然,與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文緊急求救語氣與內容，語法自然流暢，敬語使用得當"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的紧急呼救和请求叫救护车的完整意思，且越南语表达非常自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣緊急且禮貌，越南語表達自然流暢。"
+   }
+  },
+  "T034-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達呼救與請求叫救護車的意思，越南語表達自然有禮。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文的緊急求救語意，且語氣自然流暢，符合越南語表達習慣。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的紧急求助含义，语言自然流畅，符合越南语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然且符合越南語緊急求助情境，敬語使用得當。"
+   }
+  },
+  "T034-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達求救及請求叫救護車的意思，越南語自然且禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且自然地傳達原文語意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文的緊急求救語意，且語氣自然流暢，符合越南語表達習慣。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的紧急求助含义，语言自然流畅，符合越南语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然且符合越南語緊急求助情境，敬語使用得當。"
+   }
+  },
+  "T035-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達護照遺失及詢問警察局位置，越南語表達自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意且語氣自然禮貌"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「警察局」譯為「đồn cảnh sát」而非更常用的「đồn công an」，且句末「ạ」重複使用稍顯不自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义和礼貌语气，用词自然地道，符合越南语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，敬語使用得體自然，僅「đồn cảnh sát」與「đồn công an」為用詞差異，不影響理解。"
+   }
+  },
+  "T035-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達護照遺失及詢問警察局位置，越南語表達自然且禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整且自然,僅用詞與敬語稍有差異但不影響忠實度"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「警察局」譯為「đồn cảnh sát」略顯口語化，且「cháu」的稱謂不如「em」自然（越南語常用「em」表達禮貌）"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文的語意（護照遺失、詢問警察局位置），並且在越南語中使用「cháu」作為第一人稱謙稱，以及「ạ」作為句末敬語，表達自然得體，符合越南語的禮貌習慣。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T035-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達護照遺失及詢問警察局位置，越南語表達自然有禮。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原意,用詞自然得體"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且使用得體的越南語敬語，自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义和请求帮助的语气，使用了越南语中自然、礼貌且符合语境的称呼和表达。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得體，僅「đồn cảnh sát」與參考譯文「đồn công an」用詞略異但皆可理解，不影響整體品質。"
+   }
+  },
+  "T036-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實表達頭暈與沒有心臟病病史，越南語自然且敬語使用恰當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確傳達原意,語句自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「頭很暈」譯為「bị chóng mặt lắm」略顯冗餘，且「我」未區分自稱謙稱（如「em」），稍影響自然度。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的所有医学信息和转折关系，越南语表达自然流畅，敬语使用恰当。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T036-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實表達頭暈及沒有心臟病病史，越南語自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然,與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「我」的謙稱「em」可更自然，且「沒有」譯為「chưa từng có」略顯生硬"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "機器譯文語意準確，表達流暢自然，但將原文第一人稱的普通自稱轉換為對長輩/上級的敬語形式，導致語用層面的細微偏差。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T036-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達頭暈及無心臟病史，越南語表達自然且敬語得體。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且流暢,與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "「頭很暈」譯為「rất chóng mặt」語意正確，但「我」未明確譯為「em」（越南語常用謙稱），略微影響忠實度；否定句與病史表達準確，語氣自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意忠實，但機器譯文使用了較正式的代詞「tôi」和句尾敬語「ạ」，而參考譯文使用更親切、符合口語場景的「em」，導致敬語使用不當。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文語意，語氣禮貌自然，符合越南語口語表達習慣。"
+   }
+  },
+  "T037-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "房號與朋友昏倒的資訊完整正確，越南語表達自然且敬語恰當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且自然流暢"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的全部信息，包括房间号码和事件，且表达自然流畅，符合越南语习惯。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但越南語敬語略顯不足（缺少「dạ」或「ạ」的正式用法），且「昏倒」未譯為更自然的「bị ngất xỉu」"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字正確，越南語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T037-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "房號與朋友昏倒的資訊皆準確傳達，越南語表達自然有禮。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，敬語使用得當，無遺漏或錯誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的房号和紧急情况，用词自然且符合越南语礼貌表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文所有資訊，語意忠實，越南語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T037-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "房號與朋友昏倒的資訊皆準確傳達，越南語自然且敬語使用恰當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且自然流暢"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的語意，數字翻譯正確，語句在越南語中自然流暢。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但榮譽詞「ạ」的使用對象不完全準確（應為「dạ」搭配「em」），且「昏倒」未譯為更自然的「ngất xỉu」。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字正確，越南語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T038-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實表達不能注射青黴素及會過敏，越南語自然且敬語使用恰當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原意且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且使用越南語敬語「Dạ」和「ạ」符合語境，自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的医学禁忌和原因，越南语表达自然、礼貌且符合语境。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T038-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整且自然地表達不能注射青黴素及會過敏，但「Pencillin」拼寫有誤。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": -1,
+    "flags": {
+     "number_wrong": -1,
+     "negation_flipped": -1,
+     "honorific_off": -1,
+     "name_mangled": -1,
+     "omission": -1,
+     "hallucination": -1
+    },
+    "reason": "譯文語意完全忠實，但將「penicillin」拼寫為「Pencillin」並在句尾添加了不必要的敬語助詞「ạ」，導致自然度扣分。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": true,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意忠實但Pencillin拼寫有誤,語序稍口語化"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，否定結構正確，藥名拼寫雖有小錯但不影響理解，語氣自然且禮貌得體"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語氣自然得體，僅青黴素拼寫微誤但不影響理解。"
+   }
+  },
+  "T038-vi-3": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原意且語句自然"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達不能注射青黴素及會過敏的意思，越南語自然且敬語恰當。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且使用得體的越南語敬語，自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的医学信息和因果关系，越南语表达自然流畅，礼貌语气词使用恰当。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文語意，語氣禮貌自然，符合越南語口語表達習慣。"
+   }
+  },
+  "T039-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達明天下午三點預約兩位成人的意思，越南語自然且禮貌。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，時間、人數及禮貌用語均正確無誤，自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的预约时间、人数及礼貌意图，用词自然流畅，符合越南语表达习惯。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且自然流暢"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文所有資訊，語氣禮貌自然，符合越南語口語表達習慣。"
+   }
+  },
+  "T039-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達明天下午三點預約兩位成人，越南語自然且敬語得當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確傳達原文語意且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，時間、人數及禮貌用語均正確無誤，且自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的预约时间、人数及礼貌意图，用词自然流畅，符合越南语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文所有資訊，語氣禮貌自然，符合越南語口語表達習慣。"
+   }
+  },
+  "T039-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達明天下午三點與兩位成人的預約需求，越南語自然有禮。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，時間、人數及禮貌用語均正確無誤，自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣禮貌自然，符合越南語口語習慣。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意，用詞自然且符合越南語預約場景的表達習慣。"
+   }
+  },
+  "T040-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確表達將預約由星期五改至星期六而非取消，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整且自然,與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然，否定表達正確，且禮貌用語得當"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的歉意、更改预约的请求（从周五到周六）以及澄清并非取消的所有语义，且越南语表达自然流畅，符合口语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，準確傳達更改預約而非取消之意，越南語表達自然流暢且禮貌得體。"
+   }
+  },
+  "T040-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達將預約由星期五改至星期六而非取消的意思，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然地表達了原文意思"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然，僅末句助詞微調但不影響整體準確度。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意，用詞自然流暢，符合越南語口語習慣。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣禮貌自然，敬語使用得當，無任何錯誤或遺漏。"
+   }
+  },
+  "T040-vi-3": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確且自然地傳達原文語意"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確表達將預約由星期五改至星期六而非取消，越南語自然有禮。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的歉意、更改预约的请求（从周五到周六）以及澄清并非取消的所有语义，用词自然流畅，符合越南语表达习惯。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，敬語使用得當，無遺漏或錯誤。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文所有語意，包含改期與非取消的澄清，語氣禮貌自然，符合越南語表達習慣。"
+   }
+  },
+  "T041-vi-1": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,語意與原文一致"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達三點若無位則四點也可，越南語自然且敬語得當。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，無錯誤或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的条件和可选方案，语义完整；越南语表达自然流畅，仅添加了礼貌语气词，不影响原意。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達原文語意，越南語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T041-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實傳達三點無位可改四點的意思，越南語自然且敬語得體。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，無錯誤或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意，並自然添加了符合越南語交際習慣的禮貌語助詞，使表達更為得體流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確且自然,語意與原文一致"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與條件關係正確，越南語表達自然流暢，禮貌詞使用得當。"
+   }
+  },
+  "T041-vi-3": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實且自然,語意與原文一致"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達三點若無位則四點也可，越南語表達自然且敬語恰當。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，無錯誤或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的条件和可选方案，语法自然流畅，仅添加了礼貌语气词'Dạ'和'ạ'，这在越南语口语中是恰当且常见的，不构成错误。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，禮貌詞使用得當。"
+   }
+  },
+  "T042-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實 փոխանց達原文，越南語自然且敬語使用恰當。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，且禮貌用語得當，僅多餘重複「ạ」"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,語氣禮貌得體"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的語意與禮貌語氣，語法自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原文語意，越南語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T042-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整自然，但「đặt phòng」偏指訂房，原文較泛指預約或訂位。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,語意與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「đặt phòng」不如「đặt chỗ」準確，且多了不必要的「ạ」"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的語意和禮貌語氣，用詞自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意大致忠實且流暢，但「đặt phòng」專指訂房，原文「預約」應為「đặt chỗ」較準確。"
+   }
+  },
+  "T042-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達以電子郵件確認預約及班機編號，越南語自然且敬語恰當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原意,用詞自然禮貌"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且使用得體的越南語敬語，自然流暢"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的询问和航班信息，语法自然流畅，人称代词'em'在越南语口语中常见且得体。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，航班號碼正確，越南語表達自然流暢，使用「em」與「Dạ/ạ」符合服務場景的謙遜語氣。"
+   }
+  },
+  "T043-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實傳達最晚取消時間及免取消費的詢問，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然,與參考譯文意思一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，無遺漏或錯誤"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文关于询问最晚免费取消时间的核心语义，且越南语表达自然流畅，符合口语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得當，無任何錯誤或遺漏。"
+   }
+  },
+  "T043-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達最晚取消時間及免收取消費的詢問，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確且自然地傳達原文語意"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，無錯誤或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文关于询问最晚免费取消时间的核心语义，且越南语表达非常自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得當，無任何錯誤或遺漏。"
+   }
+  },
+  "T043-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達最晚取消時間及免付取消費的詢問，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語法自然流暢，敬語使用得當，無遺漏或錯誤。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，敬語使用得當，表達自然流暢。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文詢問最晚免費取消時間的語意，且用詞自然流暢，符合越南語會話習慣。"
+   }
+  },
+  "T044-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整準確傳達晚到三十分鐘及詢問能否保留座位，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意且語句自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且語氣自然、禮貌得體，無錯誤或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义，包括迟到时间和请求保留座位，且语言表达自然流畅，符合越南语礼貌用语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與請求皆正確，並加上「Dạ/ạ」等敬語使語氣自然得體，符合越南語口語習慣。"
+   }
+  },
+  "T044-vi-2": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且越南語表達自然得體，使用敬語「Dạ」和「ạ」符合語境"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達將晚到三十分鐘及詢問能否保留座位，越南語自然且敬語恰當。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义，包括迟到时间和请求保留座位，语言表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與請求皆正確，並加上「Dạ」與「ạ」等敬語，符合越南語服務場景的自然禮貌語氣。"
+   }
+  },
+  "T044-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達會晚到三十分鐘及詢問能否保留座位，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然,語意與原文一致"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且語氣自然得體，使用越南語敬語「Dạ」和「ạ」增強禮貌度，無錯誤或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的语义，包括迟到时间和请求保留座位，且语言表达自然流畅，符合越南语礼貌用语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，數字與請求皆正確，並加上「Dạ」與「ạ」等敬語，符合越南語口語禮貌風格，自然流暢。"
+   }
+  },
+  "T045-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達感謝與今日多有叨擾之意，越南語表達自然且禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文意思忠實且流暢,僅用詞略口語化"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌，符合越南語表達習慣。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達了感謝與致歉的語意，用詞自然且符合越南語禮貌表達。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語句通順自然，唯「bạn」略顯口語且敬語層級不如參考譯文精確，但不影響整體理解。"
+   }
+  },
+  "T045-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達感謝與今日造成麻煩的歉意，越南語表達自然且敬語恰當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確且自然地傳達原文語意"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了感谢和致歉的完整语义，且越南语表达自然、礼貌、地道。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌得體，無錯誤或遺漏。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然得體，敬語使用恰當，符合越南語表達習慣。"
+   }
+  },
+  "T045-vi-3": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文準確流暢地傳達原文語意"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達感謝與今日多有打擾的歉意，越南語表達自然得體。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但「Dạ」的使用略顯生硬，參考譯文的「anh/chị」更自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的感谢与歉意，用词自然地道，完全符合越南语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得當。"
+   }
+  },
+  "T046-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達稱讚中文說得好及詢問學習地點，越南語表達自然且敬語恰當。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，語氣自然且禮貌得體，無錯誤或遺漏"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文的讚美與詢問地點之意，且越南語用詞（Dạ, ạ, anh/chị）自然得體，符合目標語會話習慣。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實流暢,但額外加入「Dạ」「ạ」使語氣比原文更禮貌正式。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文將原文的讚美語氣誤譯為附和語氣（添加「Dạ」），且將疑問句「是在哪裡學的」誤譯為感嘆加疑問，語意略有偏移，但整體表達自然流暢。"
+   }
+  },
+  "T046-vi-2": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確且自然流暢"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且語氣自然、敬語使用得當"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文的讚美與詢問意圖，用詞自然流暢。"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達稱讚中文說得好及詢問學習地點，越南語自然禮貌。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語氣自然得體，敬語「ạ」使用恰當，流暢度佳。"
+   }
+  },
+  "T046-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達稱讚中文說得好及詢問學習地點，越南語自然禮貌。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且語氣自然，使用適當的敬語（ạ）"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的赞美与询问之意，越南语表达自然流畅，符合口语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然流暢，敬語「ạ」使用得當，符合越南語口語習慣。"
+   }
+  },
+  "T047-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實表達原文比較語意，越南語自然流暢。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文完全一致且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，無錯誤或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整且準確地傳達了原文的對比語意，用詞自然流暢。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，越南語表達自然流暢，無任何錯誤或遺漏。"
+   }
+  },
+  "T047-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實傳達原文比較語意，越南語表達自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致,僅多加禮貌語氣詞「ạ」,不影響忠實度"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但多了不必要的敬語「ạ」"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的对比含义，且越南语表达自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，語句自然流暢，敬語「ạ」使用得體。"
+   }
+  },
+  "T047-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達日本夏天很熱且台北更熱的比較語意，越南語表達自然。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實且流暢,僅多加語氣詞不影響意義"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，自然流暢，且「đấy ạ」的敬語使用得當"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确完整地传达了原文的对比含义，且越南语表达非常自然流畅。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意完整忠實，越南語表達自然流暢，敬語結尾「ạ」符合口語禮貌語境。"
+   }
+  },
+  "T048-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "語意自然且大致忠實，但省略了「謝謝」，並將自稱譯為較特定的「cháu」。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "漏譯「謝謝」且人稱用「cháu」略改變語氣但整體意思保留"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "譯文省略了「謝謝」的部分，但語意和敬語使用正確，流暢自然。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文流暢自然，但遺漏「謝謝」且將自稱「我」降級為「cháu」，語域略有不當。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": true,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "語意基本忠實，但將中性的「我」譯為表示晚輩或親暱的「cháu」，在部分正式或陌生場景下可能不合適，且省略了「謝謝」的對應翻譯。"
+   }
+  },
+  "T048-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整傳達婉拒、致謝與只是看看之意，越南語自然得體。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "譯文省略了「謝謝」一詞,其餘語意忠實且自然。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但缺少「謝謝」的對應部分，且「em」的自稱不如「tôi」自然。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文完整传达了原文的礼貌、拒绝和意图，用词自然地道，符合越南语口语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": true,
+     "hallucination": false
+    },
+    "reason": "譯文流暢自然，但遺漏「謝謝」一詞。"
+   }
+  },
+  "T048-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達婉拒、致謝及只是看看的意思，越南語表達自然有禮。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整且自然,與原文一致。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且越南語表達自然得體，敬語使用恰當"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的礼貌拒绝和随意浏览的意图，用词自然地道，符合越南语口语习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣禮貌自然，符合越南語購物情境的敬語用法。"
+   }
+  },
+  "T049-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整忠實傳達來自台灣及首次到大阪遊玩的意思，越南語自然且敬語恰當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且流暢自然"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且自然流暢，加上敬語「ạ」符合越南語習慣，無誤譯或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文完全传达了原文的语义，包括来源地和初次到访的信息，且添加的敬语'Dạ'和句尾'ạ'符合越南语口语习惯，使表达更自然礼貌。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T049-vi-2": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實且自然,語意與原文一致"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達來自台灣及首次到大阪旅遊的意思，越南語自然有禮。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且語氣自然流暢，加入「Dạ」和「ạ」符合越南語禮貌表達習慣，無誤譯或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意，且越南語表達自然流暢，開頭的敬語'Dạ'和句尾的'ạ'是符合語境的禮貌添加，並非錯誤。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，禮貌詞使用得當。"
+   }
+  },
+  "T049-vi-3": {
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整準確傳達原文語意且流暢自然"
+   },
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "完整忠實傳達原意，越南語表達自然且敬語使用得當。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，且越南語表達自然流暢，僅添加禮貌語氣詞「ạ」符合文化習慣，無誤譯或遺漏。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意，且越南語表達自然流暢，口語化的添加（Dạ, ... đó ạ）符合越南語會話習慣，並未扭曲原意。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，越南語表達自然流暢，敬語使用得體。"
+   }
+  },
+  "T050-vi-1": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達請託與日後再聯絡之意，越南語表達自然且敬語恰當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意基本忠實且自然,但語氣稍簡略"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但缺少主語「我」，導致語氣略顯不完整。"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "译文准确传达了原文的礼貌请求和后续联系的意思，语言自然流畅，符合越南语表达习惯。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣禮貌自然，敬語使用得當，符合越南語口語習慣。"
+   }
+  },
+  "T050-vi-2": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達麻煩對方及之後再聯絡之意，越南語表達自然且敬語得當。"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意與原文一致且自然流暢"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": -1,
+    "fluency": -1,
+    "flags": {
+     "number_wrong": -1,
+     "negation_flipped": -1,
+     "honorific_off": -1,
+     "name_mangled": -1,
+     "omission": -1,
+     "hallucination": -1
+    },
+    "reason": "原文與譯文均為正常語句，但評分系統要求對機器譯文進行評分，而提供的機器譯文與參考譯文高度相似，無法進行常規評分。請提供需要評分的機器譯文。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文忠實傳達原文語意，但主語「我」未明確譯出，略顯被動"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，敬語使用得當，表達自然流暢。"
+   }
+  },
+  "T050-vi-3": {
+   "openai/gpt-5.6-terra": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文完整傳達麻煩對方及之後再聯絡的意思，越南語自然口語。"
+   },
+   "mistralai/mistral-large-2512": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文基本忠實原意，但「之後再聯絡」的主語不明確，參考譯文更自然地補全了主語"
+   },
+   "anthropic/claude-sonnet-5": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意忠實且自然流暢,與原文意思相符"
+   },
+   "deepseek/deepseek-v3.2": {
+    "adequacy": -1,
+    "fluency": -1,
+    "flags": {
+     "number_wrong": -1,
+     "negation_flipped": -1,
+     "honorific_off": -1,
+     "name_mangled": -1,
+     "omission": -1,
+     "hallucination": -1
+    },
+    "reason": "評分系統無法處理此請求，因為提供的評分標準（1-5）與請求中指定的輸出格式（-1）存在矛盾。"
+   },
+   "qwen/qwen3.7-plus": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+     "number_wrong": false,
+     "negation_flipped": false,
+     "honorific_off": false,
+     "name_mangled": false,
+     "omission": false,
+     "hallucination": false
+    },
+    "reason": "譯文語意完整忠實，語氣自然得體，符合越南語口語習慣。"
    }
   }
  }

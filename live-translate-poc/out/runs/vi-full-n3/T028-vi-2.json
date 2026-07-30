@@ -48,5 +48,19 @@
     },
     "reason": "Dịch rất tự nhiên, chính xác và đầy đủ ý nghĩa. Việc sử dụng các từ kính ngữ như 'Dạ', 'ạ' rất phù hợp với ngữ cảnh nhận phòng khách sạn."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語義忠實：表達已訂房、姓名（Trần Đại Văn 為陳大文的正確轉寫）及入住兩晚均有呈現。語氣雖較參考譯文正式（使用 “tôi” 與敬語詞尾“ạ”），但越南語句子自然流暢。無遺漏或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

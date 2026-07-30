@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然地翻譯了原文的意思。「Món này trông ngon quá, nhưng mà tôi ăn no rồi ạ」完全符合越南語的日常表達習慣，語意忠實度與流暢度皆為滿分。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句語意（這道菜看起來很好吃，但我已經吃飽了），因此語意忠實度高。語句大致自然，但有小幅口語化/風格差異：使用了連詞“mà”、動詞短語“ăn no”（較常見說法為“no”或“đã no”/“đã ăn no rồi”）以及句尾敬語助詞“ạ”，在語域上與原句略有出入，故流暢度略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

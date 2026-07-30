@@ -45,5 +45,19 @@
     },
     "reason": "Bản dịch máy hoàn toàn chính xác và tự nhiên, truyền tải đầy đủ thông tin từ câu gốc. Việc thêm kính ngữ 'ạ' ở cuối câu rất phù hợp với ngữ cảnh khẩn cấp khi gọi trợ giúp."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句資訊（房號702與朋友昏倒），無遺漏或錯誤，故語意忠實評為5。語言自然度高，但「tôi」與句尾敬語「ạ」搭配上與原參考的「dạ...em」有些微風格/敬語差異，故流暢度評4。無數字錯誤、否定顛倒或杜撰內容。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. 'พาสปอร์ต' is a very common colloquial term for passport, and 'ไม่ทราบว่า...อยู่ที่ไหน' is a polite way to ask for directions, equivalent to '請問...在哪裡'. The inclusion of 'ครับ/ค่ะ' covers both genders appropriately."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句含意（護照遺失並詢問警察局位置）。語句通順自然，但結尾同時標示“ครับ/ค่ะ”略顯不自然，應選一個敬語助詞以符合說話者性別或語境。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

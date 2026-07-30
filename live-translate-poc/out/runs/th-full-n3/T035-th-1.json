@@ -45,5 +45,19 @@
     },
     "reason": "機器譯文非常準確且自然。「พาสปอร์ต」是泰語中常用的「護照」外來語，而「ไม่ทราบว่า...」是翻譯「請問...」時非常道地且有禮貌的表達方式，整體語意與語氣皆完美契合。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句兩個資訊：護照遺失及詢問警察局位置；用詞自然且具禮貌（ค่ะ/คะ），與參考譯文意思相符，無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

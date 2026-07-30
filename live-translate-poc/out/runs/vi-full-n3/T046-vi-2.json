@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source sentence in a polite and fluent Vietnamese phrasing, matching the reference translation's intent."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整保留原意，詢問中文能力與學習地點，語義忠實。目標語自然度良好，但語序可更自然（通常說“Bạn nói tiếng Trung giỏi quá”），且原參考用的是較正式的稱呼“Anh/chị”，機器譯文使用了較熟絡的“bạn”，屬於敬稱層級的變化。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. It conveys the exact meaning of the source text with appropriate polite particles in Thai."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文語意：表達頭暈並說明沒有心臟病病史。唯一小瑕疵為語體與參考譯文不同（機譯用男性自稱“ผม”，參考為中性/女性“ฉัน”）及語句略顯重複/生硬（重複使用ผม、加入คำว่า ‘ไม่เคย’ 但語意相當於「沒有病史」），因此流暢度稍降。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

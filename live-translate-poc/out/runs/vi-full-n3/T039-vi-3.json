@@ -47,5 +47,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Bản dịch sử dụng kính ngữ 'Dạ... ạ' rất lịch sự và phù hợp với ngữ cảnh đặt chỗ."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（預約時間與人數），用詞自然（「đặt bàn」可表示預約），句子流暢。禮貌詞尾雖與主語人稱略有混用，但不影響理解與自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

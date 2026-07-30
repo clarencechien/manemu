@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思。句尾加上了客氣助詞「ạ」，在口譯情境中顯得十分自然且有禮貌。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原文意思（日本夏天很熱，但台北更熱），用詞自然（\"Mùa hè ở Nhật Bản rất nóng, nhưng tôi thấy Đài Bắc còn nóng hơn\"），僅增加了語氣助詞「ạ」帶禮貌語氣，並不影響正確性或流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

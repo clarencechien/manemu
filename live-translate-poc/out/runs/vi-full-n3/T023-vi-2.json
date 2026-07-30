@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文「含稅還是不含稅」的意思，語氣也非常客氣禮貌，與參考譯文基本一致。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問價格是否含稅），因此語意忠實度給5分。語句自然但有輕微冗餘（“là đã 包含”在越語中稍顯多餘），語氣禮貌但與參考譯文人稱略不同，故流暢度給4分。沒有錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

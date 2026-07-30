@@ -45,5 +45,19 @@
     },
     "reason": "Bản dịch rất tự nhiên và chính xác. Từ 'bến tàu' được dùng để dịch '月台' (sân ga), tuy hơi kém chính xác hơn một chút so với 'sân ga' nhưng vẫn hoàn toàn hiểu được trong ngữ cảnh. Việc thêm các từ kính ngữ 'Dạ... ạ' giúp câu thoại trở nên rất tự nhiên trong giao tiếp."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達「我剛剛把手機弄丟」的意思，語句流暢自然（加上禮貌語氣詞也合理）。唯一小瑕疵是將「月台」譯為「bến tàu」，通常指船或碼頭，較精確的對應應為「sân ga/ bục ga/ nền ga」或直接「sân ga」。因此語意稍有不精準，但整體可理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

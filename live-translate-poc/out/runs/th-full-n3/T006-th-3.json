@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體，與參考譯文幾乎一致。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原意：詢問附近有無廁所以及表示自己很趕。與參考譯文相比，僅在進行時標記（กำลัง）上有細微差異，但不影響語意或自然度，泰語表述通順自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

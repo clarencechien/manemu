@@ -46,5 +46,19 @@
     },
     "reason": "Bản dịch máy rất chính xác và tự nhiên, truyền tải trọn vẹn ý nghĩa của câu gốc. Việc thêm đuôi từ \"đấy ạ\" giúp câu nói trở nên lịch sự và tự nhiên hơn trong văn phong nói tiếng Việt."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（日本夏天很熱，但說台北更熱），無遺漏或誤譯。語句在越南語中自然流暢，雖加入口語禮貌語氣「đấy ạ」，但不影響正確性或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

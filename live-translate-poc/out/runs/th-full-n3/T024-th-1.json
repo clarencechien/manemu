@@ -48,5 +48,19 @@
     },
     "reason": "譯文非常準確且自然。中文的「打八折」在泰文中正確地轉換為「ลด 20%」（折價20%），語意完全相符。譯文加入了主詞「ดิฉัน」（我）與語氣助詞「ค่ะ」，使句子聽起來更有禮貌且流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句含義（如果打八折就會買兩件），語義忠實。用詞上多了人稱代詞“ดิฉัน”，而參考譯文省略主語，且語句中有多餘空格與少許口語強調“เลย”未呈現，故自然度略低於完美。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

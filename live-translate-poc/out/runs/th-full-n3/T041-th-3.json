@@ -49,5 +49,19 @@
     },
     "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致。機器譯文中的「สามโมง」（三點）與原文「三點」完全對應，雖然參考譯文加上了「บ่าย」（下午），但機器的翻譯已足夠忠實且流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致正確且泰語自然流暢，但原句的「三點」含語境通常為「下午三點」，參考譯文明確為「บ่าย三โมง」。機器譯文省略了「บ่าย」（下午），屬於小幅遺漏，故給予較高但非滿分的 adequacy。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

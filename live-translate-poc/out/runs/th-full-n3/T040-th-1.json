@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text, changing the appointment from Friday to Saturday instead of cancelling it, using appropriate polite particles."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，正確表達要把預約從星期五改到星期六並非取消。語氣使用男性敬語（ครับ/ผม），與參考譯文的女性用語不同但不影響正確性。少量斷詞/口語痕跡使流暢度略受影響，故 fluency 評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且流暢地翻譯了原文的意思。'ดิฉันแพ้กุ้งค่ะ' 準確對應 '我對蝦子過敏'，後半句 'ในอาหาร กรุณา อย่าใส่ อาหารทะเล เลยนะคะ' 也完整且禮貌地表達了 '餐點裡請不要放任何海鮮' 的要求，語氣十分自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達了原文意思（我對蝦子過敏，請不要在餐點中放任何海鮮），故語意忠實度高。語句通順但略有些口語/斷句不自然（如「ในอาหาร กรุณา อย่าใส่ อาหารทะเล เลยนะคะ」可合併為更流暢的表達），因此流暢度略降一分。其他無錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

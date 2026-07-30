@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with appropriate politeness in Thai."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（感謝與今日麻煩之意），因此語意忠實度給5分。語句大致自然，但有些細微不自然處：如“รบกวน คุณ”之間多了空格顯得不連貫，且用詞“จริงๆ”比參考譯文的“มากเลย”較口語且強度稍弱，整體流暢度評4分。沒有遺漏或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

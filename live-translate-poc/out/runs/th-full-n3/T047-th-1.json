@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然。雖然人稱代詞與語氣助詞使用了女性版本（ฉัน/ค่ะ），而參考譯文使用男性版本（ผม/ครับ），但在無上下文語境下兩者皆屬正確翻譯，語意完全忠實。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實、泰語自然流暢。唯與參考譯文在說話人表徵（機器譯文使用女性形式/ฉัน/ค่ะ，參考為男性形式/ผม/ครับ）不一致，屬禮貌/性別標記差異。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的所有訊息。語意忠實度極高。在流暢度方面，使用了較為正式、書面語口吻的詞彙「จำนง」（意為企圖、意圖），在日常口語對話中顯得稍微有些生硬（通常使用「อยาก」或「ต้องการ」即可），但整體文法正確且表達清晰。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句含意（要把預約從星期五改到星期六，而不是取消），因此語意忠實度為5。用詞上稍嫌正式/書面（「จำนงจะ」較少用於口語），但句子通順可理解，流暢度評為4。沒有遺漏、否定翻轉或其他錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

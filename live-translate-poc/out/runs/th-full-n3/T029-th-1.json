@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分禮貌客氣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "內容完整且語意忠實：機譯準確表達「沒訂房」及詢問「今晚有無空房」。泰文句子流暢自然，用詞恰當（包含禮貌用語 ไม่ทราบว่า／...อยู่ไหมครับ）。唯一差異為禮貌語尾與代詞呈現男性語氣（ผม...ครับ），而參考為女性語氣（...ค่ะ/คะ），若需保持說話者性別或與參考一致，則為一處禮貌/性別不符。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

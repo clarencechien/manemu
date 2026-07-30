@@ -45,5 +45,19 @@
     },
     "reason": "機器翻譯非常準確且自然，完整傳達了原文的意思，語氣也十分禮貌（使用了ครับ）。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原意（詢問有無限量版並說明看到於Instagram），所以語意忠實度高(5)。用詞上『แบบ』 vs 參考的『รุ่น』都可接受；但說話者敬語/語氣由參考的女性禮貌語氣（คะ/ค่ะ）變成男性用語（ครับ/ผม），因此自然度略降(4)並標示 honorific_off。翻譯沒有遺漏或捏造資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

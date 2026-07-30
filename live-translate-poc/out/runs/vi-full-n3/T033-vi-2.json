@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。完整傳達了原文的所有訊息，並使用了禮貌助詞（Dạ, ạ），非常符合請求協助的語境。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達原句意思，語氣禮貌自然。僅在稱謂上用『tôi』而非參考譯的『em』，但不影響意義或禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -47,5 +47,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with appropriate politeness markers (Dạ, ạ) in Vietnamese."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，數字與意思與原文一致；句子在越南語中自然通順。唯一小差異是人稱/敬語：原參考使用“Em”，機器譯文用“Tôi”，屬於敬語層次的偏差，故標注 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

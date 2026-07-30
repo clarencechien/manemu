@@ -43,5 +43,19 @@
     },
     "reason": "譯文完全準確且自然。機器譯文使用了男性敬語助詞「ครับ」，而參考譯文使用女性敬語助詞「ค่ะ」，由於原文並未指定說話者性別，此差異完全可接受，不影響語意與流暢度。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原文意義（求救並請求叫救護車），用詞自然、流暢。僅性別敬語從參考的「ค่ะ」改為「ครับ」，但不影響理解，故不視為錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

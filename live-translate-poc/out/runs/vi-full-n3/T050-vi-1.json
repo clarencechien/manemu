@@ -45,5 +45,19 @@
     },
     "reason": "Dịch giả đã chuyển ngữ rất chính xác và tự nhiên, giữ được sắc thái lịch sự của câu gốc tiếng Trung."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（表達禮貌請求與之後再聯絡），用詞與語氣自然貼切，與參考譯文差異為風格而非錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

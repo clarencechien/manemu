@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達原意且敬語恰當；差異在於原句『之後再聯絡』偏向說話者會再聯絡對方，機譯『ค่อย ติดต่อกันใหม่นะครับ』較偏向雙方互相再聯絡，語向略有不同，但整體可接受，且泰語表達自然。拼寫/空格為小問題，不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

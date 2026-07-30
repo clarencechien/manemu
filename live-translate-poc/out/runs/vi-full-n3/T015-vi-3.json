@@ -48,5 +48,19 @@
     },
     "reason": "Dịch thuật rất chính xác và tự nhiên, truyền tải đầy đủ thông tin từ bản gốc và sử dụng kính ngữ (Dạ, ạ) rất phù hợp với ngữ cảnh."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且與原文語意一致（五個人、兩個小孩、需要兒童椅），表達自然，敬語“Dạ/ạ”使用恰當，無資訊遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. Using 'ตรงนี้' (here) is a very common and natural way to refer to 'this seat' in this context. The polite particle 'คะ' (female) is used instead of 'ครับ' (male) in the reference, which is perfectly fine as the speaker's gender is not specified in the source."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，與參考譯文相比僅在敬語性別（'คะ/ค่ะ' vs 'ครับ/ค่ะ'）上不同，但不影響意思或自然度。語句流暢自然，無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

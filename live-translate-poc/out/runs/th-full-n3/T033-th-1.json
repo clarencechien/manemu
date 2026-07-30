@@ -45,5 +45,19 @@
     },
     "reason": "The translation accurately conveys all the information from the source text. The fluency is slightly affected by the word order in '6 โมงครึ่ง เช้า พรุ่งนี้' (6:30 morning tomorrow), which is a bit literal and unnatural compared to the standard Thai phrasing 'พรุ่งนี้เช้าหกโมงครึ่ง', but it remains perfectly understandable."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思：請求幫忙叫計程車，時間為明天早上六點半，目的地為機場，語義忠實度高（5）。但目標語句序與細節稍顯不自然（例如「ให้ตอน 6 โมงครึ่ง เช้า พรุ่งนี้」排序與間隔不流暢），且使用了男性愛用的敬語詞尾「ครับ」，與參考譯文的女性敬語「ค่ะ」不同，故流暢度評為4，並標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

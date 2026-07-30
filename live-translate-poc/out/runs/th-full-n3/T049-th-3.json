@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地翻譯了原文的意思，語音自然流暢。雖然機器譯文使用了女性敬語助詞「ค่ะ」，而參考譯文使用了男性代名詞「ผม」和敬語助詞「ครับ」，但由於原文「我」並無指定性別，機器譯文的翻譯在文法和語意上完全正確且自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實、泰語流暢自然。唯一差異為禮貌語尾使用 'ค่ะ'（女性語氣），原文／參考為男性用語 '我/ผม...ครับ'，屬於敬稱/性別表現上的不一致，故標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

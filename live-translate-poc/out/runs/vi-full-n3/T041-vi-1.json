@@ -49,5 +49,19 @@
     },
     "reason": "譯文非常準確且自然，完全保留了原文的意思。譯文中加入的敬語助詞「Dạ」和「ạ」符合越南語口語的禮貌表達習慣，使句子更顯自然流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地傳達原文意思，包含時間與條件關係（如果三點沒有位子，四點也可以）。語氣禮貌（前後有「Dạ/ạ」），越南語表達自然，與參考譯文等價。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

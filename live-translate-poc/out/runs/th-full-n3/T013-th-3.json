@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly translates all elements of the source sentence: '我剛剛' (เมื่อกี้/เพิ่ง...เมื่อกี้), '在月台上' (บนชานชาลา), and '把手機弄丟了' (ทำมือถือหาย). The addition of the polite particle 'ครับ' and pronoun 'ผม' makes the sentence sound natural and polite in Thai."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句含意（剛剛在月台把手機弄丟），語義忠實，故 adequacy=5。泰語表達自然流暢，語序和用詞都可接受（雖原文未標明說話者性別，機譯使用ผม/ครับ屬正常選擇），故 fluency=5。未發現遺漏、增補或事實錯誤，亦無錯誤旗標。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

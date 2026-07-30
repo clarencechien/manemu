@@ -45,5 +45,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Việc thêm các từ kính ngữ như 'Dạ', 'ạ' giúp câu dịch thể hiện được sự lịch sự, chân thành tương đương với bản gốc tiếng Trung."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（感謝與致歉/麻煩之意），故語意忠實評為5。語言流暢自然，但用詞上以“bạn”替代原參考的敬稱“anh/chị”，且有口語粒子“dạ/ạ”與拼寫“cám”偏口語，略影響正式度，故流暢度評4。標記 honourific_off=true。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

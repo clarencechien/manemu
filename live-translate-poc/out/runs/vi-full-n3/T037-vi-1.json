@@ -45,5 +45,19 @@
     },
     "reason": "Bản dịch máy hoàn toàn chính xác và tự nhiên. Các thông tin về số phòng (702) và tình trạng của người bạn (bị ngất) đều được truyền tải đầy đủ và đúng ngữ cảnh."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文資訊（房間號碼702及朋友昏倒），用詞自然（“bị ngất”與參考的“ngất xỉu”同義），語氣詞“ạ”也合適。唯獨人稱（tôi vs. em）略有不同，但並不影響語意。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

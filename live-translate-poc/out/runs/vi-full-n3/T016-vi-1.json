@@ -45,5 +45,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Việc thêm các từ kính ngữ như 'Dạ', 'ạ' và 'làm ơn' giúp câu nói trở nên lịch sự và phù hợp với ngữ cảnh giao tiếp."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整忠實地傳達原句意思（表明對蝦子過敏並請勿放任何海鮮），且使用越南語禮貌用語（Dạ...ạ），語序與用詞自然流暢，與參考譯文等效。無遺漏或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

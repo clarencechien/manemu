@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。加入的敬詞「Dạ」和「ạ」符合口譯情境中的禮貌語氣，語意完全忠實，流暢度極佳。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實原意，語句自然通順。口語化的語助詞“Dạ”和句尾敬語“ạ”雖加入，但並不影響意義或自然度，符合參考譯文。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

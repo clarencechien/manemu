@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然。「Cứu mạng」在越南語中是表達「救命」非常道地且緊急的說法，後半句的翻譯也完全符合原意，語氣禮貌且流暢。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文傳達了原句的主要意思（請求救援並叫救護車），因此語意忠實度較高（4）。但用詞和語序不自然：越語中通常說“Cứu tôi!”或“Cứu mạng tôi!”較少見，且句尾的“với ạ”與“xin hãy”同時出現顯得多餘和口語化，整體流暢度較差（3）。沒有遺漏、增添或顛倒原意，也未涉及人名或數字錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

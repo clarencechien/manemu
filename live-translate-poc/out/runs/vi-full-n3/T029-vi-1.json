@@ -45,5 +45,19 @@
     },
     "reason": "Bản dịch máy rất chính xác và tự nhiên. Việc sử dụng các từ kính ngữ như 'Dạ' và 'ạ' giúp giữ được thái độ lịch sự của câu gốc tiếng Trung."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意基本完整，能表達原句「沒訂房，詢問今晚是否有空房」。用詞上有小差異：原文與參考以較年輕或謙卑的第一人稱「我/em」呈現，機譯用「tôi」而參考用「em」，造成敬稱/語氣差異（honorific_off）。另外「我沒有訂房」較自然翻為「tôi/chưa đặt phòng」，機譯的「tôi không có đặt phòng」語感略不如「tôi chưa đặt phòng」，因此流暢度略降。其他內容無遺漏或錯譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

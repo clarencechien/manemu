@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然。機器譯文使用「หน้าร้อน」（夏天）和「ผมว่า」（我覺得）非常符合口語表達，語意與原文完全一致，流暢度極佳。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思，用詞自然（「หน้าร้อน/ฤดูร้อน」、「ร้อนมากเลย/很熱」、「ผมว่า/我覺得」等），語氣禮貌且與參考譯文相符，無明顯錯誤或遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

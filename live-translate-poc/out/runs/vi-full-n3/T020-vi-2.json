@@ -45,5 +45,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Câu dịch sử dụng kính ngữ lịch sự (Dạ, cho em hỏi... được không ạ?) rất phù hợp với ngữ cảnh giao tiếp."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句請求（詢問是否可以分開結帳）的語意，沒有遺漏關鍵資訊，故語意忠實度高。語句在越南語中可理解且禮貌，但用法上帶有口語向談話者自稱（\"cho em hỏi\"）及詞序/用詞稍微不同於參考譯文（如\"chia tiền thanh toán riêng\"略顯冗贅），因此在自然度上為良好但非完美。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

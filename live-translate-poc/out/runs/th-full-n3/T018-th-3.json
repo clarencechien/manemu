@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly translates 'tonkotsu ramen' as 'ทงคตสึราเมน' and 'firm noodles' as 'เส้นแข็งหน่อย'. The polite particle 'ครับ' is used naturally, making the sentence sound polite and native."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完全傳達原句意思：點一份豚骨拉麵並要求麵硬一點，數量與要求皆正確。語句自然度略有小瑕疵（「ที่หนึ่ง」的語序較不典型，且通常會說「ขอให้เส้นแข็งหน่อย/เอาเส้นแข็งหน่อย」），但仍可被泰語母語者理解，故fluency略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

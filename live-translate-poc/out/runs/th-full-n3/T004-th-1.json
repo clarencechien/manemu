@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思。譯文加入了泰語的禮貌助詞「ครับ」，使語氣顯得十分自然得體，與參考譯文幾乎一致。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意準確，將「超過十五分鐘我想搭計程車」正確表達為泰語。唯一小瑕疵是標點/空格與使用阿拉伯數字「15」而非文字，但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

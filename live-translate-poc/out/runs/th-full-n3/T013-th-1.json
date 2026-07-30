@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文「在月台上弄丟手機」的意思，語氣也十分客氣禮貌。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原意：剛剛在月台上把手機弄丟了。語義忠實，故給5分。流暢度稍有瑕疵：用詞/語序略不自然且有重複時間副詞（เพิ่ง與เมื่อกี้），但仍可理解，故給4分。標記 honorific_off=true，因為機器譯使用男性代詞/語尾（ผม...ครับ），而參考使用女性語尾（ค่ะ），存在敬語/性別表現差異。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

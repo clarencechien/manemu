@@ -46,5 +46,19 @@
     },
     "reason": "The translation is highly accurate and conveys the exact meaning of the source text. The fluency is also very good, with only a minor stylistic difference: using 'การ์ด IC' with a space instead of the more natural 'บัตร IC' as seen in the reference."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達要為 IC 卡儲值 1,000 日圓的意圖，金額與對象正確。但原句「我想幫…」帶有『幫忙替他人儲值』的語氣，機器譯文以「ฉันต้องการเติมเงิน…」表達為『我想自己儲值』或一般的『我想儲值』，弱化了『幫忙』的助人語義；此外用詞與參考譯文相比略不如口語自然（如省略助詞或改用อยาก/ช่วยเติมเงิน會更自然）。因此語意忠實度略降一級，流暢度亦稍打折。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

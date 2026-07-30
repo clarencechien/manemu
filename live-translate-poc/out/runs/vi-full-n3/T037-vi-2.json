@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is exceptionally accurate and natural. It perfectly conveys the meaning of the source text, including the room number and the emergency situation, using polite and appropriate Vietnamese phrasing."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實：房號702與朋友昏倒的資訊皆正確。用詞自然（“ngất”與“ngất xỉu”同義），句尾敬語“ạ”也合適。唯一差異是代詞“tôi” vs 參考的“em”，屬於語域/人稱選擇，非實質錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

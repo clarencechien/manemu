@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且流暢。雖然人稱代詞使用了 'cháu'（晚輩自稱）而參考譯文使用 'em'，這在越南語情境中完全取決於說話者與對方的年齡關係，兩者皆符合禮貌原則，譯文中的 'ạ' 也體現了客氣的語氣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句意思（表示太貴並詢問能否算三千塊），數字與語意均正確。僅在代詞上用「cháu」而參考譯文用「em」，屬於語域／稱謂選擇差異，但不影響忠實度或自然度；句子在越南語中也十分通順。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

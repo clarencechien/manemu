@@ -47,5 +47,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息，並在越南語中加入了適當的敬語助詞（Dạ, ạ），使語氣顯得十分禮貌與客氣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與參考譯文幾乎完全一致，語意完整且自然，包含禮貌語氣與航班號正確無誤。沒有遺漏或增譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

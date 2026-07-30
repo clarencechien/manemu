@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. Asking 'ราคานี้รวมภาษีแล้วหรือยัง' (Is tax already included in this price?) is the most common and natural way to express 'is this price tax-inclusive or tax-exclusive' in Thai. The use of the polite particle 'ครับ' instead of 'ค่ะ' is acceptable as it just reflects a male speaker."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整保留原意，詢問價格是否含稅的語意正確（「รวมภาษีแล้วหรือยัง」等同於「含稅還是不含稅」的詢問方式）。泰語表達自然流暢。唯一差別為禮貌語尾用「ครับ」（男性語氣）而非參考譯文的女性語氣，屬於語氣選擇而非錯誤，故不標記為錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的意思。語意忠實度極高。在流暢度方面，'คิด ผม'（算我）的表達稍微有些不夠自然（通常會說 'คิดให้ผม' 或 'คิดผม'），但整體上在口語情境中完全可被理解，且使用了禮貌助詞 'ครับ'，符合對話情境。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文大致傳達原意（表示太貴並請對方幫忙算成3,000元），數字正確。用詞上有小錯誤：『คิด ผม』應為『คิดให้ผม』或『คิดผมเป็น...』等，語序/助詞缺失造成流暢度下降，且敬語性別與參考譯文不同（機器為男性『ครับ』，參考為女性『ค่ะ/คะ』），故fluency評較低，adequacy仍算接近完整。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

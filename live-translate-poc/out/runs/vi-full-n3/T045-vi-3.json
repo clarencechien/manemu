@@ -45,5 +45,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Việc sử dụng từ kính ngữ 'Dạ' ở đầu câu làm tăng thêm sự lịch sự, rất phù hợp với ngữ cảnh cảm ơn trong tiếng Trung."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（感謝與表達“麻煩你了”），因此語意忠實度高但非滿分。用詞上有小不自然處（“hôm nay thực sự phiền bạn quá” 比較少見，通常說法為 “hôm nay thật sự làm phiền anh/chị” 或 “thực sự đã làm phiền anh/chị rồi”），流暢度略受影響。此外原參考譯文使用敬稱“anh/chị”，機譯使用“bạn”，導致敬稱層級不符，故標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

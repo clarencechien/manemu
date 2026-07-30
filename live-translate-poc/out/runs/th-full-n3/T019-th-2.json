@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且流暢。將「這道菜」翻譯為「อาหารจานนี้」（這盤食物）非常貼切，且加入了「พอดี」（剛好/其實）與語氣助詞「น่ะค่ะ」，使整體語氣顯得十分自然、有禮貌，完全符合中文原文的語境。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文忠實傳達原意「看起來很好吃，但我已經吃飽了」。泰語用詞與語氣自然（僅有語氣詞差異），無語意遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。將「我的護照不見了」翻譯為「hộ chiếu của cháu bị mất rồi」，「請問警察局在哪裡？」翻譯為「cho hỏi đồn cảnh sát ở đâu ạ?」，語氣十分客氣且符合情境，使用了適當的敬語助詞（Dạ, ạ）。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（護照遺失、詢問警察局位置），用詞自然且禮貌。唯用人稱代詞“cháu”較參考譯文的“em”不同，及“cho hỏi”缺少受詞而略顯口語化，故流暢度略降。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

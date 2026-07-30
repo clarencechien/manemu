@@ -45,5 +45,19 @@
     },
     "reason": "譯文將前半句的「這個不要辣」（不要加辣）誤譯為「อันนี้ไม่เอาดีกว่าค่ะ」（這個還是不要好了），漏譯了「辣」的意思並改變了原意。後半句「我不太能吃辣」翻譯得很好（ฉันทานเผ็ดไม่ค่อยเก่งค่ะ）。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大意正確：表達不吃辣與個人無法吃辣的訊息都保留。但開頭的表述“อันนี้ไม่เอาดีกว่าค่ะ”偏向『我不拿這個/我還是不要了』，與原句想表達『這個不要辣』略有出入；後半句用詞“ฉันทานเผ็ดไม่ค่อยเก่งค่ะ”雖可懂但不如參考譯文自然（通常說“ทานเผ็ดไม่ค่อยได้/ทานเผ็ดไม่ค่อยไหว”）。整體流暢度與忠實度均略減，故評4分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

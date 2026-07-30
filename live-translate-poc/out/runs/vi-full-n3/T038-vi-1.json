@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。加入了「Dạ」和「ạ」等語氣詞，使口語表達顯得十分禮貌且符合醫病溝通的情境，人稱代名詞「tôi」的使用也完全正確。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，將「打青黴素」譯為「tiêm penicillin」合理。語氣上使用「Dạ/...ạ」與原句口語程度相容，表達自然流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

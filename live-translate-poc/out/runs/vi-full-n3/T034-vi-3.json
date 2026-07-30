@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation is highly accurate and extremely natural. It perfectly conveys the urgency and meaning of the source text in Vietnamese."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文請求救護車的意思，語意忠實。用詞上有口語化與冗餘（「Cứu với ạ」和句尾的「với」稍嫌不自然或多餘），因此流暢度略低於完美。無遺漏或增譯錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

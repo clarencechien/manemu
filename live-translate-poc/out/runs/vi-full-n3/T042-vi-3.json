@@ -47,5 +47,19 @@
     },
     "reason": "譯文非常準確且自然。使用了禮貌助詞（Dạ, ạ）和合適的人稱代詞（em），非常符合客服情境的對話。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，兩句話都正確翻譯並保留班機編號。用詞與參考譯文在第一人稱上採用「em」而非「tôi」，屬於人稱/語氣選擇但不影響正確性或自然度，譯文流暢自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

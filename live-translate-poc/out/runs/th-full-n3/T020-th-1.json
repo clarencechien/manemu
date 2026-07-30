@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. The only difference from the reference is the polite particle 'ครับ' (male) instead of 'คะ' (female), which is perfectly acceptable."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意義（請求協助分開結帳），用詞自然且禮貌（使用ครับ）。與參考譯文僅在語氣性別（ค่ะ vs ครับ）和「แยก บิล」的空格上有細微差異，均不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

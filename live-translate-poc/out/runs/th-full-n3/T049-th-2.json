@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且流暢地表達了原文的意思。雖然機器譯文使用了女性第一人稱代詞「ดิฉัน」和語氣詞「ค่ะ」，而參考譯文使用的是男性版本，但在無上下文的狀況下，這兩種翻譯皆屬正確且自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整忠實地傳達原意（來自台灣，第一次來大阪玩）。語言自然、用詞與禮貌語尾（ค่ะ）一致。與參考譯文在性別敬語（ดิฉัน/ค่ะ vs ผม/ครับ）上不同，但不構成誤譯。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

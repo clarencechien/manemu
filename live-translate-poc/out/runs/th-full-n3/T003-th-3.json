@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly translates both clauses of the source sentence ('not going to the airport' and 'going to the train station') with appropriate vocabulary and grammar. The inclusion of the polite particle 'ครับ' at the end makes it polite and natural."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達否定與目的地（不是機場而是火車站），語義忠實。流暢度受限：詞語斷開、重複主語且缺少參考譯文中的禮貌語氣（「นะครับ」），且使用了女性/非正式代詞「ฉัน」而非參考的男性禮貌代詞「ผม」，因此在禮貌與風格上不一致。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

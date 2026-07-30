@@ -48,5 +48,19 @@
     },
     "reason": "Bản dịch máy rất chính xác và tự nhiên. Nó truyền tải hoàn hảo ý nghĩa của câu gốc và sử dụng các kính ngữ (Dạ, ạ) cũng như khẩu ngữ tự nhiên (kia kìa) rất phù hợp với ngữ cảnh mua bán."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且準確表達原意（拒絕這個、要旁邊藍色那個、詢問兩個多少錢）。語句自然、用詞恰當（màu xanh dương 對應藍色），沒有語意遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

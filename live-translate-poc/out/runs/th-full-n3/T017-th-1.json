@@ -48,5 +48,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, capturing all details of the source text perfectly with appropriate politeness particles."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句三個要點：此杯不要加冰、把大杯改成中杯、總共三杯。泰文用詞及語序自然，只有敬語末尾使用先生語氣（ครับ）與參考譯文的女性語氣（ค่ะ）不同，但不影響義意或流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

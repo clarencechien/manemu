@@ -43,5 +43,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的意思。譯文中同時出現了男性與女性的敬語助詞「ครับ/ค่ะ」，在書面呈現上稍微不夠自然，但整體語意和文法皆正確。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（稱讚中文說得好並詢問在哪裡學的），因此語意忠實度高。表達上自然且可理解，但有些細微不自然處：多餘的空格與將敬語詞（ครับ/ค่ะ）重複兩次，使句子略顯不流暢，故流暢度評為4。無遺漏或錯誤資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

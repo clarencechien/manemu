@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, conveying the exact meaning of the source text with appropriate politeness particles, matching the reference translation almost perfectly."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（婉拒並表示只是看看），用詞與參考譯文稍有不同（ไม่ต้อง vs 不เป็นไร），但同樣自然且禮貌，語句流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

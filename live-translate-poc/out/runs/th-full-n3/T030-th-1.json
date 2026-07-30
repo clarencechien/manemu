@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. It correctly conveys the meaning of the source sentence with appropriate polite particles (นะครับ/ครับ)."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句意思（詢問退房是十點還是十一點），因此語意忠實度高（5）。目標語句子可理解且自然，但有些空格與語氣詞（นะครับ...ครับ）使用略顯重複或不太順暢，故流暢度評為4。沒有資訊遺失或錯譯，也無幻構或否定顛倒等問題。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

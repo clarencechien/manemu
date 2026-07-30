@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然地翻譯了原文的意思，語氣也十分得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原意（要求把價錢算成3000），語句自然通順。唯一差異為人稱／敬稱：參考譯文用「em」，機器譯文用「tôi」，可能改變語氣或社會階層暗示，故標記為 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

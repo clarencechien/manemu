@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，與參考譯文幾乎完全一致。「ไม่ต้องครับ」與「ไม่เป็นไรครับ」皆能完美表達「不用了」的意思，且語氣禮貌。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯整體語意完整，『不用了』譯為『ไม่ต้องครับ』雖能被理解但比參考譯文的『ไม่เป็นไรครับ』在語氣上略顯不自然；其餘片語（『謝謝』『我只是看看而已』）對應恰當且流暢。故語意忠實與自然度皆為良好但非完美。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

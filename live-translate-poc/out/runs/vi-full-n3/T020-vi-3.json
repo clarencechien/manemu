@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常自然且準確。「thanh toán riêng」精確地翻譯了「分開結帳」，雖然省略了「幫我們」（cho chúng tôi），但在越南語日常對話中這樣表達更為自然，語意完全沒有流失。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：「分開結帳/分開付錢」對應為「thanh toán riêng/ tính tiền riêng」，機器譯文使用「Dạ cho hỏi có thể thanh toán riêng được không ạ?」既禮貌又自然，與參考譯文意思一致，無錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

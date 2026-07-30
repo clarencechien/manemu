@@ -48,5 +48,19 @@
     },
     "reason": "譯文非常準確且自然。完整傳達了原文的所有訊息，語氣禮貌且符合泰語口語表達習慣。雖然「สอง อัน」中間有空格，但不影響整體流暢度與理解。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句意思：拒絕當前物品、指定旁邊的藍色那個，詢問兩個的價格。用詞與語序自然，僅與參考譯文在「藍色」用詞（สีน้ำเงิน vs สีฟ้า）上有細微差異，屬可接受範圍，無其他錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

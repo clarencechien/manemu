@@ -48,5 +48,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Cụm từ '打八折' (giảm 20%) được dịch đúng thành 'giảm giá 20%'. Cấu trúc câu lưu loát và lịch sự."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達原句意思：若打八折就買兩件。數量、折扣正確；語句自然流暢。唯一微小差異為人稱代詞「tôi」 vs. 參考譯文的「em」，但不影響語意或禮貌程度，故評為完全忠實且自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

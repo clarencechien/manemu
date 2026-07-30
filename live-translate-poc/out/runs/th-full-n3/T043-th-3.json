@@ -46,5 +46,19 @@
     },
     "reason": "機器譯文漏譯了後半句『而不用付取消費』(โดยไม่ต้องเสียค่ายกเลิก)，因此標記為 omission。前半句『最晚可以幾點取消』翻譯正確且通順。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "機器譯文只問到「最晚可以幾點取消」，但未提到「而不用付取消費／ไม่ต้องเสียค่ายกเลิก」的條件，語意不完整。泰語句子本身自然（有禮貌用詞），但缺少關鍵資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

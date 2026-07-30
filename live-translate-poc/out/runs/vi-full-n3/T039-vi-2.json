@@ -47,5 +47,19 @@
     },
     "reason": "Bản dịch máy rất chính xác và tự nhiên. Việc dịch '預約' thành 'đặt bàn' (đặt bàn ăn) hoặc 'đặt lịch' đều phù hợp với ngữ cảnh, đồng thời bản dịch sử dụng kính ngữ 'Dạ... ạ' rất lịch sự và tự nhiên trong tiếng Việt."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且準確地傳達原意（預約時間與人數皆正確）。語句自然流暢。唯與參考譯文相比使用了不同人稱/語域（tôi vs. em），屬於敬稱/語氣差異，標記為 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

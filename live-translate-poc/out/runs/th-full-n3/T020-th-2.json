@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。機器譯文使用了男性敬語助詞「ครับ」，而參考譯文使用女性敬語助詞「คะ」，兩者皆符合禮貌表達，語意完全一致。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文語意完全對等且表達自然，但使用了男性敬語「ครับ」而參考譯文為女性敬語「คะ」，敬語性別不符。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

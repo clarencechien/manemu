@@ -45,5 +45,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Bản dịch truyền tải đầy đủ thông tin từ câu gốc với sắc thái lịch sự phù hợp."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意準確，保留了否定句「不是取消」，語氣禮貌（使用「Dạ...ạ」）。唯一與參考譯文不同的是人稱代詞（機器譯為「tôi」，參考為「em」），但不影響原意或理解，因此評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

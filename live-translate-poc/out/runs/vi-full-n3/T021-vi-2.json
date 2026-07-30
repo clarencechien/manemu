@@ -48,5 +48,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Bản dịch sử dụng kính ngữ 'Dạ', 'ạ' rất phù hợp với ngữ cảnh giao tiếp lịch sự, cấu trúc câu trôi chảy và không có lỗi."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完全保留原意（不買這個，要旁邊藍色的，問兩個多少錢），所以語意忠實度高。句子語序與用詞大致自然，但使用了“tôi muốn”而非參考譯文的服務場合常用敬語“cho em”，造成語氣/人稱不一致，故流暢度略降一級並標記 honorific_off。沒有數量、否定或新增資訊錯誤，也無遺漏或杜撰。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

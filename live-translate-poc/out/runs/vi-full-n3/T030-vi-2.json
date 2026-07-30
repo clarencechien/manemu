@@ -45,5 +45,19 @@
     },
     "reason": "Bản dịch hoàn toàn chính xác và tự nhiên, truyền tải đầy đủ thông tin từ câu gốc một cách lịch sự."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意準確，保留禮貌語氣（Dạ...ạ），與參考譯文差異僅在‘sáng’的位置，並不影響意思或自然度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

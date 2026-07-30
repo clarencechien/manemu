@@ -46,5 +46,19 @@
     },
     "reason": "Bản dịch truyền tải đầy đủ ý nghĩa của câu gốc. Tuy nhiên, cách diễn đạt ở vế sau \"không mua chắc được\" nghe khá gượng gạo và không tự nhiên trong tiếng Việt. Nên sửa thành \"chắc là tạm thời chưa mua\" hoặc \"thôi tạm thời không mua nữa\"."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 2,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": true
+    },
+    "reason": "譯文大致表達出不打算先買的意思，但有幾個問題：1) 使用了『tôi』而非原文更口語親近的『em』，改變了說話者的稱謂與語氣（honorific_off=true）；2) 加入了『chắc được』等不必要且改變語氣的成分，帶入了不在原文中的不確定性（hallucination=true）；3) 句子語序與用法不夠自然，尤其『tạm thời không mua chắc được』不通順。基於以上，語意忠實度給3分，目標語自然度給2分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

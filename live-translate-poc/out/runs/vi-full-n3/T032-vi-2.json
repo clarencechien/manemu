@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分禮貌。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "語意完整、否定與時間皆正確，忠實度高。語氣與禮貌稱謂稍有不一致：機譯使用「tôi」但仍帶有「dạ/ạ」敬語，未對應參考譯文的「em…anh/chị」，導致語域不完全自然，因此流暢度略降。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

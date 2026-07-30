@@ -43,5 +43,19 @@
     },
     "reason": "譯文非常準確且自然。將「請問」翻譯為「ขอถามหน่อยครับ」十分道地，整句語意完整，語氣禮貌，與參考譯文幾乎一致。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文傳達出原句主要訊息（詢問車站位置與如何走比較快）。機譯用「ขอถามหน่อยครับ」替代參考譯文的「ขอโทษครับ」，語氣仍可接受；但缺少「ถึงจะ」等連接詞，使得「怎麼走比較快？」的表述稍嫌不夠自然與完整（語序與連接詞處理不夠精練）。整體仍可理解，流暢度良好但非最佳。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

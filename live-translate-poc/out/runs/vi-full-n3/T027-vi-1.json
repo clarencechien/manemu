@@ -47,5 +47,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text and uses appropriate polite particles (Dạ, ạ) suitable for the context, matching the reference translation closely."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問是否可退稅與購買金額），語句在目標語上自然流暢。僅在代詞禮貌層次上與參考譯文不同（Tôi vs. Em），但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

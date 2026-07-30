@@ -48,5 +48,19 @@
     },
     "reason": "Dịch hoàn toàn chính xác và tự nhiên. Cụm từ '打八折' (giảm 20%) được dịch rất chuẩn xác sang tiếng Việt là 'giảm 20%'."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整保留原意（若打八折就買兩件），語句流暢自然。但人稱代詞與參考譯文不同：機器譯為“tôi”而參考用“em”，語氣/敬稱略有差異，故標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

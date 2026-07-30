@@ -48,5 +48,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên, truyền tải đầy đủ thông tin từ câu gốc sang tiếng Việt."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，所有資訊都有保留（不要加冰、大杯改成中杯、總共三杯），用詞與語氣在越南語中自然且禮貌（使用“ạ”）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

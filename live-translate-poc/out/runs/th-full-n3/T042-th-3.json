@@ -47,5 +47,19 @@
     },
     "reason": "The translation is highly accurate and natural. It correctly translates all elements of the source sentence. The use of female polite particles (ดิฉัน, คะ, ค่ะ) is appropriate and grammatically correct."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且意義忠實（可經由電子郵件確認預約，並提供正確航班號 BR198），語句在泰語中自然通順。但使用了女性自稱與語尾（ดิฉัน/ค่ะ），而參考譯文為男性自稱（ผม/ครับ），屬於敬稱/性別用詞差異，故標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

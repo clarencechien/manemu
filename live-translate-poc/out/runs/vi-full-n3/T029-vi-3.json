@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text and uses appropriate polite particles (Dạ, ạ) in Vietnamese."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意：表示沒有訂房並詢問今晚是否還有空房。用詞自然且禮貌（\"Dạ... ạ\"），語序流暢。與參考譯文唯一差別是代詞選擇（機譯用 \"tôi\"，參考用 \"em\"），屬於語氣差異但不影響語意或禮貌，因此評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

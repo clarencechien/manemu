@@ -45,5 +45,19 @@
     },
     "reason": "Dịch thuật rất chính xác và tự nhiên. Bản dịch đã chuyển ngữ đầy đủ và chính xác ý nghĩa của câu gốc, sử dụng đại từ nhân xưng 'cháu' và kính ngữ 'ạ' rất lịch sự và phù hợp với ngữ cảnh giao tiếp."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達原句意思。用詞與參考譯文略有代詞與『警察局』用語差異（cháu vs em、đồn cảnh sát vs đồn công an），但皆為自然且合適的越南語表達，無誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

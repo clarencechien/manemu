@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with appropriate politeness and correct grammar."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "語義完整且忠實，機譯保留原句讚美與詢問學習地點（因此 adequacy=5）。語氣與詞序大致自然，但「พูดได้เก่งจริงๆ」較不地道，通常會說「พูดเก่ง」或「พูดได้ดี」，且機譯使用女性敬語（ค่ะ/คะ）而參考譯文為男性敬語（ครับ），故流暢度稍降（fluency=4）並標記 honorific_off。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

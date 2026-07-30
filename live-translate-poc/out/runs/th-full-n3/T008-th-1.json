@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text, including the nuance of '應該' (น่าจะ) and the tag question '吧' (ใช่ไหมครับ)."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，保留了原句的疑問語氣與否定推測。泰文自然可理解，與參考譯文差異僅在語氣助詞選擇，並無意義偏差。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

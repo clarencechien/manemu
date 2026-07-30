@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。完整傳達了原文的所有訊息，語氣禮貌客氣（使用了 Dạ... ạ），非常符合情境。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思（請求叫計程車、明天早上六點半要到機場）。用詞與語氣（Dạ, có thể đặt giúp tôi...）自然且禮貌。唯一小瑕疵是第二句略有語序/主語省略（“6 giờ rưỡi sáng mai cần đến sân bay” 可更順為“Sáng mai 6 giờ rưỡi tôi cần ra/sang sân bay”），但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

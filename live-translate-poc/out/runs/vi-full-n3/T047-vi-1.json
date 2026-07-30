@@ -46,5 +46,19 @@
     },
     "reason": "The translation is exceptionally accurate and natural. It conveys the exact meaning of the source text and is grammatically flawless in Vietnamese, almost identical to the reference translation."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：原句「日本的夏天很熱, 不過我覺得台北更熱。」被正確表達為越南語，語序與詞彙自然（Mùa hè ở Nhật Bản rất nóng, nhưng tôi thấy Đài Bắc còn nóng hơn.）。與參考譯文差異僅在「日本」一詞使用全名「Nhật Bản」而參考為簡稱「Nhật」，均屬可接受的表達，無任何遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

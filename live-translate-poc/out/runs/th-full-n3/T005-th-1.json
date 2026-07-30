@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. 'วัดเซ็นโซจิ' is a correct translation for '淺草寺' (Senso-ji), and the overall sentence structure is perfectly natural in Thai."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問淺草寺/晴空塔是否在同一方向）。用詞自然且符合泰語習慣（「ขอถามหน่อยครับ」和「หรือเปล่าครับ」皆為禮貌用法）；雖然參考譯文用「วัดอาซากุสะ」而機器譯文用「วัดเซ็นโซจิ」，兩者皆指原文的淺草寺，稱呼差異不影響理解，因此給予高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

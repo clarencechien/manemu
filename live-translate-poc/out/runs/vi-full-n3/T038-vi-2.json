@@ -45,5 +45,19 @@
     },
     "reason": "Bản dịch máy rất tự nhiên và chính xác. Từ 'Penicillin' bị viết thiếu một chữ 'i' thành 'Pencillin' nhưng không ảnh hưởng đến việc hiểu nghĩa. Cấu trúc câu và kính ngữ 'ạ' được dùng rất phù hợp."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（不能打青黴素，會過敏），因此語意忠實度高。語序與拼字（Pencillin）略有不自然或小錯誤，敬語“ạ”用法也稍顯口語，但仍可理解，故流暢度給4分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

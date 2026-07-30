@@ -48,5 +48,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的所有語意，並在句末加上了符合服務場景的禮貌語氣詞「ạ」，非常貼切。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：『不要加冰』、杯型從大杯改成中杯、總共三杯皆正確。用語自然、有敬語『ạ』，僅在措辭上與參考譯文略有不同（『không đá』比『xin đừng cho đá』更口語），但並不影響準確性與流暢度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

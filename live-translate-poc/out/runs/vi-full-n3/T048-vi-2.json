@@ -45,5 +45,19 @@
     },
     "reason": "The translation is natural and polite, but it omitted the translation for '謝謝' (thank you / cảm ơn)."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": true,
+      "hallucination": false
+    },
+    "reason": "譯文語意大致正確且自然，但缺少原句中的「謝謝/感謝」一項（未表達感謝），因此有遺漏，故略降一分。語氣上使用「em/ạ」雖不同於參考的『tôi/感謝』，但仍為自然、可接受的口語表達。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

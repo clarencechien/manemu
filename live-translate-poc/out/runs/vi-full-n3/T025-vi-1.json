@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly translates 'limited edition' to 'mẫu giới hạn' and maintains a polite tone ('Dạ... ạ') which is very appropriate for the context."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意思，將“limited edition”意譯為“mẫu giới hạn”恰當；語氣禮貌自然，表達流暢，與參考譯文差異僅在用詞細微和助詞位置。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

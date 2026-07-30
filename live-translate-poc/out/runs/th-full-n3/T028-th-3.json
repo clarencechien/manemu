@@ -48,5 +48,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly conveys all the information from the source text, including the name 'Chen Dawen' (เฉินต้าเหวิน) and the duration of the stay. The tone is polite and appropriate for a hotel check-in scenario."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整且忠實地傳達了原文資訊（已訂房、姓名為陳大文、住兩晚）。泰語表達流暢自然，姓名音譯正確。性別語氣（ผม/ครับ vs 參考的ค่ะ）僅為禮貌用詞差異，非內容錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

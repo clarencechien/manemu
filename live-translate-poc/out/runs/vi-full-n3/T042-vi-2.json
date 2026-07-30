@@ -47,5 +47,19 @@
     },
     "reason": "Bản dịch rất chính xác và tự nhiên. Từ '預約' (hẹn trước/đặt trước) được dịch thành 'đặt phòng', tuy có hơi cụ thể hóa so với 'đặt chỗ' trong ngữ cảnh chuyến bay nhưng vẫn hoàn toàn dễ hiểu và hợp lý. Các kính ngữ 'Dạ', 'ạ' được thêm vào giúp câu nói trở nên lịch sự và tự nhiên hơn."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文整體自然且完整，禮貌語氣（Dạ/ạ）也處理得當。但將「預約/預訂座位」譯為“đặt phòng”（通常指訂房）與原意（此處因提到班機應為訂位/訂票）不符，屬於詞義選擇錯誤，因而降低一分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

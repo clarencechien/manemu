@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的意思，泰語表達非常自然流暢，禮貌語氣也使用得當。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句含意（我對蝦子過敏，請不要在餐點放任何海鮮），因此語意忠實度為5。目標語通順但有輕微格式/語序問題（如「ใส่ อาหารทะเล」之間不必要空格與語序可更自然），因此自然度評4。性別用詞（ผม/ครับ）雖與參考譯文的女性用語不同，但原文未指定性別，故不視為錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

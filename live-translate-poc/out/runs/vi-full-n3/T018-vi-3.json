@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and natural. 'tonkotsu' is translated as 'xương hầm' (pork bone broth), which is correct and very clear in Vietnamese. The phrasing 'mì lấy loại cứng một chút' is natural for ordering. No errors found."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思：要求一份 tonkotsu（以「xương hầm」表達骨頭熬製湯底）拉麵，並要求麵條較硬。用語上略有不太自然的措辭（「mì lấy loại cứng một chút ạ」比起參考譯文的「mì làm cứng một chút ạ」或「mì hơi cứng một chút ạ」稍顯生硬），但不影響理解。因此語意忠實度高（5分），目標語自然度稍低（4分）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

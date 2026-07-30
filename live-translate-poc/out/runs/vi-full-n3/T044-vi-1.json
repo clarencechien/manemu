@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，語氣禮貌（使用了 Dạ 和 ạ），完全符合情境，與參考譯文幾乎一致。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文準確傳達原句意思（會晚30分鐘，詢問能否保留位子），語氣禮貌自然。與參考譯文相比，參考譯文多了「giúp tôi」但原文並未明確要求幫忙，因此不屬於遺漏。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

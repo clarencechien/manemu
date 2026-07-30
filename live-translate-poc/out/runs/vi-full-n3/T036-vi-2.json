@@ -45,5 +45,19 @@
     },
     "reason": "Bản dịch máy rất chính xác và tự nhiên. Ý nghĩa của câu gốc được truyền tải đầy đủ và trôi chảy sang tiếng Việt."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句語意：頭暈和沒有心臟病病史都被正確表達。語句在越南語中自然流暢，僅人稱（我/em）與參考譯文不同，但不影響正確性或禮貌，故評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

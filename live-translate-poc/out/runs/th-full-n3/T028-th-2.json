@@ -48,5 +48,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息（訂房、姓名、入住兩晚），語氣禮貌且符合泰語口語表達習慣。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句資訊（已訂房、姓名、入住兩晚），用詞自然。僅有些細節：語氣助詞為男性用語（ผม/ครับ），原文無性別；以及「พัก สองคืน」有不必要的空格，略微影響流暢度，故 fluency 評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

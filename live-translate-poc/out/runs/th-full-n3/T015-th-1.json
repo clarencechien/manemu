@@ -45,5 +45,19 @@
     },
     "reason": "The translation is highly accurate and captures all the details of the source text. The fluency is also very good, with only minor formatting issues like spaces in 'เก้าอี้ เด็ก' and the slash in 'ครับ/ค่ะ' which is common in machine translation outputs to show gender-neutral polite particles."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（五人、兩個小孩、需要兒童椅），語意忠實。用詞和句子結構可理解但有些分詞（“เก้าอี้ เด็ก”）與禮貌語尾“ครับ/ค่ะ”二擇標記使流暢度略受影響，因此流暢度評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

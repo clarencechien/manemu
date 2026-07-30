@@ -45,5 +45,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và tự nhiên. Bản dịch đã chuyển ngữ tốt cụm từ 'tonkotsu 拉麵' thành 'mì ramen nước súp tonkotsu' và '麵要硬一點' thành 'mì thì lấy loại cứng một chút ạ', đồng thời thêm các từ kính ngữ 'Dạ', 'ạ' rất phù hợp với ngữ cảnh giao tiếp."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實：正確表達要一份tonkotsu拉麵並要求麵條較硬，語氣禮貌（使用“Dạ”與“ạ”）。雖有「mì ramen nước súp tonkotsu」稍顯冗贅，但仍屬自然可接受的越南語表達，故給予最高評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

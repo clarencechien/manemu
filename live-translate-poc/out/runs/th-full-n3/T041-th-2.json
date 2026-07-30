@@ -49,5 +49,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly translates '三點' as 'ตอนบ่ายสามโมง' (3 PM) and '四點' as 'ตอนบ่ายสี่โมง' (4 PM), and '位子' as 'ที่ว่าง' (vacant space/seat). The slash 'ครับ/ค่ะ' is used to cover both genders, which is standard for MT, though in actual speech only one would be used."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（3點沒位子就改4點），用詞自然（\"ที่ว่าง\"與參考的\"ที่นั่ง\"同義）。唯一小瑕疵是同時出現\"ครับ/ค่ะ\"兩種敬語標記，略顯不自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

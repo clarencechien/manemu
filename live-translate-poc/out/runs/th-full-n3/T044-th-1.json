@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且準確地傳達了原文的意思。語氣禮貌，唯獨結尾出現「ครับ/ค่ะ」的斜線並列在口譯輸出中稍微不夠自然，但整體流暢度與忠實度皆極高。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原文意涵（會晚30分鐘、詢問是否能保留位子），用詞與語氣自然，僅有輕微說法差異（จอง/เก็บ）但不影響理解。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

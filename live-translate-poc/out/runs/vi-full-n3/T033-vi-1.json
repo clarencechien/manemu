@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息。語氣禮貌（使用了 Dạ... ạ），時間「六點半」翻譯為「6 rưỡi」也非常道地。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實（請求叫計程車及時間/地點皆正確）。用詞與禮貌語氣（\"Dạ\"、\"...không ạ\"）自然，僅人稱由參考譯文的「em」改為「tôi」，但不影響理解或禮貌，故評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

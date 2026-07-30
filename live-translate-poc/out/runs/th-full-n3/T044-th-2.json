@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思，語氣也十分禮貌，與參考譯文高度契合。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文語意完整，表達了“我們會晚三十分鐘到，能否保留位子”的請求，資訊無遺漏，故 adequacy 給 5。語句有些不自然：使用數字「30」代替中文數字、詞序與助詞（如“ยัง”）使用略顯生硬，且斷詞/空格問題使流暢度下降，故 fluency 給 3。沒有出現數字錯誤、否定顛倒、稱謂問題、名字錯譯、遺漏或杜撰資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

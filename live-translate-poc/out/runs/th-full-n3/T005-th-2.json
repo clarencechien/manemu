@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly translates '淺草寺' as 'วัดเซ็นโซจิ' (Senso-ji Temple) and '晴空塔' as 'โตเกียวสกายทรี' (Tokyo Skytree). The sentence structure is grammatically correct and sounds very natural in Thai."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實。將「淺草寺」譯為「วัดเซ็นโซจิ」（Senso-ji）與參考譯文的「วัดอาซากุสะ」（Asakusa）實際上指同一座寺廟，故名稱無誤；句子結構與語氣（禮貌的女性語尾 'ค่ะ/คะ'）在泰語中自然流暢。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

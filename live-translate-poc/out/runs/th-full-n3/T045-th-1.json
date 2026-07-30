@@ -45,5 +45,19 @@
     },
     "reason": "คำแปลถูกต้องและเป็นธรรมชาติอย่างมาก ความหมายของประโยคต้นฉบับได้รับการถ่ายทอดอย่างครบถ้วนและสละสลวย"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯大致傳達原句意思（感謝與今天麻煩你了），因此語意忠實度高但非完美（少了較自然的用法如“สำหรับความช่วยเหลือ”或“มากเลย”）。流暢度受限於語序與標點/空格問題（例如“วันนี้ รบกวน คุณ”多餘空格）及語氣選擇（使用女性語尾“ค่ะ”但原文中性），句子聽起來略不自然，故評為3。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "Dịch nghĩa hoàn toàn chính xác và đầy đủ so với bản gốc. Bản dịch máy sử dụng thêm các từ kính ngữ, lịch sự như 'Dạ', 'đó ạ' làm cho câu nói trở nên rất tự nhiên và thân thiện trong ngữ cảnh giao tiếp."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達了原文意思（來自台灣、首次來大阪玩）。語氣上加入了越南語的禮貌語氣詞“Dạ/ạ”，以及口語的“đó”，但不影響語意，句子通順自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -45,5 +45,19 @@
     },
     "reason": "譯文完整且流暢地翻譯了原文的意思。雖然機器譯文使用了女性敬語助詞（ค่ะ），而參考譯文使用了男性代名詞與敬語（ผม/ครับ），但在無上下文指明說話者性別的情況下，機器譯文的翻譯完全正確且極為自然。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句資訊：來自台灣，第一次來大阪。泰文句子語序與用詞自然流暢。僅與參考譯文在說話者性別/敬語助詞（機器譯為女性語氣 'ค่ะ'，參考為男性 'ครับ'）不同，但不影響語意，故評為高度忠實且自然。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

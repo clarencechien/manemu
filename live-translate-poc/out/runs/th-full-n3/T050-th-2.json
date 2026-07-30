@@ -45,5 +45,19 @@
     },
     "reason": "譯文後半句中的「ฉบับหน้า」（下一期/下一封信）屬於不符合語境的誤譯（幻覺），原文「之後再聯絡」應翻譯為「แล้วค่อยติดต่อกันอีกที」或「แล้วจะติดต่อกลับไปอีกที」。前半句翻譯正確。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 3,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": true,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文大致傳達原意（請求協助並表示之後再聯絡），但用詞不當與語序略顯奇怪。「ค่อย ติดต่อกันฉบับหน้า」不自然且「ฉบับหน้า」在此語境為錯誤詞彙（應為「อีกที/อีกครั้ง/ครั้งหน้า/จะติดต่อกลับ」等），影響清晰度與自然度。語句需調整為例如「แล้วจะติดต่อกลับไปอีกทีครับ」以更貼近原意與目標語自然表達。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

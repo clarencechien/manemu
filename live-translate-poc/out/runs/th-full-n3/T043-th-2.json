@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text, including the polite tone, and matches the reference translation closely."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（詢問最晚可於幾點取消且不用付取消費），語義忠實，故 adequacy=5。目標語句意可理解且用詞正確，但機譯有些斷詞/ spacing 顯得不夠流暢與自然（例如“ได้ช้า สุดกี่ โมง”有多餘斷裂），且用語稍顯機械，故 fluency=4。沒有省略或錯譯，也無顛倒否定或捏造資訊。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

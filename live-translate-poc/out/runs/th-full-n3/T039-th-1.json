@@ -48,5 +48,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的所有訊息（時間、人數），文法完全正確。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意涵（預約時間、明天下午三點、兩個大人），語句通順自然。唯一小差異為使用「ผม」或同時出現「ครับ/ค่ะ」（口譯稿中標示男女敬語），但不影響語意或可理解性，因此評為最高分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

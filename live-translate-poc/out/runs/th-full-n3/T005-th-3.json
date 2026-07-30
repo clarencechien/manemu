@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It correctly translates '淺草寺' as 'วัดเซ็นโซจิ' (Sensoji Temple), which is a direct and correct translation, even though the reference translation uses 'วัดอาซากุสะ' (Asakusa Temple) — both refer to the same temple. The sentence structure and politeness particles are well-preserved."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意圖（詢問淺草寺/Sensoji與東京晴空塔是否在同一方向），用詞（วัด เซ็นโซจิ）可接受且指涉正確。唯語氣用詞與參考譯文略有不同（機譯為「請問」而參考為「抱歉/打擾一下」），且逐字稿內有不必要的空格，稍影響自然度，因此fluency評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

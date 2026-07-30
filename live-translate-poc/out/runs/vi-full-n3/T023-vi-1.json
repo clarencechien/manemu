@@ -45,5 +45,19 @@
     },
     "reason": "Dịch thuật rất tự nhiên và chính xác, gần như hoàn toàn trùng khớp với bản dịch tham khảo. Câu dịch truyền tải trọn vẹn và đúng ngữ cảnh ý nghĩa của câu gốc."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文與原文語意完全一致且自然。機器譯文的敬語用法（Dạ ... ạ）與參考譯文相當，只是主語表達略有不同（cho hỏi vs cho em hỏi），不影響意義或禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

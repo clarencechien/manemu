@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text. The choice of words like 'เวียนศีรษะ' (dizzy) and 'ประวัติโรคหัวใจ' (history of heart disease) is precise and appropriate. The addition of polite particles (ครับ) makes the sentence sound natural and polite."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地傳達了原句含意（我頭暈但沒有心臟病病史），泰語表達自然流暢。性別或敬語選擇（ผม/ครับ vs ฉัน/ค่ะ）屬於措辭差異，不構成錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

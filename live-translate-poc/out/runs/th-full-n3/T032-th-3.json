@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。雖然機器譯文使用了男性代名詞「ผม」(我)和敬語助詞「ครับ」，而參考譯文使用的是女性敬語助詞，但在原文未指定性別的情況下，機器譯文的選擇完全合理且符合禮貌表達。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句意思（明天不需要打掃房間，謝謝），語意忠實；但使用了男性自稱與敬語『ผม...ครับ』，與參考譯文的女性禮貌語氣（นะคะ/ค่ะ）不符，影響自然度，故fluency略降。沒有遺漏或錯誤翻譯否定。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

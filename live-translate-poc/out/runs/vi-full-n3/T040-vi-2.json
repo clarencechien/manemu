@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，完整傳達了原文的意思。人稱代詞 'tôi' 與句尾助詞 'ạ' 的搭配十分得體，與參考譯文僅有微小的語氣詞差異，整體翻譯品質極高。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實地保留原意（將預約從星期五改到星期六，並強調不是取消）。語句在越南語中通順自然，敬語使用（'Dạ...ạ'）恰當。與參考譯文的差異僅為人稱（'tôi' vs 'em'）與語氣助詞（'đâu'），但不影響理解或造成錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

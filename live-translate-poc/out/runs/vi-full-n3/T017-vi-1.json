@@ -48,5 +48,19 @@
     },
     "reason": "The translation is highly accurate and natural, capturing the exact meaning of the source text with appropriate politeness markers ('ạ') suitable for a service context."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整呈現原文資訊：要求不要加冰、將大杯改為中杯、總共三杯。用語自然且帶有敬語“ạ”，與參考譯文意思一致，無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text in polite Thai, matching the reference translation closely."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達欲替 IC 卡儲值1,000日圓的意思且包含禮貌語氣（ค่ะ）。用語略為直接且保留英文 'IC card'，在口語或正式泰語可微調為 'เติมเงินบัตร IC'，因此流暢度略降一級。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

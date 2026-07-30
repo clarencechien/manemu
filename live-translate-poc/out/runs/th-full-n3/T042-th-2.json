@@ -47,5 +47,19 @@
     },
     "reason": "譯文非常準確且流暢。與參考譯文的唯一差別在於說話者的性別代名詞與語氣助詞（機器譯文使用女性的 ดิฉัน/คะ，參考譯文使用男性的 ผม/ครับ），在沒有特定上下文的情況下，兩者皆完全正確。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實，句意與參考譯文一致，語氣與用詞在泰語中也自然。唯一差異為第一人稱與敬語用法：機器譯文用“ดิฉัน…คะ/ค่ะ”（女性語氣），參考譯文用“ผม…ครับ”（男性語氣），原文中文未標示說話者性別，因此在敬稱/性別上存在差異（標記為 honorific_off）。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

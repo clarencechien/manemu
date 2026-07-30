@@ -48,5 +48,19 @@
     },
     "reason": "譯文非常準確且自然，完全符合原文意思。譯文中加入的敬語「Dạ」和「ạ」在越南語的服務場景中顯得十分自然得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且忠實原意：人數（5人）、兩個小孩、需要兒童椅皆有正確表達。語氣上使用「Dạ...ạ」帶有禮貌，詞彙『ghế trẻ em』與參考譯文的『ghế ngồi cho trẻ em』僅為用詞差異，仍然自然可接受。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

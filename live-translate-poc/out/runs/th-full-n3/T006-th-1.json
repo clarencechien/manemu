@@ -43,5 +43,19 @@
     },
     "reason": "The machine translation is highly accurate and natural, perfectly matching the meaning and tone of the source text. The use of polite particles is also appropriate."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原文意思（詢問廁所位置與表示趕時間），語意忠實，故 adequacy 給 5。語句自然度略遜於參考譯文：使用「ผมรีบอยู่ครับ」雖可理解但不如「ผมกำลังรีบครับ」自然流暢，因此 fluency 評 4。無其他錯誤標記。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

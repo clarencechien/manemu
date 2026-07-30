@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然。譯文加入了「Dạ」和「ạ」等越南語中的禮貌助詞，非常符合向店家詢問保留座位的語境，語意與參考譯文幾乎完全一致。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機器譯文完整傳達原句意思（將晚30分鐘並詢問是否可保留位子）。語氣禮貌且句法自然；與參考譯文相比只少了“giúp tôi”一詞，但並不影響語意或禮貌程度。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

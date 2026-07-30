@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然。機器譯文使用「คิดว่า」（認為/覺得）來翻譯「我覺得」，與參考譯文的「รู้สึกว่า」（感覺/覺得）語意相通，兩者皆符合泰語的日常表達習慣，且語氣禮貌得體。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原句意思。機器譯文使用「คิดว่า」而參考譯文用「รู้สึกว่า」，兩者語義近似且自然，可視為等效措辭；語句流暢自然，無遺漏或錯誤。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

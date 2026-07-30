@@ -48,5 +48,19 @@
     },
     "reason": "The translation is highly accurate and natural. 'สองท่าน' (two people/guests) is a very natural and polite way to translate '兩個大人' (two adults) in a booking context in Thai."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實：表達了想預約（預訂）時間、明天下午三點、兩位成人，且以禮貌語尾“ค่ะ”呈現。句子在泰語中自然流暢，僅有少量空格分隔但不影響可讀性。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

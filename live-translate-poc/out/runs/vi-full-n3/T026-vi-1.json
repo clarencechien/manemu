@@ -46,5 +46,19 @@
     },
     "reason": "譯文非常準確且自然。機器翻譯使用了禮貌助詞「Dạ」和「ạ」，完美傳達了原文客氣婉拒的語氣，且「tạm thời chưa mua vội」（暫時先不急著買）精確地對應了「先不買好了」的意思。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "機譯完整傳達原句意思（已考慮、決定暫時不買）。用詞自然且語法正確，但人稱/敬語選擇與參考譯文不同（機譯用「tôi」＋敬語『ạ』，參考用較口語的『em』），造成語域/人稱不匹配，故流暢度略降。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

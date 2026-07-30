@@ -45,5 +45,19 @@
     },
     "reason": "Bản dịch rất chính xác và tự nhiên. Nó truyền tải đầy đủ ý nghĩa của câu gốc và sử dụng các kính ngữ (Dạ, ạ) rất phù hợp trong ngữ cảnh giao tiếp y tế."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意正確（我頭很暈，但我沒有心臟病病史），因此語意忠實度高。用詞流暢，但在敬語與人稱上有細微不一致（使用“tôi”同時帶有語尾助詞“ạ”），略影響自然度，故流暢度評為4。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

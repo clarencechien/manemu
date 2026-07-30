@@ -45,5 +45,19 @@
     },
     "reason": "The machine translation is highly fluent and natural in Vietnamese. However, it omitted the explicit request '不要辣' (don't make it spicy/no chili) and merged the two clauses into 'I can't eat this dish very spicy' (món này tôi không ăn được cay lắm). Therefore, adequacy is rated 3 due to the omission of the instruction."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 5,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整表達了『我不太能吃辣』的意思，且語句流暢自然。但原句中有明確請求『這個不要辣』（要求不要加辣），機器譯文以『我不吃得太辣』表述，語氣上較為被動、少了請求的明確性，故給予略低的適切度評分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

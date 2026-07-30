@@ -45,5 +45,19 @@
     },
     "reason": "譯文非常準確且自然，語氣十分客氣禮貌（使用了 Dạ 和 ạ），完全符合原文「謝謝你的幫忙，今天真的麻煩你了」的語意與語境。"
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 4,
+    "fluency": 3,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": true,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整傳達原意（感謝與致歉於今日的麻煩），但用詞與語氣略有不自然與敬稱選擇問題：\"thật làm phiền bạn rồi ạ\" 句型不太通順，缺少或誤用副詞（如\"thật sự\"或\"thật là\"），且原文較禮貌/正式（使用對方職稱/敬稱），譯文用\"bạn\"較口語，降低了敬意，故給予adequacy 4、fluency 3。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }

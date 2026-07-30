@@ -46,5 +46,19 @@
     },
     "reason": "The machine translation is highly accurate and natural. It perfectly conveys the meaning of the source text with appropriate polite particles (นะคะ, คะ). The transliteration of Yokohama (โยโกฮาม่า) is correct and widely accepted."
   },
-  "judgeModel": "models/gemini-3.5-flash"
+  "judgeModel": "models/gemini-3.5-flash",
+  "judge_x": {
+    "adequacy": 5,
+    "fluency": 4,
+    "flags": {
+      "number_wrong": false,
+      "negation_flipped": false,
+      "honorific_off": false,
+      "name_mangled": false,
+      "omission": false,
+      "hallucination": false
+    },
+    "reason": "譯文完整且語意忠實，將「這班車是不是往橫濱」正確表達為泰語。唯一問題是逐字稿中詞與詞之間有多餘空格（如 รถ ไฟขบวน นี้），以及「โยโกฮาม่า」與參考譯文的音譯結尾有細微差異，但不影響理解，因此流暢度評為4分，忠實度5分。"
+  },
+  "judge_xModel": "gpt-5-mini"
 }
