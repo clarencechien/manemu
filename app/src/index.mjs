@@ -6,7 +6,7 @@ import { handleAdmin, addToWaitlist } from "./admin.mjs";
 
 const SEC_HEADERS = {
   // Turnstile 需要 challenges.cloudflare.com 的 script 與 iframe
-  "content-security-policy": "default-src 'self'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; connect-src 'self' wss: https:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob: data:; frame-ancestors 'none'",
+  "content-security-policy": "default-src 'self'; script-src 'self' https://challenges.cloudflare.com; worker-src 'self'; frame-src https://challenges.cloudflare.com; connect-src 'self' wss: https:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob: data:; frame-ancestors 'none'",
   "x-frame-options": "DENY",
   "x-content-type-options": "nosniff",
   "referrer-policy": "strict-origin-when-cross-origin",
