@@ -32,7 +32,7 @@ const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 版本標記與診斷(真機回報用) ============ */
-const APP_VER = "v11-prewarm-mic";
+const APP_VER = "v12-pwa";
 const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
   || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
 const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
@@ -625,9 +625,31 @@ async function mountTurnstile() {
 }
 
 /* ============ boot:登入判斷 ============ */
+/* ============ PWA:安裝資格與提示 ============ */
+// SW 零快取(見 sw.js 註解),存在只為安裝資格;失敗無妨,app 照常
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => {});
+const isStandalone = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+let deferredInstall = null;
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault(); // Chrome 的 mini-infobar 換成我們自己的按鈕
+  deferredInstall = e;
+  const b = $("installBtn");
+  if (b && !isStandalone()) b.hidden = false;
+});
+document.addEventListener("click", (e) => {
+  if (e.target?.id !== "installBtn" || !deferredInstall) return;
+  deferredInstall.prompt();
+  deferredInstall.userChoice.finally(() => { deferredInstall = null; $("installBtn").hidden = true; });
+});
+
 (async function boot() {
   console.log("[manemu]", APP_VER, IS_IOS ? "(iOS 模式:WAV 播放)" : "");
   const verEl = $("appver"); if (verEl) verEl.textContent = APP_VER; // 真機確認跑的是哪版
+  // iOS 沒有 beforeinstallprompt:登入頁給文字指引(裝了還能記住 mic 權限)
+  if (IS_IOS && !isStandalone()) {
+    const f = $("loginFine");
+    if (f) f.textContent += "  iPhone:Safari 分享 → 加入主畫面,可全螢幕使用並記住麥克風權限。";
+  }
   // 顯示層原則:永不簡中。OpenCC(cn→twp,含台灣化詞彙)為主,s2t.js 字表為載入失敗的後備。
   if (window.OpenCC) {
     try {

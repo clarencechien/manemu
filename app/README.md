@@ -70,6 +70,15 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 - **已核准名單**:改級別、填自訂秒數、移除;`ADMIN_EMAILS` 內的帳號不可從 UI 移除(防手滑鎖死自己)。
 - 資料就是 R2 的兩個 JSON,想手動改也行(`wrangler r2 object put`),兩邊等價。
 
+## PWA(免商店安裝)
+
+- `manifest.json`(icons 192/512 + maskable)+ `icons/`(紅藍雙氣泡,Playwright 從 SVG 產出,
+  產生腳本在 scratchpad `gen-icons.mjs`)+ theme-color/apple-touch-icon meta。
+- **`sw.js` 刻意零快取**:只為安裝資格存在,fetch 不攔截——「push 即部署、部署即生效」
+  優先於離線殼(翻譯本來就要連線;iOS 舊快取教訓)。
+- 安裝提示:Android/桌面 Chrome 攔 `beforeinstallprompt` → 登入頁出現「📲 安裝成 App」;
+  iOS 沒有此事件 → 登入頁文字指引(分享 → 加入主畫面,可全螢幕並記住 mic 權限)。
+
 ## 網路路徑與死氣(實測 + 旅途預測)
 
 死氣鏈:使用者 → **Cloudflare 邊緣(colo)** → DO relay → Google Gemini。後兩段走機房骨幹很穩,

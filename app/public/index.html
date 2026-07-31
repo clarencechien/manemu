@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>manemu まねむ</title>
 <link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#C0392B">
+<link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<!-- iOS 加入主畫面後全螢幕(且權限記憶較穩) -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="manemu">
 <style>
   :root{
     --paper:#F6F7F5; --ink:#1C2726; --ink-2:#5A6B68; --line:#DDE3E0;
@@ -132,6 +140,7 @@
     <div id="tsWidget" style="margin-bottom:12px"></div>
     <button class="sso" id="ssoBtn" type="submit" style="width:100%">使用 Google 登入</button>
   </form>
+  <button id="installBtn" hidden style="width:100%; margin-top:10px; font:inherit; font-size:14px; padding:11px; border-radius:12px; border:1.5px solid var(--them); background:var(--them-soft); color:var(--them); cursor:pointer">📲 安裝成 App(免商店)</button>
   <p class="fine" id="loginFine">封測中:登入後需在受邀名單內才能啟用翻譯。</p>
 </div>
 
@@ -178,6 +187,6 @@
 
 <script src="/s2t.js"></script><!-- fallback 轉換器,OpenCC 載入後被覆蓋 -->
 <script src="/vendor/opencc-cn2t.js"></script>
-<script src="/app.js?v=11"></script><!-- 改 app.js 記得同步進版:iOS Safari 對舊快取很固執 -->
+<script src="/app.js?v=12"></script><!-- 改 app.js 記得同步進版:iOS Safari 對舊快取很固執 -->
 </body>
 </html>
