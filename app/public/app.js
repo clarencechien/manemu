@@ -32,7 +32,7 @@ const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 版本標記與診斷(真機回報用) ============ */
-const APP_VER = "v12-pwa";
+const APP_VER = "v13-face-holdbtn";
 const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
   || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
 const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
@@ -534,7 +534,9 @@ function faceUI(half) {
     },
     done() {},
     badge() {},
-    status(html, busy) { st.innerHTML = html; $("fpttMine").disabled = busy; $("fpttOther").disabled = busy || S.test; },
+    // 一定要走 setPtt:它會跳過「按住中的那顆」——之前這裡自己 disable,
+    // iOS 的假 cancel bug 在面對面模式原樣重演(對話模式修了、這裡漏了)
+    status(html, busy) { st.innerHTML = html; setPtt(busy); },
   };
 }
 
