@@ -6,7 +6,8 @@
 - 管理:`/admin`(僅 `ADMIN_EMAILS`)——等候名單一鍵核准、設額度級別或自訂秒數
 - 引擎:Gemini Live(`gemini-3.1-flash-live-preview` + 語域鎖定口譯 systemInstruction;快速模式走 `gemini-3.5-live-translate-preview`)
 - 語言:中 →(日 / 英 / 韓 / 越 / 泰)→ 中
-- 狀態:**真機端到端跑通**——實測放開按鈕後 **0.4 秒接話**(harness 預測 ~1.0s,真機更快)
+- 狀態:**真機端到端跑通**——實測放開按鈕後 **0.4 秒接話**(harness 預測 ~1.0s,真機更快);
+  **可安裝 PWA**(免商店,Android 有安裝按鈕、iOS 加入主畫面);前端版號 v14(顯示在頂列)
 
 ## Repo 結構
 
@@ -47,8 +48,9 @@
 強制(workers.dev route 已關,WAF 繞過洞封死)、`/auth/*` rate limit、R2 私有、金鑰只在 Worker;
 錢包三道保險絲 = 白名單 + 每人每日秒數上限 + 單句 120s 硬上限 + 靜音強制收斂。細節見 `app/README.md`。
 
-**已驗補充**:iOS Safari 真機通過(v10;四輪修復史與教訓見 `app/README.md`)。
-**未驗**:真機回音場景(外放+吵雜)、fast 模式在 relay 下的行為(UI 已暫時下架)。
+**已驗補充**:iOS Safari 對話模式真機通過(v10;修復史與教訓見 `app/README.md`,
+面對面模式 v13 修正後待複驗)。PWA 可安裝(零快取 SW,部署即生效)。
+**未驗**:面對面模式 iOS 真機複驗、真機回音場景(外放+吵雜)、fast 模式在 relay 下的行為(UI 已暫時下架)。
 **隱私**:一般對話零留存;唯一收內容的是使用者主動開啟的 🧪 測試模式(明示記錄)。
 細節與 log 落點清單見 `app/README.md`「Log 與隱私」。
 

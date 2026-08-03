@@ -176,14 +176,19 @@ Bot Fight Mode 的其他機制(IP 信譽、已知 bot、heuristics)不依賴 JSD
 - [x] OAuth 端點行為、Turnstile 強制、canonical-host(上表)
 - [ ] OAuth 全流程真登入一次(白名單 email)
 - [ ] 真 PTT 一句:relay → Gemini WS → 譯音播放(手機瀏覽器)
-- [x] iOS Safari:**真機驗證通過(v10)**,連續多句可用。修復史(v7→v10)值得記:
+- [x] iOS Safari:**對話模式真機驗證通過(v10)**;面對面模式 v13 修正後待真機複驗。
+  修復史(v7→v14)值得記:
   - v8:mic 全程保留(track.stop 會讓 iOS 收回 audio session)+ iOS 一律 `<audio>`+WAV 播放
     (WebAudio 串流在 session 被收回時「時鐘照走、輸出無聲」)+ 保險絲與麵包屑上報。
   - v9:偵測靜默死掉的 mic(muted / 跨 ctx 重用)並換新;`/api/admin/clientlog` 檢視回報。
   - v10(**破案**,靠麵包屑):按下瞬間 setPtt 把按住中的按鈕 disable → iOS 對互動中被
     disable 的元素 ~100ms 後補發 cancel → 快路徑句子被瞬間放開。修:按住中的按鈕永不
     disable;零音框放開改立即乾淨中止。教訓:**iOS 音訊 bug 猜不到,要靠階段麵包屑**
-    (本地模擬測試 `ios-test.mjs` 四情境保住不退化)。
+    (本地模擬測試 `ios-test.mjs` 五情境保住不退化)。
+  - v11:登入即預熱 mic 權限(第一句不再被權限框打斷);<300ms 瞬放視為誤觸乾淨中止。
+  - v13/v14:v10 的修法漏了面對面模式(faceUI 自己寫 disable)→ 兩模式統一走 setPtt;
+    v14 審視收尾:面對面不再白打回譯 API、忙碌提示寫進該模式自己的狀態列。
+    教訓:**模式間不要有第二套按鈕/狀態邏輯**,共用一個入口。
   - 每次「重新整理」都會再要一次麥克風權限是 Safari 政策(同一次載入內不會重複要);
     加到主畫面(PWA)可記住權限。修掉卡死後就不需要重整了。
 - [ ] 真機 echo(PTT 播放鎖 + echoCancellation 夠不夠)

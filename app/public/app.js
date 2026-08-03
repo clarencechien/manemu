@@ -32,7 +32,7 @@ const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 版本標記與診斷(真機回報用) ============ */
-const APP_VER = "v13-face-holdbtn";
+const APP_VER = "v14";
 const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
   || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
 const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
@@ -131,7 +131,7 @@ document.addEventListener("visibilitychange", () => {
   else if (document.visibilityState === "visible") prewarmMic(); // 回來:靜默預熱(權限已給過)
 });
 // 24kHz PCM16 佇列播放(300ms 起播 buffer,burst 到達也順)
-const playQ = { chunks: [], scheduled: 0, playing: false };
+const playQ = { scheduled: 0, playing: false };
 function enqueuePcm(b64) {
   const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
   const n = Math.floor(bytes.length / 2);
@@ -383,8 +383,8 @@ async function runUtteranceInner({ side, ui }) {
     lagS: ((performance.now() - t0) / 1000).toFixed(1), reason: doneStats?.finishReason }, el);
   if (outTx && audioB64.length) ui.replay?.(el, audioB64);
 
-  // 回譯確認(me 側、非測試模式)
-  if (side === "me" && !S.test && outTx) {
+  // 回譯確認(me 側、非測試模式;面對面 UI 沒有 badge 位就不打——別白花回譯錢)
+  if (side === "me" && !S.test && outTx && ui.supportsBadge) {
     try {
       const r = await fetch("/api/backtranslate", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text: outTx, from: S.lang }) });
       const d = await r.json();
@@ -511,6 +511,8 @@ const chatUI = {
     if (S.fast) b.click(); // 快速模式強制展開
   },
   status(html, busy) { $("status").innerHTML = html; setPtt(busy); },
+  hint(text) { $("status").textContent = text; }, // 只給文字回饋,不動按鈕鎖定
+  supportsBadge: true,
 };
 
 /* ============ 面對面 UI(同級字、氣泡配色) ============ */
@@ -537,6 +539,7 @@ function faceUI(half) {
     // 一定要走 setPtt:它會跳過「按住中的那顆」——之前這裡自己 disable,
     // iOS 的假 cancel bug 在面對面模式原樣重演(對話模式修了、這裡漏了)
     status(html, busy) { st.innerHTML = html; setPtt(busy); },
+    hint(text) { st.textContent = text; }, // 面對面的忙碌回饋要寫在自己這半邊,#status 在此模式看不到
   };
 }
 
@@ -544,7 +547,7 @@ function faceUI(half) {
 function bindPtt(btn, side, ui) {
   btn.addEventListener("pointerdown", (e) => {
     e.preventDefault();
-    if (S.busy) { $("status").textContent = "稍等一下,上一句還在處理"; return; } // 不再靜默
+    if (S.busy) { ui.hint("稍等一下,上一句還在處理"); return; } // 不再靜默(寫進該模式自己的狀態列)
     unlockSpeaker(); // iOS:趁手勢開光 <audio>,fallback 播放才被允許
     S.holdBtnId = btn.id; // 按住中:這顆不受 setPtt disable(見 setPtt 註解)
     btn.classList.add("holding");
