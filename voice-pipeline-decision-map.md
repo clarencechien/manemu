@@ -112,7 +112,8 @@ HiNet 光世代因 CF 免費方案路由到 colo=SIN 會拉到 ~2 秒。旅途�
 | 服務 | 價格 | 特點 |
 |---|---|---|
 | **Speechmatics Ursa 1** | 批次約 $0.80/小時 | **語碼轉換勝次名 35%**;完整地端與私有雲部署。晶晶體 + 廠區的雙重命中 |
-| Groq Whisper-Large-V3-Turbo | ~$0.0006/分 | 最便宜。**forced alignment 的理想選擇**(不需要準,只要時間) |
+| Groq Whisper-Large-V3-Turbo | ~$0.0006/分 | 最便宜。forced alignment 可用(不需要準,只要時間) |
+| **xAI Grok STT** | **$0.10/小時批次 / $0.20/小時串流**($0.0017 / $0.0033 每分) | **詞級時間戳 + diarization + 多聲道內建**;Inverse Text Normalization(口說數字→電話/金額/日期);25 語言(**需確認中韓**);WebSocket 串流。**forced alignment 的最佳選擇** |
 | AssemblyAI Universal-2 | $0.0025/分 | 幻覺比 Whisper 少約三成;transcript intelligence 最完整 |
 | Deepgram Nova-3 | $0.0043 批次 / $0.0077 串流 | 延遲與成本效率領先;Flux 專為語音代理 |
 | ElevenLabs Scribe v2 | $0.004/分 | **diarization 內含不加價**;99 語言;Realtime 版 150ms / 30 語言 |
@@ -135,6 +136,7 @@ HiNet 光世代因 CF 免費方案路由到 colo=SIN 會拉到 ~2 秒。旅途�
 | Deepgram Aura-2 | $30 / 1M 字元 | 90ms;STT+TTS 同一家降低整合複雜度 |
 | ElevenLabs | Flash/Turbo $60/1M;Multilingual v2/v3 $120/1M | 品質與情感表現最強;**貴 11–27 倍**;Flash v2.5 約 75ms |
 | Google Instant Custom Voice | $60 / 1M 字元 | 聲音複製,支援跨語系轉移 |
+| xAI Grok TTS | $4.20 / 1M 字元 | 5 種聲音、20 語言;行內表情標籤([laugh]、[sigh]、耳語);單次上限 15,000 字元 |
 
 ### 即時翻譯 / 全雙工
 
@@ -144,6 +146,7 @@ HiNet 光世代因 CF 免費方案路由到 colo=SIN 會拉到 ~2 秒。旅途�
 | Gemini 3.5 Live Translate | 有 API,preview | 語音語言對數說法互相矛盾,採用前必查官方語言表 |
 | OpenAI GPT-Live-1 | **無 API**(2026/07/08 上線,僅 ChatGPT 消費端) | 排除 Business/Enterprise/Edu workspace。可當驗證工具,不能當產品 |
 | gpt-realtime-translate | 有 API,$0.034/分 | manemu 評測中表現最差(災難率 22%) |
+| xAI Grok Voice Think Fast 2.0 | 有 API,**$0.08/分** | speech-to-speech;WebSocket/WebRTC、伺服器端 turn detection、自訂聲音、Grok 原生工具。Artificial Analysis 語音對語音指數 82.9%,落後 Qwen Audio 3.0 Realtime Plus 的 84.1%。**無視訊輸入**。同一套技術驅動 Tesla 車內與 Starlink 客服 |
 | ByteDance Seeduplex | 豆包內建 | 中文全雙工,誤回應與誤打斷率比自家上一代降約五成 |
 | Teams Premium / Copilot | 授權制 | 翻譯字幕 31 語言,**召集人一人有授權全體可用**;Interpreter agent 需人人授權 |
 | Google Meet | Workspace + Gemini 附加元件 | 字幕 69 語言;語音翻譯僅 5 個語言對,**不含中日** |
