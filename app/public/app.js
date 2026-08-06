@@ -32,7 +32,7 @@ const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 版本標記與診斷(真機回報用) ============ */
-const APP_VER = "v16-history-textonly";
+const APP_VER = "v17-adr001";
 const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
   || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
 const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
@@ -47,10 +47,10 @@ async function reportClientLog(kind) {
 }
 
 /* ============ 翻譯紀錄(IndexedDB,只存在此裝置、絕不上傳) ============ */
-// 伺服器端對話零留存是隱私原則(app/README);紀錄留在使用者自己的裝置上,兩者互補。
-// 一律純文字;音檔(譯音 WAV)只在 🧪 測試模式下附帶——輸入音檔任何情況都不存。
+// 留存原則定案於 docs/adr.md ADR-001:譯音(機器合成聲)存 local——重放是核心功能;
+// 使用者原聲任何端都永不存;伺服器對話零留存不變(唯一例外 🧪 測試模式明示上傳)。
 // Blob 存不進去自動降級純文字;IDB 全部失敗就當沒有這功能,絕不影響翻譯主流程。
-const HIST_MAX = 400; // 句數上限,超過刪最舊
+const HIST_MAX = 400; // 句數上限,超過刪最舊(含譯音粗估 <100MB)
 let histDbP = null;
 function histDb() {
   histDbP ??= new Promise((res) => {
@@ -447,13 +447,13 @@ async function runUtteranceInner({ side, ui }) {
     lagS: ((performance.now() - t0) / 1000).toFixed(1), reason: doneStats?.finishReason }, el);
   if (outTx && audioB64.length) ui.replay?.(el, audioB64);
 
-  // 本地翻譯紀錄(此裝置限定,見 histAdd):純文字。
-  // 音檔原則:輸入音檔永不存;譯音也不存——只有 🧪 測試模式(明示記錄)例外。
+  // 本地翻譯紀錄(此裝置限定,見 histAdd 與 docs/adr.md ADR-001):
+  // 譯音(機器合成聲)存 local——重放是核心功能;使用者原聲任何端都永不存。
   if (outTx) histAdd({
     conv: S.conv, ts: Date.now(), side, lang: side === "me" ? S.lang : "zh", uiLang: S.lang,
     src: side === "me" ? toTrad(inTx) : inTx,
     tx: side === "me" ? outTx : toTrad(outTx),
-    audio: S.test && audioB64.length ? new Blob([pcmToWavBytes(audioB64, 24000)], { type: "audio/wav" }) : null,
+    audio: audioB64.length ? new Blob([pcmToWavBytes(audioB64, 24000)], { type: "audio/wav" }) : null,
   });
 
   // 回譯確認(me 側、非測試模式;面對面 UI 沒有 badge 位就不打——別白花回譯錢)
@@ -680,7 +680,7 @@ async function renderHistory() {
   $("histCount").textContent = `${recs.length} 句・只存在此裝置`;
   if (!recs.length) {
     const p = document.createElement("div"); p.className = "histEmpty";
-    p.textContent = "還沒有紀錄。翻譯過的句子會自動存在這台裝置上,不會上傳到任何伺服器。";
+    p.textContent = "還沒有紀錄。翻譯過的句子和譯音會自動存在這台裝置上,不會上傳到任何伺服器。";
     box.appendChild(p); return;
   }
   const groups = new Map(); // 依對話組;新的在前、組內照時間
