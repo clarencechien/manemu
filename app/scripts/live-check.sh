@@ -9,10 +9,13 @@ H=$(curl -s "$B/?nc=$RANDOM")
 echo "$H" | grep -q 'id="previewBtn"' && p "登入頁有「看看介面」鍵" "✓" || p "登入頁有「看看介面」鍵" "✗"
 echo "$H" | grep -o '看看介面 →' | head -1 | sed 's/^/  文案: /'
 echo "$H" | grep -q 'id="previewbar"' && p "預覽橫幅 markup" "✓" || p "預覽橫幅 markup" "✗"
-p "index 引用 app.js" "$(echo "$H" | grep -o 'app.js?v=[0-9]*')"
-p "app.js 版本標記" "$(curl -s "$B/app.js?v=18" | grep -o 'APP_VER = "[^"]*"' | head -1)"
-p "app.js 有 runDemo(離線示範路徑)" "$(curl -s "$B/app.js?v=18" | grep -c 'async function runDemo')"
-p "app.js 有 preview 防呆" "$(curl -s "$B/app.js?v=18" | grep -c 'if (S.preview) return')"
+# 版本查詢字串跟著 index 走(寫死會打到舊快取 URL)
+VQ=$(echo "$H" | grep -o 'app.js?v=[0-9]*' | head -1)
+APPJS=$(curl -s "$B/$VQ")
+p "index 引用 app.js" "$VQ"
+p "app.js 版本標記" "$(echo "$APPJS" | grep -o 'APP_VER = "[^"]*"' | head -1)"
+p "app.js 有 runDemo(離線示範路徑)" "$(echo "$APPJS" | grep -c 'async function runDemo')"
+p "app.js 有 preview 防呆" "$(echo "$APPJS" | grep -c 'if (S.preview) return')"
 
 echo; echo "===== 示範素材 ====="
 p "/demo/demo.json" "$(code $B/demo/demo.json)"
