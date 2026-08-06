@@ -32,7 +32,7 @@ const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 版本標記與診斷(真機回報用) ============ */
-const APP_VER = "v14";
+const APP_VER = "v15-history";
 const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
   || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
 const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
@@ -44,6 +44,69 @@ async function reportClientLog(kind) {
     await fetch("/api/client-log", { method: "POST", headers: { "content-type": "application/json" },
       body: JSON.stringify({ kind, ver: APP_VER, ua: navigator.userAgent, ios: IS_IOS, ts: new Date().toISOString(), crumbs: crumbs.slice(-40) }) });
   } catch {}
+}
+
+/* ============ 翻譯紀錄(IndexedDB,只存在此裝置、絕不上傳) ============ */
+// 伺服器端對話零留存是隱私原則(app/README);紀錄留在使用者自己的裝置上,兩者互補。
+// 譯音存 WAV Blob,存不進去(私密瀏覽/舊瀏覽器)自動降級成純文字;全部失敗就當沒有這功能。
+const HIST_MAX = 400; // 句數上限,超過刪最舊(含音檔粗估 <100MB)
+let histDbP = null;
+function histDb() {
+  histDbP ??= new Promise((res) => {
+    try {
+      const rq = indexedDB.open("manemu-history", 1);
+      rq.onupgradeneeded = () => {
+        const st = rq.result.createObjectStore("utt", { keyPath: "id", autoIncrement: true });
+        st.createIndex("ts", "ts"); st.createIndex("conv", "conv");
+      };
+      rq.onsuccess = () => res(rq.result);
+      rq.onerror = () => res(null);
+      rq.onblocked = () => res(null);
+    } catch { res(null); }
+  });
+  return histDbP;
+}
+const idbDone = (tx) => new Promise((res) => { tx.oncomplete = res; tx.onerror = res; tx.onabort = res; });
+async function histAdd(rec) {
+  const db = await histDb(); if (!db) return;
+  const put = async (r) => { const tx = db.transaction("utt", "readwrite"); tx.objectStore("utt").add(r); await idbDone(tx); };
+  try { await put(rec); } catch { try { await put({ ...rec, audio: null }); } catch {} } // Blob 存不了 → 純文字
+  try { // 修剪最舊
+    const tx = db.transaction("utt", "readwrite"); const st = tx.objectStore("utt");
+    const count = await new Promise((r2) => { const c = st.count(); c.onsuccess = () => r2(c.result); c.onerror = () => r2(0); });
+    let toDel = count - HIST_MAX;
+    if (toDel > 0) await new Promise((r2) => {
+      const cur = st.index("ts").openCursor();
+      cur.onsuccess = () => { const c = cur.result; if (c && toDel-- > 0) { c.delete(); c.continue(); } else r2(); };
+      cur.onerror = () => r2();
+    });
+    await idbDone(tx);
+  } catch {}
+}
+async function histAll() {
+  const db = await histDb(); if (!db) return [];
+  try {
+    return await new Promise((res) => {
+      const rq = db.transaction("utt").objectStore("utt").getAll();
+      rq.onsuccess = () => res(rq.result || []); rq.onerror = () => res([]);
+    });
+  } catch { return []; }
+}
+async function histDelConv(conv) {
+  const db = await histDb(); if (!db) return;
+  try {
+    const tx = db.transaction("utt", "readwrite");
+    await new Promise((res) => {
+      const cur = tx.objectStore("utt").index("conv").openCursor(IDBKeyRange.only(conv));
+      cur.onsuccess = () => { const c = cur.result; if (c) { c.delete(); c.continue(); } else res(); };
+      cur.onerror = () => res();
+    });
+    await idbDone(tx);
+  } catch {}
+}
+async function histClear() {
+  const db = await histDb(); if (!db) return;
+  try { const tx = db.transaction("utt", "readwrite"); tx.objectStore("utt").clear(); await idbDone(tx); } catch {}
 }
 
 /* ============ 音訊:擷取(worklet)與播放(24k) ============ */
@@ -383,6 +446,14 @@ async function runUtteranceInner({ side, ui }) {
     lagS: ((performance.now() - t0) / 1000).toFixed(1), reason: doneStats?.finishReason }, el);
   if (outTx && audioB64.length) ui.replay?.(el, audioB64);
 
+  // 本地翻譯紀錄(此裝置限定,見 histAdd):文字必存,譯音存得下就存
+  if (outTx) histAdd({
+    conv: S.conv, ts: Date.now(), side, lang: side === "me" ? S.lang : "zh", uiLang: S.lang,
+    src: side === "me" ? toTrad(inTx) : inTx,
+    tx: side === "me" ? outTx : toTrad(outTx),
+    audio: audioB64.length ? new Blob([pcmToWavBytes(audioB64, 24000)], { type: "audio/wav" }) : null,
+  });
+
   // 回譯確認(me 側、非測試模式;面對面 UI 沒有 badge 位就不打——別白花回譯錢)
   if (side === "me" && !S.test && outTx && ui.supportsBadge) {
     try {
@@ -410,8 +481,8 @@ async function runUtteranceInner({ side, ui }) {
   ui.status("按住說話", false);
   refreshUsage();
 }
-// PCM16 chunks(base64)→ WAV Blob URL(重播用;<audio> 在行動瀏覽器最穩)
-function pcmToWavUrl(b64chunks, sampleRate) {
+// PCM16 chunks(base64)→ WAV bytes / Blob URL(重播與本地紀錄共用;<audio> 在行動瀏覽器最穩)
+function pcmToWavBytes(b64chunks, sampleRate) {
   const bufs = b64chunks.map((a) => Uint8Array.from(atob(a), (c) => c.charCodeAt(0)));
   const total = bufs.reduce((s, b) => s + b.length, 0);
   const wav = new Uint8Array(44 + total);
@@ -423,7 +494,10 @@ function pcmToWavUrl(b64chunks, sampleRate) {
   dv.setUint16(32, 2, true); dv.setUint16(34, 16, true);
   wstr(36, "data"); dv.setUint32(40, total, true);
   let o = 44; for (const b of bufs) { wav.set(b, o); o += b.length; }
-  return URL.createObjectURL(new Blob([wav], { type: "audio/wav" }));
+  return wav;
+}
+function pcmToWavUrl(b64chunks, sampleRate) {
+  return URL.createObjectURL(new Blob([pcmToWavBytes(b64chunks, sampleRate)], { type: "audio/wav" }));
 }
 
 function concatBytes(arrs) {
@@ -591,8 +665,54 @@ function updateTestbar() {
 }
 function resetConversation() {
   S.msgCount = 0; S.testIdx = 0; S.busy = false;
+  S.conv = Date.now(); // 新的對話組(本地紀錄以此分組)
   renderEmpty();
   $("status").textContent = "按住說話";
+}
+
+/* ============ 翻譯紀錄面板 ============ */
+const LANG_SHORT = { ja: "日", en: "英", ko: "韓", vi: "越", th: "泰", zh: "中" };
+async function renderHistory() {
+  const box = $("histList"); box.textContent = "";
+  const recs = await histAll();
+  $("histCount").textContent = `${recs.length} 句・只存在此裝置`;
+  if (!recs.length) {
+    const p = document.createElement("div"); p.className = "histEmpty";
+    p.textContent = "還沒有紀錄。翻譯過的句子(和譯音)會自動存在這台裝置上,不會上傳到任何伺服器。";
+    box.appendChild(p); return;
+  }
+  const groups = new Map(); // 依對話組;新的在前、組內照時間
+  recs.sort((a, b) => b.conv - a.conv || a.ts - b.ts);
+  for (const r of recs) { if (!groups.has(r.conv)) groups.set(r.conv, []); groups.get(r.conv).push(r); }
+  for (const [conv, list] of groups) {
+    const g = document.createElement("div"); g.className = "hconv";
+    const head = document.createElement("div"); head.className = "hconvHead";
+    const when = new Date(list[0].ts).toLocaleString("zh-TW", { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+    const langs = [...new Set(list.map((r) => LANG_SHORT[r.uiLang] ?? r.uiLang))].join("/");
+    const span = document.createElement("span"); span.textContent = `${when}・中⇄${langs}・${list.length} 句`;
+    const del = document.createElement("button"); del.className = "del"; del.textContent = "刪除";
+    del.addEventListener("click", async () => { await histDelConv(conv); renderHistory(); });
+    head.append(span, del); g.appendChild(head);
+    for (const r of list) {
+      const row = document.createElement("div"); row.className = "hrow";
+      const src = document.createElement("div"); src.className = "hsrc"; src.textContent = (r.side === "me" ? "我:" : "對方:") + (r.src || "(沒聽清)");
+      const tx = document.createElement("div"); tx.className = "htx " + r.side; tx.textContent = r.tx || "";
+      row.append(src, tx);
+      if (r.audio) {
+        const b = document.createElement("button"); b.className = "hplay"; b.textContent = "🔊 重播";
+        b.addEventListener("click", () => {
+          if (S.busy) return;
+          const url = URL.createObjectURL(r.audio);
+          const a = new Audio(url);
+          a.addEventListener("ended", () => URL.revokeObjectURL(url), { once: true });
+          a.play().catch(() => URL.revokeObjectURL(url));
+        });
+        row.appendChild(b);
+      }
+      g.appendChild(row);
+    }
+    box.appendChild(g);
+  }
 }
 async function refreshUsage() {
   try {
@@ -736,5 +856,12 @@ document.addEventListener("click", (e) => {
     const cur = localStorage.getItem("mn_glossary") || "";
     const v = prompt("行程術語表(地名/店名/航班,逗號分隔;會提供給口譯引擎):", cur);
     if (v !== null) localStorage.setItem("mn_glossary", v.slice(0, 500));
+  });
+  S.conv = Date.now(); // 首個對話組
+  $("histBtn").addEventListener("click", () => { $("histPanel").classList.remove("hidden"); renderHistory(); });
+  $("histClose").addEventListener("click", () => $("histPanel").classList.add("hidden"));
+  $("histClear").addEventListener("click", async () => {
+    if (!confirm("清空這台裝置上的全部翻譯紀錄?(不影響任何伺服器資料,因為本來就沒有)")) return;
+    await histClear(); renderHistory();
   });
 })();
