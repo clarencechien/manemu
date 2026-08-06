@@ -15,7 +15,7 @@
 | --- | --- |
 | `app/` | **Cloudflare Workers 產品本體**:Google OIDC + Turnstile + R2 白名單/分級、Durable Object WS relay(prompt 注入、靜音收斂、每人每日配額)、真實音訊管線前端(AudioWorklet 16k → 24k 播放)、`/admin` 管理頁。部署 runbook 見 `app/README.md` |
 | `live-translate-poc/` | 評測 harness 與全部實驗:語料(v1 50 句 / v2 草稿)、可攜 Node runner、規則檢測、多廠評審面板、報告產生器 |
-| `live-translate-poc/docs/` | **文件入口**:`findings.md`(所有實測結論)、`m3-spec.md`(產品規格 + 安全設計)、`design.md`(視覺/互動/用語)、`pricing.md`(定價與單位經濟)、`infra.md`(relay 選型:CF vs GCP/AWS/VPS)、`plan.md`+`run2/run3/or-plan`(決策歷程) |
+| `live-translate-poc/docs/` | **文件入口**:`findings.md`(所有實測結論)、`m3-spec.md`(產品規格 + 安全設計)、`design.md`(視覺/互動/用語)、`pricing.md`(定價與單位經濟)、`infra.md`(relay 選型:CF vs GCP/AWS/VPS)、`adr.md`(架構決策記錄)、`plan.md`+`run2/run3/or-plan`(決策歷程) |
 | `live-translate-poc/mockup/` | 互動原型(氣泡對談 + 面對面 180° 兩種版面、登入前示範) |
 | `live-translate-poc/out/` | 原始評測資料:`runs/`(逐筆結果)、`reports/`(report.html / csv / summary)、`experiments/`(19 個機制實驗) |
 
@@ -52,7 +52,9 @@
 面對面模式 v13 修正後待複驗)。PWA 可安裝(零快取 SW,部署即生效)。
 **未驗**:面對面模式 iOS 真機複驗、真機回音場景(外放+吵雜)、fast 模式在 relay 下的行為(UI 已暫時下架)。
 **隱私**:一般對話零留存;唯一收內容的是使用者主動開啟的 🧪 測試模式(明示記錄)。
-細節與 log 落點清單見 `app/README.md`「Log 與隱私」。
+翻譯紀錄(🕘 含譯音重放)存在**使用者裝置的 IndexedDB**、絕不上傳——紀錄在使用者手上,
+不在我們手上;**使用者原聲任何端都不存**(決策見 `docs/adr.md` ADR-001)。
+細節見 `app/README.md`「Log 與隱私」。
 
 **延遲與網路**:死氣的代表值是**台灣行動網路的 ~0.4s**;HiNet 光世代因 Cloudflare 免費方案
 路由(colo=SIN)會拉到 ~2s——已知、已接受(場景是旅途不是家用,查法 `/cdn-cgi/trace`)。

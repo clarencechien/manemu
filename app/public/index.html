@@ -54,6 +54,24 @@
   .top{display:flex; align-items:center; gap:6px; padding:10px 12px 8px; border-bottom:1px solid var(--line); flex:none; flex-wrap:wrap}
   .sceneBtn,.langBtn,.iconBtn{font:inherit; font-size:12.5px; border:1px solid var(--line); background:var(--chip); color:var(--ink); border-radius:8px; padding:6px 9px; cursor:pointer}
   .sceneBtn{margin-right:auto}
+  /* 翻譯紀錄面板(IndexedDB,只存在此裝置) */
+  .histPanel{position:fixed; inset:0; background:var(--paper); z-index:60; display:flex; flex-direction:column}
+  .histHead{display:flex; align-items:center; gap:10px; padding:14px 16px; border-bottom:1px solid var(--line); flex:none}
+  .histHead b{font-size:16px} .histHead .cnt{font-size:11.5px; color:var(--ink-2)}
+  .histHead .x{margin-left:auto; font:inherit; border:1px solid var(--line); background:var(--chip); color:var(--ink); border-radius:8px; padding:4px 10px; cursor:pointer}
+  .histList{flex:1; overflow-y:auto; padding:6px 16px 40px}
+  .hconv{padding:12px 0 4px; border-bottom:1px solid var(--line)}
+  .hconvHead{display:flex; align-items:center; gap:8px; font-size:11.5px; color:var(--ink-2); margin-bottom:6px}
+  .hconvHead .del{margin-left:auto; font:inherit; font-size:11px; border:1px solid var(--me); color:var(--me); background:transparent; border-radius:8px; padding:2px 8px; cursor:pointer}
+  .hrow{padding:6px 0}
+  .hrow .hsrc{font-size:12px; color:var(--ink-2)}
+  .hrow .htx{font-size:15px; line-height:1.5}
+  .hrow .htx.me{color:var(--me)} .hrow .htx.them{color:var(--them)}
+  .hrow .hplay{font:inherit; font-size:11px; border:1px solid var(--line); background:var(--chip); color:var(--ink-2); border-radius:99px; padding:2px 9px; cursor:pointer; margin-top:3px}
+  .histFoot{flex:none; padding:10px 16px 26px; border-top:1px solid var(--line); display:flex; gap:10px; align-items:center}
+  .histFoot .clr{font:inherit; font-size:12.5px; border:1px solid var(--me); color:var(--me); background:transparent; border-radius:8px; padding:6px 12px; cursor:pointer}
+  .histFoot small{color:var(--ink-2); font-size:11px}
+  .histEmpty{padding:30px 6px; color:var(--ink-2); font-size:13.5px; line-height:1.7}
   /* 語言下拉:沿用按鈕外觀,關掉原生外框、自畫 ▾ */
   select.langBtn{appearance:none; -webkit-appearance:none; padding-right:22px;
     background-image:linear-gradient(45deg, transparent 50%, var(--ink-2) 50%), linear-gradient(135deg, var(--ink-2) 50%, transparent 50%);
@@ -156,6 +174,7 @@
     <!-- 快速模式(translate 引擎)UI 先下架:relay 仍支援 engine=fast,驗完再放回 -->
     <button class="testChip" id="testChip" data-on="false">🧪</button>
     <button class="iconBtn" id="glossaryBtn" title="行程術語表">📒</button>
+    <button class="iconBtn" id="histBtn" title="翻譯紀錄(只存在此裝置)">🕘</button>
     <span class="usage" id="usage"></span>
     <span class="usage" id="appver" style="opacity:.55"></span>
   </div>
@@ -185,8 +204,14 @@
   </div>
 </div>
 
+<div class="histPanel hidden" id="histPanel">
+  <div class="histHead"><b>翻譯紀錄</b><span class="cnt" id="histCount">只存在此裝置</span><button class="x" id="histClose">✕</button></div>
+  <div class="histList" id="histList"></div>
+  <div class="histFoot"><button class="clr" id="histClear">清空全部</button><small>紀錄與譯音只存在這台裝置,不會上傳;你說話的原聲不會被任何一端保存。</small></div>
+</div>
+
 <script src="/s2t.js"></script><!-- fallback 轉換器,OpenCC 載入後被覆蓋 -->
 <script src="/vendor/opencc-cn2t.js"></script>
-<script src="/app.js?v=14"></script><!-- 改 app.js 記得同步進版:iOS Safari 對舊快取很固執 -->
+<script src="/app.js?v=17"></script><!-- 改 app.js 記得同步進版:iOS Safari 對舊快取很固執 -->
 </body>
 </html>
