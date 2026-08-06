@@ -160,18 +160,30 @@ Google 看到的是 Cloudflare 的出口、不是使用者 IP;使用者只需要
 (16kHz 音檔 b64 + STT + 譯文 + 接話延遲 deadAirMs)。拉回 harness 評測:
 音檔可直接轉 wav 丟 `live-translate-poc/data/audio-human/`。
 
-## 部署複驗(2026-07-30 curl 實測)
+## 部署複驗
+
+`bash scripts/live-check.sh` 一鍵跑完(資產/版本、示範素材、安全防線、PWA、安全 headers)。
+
+**2026-08-06 實測(v18)**
 
 | 檢查 | 結果 |
 | --- | --- |
-| `https://manemu.ai-apps.work/` | ✅ 200 |
-| `/api/me` 未登入 | ✅ 401 |
-| `/api/config` | ✅ 回 Turnstile site key(已啟用) |
-| `/auth/login` GET(Turnstile 啟用後) | ✅ 302 回首頁(強制走 POST+驗證) |
-| workers.dev `/api/me` | ✅ 403(canonical-host 擋下) |
-| workers.dev `/` | ✅ 301 → 正式網域(`run_worker_first` 修正後複驗通過) |
-| 安全 headers(CSP/XFO/nosniff/referrer) | ✅ 全數出現(修正前 assets 繞過 worker 導致缺失) |
-| 備註 | workers.dev route 仍建議在 dashboard 關閉(縱深) |
+| 登入頁「看看介面 →」+ 預覽橫幅 markup | ✅ |
+| `app.js` 版本標記 / `runDemo` / `S.preview` 防呆 | ✅ v18-preview,兩者都在 |
+| `/demo/demo.json` + 三個 wav | ✅ 200(d1 145KB、d2 193KB、d3 261KB,audio/wav) |
+| 未登入 `/ws`、`/api/backtranslate`、`/api/field-log`、`/api/client-log` | ✅ 全數 401 |
+| 未登入 `/api/me`、`/api/admin/data` | ✅ 401 |
+| workers.dev `/api/me` | ✅ **error 1042**(`workers_dev:false` → 入口不存在,比 403 更前面就擋掉) |
+| PWA manifest / icon / sw.js | ✅ 200 |
+| 安全 headers(CSP/XFO/nosniff) | ✅ |
+| 預覽模式瀏覽器實測 | ✅ 下載正式站檔案在本地跑 `preview-test.mjs`:零 /ws、零 /api/*、零麥克風 |
+
+> 註:headless Chromium 直連正式站會被 Cloudflare bot 防護擋下(ERR_CONNECTION_RESET)——
+> 這是防護正常運作。要驗瀏覽器層就把正式站檔案抓下來本地跑(上表最後一列的做法),
+> 驗的仍是線上位元組;真人用真瀏覽器不受影響。
+
+**2026-07-30 實測(M3 上線)**:`/`200、`/api/me`401、`/api/config` 回 Turnstile key、
+`/auth/login` GET 302(強制 POST+驗證)、workers.dev 301/403(當時 route 還開著)、安全 headers 全數出現。
 
 ## CSP 與 Cloudflare Bot 注入腳本
 
