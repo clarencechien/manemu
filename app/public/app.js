@@ -32,7 +32,7 @@ const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 版本標記與診斷(真機回報用) ============ */
-const APP_VER = "v18-preview";
+const APP_VER = "v19-usage-admin";
 const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
   || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
 const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
@@ -728,6 +728,29 @@ function resetConversation() {
   $("status").textContent = S.preview ? "按住下面的按鈕,聽一段示範" : "按住說話";
 }
 
+/* ============ 用量明細面板(pricing.md §6 的「用量明細頁」;資料全來自 /api/me) ============ */
+function renderUsagePanel() {
+  const b = $("usageBody"); b.textContent = "";
+  $("usageWho").textContent = S.email ?? "";
+  const line = (html, cls = "uline") => { const d = document.createElement("div"); d.className = cls; d.innerHTML = html; b.appendChild(d); };
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const used = Math.round(S.usedSeconds / 60);
+  if (S.limitSeconds > 0) {
+    const lim = Math.round(S.limitSeconds / 60);
+    line(`${used} <span style="font-size:16px;color:var(--ink-2)">/ ${lim} 分</span>`, "ubig");
+    const bar = document.createElement("div"); bar.className = "ubar";
+    const fill = document.createElement("i");
+    fill.style.width = Math.min(100, (S.usedSeconds / S.limitSeconds) * 100).toFixed(1) + "%";
+    bar.appendChild(fill); b.appendChild(bar);
+    line(`今天還可以講約 <b>${Math.max(0, lim - used)} 分鐘</b>(一句約 10–20 秒)`);
+  } else {
+    line(`${used} <span style="font-size:16px;color:var(--ink-2)">分・無上限</span>`, "ubig");
+  }
+  if (S.tier) line(`額度級別:<b>${esc(S.tier)}</b>`);
+  line(`重置時間:每天台灣早上 08:00(UTC 00:00)`);
+  line(`計量方式:按住說話到譯音播完的實際時間;連不上或沒有譯文的句子<b>不扣額度</b>`);
+}
+
 /* ============ 翻譯紀錄面板 ============ */
 const LANG_SHORT = { ja: "日", en: "英", ko: "韓", vi: "越", th: "泰", zh: "中" };
 async function renderHistory() {
@@ -873,8 +896,13 @@ document.addEventListener("click", (e) => {
     await mountTurnstile();
     return;
   }
-  S.email = me.email; S.tier = me.tier;
+  S.email = me.email; S.tier = me.tier; S.isAdmin = !!me.isAdmin;
   S.usedSeconds = me.usedSeconds; S.limitSeconds = me.limitSeconds;
+  // 管理入口進 PWA(仿 sukemu):只有 admin 看得到,點了去 /admin
+  if (S.isAdmin) {
+    $("adminBtn").classList.remove("hidden");
+    $("adminBtn").addEventListener("click", () => { location.href = "/admin"; });
+  }
   $("appScreen").classList.remove("hidden");
   $("usage").textContent = me.limitSeconds > 0
     ? `今日 ${Math.round(me.usedSeconds / 60)}/${Math.round(me.limitSeconds / 60)} 分`
@@ -938,6 +966,14 @@ function initAppUI() {
     if (v !== null) localStorage.setItem("mn_glossary", v.slice(0, 500));
   });
   S.conv = Date.now(); // 首個對話組
+  // 用量明細:點頂列用量開面板(預覽模式沒有帳號,不開)
+  $("usage").addEventListener("click", async () => {
+    if (S.preview || !S.email) return;
+    await refreshUsage();
+    renderUsagePanel();
+    $("usagePanel").classList.remove("hidden");
+  });
+  $("usageClose").addEventListener("click", () => $("usagePanel").classList.add("hidden"));
   $("histBtn").addEventListener("click", () => { $("histPanel").classList.remove("hidden"); renderHistory(); });
   $("histClose").addEventListener("click", () => $("histPanel").classList.add("hidden"));
   $("histClear").addEventListener("click", async () => {

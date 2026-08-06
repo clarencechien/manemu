@@ -16,6 +16,13 @@ const api = async (path, body) => {
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const mins = (sec) => (Number(sec) === 0 ? "無上限" : `${Math.round(Number(sec) / 60)} 分/日`);
 
+// 每人今日用量:分鐘 + 估算成本(NT$0.16/分,pricing.md 實測 30 分 ≈ NT$4.8)
+function usageLabel(email) {
+  const u = DATA.usage?.[email];
+  if (!u?.usedSeconds) return `<span class="ts">—</span>`;
+  const m = u.usedSeconds / 60;
+  return `<span class="ts">${Math.round(m)} 分 · ~NT$${(m * 0.16).toFixed(1)}</span>`;
+}
 function tierLabel(value) {
   const isNum = /^\d+$/.test(String(value));
   const cls = isNum ? "custom" : (value === "admin" ? "admin" : "");
@@ -49,12 +56,13 @@ function render() {
   $("allowCount").textContent = entries.length ? `(${entries.length})` : "";
   $("allowBox").innerHTML = entries.length === 0
     ? `<p class="empty">名單是空的。</p>`
-    : `<table><thead><tr><th>EMAIL</th><th>額度</th><th>動作</th></tr></thead><tbody>${
+    : `<table><thead><tr><th>EMAIL</th><th>額度</th><th>今日用量</th><th>動作</th></tr></thead><tbody>${
         entries.map(([email, tier]) => {
           const isAdminVar = DATA.admins.includes(email);
           return `<tr>
             <td class="email">${esc(email)}${isAdminVar ? ' <span class="tier admin">ADMIN_EMAILS</span>' : ""}</td>
             <td>${tierLabel(tier)}</td>
+            <td>${usageLabel(email)}</td>
             <td><div class="row-actions">
               <select data-change-tier="${esc(email)}">${tierOptions(String(tier))}</select>
               <button data-change="${esc(email)}">改額度</button>

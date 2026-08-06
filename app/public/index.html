@@ -72,6 +72,12 @@
   .histFoot .clr{font:inherit; font-size:12.5px; border:1px solid var(--me); color:var(--me); background:transparent; border-radius:8px; padding:6px 12px; cursor:pointer}
   .histFoot small{color:var(--ink-2); font-size:11px}
   .histEmpty{padding:30px 6px; color:var(--ink-2); font-size:13.5px; line-height:1.7}
+  /* 用量明細面板 */
+  .ubig{font-size:30px; font-weight:700; padding:20px 0 4px; font-variant-numeric:tabular-nums}
+  .ubar{height:9px; background:var(--chip); border-radius:99px; overflow:hidden; margin:8px 0 14px}
+  .ubar i{display:block; height:100%; background:var(--me); border-radius:99px}
+  .uline{font-size:13.5px; color:var(--ink-2); line-height:1.7; padding:3px 0}
+  .uline b{color:var(--ink)}
   /* 語言下拉:沿用按鈕外觀,關掉原生外框、自畫 ▾ */
   select.langBtn{appearance:none; -webkit-appearance:none; padding-right:22px;
     background-image:linear-gradient(45deg, transparent 50%, var(--ink-2) 50%), linear-gradient(135deg, var(--ink-2) 50%, transparent 50%);
@@ -180,7 +186,8 @@
     <button class="testChip" id="testChip" data-on="false">🧪</button>
     <button class="iconBtn" id="glossaryBtn" title="行程術語表">📒</button>
     <button class="iconBtn" id="histBtn" title="翻譯紀錄(只存在此裝置)">🕘</button>
-    <span class="usage" id="usage"></span>
+    <button class="iconBtn hidden" id="adminBtn" title="名單管理(僅管理者可見)">🛠</button>
+    <button class="usage" id="usage" style="border:none; background:none; cursor:pointer; padding:0; font-family:inherit; text-decoration:underline dotted; text-underline-offset:3px"></button>
     <span class="usage" id="appver" style="opacity:.55"></span>
   </div>
   <div class="previewbar hidden" id="previewbar">
@@ -213,6 +220,11 @@
   </div>
 </div>
 
+<div class="histPanel hidden" id="usagePanel">
+  <div class="histHead"><b>今日用量</b><span class="cnt" id="usageWho"></span><button class="x" id="usageClose">✕</button></div>
+  <div class="histList" id="usageBody"></div>
+</div>
+
 <div class="histPanel hidden" id="histPanel">
   <div class="histHead"><b>翻譯紀錄</b><span class="cnt" id="histCount">只存在此裝置</span><button class="x" id="histClose">✕</button></div>
   <div class="histList" id="histList"></div>
@@ -221,6 +233,6 @@
 
 <script src="/s2t.js"></script><!-- fallback 轉換器,OpenCC 載入後被覆蓋 -->
 <script src="/vendor/opencc-cn2t.js"></script>
-<script src="/app.js?v=18"></script><!-- 改 app.js 記得同步進版:iOS Safari 對舊快取很固執 -->
+<script src="/app.js?v=19"></script><!-- 改 app.js 記得同步進版:iOS Safari 對舊快取很固執 -->
 </body>
 </html>

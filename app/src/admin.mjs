@@ -38,11 +38,20 @@ export async function handleAdmin(req, env, path) {
     const [allow, wait] = await Promise.all([readAllow(env), readJson(env, CONFIG_KEYS.wait, {})]);
     let tiers = {};
     try { tiers = JSON.parse(env.QUOTA_TIERS || "{}"); } catch {}
+    const admins = (env.ADMIN_EMAILS || "").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+    // 每人今日用量(秒):逐一問 DO——名單短(封測),可接受;有量才回傳
+    const usage = {};
+    await Promise.all([...new Set([...Object.keys(allow), ...admins])].map(async (email) => {
+      try {
+        const u = await (await env.RELAY.get(env.RELAY.idFromName(email)).fetch("https://do/usage")).json();
+        if (u.usedSeconds > 0) usage[email] = { usedSeconds: u.usedSeconds };
+      } catch {}
+    }));
     return Response.json({
       allowlist: allow,
       waitlist: Object.entries(wait).map(([email, v]) => ({ email, ...v })).sort((a, b) => (a.ts < b.ts ? -1 : 1)),
       tiers, defaultTier: env.DEFAULT_TIER || "beta",
-      admins: (env.ADMIN_EMAILS || "").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean),
+      admins, usage,
     });
   }
 

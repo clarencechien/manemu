@@ -46,6 +46,9 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 ```json
 {"admin":0,"pro":10800,"beta":1800,"trial":600}
 ```
+**使用者看自己的用量**:點 app 頂列的「今日 X/Y 分」開明細面板——進度條、剩餘分鐘、
+級別、重置時間、計量說明(失敗不計費),資料全來自 `/api/me`。
+
 **指定某人的級別**:R2 `allowlist.json` 兩種格式都吃,**改檔即生效、不用重部署也不用重登入**:
 ```json
 ["a@x.com","b@x.com"]                    // 全部套 DEFAULT_TIER(beta)
@@ -63,8 +66,11 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 
 ## 管理頁 `/admin`(僅 ADMIN_EMAILS)
 
-- 網址:`https://manemu.ai-apps.work/admin`——非 admin 開啟只看到「沒有管理權限」,
+- 入口:app 頂列的 🛠(僅 admin 看得到,仿 sukemu)或直接開
+  `https://manemu.ai-apps.work/admin`——非 admin 只看到「沒有管理權限」,
   所有 `/api/admin/*` 端點也擋在 session + admin 雙閘門後。
+- **每人今日用量**:名單表有「今日用量」欄(分鐘 + 估算成本 NT$0.16/分,pricing.md 實測值),
+  `/api/admin/data` 逐一問各 email 的 DO——封測名單短,可接受。
 - **等候名單**:有人用不在名單內的 Google 帳號登入 → 自動寫進 `r2://manemu-config/waitlist.json`
   → 管理頁一鍵「核准(可選級別)」或「忽略」。核准後對方**下一次操作立即生效**(無需重登入)。
 - **已核准名單**:改級別、填自訂秒數、移除;`ADMIN_EMAILS` 內的帳號不可從 UI 移除(防手滑鎖死自己)。

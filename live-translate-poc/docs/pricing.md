@@ -76,5 +76,5 @@ Gemini 只對串流音訊計費、我們對牆鐘計量 → 天然的安全邊�
 - [ ] 儲值包 = 總分鐘池 + 到期日(DO storage `balance` + `expiresAt`;現行日額度保留當防濫用上限)
 - [ ] 綠界 webhook(form-post callback → 驗 CheckMacValue → 寫 R2/DO;LINE Pay 走綠界站內)
 - [ ] 字幕模式降級(TEXT modality + 字幕日計數器)
-- [ ] 用量明細頁(user 自己看剩多少;`/api/me` 已回,缺 UI)
+- [x] 用量明細頁(點頂列用量開面板:進度條/剩餘分鐘/級別/重置時間/計量說明,v19)
 - [ ] 字幕模式開關(relay 不請求 AUDIO modality 即可)
