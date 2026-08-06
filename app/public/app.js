@@ -32,7 +32,7 @@ const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 版本標記與診斷(真機回報用) ============ */
-const APP_VER = "v17-adr001";
+const APP_VER = "v18-preview";
 const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
   || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
 const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
@@ -259,8 +259,62 @@ async function drainPlayback(b64chunks) {
   } finally { playQ.playing = false; }
 }
 
+/* ============ 介面預覽(登入前):完全離線的示範,不碰網路也不碰麥克風 ============
+   設計要點:預覽走「另一條函式」而不是在真流程加旗標——連 new WebSocket 那行都不會被執行。
+   伺服器端另有硬防線(/ws 與 /api/* 都在 needAuth 內,未登入一律 401),兩層互不依賴。
+   素材是 harness 實測紀錄(prompt-full-n3)的真實輸出,不是重錄的行銷素材。 */
+let demoData = null, demoIdx = 0;
+async function loadDemo() {
+  demoData ??= await (await fetch("/demo/demo.json")).json(); // 靜態檔,非 API
+  return demoData;
+}
+async function runDemo({ side, ui }) {
+  if (S.busy) return;
+  S.busy = true;
+  try {
+    const list = await loadDemo();
+    const d = list[demoIdx % list.length];
+    const el = ui.begin({ side: "me" });           // 示範一律以「我說中文」呈現
+    const t0 = performance.now();
+    ui.status("聆聽中 <span class='wave'><i></i><i></i><i></i><i></i></span>", true);
+    // 逐字打出中文(模擬即時辨識),按住越久打越多;放開就補完
+    let i = 0;
+    const typing = setInterval(() => {
+      if (i < d.zh.length) el.srcEl.textContent = d.zh.slice(0, ++i);
+    }, 90);
+    await Promise.race([
+      new Promise((r) => { window.__pttRelease = r; }),
+      sleep(d.zh.length * 90 + 400),               // 一直按著也不會卡住
+    ]);
+    clearInterval(typing);
+    el.srcEl.textContent = d.zh;
+    window.__pttRelease = null;
+    ui.status("翻譯中…", true);
+    await sleep(Math.max(300, d.deadAirMs - (performance.now() - t0) + 700)); // 真實接話延遲感
+    // 譯文逐字 + 同時播譯音(<audio>,行動瀏覽器最穩;點按手勢內觸發所以 iOS 也放得出來)
+    const audio = new Audio(d.audio);
+    audio.play().catch(() => {});                  // 沒聲音也不影響示範
+    let j = 0;
+    await new Promise((res) => {
+      const t = setInterval(() => {
+        el.txEl.textContent = d.tx.slice(0, ++j);
+        if (j >= d.tx.length) { clearInterval(t); res(); }
+      }, 45);
+    });
+    ui.done({ side: "me", inTx: d.zh, outTx: d.tx, deadAir: d.deadAirMs, completionMs: 2600, lagS: "0.0" }, el);
+    demoIdx++;
+    ui.status(demoIdx % list.length === 0
+      ? "示範結束——登入後就能用自己的話,五種語言都可以"
+      : "再按一次,聽下一句示範", false);
+  } catch (e) {
+    console.warn("demo failed", e);
+    ui.status("示範載入失敗,直接登入試試看", false);
+  } finally { S.busy = false; }
+}
+
 /* ============ 一輪 PTT(核心:真 relay) ============ */
 async function runUtterance({ side, ui }) {
+  if (S.preview) return; // 防呆:預覽模式永不進入真流程(正常情況根本不會綁到這裡)
   S.busy = true; S.releasedAt = null; S.lastMsgAt = 0; S.doneSeen = false;
   let settled = false;
   const inner = runUtteranceInner({ side, ui })
@@ -628,7 +682,9 @@ function bindPtt(btn, side, ui) {
     S.holdBtnId = btn.id; // 按住中:這顆不受 setPtt disable(見 setPtt 註解)
     btn.classList.add("holding");
     try { btn.setPointerCapture?.(e.pointerId); } catch { /* 快速點放時 pointer 可能已失效,不阻斷整句 */ }
-    runUtterance({ side, ui }).finally(() => btn.classList.remove("holding"));
+    // 預覽模式接到離線示範:真流程(WS/mic/API)在此模式下完全不會被呼叫
+    const run = S.preview ? runDemo : runUtterance;
+    run({ side, ui }).finally(() => btn.classList.remove("holding"));
   });
   const release = (src) => () => { S.relSrc = src; S.holdBtnId = null; window.__pttRelease?.(); };
   btn.addEventListener("pointerup", release("up"));
@@ -669,7 +725,7 @@ function resetConversation() {
   S.msgCount = 0; S.testIdx = 0; S.busy = false;
   S.conv = Date.now(); // 新的對話組(本地紀錄以此分組)
   renderEmpty();
-  $("status").textContent = "按住說話";
+  $("status").textContent = S.preview ? "按住下面的按鈕,聽一段示範" : "按住說話";
 }
 
 /* ============ 翻譯紀錄面板 ============ */
@@ -802,6 +858,18 @@ document.addEventListener("click", (e) => {
   try { const r = await fetch("/api/me"); if (r.ok) me = await r.json(); } catch {}
   if (!me) {
     $("loginScreen").classList.remove("hidden");
+    // 介面預覽:同一套 UI、離線示範資料,不預熱麥克風也不連任何端點
+    $("previewBtn").addEventListener("click", () => {
+      S.preview = true;
+      $("loginScreen").classList.add("hidden");
+      $("appScreen").classList.remove("hidden");
+      $("previewbar").classList.remove("hidden");
+      $("usage").textContent = "";
+      $("testChip").hidden = true;              // 測試模式是登入後的功能
+      $("status").textContent = "按住下面的按鈕,聽一段示範";
+      applyLang(); renderEmpty(); initAppUI();  // 注意:沒有 prewarmMic
+    });
+    $("previewLogin").addEventListener("click", () => location.reload());
     await mountTurnstile();
     return;
   }
@@ -813,7 +881,11 @@ document.addEventListener("click", (e) => {
     : `今日 ${Math.round(me.usedSeconds / 60)} 分・無上限`;
   applyLang(); renderEmpty();
   prewarmMic(true); // 不 await:權限框跳出時 UI 照常可用,拿到後 status 恢復「按住說話」
+  initAppUI();
+})();
 
+// app 畫面的事件綁定(登入後與介面預覽共用;預覽差別只在 bindPtt 接到 runDemo)
+function initAppUI() {
   bindPtt($("pttMe"), "me", chatUI);
   bindPtt($("pttThem"), "them", chatUI);
   bindPtt($("fpttMine"), "me", faceUI("mine"));
@@ -830,6 +902,12 @@ document.addEventListener("click", (e) => {
   $("langBtn").addEventListener("change", (e) => {
     S.lang = e.target.value;
     applyLang(); resetConversation();
+    if (S.preview) { // 示範素材只有日語:誠實說明,不假裝其他語言也有 demo
+      $("status").textContent = S.lang === "ja"
+        ? "按住下面的按鈕,聽一段示範"
+        : `介面已切成${LANGS[S.lang].label};示範聲音只有日語,登入後五種語言都能用`;
+      return;
+    }
     if (S.lang === "th" && !localStorage.getItem("mn_th_gender")) {
       $("status").textContent = "泰語句尾禮貌詞:點上方「尾詞」切換 ครับ(男)/ ค่ะ(女)";
     }
@@ -866,4 +944,4 @@ document.addEventListener("click", (e) => {
     if (!confirm("清空這台裝置上的全部翻譯紀錄?(不影響任何伺服器資料,因為本來就沒有)")) return;
     await histClear(); renderHistory();
   });
-})();
+}

@@ -2,7 +2,7 @@
 
 **まね(模仿)× 夢(む)。** 按住說話,manemu 模仿你的語氣、用對方的語言說出來——旅途即時口譯 PWA。
 
-- 產品:https://manemu.ai-apps.work (封測中:Google 登入 + 受邀名單)
+- 產品:https://manemu.ai-apps.work (封測中:Google 登入 + 受邀名單;登入頁可「看看介面 →」離線預覽)
 - 管理:`/admin`(僅 `ADMIN_EMAILS`)——等候名單一鍵核准、設額度級別或自訂秒數
 - 引擎:Gemini Live(`gemini-3.1-flash-live-preview` + 語域鎖定口譯 systemInstruction;快速模式走 `gemini-3.5-live-translate-preview`)
 - 語言:中 →(日 / 英 / 韓 / 越 / 泰)→ 中
