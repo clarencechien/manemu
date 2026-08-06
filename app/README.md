@@ -70,6 +70,23 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 - **已核准名單**:改級別、填自訂秒數、移除;`ADMIN_EMAILS` 內的帳號不可從 UI 移除(防手滑鎖死自己)。
 - 資料就是 R2 的兩個 JSON,想手動改也行(`wrangler r2 object put`),兩邊等價。
 
+## 介面預覽(登入前「看看介面 →」)
+
+登入頁的次要按鈕,讓人不登入就能看到 app 長什麼樣、按鈕怎麼用。**兩層保證碰不到翻譯引擎**:
+
+1. **伺服器端(硬防線)**:`/ws`、`/api/backtranslate`、`/api/field-log` 全在 needAuth 內,
+   未登入一律 401——前端怎麼寫都繞不過(worker-test 有對應案例)。
+2. **前端結構**:預覽走 `runDemo()` 這條**獨立函式**,不是在真流程加旗標——
+   `new WebSocket`、`getUserMedia`、回譯 fetch 那些行根本不會被執行;
+   `runUtterance` 開頭另有 `if (S.preview) return` 防呆。
+
+示範素材是 **harness 實測紀錄**(`out/runs/prompt-full-n3` 的真實引擎輸出,非重錄行銷素材):
+三句日語(問路 → 殺價 → 過敏),含譯音 WAV 與真實接話延遲,產生腳本在 scratchpad `gen-demo.mjs`。
+預覽下不預熱麥克風、不寫本地紀錄、測試模式 chip 隱藏;切非日語會誠實說明「示範聲音只有日語」。
+
+驗證:`preview-test.mjs` 攔截全部網路活動 + 監控 getUserMedia,玩過三句示範/面對面/切語言/紀錄面板後
+斷言「零 /ws、零 /api/*、零麥克風」。
+
 ## PWA(免商店安裝)
 
 - `manifest.json`(icons 192/512 + maskable)+ `icons/`(紅藍雙氣泡,Playwright 從 SVG 產出,
