@@ -231,6 +231,8 @@ Bot Fight Mode 的其他機制(IP 信譽、已知 bot、heuristics)不依賴 JSD
   - 每次「重新整理」都會再要一次麥克風權限是 Safari 政策(同一次載入內不會重複要);
     加到主畫面(PWA)可記住權限。修掉卡死後就不需要重整了。
 - [ ] 真機 echo(PTT 播放鎖 + echoCancellation 夠不夠)
+  > 半雙工(播譯音時關麥克風)不只是體驗設計,是**回音自噬的唯一防線**——
+  > 連續開麥為何不做、要做的三條路徑,見 `../live-translate-poc/docs/adr.md` ADR-002。
 - [ ] fast 模式(translate 引擎)在 relay 下的行為
 - [ ] 🧪 測試模式一輪 → 確認 R2 `manemu-field` 有 field log
 - [ ] 越/泰真機各講一句(泰語切「尾詞」chip 兩種都試,確認 ครับ/ค่ะ 有鎖住)
