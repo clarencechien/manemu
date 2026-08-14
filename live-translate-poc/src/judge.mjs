@@ -82,7 +82,7 @@ async function judgeOne(r) {
 }
 
 const files = fs.readdirSync(runDir).filter((f) => f.endsWith(".json") && !f.includes("error"));
-let n = 0, idx = 0;
+let n = 0, idx = 0, apiCalls = 0;
 async function worker() {
   while (idx < files.length) {
     const f = files[idx++];
@@ -92,6 +92,7 @@ async function worker() {
     let ok = false;
     for (let attempt = 1; attempt <= 3 && !ok; attempt++) {
       try {
+        apiCalls++; // 重試也要計(429 重試在 pro 級評審上特別貴)
         r[field] = await judgeOne(r);
         r[field + "Model"] = PROVIDER === "openai" ? OPENAI_JUDGE_MODEL : JUDGE_MODEL;
         fs.writeFileSync(path.join(runDir, f), JSON.stringify(r, null, 2));
@@ -108,3 +109,4 @@ async function worker() {
 }
 await Promise.all(Array.from({ length: 2 }, worker));
 console.log(`judged ${n}/${files.length}`);
+console.log(`[cost] 評審呼叫 ${apiCalls} 次(重試放大 ${(apiCalls / Math.max(1, n)).toFixed(2)}×)`);

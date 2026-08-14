@@ -116,7 +116,14 @@ live-translate 是**連續 session**:`audioStreamEnd` 後模型翻完仍持續�
 | 正常組(adequacy≥4, n=130)誤報率 | **10.8%** | 多為無害 paraphrase(火車站→車站、未稅、阿拉伯數字) |
 | 誤報中的意外收穫 | T015「兒童椅→安全座椅」 | 回譯抓到**評審漏判的真錯誤**(ja 輸出真的翻成チャイルドシート=汽座)——通道同時是評審的補網 |
 | 回譯延遲(預設 flash) | p50 3.3s | thinking 預設開啟,太慢 |
-| **thinking off / flash-lite** | **~0.8s / ~0.4s** | UI 實際配置,「說完後一拍」內可顯示 |
+| ~~thinking off~~ **~0.8s** ⚠ | **未驗證,勿引用** | 當時 repo 沒有任何 code path 關過 thinking,此數字無法重現(2026-08-14 盤點發現) |
+| **flash-lite** | **~0.4s** | UI 實際配置,「說完後一拍」內可顯示(此欄有實測) |
+
+> **2026-08-14 更新**:產品端與 harness 的回譯都已加 `thinkingConfig.thinkingLevel: "minimal"`
+> + 400 fallback,harness 並會累計 `usageMetadata.thoughtsTokenCount`(關成功應為 0)。
+> 要補上真正的「thinking off」延遲數字,重跑 `npm run backtranslate` 即可。
+> 背景:thinking token 以**輸出價**計費、3.5-flash-lite 預設是 minimal 而非 off,
+> 見 `gemini-api-lessons.md` §1。
 
 **UI 建議**:input 逐字稿即時顯示(免費、抓聽錯)+ 回譯確認用 flash-lite(~0.4s,抓譯錯);兩層合起來涵蓋「聽錯」與「譯錯」兩類災難。已知盲區:語氣級錯誤(問句→陳述)兩層都可能放過,考慮 UI 上對句尾「嗎/吧」句加問號 icon 提示。
 

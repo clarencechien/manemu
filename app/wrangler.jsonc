@@ -39,6 +39,10 @@
     "DEFAULT_TIER": "beta",
     "ADMIN_EMAILS": "clarence.chien@gmail.com",
     "DAILY_SECONDS_LIMIT": "1800",
+    // 全站日預算(秒;0 = 不啟用):每人配額只擋單人濫用,擋不住「帳號數 × 配額」的總爆量。
+    // 超標 → /ws 回 503、前端顯示公告,登入與其他功能照常;UTC 00:00 隨日重置。
+    // 36000 = 10 小時/日 ≈ US$14/日 上限(音訊 $0.023/分,見 pricing.md §1)
+    "GLOBAL_DAILY_SECONDS": "36000",
     "SESSION_HARD_CAP_S": "120",
     "ACCURATE_MODEL": "models/gemini-3.1-flash-live-preview",
     "FAST_MODEL": "models/gemini-3.5-live-translate-preview",

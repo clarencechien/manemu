@@ -1,6 +1,7 @@
 // Admin API:名單/等候名單管理(僅 ADMIN_EMAILS 內的帳號可用)。
 // 所有資料存 R2:allowlist.json(email→tier|秒數)、waitlist.json(email→{ts})。
 const CONFIG_KEYS = { allow: "allowlist.json", wait: "waitlist.json" };
+import { globalBudget } from "./relay.mjs";
 
 async function readJson(env, key, fallback) {
   try {
@@ -52,6 +53,7 @@ export async function handleAdmin(req, env, path) {
       waitlist: Object.entries(wait).map(([email, v]) => ({ email, ...v })).sort((a, b) => (a.ts < b.ts ? -1 : 1)),
       tiers, defaultTier: env.DEFAULT_TIER || "beta",
       admins, usage,
+      global: await globalBudget(env), // 全站日預算現況(超標會暫停全站翻譯)
     });
   }
 

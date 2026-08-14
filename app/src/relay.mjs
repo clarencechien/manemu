@@ -3,6 +3,19 @@
 // 邏輯移植自 live-translate-poc/src/providers/gemini-live.mjs(已全量實測)。
 
 const LIVE_WS = "wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent";
+// 全域計數器 DO 的固定名稱(email 不可能長這樣 → 不會跟真人撞名)
+export const GLOBAL_COUNTER = "__global__";
+
+// 全站日預算:0 或未設 = 不啟用。查全域計數 DO,超標即暫停翻譯(登入與其他功能照常)。
+// 查不到就放行——保險絲壞掉不該把整站鎖死,每人配額仍在。
+export async function globalBudget(env) {
+  const limit = Number(env.GLOBAL_DAILY_SECONDS || 0);
+  if (!(limit > 0)) return { paused: false, limit: 0, used: 0 };
+  try {
+    const u = await (await env.RELAY.get(env.RELAY.idFromName(GLOBAL_COUNTER)).fetch("https://do/usage?limit=0")).json();
+    return { paused: u.usedSeconds >= limit, limit, used: u.usedSeconds };
+  } catch { return { paused: false, limit, used: 0 }; }
+}
 const VOICE_RMS_THRESHOLD = 500;
 const IDLE_CONVERGE_MS = 2500;
 
@@ -58,6 +71,13 @@ export class RelaySession {
     const { day, used } = await this.usage();
     await this.state.storage.put("usage", { day, seconds: used + seconds });
   }
+  // 全站日預算(GLOBAL_DAILY_SECONDS):每人配額擋單人濫用,擋不住「帳號數 × 配額」的總爆量。
+  // 用固定名稱的 DO 當全域計數器;它只走 /usage 與 /add,永遠不會走 pipe(),不會遞迴。
+  globalStub() { return this.env.RELAY.get(this.env.RELAY.idFromName(GLOBAL_COUNTER)); }
+  async bumpGlobal(seconds) {
+    if (!(Number(this.env.GLOBAL_DAILY_SECONDS) > 0)) return;
+    try { await this.globalStub().fetch(`https://do/add?seconds=${seconds}`, { method: "POST" }); } catch {}
+  }
 
   async fetch(req) {
     const url = new URL(req.url);
@@ -67,6 +87,12 @@ export class RelaySession {
     if (url.pathname === "/usage") {
       const { used } = await this.usage();
       return Response.json({ usedSeconds: Math.round(used), limitSeconds });
+    }
+    // 全域計數器專用:累加(只有 relay 自己在扣款時呼叫)
+    if (url.pathname === "/add" && req.method === "POST") {
+      await this.addUsage(Number(url.searchParams.get("seconds")) || 0);
+      const { used } = await this.usage();
+      return Response.json({ usedSeconds: Math.round(used) });
     }
     if (url.pathname === "/debug") {
       // 上一個 session 的完整事件統計:診斷「氣泡空白」時看鏈斷在哪
@@ -149,7 +175,7 @@ export class RelaySession {
       // 失敗不計費:沒有任何輸出的 session(連不上/沒聽到/逾時)不扣額度
       stats.charged = gotOutput;
       saveStats();
-      if (gotOutput) this.addUsage(seconds).catch(() => {});
+      if (gotOutput) { this.addUsage(seconds).catch(() => {}); this.bumpGlobal(seconds); }
       try { client.send(JSON.stringify({ type: "done", reason, seconds: Math.round(seconds), charged: gotOutput, stats })); } catch {}
       try { upstream.close(); } catch {}
       try { client.close(); } catch {}

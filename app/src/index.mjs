@@ -2,6 +2,7 @@
 // 安全設計見 live-translate-poc/docs/m3-spec.md §5.6。
 import { sign, verify, cookieGet, cookieSet, sessionFrom, verifyGoogleIdToken, resolveUser, randomHex, b64u } from "./auth.mjs";
 export { RelaySession } from "./relay.mjs";
+import { globalBudget } from "./relay.mjs";
 import { handleAdmin, addToWaitlist } from "./admin.mjs";
 
 const SEC_HEADERS = {
@@ -118,11 +119,17 @@ export default {
 
     if (p === "/api/me") {
       const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
-      const u = await (await stub.fetch(`https://do/usage?limit=${user.limitSeconds}`)).json();
-      return Response.json({ email: session.email, tier: user.tier, isAdmin: user.isAdmin, ...u });
+      const [u, g] = await Promise.all([
+        (await stub.fetch(`https://do/usage?limit=${user.limitSeconds}`)).json(),
+        globalBudget(env),
+      ]);
+      return Response.json({ email: session.email, tier: user.tier, isAdmin: user.isAdmin, ...u, globalPaused: g.paused });
     }
 
     if (p === "/ws") {
+      // 全站日預算(m3-spec §5:每人配額擋單人濫用,擋不住帳號數 × 配額的總爆量)
+      const g = await globalBudget(env);
+      if (g.paused) return Response.json({ error: "global_quota", ...g }, { status: 503 });
       const stub = env.RELAY.get(env.RELAY.idFromName(session.email));
       const wsUrl = new URL(req.url);
       wsUrl.searchParams.set("limit", String(user.limitSeconds)); // 額度由 Worker 決定,DO 只執行
@@ -133,14 +140,17 @@ export default {
       const { text, from } = await req.json();
       if (!text || text.length > 600) return Response.json({ error: "bad input" }, { status: 400 });
       const langName = { ja: "日文", en: "英文", ko: "韓文", vi: "越南文", th: "泰文" }[from] ?? "外文";
-      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/${env.BACKTX_MODEL}:generateContent`, {
+      const contents = [{ parts: [{ text: `把下面這句${langName}翻譯成台灣繁體中文口語。只輸出譯文,不要任何說明。\n\n${text}` }] }];
+      // 回譯是機械性任務,不需要推理:thinking token 以「輸出價」計費(官方明載),
+      // 3.5-flash-lite 預設是 minimal 而非 off,不設等於每次都付未計量的稅。
+      // 未知欄位在部分模型會 400 → 拿掉 thinkingConfig 重試一次(通用防禦,見 docs/gemini-api-lessons.md §4)。
+      const call = (cfg) => fetch(`https://generativelanguage.googleapis.com/v1beta/${env.BACKTX_MODEL}:generateContent`, {
         method: "POST",
         headers: { "content-type": "application/json", "x-goog-api-key": env.GEMINI_API_KEY },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: `把下面這句${langName}翻譯成台灣繁體中文口語。只輸出譯文,不要任何說明。\n\n${text}` }] }],
-          generationConfig: { temperature: 0 },
-        }),
+        body: JSON.stringify({ contents, generationConfig: cfg }),
       });
+      let r = await call({ temperature: 0, thinkingConfig: { thinkingLevel: "minimal" } });
+      if (r.status === 400) r = await call({ temperature: 0 });
       const d = await r.json();
       const zh = d.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
       return zh ? Response.json({ zh }) : Response.json({ error: "backtranslate failed" }, { status: 502 });

@@ -17,7 +17,7 @@
 | --- | --- |
 | `app/` | **Cloudflare Workers 產品本體**:Google OIDC + Turnstile + R2 白名單/分級、Durable Object WS relay(prompt 注入、靜音收斂、每人每日配額)、真實音訊管線前端(AudioWorklet 16k → 24k 播放)、本地紀錄(IndexedDB)、登入前預覽、`/admin` 管理頁。部署 runbook 與 `scripts/live-check.sh` 複驗見 `app/README.md` |
 | `live-translate-poc/` | 評測 harness 與全部實驗:語料(v1 50 句 / v2 草稿)、可攜 Node runner、規則檢測、多廠評審面板、報告產生器 |
-| `live-translate-poc/docs/` | **文件入口**:`findings.md`(所有實測結論)、`m3-spec.md`(產品規格 + 安全設計)、`design.md`(視覺/互動/用語)、`pricing.md`(定價與單位經濟)、`infra.md`(relay 選型:CF vs GCP/AWS/VPS)、`adr.md`(架構決策記錄)、`plan.md`+`run2/run3/or-plan`(決策歷程) |
+| `live-translate-poc/docs/` | **文件入口**:`findings.md`(所有實測結論)、`m3-spec.md`(產品規格 + 安全設計)、`design.md`(視覺/互動/用語)、`pricing.md`(定價與單位經濟)、`infra.md`(relay 選型:CF vs GCP/AWS/VPS)、`adr.md`(架構決策記錄)、**`gemini-api-lessons.md`(跨專案 Gemini 教訓:thinking 稅/模型選擇/保險絲)+ `gemini-lessons-manemu.md`(本 repo 處置狀態)**、`plan.md`+`run2/run3/or-plan`(決策歷程) |
 | `live-translate-poc/mockup/` | 互動原型(氣泡對談 + 面對面 180° 兩種版面、登入前示範) |
 | `live-translate-poc/out/` | 原始評測資料:`runs/`(逐筆結果)、`reports/`(report.html / csv / summary)、`experiments/`(19 個機制實驗) |
 
@@ -58,7 +58,9 @@
 
 **安全**:Turnstile(免費,取代付費 Managed Challenge)、嚴格 CSP(零行內腳本)、canonical-host
 強制(workers.dev route 已關,WAF 繞過洞封死)、`/auth/*` rate limit、R2 私有、金鑰只在 Worker;
-錢包三道保險絲 = 白名單 + 每人每日秒數上限 + 單句 120s 硬上限 + 靜音強制收斂。細節見 `app/README.md`。
+錢包保險絲 = 白名單 + 每人每日秒數上限 + **全站日預算**(`GLOBAL_DAILY_SECONDS`,擋「帳號數 ×
+配額」的總爆量)+ 單句 120s 硬上限 + 靜音強制收斂 + 失敗不計費。細節見 `app/README.md`;
+Gemini 花錢系統的通用教訓見 `docs/gemini-api-lessons.md`。
 
 **已驗補充**:iOS Safari 對話模式真機通過(v10;四輪修復史與教訓見 `app/README.md`)。
 PWA 可安裝(零快取 SW,部署即生效)。v18 正式站複驗全過(`app/scripts/live-check.sh`)。

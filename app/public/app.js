@@ -32,7 +32,7 @@ const thGender = () => localStorage.getItem("mn_th_gender") || "m";
 const quotaLeft = () => (S.limitSeconds > 0 ? S.limitSeconds - S.usedSeconds : Infinity);
 
 /* ============ 版本標記與診斷(真機回報用) ============ */
-const APP_VER = "v19-usage-admin";
+const APP_VER = "v20-global-budget";
 const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent)
   || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS 偽裝桌面
 const withTimeout = (p, ms, tag) => Promise.race([p, sleep(ms).then(() => { throw new Error(tag); })]);
@@ -343,6 +343,11 @@ async function runUtterance({ side, ui }) {
   S.busy = false; try { pauseCapture(); } catch {} window.__pttRelease = null;
 }
 async function runUtteranceInner({ side, ui }) {
+  // 全站日預算用完:給明確公告,不要讓人以為是自己的額度或當機
+  if (S.globalPaused) {
+    ui.status("今天全站的翻譯量已達上限,明天 UTC 00:00(台灣早上 8 點)恢復", false);
+    return;
+  }
   // 額度預檢:用完就別開麥克風/連線,直接給明確文案
   if (quotaLeft() <= 0) {
     ui.status(`今天的翻譯額度用完了(${Math.round(S.limitSeconds / 60)} 分鐘),明天 UTC 00:00 重置`, false);
@@ -800,6 +805,7 @@ async function refreshUsage() {
     const d = await (await fetch("/api/me")).json();
     if (d.usedSeconds === undefined) return;
     S.usedSeconds = d.usedSeconds; S.limitSeconds = d.limitSeconds; S.tier = d.tier;
+    S.globalPaused = !!d.globalPaused;
     $("usage").textContent = d.limitSeconds > 0
       ? `今日 ${Math.round(d.usedSeconds / 60)}/${Math.round(d.limitSeconds / 60)} 分`
       : `今日 ${Math.round(d.usedSeconds / 60)} 分・無上限`;
@@ -897,7 +903,7 @@ document.addEventListener("click", (e) => {
     return;
   }
   S.email = me.email; S.tier = me.tier; S.isAdmin = !!me.isAdmin;
-  S.usedSeconds = me.usedSeconds; S.limitSeconds = me.limitSeconds;
+  S.usedSeconds = me.usedSeconds; S.limitSeconds = me.limitSeconds; S.globalPaused = !!me.globalPaused;
   // 管理入口進 PWA(仿 sukemu):只有 admin 看得到,點了去 /admin
   if (S.isAdmin) {
     $("adminBtn").classList.remove("hidden");
