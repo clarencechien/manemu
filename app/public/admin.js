@@ -37,6 +37,18 @@ function tierOptions(selected) {
 }
 
 function render() {
+  // 全站日預算(超標會暫停全站翻譯)
+  const g = DATA.global;
+  const gb = $("globalBox");
+  if (!g?.limit) {
+    gb.innerHTML = `<p class="hint">全站日預算未啟用(var <code>GLOBAL_DAILY_SECONDS</code> = 0)。</p>`;
+  } else {
+    const pct = Math.min(100, (g.used / g.limit) * 100);
+    gb.innerHTML = `<p class="hint">${Math.round(g.used / 60)} / ${Math.round(g.limit / 60)} 分(${pct.toFixed(1)}%)`
+      + `${g.paused ? ' <b style="color:var(--me)">已達上限,全站翻譯暫停中</b>' : ""}</p>`
+      + `<div style="height:9px;background:var(--chip);border-radius:99px;overflow:hidden;margin-top:6px">`
+      + `<i style="display:block;height:100%;width:${pct.toFixed(1)}%;background:${g.paused ? "var(--me)" : "var(--ok)"}"></i></div>`;
+  }
   // 等候名單
   $("waitCount").textContent = DATA.waitlist.length ? `(${DATA.waitlist.length})` : "";
   $("waitBox").innerHTML = DATA.waitlist.length === 0

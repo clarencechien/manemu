@@ -116,7 +116,7 @@ async function runOne({ phrase, dir, rep }) {
   }
 }
 
-let idx = 0, done = 0, failed = 0;
+let idx = 0, done = 0, failed = 0, apiCalls = 0;
 async function worker(wid) {
   while (idx < jobs.length) {
     const job = jobs[idx++];
@@ -124,6 +124,7 @@ async function worker(wid) {
     let ok = false;
     for (let attempt = 1; attempt <= 3 && !ok; attempt++) {
       try {
+        apiCalls++; // 重試也要計:API 全面故障時 = 每件事付 3 倍
         const r = await runOne(job);
         ok = true;
         done++;
@@ -143,3 +144,5 @@ async function worker(wid) {
 
 await Promise.all(Array.from({ length: Math.min(concurrency, jobs.length) }, (_, i) => worker(i + 1)));
 console.log(`run complete: ok=${done} failed=${failed} → out/runs/${runId}/`);
+// 成本可視:重試會放大花費(3 次線性 backoff),浪費比例高就先查故障再重跑
+console.log(`[cost] Live session 呼叫 ${apiCalls} 次(工作 ${jobs.length} 件,重試放大 ${(apiCalls / Math.max(1, jobs.length)).toFixed(2)}×)`);

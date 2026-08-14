@@ -59,6 +59,13 @@ public/(前端,assets binding)── /ws ──► Worker(src/index.mjs)
 
 其他:`SESSION_HARD_CAP_S=120`(單句硬上限)、`DAILY_SECONDS_LIMIT`(分級表查不到時的後備值)。
 
+**全站日預算 `GLOBAL_DAILY_SECONDS`**(預設 36000 秒 = 10 小時/日 ≈ US$14/日;0 = 不啟用):
+每人配額只擋單人濫用,擋不住「帳號數 × 配額」的總爆量——這是第四道錢包保險絲。
+實作:固定名稱的全域計數 DO(`__global__`),relay 扣款時同步累加;超標後 `/ws` 回 503、
+前端顯示「今天全站的翻譯量已達上限」公告,登入與其他功能照常;UTC 00:00 隨日重置。
+admin 頁頂部有進度條可看即時用量。**查不到全域計數時放行**——保險絲壞掉不該鎖死整站。
+背景與同類教訓見 `../live-translate-poc/docs/gemini-api-lessons.md` §5(四層保險絲)。
+
 名單值也可以直接是**秒數**(`{"a@x.com": 7200}` = 60 分... 實為 120 分/日),級別名或秒數都吃。
 
 > 日後要接金流:把「付費方案 → tier 名稱」寫進 `QUOTA_TIERS`,付款成功後更新 R2 白名單的 tier 即可;

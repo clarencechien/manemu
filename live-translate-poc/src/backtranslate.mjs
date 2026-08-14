@@ -13,25 +13,35 @@ if (!runId) { console.error("usage: node src/backtranslate.mjs <runId> [--dir ja
 const dir = process.argv.includes("--dir") ? process.argv[process.argv.indexOf("--dir") + 1] : "ja";
 const MODEL = "models/gemini-3.5-flash"; // 回譯要便宜快速,UI 上就會用這級
 
+// 與產品端 /api/backtranslate 對齊:機械性任務關思考(thinking token 以輸出價計費),
+// 部分模型不吃 thinkingConfig → 400 時拿掉重試。量延遲/成本要用同一組設定才有意義。
+let thoughtTokens = 0, calls = 0;
 async function flashCall(prompt, schema) {
   const body = {
     contents: [{ parts: [{ text: prompt }] }],
-    generationConfig: { temperature: 0 },
+    generationConfig: { temperature: 0, thinkingConfig: { thinkingLevel: "minimal" } },
   };
   if (schema) {
     body.generationConfig.responseMimeType = "application/json";
     body.generationConfig.responseJsonSchema = schema;
   }
-  const res = await fetch(`${REST_BASE}/${MODEL}:generateContent`, {
+  const send = () => fetch(`${REST_BASE}/${MODEL}:generateContent`, {
     method: "POST",
     signal: AbortSignal.timeout(60000),
     headers: { "content-type": "application/json", "x-goog-api-key": API_KEY },
     body: JSON.stringify(body),
   });
+  calls++;
+  let res = await send();
+  if (res.status === 400) { delete body.generationConfig.thinkingConfig; res = await send(); }
   if (!res.ok) throw new Error(`HTTP ${res.status} ${(await res.text()).slice(0, 150)}`);
   const d = await res.json();
+  thoughtTokens += d.usageMetadata?.thoughtsTokenCount ?? 0; // 驗「稅是否真的關掉」
   return d.candidates[0].content.parts[0].text;
 }
+process.on("exit", () => {
+  if (calls) console.log(`\n[thinking] ${calls} 次呼叫,thoughtsTokenCount 合計 ${thoughtTokens}(關成功應為 0)`);
+});
 
 const EQ_SCHEMA = {
   type: "object",

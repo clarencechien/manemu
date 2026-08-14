@@ -22,6 +22,7 @@ const VOICE = "Kore";
 
 // flash 對個別句子會伺服器端死掛(T011「Suica 儲值」實測 100s 0 bytes),pro 可正常合成
 const FALLBACK_TTS_MODEL = "models/gemini-2.5-pro-preview-tts";
+const cost = { calls: 0, proCalls: 0 }; // pro fallback 是靜默的帳單升級 → 計數 + 結尾警示
 
 async function synthOne(phrase, model = TTS_MODEL) {
   // TTS preview 偶發掛住不回應(3.1 必掛、2.5 偶發),一定要設 timeout 讓重試接手
@@ -68,6 +69,8 @@ for (const phrase of corpus.phrases) {
   outer: for (const plan of plans) {
     for (let attempt = 1; attempt <= plan.attempts; attempt++) {
       try {
+        cost.calls++;
+        if (plan.model === FALLBACK_TTS_MODEL) cost.proCalls++;
         const { pcm, srcMime } = await synthOne(phrase, plan.model);
         fs.writeFileSync(file, wavEncode(pcm, INPUT_SAMPLE_RATE));
         manifest[phrase.id] = {
@@ -92,3 +95,9 @@ for (const phrase of corpus.phrases) {
 }
 fs.writeFileSync(path.join(audioDir, "manifest.json"), JSON.stringify(manifest, null, 2));
 console.log("done:", Object.keys(manifest).length, "files");
+// 成本可視:一句最壞 = 3 次 flash + 2 次 pro。pro 級單價高很多,靜默 fallback 是帳單陷阱。
+console.log(`[cost] TTS 呼叫 ${cost.calls} 次,其中 pro 級 ${cost.proCalls} 次`);
+if (cost.proCalls) {
+  console.warn(`[cost] ⚠ 有 ${cost.proCalls} 次落到 pro 級 TTS(${FALLBACK_TTS_MODEL.split("/")[1]})——`
+    + `單價高於 flash。若頻繁發生,考慮改寫該句語料(如 T011 Suica → IC卡)而不是靠 fallback。`);
+}
