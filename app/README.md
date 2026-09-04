@@ -2,6 +2,38 @@
 
 按住說話的旅途口譯。規格:`../live-translate-poc/docs/m3-spec.md`;設計:`../live-translate-poc/docs/design.md`。
 
+## 安全:配額與錢包保險絲(2026-09-04 修正)
+
+先前的設計是「開 WS 時看一次累計、放行,結束才扣款」,有三個缺口:
+
+1. **並行繞過。** 扣款要等 `finish()`(最晚 `SESSION_HARD_CAP_S` 之後),而 `pipe()` 是
+   fire-and-forget,同一顆 DO 可以同時掛任意多條 WS。並行 N 條時每條讀到的都是同一個舊值,
+   每日額度等於「額度 × 並行數」。m3-spec §5.6 寫「Relay DO 以 email 命名,配額計數無競態」——
+   那句話對 storage 讀寫成立,對**配額判斷**不成立。
+   → 新增 `live` 集合追蹤進行中的 session,額度判斷含 `liveSeconds()`,並加 `MAX_LIVE_SESSIONS = 2`。
+
+2. **沒有輸出的 session 對所有保險絲隱形。** `charged = gotOutput`,而客戶端送進來的音框是
+   **無條件**轉給 Gemini 的,上游按輸入音訊計費,不管有沒有產生輸出。開 WS、持續送靜音、
+   永不送 end,每人配額與全站預算都記 0 —— 而且因為 `used` 永遠不增加,可以無限重複。
+   → 全站預算改成**不論有無輸出都累加**;使用者額度維持「失敗不扣」,但沒扣的秒數記進
+   `unbilled` 並設每日上限 `UNBILLED_DAILY_S = 600`;另加 `NO_SPEECH_MS = 30s` 提前收斂
+   (原本沒送 end 就只剩 120 秒 hard cap 能擋)。
+
+3. **`/api/backtranslate` 沒有任何保險絲。** 不受全站暫停影響、也不計進任何配額,
+   是唯一一條無上限直達付費 API 的路徑,而且 400 時會自動重打一次。
+   → 接上 `globalBudget()` 暫停檢查,並折算 `BACKTX_EQUIV_S = 2` 秒計進當日配額。
+
+順帶收掉的兩項:
+
+- **`engine=fast` 原本只鎖在前端。** 任何人自己帶 `?engine=fast` 就切得到 `FAST_MODEL`。
+  改鎖在 DO;要放開把 `FAST_ENGINE` 設成 `"on"`。
+- **`DEBUG_ENDPOINT` 關掉並沒有關掉同樣的資訊** —— 同一個 `stats` 物件每次 session 結束
+  都直接推給前端。現在 `done` 訊息也受同一個開關控制。
+
+檢查:`node scripts/quota-check.mjs`。
+**它只驗帳目的算術,不驗併發本身** —— 讓「檢查+預扣」變原子的是 Durable Object 的
+input gate,Node 重現不了。腳本註解裡也寫了同一句,免得看到綠燈就以為競態被測過。
+
 ## 架構
 
 ```

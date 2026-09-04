@@ -19,7 +19,12 @@ export async function sign(payloadObj, secret) {
 export async function verify(token, secret) {
   if (!token || !token.includes(".")) return null;
   const [body, sig] = token.split(".");
-  const ok = await crypto.subtle.verify("HMAC", await hmacKey(secret), b64u.dec(sig), enc.encode(body));
+  // b64u.dec 的 atob 遇到非法字元會 throw,而這裡原本沒接住 —— 所有 needAuth 路由
+  // 與 /auth/callback 會回 500 而不是 401。是 fail-closed 不是漏洞,但錯誤碼不對。
+  let ok;
+  try {
+    ok = await crypto.subtle.verify("HMAC", await hmacKey(secret), b64u.dec(sig), enc.encode(body));
+  } catch { return null; }
   if (!ok) return null;
   try {
     const p = JSON.parse(b64u.decStr(body));
