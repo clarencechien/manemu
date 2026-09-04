@@ -59,21 +59,53 @@ const b64 = (bytes) => {
   return btoa(s);
 };
 
+/** 同一個帳號同時進行中的 session 上限。PTT 產品一次只講一句;留 2 容忍斷線重連的重疊 */
+const MAX_LIVE_SESSIONS = 2;
+/** 一直在送音框卻始終沒有任何輸出:30 秒就收,不要燒到 hard cap */
+const NO_SPEECH_MS = 30_000;
+/** 每日「沒有輸出所以不計費」的秒數上限。失敗不扣額度是對使用者的體貼,
+ *  但上游是按**輸入音訊**計費的,不能讓它同時變成錢包保險絲的豁免。 */
+const UNBILLED_DAILY_S = 600;
+/** 回譯折算成固定秒數計入配額(單次成本低,但它原本是唯一無保險絲直達付費 API 的路徑) */
+const BACKTX_EQUIV_S = 2;
+
 export class RelaySession {
   constructor(state, env) { this.state = state; this.env = env; }
+
+  /* 進行中但還沒結算的 session。pipe() 是 fire-and-forget,同一顆 DO 可以同時掛
+     任意多條 WS,而扣款要等 session 結束 —— 沒有這個集合,並行 N 條時每條進門
+     讀到的 used 都是同一個舊值,額度就是 N 倍。只存在記憶體是對的:DO 被回收
+     代表沒有連線在跑。 */
+  live = new Set();
+
+  /** 進行中 session 已經燒掉、但還沒寫回 storage 的秒數 */
+  liveSeconds() {
+    const now = Date.now();
+    let s = 0;
+    for (const e of this.live) s += (now - e.t0) / 1000;
+    return s;
+  }
 
   async usage() {
     const day = new Date().toISOString().slice(0, 10);
     const rec = (await this.state.storage.get("usage")) ?? {};
-    return { day, used: rec.day === day ? rec.seconds : 0, rec };
+    const same = rec.day === day;
+    return { day, used: same ? rec.seconds : 0, unbilled: same ? (rec.unbilled ?? 0) : 0, rec };
   }
   async addUsage(seconds) {
-    const { day, used } = await this.usage();
-    await this.state.storage.put("usage", { day, seconds: used + seconds });
+    const { day, used, unbilled } = await this.usage();
+    await this.state.storage.put("usage", { day, seconds: used + seconds, unbilled });
+  }
+  /** 沒有輸出、因此不扣使用者額度的秒數。仍然要記 —— 上游照樣收了錢 */
+  async addUnbilled(seconds) {
+    const { day, used, unbilled } = await this.usage();
+    await this.state.storage.put("usage", { day, seconds: used, unbilled: unbilled + seconds });
   }
   // 全站日預算(GLOBAL_DAILY_SECONDS):每人配額擋單人濫用,擋不住「帳號數 × 配額」的總爆量。
   // 用固定名稱的 DO 當全域計數器;它只走 /usage 與 /add,永遠不會走 pipe(),不會遞迴。
   globalStub() { return this.env.RELAY.get(this.env.RELAY.idFromName(GLOBAL_COUNTER)); }
+  /** ⚠️ 不論這一場有沒有輸出都要累加:上游是按輸入音訊計費的,
+   *  「失敗不計費」只該豁免使用者的額度,不該連全站預算一起豁免。 */
   async bumpGlobal(seconds) {
     if (!(Number(this.env.GLOBAL_DAILY_SECONDS) > 0)) return;
     try { await this.globalStub().fetch(`https://do/add?seconds=${seconds}`, { method: "POST" }); } catch {}
@@ -94,32 +126,56 @@ export class RelaySession {
       const { used } = await this.usage();
       return Response.json({ usedSeconds: Math.round(used) });
     }
+    // 回譯:折算固定秒數計進當日配額(它也是付費呼叫,不該完全沒有上限)
+    if (url.pathname === "/backtx" && req.method === "POST") {
+      await this.addUsage(BACKTX_EQUIV_S);
+      this.bumpGlobal(BACKTX_EQUIV_S);
+      const { used } = await this.usage();
+      return Response.json({ usedSeconds: Math.round(used) });
+    }
     if (url.pathname === "/debug") {
       // 上一個 session 的完整事件統計:診斷「氣泡空白」時看鏈斷在哪
       return Response.json((await this.state.storage.get("lastSession")) ?? { note: "還沒有任何 session" });
     }
     if (req.headers.get("Upgrade") !== "websocket") return new Response("expected websocket", { status: 426 });
 
-    const { used } = await this.usage();
-    if (limitSeconds > 0 && used >= limitSeconds) {
-      return Response.json({ error: "quota_exceeded", usedSeconds: Math.round(used), limitSeconds }, { status: 429 });
+    // 併發閘門:扣款要等 session 結束才寫回,所以同一個 cookie 同時開 N 條時
+    // 每條看到的都是舊值 —— 沒有這一段,每日額度等於「額度 × 並行數」。
+    if (this.live.size >= MAX_LIVE_SESSIONS) {
+      return Response.json({ error: "too_many_sessions", live: this.live.size }, { status: 429 });
+    }
+    const { used, unbilled } = await this.usage();
+    if (limitSeconds > 0 && used + this.liveSeconds() >= limitSeconds) {
+      return Response.json({ error: "quota_exceeded", usedSeconds: Math.round(used + this.liveSeconds()), limitSeconds }, { status: 429 });
+    }
+    // 沒有輸出的 session 不扣額度,但不能無限重複 —— 送靜音撐到 hard cap 再重開,
+    // 上游照樣按輸入音訊收費,而本地帳面永遠是 0。
+    if (unbilled >= UNBILLED_DAILY_S) {
+      return Response.json({ error: "unbilled_quota", unbilledSeconds: Math.round(unbilled) }, { status: 429 });
     }
 
     const lang = SYS_PROMPTS[url.searchParams.get("lang")] ? url.searchParams.get("lang") : "ja";
-    const engine = url.searchParams.get("engine") || "accurate";
+    // engine 的鎖原本只在前端(app.js),任何人自己帶 ?engine=fast 就能切到 FAST_MODEL。
+    // 要鎖就鎖在這裡;要放開就把 FAST_ENGINE 設成 "on"。
+    const engine = this.env.FAST_ENGINE === "on" && url.searchParams.get("engine") === "fast" ? "fast" : "accurate";
     const gender = url.searchParams.get("gender") === "f" ? "f" : "m";
     const glossary = (url.searchParams.get("glossary") || "").slice(0, 500);
 
     const pair = new WebSocketPair();
     const [client, server] = Object.values(pair);
     server.accept();
-    this.pipe(server, { lang, engine, gender, glossary }).catch((e) => {
+    // 從這一刻起算「進行中」。pipe() 設定完就 resolve(session 靠事件推進),
+    // 所以正常路徑一律由 finish() 移除;這裡的 catch 只處理設定期就拋錯的情況。
+    const entry = { t0: Date.now() };
+    this.live.add(entry);
+    this.pipe(server, { lang, engine, gender, glossary, entry }).catch((e) => {
+      this.live.delete(entry);
       try { server.send(JSON.stringify({ type: "error", message: String(e.message).slice(0, 200) })); server.close(); } catch {}
     });
     return new Response(null, { status: 101, webSocket: client });
   }
 
-  async pipe(client, { lang, engine, gender, glossary }) {
+  async pipe(client, { lang, engine, gender, glossary, entry }) {
     const model = engine === "fast" ? this.env.FAST_MODEL : this.env.ACCURATE_MODEL;
     const t0 = Date.now();
     const hardCapMs = Number(this.env.SESSION_HARD_CAP_S) * 1000;
@@ -175,8 +231,17 @@ export class RelaySession {
       // 失敗不計費:沒有任何輸出的 session(連不上/沒聽到/逾時)不扣額度
       stats.charged = gotOutput;
       saveStats();
-      if (gotOutput) { this.addUsage(seconds).catch(() => {}); this.bumpGlobal(seconds); }
-      try { client.send(JSON.stringify({ type: "done", reason, seconds: Math.round(seconds), charged: gotOutput, stats })); } catch {}
+      this.live.delete(entry);
+      // 使用者額度:維持「沒有輸出就不扣」。
+      // 全站預算:**一律**累加 —— 上游按輸入音訊計費,不會因為沒有輸出就不收錢。
+      // 沒扣額度的秒數另外記進 unbilled,並在進門處設每日上限,免得變成免費迴圈。
+      if (gotOutput) this.addUsage(seconds).catch(() => {});
+      else this.addUnbilled(seconds).catch(() => {});
+      this.bumpGlobal(seconds);
+      // DEBUG_ENDPOINT 關掉時,done 訊息也不要夾帶完整 stats(否則那個開關等於只關了查詢入口)
+      const payload = { type: "done", reason, seconds: Math.round(seconds), charged: gotOutput };
+      if (this.env.DEBUG_ENDPOINT === "on") payload.stats = stats;
+      try { client.send(JSON.stringify(payload)); } catch {}
       try { upstream.close(); } catch {}
       try { client.close(); } catch {}
       clearInterval(watchdog);
@@ -186,6 +251,9 @@ export class RelaySession {
       if (Date.now() - t0 > hardCapMs) return finish("hard-cap");
       if (ended && gotOutput && Date.now() - lastVoiced > IDLE_CONVERGE_MS) return finish("converged");
       if (ended && !gotOutput && Date.now() - lastVoiced > 8000) return finish("no-output"); // 快回診斷(前端 12s 保險絲之前)
+      // 沒送 end、框一直在來、卻始終沒有任何輸出:手機放口袋或腳本送靜音都是這樣。
+      // 不提前收的話會一路燒到 hard cap,而上游按輸入音訊計費。
+      if (!ended && !gotOutput && stats.framesIn > 0 && Date.now() - t0 > NO_SPEECH_MS) return finish("no-speech");
     }, 250);
 
     upstream.addEventListener("message", async (ev) => {

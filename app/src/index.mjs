@@ -137,8 +137,20 @@ export default {
     }
 
     if (p === "/api/backtranslate" && req.method === "POST") {
+      // ⚠️ 這裡原本是唯一一條**沒有任何保險絲**直達付費 API 的路徑:不受全站暫停影響、
+      // 也不計進任何配額(m3-spec §5.6 宣稱它走 DO 配額,程式其實沒有)。
+      // 單次成本低,但 400 時還會自動重打一次,失敗流量可以加倍。
+      const gb = await globalBudget(env);
+      if (gb.paused) return Response.json({ error: "global_quota", ...gb }, { status: 503 });
       const { text, from } = await req.json();
-      if (!text || text.length > 600) return Response.json({ error: "bad input" }, { status: 400 });
+      if (!text || typeof text !== "string" || text.length > 600) return Response.json({ error: "bad input" }, { status: 400 });
+      // 折算成固定秒數計進當日配額:用完了就跟 /ws 一樣擋下來
+      const q = await env.RELAY.get(env.RELAY.idFromName(session.email))
+        .fetch("https://do/backtx", { method: "POST" }).then((r) => r.json()).catch(() => null);
+      if (!q) return Response.json({ error: "quota_unavailable" }, { status: 503 });
+      if (user.limitSeconds > 0 && q.usedSeconds >= user.limitSeconds) {
+        return Response.json({ error: "quota_exceeded", ...q }, { status: 429 });
+      }
       const langName = { ja: "日文", en: "英文", ko: "韓文", vi: "越南文", th: "泰文" }[from] ?? "外文";
       const contents = [{ parts: [{ text: `把下面這句${langName}翻譯成台灣繁體中文口語。只輸出譯文,不要任何說明。\n\n${text}` }] }];
       // 回譯是機械性任務,不需要推理:thinking token 以「輸出價」計費(官方明載),
